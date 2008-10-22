@@ -1,3 +1,4 @@
+# sperimentale
 NAME	= fisica_linux 
 SOURCE	= fisica_linux.tex
 OUTDVI  = $(SOURCE:.tex=.dvi)
