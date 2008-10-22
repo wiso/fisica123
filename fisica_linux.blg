@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: fisica_linux.aux
+A level-1 auxiliary file: TeX/fisica1_1modulo.aux
+A level-1 auxiliary file: TeX/fisica1_2modulo.aux
+A level-1 auxiliary file: TeX/fisica2.aux
+A level-1 auxiliary file: TeX/fisica3.aux
+The style file: plain.bst
+Database file #1: TeX/biblio.bib
+Warning--I didn't find a database entry for "costanti"
+Warning--can't use both author and editor fields in alonso
+Warning--empty publisher in alonso
+Warning--empty year in alonso
+Warning--can't use both author and editor fields in modern
+Warning--empty publisher in modern
+Warning--can't use both author and editor fields in elettro
+Warning--empty publisher in elettro
+Warning--empty year in elettro
+Warning--empty title in enge
+Warning--empty publisher in enge
+Warning--empty year in enge
+Warning--can't use both author and editor fields in Feynm
+Warning--empty publisher in Feynm
+Warning--empty year in Feynm
+Warning--can't use both author and editor fields in Fisica1
+Warning--empty publisher in Fisica1
+Warning--can't use both author and editor fields in ottica
+Warning--empty publisher in ottica
+Warning--empty year in ottica
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            567 strings with 5317 characters,
+and the built_in function-call counts, 3742 in all, are:
+= -- 314
+> -- 168
+< -- 0
++ -- 69
+- -- 52
+* -- 199
+:= -- 625
+add.period$ -- 45
+call.type$ -- 16
+change.case$ -- 68
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 147
+empty$ -- 353
+format.name$ -- 52
+if$ -- 774
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 14
+newline$ -- 79
+num.names$ -- 32
+pop$ -- 172
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 91
+stack$ -- 0
+substring$ -- 81
+swap$ -- 21
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 50
+warning$ -- 19
+while$ -- 32
+width$ -- 18
+write$ -- 141
+(There were 20 warnings)

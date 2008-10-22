@@ -1,0 +1,449 @@
+\BOOKMARK [1][-]{section*.1}{Introduzione}{}
+\BOOKMARK [1][-]{section*.2}{Disclaimer}{}
+\BOOKMARK [1][-]{section*.3}{Notazioni}{}
+\BOOKMARK [1][-]{section*.4}{Chiave Pubblica}{}
+\BOOKMARK [-1][-]{part.1}{I Fisica 1}{}
+\BOOKMARK [0][-]{chapter.1}{Grandezze e misure}{part.1}
+\BOOKMARK [1][-]{section.1.1}{Grandezze}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Unit\340 di misura}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.2.1}{Unit\340 fondamentali}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.2}{Prefissi}{section.1.2}
+\BOOKMARK [0][-]{chapter.2}{Vettori}{part.1}
+\BOOKMARK [1][-]{section.2.1}{Versori e coordinate}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Individuazione vettori}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.2.1}{Passaggio da individuazione geometrica a individuazione analitica}{section.2.2}
+\BOOKMARK [1][-]{section.2.3}{Operazioni tra i vettori}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Cinematica}{part.1}
+\BOOKMARK [1][-]{section.3.1}{Vettore posizione}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Vettore spostamento}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Vettore velocit\340}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Vettore accelerazione}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Moto rettilineo uniforme}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{Moto uniformemente accelerato}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.5.1}{Velocit\340 in funzione dello spazio}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{Moto circolare uniforme}{chapter.3}
+\BOOKMARK [1][-]{section.3.7}{Moto circolare}{chapter.3}
+\BOOKMARK [1][-]{section.3.8}{Moto qualsiasi in coordinate polari}{chapter.3}
+\BOOKMARK [1][-]{section.3.9}{Moto armonico}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.9.1}{Moto armonico smorzato}{section.3.9}
+\BOOKMARK [1][-]{section.3.10}{Trasformazioni di Galileo}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.10.1}{Invarianza e covarianza}{section.3.10}
+\BOOKMARK [0][-]{chapter.4}{Dinamica}{part.1}
+\BOOKMARK [1][-]{section.4.1}{Forze fondamentali}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Altre forze}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{Forza elastica}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{Resistenza del mezzo}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.3}{Attrito statico}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.4}{Attrito dinamico}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{Leggi di Newton}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Forze variabili}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.4.1}{Forze variabili nel tempo}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.2}{Forze variabili nello spazio}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.3}{Forze variabili nella velocit\340}{section.4.4}
+\BOOKMARK [1][-]{section.4.5}{Forze apparenti}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.5.1}{Terra}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.2}{Trattazione generale}{section.4.5}
+\BOOKMARK [1][-]{section.4.6}{Quantit\340 di moto}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.6.1}{Sistema di N punti}{section.4.6}
+\BOOKMARK [1][-]{section.4.7}{Centro di Massa}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.7.1}{Corpo continuo}{section.4.7}
+\BOOKMARK [2][-]{subsection.4.7.2}{Teorema di Pappo--Guldino}{section.4.7}
+\BOOKMARK [1][-]{section.4.8}{Impulso di una forza}{chapter.4}
+\BOOKMARK [1][-]{section.4.9}{Urti}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.9.1}{Urti elastici}{section.4.9}
+\BOOKMARK [2][-]{subsection.4.9.2}{Urti completamente anelastici}{section.4.9}
+\BOOKMARK [1][-]{section.4.10}{Momento d'inerzia}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.10.1}{Calcolo Momenti di Inerzia}{section.4.10}
+\BOOKMARK [2][-]{subsection.4.10.2}{Teorema di Steiner o degli assi paralleli}{section.4.10}
+\BOOKMARK [1][-]{section.4.11}{Momento di una forza}{chapter.4}
+\BOOKMARK [1][-]{section.4.12}{Momento angolare o della quantit\340 di moto}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.12.1}{Sistema di N punti}{section.4.12}
+\BOOKMARK [2][-]{subsection.4.12.2}{Conservazione del momento angolare}{section.4.12}
+\BOOKMARK [2][-]{subsection.4.12.3}{Rotazione intorno a O' mobile}{section.4.12}
+\BOOKMARK [2][-]{subsection.4.12.4}{Rotazione intorno ad un asse}{section.4.12}
+\BOOKMARK [2][-]{subsection.4.12.5}{Corpo simmetrico rispetto all'asse di rotazione}{section.4.12}
+\BOOKMARK [1][-]{section.4.13}{Analogia tra grandezze lineari e rotazionali}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Lavoro ed energia}{part.1}
+\BOOKMARK [1][-]{section.5.1}{Lavoro definizione}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Lavoro nei moti rotatori}{section.5.1}
+\BOOKMARK [1][-]{section.5.2}{Potenza}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.2.1}{Potenza nei moti rotatori}{section.5.2}
+\BOOKMARK [1][-]{section.5.3}{Energia Cinetica}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.3.1}{Teorema lavoro--energia}{section.5.3}
+\BOOKMARK [1][-]{section.5.4}{Complementi -- Funzioni in due variabili}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.4.1}{Circuitazione di una forza}{section.5.4}
+\BOOKMARK [1][-]{section.5.5}{Energia Potenziale}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.5.1}{Conservazione dell'energia meccanica}{section.5.5}
+\BOOKMARK [0][-]{chapter.6}{Gravitazione}{part.1}
+\BOOKMARK [1][-]{section.6.1}{Cenni storici}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.1.1}{Leggi di Keplero}{section.6.1}
+\BOOKMARK [1][-]{section.6.2}{Teorema di Gauss \(per la gravit\340\)}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.2.1}{Caso crosta sferica}{section.6.2}
+\BOOKMARK [2][-]{subsection.6.2.2}{Caso sfera piena}{section.6.2}
+\BOOKMARK [1][-]{section.6.3}{Interpretazione delle leggi di Keplero}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.3.1}{Seconda legge}{section.6.3}
+\BOOKMARK [2][-]{subsection.6.3.2}{Terza legge}{section.6.3}
+\BOOKMARK [1][-]{section.6.4}{Accelerazione di gravit\340}{chapter.6}
+\BOOKMARK [1][-]{section.6.5}{Misurazione della costante di gravitazione universale}{chapter.6}
+\BOOKMARK [1][-]{section.6.6}{Massa gravitazione e massa inerziale}{chapter.6}
+\BOOKMARK [1][-]{section.6.7}{Principio di equivalenza}{chapter.6}
+\BOOKMARK [1][-]{section.6.8}{Energia associata ad un'orbita}{chapter.6}
+\BOOKMARK [0][-]{chapter.7}{Meccanica dei fluidi}{part.1}
+\BOOKMARK [1][-]{section.7.1}{FluidoStatica}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.1.1}{Pressione e densit\340}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.2}{Legge di Stevino}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.3}{Legge dei vasi comunicanti}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.4}{Esperimento di Torricelli 1664}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.5}{Esperimento delle due semisfere}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.6}{Principio di Pascal}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.7}{Principio di Archimede}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.8}{Condizione generale di equilibrio}{section.7.1}
+\BOOKMARK [2][-]{subsection.7.1.9}{Fluido in rotazione}{section.7.1}
+\BOOKMARK [1][-]{section.7.2}{Dinamica dei fluidi}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.2.1}{Equazione di continuit\340}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.2}{Equazione di Bernoulli}{section.7.2}
+\BOOKMARK [1][-]{section.7.3}{Viscosit\340}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.3.1}{Legge di Poiseuille}{section.7.3}
+\BOOKMARK [0][-]{chapter.8}{Termodinamica}{part.1}
+\BOOKMARK [1][-]{section.8.1}{Principio zero della termodinamica}{chapter.8}
+\BOOKMARK [1][-]{section.8.2}{Temperatura}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.2.1}{Termometro a gas perfetto a volume costante}{section.8.2}
+\BOOKMARK [1][-]{section.8.3}{Legge dei gas perfetti}{chapter.8}
+\BOOKMARK [1][-]{section.8.4}{Dilatazione termica}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.4.1}{Dilatazione termica dei solidi}{section.8.4}
+\BOOKMARK [2][-]{subsection.8.4.2}{Dilatazione termica dei liquidi}{section.8.4}
+\BOOKMARK [1][-]{section.8.5}{Teoria cinetica del gas perfetto}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.5.1}{Pressione}{section.8.5}
+\BOOKMARK [2][-]{subsection.8.5.2}{Libero cammino medio}{section.8.5}
+\BOOKMARK [2][-]{subsection.8.5.3}{Distribuzione delle velocit\340}{section.8.5}
+\BOOKMARK [2][-]{subsection.8.5.4}{Distribuzione dell'energia}{section.8.5}
+\BOOKMARK [2][-]{subsection.8.5.5}{Riassunto teoria cinetica dei gas perfetti}{section.8.5}
+\BOOKMARK [1][-]{section.8.6}{Trasferimenti di calore}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.6.1}{Irraggiamento}{section.8.6}
+\BOOKMARK [2][-]{subsection.8.6.2}{Conduzione}{section.8.6}
+\BOOKMARK [2][-]{subsection.8.6.3}{Convezione}{section.8.6}
+\BOOKMARK [1][-]{section.8.7}{Capacit\340 termiche}{chapter.8}
+\BOOKMARK [1][-]{section.8.8}{Energia interna}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.8.1}{Principio di equipartizione dell'energia}{section.8.8}
+\BOOKMARK [2][-]{subsection.8.8.2}{Calore specifico molare dei solidi}{section.8.8}
+\BOOKMARK [2][-]{subsection.8.8.3}{Calore specifico dei gas}{section.8.8}
+\BOOKMARK [1][-]{section.8.9}{Primo principio della termodinamica}{chapter.8}
+\BOOKMARK [1][-]{section.8.10}{Trasformazioni di un gas}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.10.1}{Calcolo del lavoro}{section.8.10}
+\BOOKMARK [2][-]{subsection.8.10.2}{Relazione di Mayer}{section.8.10}
+\BOOKMARK [2][-]{subsection.8.10.3}{Adiabatiche}{section.8.10}
+\BOOKMARK [2][-]{subsection.8.10.4}{Trasformazioni politropiche}{section.8.10}
+\BOOKMARK [1][-]{section.8.11}{Trasformazioni cicliche}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.11.1}{Ciclo di Carnot per un gas perfetto}{section.8.11}
+\BOOKMARK [2][-]{subsection.8.11.2}{Frigorifero}{section.8.11}
+\BOOKMARK [2][-]{subsection.8.11.3}{Ciclo Otto}{section.8.11}
+\BOOKMARK [2][-]{subsection.8.11.4}{Diagrammi di flusso}{section.8.11}
+\BOOKMARK [1][-]{section.8.12}{Secondo principio della termodinamica}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.12.1}{KelvinClausius}{section.8.12}
+\BOOKMARK [2][-]{subsection.8.12.2}{Teorema di Carnot}{section.8.12}
+\BOOKMARK [1][-]{section.8.13}{Entropia}{chapter.8}
+\BOOKMARK [2][-]{subsection.8.13.1}{Entropia nei cicli}{section.8.13}
+\BOOKMARK [2][-]{subsection.8.13.2}{Entropia per qualsiasi trasformazione}{section.8.13}
+\BOOKMARK [2][-]{subsection.8.13.3}{Entropia e secondo principio}{section.8.13}
+\BOOKMARK [2][-]{subsection.8.13.4}{Interpretazione statistica dell'entropia}{section.8.13}
+\BOOKMARK [2][-]{subsection.8.13.5}{Grafici S/T}{section.8.13}
+\BOOKMARK [2][-]{subsection.8.13.6}{Generalizzazione del principio di Carnot}{section.8.13}
+\BOOKMARK [1][-]{section.8.14}{Scala termodinamica o assoluta}{chapter.8}
+\BOOKMARK [1][-]{section.8.15}{Riassunto trasformazioni}{chapter.8}
+\BOOKMARK [0][-]{chapter.9}{Relativit\340 speciale}{part.1}
+\BOOKMARK [1][-]{section.9.1}{Esperimento di Michelson--Morley}{chapter.9}
+\BOOKMARK [1][-]{section.9.2}{Postulati di Einstein}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.2.1}{Simultaneit\340}{section.9.2}
+\BOOKMARK [1][-]{section.9.3}{Trasformate di Lorentz}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.3.1}{Trasformate di Lorentz e Galileo}{section.9.3}
+\BOOKMARK [1][-]{section.9.4}{Contrazione delle lunghezze}{chapter.9}
+\BOOKMARK [1][-]{section.9.5}{Dilatazione dei tempi}{chapter.9}
+\BOOKMARK [1][-]{section.9.6}{Composizione delle velocit\340}{chapter.9}
+\BOOKMARK [1][-]{section.9.7}{Massa}{chapter.9}
+\BOOKMARK [1][-]{section.9.8}{Quantit\340 di moto}{chapter.9}
+\BOOKMARK [1][-]{section.9.9}{Energia Relativistica}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.9.1}{Teorema lavoro--energia}{section.9.9}
+\BOOKMARK [2][-]{subsection.9.9.2}{Energia cinetica classica}{section.9.9}
+\BOOKMARK [2][-]{subsection.9.9.3}{Urti ed energia}{section.9.9}
+\BOOKMARK [2][-]{subsection.9.9.4}{Conservazione dell'energia}{section.9.9}
+\BOOKMARK [1][-]{section.9.10}{Quantit\340 di moto ed energia}{chapter.9}
+\BOOKMARK [1][-]{section.9.11}{Elettronvolt}{chapter.9}
+\BOOKMARK [1][-]{section.9.12}{Forza e accelerazione}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.12.1}{Casi Particolari}{section.9.12}
+\BOOKMARK [1][-]{section.9.13}{Spazio di Minkowski}{chapter.9}
+\BOOKMARK [2][-]{subsection.9.13.1}{Dilatazione dei tempi}{section.9.13}
+\BOOKMARK [2][-]{subsection.9.13.2}{Curve di calibrazione}{section.9.13}
+\BOOKMARK [1][-]{section.9.14}{Dubbi di Einstein}{chapter.9}
+\BOOKMARK [0][-]{chapter.10}{Onde}{part.1}
+\BOOKMARK [1][-]{section.10.1}{Onde sinusoidali}{chapter.10}
+\BOOKMARK [1][-]{section.10.2}{Corda Tesa}{chapter.10}
+\BOOKMARK [1][-]{section.10.3}{Equazione differenziale di un'onda}{chapter.10}
+\BOOKMARK [1][-]{section.10.4}{Velocit\340 e accelerazione trasversale}{chapter.10}
+\BOOKMARK [1][-]{section.10.5}{Principio di sovrapposizione}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.5.1}{Interferenza}{section.10.5}
+\BOOKMARK [1][-]{section.10.6}{Onde stazionarie}{chapter.10}
+\BOOKMARK [1][-]{section.10.7}{Effetto Doppler}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.7.1}{Effetto Doppler relativistico}{section.10.7}
+\BOOKMARK [1][-]{section.10.8}{Suono}{chapter.10}
+\BOOKMARK [1][-]{section.10.9}{Grandezze caratteristiche}{chapter.10}
+\BOOKMARK [-1][-]{part.2}{II Fisica 2}{}
+\BOOKMARK [0][-]{chapter.11}{Campi}{part.2}
+\BOOKMARK [1][-]{section.11.1}{Richiami di algebra vettoriale}{chapter.11}
+\BOOKMARK [1][-]{section.11.2}{Operatori differenziali}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.2.1}{Gradiente}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.2}{Derivata direzionale}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.3}{Integrale di linea}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.4}{Flusso}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.5}{Divergenza}{section.11.2}
+\BOOKMARK [2][-]{subsection.11.2.6}{Teorema della divergenza}{section.11.2}
+\BOOKMARK [1][-]{section.11.3}{Circuitazione}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.3.1}{Teorema di Stokes}{section.11.3}
+\BOOKMARK [1][-]{section.11.4}{Coordinate}{chapter.11}
+\BOOKMARK [2][-]{subsection.11.4.1}{Coordinate curvilinee}{section.11.4}
+\BOOKMARK [2][-]{subsection.11.4.2}{Coordinate cartesiane}{section.11.4}
+\BOOKMARK [2][-]{subsection.11.4.3}{Coordinate cilindriche}{section.11.4}
+\BOOKMARK [2][-]{subsection.11.4.4}{Coordinate sferiche}{section.11.4}
+\BOOKMARK [0][-]{chapter.12}{Elettrostatica}{part.2}
+\BOOKMARK [1][-]{section.12.1}{Carica}{chapter.12}
+\BOOKMARK [1][-]{section.12.2}{Forza di Coulomb}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.2.1}{Unit\340 di misura}{section.12.2}
+\BOOKMARK [1][-]{section.12.3}{Densit\340 di carica}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.3.1}{Forza}{section.12.3}
+\BOOKMARK [1][-]{section.12.4}{Campo elettrico}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.4.1}{Definizione operativa}{section.12.4}
+\BOOKMARK [1][-]{section.12.5}{Teorema di Gauss}{chapter.12}
+\BOOKMARK [1][-]{section.12.6}{Potenziale elettrostatico}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.6.1}{Potenziale di qualsiasi distribuzione}{section.12.6}
+\BOOKMARK [1][-]{section.12.7}{Energia potenziale}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.7.1}{Energia di un sistema di cariche}{section.12.7}
+\BOOKMARK [2][-]{subsection.12.7.2}{Unit\340 di misura}{section.12.7}
+\BOOKMARK [1][-]{section.12.8}{Maxwell per l'elettrostatica}{chapter.12}
+\BOOKMARK [1][-]{section.12.9}{Dipolo}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.9.1}{Potenziale}{section.12.9}
+\BOOKMARK [2][-]{subsection.12.9.2}{Campo elettrostatico}{section.12.9}
+\BOOKMARK [2][-]{subsection.12.9.3}{Energia potenziale}{section.12.9}
+\BOOKMARK [2][-]{subsection.12.9.4}{Forza}{section.12.9}
+\BOOKMARK [2][-]{subsection.12.9.5}{Momento}{section.12.9}
+\BOOKMARK [1][-]{section.12.10}{Sviluppo in multipoli}{chapter.12}
+\BOOKMARK [2][-]{subsection.12.10.1}{Distribuzione di carica}{section.12.10}
+\BOOKMARK [0][-]{chapter.13}{Elettrostatica nei conduttori}{part.2}
+\BOOKMARK [1][-]{section.13.1}{Conduttori ed isolanti}{chapter.13}
+\BOOKMARK [1][-]{section.13.2}{Carica nei conduttori}{chapter.13}
+\BOOKMARK [1][-]{section.13.3}{Induzione elettrostatica}{chapter.13}
+\BOOKMARK [1][-]{section.13.4}{Teorema di Coulomb}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.4.1}{Pressione elettrostatica}{section.13.4}
+\BOOKMARK [2][-]{subsection.13.4.2}{Induzione tra conduttori}{section.13.4}
+\BOOKMARK [2][-]{subsection.13.4.3}{Induzione completa}{section.13.4}
+\BOOKMARK [1][-]{section.13.5}{Potere dispersivo delle punte}{chapter.13}
+\BOOKMARK [1][-]{section.13.6}{Capacit\340 elettrica}{chapter.13}
+\BOOKMARK [2][-]{subsection.13.6.1}{Condensatore}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.2}{Energia di un condensatore}{section.13.6}
+\BOOKMARK [2][-]{subsection.13.6.3}{Condensatori in serie e in parallelo}{section.13.6}
+\BOOKMARK [0][-]{chapter.14}{Problema generale dell'elettrostatica}{part.2}
+\BOOKMARK [1][-]{section.14.1}{Funzioni armoniche}{chapter.14}
+\BOOKMARK [2][-]{subsection.14.1.1}{Teoremi}{section.14.1}
+\BOOKMARK [1][-]{section.14.2}{Soluzione dell'equazione di Laplace}{chapter.14}
+\BOOKMARK [2][-]{subsection.14.2.1}{Soluzione generale}{section.14.2}
+\BOOKMARK [1][-]{section.14.3}{Caso monodimensionale}{chapter.14}
+\BOOKMARK [0][-]{chapter.15}{Corrente stazionaria}{part.2}
+\BOOKMARK [1][-]{section.15.1}{Modello del gas di elettroni liberi}{chapter.15}
+\BOOKMARK [1][-]{section.15.2}{Densit\340 di corrente}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.2.1}{Conservazione della carica}{section.15.2}
+\BOOKMARK [1][-]{section.15.3}{Conducibilit\340 elettrica}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.3.1}{Resistivit\340 }{section.15.3}
+\BOOKMARK [2][-]{subsection.15.3.2}{Unit\340 di misura}{section.15.3}
+\BOOKMARK [1][-]{section.15.4}{Legge di Ohm}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.4.1}{Temperatura}{section.15.4}
+\BOOKMARK [2][-]{subsection.15.4.2}{Resistori}{section.15.4}
+\BOOKMARK [1][-]{section.15.5}{Tempo di rilassamento}{chapter.15}
+\BOOKMARK [1][-]{section.15.6}{Generatori}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.6.1}{Resistenza interna}{section.15.6}
+\BOOKMARK [1][-]{section.15.7}{Effetto Joule}{chapter.15}
+\BOOKMARK [2][-]{subsection.15.7.1}{Macroscopico}{section.15.7}
+\BOOKMARK [2][-]{subsection.15.7.2}{Microscopico}{section.15.7}
+\BOOKMARK [0][-]{chapter.16}{Campo induzione magnetica}{part.2}
+\BOOKMARK [1][-]{section.16.1}{Definizione}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.1.1}{Definizione operativa}{section.16.1}
+\BOOKMARK [2][-]{subsection.16.1.2}{Unit\340 di misura}{section.16.1}
+\BOOKMARK [1][-]{section.16.2}{Forza magnetica su una corrente}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.2.1}{Seconda formula di Laplace}{section.16.2}
+\BOOKMARK [1][-]{section.16.3}{Momento su un circuito}{chapter.16}
+\BOOKMARK [1][-]{section.16.4}{Ago magnetico}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.4.1}{Lamina magnetica}{section.16.4}
+\BOOKMARK [1][-]{section.16.5}{Campi magnetici generati da correnti}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.5.1}{Legge di Biot--Savart}{section.16.5}
+\BOOKMARK [2][-]{subsection.16.5.2}{Prima formula di Laplace}{section.16.5}
+\BOOKMARK [2][-]{subsection.16.5.3}{Forze tra due circuiti}{section.16.5}
+\BOOKMARK [2][-]{subsection.16.5.4}{Fili rettilinei indefiniti}{section.16.5}
+\BOOKMARK [1][-]{section.16.6}{Circuitazione}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.6.1}{Forma differenziale}{section.16.6}
+\BOOKMARK [1][-]{section.16.7}{Flusso}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.7.1}{Forma differenziale}{section.16.7}
+\BOOKMARK [1][-]{section.16.8}{Maxwell per la magnetostatica}{chapter.16}
+\BOOKMARK [1][-]{section.16.9}{Potenziale scalare magnetico}{chapter.16}
+\BOOKMARK [1][-]{section.16.10}{Potenziale vettoriale magnetico}{chapter.16}
+\BOOKMARK [2][-]{subsection.16.10.1}{Dipolo magnetico}{section.16.10}
+\BOOKMARK [0][-]{chapter.17}{Dielettrici}{part.2}
+\BOOKMARK [1][-]{section.17.1}{Isolanti}{chapter.17}
+\BOOKMARK [1][-]{section.17.2}{Polarizzazione}{chapter.17}
+\BOOKMARK [2][-]{subsection.17.2.1}{Momento atomico}{section.17.2}
+\BOOKMARK [2][-]{subsection.17.2.2}{Molecole polari}{section.17.2}
+\BOOKMARK [2][-]{subsection.17.2.3}{Polarizzazione per orientamento}{section.17.2}
+\BOOKMARK [2][-]{subsection.17.2.4}{Polarizzazione per deformazione}{section.17.2}
+\BOOKMARK [2][-]{subsection.17.2.5}{Vettore polarizzazione elettrica}{section.17.2}
+\BOOKMARK [1][-]{section.17.3}{Campo elettrico generato da un dielettrico}{chapter.17}
+\BOOKMARK [2][-]{subsection.17.3.1}{Esterno}{section.17.3}
+\BOOKMARK [2][-]{subsection.17.3.2}{Interno}{section.17.3}
+\BOOKMARK [1][-]{section.17.4}{Teorema di Gauss}{chapter.17}
+\BOOKMARK [1][-]{section.17.5}{Suscettivit\340 e permittivit\340}{chapter.17}
+\BOOKMARK [1][-]{section.17.6}{Maxwell per i dielettrici}{chapter.17}
+\BOOKMARK [1][-]{section.17.7}{Condizioni al contorno per \040e }{chapter.17}
+\BOOKMARK [2][-]{subsection.17.7.1}{ ortogonale}{section.17.7}
+\BOOKMARK [2][-]{subsection.17.7.2}{ tangente}{section.17.7}
+\BOOKMARK [1][-]{section.17.8}{Energia del campo elettrostatico}{chapter.17}
+\BOOKMARK [0][-]{chapter.18}{Magnetostatica nei mezzi materiali}{part.2}
+\BOOKMARK [1][-]{section.18.1}{Magnetizzazione}{chapter.18}
+\BOOKMARK [1][-]{section.18.2}{Approccio teorico}{chapter.18}
+\BOOKMARK [1][-]{section.18.3}{Correnti di magnetizzazione}{chapter.18}
+\BOOKMARK [2][-]{subsection.18.3.1}{Superfici di separazione}{section.18.3}
+\BOOKMARK [1][-]{section.18.4}{Correnti di magnetizzazione}{chapter.18}
+\BOOKMARK [1][-]{section.18.5}{Vettore intensit\340magnetica }{chapter.18}
+\BOOKMARK [0][-]{chapter.19}{Induzione elettromagnetica}{part.2}
+\BOOKMARK [1][-]{section.19.1}{Legge Faraday--Neumann--Lenz}{chapter.19}
+\BOOKMARK [2][-]{subsection.19.1.1}{Forma differenziale}{section.19.1}
+\BOOKMARK [1][-]{section.19.2}{Flusso tagliato e flusso concatenato}{chapter.19}
+\BOOKMARK [1][-]{section.19.3}{Autoinduttanza}{chapter.19}
+\BOOKMARK [1][-]{section.19.4}{Mutua induttanza}{chapter.19}
+\BOOKMARK [2][-]{subsection.19.4.1}{Simmetria di M}{section.19.4}
+\BOOKMARK [0][-]{chapter.20}{Circuiti}{part.2}
+\BOOKMARK [1][-]{section.20.1}{Reti resistive}{chapter.20}
+\BOOKMARK [1][-]{section.20.2}{RLC serie continua}{chapter.20}
+\BOOKMARK [2][-]{subsection.20.2.1}{Scarica}{section.20.2}
+\BOOKMARK [2][-]{subsection.20.2.2}{Carica}{section.20.2}
+\BOOKMARK [1][-]{section.20.3}{RLC serie altenata}{chapter.20}
+\BOOKMARK [2][-]{subsection.20.3.1}{Soluzione stazionaria}{section.20.3}
+\BOOKMARK [2][-]{subsection.20.3.2}{Soluzione transitoria}{section.20.3}
+\BOOKMARK [1][-]{section.20.4}{Cavi coassiali}{chapter.20}
+\BOOKMARK [2][-]{subsection.20.4.1}{Propagazione dell'onda}{section.20.4}
+\BOOKMARK [2][-]{subsection.20.4.2}{Rappresentazione a elementi concetrati}{section.20.4}
+\BOOKMARK [2][-]{subsection.20.4.3}{Impedenza caratteristica}{section.20.4}
+\BOOKMARK [0][-]{chapter.21}{Campo elettromagnetico}{part.2}
+\BOOKMARK [1][-]{section.21.1}{Corrente di spostamento}{chapter.21}
+\BOOKMARK [2][-]{subsection.21.1.1}{Calcolo correnti di spostamento}{section.21.1}
+\BOOKMARK [1][-]{section.21.2}{Equazioni di Maxwell complete}{chapter.21}
+\BOOKMARK [2][-]{subsection.21.2.1}{Equazione di continuit\340}{section.21.2}
+\BOOKMARK [1][-]{section.21.3}{Conservazione dell'energia elettromagnetica}{chapter.21}
+\BOOKMARK [1][-]{section.21.4}{Quantit\340di moto elettromagnetica}{chapter.21}
+\BOOKMARK [1][-]{section.21.5}{Potenziali del campo elettromagnetico}{chapter.21}
+\BOOKMARK [2][-]{subsection.21.5.1}{Equazioni per \040e }{section.21.5}
+\BOOKMARK [1][-]{section.21.6}{Equazione generale delle onde}{chapter.21}
+\BOOKMARK [0][-]{chapter.22}{Ottica}{part.2}
+\BOOKMARK [1][-]{section.22.1}{Riflessione e rifrazione}{chapter.22}
+\BOOKMARK [1][-]{section.22.2}{Ottica geometrica}{chapter.22}
+\BOOKMARK [2][-]{subsection.22.2.1}{Soluzione diconale}{section.22.2}
+\BOOKMARK [1][-]{section.22.3}{Dispersione}{chapter.22}
+\BOOKMARK [2][-]{subsection.22.3.1}{Oscillatore armonico elettronico}{section.22.3}
+\BOOKMARK [-1][-]{part.3}{III Fisica 3}{}
+\BOOKMARK [0][-]{chapter.23}{Grandezze}{part.3}
+\BOOKMARK [1][-]{section.23.1}{Mole}{chapter.23}
+\BOOKMARK [1][-]{section.23.2}{Unit\340 di massa atomica}{chapter.23}
+\BOOKMARK [0][-]{chapter.24}{Gas}{part.3}
+\BOOKMARK [1][-]{section.24.1}{Legge dei gas}{chapter.24}
+\BOOKMARK [2][-]{subsection.24.1.1}{Gas reali}{section.24.1}
+\BOOKMARK [1][-]{section.24.2}{Distribuzione delle velocit\340}{chapter.24}
+\BOOKMARK [2][-]{subsection.24.2.1}{Distribuzioni delle componenti}{section.24.2}
+\BOOKMARK [2][-]{subsection.24.2.2}{Determinazione costanti}{section.24.2}
+\BOOKMARK [2][-]{subsection.24.2.3}{Distribuzione dei moduli}{section.24.2}
+\BOOKMARK [2][-]{subsection.24.2.4}{Distribuzione dell'energia}{section.24.2}
+\BOOKMARK [1][-]{section.24.3}{Effetto Doppler termico}{chapter.24}
+\BOOKMARK [2][-]{subsection.24.3.1}{Risoluzione}{section.24.3}
+\BOOKMARK [1][-]{section.24.4}{Libero cammino medio}{chapter.24}
+\BOOKMARK [1][-]{section.24.5}{Moto Browniano}{chapter.24}
+\BOOKMARK [2][-]{subsection.24.5.1}{Cammino casuale}{section.24.5}
+\BOOKMARK [2][-]{subsection.24.5.2}{Numero di Avogadro}{section.24.5}
+\BOOKMARK [1][-]{section.24.6}{Esperimento di Perrin}{chapter.24}
+\BOOKMARK [1][-]{section.24.7}{Viscosit\340}{chapter.24}
+\BOOKMARK [1][-]{section.24.8}{Conducibilit\340 termica}{chapter.24}
+\BOOKMARK [1][-]{section.24.9}{Velocit\340 del suono nei gas}{chapter.24}
+\BOOKMARK [0][-]{chapter.25}{Elettrone}{part.3}
+\BOOKMARK [1][-]{section.25.1}{Scariche nei gas}{chapter.25}
+\BOOKMARK [1][-]{section.25.2}{Esperimento di Thomson}{chapter.25}
+\BOOKMARK [1][-]{section.25.3}{Esperimento di Millikan}{chapter.25}
+\BOOKMARK [1][-]{section.25.4}{Isotopi}{chapter.25}
+\BOOKMARK [0][-]{chapter.26}{Radiazione di corpo nero}{part.3}
+\BOOKMARK [1][-]{section.26.1}{Radiazione termica}{chapter.26}
+\BOOKMARK [1][-]{section.26.2}{Corpo nero}{chapter.26}
+\BOOKMARK [2][-]{subsection.26.2.1}{Cavit\340}{section.26.2}
+\BOOKMARK [1][-]{section.26.3}{Legge Stefan--Boltzmann}{chapter.26}
+\BOOKMARK [1][-]{section.26.4}{Legge di Wien}{chapter.26}
+\BOOKMARK [1][-]{section.26.5}{Wien}{chapter.26}
+\BOOKMARK [1][-]{section.26.6}{Rayleigh--Jeans}{chapter.26}
+\BOOKMARK [2][-]{subsection.26.6.1}{Modi di oscillare}{section.26.6}
+\BOOKMARK [2][-]{subsection.26.6.2}{Legge di Rayleigh--Jeans}{section.26.6}
+\BOOKMARK [1][-]{section.26.7}{Planck}{chapter.26}
+\BOOKMARK [0][-]{chapter.27}{Calore specifico dei solidi}{part.3}
+\BOOKMARK [1][-]{section.27.1}{Doulong--Petit}{chapter.27}
+\BOOKMARK [1][-]{section.27.2}{Einstein}{chapter.27}
+\BOOKMARK [1][-]{section.27.3}{Debye}{chapter.27}
+\BOOKMARK [2][-]{subsection.27.3.1}{Modi di vibrare in un cristallo}{section.27.3}
+\BOOKMARK [2][-]{subsection.27.3.2}{Approssimazione di Debye}{section.27.3}
+\BOOKMARK [0][-]{chapter.28}{Meccanica statistica}{part.3}
+\BOOKMARK [1][-]{section.28.1}{Boltzmann}{chapter.28}
+\BOOKMARK [1][-]{section.28.2}{Distribuzione Maxwell--Boltzmann}{chapter.28}
+\BOOKMARK [2][-]{subsection.28.2.1}{Equilibrio}{section.28.2}
+\BOOKMARK [1][-]{section.28.3}{Temperatura}{chapter.28}
+\BOOKMARK [1][-]{section.28.4}{Equilibrio termico}{chapter.28}
+\BOOKMARK [0][-]{chapter.29}{Calore specifico dei gas}{part.3}
+\BOOKMARK [1][-]{section.29.1}{Calore specifico di gas biatomici}{chapter.29}
+\BOOKMARK [2][-]{subsection.29.1.1}{Rotazioni}{section.29.1}
+\BOOKMARK [2][-]{subsection.29.1.2}{Vibrazioni}{section.29.1}
+\BOOKMARK [0][-]{chapter.30}{Scattering}{part.3}
+\BOOKMARK [1][-]{section.30.1}{Particelle }{chapter.30}
+\BOOKMARK [1][-]{section.30.2}{Scattering di Thomson}{chapter.30}
+\BOOKMARK [1][-]{section.30.3}{Scattering di Ruttherford}{chapter.30}
+\BOOKMARK [1][-]{section.30.4}{Analisi scattering}{chapter.30}
+\BOOKMARK [2][-]{subsection.30.4.1}{Sezione d'urto differenziale}{section.30.4}
+\BOOKMARK [2][-]{subsection.30.4.2}{Raggio nucleare}{section.30.4}
+\BOOKMARK [0][-]{chapter.31}{Atomo}{part.3}
+\BOOKMARK [1][-]{section.31.1}{Formula di Rydeberg--Ritz}{chapter.31}
+\BOOKMARK [1][-]{section.31.2}{Modello di Bohr}{chapter.31}
+\BOOKMARK [2][-]{subsection.31.2.1}{Correzione massa}{section.31.2}
+\BOOKMARK [2][-]{subsection.31.2.2}{Correzione relativistica}{section.31.2}
+\BOOKMARK [1][-]{section.31.3}{Regola di quantizzazione Wilson--Sommerfeld}{chapter.31}
+\BOOKMARK [1][-]{section.31.4}{Effetto Compton}{chapter.31}
+\BOOKMARK [1][-]{section.31.5}{Numeri quantici}{chapter.31}
+\BOOKMARK [2][-]{subsection.31.5.1}{Regole di selezione}{section.31.5}
+\BOOKMARK [1][-]{section.31.6}{Momento magnetico}{chapter.31}
+\BOOKMARK [2][-]{subsection.31.6.1}{Orbitale}{section.31.6}
+\BOOKMARK [2][-]{subsection.31.6.2}{Esperimento Stern--Gerlach}{section.31.6}
+\BOOKMARK [2][-]{subsection.31.6.3}{Momento angolare intrinseco}{section.31.6}
+\BOOKMARK [1][-]{section.31.7}{Momento angolare totale}{chapter.31}
+\BOOKMARK [2][-]{subsection.31.7.1}{Somma di momenti}{section.31.7}
+\BOOKMARK [1][-]{section.31.8}{Interazione spin--orbita}{chapter.31}
+\BOOKMARK [2][-]{subsection.31.8.1}{Approssimazione quantitativa}{section.31.8}
+\BOOKMARK [0][-]{appendix.A}{Costanti}{part.3}
+\BOOKMARK [1][-]{section.A.1}{Costanti matematiche}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{Costanti universali}{appendix.A}
+\BOOKMARK [1][-]{section.A.3}{Costanti elettromagnetiche}{appendix.A}
+\BOOKMARK [1][-]{section.A.4}{Costanti atomiche e nucleari}{appendix.A}
+\BOOKMARK [2][-]{subsection.A.4.1}{Generali}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.2}{Elettrone, e-}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.3}{Muone, -}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.4}{Tau, -}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.5}{Protone, p}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.6}{Neutrone, n}{section.A.4}
+\BOOKMARK [2][-]{subsection.A.4.7}{Particella alfa, }{section.A.4}
+\BOOKMARK [1][-]{section.A.5}{Costanti fisico--chimiche}{appendix.A}
+\BOOKMARK [0][-]{appendix.B}{Dati}{part.3}
+\BOOKMARK [1][-]{section.B.1}{Dati astronomici}{appendix.B}
+\BOOKMARK [0][-]{appendix.C}{Momenti d'inerzia}{part.3}
+\BOOKMARK [0][-]{appendix.D}{Formule che nessuno ricorda mai}{part.3}
+\BOOKMARK [1][-]{section.D.1}{Trigonometria}{appendix.D}
+\BOOKMARK [1][-]{section.D.2}{Sviluppi in serie di potenze}{appendix.D}
+\BOOKMARK [1][-]{section.D.3}{Operatori vettoriali}{appendix.D}
+\BOOKMARK [2][-]{subsection.D.3.1}{Gradiente}{section.D.3}
+\BOOKMARK [2][-]{subsection.D.3.2}{Divergenza}{section.D.3}
+\BOOKMARK [2][-]{subsection.D.3.3}{Rotore}{section.D.3}
+\BOOKMARK [2][-]{subsection.D.3.4}{Laplaciano}{section.D.3}
+\BOOKMARK [2][-]{subsection.D.3.5}{Relazioni}{section.D.3}
+\BOOKMARK [0][-]{index.0}{Indice analitico}{part.3}

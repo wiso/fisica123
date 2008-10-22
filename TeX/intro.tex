@@ -1,0 +1,71 @@
+\sffamily\itshape
+\section*{\centering Introduzione}
+
+\addcontentsline{toc}{section}{\numberline{}Introduzione}
+Tratto dalle lezioni di Fisica 1 del %``buon''
+prof.\@ Antonino Pullia, durante l'anno accademico 2003/04, dalle lezioni di Fisica 2 del prof.\@ Marcello Fontanesi, durante l'anno accademico 2004/05, dalle lezioni di Fisica 3 del prof.\@ Baldini durante l'anno accademico 2004/05, e altre fonti nella bibliografia (lezioni: \cite{Pullia, Fontanesi, Baldini, Paganoni, Lucchini, Franzoni, Monica, Barney, Maddalena}, libri principali: \cite{Fisica1, Feynm, modern, elettro, ottica, enge, alonso}). Composto con \LaTeXe\footnote{Non sai cos'è il \LaTeX: vergonati! Documentati subito, potresti non poterne farne a meno}. Le immagini sono state fatte con XFig, \Xy-pic, Inkscape o 3dstudiomax. I grafici in Matlab, Maple, Mathematica o in Gnuplot.
+\newline\newline
+Ultimo aggiornamento: \today.
+\newline\newline
+\parbox[c]{\textwidth}{
+Se trovate errori, imprecisioni, stupidate cosmiche, per sug\-ge\-ri\-men\-ti, per ottenere la versione elettronica o per ottenere i sorgenti \LaTeX:
+\begin{center}
+\framebox[1.1\width][c]{\textup{\textsf{\href{mailto://giurrero@gmail.com}{giurrero@gmail.com}}}}
+\end{center}
+}
+
+\section*{\centering Disclaimer}
+\addcontentsline{toc}{section}{\numberline{}Disclaimer}
+Di questo documento puoi farne quello che vuoi, distribuirlo, fotocopiarlo, usare come carta per accendere il camino o per non sporcare per terra quando imbianchi i muri, a patto che l'autore originale e la sua email vengano riportati in modo significativo insieme a questo disclamer nella sua forma originale. Possono essere fatte modifiche solo allo scopo di migliorare il do\-cu\-men\-to. L'autore sarà felice di ricevere una copia di queste modifiche. In nessun caso questo documento o parti di esso potranno essere utilizzati come  fonte di lucro. L'unico eventuale ricavo ammesso è quello relativo alle spese di distribuzione, per esempio le spese di stampa. Questo documento non è la Bibbia, esso nasce per uso personale, ed è distribuito senza garanzia sui contenuti (se prendente un brutto voto studiando su questi appunti non prendetevela con me).
+\section*{\centering Notazioni}
+\addcontentsline{toc}{section}{\numberline{}Notazioni}
+Purtroppo nelle figure spesso al posto delle lettere greche ($\alpha$, $\beta$) viene riportato il loro nome in lettere latine: alfa (alpha), beta\ldots Stessa cosa per i pedici o gli apici, al posto di $T_1$ T\_1 e al posto di $z^2$ z$^\wedge$2. La $\ud$ delle derivate è dritta a differenza della $d$ come variabile.
+\newpage
+\section*{\centering{Chiave Pubblica}\protect\footnote{Non sai cos'è una chiave pubblica e la firma digitale? Vergognati! Documentati subito (\href{http://www.pgpi.com}{www.pgpi.com}, \href{http://www.rsasecurity.com}{www.rsasecurity.com})}}
+\addcontentsline{toc}{section}{\numberline{}Chiave Pubblica}
+Se fate modifiche al documento allegate la firma con la vostra chiave.
+Chiave DSA \& ElGamal dell'autore originale:
+
+\begin{minipage}{.5\linewidth}
+\begin{small}
+\begin{verbatim}
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.2.2 (GNU/Linux)
+
+mQGiBDjdHhoRBADgPP1dlFra7QvzK2ltACfgCQqXaV0ab1U/xeIH8X67ahvTXHcM
+DwbG96hdN5jnoyTMw5dXpOgPoKP08FD38GU4pRhUWZlBxg0J9+J6c9Tf6v4kKzbi
+412UU+HAzqHszFOtbSYosjPtlkgSuGnDWYTDyALZY2+1YaqCJCA9vwNQWQCg/6aC
+aKQ6Te1H/k6V421sWmqTtvUD/2pF7FfbbZxZUin0ZxvUz4YSZ6fSD95PrWGoc9fM
+owt2H/JttSnju8VS9/kNxHx+u2LXepxkSr3QcG1+hGIYCADkow43ODTyfspXzzLV
+HviwqqUarjU4rQAa7ovxTZHEXMjdzxysdpbtEl4vTG3wCFMzEM9SIemrYdzhe1se
+1CT0BADWb+KPJcMZQ+b7c2GgDyakFXAZ0BdC801mJc6/Jz0gbHzcEy5PIFGEIlmi
+KlHOQ6Sm0/oo3quQdXWnCzCeKh83KkaULFUealWEahUk3KyOoHPKiiMPy/M5Muad
+gJYMCT2IEEgdWtA8Mo+Til5TBYJ97dsxGvnxEAN1lE6OkyWRmrQnUnVnZ2VybyBU
+dXJyYSA8Z3R1cnJhMjAwMEBrYXRhbWFpbC5jb20+tCdSdWdnZXJvIFR1cnJhIDxn
+dHVycmEyMDAwQGthdGFtYWlsLmNvbT6IXgQTEQIAHgUCQN2VNgIbAwYLCQgHAwID
+FQIDAxYCAQIeAQIXgAAKCRDRSWLT8RHAe3sAAKCWqbGv5rqBxwE+t4j60K4l6U44
+HQCgyqwIkHOmqfoY3lPwhR+R+uV5uz65Ag0EON0eGhAIAPZCV7cIfwgXcqK61qlC
+8wXo+VMROU+28W65Szgg2gGnVqMU6Y9AVfPQB8bLQ6mUrfdMZIZJ+AyDvWXpF9Sh
+01D49Vlf3HZSTz09jdvOmeFXklnN/biudE/F/Ha8g8VHMGHOfMlm/xX5u/2RXscB
+qtNbno2gpXI61Brwv0YAWCvl9Ij9WE5J280gtJ3kkQc2azNsOA1FHQ98iLMcfFst
+jvbzySPAQ/ClWxiNjrtVjLhdONM0/XwXV0OjHRhs3jMhLLUq/zzhsSlAGBGNfISn
+CnLWhsQDGcgHKXrKlQzZlp+r0ApQmwJG0wg9ZqRdQZ+cfL2JSyIZJrqrol7DVeky
+CzsAAgIIAJiZiDt7HGyJtHCPWjigQpY3cEAMU9cY8csP1kwAGZsIoW9YfJhY7vCq
+BtTP6fb2IneOBAaVzeYNrcnveckoiUW7aRVYqiXiQkETy8OghZE7NKyZjJiNt8xf
+vqa14Dnd8f5so77qGFuM3j1FnycwGtF/XAjN8tix+/mZN2csP68rchw1Yva0POkd
+yv98gPkJLzZFuy6O6e4hlAd7dAYP72RqEuy11hJxi1t7+428XLUpvM4DlmN55I9R
+HZDgw2b59AQcIh4QxjWirjVHwA3VJ0R/M9WBnX60O+nv5mWX3i+/ImkIkUQUlsdh
+jJU2T90q2mc4xdpP5JxoPhhWXC3MFn+IRgQYEQIABgUCON0eGgAKCRDRSWLT8RHA
+e2zeAJ4kVKTFAaJG+FTl90zdUP0OHHyJRQCffZBcyKZTExXfHp5KSz6Hzlpkzg0=
+=COOq
+-----END PGP PUBLIC KEY BLOCK-----
+\end{verbatim}
+\end{small}
+\end{minipage}
+\newline\newline
+\noindent
+Fingerprint: \textup{\textsf{4DC8 E630 A911 49B5 8247 117C D149 62D3 F111 C07B}}
+\rmfamily\upshape
+
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="216pt" height="288pt" viewBox="-4.5 -6 9 12" id="svg2160" style="display: inline;">
+  <defs id="defs19333">
+    <linearGradient id="linearGradient4703">
+      <stop id="stop4705" style="stop-color: rgb(0, 0, 0); stop-opacity: 1;" offset="0"/>
+      <stop id="stop4707" style="stop-color: rgb(255, 255, 255); stop-opacity: 1;" offset="1"/>
+    </linearGradient>
+    <linearGradient x1="-4.5" y1="-2.8663969" x2="4.487854" y2="-2.8663969" id="linearGradient4725" xlink:href="#linearGradient4703" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.667567, 0, 0, 1.425, -2.99595, 4.08462)"/>
+  </defs>
+  <g id="layer3" style="display: inline;">
+    <g id="g4727">
+      <rect width="6" height="9" x="-6" y="-4.5" transform="matrix(0, 1, -1, 0, 0, 0)" id="rect4691" style="opacity: 1; fill: url(#linearGradient4725) rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+      <use transform="scale(1, -1)" id="use4713" x="0" y="0" width="9" height="12" xlink:href="#rect4691"/>
+    </g>
+  </g>
+  <g id="layer2" style="display: inline;">
+    <g id="g2603" style="stroke: rgb(0, 0, 0);">
+      <use transform="translate(0, -0.253356)" id="use4819" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4817"/>
+      <use transform="translate(0, -0.253356)" id="use4817" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4815"/>
+      <use transform="translate(0, -2.02908)" id="use4815" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4799"/>
+      <use transform="translate(0, -1.0081)" id="use4797" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4789"/>
+      <use transform="translate(0, -1.02527)" id="use4799" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4791"/>
+      <use transform="translate(0, -2.01619)" id="use4801" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#path4765"/>
+      <use transform="translate(0, -2.03337)" id="use4803" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4787"/>
+      <use transform="translate(0, -2.02908)" id="use4805" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4789"/>
+      <use transform="translate(0, -2.03767)" id="use4807" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4791"/>
+      <use transform="translate(0, -2.02908)" id="use4809" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4793"/>
+      <use transform="translate(0, -2.03767)" id="use4811" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4795"/>
+      <use transform="translate(0, -2.03337)" id="use4813" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4797"/>
+      <use transform="translate(0, -1.0081)" id="use4795" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4787"/>
+      <use transform="translate(0, -1.0081)" id="use4793" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#path4765"/>
+      <use transform="translate(0, -0.497976)" id="use4791" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#use4787"/>
+      <use transform="translate(0, -0.497976)" id="use4789" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#path4765"/>
+      <use transform="translate(0, -0.242915)" id="use4787" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#path4765"/>
+      <path d="M -4.5060728,-1.6275303 L 4.5060728,-1.6275303" id="path4765" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+      <path d="M -4.5031427,-1.3608368 C -4.2056845,-1.3688232 -3.81031,-1.3728607 -3.484666,-1.3608368 C -3.1590222,-1.3488128 -3.0076105,-1.3454994 -2.5392505,-1.3608368 C -2.0708904,-1.3761742 -1.7685208,-1.3709528 -1.5177294,-1.3608368 C -1.2669381,-1.3507209 -0.95625865,-1.3458968 -0.56318127,-1.3602584 C -0.17010388,-1.37462 0.23125021,-1.3718003 0.53140113,-1.3608368 C 0.83155205,-1.3498732 1.0131299,-1.3441019 1.4494187,-1.3608368 C 1.8857077,-1.3775717 2.2204504,-1.3711621 2.5111837,-1.3608368 C 2.8019166,-1.3505115 3.086063,-1.3458226 3.4657317,-1.3608368 C 3.8454005,-1.3758509 4.1918334,-1.3702811 4.5031427,-1.3608368" id="path4763" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M -4.5004936,-1.1043968 C -4.2032104,-1.1227231 -3.8080684,-1.1319881 -3.482616,-1.1043968 C -3.1571637,-1.0768055 -3.0058411,-1.0692024 -2.5377567,-1.1043968 C -2.0696721,-1.1395913 -1.7674803,-1.1276097 -1.5168365,-1.1043968 C -1.2661928,-1.081184 -0.95569612,-1.0701142 -0.56284997,-1.1030696 C -0.17000382,-1.136025 0.23111416,-1.1295547 0.5310885,-1.1043968 C 0.83106285,-1.079239 1.0125338,-1.0659956 1.448566,-1.1043968 C 1.8845984,-1.1427981 2.2191441,-1.1280902 2.5097063,-1.1043968 C 2.8002683,-1.0807035 3.0842475,-1.069944 3.4636929,-1.1043968 C 3.8431384,-1.1388496 4.1893674,-1.1260687 4.5004936,-1.1043968" id="path4761" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M -4.4969309,-0.85264487 C -4.199883,-0.89156909 -3.8050538,-0.91124764 -3.4798591,-0.85264487 C -3.1546644,-0.7940421 -3.0034616,-0.77789339 -2.5357477,-0.85264487 C -2.0680337,-0.92739634 -1.7660811,-0.90194813 -1.5156358,-0.85264487 C -1.2651904,-0.80334161 -0.95493956,-0.77982987 -0.5624044,-0.84982588 C -0.16986924,-0.91982187 0.2309312,-0.90607916 0.53066808,-0.85264487 C 0.83040495,-0.79921059 1.0117322,-0.77108216 1.4474193,-0.85264487 C 1.8831064,-0.93420756 2.2173874,-0.90296855 2.5077195,-0.85264487 C 2.7980515,-0.80232119 3.0818059,-0.7794685 3.4609509,-0.85264487 C 3.840096,-0.92582123 4.1860509,-0.89867513 4.4969309,-0.85264487" id="path4759" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M -4.4916263,-0.58906882 C -4.1949288,-0.67292195 -3.8005653,-0.71531479 -3.4757542,-0.58906882 C -3.1509431,-0.46282285 -2.9999187,-0.42803423 -2.5327565,-0.58906882 C -2.0655943,-0.75010341 -1.7639978,-0.69528117 -1.5138479,-0.58906882 C -1.263698,-0.48285647 -0.95381299,-0.43220592 -0.56174087,-0.58299595 C -0.16966876,-0.73378597 0.23065889,-0.7041805 0.53004219,-0.58906882 C 0.82942549,-0.47395714 1.0105388,-0.41336103 1.4457119,-0.58906882 C 1.880885,-0.76477661 2.2147717,-0.69747942 2.5047613,-0.58906882 C 2.7947509,-0.48065822 3.0781705,-0.43142743 3.4568683,-0.58906882 C 3.8355661,-0.74671021 4.1811129,-0.68823025 4.4916263,-0.58906882" id="path4731" style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+    </g>
+    <g transform="translate(0.00400324)" id="g4566">
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.916445, 0, 0, 1.06524, 0.015407, 0.228929)" id="path3782" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.0337366; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.538529, 0, 0, 0.748061, 0.00740276, 0.159796)" id="path4556" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.0525177; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.350338, 0, 0, 0.516554, 0.0034169, 0.109337)" id="path4558" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.0783569; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.230857, 0, 0, 0.354948, 0.000886291, 0.0741135)" id="path4560" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.116446; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.153792, 0, 0, 0.233468, -0.000745942, 0.0476358)" id="path4562" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.175913; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+      <path d="M 0.69594656,-0.21795921 A 0.71712649,0.46377045 0 1 1 -0.73830642,-0.21795921 A 0.71712649,0.46377045 0 1 1 0.69594656,-0.21795921 z" transform="matrix(0.101431, 0, 0, 0.152503, -0.00185494, 0.0299887)" id="path4564" style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 0.268012; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1; display: inline;"/>
+    </g>
+    <use transform="translate(1.9919)" id="use4891" x="0" y="0" width="9" height="12" xlink:href="#g4566"/>
+    <use transform="translate(2.01619)" id="use4893" x="0" y="0" width="9" height="12" xlink:href="#use4891"/>
+    <use transform="translate(-4.04453)" id="use4895" x="0" y="0" width="9" height="12" xlink:href="#g4566"/>
+    <use transform="translate(-4.04453)" id="use4897" x="0" y="0" width="9" height="12" xlink:href="#use4891"/>
+    <use transform="matrix(1, 0, 0, -1, 0, 0.0289108)" id="use2627" style="stroke: rgb(0, 0, 0);" x="0" y="0" width="9" height="12" xlink:href="#g2603"/>
+  </g>
+  <g id="layer1" style="display: inline;">
+    <g id="g4675">
+      <path d="M 0.99876311,-6.0148565 L 0.99876311,5.9900449" id="use4584" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+      <g id="g4614" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;">
+        <g id="g4592" style="stroke: rgb(212, 0, 0); stroke-opacity: 1; display: inline;">
+          <path d="M -0.006072886,1.5311553e-08 L -0.006072886,6" id="path4576" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+          <g transform="translate(0, -0.0121457)" id="g4586" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;">
+            <path d="M 0.79793313,6.0032207 C 0.80102081,5.5563447 0.79527367,2.810839 0.80138482,1.4478344 C 0.73851869,0.31341551 0.78053073,0.28649 -0.0082974181,0.0010434925 C 0.42521686,0.24710885 0.58798198,0.61661927 0.57692307,1.0566802 C 0.61769877,2.6979178 0.59646562,4.3515571 0.60121456,6" id="path4574" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+            <path d="M 0.1882591,6 L 0.1882591,1.1295547 C 0.20153592,0.72008227 0.12175018,0.35714112 0.006072863,0.012145764 C 0.22145069,0.30924866 0.37040045,0.63892129 0.38259108,1.0809717 L 0.40688258,6" id="path4578" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+          </g>
+          <use transform="matrix(-1, 0, 0, 1, 0.00361372, 0)" id="use4590" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#g4586"/>
+        </g>
+        <use transform="matrix(1, 0, 0, -1, 0, -0.0229413)" id="use4612" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#g4592"/>
+      </g>
+    </g>
+    <use transform="translate(-1.99798, -0.00303644)" id="use4627" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#use4584"/>
+    <g transform="translate(-2.04049)" id="use4642">
+      <g id="g4648" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;">
+        <g id="g4650" style="stroke: rgb(212, 0, 0); stroke-opacity: 1; display: inline;">
+          <path d="M -0.006072886,1.5311553e-08 L -0.006072886,6" id="path4652" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+          <g transform="translate(0, -0.0121457)" id="g4654" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;">
+            <path d="M 0.79793313,6.0032207 C 0.80102081,5.5563447 0.79527367,2.810839 0.80138482,1.4478344 C 0.73851869,0.31341551 0.78053073,0.28649 -0.0082974181,0.0010434925 C 0.42521686,0.24710885 0.58798198,0.61661927 0.57692307,1.0566802 C 0.61769877,2.6979178 0.59646562,4.3515571 0.60121456,6" id="path4656" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+            <path d="M 0.1882591,6 L 0.1882591,1.1295547 C 0.20153592,0.72008227 0.12175018,0.35714112 0.006072863,0.012145764 C 0.22145069,0.30924866 0.37040045,0.63892129 0.38259108,1.0809717 L 0.40688258,6" id="path4658" style="fill: none; fill-rule: evenodd; stroke: rgb(212, 0, 0); stroke-width: 0.0333333; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"/>
+          </g>
+          <use transform="matrix(-1, 0, 0, 1, 0.00361372, 0)" id="use4660" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#g4586"/>
+        </g>
+        <use transform="matrix(1, 0, 0, -1, 0, -0.0229413)" id="use4662" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#g4592"/>
+      </g>
+      <use transform="translate(-1.99798, -0.00303644)" id="use4664" style="stroke: rgb(212, 0, 0); stroke-opacity: 1;" x="0" y="0" width="9" height="12" xlink:href="#use4584"/>
+    </g>
+    <use transform="translate(-2.01619)" id="use4644" x="0" y="0" width="9" height="12" xlink:href="#use4642"/>
+    <use transform="translate(1.97976)" id="use4686" x="0" y="0" width="9" height="12" xlink:href="#g4675"/>
+    <use transform="translate(2.0253)" id="use4688" x="0" y="0" width="9" height="12" xlink:href="#use4686"/>
+  </g>
+</svg>

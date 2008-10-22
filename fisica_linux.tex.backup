@@ -1,0 +1,149 @@
+    %_-`````-,           ,- '- .
+  %.'   .- - |          | - -.  `.
+ %/.'  /                     `.   \
+%:/   :      _...   ..._      ``   :
+%::   :     /._ .`:'_.._\.    ||   :
+%::    `._ ./  ,`  :    \ . _.''   .
+%`:.      /   |  -.  \-. \\_      /
+  %\:._ _/  .'   .@)  \@) ` `\ ,.'
+     %_/,--'       .- .\,-.`--`.
+       %,'/''     (( \ `  )
+        %/'/'  \    `-'  (
+         %'/''  `._,-----'
+          %''/'    .,---'
+           %''/'      ;:
+             %''/''  ''/
+               %''/''/''
+                 %'/'/'
+                  %`;
+
+\typeout{************************************************************************************************}
+\typeout{RENDERING RIASSUNTI DI FISICA INIZIATO}
+\typeout{************************************************************************************************}
+\typeout{Qualcuno, non sapendo verso quali disgrazie va incontro, si accinge a renderizzare: buona fortuna!}
+\typeout{}\typeout{}\typeout{}
+%*******************************VERSIONE***********************************
+
+\newcommand{\versione}{1.07.02}
+
+%********************************DICHIARAZIONE DOCUMENTO********************
+%***********PACCHETTI GRAFICI E THUMPDF E HYPEREF***************************
+
+\documentclass[a4paper,12pt,twoside,openany,italian]{book}
+\usepackage{ifpdf}
+
+\ifpdf
+\typeout{RENDERING PDF DIRETTO - PDF - PDF - PDF}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps,.gif}
+\RequirePackage[pdftex,hyperindex,colorlinks]{hyperref}
+%\usepackage{thumbpdf}
+\pdfcompresslevel=9
+\hypersetup{
+	pdftitle={Riassunti Fisica 1, Fisica 2, Fisica 3},
+	pdfauthor={Wiso},
+	pdfkeywords={fisica1,fisica2,fisica3},
+	pdfpagemode=Continous
+}
+\else
+\typeout{RENDERING DVI - NON PDF - NON PDF - NON PDF}
+\usepackage[dvips]{graphicx}
+\RequirePackage[dvipdfm,hyperindex,colorlinks]{hyperref}
+\fi
+\typeout{}\typeout{}
+
+
+
+%********************************PACCHETTI**********************************
+\input{TeX/packages}
+
+%******************************SYNTAX****************************************
+
+%\syntaxonly
+
+%********************************DEFINIZIONI MATEMATICHE**************************************
+\input{TeX/math_op}
+
+%*********************************NUOVE TABELLE*************************************
+\newenvironment{tabellacostanti}{\begin{tabular}{p{3.4cm}lp{4.5cm}ll} \hline
+costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
+%*********************************NUOVI AMBIENTI************************************
+\newenvironment{definizioneunita}{\begin{quote}}{\end{quote}}
+
+%********************************NUOVI AMBIENTI THEOREM************************************
+\newtheorem{legge}{Legge}[chapter]
+\newtheorem{post}{Postulato}[chapter]
+\newtheorem{Teo}{Teorema}[chapter]
+\newtheorem{Pri}{Principio}[chapter]
+\newtheorem{Cor}{Corollario}[chapter]
+{\theorembodyfont{\normalfont}           \newtheorem{Def}{Definizione}[chapter] \newtheorem{Es}{Esempio}[chapter]}
+
+%*************************************NUOVE UNITA'*****************************************
+\input{TeX/new_unit}
+
+%**************************************STILE************************************************
+\pagestyle{headings}
+
+%****************************OPZIONI PER STUDENTIBICOCCA************************************
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyhead[LE,RO]{\thepage}
+%\fancyhead[C]{\bfseries\small{Materiale disponibile gratuitamente su %\href{http://www.studentibicocca.it}{www.studentibicocca.it}}}
+%\fancyfoot[C]{\bfseries\small{Materiale disponibile gratuitamente su %\href{http://www.studentibicocca.it}{www.studentibicocca.it}}}
+
+
+%****************************INFORMAZIONI TITOLO AUTORE DATA********************************
+
+\title{Riassunti di Fisica}
+\date{2003--2004--2005}
+\author{Wiso}
+
+\makeindex
+
+%\includeonly{TeX/fisica1_1modulo}
+%\includeonly{TeX/fisica1_2modulo}
+%\includeonly{TeX/fisica1_1modulo,TeX/fisica1_2modulo}
+%\includeonly{TeX/fisica2}
+%%********************************INIZIO DOCUMENTO*******************************
+\begin{document}
+\frontmatter
+\input{TeX/titolo}
+\input{TeX/intro}
+%%*******************************INDICE*******************************************
+\tableofcontents
+
+%*******************************CORPO PRINCIPALE**********************************
+\mainmatter
+\include{TeX/fisica1_1modulo}
+\include{TeX/fisica1_2modulo}
+\include{TeX/fisica2}
+\include{TeX/fisica3}
+
+%**************************INIZIO APPENDICI*************************************
+\appendix
+\input{TeX/costanti}
+\input{TeX/astro}
+\input{TeX/unita}
+\input{TeX/momenti}
+\input{TeX/formule}
+
+%*****************************BIBLIOGRAFIA**************************************
+\backmatter
+\input{TeX/biblio}
+
+%********************************INDICE ANALITICO********************************
+
+\ifpdf
+\pdfbookmark{Indice analitico}{index}
+\fi
+
+\printindex
+
+\typeout{}\typeout{}\typeout{}
+\typeout{************************************************************************************************}
+\typeout{RENDERING RIASSUNTI DI FISICA FINITO}
+\typeout{************************************************************************************************}
+\typeout{Magari ti e' andata bene}
+\typeout{}\typeout{}\typeout{}
+
+\end{document}

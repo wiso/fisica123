@@ -1,0 +1,678 @@
+\begin{theindex}
+
+  \item accelerazione, \hyperpage{12}
+    \subitem angolare, \hyperpage{13}
+    \subitem di gravit\IeC {\`a}, \hyperpage{54}
+    \subitem perpendicolare, \hyperpage{15}
+    \subitem radiale, \hyperpage{15}
+    \subitem relativistica, \hyperpage{120}
+  \item ago magnetico, \hyperpage{206}
+  \item $\alpha$, \see{accelerazione angolare}{13}
+  \item altezza
+    \subitem del suono, \hyperpage{132}
+  \item ambiente, \hyperpage{70}
+  \item ampere, \hyperpage{3}, \hyperpage{212}
+  \item anodo, \hyperpage{305}
+  \item attrito
+    \subitem dinamico, \hyperpage{20}
+    \subitem statico, \hyperpage{20}
+  \item autoinduttanza, \hyperpage{245--247}
+    \subitem di un cavo coassiale, \hyperpage{247}
+    \subitem di un solenoide, \hyperpage{247}
+  \item azione a distanza, \hyperpage{149}
+
+  \indexspace
+
+  \item batteria, \hyperpage{195}
+  \item bilancia
+    \subitem di torsione, \hyperpage{55}
+  \item Biot, \hyperpage{207}
+  \item Bohr, \hyperpage{222}
+  \item Boltzman, \hyperpage{101}
+  \item Boyle, \hyperpage{72}
+
+  \indexspace
+
+  \item calore specifico, \hyperpage{83}
+    \subitem dei gas, \hyperpage{85}, \hyperpage{337}
+    \subitem dei solidi, \hyperpage{84}, \hyperpage{321--327}
+  \item cammino
+    \subitem casuale, \hyperpage{299}
+  \item campi magnetici
+    \subitem generati da correnti, \hyperpage{207}
+  \item campo, \hyperpage{134--135}
+    \subitem conservativo, \hyperpage{136, 137}
+    \subitem elettrico, \hyperpage{149}
+      \subsubitem di un dielettrico, \hyperpage{223}
+      \subsubitem impresso, \hyperpage{195}
+    \subitem elettromotore, \hyperpage{195}
+    \subitem elettrostatico, \hyperpage{149}
+      \subsubitem del dipolo, \hyperpage{165}
+    \subitem induzione magnetica, \hyperpage{199}
+    \subitem scalare, \hyperpage{134}
+    \subitem solenoidale, \hyperpage{140}
+    \subitem vettoriale, \hyperpage{134}
+  \item candela, \hyperpage{3}
+  \item capacit\IeC {\`a}
+    \subitem termica, \hyperpage{83}
+      \subsubitem dei gas, \hyperpage{85}
+      \subsubitem dei solidi, \hyperpage{84}
+      \subsubitem molare, \hyperpage{83}
+      \subsubitem specifica, \hyperpage{83}
+  \item capacit\IeC {\`a} elettrica, \hyperpage{175}
+  \item carica elettrica, \hyperpage{146}
+  \item Carnot, \hyperpage{90}
+  \item catodo, \hyperpage{305}
+  \item Cauchy, \hyperpage{280}
+  \item cavo
+    \subitem coasiale, \hyperpage{262}
+  \item cavo coasiale, \hyperpage{247}
+  \item centro
+    \subitem di carica, \hyperpage{168}
+  \item centro di massa, \hyperpage{29}
+  \item CGS elettrostatico, \hyperpage{147}
+  \item ciclo
+    \subitem di Carnot, \hyperpage{90}, \hyperpage{102}
+    \subitem Otto, \hyperpage{92}
+  \item circuitazione, \hyperpage{136}, \hyperpage{140}
+    \subitem del campo magnetico, \hyperpage{213}
+    \subitem di una forza, \hyperpage{46}
+  \item circuiti, \hyperpage{251}
+  \item circuito
+    \subitem elettrico, \hyperpage{193}
+  \item Clausius, \hyperpage{93}
+  \item coefficienti
+    \subitem del viriale, \hyperpage{290}
+  \item composizione delle velocit\IeC {\`a}, \hyperpage{18}
+    \subitem relativistiche, \hyperpage{113}
+  \item condensatore
+    \subitem piano, \hyperpage{157}
+  \item condizione
+    \subitem di Lorentz, \hyperpage{273}
+  \item conducibilit\IeC {\`a} elettrica, \hyperpage{189}
+  \item conduttori, \hyperpage{169}
+  \item conduzione, \hyperpage{82}
+  \item conservazione
+    \subitem  dell'energia meccanica, \hyperpage{46}
+    \subitem della carica, \hyperpage{188}
+  \item contrazione delle lunghezze, \hyperpage{111}
+  \item convezione, \hyperpage{82}
+  \item coordinate, \hyperpage{5}, \hyperpage{141--144}
+    \subitem cartesiane, \hyperpage{142}
+    \subitem cilindriche, \hyperpage{143}
+    \subitem polari, \hyperpage{14}
+    \subitem sferiche, \hyperpage{144}
+  \item corda tesa, \hyperpage{126}
+  \item Coriolis, \hyperpage{27}
+  \item corpo nero, \hyperpage{313}
+  \item corrente
+    \subitem elettrica, \hyperpage{3}
+    \subitem stazionaria, \hyperpage{186}
+  \item costante
+    \subitem di Planck, \hyperpage{320}
+    \subitem dielettrica, \hyperpage{230}
+  \item Coulomb, \hyperpage{170}
+  \item coulomb, \hyperpage{147}
+  \item covarianza, \hyperpage{18}
+  \item curve
+    \subitem  di calibrazione, \hyperpage{124}
+
+  \indexspace
+
+  \item dalembertiano, \hyperpage{274}
+  \item Debye, \hyperpage{324}
+  \item densit\IeC {\`a}, \hyperpage{57}
+  \item densit\IeC {\`a} di carica, \hyperpage{148}
+    \subitem lineare, \hyperpage{148}
+    \subitem superficiale, \hyperpage{148}
+    \subitem volumetrica, \hyperpage{148}
+  \item densit\IeC {\`a} di corrente, \hyperpage{187}
+  \item densit\IeC {\`a} superficiale
+    \subitem delle cariche di polarizzazione, \hyperpage{225}
+    \subitem delle cariche legate, \hyperpage{225}
+  \item densit\IeC {\`a} volumetrica
+    \subitem delle cariche di polarizzazione, \hyperpage{225}
+    \subitem delle cariche legate, \hyperpage{225}
+  \item derivata
+    \subitem di un vettore, \hyperpage{9}
+    \subitem direzionale, \hyperpage{135}
+    \subitem parziale, \hyperpage{44}
+  \item dielettrici, \hyperpage{220}
+  \item differenziale
+    \subitem esatto, \hyperpage{45}
+    \subitem totale, \hyperpage{45}
+  \item dilatazione dei tempi, \hyperpage{112}, \hyperpage{122}
+  \item dilatazione termica, \hyperpage{72}
+  \item dinamica
+    \subitem dei fluidi, \hyperpage{64}
+  \item dipolo, \hyperpage{162--167}
+  \item dispersione, \hyperpage{280--285}
+  \item distribuzione
+    \subitem dell'energia, \hyperpage{78}
+    \subitem delle velocit\IeC {\`a}, \hyperpage{76}, \hyperpage{291}
+    \subitem Maxwell--Boltzmann, \hyperpage{331}
+  \item distribuzione delle energie, \hyperpage{296}
+  \item divergenza, \hyperpage{138}
+    \subitem teorema, \hyperpage{139}
+  \item Doppler, \hyperpage{131}
+  \item Doulong, \hyperpage{83, 84}, \hyperpage{323}
+
+  \indexspace
+
+  \item effetto
+    \subitem Compton, \hyperpage{354--356}
+    \subitem Doppler, \hyperpage{131}
+      \subsubitem relativistico, \hyperpage{131}
+    \subitem Joule, \hyperpage{197}
+  \item Einstein, \hyperpage{323}
+    \subitem postulati di, \hyperpage{107}
+  \item elettreti, \hyperpage{223}
+  \item elettrone, \hyperpage{305}
+  \item elettronvolt, \hyperpage{119}
+  \item elettrostatica, \hyperpage{145}
+    \subitem nei conduttori, \hyperpage{169}
+  \item energia
+    \subitem cinetica, \hyperpage{44}
+      \subsubitem relativistica, \hyperpage{116}
+    \subitem di un sistema di cariche, \hyperpage{160}
+    \subitem di un'orbita, \hyperpage{56}
+    \subitem interna, \hyperpage{83}
+    \subitem media, \hyperpage{81}
+    \subitem potenziale, \hyperpage{46}
+      \subsubitem del dipolo, \hyperpage{165}
+      \subsubitem elettrostatica, \hyperpage{160}
+    \subitem relativistica, \hyperpage{116}, \hyperpage{118}
+  \item entropia, \hyperpage{95}
+    \subitem  per qualsiasi trasformazione, \hyperpage{99}
+    \subitem nei cicli, \hyperpage{97}
+    \subitem secondo Boltzman, \hyperpage{101}
+  \item equazione
+    \subitem  dei gas perfetti, \hyperpage{72}
+    \subitem di Bernoulli, \hyperpage{66}
+    \subitem di continuit\IeC {\`a}, \hyperpage{65}
+    \subitem di Laplace, \hyperpage{183}
+    \subitem di Poisson, \hyperpage{182}
+    \subitem diconale, \hyperpage{279}
+    \subitem differenziale di un'onda, \hyperpage{127}
+  \item equazione di stato
+    \subitem di van der Waals, \hyperpage{290}
+  \item equazioni
+    \subitem dei potenziali ritardati, \hyperpage{274}
+    \subitem di Maxwell, \hyperpage{145}
+  \item equilibrio
+    \subitem chimico, \hyperpage{71}
+    \subitem meccanico, \hyperpage{70}
+    \subitem termico, \hyperpage{71}
+  \item esperimento
+    \subitem delle due semisfere, \hyperpage{60}
+    \subitem di Michelson--Morley, \hyperpage{104--107}
+    \subitem di Millikan, \hyperpage{308}
+    \subitem di Thomson, \hyperpage{306}
+    \subitem di Torricelli, \hyperpage{59}
+    \subitem Stern--Gerlach, \hyperpage{358}
+  \item etere, \hyperpage{105}
+  \item Eulero, \hyperpage{64}
+
+  \indexspace
+
+  \item Faraday, \hyperpage{267}
+  \item filo infinito, \hyperpage{208}
+  \item fluidostatica, \hyperpage{57}
+  \item flusso, \hyperpage{137}
+    \subitem del campo magnetico, \hyperpage{214}
+    \subitem netto, \hyperpage{138}
+  \item Focault, \hyperpage{27}
+  \item forma differenziale
+    \subitem  lineare, \hyperpage{45}
+  \item forza
+    \subitem apparente, \hyperpage{25}
+    \subitem centrifuga, \hyperpage{27}
+    \subitem conservativa, \hyperpage{45, 46}
+    \subitem di Coriolis, \hyperpage{27}
+    \subitem di Coulomb, \hyperpage{146}
+    \subitem di Lorentz, \hyperpage{199}
+    \subitem elastica, \hyperpage{19}
+    \subitem fondamentale, \hyperpage{19}
+    \subitem magnetica
+      \subsubitem su corrente, \hyperpage{203}
+    \subitem relativistica, \hyperpage{120}
+    \subitem sul dipolo, \hyperpage{166}
+    \subitem tra circuiti, \hyperpage{211}
+    \subitem tra fili, \hyperpage{212}
+    \subitem variabile, \hyperpage{21}
+      \subsubitem nel tempo, \hyperpage{21}
+      \subsubitem nella velocit\IeC {\`a}, \hyperpage{24}
+      \subsubitem nello spazio, \hyperpage{22}
+  \item fotoni, \hyperpage{320}
+  \item frigorifero, \hyperpage{91}
+    \subitem perfetto, \hyperpage{100}
+  \item funzione
+    \subitem armonica, \hyperpage{183}
+    \subitem del campo, \hyperpage{134}
+    \subitem di stato, \hyperpage{85}
+
+  \indexspace
+
+  \item gas, \hyperpage{289}
+  \item Gauss, \hyperpage{154}, \hyperpage{293}
+  \item gauss, \hyperpage{200}
+  \item Gay Lussac, \hyperpage{72}
+  \item generatori, \hyperpage{195}
+  \item Gerlach, \hyperpage{358}
+  \item Giorgi, \hyperpage{147}
+  \item gradiente, \hyperpage{10}, \hyperpage{135}
+  \item grandezze, \hyperpage{2}
+    \subitem scalari, \hyperpage{2}
+    \subitem tensoriali, \hyperpage{2}
+    \subitem vettoriali, \hyperpage{2}
+  \item gravitazione, \hyperpage{50}
+
+  \indexspace
+
+  \item henry, \hyperpage{246}
+
+  \indexspace
+
+  \item impulso di una forza, \hyperpage{32}
+  \item induzione elettrostatica, \hyperpage{170}
+    \subitem completa, \hyperpage{172}
+  \item integrale
+    \subitem di linea, \hyperpage{136}
+  \item integrali
+    \subitem di Gauss, \hyperpage{293}
+  \item intensit\IeC {\`a}
+    \subitem del suono, \hyperpage{132}
+    \subitem luminosa, \hyperpage{3}
+  \item intensit\IeC {\`a} di corrente, \hyperpage{186}
+  \item interferenza, \hyperpage{128}
+    \subitem distruttiva, \hyperpage{129}
+  \item invarianza, \hyperpage{18}
+  \item irraggiamento, \hyperpage{82}
+  \item isolanti, \hyperpage{169}, \hyperpage{220}
+
+  \indexspace
+
+  \item Joule, \hyperpage{197}
+
+  \indexspace
+
+  \item Kelvin, \hyperpage{93}
+  \item kelvin, \hyperpage{3}
+  \item Keplero, \hyperpage{50}
+  \item kilogrammo, \hyperpage{3}
+  \item Kirchhoff, \hyperpage{251}, \hyperpage{314}
+
+  \indexspace
+
+  \item Lagrange, \hyperpage{64}
+  \item lamina
+    \subitem magnetica, \hyperpage{207}
+  \item Laplace, \hyperpage{183}, \hyperpage{204}, \hyperpage{208}
+  \item laplaciano, \hyperpage{182}
+  \item Larmor, \hyperpage{202}
+  \item lavoro, \hyperpage{42}
+    \subitem su un gas, \hyperpage{86}
+  \item legge
+    \subitem dei gas, \hyperpage{289}
+    \subitem dei gas perfetti, \hyperpage{72}
+    \subitem dei vasi comunicanti, \hyperpage{59}
+    \subitem di Biot--Savart, \hyperpage{207}
+    \subitem di Boltzman, \hyperpage{101}
+    \subitem di Boyle, \hyperpage{72}
+    \subitem di Gay Lussac, \hyperpage{72}
+    \subitem di Joule, \hyperpage{197}
+    \subitem di Kirchhoff, \hyperpage{314}
+    \subitem di Leonardo, \hyperpage{65}
+    \subitem di Ohm, \hyperpage{191}
+      \subsubitem generalizzata, \hyperpage{196}
+    \subitem di Stevino, \hyperpage{58}
+    \subitem Doulong--Petit, \hyperpage{323}
+  \item leggi
+    \subitem  del campo, \hyperpage{134}
+    \subitem di Keplero, \hyperpage{50}
+    \subitem di Leonardo, \hyperpage{20}
+    \subitem globali, \hyperpage{134}
+    \subitem locali, \hyperpage{134}
+  \item Leonardo, \hyperpage{20}, \hyperpage{65}
+  \item libero cammino medio, \hyperpage{76}
+  \item linea
+    \subitem coordinata, \hyperpage{141}
+  \item linee
+    \subitem di flusso, \hyperpage{65}
+  \item Lorentz, \hyperpage{108}, \hyperpage{199}, \hyperpage{273}
+  \item lunghezza, \hyperpage{3}
+
+  \indexspace
+
+  \item macchina
+    \subitem di Carnot, \hyperpage{90}
+    \subitem frigorifera, \hyperpage{91}
+    \subitem perfetta, \hyperpage{91}, \hyperpage{100}
+  \item maglia, \hyperpage{251}
+  \item magnetone
+    \subitem di Bohr, \hyperpage{357}
+  \item massa, \hyperpage{3}
+    \subitem longitudinale, \hyperpage{121}
+    \subitem molare, \hyperpage{83}
+    \subitem relativistica, \hyperpage{114}
+    \subitem trasversa, \hyperpage{121}
+  \item Maxwell, \hyperpage{76}, \hyperpage{84}, \hyperpage{104}, \hyperpage{145}
+  \item Mayer, \hyperpage{88}
+  \item meccanica dei fluidi, \hyperpage{57--69}
+  \item metro, \hyperpage{3}
+  \item mho, \hyperpage{191}
+  \item Michelson, \hyperpage{104}
+  \item Millikan, \hyperpage{308}
+  \item Minkowski, \hyperpage{122}
+  \item modello
+    \subitem di Bohr, \hyperpage{222}
+  \item modello del gas di elettroni liberi, \hyperpage{187}
+  \item mole, \hyperpage{3}, \hyperpage{287}
+  \item molecole
+    \subitem apolari, \hyperpage{222}
+    \subitem polari, \hyperpage{222}
+  \item momento
+    \subitem atomico, \hyperpage{222}
+    \subitem d'inerzia, \hyperpage{35}
+    \subitem di dipolo
+      \subsubitem indotto, \hyperpage{223}
+    \subitem di dipolo magnetico, \hyperpage{206}
+    \subitem di una forza, \hyperpage{38}
+    \subitem su un circuito, \hyperpage{205}
+    \subitem sul dipolo, \hyperpage{166}
+  \item Morley, \hyperpage{104}
+  \item moto
+    \subitem armonico, \hyperpage{15}
+      \subsubitem smorzato, \hyperpage{16}
+    \subitem Browniano, \hyperpage{299}
+    \subitem circolare, \hyperpage{14}
+      \subsubitem di un fluido, \hyperpage{63}
+      \subsubitem uniforme, \hyperpage{13}
+    \subitem del pendolo, \hyperpage{23}
+    \subitem in coordinate polari, \hyperpage{15}
+    \subitem rettilineo uniforme, \hyperpage{12}
+    \subitem uniformemente accelerato, \hyperpage{13}
+  \item multipoli, \hyperpage{167--168}
+  \item mutua induttanza, \hyperpage{247--250}
+
+  \indexspace
+
+  \item nabla, \hyperpage{135}
+  \item $\ve\nabla$, \see{nabla}{135}
+  \item nodi, \hyperpage{129}
+  \item nodo, \hyperpage{251}
+  \item normale, \hyperpage{137}
+  \item numero
+    \subitem di Avogadro, \hyperpage{287}, \hyperpage{300}
+
+  \indexspace
+
+  \item ohm, \hyperpage{191}
+  \item $\omega$, \see{velocit\IeC {\`a} angolare}{13}
+  \item onda
+    \subitem armonica, \hyperpage{125}
+    \subitem bidimensionale, \hyperpage{125}
+    \subitem elettromagnetica, \hyperpage{125}
+    \subitem longitudinale, \hyperpage{125}
+    \subitem meccanica, \hyperpage{125}
+    \subitem monodimensionale, \hyperpage{125}
+    \subitem progressiva, \hyperpage{126}
+    \subitem regressiva, \hyperpage{126}
+    \subitem stazionaria, \hyperpage{129}
+    \subitem su corda tesa, \hyperpage{126}
+    \subitem trasversale, \hyperpage{125}
+    \subitem tridimensionale, \hyperpage{125}
+  \item onde, \hyperpage{125}
+  \item operatore
+    \subitem dalembertiano, \hyperpage{274}
+
+  \indexspace
+
+  \item parete
+    \subitem adiabatica, \hyperpage{70}
+    \subitem diatermica, \hyperpage{70}
+  \item pendolo, \hyperpage{23}, \hyperpage{48}
+    \subitem balistico, \hyperpage{34}
+    \subitem di Focault, \hyperpage{27}
+  \item permittivit\IeC {\`a}elettrica, \hyperpage{231}
+  \item Petit, \hyperpage{83, 84}, \hyperpage{323}
+  \item piano
+    \subitem di incidenza, \hyperpage{276}
+  \item pila, \hyperpage{195}
+  \item Planck, \hyperpage{319}
+  \item Poisson, \hyperpage{182}
+  \item polarizzazione, \hyperpage{125}, \hyperpage{220, 221}
+    \subitem per deformazione, \hyperpage{223}
+    \subitem per orientamento, \hyperpage{222}
+  \item portata
+    \subitem di massa, \hyperpage{65}
+    \subitem volumica, \hyperpage{65}
+  \item posizione, \hyperpage{11}
+  \item postulato
+    \subitem di Einstein, \hyperpage{107}
+  \item potenza, \hyperpage{43}
+  \item potenziale
+    \subitem elettrico, \hyperpage{273}
+    \subitem elettrostatico, \hyperpage{158}
+      \subsubitem del dipolo, \hyperpage{164}
+    \subitem scalare, \hyperpage{273}
+    \subitem vettoriale
+      \subsubitem magnetico, \hyperpage{217}
+  \item potenziali
+    \subitem ritardati, \hyperpage{274}
+  \item potere dissipativo delle punte, \hyperpage{174}
+  \item Poynting, \hyperpage{270}
+  \item pressione, \hyperpage{57}, \hyperpage{74}
+    \subitem  atmosferica, \hyperpage{60}
+    \subitem elettrostatica, \hyperpage{171}
+  \item prima formula di Laplace, \hyperpage{208}
+  \item primo principio della termodinamica, \hyperpage{85}
+  \item principi della dinamica, \hyperpage{20}
+  \item principio
+    \subitem  di continuit\IeC {\`a}, \hyperpage{188}
+    \subitem di Archimede, \hyperpage{61}
+    \subitem di Carnot, \hyperpage{103}
+    \subitem di corrispondenza, \hyperpage{104}
+    \subitem di equipartizione
+      \subsubitem dell'energia, \hyperpage{84}
+    \subitem di equivalenza, \hyperpage{56}
+    \subitem di Pascal, \hyperpage{61}
+    \subitem di sovrapposizione, \hyperpage{128}
+    \subitem primo della termodinamica, \hyperpage{85}
+    \subitem secondo della termodinamica, \hyperpage{93}, \hyperpage{100}
+    \subitem zero della termodinamica, \hyperpage{71}, \hyperpage{336}
+  \item prodotto
+    \subitem misto, \hyperpage{9}
+    \subitem scalare, \hyperpage{8}
+    \subitem vettoriale, \hyperpage{8}
+  \item Proust, \hyperpage{287}
+
+  \indexspace
+
+  \item quanti, \hyperpage{320}
+  \item quantit\IeC {\`a} di moto, \hyperpage{28}
+    \subitem relativistica, \hyperpage{115}, \hyperpage{118}
+  \item quantit\IeC {\`a} di sostanza, \hyperpage{3}
+
+  \indexspace
+
+  \item radiazione
+    \subitem di corpo nero, \hyperpage{313}
+  \item raggi
+    \subitem catodici, \hyperpage{305}
+  \item raggio
+    \subitem di Bohr, \hyperpage{350}
+    \subitem di Larmor, \hyperpage{202}
+  \item ramo, \hyperpage{251}
+  \item regola
+    \subitem di Wilson--Sommerfeld, \hyperpage{353}
+  \item relativit\IeC {\`a}
+    \subitem ristretta, \see{speciale}{104}
+    \subitem speciale, \hyperpage{104--124}
+  \item relazione
+    \subitem di Mayer, \hyperpage{88}
+  \item resistenza
+    \subitem del mezzo, \hyperpage{20}
+    \subitem elettrica, \hyperpage{192}
+  \item resistivit\IeC {\`a}, \hyperpage{190}
+  \item resistore, \hyperpage{193}
+  \item resistori
+    \subitem in parallelo, \hyperpage{193}
+    \subitem in serie, \hyperpage{193}
+  \item rete
+    \subitem resistiva, \hyperpage{193}
+
+  \indexspace
+
+  \item Savart, \hyperpage{207}
+  \item scala assoluta, \hyperpage{103}
+  \item scala termodinamica, \hyperpage{103}
+  \item scariche
+    \subitem nei gas, \hyperpage{305}
+  \item schermo elettrostatico, \hyperpage{174}
+  \item seconda formula di Laplace, \hyperpage{204}
+  \item secondo, \hyperpage{3}
+  \item secondo principio della termodinamica, \hyperpage{93}, \hyperpage{100}
+  \item semiconduttori, \hyperpage{192}
+  \item sensazione sonora, \hyperpage{132}
+  \item separatore
+    \subitem di velocit\IeC {\`a}, \hyperpage{202}
+  \item siemens, \hyperpage{191}
+  \item Sir Mayer, \hyperpage{280}, \hyperpage{285}
+  \item sistema, \hyperpage{70}
+    \subitem aperto, \hyperpage{70}
+    \subitem chiuso, \hyperpage{70}
+    \subitem copernicano, \hyperpage{50}
+    \subitem di riferimento, \hyperpage{141}
+    \subitem inerziale, \hyperpage{26}
+    \subitem isolato, \hyperpage{70}
+    \subitem razionalizzato Giorgi, \hyperpage{147}
+    \subitem ticonico, \hyperpage{50}
+    \subitem tolemaico, \hyperpage{50}
+  \item smorzamento critico, \hyperpage{253}
+  \item soglia
+    \subitem del dolore, \hyperpage{132}
+    \subitem di udibilit\IeC {\`a}, \hyperpage{132}
+  \item solenoide, \hyperpage{209}
+  \item Sommerfeld, \hyperpage{353}
+  \item sorgenti
+    \subitem del campo, \hyperpage{134}
+  \item spazio
+    \subitem di Minkowski, \hyperpage{122}
+  \item spettrometro
+    \subitem di massa, \hyperpage{202}
+  \item spira, \hyperpage{209}
+  \item stat--coulomb, \hyperpage{147}
+  \item Stern, \hyperpage{358}
+  \item suono, \hyperpage{132}
+  \item superconduttivit\IeC {\`a}, \hyperpage{192}
+  \item superconduttori, \hyperpage{192}
+  \item superficie
+    \subitem  di livello, \hyperpage{135}
+    \subitem coordinata, \hyperpage{141}
+    \subitem isobarica, \hyperpage{63}
+  \item suscettivit\IeC {\`a}dielettrica, \hyperpage{230}
+  \item sviluppo
+    \subitem del viriale, \hyperpage{290}
+    \subitem in multipoli, \hyperpage{167--168}
+
+  \indexspace
+
+  \item temperatura, \hyperpage{71}
+    \subitem critica, \hyperpage{192}
+  \item temperatura termodinamica, \hyperpage{3}
+  \item tempo, \hyperpage{3}
+    \subitem caratteristico, \hyperpage{195}
+    \subitem di rilassamento
+      \subsubitem di un conduttore, \hyperpage{194}
+  \item teorema
+    \subitem degli assi paralleli, \hyperpage{37}
+    \subitem della divergenza, \hyperpage{139}
+    \subitem di Ampere, \hyperpage{213}
+    \subitem di Carnot, \hyperpage{94}
+    \subitem di Coulomb, \hyperpage{170}
+    \subitem di Gauss, \hyperpage{154}
+      \subsubitem nei dielettrici, \hyperpage{221}, \hyperpage{228}
+      \subsubitem per la gravit\IeC {\`a}, \hyperpage{51}
+    \subitem di Pappo--Guldino, \hyperpage{32}
+    \subitem di Steiner, \hyperpage{37}
+    \subitem di Stokes, \hyperpage{140}
+    \subitem lavoro--energia, \hyperpage{44}
+      \subsubitem relativistico, \hyperpage{116}
+  \item teoria cinetica del gas perfetto, \hyperpage{73}
+  \item termodinamica, \hyperpage{70--103}
+  \item termometro, \hyperpage{71}
+    \subitem a gas perfetto, \hyperpage{72}
+  \item terra, \hyperpage{172}
+  \item timbro, \hyperpage{132}
+  \item Torricelli, \hyperpage{59}
+  \item trasferimento di calore, \hyperpage{82}
+  \item trasformate
+    \subitem di Lorentz, \hyperpage{108--111}
+  \item trasformatore, \hyperpage{249}
+  \item trasformazioni
+    \subitem cicliche, \hyperpage{90}
+    \subitem di Galileo, \hyperpage{17}
+    \subitem di Lorentz, \hyperpage{108--111}
+    \subitem di un gas, \hyperpage{85}
+    \subitem irreversibili, \hyperpage{85}
+    \subitem politropiche, \hyperpage{89}
+    \subitem quasistatiche, \hyperpage{70}, \hyperpage{85}
+    \subitem reversibili, \hyperpage{70}, \hyperpage{85}
+  \item treno d'onde, \hyperpage{125}
+  \item tubo
+    \subitem di flusso, \hyperpage{65}
+
+  \indexspace
+
+  \item unit\IeC {\`a} di massa atomica, \hyperpage{287}
+  \item unit\IeC {\`a} di misura, \hyperpage{3}
+    \subitem fondamentali, \hyperpage{3}
+    \subitem prefissi, \hyperpage{4}
+  \item unit\IeC {\`a} elettrostatica semplice, \hyperpage{147}
+  \item universo
+    \subitem termodinamico, \hyperpage{70}
+  \item urti, \hyperpage{33}
+    \subitem anelastici, \hyperpage{34}
+    \subitem elastici, \hyperpage{33}
+
+  \indexspace
+
+  \item van der Waals, \hyperpage{290}
+  \item variabile
+    \subitem di stato, \hyperpage{70}
+  \item velocit\IeC {\`a}, \hyperpage{12}
+    \subitem angolare, \hyperpage{13}
+    \subitem del suono, \hyperpage{132}
+    \subitem di fuga, \hyperpage{48}
+    \subitem di trascinamento, \hyperpage{18}
+    \subitem istantanea, \hyperpage{12}
+    \subitem media, \hyperpage{12}, \hyperpage{78}, \hyperpage{295}
+    \subitem perpendicolare, \hyperpage{15}
+    \subitem pi\IeC {\`u} probabile, \hyperpage{77}, \hyperpage{295}
+    \subitem quadratica media, \hyperpage{78}, \hyperpage{295}
+    \subitem radiale, \hyperpage{15}
+    \subitem relativa, \hyperpage{17}
+    \subitem scalare, \hyperpage{12}
+  \item ventri, \hyperpage{129}
+  \item versore, \hyperpage{5}, \hyperpage{142}
+  \item vettore, \hyperpage{5}
+    \subitem di Poyning, \hyperpage{270}
+    \subitem induzione
+      \subsubitem elettrica, \hyperpage{230}
+    \subitem intensit\IeC {\`a}magnetica, \hyperpage{242}
+    \subitem normale, \hyperpage{137}
+    \subitem polarizzazione
+      \subsubitem elettrica, \hyperpage{223}
+    \subitem spostamento
+      \subsubitem elettrico, \hyperpage{230}
+  \item viscosit\IeC {\`a}, \hyperpage{67}, \hyperpage{302}
+  \item volt, \hyperpage{161}
+  \item vuoto, \hyperpage{60}
+
+  \indexspace
+
+  \item weber, \hyperpage{200}, \hyperpage{208}
+  \item Wilson, \hyperpage{353}
+
+\end{theindex}
