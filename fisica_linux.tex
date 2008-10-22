@@ -5,7 +5,7 @@
 \typeout{}\typeout{}\typeout{}
 %*******************************VERSIONE***********************************
 
-\newcommand{\versione}{1.08.01}
+\newcommand{\versione}{1.08.02}
 
 %********************************DICHIARAZIONE DOCUMENTO********************
 %***********PACCHETTI GRAFICI E THUMPDF E HYPEREF***************************
@@ -38,10 +38,12 @@
 %********************************PACCHETTI**********************************
 \input{TeX/packages}
 
-%******************************SYNTAX****************************************
-
+%******************************SYNTAX******************************************
+% decommentare la riga sotto, se si vuole solo controllare la sintassi del
+% documento, senza produrre un output
+%
 %\syntaxonly
-
+%
 %********************************DEFINIZIONI MATEMATICHE**************************************
 \input{TeX/math_op}
 
@@ -65,7 +67,10 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 %**************************************STILE************************************************
 \pagestyle{headings}
 
-%****************************OPZIONI PER STUDENTIBICOCCA************************************
+%****************************OPZIONI PER STUDENTIBICOCCA***********************
+% decommentare le seguenti righe, per pubblicare il documento sul sito degli
+% studenti Bicocca
+%
 %\pagestyle{fancy}
 %\fancyhead{}
 %\fancyhead[LE,RO]{\thepage}
@@ -86,11 +91,13 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 
 \makeindex
 
+%%******************************INCLUDE ONLY***********************************
+% se si vuole compilare solo una parte scommentare la riga relativa alla
+% sezione che si vuole compilare
 %\includeonly{TeX/fisica1_1modulo}
 %\includeonly{TeX/fisica1_2modulo}
 %\includeonly{TeX/fisica1_1modulo,TeX/fisica1_2modulo}
-
-% \includeonly{TeX/fisica2}
+%\includeonly{TeX/fisica2}
 %%********************************INIZIO DOCUMENTO*******************************
 \begin{document}
 \frontmatter
@@ -116,6 +123,7 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 
 %*****************************BIBLIOGRAFIA**************************************
 \backmatter
+% vecchia bibliografia che non usava BibTeX, cancellare?
 %\input{TeX/biblio}
 \bibliography{TeX/biblio}{}
 \bibliographystyle{plain} %altri stili: prsty are abbrv, alpha, plain and unsrt

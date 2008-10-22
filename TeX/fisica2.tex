@@ -1193,9 +1193,9 @@ I=\frac{\ud q}{\ud t}
 \label{corrente_def}
 \end{equation}
 \end{Def}
-\`E una grandezza scalare, anche se la corrente ha un verso, quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il coulomb che dovrebbe essere definito come ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def}:
+\`E una grandezza scalare, anche se la corrente ha un verso, quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def}:
 \begin{equation}
-Q=\int_0^t I(t)\ud t
+Q=\int_0^t I(t')\ud t'
 \end{equation}
 essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine da una differenza di energia potenziale e quindi da una differenza di potenziale. Tutte le particelle cariche che con il loro moto generato una corrente si chiamano portatori di cariche. Muovendo un corpo carico, per esempio traslandolo, si crea una corrente, in quanto si stanno muovendo delle cariche; per differenziare queste correnti non del tutto proprie, chiameremo correnti di conduzione il moto di portatori di carica all'interno del corpo, senza movimento del corpo.
 \section{Modello del gas di elettroni liberi\index{modello del gas di elettroni liberi}}
@@ -1461,7 +1461,7 @@ $$P=\int_V\ud P=\sigma E^2\int_V\ud v=\sigma E^2(Sl)=\sigma\frac{\Delta V^2}{l^2
 
 \chapter{Campo induzione magnetica\index{campo!induzione magnetica}}
 \section{Definizione}
-Ogni punto dello spazio è caratterizzato oltre che da un campo $\ve E$ anche da un vettore di induzione magnetica $\ve B$. Su una carica $q$ con velocità $\ve v$ immersa in un campo magnetico $\ve B$ si esercita una forza:
+Ogni punto dello spazio è caratterizzato oltre che da un campo $\ve E$ anche da un vettore di induzione magnetica $\ve B$. Su una carica $q$ con velocità $\ve v$ immersa in un campo magnetico $\ve B$ viene esercitata una forza:
 \begin{equation}
 \ve F=q\ve v\times\ve B
 \label{magneto01}
@@ -1471,7 +1471,7 @@ chiamata forza di Lorentz\index{Lorentz}\index{forza!di Lorentz}. Essa è dirett
 \ve F=q\left(\ve E+\ve v\times \ve B\right)
 \end{equation}
 \subsection{Definizione operativa}
-Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico no. Ricaviamo dalla \eqref{magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
+Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
 $$\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v$$
 Allora\footnote{??!!}:
 $$\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v$$
@@ -1487,7 +1487,7 @@ Dove $\weber=\text{weber}={\volt\usk\second}$, $\tesla=\text{tesla}=\frac{\weber
 \begin{Es}[elettrone in campo magnetico]
 \label{es_Larmor}
 Spariamo un elettrone in un campo magnetico $\ve B$ con velocità $\ve v_0=\ve v(0)$. Per semplicità scegliamo un sistema di riferimento in modo che $\ve B=B\ver k$ e che $\ve r(0)=0$. Ad ogni istante sull'elettrone agisce la forza di Lorentz:
-$$\ve F(t)=-e\ve v(t)\times B$$
+$$\ve F(t)=-e\ve v(t)\times \ve B$$
 Scomponiamo le componenti:
 $$\left\{
 \begin{array}{l}

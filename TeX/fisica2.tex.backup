@@ -513,7 +513,7 @@ per risolvere l'integrale è utile la sostituzione $\tan\frac{z'}{x}$:
 \end{align*}
 se $z$ varia tra $(z_\text{min},z_\text{max})$, $\gamma$ varia tra $(\gamma_\text{min},\gamma_\text{max})=(\arctan\left(\frac{z_\text{max}}{x},\frac{z_\text{min}}{x}\right)$:
 \begin{align*}
- \ve E(x,0,0)&=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\int_{\gamma_{\text{min}}}^{\gamma_{\text{max}}}\ud\gamma\left(cos\gamma\ver i-\sin\gamma\ver k\right)\\
+ \ve E(x,0,0)&=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\int_{\gamma_{\text{min}}}^{\gamma_{\text{max}}}\ud\gamma\left(\cos\gamma\ver i-\sin\gamma\ver k\right)\\
 &=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\left[\left(\sin\gamma_\text{max}-\sin\gamma_\text{min}\right)\ver i+\left(\cos\gamma_\text{max}-\cos\gamma_\text{min}\right)\ver k\right]
 \end{align*}
 
@@ -1193,9 +1193,9 @@ I=\frac{\ud q}{\ud t}
 \label{corrente_def}
 \end{equation}
 \end{Def}
-\`E una grandezza scalare, anche se la corrente ha un verso, quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il coulomb che dovrebbe essere definito come ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def}:
+\`E una grandezza scalare, anche se la corrente ha un verso, quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def}:
 \begin{equation}
-Q=\int_0^t I(t)\ud t
+Q=\int_0^t I(t')\ud t'
 \end{equation}
 essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine da una differenza di energia potenziale e quindi da una differenza di potenziale. Tutte le particelle cariche che con il loro moto generato una corrente si chiamano portatori di cariche. Muovendo un corpo carico, per esempio traslandolo, si crea una corrente, in quanto si stanno muovendo delle cariche; per differenziare queste correnti non del tutto proprie, chiameremo correnti di conduzione il moto di portatori di carica all'interno del corpo, senza movimento del corpo.
 \section{Modello del gas di elettroni liberi\index{modello del gas di elettroni liberi}}
