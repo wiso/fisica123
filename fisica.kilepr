@@ -194,10 +194,10 @@ order=-1
 
 [item:fisica_linux.tex]
 archive=true
-column=1
+column=6
 encoding=UTF-8
 highlight=LaTeX
-line=92
+line=13
 open=true
 order=15
 
@@ -4172,7 +4172,7 @@ order=-1
 
 [item:immagini/maxwell3d.fig]
 archive=true
-column=4294967199
+column=0
 encoding=
 highlight=
 line=0
