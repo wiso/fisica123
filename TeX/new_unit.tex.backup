@@ -1,7 +1,0 @@
-\addunit{\atmosphere}{Atm}
-\addunit{\mmHg}{\milli\meter Hg}
-\addunit{\torr}{torr}
-\addunit{\bell}{B}
-\addunit{\gauss}{G}
-\addunit{\anno}{y}
-\addunit{\ua}{ua}
