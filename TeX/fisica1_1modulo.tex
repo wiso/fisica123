@@ -492,11 +492,12 @@ Tutte le altre forze non sono altro che combinazioni di queste.
 Molte forze sono descritte con leggi che approssimano il loro comportamento, consentendo un'analisi dinamica del sistema, senza dover considerare direttamente le forze fondamentali.
 
 \subsection{\index{forza!elastica}Forza elastica}
+\begin{legge}[Hook]
 \begin{equation*}
-\ve F=-k\ve x
+\ve F=-k\Delta\ve x
 \end{equation*}
- con $\ve x$ l'allungamento. Questa legge è
-valida per i corpi elastici e per allungamenti limitati.
+ con $\Delta\ve x$ l'allungamento. Questa legge è valida per i corpi elastici e per allungamenti limitati, dopo di che il corpo non si comporta più in modo elastico e rimane deformato.
+\end{legge}
 
 \subsection{\index{resistenza!del mezzo}Resistenza del mezzo}
 La resistenza del mezzo è quella forza che il fluido in cui è
@@ -1140,15 +1141,17 @@ $$\frac{\ud\ve l_0}{\ud t}=\ve \tau_0\qquad\text{analoga
 a}\qquad\frac{\ud \ve p}{\ud t}=\ve F$$
 \subsection{Sistema di N punti}
 \begin{equation*}\ve L_0=\sum_{i=1}^N \ve l_{0_i}\end{equation*}
-\begin{equation*}\frac{\ud \ve L_0}{\ud t}=\sum_{i=1}^{N}\frac{\ud \ve l_{0_i}}{\ud
+\begin{align*}\frac{\ud \ve L_0}{\ud t}&=\sum_{i=1}^{N}\frac{\ud \ve l_{0_i}}{\ud
 t}=\sum_{i=1}^{N}\frac{\ud}{\ud t}\left(\ve r_i \times \ve
 v_i\right)=\sum_{i=1}^{N}\ve v_i\times m_i \ve v_i+\ve
-r_i\times m_i\ve a_i=\sum_{i=1}^{N}\ve r_i\times m_i\ve
-a_i=\sum_{i=1}^{N}\ve r_i\times\ve F_i=\sum_{i=1}^{N}\ve
+r_i\times m_i\ve a_i\\
+&=\sum_{i=1}^{N}\ve r_i\times m_i\ve
+a_i=\sum_{i=1}^{N}\ve r_i\times\ve F_i\\
+&=\sum_{i=1}^{N}\ve
 r_i\times\stackrel{\text{Int}}{\ve F_i}+\sum_{i=1}^{N}\ve
 r_i\times\stackrel{\text{Est}}{\ve F_i}=\sum_{i=1}^{N}\ve
 r_i\times \stackrel{\text{Est}}{\ve
-F_i}=\sum_{i=1}^{N}\stackrel{\text{Est}}{\ve \tau_0}\end{equation*}
+F_i}=\sum_{i=1}^{N}\stackrel{\text{Est}}{\ve \tau_0}\end{align*}
 \subsubsection{Dimostrazione $\stackrel{\text{Int}}{\ve\tau_0}=0$}
 \begin{equation*}\ve F_{1,2}=-\ve F_{2,1}\end{equation*}
 \begin{equation*}\ve r_1\times \ve F_{1,2}+\ve r_2\times\ve F_{2,1}=\ve r_1\times \ve F_{1,2}-\ve r_2\times\ve F_{1,2}=\left(\ve r_i-\ve r_2\right)\times\ve F_{1,2}=0\end{equation*}

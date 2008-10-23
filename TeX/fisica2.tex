@@ -1942,8 +1942,7 @@ in quando il rotore di un gradiente è sempre nullo. Tra le tante possibili scel
 \diver\ve A=0
 \label{gauge_magnetos}
 \end{equation}
-
-Sappiamo dalla circuitazione di Ampere che:
+queto è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, ma allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
 \begin{equation}
 \rot\ve B=\mu_0\ve J
 \end{equation}
@@ -1956,7 +1955,7 @@ e per la condizione per la magnetostatica \eqref{gauge_magnetos}:
 \nabla^2\ve A=-\mu_0\ve J
 \label{gauge_magnetos1}
 \end{equation}
-da confrontare con la \eqref{Poisson01} per l'elettrostatica $\nabla^2\varphi = -\frac{\rho}{\epsilon_0}$, che però è un equazione scalare. La soluzione della \eqref{gauge_magnetos} è 
+da confrontare con la \eqref{Poisson01} per l'elettrostatica $\nabla^2\varphi = -\frac{\rho}{\epsilon_0}$, che però è un equazione scalare. La soluzione della \eqref{gauge_magnetos1} è 
 \begin{equation}
 \ve A(\ve r)=\frac{\mu_0}{4\pi}\int_V\frac{\ve J(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'
 \label{vet_magnetico01}
@@ -2010,7 +2009,7 @@ che si riassume, tenendo conto che l'area è $A=\pi r'^2$:
 
 \chapter{Dielettrici\index{dielettrici}}
 \section{Isolanti\index{isolanti}}
-A differenza che nei conduttori negli isolanti o dielettrici gli elettroni sono fortemente legati ai nuclei e non si possono allontanare. Su di essi però agisce una forza $\ve F=-e\ve E_0$ se sottoposti ad un campo elettrico esterno $\ve E_0$. Non si parla di moto di cariche, ma di spostamento. Gli elettroni spostandosi dalla loro posizione originaria fanno si che il centro di carica positiva e negativa non coincidano pi. Il dielettrico si dice polarizzato e il fenomeno è chiamato polarizzazione\index{polarizzazione}. In questo modo si crea un campo elettrico di polarizzazione $\ve E_P$; il campo elettrico totale:
+A differenza che nei conduttori negli isolanti o dielettrici gli elettroni sono fortemente legati ai nuclei e non si possono allontanare. Su di essi però agisce una forza $\ve F=-e\ve E_0$ se sottoposti ad un campo elettrico esterno $\ve E_0$. Non si parla di moto di cariche, ma di spostamento. Gli elettroni spostandosi dalla loro posizione originaria fanno si che il centro di carica positiva e negativa non coincidano più. Il dielettrico si dice polarizzato e il fenomeno è chiamato polarizzazione\index{polarizzazione}. In questo modo si crea un campo elettrico di polarizzazione $\ve E_P$; il campo elettrico totale:
 \begin{equation}
 \ve E_T=\ve E_0+\ve E_P
 \end{equation}
@@ -2909,9 +2908,10 @@ analogamente:
 \begin{equation}
 \text{fem}_2=-L_2\frac{\ud I_2}{\ud t}-M_{21}\frac{\ud I_1}{\ud t}=-L_2\frac{\ud I_2}{\ud t}-M_{12}\frac{\ud I_1}{\ud t}
 \end{equation}
-\begin{equation}
-\frac{\text{fem}_1}{\text{fem}_2}=-\dfrac{L_1\dot I_1+M_{12}\dot I_2}{L_2 \dot I_2+M_{12}\dot I_1}=\frac{\mu_0N_1^2lS\dot I_1+\mu_0N_1N_2Sl\dot I_2}{\mu_0N_2^2lS \dot I_2+\mu_0N_1N_2Sl\dot I_1}=\frac{N_1^2\dot I_1+N_1N_2\dot I_2}{N_2^2\dot I_2+N_1N_2\dot I_1}=\frac{N_1}{N_2}
-\end{equation}
+\begin{align}
+\frac{\text{fem}_1}{\text{fem}_2}&=-\dfrac{L_1\dot I_1+M_{12}\dot I_2}{L_2 \dot I_2+M_{12}\dot I_1}=\frac{\mu_0N_1^2lS\dot I_1+\mu_0N_1N_2Sl\dot I_2}{\mu_0N_2^2lS \dot I_2+\mu_0N_1N_2Sl\dot I_1}\\
+&=\frac{N_1^2\dot I_1+N_1N_2\dot I_2}{N_2^2\dot I_2+N_1N_2\dot I_1}=\frac{N_1}{N_2}
+\end{align}
 \end{Es}
 \index{mutua induttanza|)}
 
