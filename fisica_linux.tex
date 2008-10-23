@@ -1,11 +1,11 @@
-\typeout{************************************************************************************************}
+\typeout{*******************************************************************************}
 \typeout{RENDERING RIASSUNTI DI FISICA INIZIATO}
-\typeout{************************************************************************************************}
+\typeout{*******************************************************************************}
 \typeout{Qualcuno, non sapendo verso quali disgrazie va incontro, si accinge a renderizzare: buona fortuna!}
 \typeout{}\typeout{}\typeout{}
 
-%********************************DICHIARAZIONE DOCUMENTO********************
-%***********PACCHETTI GRAFICI E THUMPDF E HYPEREF***************************
+%********************************DICHIARAZIONE DOCUMENTO***********************
+%***********PACCHETTI GRAFICI E THUMPDF E HYPEREF******************************
 
 \documentclass[a4paper,12pt,twoside,openany,italian]{book}
 \usepackage{ifpdf}
@@ -32,12 +32,14 @@
 
 
 
-%********************************PACCHETTI**********************************
+%********************************PACCHETTI*************************************
 \input{TeX/packages}
-%*******************************VERSIONE***********************************
+%*******************************VERSIONE***************************************
 
 \newcommand{\versione}{1.08.02}
 
+% non modificare! le righe sotto si aggiornano da sole ogni volta
+% che viene fatto un update (svn up), o un check out (svn co)
 \SVN $Id$
 \SVN $Date$
 \SVN $Revision$
@@ -46,20 +48,20 @@
 
 %******************************SYNTAX******************************************
 % decommentare la riga sotto, se si vuole solo controllare la sintassi del
-% documento, senza produrre un output
+% documento, senza produrre un output, è molto più veloce
 %
 %\syntaxonly
 %
-%********************************DEFINIZIONI MATEMATICHE**************************************
+%********************************DEFINIZIONI MATEMATICHE***********************
 \input{TeX/math_op}
 
-%*********************************NUOVE TABELLE*************************************
+%*********************************NUOVE TABELLE********************************
 \newenvironment{tabellacostanti}{\begin{tabular}{p{3.4cm}lp{4.5cm}ll} \hline
 costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
-%*********************************NUOVI AMBIENTI************************************
+%*********************************NUOVI AMBIENTI*******************************
 \newenvironment{definizioneunita}{\begin{quote}}{\end{quote}}
 
-%********************************NUOVI AMBIENTI THEOREM************************************
+%********************************NUOVI AMBIENTI THEOREM************************
 \newtheorem{legge}{Legge}[chapter]
 \newtheorem{post}{Postulato}[chapter]
 \newtheorem{Teo}{Teorema}[chapter]
@@ -67,10 +69,10 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \newtheorem{Cor}{Corollario}[chapter]
 {\theorembodyfont{\normalfont}           \newtheorem{Def}{Definizione}[chapter] \newtheorem{Es}{Esempio}[chapter]}
 
-%*************************************NUOVE UNITA'*****************************************
+%*************************************NUOVE UNITA'*****************************
 \input{TeX/new_unit}
 
-%**************************************STILE************************************************
+%**************************************STILE***********************************
 \pagestyle{headings}
 
 %****************************OPZIONI PER STUDENTIBICOCCA***********************
@@ -84,7 +86,7 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 %\fancyfoot[C]{\bfseries\small{Materiale disponibile gratuitamente su %\href{http://www.studentibicocca.it}{www.studentibicocca.it}}}
 
 
-%****************************INFORMAZIONI TITOLO AUTORE DATA********************************
+%****************************INFORMAZIONI TITOLO AUTORE DATA*******************
 
 \title{Riassunti di Fisica}
 \date{2003--2004--2005}
@@ -104,22 +106,22 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 %\includeonly{TeX/fisica1_2modulo}
 %\includeonly{TeX/fisica1_1modulo,TeX/fisica1_2modulo}
 %\includeonly{TeX/fisica2}
-%%********************************INIZIO DOCUMENTO*******************************
+%%********************************INIZIO DOCUMENTO*****************************
 \begin{document}
 \frontmatter
 \input{TeX/titolo}
 \input{TeX/intro}
-%%*******************************INDICE*******************************************
+%%*******************************INDICE****************************************
 \tableofcontents
 
-%*******************************CORPO PRINCIPALE**********************************
+%*******************************CORPO PRINCIPALE*******************************
 \mainmatter
 \include{TeX/fisica1_1modulo}
 \include{TeX/fisica1_2modulo}
 \include{TeX/fisica2}
 \include{TeX/fisica3}
 
-%**************************INIZIO APPENDICI*************************************
+%**************************INIZIO APPENDICI************************************
 \appendix
 \input{TeX/costanti}
 \input{TeX/astro}
@@ -127,14 +129,12 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \input{TeX/momenti}
 \input{TeX/formule}
 
-%*****************************BIBLIOGRAFIA**************************************
+%*****************************BIBLIOGRAFIA*************************************
 \backmatter
-% vecchia bibliografia che non usava BibTeX, cancellare?
-%\input{TeX/biblio}
 \bibliography{TeX/biblio}{}
 \bibliographystyle{plain} %altri stili: prsty are abbrv, alpha, plain and unsrt
 
-%********************************INDICE ANALITICO********************************
+%********************************INDICE ANALITICO******************************
 
 \ifpdf
 \pdfbookmark{Indice analitico}{index}
@@ -143,9 +143,9 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \printindex
 
 \typeout{}\typeout{}\typeout{}
-\typeout{************************************************************************************************}
+\typeout{*******************************************************************************}
 \typeout{RENDERING RIASSUNTI DI FISICA FINITO}
-\typeout{************************************************************************************************}
+\typeout{*******************************************************************************}
 \typeout{Magari ti e' andata bene}
 \typeout{}\typeout{}\typeout{}
 
