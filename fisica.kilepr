@@ -6,7 +6,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
 kileversion=2.0
-lastDocument=TeX/intro.tex
+lastDocument=TeX/fisica2.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -80,7 +80,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=797
+line=0
 open=true
 order=2
 
@@ -95,10 +95,10 @@ order=3
 
 [item:TeX/fisica2.tex]
 archive=true
-column=92
+column=426
 encoding=UTF-8
 highlight=LaTeX
-line=1125
+line=2011
 open=true
 order=6
 
@@ -197,7 +197,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=20
+line=0
 open=true
 order=15
 
