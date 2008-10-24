@@ -21,7 +21,7 @@ Nel 1815 Proust\index{Proust} propose di introdurre la massa atomica relativa, r
 Una massa atomica ($\unita{1}\atomicmass$) è pari al dodicesimo della massa del $^{12}\mathrm{C}$.
 \end{Def}
 Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\unita{12}\gram$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\unita{12}\gram/N_A$, quindi il dodicesimo:
-$$\unita{1}\atomicmass = \frac{\gram\usk\reciprocal\mole}{N_A} = \frac{\gram\usk\reciprocal\mole}{6.022\ldots\times 10^{23}\;\reciprocal\mole}\simeq \unita{1.6605402\times 10^{-27}}\kilogram$$
+\begin{equation*}\unita{1}\atomicmass = \frac{\gram\usk\reciprocal\mole}{N_A} = \frac{\gram\usk\reciprocal\mole}{6.022\ldots\times 10^{23}\;\reciprocal\mole}\simeq \unita{1.6605402\times 10^{-27}}\kilogram\end{equation*}
 
 \chapter{Gas\index{gas}}
 \section{Legge dei gas\index{legge!dei gas}}
@@ -100,9 +100,9 @@ e allora:
 
 
 Se $f_x$ è la densità di probabilità allora è normalizzata a $1$ $Nf_x$ è normalizzata ad $N$ numero di molecole. Possiamo scrivere:
-$$\ud P(v_x) = f(v_x)\,\ud v_x$$
+\begin{equation*}\ud P(v_x) = f(v_x)\,\ud v_x\end{equation*}
 oppure
-$$\ud N(v_x) = Nf(v_x)\,\ud v_x$$
+\begin{equation*}\ud N(v_x) = Nf(v_x)\,\ud v_x\end{equation*}
 Allora:
 \begin{equation}
 N\int_{v_{x_1}}^{v_{x_2}} f(v_x)\,\ud v_x
@@ -433,16 +433,16 @@ Supponendo che tra un urto e l'altro si muova di moto rettilineo uniforme. L'ene
 \label{Browniano12}
 \end{equation}
 Il teorema dell'impulso dice:
-$$\int_{t_1}^{t_2}\ve F\,\ud t=\Delta \ve Q=m\left(\ve v(t_2)-\ve v(t_1)\right)$$
+\begin{equation*}\int_{t_1}^{t_2}\ve F\,\ud t=\Delta \ve Q=m\left(\ve v(t_2)-\ve v(t_1)\right)\end{equation*}
 vogliamo calcolare la forza media dall'istante iniziale $t_1=0$, in cui la particella è nell'origine ferma ($\ve v(0)=0$), ad un istante generico $t$:
 \begin{equation}
 \media{\ve F}=\frac{1}{t_2-t_1}\int_{t_1=0}^{t_2=t}\ve F\,\ud t=\frac{1}{t}\int_0^t\ve F\,\ud t=\frac{m\left(\ve v(t)-\ve v(0)\right)}{t}=m\frac{\ve v(t)}{t}
 \label{impulso_massa_brown}
 \end{equation}
 che assomiglia\footnote{era facile:
-$$
+\begin{equation*}
 \media{\ve F}=\media{m\ve a}=m\media{\ve a}=\frac{m}{t}\int_0^t\frac{\ud\ve v}{\ud t}\,\ud t=m\frac{\ve v(t)}{t}
-$$
+\end{equation*}
 assumendo come instante iniziale lo zero e come velocità iniziale zero} ad $\ve F=m\ve a$. Sostituiamo la massa dalla \eqref{impulso_massa_brown} nella \eqref{Browniano12}:
 \begin{equation}
 \media{E}=\frac{1}{2}\frac{\media{F}}{\media{v}}t\frac{\media{r^2}}{t^2}=\frac{1}{2}\frac{\media{F}}{\media{v}}\frac{\media{r^2}}{t}
@@ -572,7 +572,7 @@ Applicando solo il campo elettrico:
 \ve r=\frac{qE}{2m}t^2+\ve v_0 t
 \end{equation}
 essendo
-$$\ve E=-E\ver \jmath\qquad \ve v_0=v_0\ver \imath$$
+\begin{equation*}\ve E=-E\ver \jmath\qquad \ve v_0=v_0\ver \imath\end{equation*}
 \begin{equation}
 \left\{
 \begin{array}{l}
@@ -2338,7 +2338,7 @@ Sommiamo il momento intrinseco di due elettroni $S_1$ e $S_2$. Essendo $S_1=\sqr
 \end{equation*}
 con $j=0,1$, che corrisponde allo spin antiparallelo e parallelo.
 \end{Es}
-\section{Interazione spin--orbita}
+\section{Interazione spin--orbita\index{interazione!spin--orbita}}
 Stati atomici con gli stessi numeri quantici $n$ e $l$, ma diversi $j$ hanno una lieve differenza di energia a causa dell'interazione dello spin dell'elettrone con il momento orbitale. Il risultato è una leggera separazione delle linee spettrali, chiamata separazione di struttura fine.
 
 Se $l\neq 0$ allora il moto dell'elettrone crea un campo magnetico interno $\ve B_\text{int}$ (se $\ve l=0$ allora $L=0$). Consideriamo il sistema di riferimento dell'elettrone in cui vediamo il nucleo con un momento angolare $\ve L$. Il campo magnetico interno è orientato nella stessa direzione del momento angolare orbitale. Il momento magnetico intrinseco $\ve\mu_s$ dovuto al momento angolare intrinseco $\ve S$ interagisce con il campo interno $\ve B_\text{int}$, causando una differenza di energia dello stato $\Delta E$:

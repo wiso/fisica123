@@ -27,16 +27,18 @@ Il campo può essere:
 Dato un campo scalare possiamo definire superficie di livello \index{superficie! di livello}le superfici il luogo dei punti dove il campo assume un certo valore costante.
 \index{campo|)}
 \section{Richiami di algebra vettoriale}
-$$(A\times B)_x=A_yB_z-A_zB_y\quad(A\times B)_y=A_zB_x-A_xB_z\quad(A\times B)_z=A_xB_y-A_yB_x$$
-$$A\cdot(A\times B)=0$$
-$$A\cdot(B\times C)=(A\times B)\cdot C=(C\times A)\cdot B$$
-$$(A\times B)\times C=B(A\cdot C)-A(B\cdot C)$$
-$$A\times(B\times C)=B(A\cdot C)-C(A\cdot B)$$
+\begin{equation*}
+(A\times B)_x=A_yB_z-A_zB_y\quad(A\times B)_y=A_zB_x-A_xB_z\quad(A\times B)_z=A_xB_y-A_yB_x
+\end{equation*}
+\begin{equation*}A\cdot(A\times B)=0\end{equation*}
+\begin{equation*}A\cdot(B\times C)=(A\times B)\cdot C=(C\times A)\cdot B\end{equation*}
+\begin{equation*}(A\times B)\times C=B(A\cdot C)-A(B\cdot C)\end{equation*}
+\begin{equation*}A\times(B\times C)=B(A\cdot C)-C(A\cdot B)\end{equation*}
 \section{Operatori differenziali}
 \subsection{Gradiente\index{gradiente}}
 \begin{Def}
 Sia $\varphi=\varphi(x,y,z)$, definiamo il gradiente di $\varphi(x,y,z)$
-$$\grad({\varphi})=\frac{\partial \varphi}{\partial x}\ver \imath+\frac{\partial \varphi}{\partial y}\ver \jmath+\frac{\partial\varphi}{\partial z}\ver k=\ve\nabla\varphi$$
+\begin{equation*}\grad({\varphi})=\frac{\partial \varphi}{\partial x}\ver \imath+\frac{\partial \varphi}{\partial y}\ver \jmath+\frac{\partial\varphi}{\partial z}\ver k=\ve\nabla\varphi\end{equation*}
 \end{Def}
 Da un campo scalare siamo passati ad uno vettoriale. L'operatore $\ve\nabla$ nabla\index{nabla}\index{nabla@$\ve\nabla$|see{nabla}} è $\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)$. Possiamo anche dire, sommando i differenziali lungo le componenti che:
 \begin{equation}
@@ -56,11 +58,11 @@ se $\varphi$ è differenziabile:
 \end{equation}
 
 Il gradiente è sempre perpendicolare alle superfici di livello, infatti se $\ud\ve l$ è parallelo alla superficie di livello allora per definizione $\ud \varphi=0$ e abbiamo:
-$$\ve\nabla\varphi\cdot\ud \ve l=\ud\varphi=0$$
+\begin{equation*}\ve\nabla\varphi\cdot\ud \ve l=\ud\varphi=0\end{equation*}
 La direzione del gradiente è la direzione di massima variazione del campo. Se possiamo esprimere un campo vettoriale come gradiente di un campo scalare allora il campo vettoriale è conservativo\index{campo!conservativo}:
 \begin{Teo}
 \label{teo_conservativo1}
-$$\exists \varphi(x,y,z):\quad \ve F(x,y,z)=\ve\nabla\varphi(x,y,z)\Rightarrow\text{$\ve F$ è conservativo}$$
+\begin{equation*}\exists \varphi(x,y,z):\quad \ve F(x,y,z)=\ve\nabla\varphi(x,y,z)\Rightarrow\text{$\ve F$ è conservativo}\end{equation*}
 \end{Teo}
 dal punto di vista matematico vuol dire che la forma differenziale $\ve F\cdot\ud\ve r$ ha un potenziale e quindi è esatta.
 \subsection{Integrale di linea\index{integrale!di linea}}
@@ -85,49 +87,49 @@ per ogni $\Gamma$, che è equivalente alla \eqref{conservativo00}. La quantità 
 \subsubsection{Campo conservativo}
 Abbiamo ora due modi per esprimere il concetto che $\ve F(x,y,z)$ è conservativo, uno dato dal teorema \ref{teo_conservativo1} e l'altro dalla \eqref{circ00}\index{campo!conservativo}:
 \begin{description}
-\item[forma differenziale (locale)]$$\ve F(x,y,z)=\grad\varphi(x,y,z)$$
-\item[forma integrale (globale)]$$\oint\ve F(x,y,z)\cdot\ud\ve l=0$$
+\item[forma differenziale (locale)]\begin{equation*}\ve F(x,y,z)=\grad\varphi(x,y,z)\end{equation*}
+\item[forma integrale (globale)]\begin{equation*}\oint\ve F(x,y,z)\cdot\ud\ve l=0\end{equation*}
 \end{description}
 \subsection{Flusso\index{flusso}}
 \begin{Def}
 Il flusso uscente attraverso la superficie $S$ del campo $\ve F$ è definito come:
-$$\phi_S(\ve F)=\int_S \ve F\cdot \ve n\, \ud a$$
+\begin{equation*}\phi_S(\ve F)=\int_S \ve F\cdot \ve n\, \ud a\end{equation*}
 \end{Def}
 operativamente significa:
-$$\lim_{\Delta A_k\to 0}\sum \ve F_n\cdot \ve n_k\,\Delta A_k$$
+\begin{equation*}\lim_{\Delta A_k\to 0}\sum \ve F_n\cdot \ve n_k\,\Delta A_k\end{equation*}
 dove $\Delta A_k$ sono le areole in cui abbiamo scomposto la superficie $S$, $\ve n_k$ le loro normali e $\ve F_n$ il valore del campo al centro delle areole. Per una superficie chiusa si parla di:
-$$\phi_S(\ve F)=\oint_S \ve F\cdot \ve n\, \ud a$$
+\begin{equation*}\phi_S(\ve F)=\oint_S \ve F\cdot \ve n\, \ud a\end{equation*}
 \subsubsection{normale\index{vettore!normale}\index{normale}}
 La normale è un vettore di modulo unitario, ortogonale alla superficie, per una superficie chiusa è orientato verso l'esterno (e infatti si parla di flusso uscente), mentre per una superficie generica dipende dall'orientamento del contorno. A volte al posto di usare il concetto di normale si preferisce usare il concetto di area orientata, che diventa un vettore ($\ud \ve a=\ve n\,\ud a$):
-$$\phi_S(\ve F)=\oint_S \ve F\cdot \ud \ve a$$
+\begin{equation*}\phi_S(\ve F)=\oint_S \ve F\cdot \ud \ve a\end{equation*}
 \subsubsection{flusso netto\index{flusso!netto}}
 Se dividiamo una superficie $S$ con un taglio la dividiamo in due superfici: $S_a$ e $S_b$; sia $S_{ab}$ la superficie di taglio. Sia $S_1=S_a\cup S_{ab}$ e $S_2=S_b\cup S_{ab}$. I flussi che escono dalla superfici saranno:
-$$\phi_{S_1}(\ve F)=\int_{S_a}\ve F\cdot\ve n\,\ud a+\int_{S_{ab}}\ve F\cdot\ve n_1\,\ud a$$
-$$\phi_{S_2}(\ve F)=\int_{S_b}\ve F\cdot\ve n\,\ud a+\int_{S_{ab}}\ve F\cdot\ve n_2\,\ud a$$
+\begin{equation*}\phi_{S_1}(\ve F)=\int_{S_a}\ve F\cdot\ve n\,\ud a+\int_{S_{ab}}\ve F\cdot\ve n_1\,\ud a\end{equation*}
+\begin{equation*}\phi_{S_2}(\ve F)=\int_{S_b}\ve F\cdot\ve n\,\ud a+\int_{S_{ab}}\ve F\cdot\ve n_2\,\ud a\end{equation*}
 ma essendo la normale orientata verso l'esterno del volume:
-$$\ve n_1=-\ve n_2$$
+\begin{equation*}\ve n_1=-\ve n_2\end{equation*}
 Quindi il flusso è la somma dei flussi delle superfici aperte $S_a$ e $S_b$:
-$$\oint_S\ve F\cdot\ve n\,\ud a=\int_{S_a}\ve F\cdot\ve n\,\ud a+\int_{S_b}\ve F\cdot \ve n\,\ud a$$
+\begin{equation*}\oint_S\ve F\cdot\ve n\,\ud a=\int_{S_a}\ve F\cdot\ve n\,\ud a+\int_{S_b}\ve F\cdot \ve n\,\ud a\end{equation*}
 Possiamo ripetere il procedimento e suddividere ulteriormente a piacimento.
 
 Se il flusso uscente è maggiore di zero vuol dire che all'interno ci sono sorgenti positive, se minore di zero sorgenti negative. Si intende sempre somma delle sorgenti.
 \subsection{Divergenza\index{divergenza}}
 La divergenza non è altro che il flusso in un punto, cioè su una superficie infinitesima.
 \begin{Def}
-$$\diver \ve F(x,y,z)=\lim_{V\to 0}\oint_S \frac{\ve F\cdot \ve n\,\ud a}{V}$$
+\begin{equation*}\diver \ve F(x,y,z)=\lim_{V\to 0}\oint_S \frac{\ve F\cdot \ve n\,\ud a}{V}\end{equation*}
 con $S$ la superficie che racchiude $V$.
 \end{Def}
 
 Possiamo dire che se la divergenza nel punto è nulla allora in quel punto non c'è accumulo, se positiva c'è una densità positiva di sorgenti, se negativa una densità negativa.
 
 Prendiamo per esempio un parallelepipedo, allineato con gli assi cartesiani e con uno spigolo in coordinate $(x,y,z)$. Siano le sue dimensioni $\Delta x$, $\Delta y$, $\Delta z$. Conoscendo il flusso sulla faccia $1$ nella direzione $x$ con Taylor al primo ordine possiamo calcolare il flusso sulla faccia $2$:
-$$\ve F(2)= F_x(1)+\frac{\partial F_x}{\partial x}\Delta x$$
+\begin{equation*}\ve F(2)= F_x(1)+\frac{\partial F_x}{\partial x}\Delta x\end{equation*}
 Risulta allora:
-$$\phi(1)=- F_x(1)\Delta y\Delta z$$
-$$\phi(2)=\left[F_x(1)+\frac{\partial F_x}{\partial x}\Delta x\right]\Delta y\Delta z$$
-$$\phi(1\cup 2)=\frac{\partial F_x}{\partial x}\Delta x\Delta y\Delta z$$
+\begin{equation*}\phi(1)=- F_x(1)\Delta y\Delta z\end{equation*}
+\begin{equation*}\phi(2)=\left[F_x(1)+\frac{\partial F_x}{\partial x}\Delta x\right]\Delta y\Delta z\end{equation*}
+\begin{equation*}\phi(1\cup 2)=\frac{\partial F_x}{\partial x}\Delta x\Delta y\Delta z\end{equation*}
 e similmente per le altre faccie, il flusso totale è allora:
-$$\int_{\text{cubo}} \ve F\cdot\ud a=\left(\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}\right)\Delta x\Delta y\Delta z$$
+\begin{equation*}\int_{\text{cubo}} \ve F\cdot\ud a=\left(\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}\right)\Delta x\Delta y\Delta z\end{equation*}
 
 
 Se ora facciamo $\Delta V\to 0$ che risolve tutti i problemi degli ordini trascurati nello sviluppo di Taylor abbiamo che:
@@ -136,19 +138,19 @@ Se ora facciamo $\Delta V\to 0$ che risolve tutti i problemi degli ordini trascu
 
 \subsection{Teorema della divergenza\index{divergenza!teorema}\index{teorema!della divergenza}}
 Dall'equazione \eqref{div01} possiamo scrivere sostituendo la definizione di divergenza:
-$$\frac{\ud}{\ud V}\int_S \ve F\cdot\ve n\,\ud a=\ve\nabla\cdot\ve F$$
+\begin{equation*}\frac{\ud}{\ud V}\int_S \ve F\cdot\ve n\,\ud a=\ve\nabla\cdot\ve F\end{equation*}
 allora:
 \begin{Teo}[divergenza]
 Sia $S$ la superficie che delimita il volume $V$:
-$$\int_V\diver \ve F\,\ud v=\int_S\ve F\cdot\ve n\,\ud a$$
+\begin{equation*}\int_V\diver \ve F\,\ud v=\int_S\ve F\cdot\ve n\,\ud a\end{equation*}
 \end{Teo}
 Conoscendo la divergenza possiamo calcolare il flusso attraverso $S$. Possiamo riferirci anche a solo una direzione:
-$$\int_V\frac{\partial F_x(x,y,z)}{\partial x}\ud v=\int_S F_x(x,y,z)\cos(n,x)\,\ud a$$
+\begin{equation*}\int_V\frac{\partial F_x(x,y,z)}{\partial x}\ud v=\int_S F_x(x,y,z)\cos(n,x)\,\ud a\end{equation*}
 \subsubsection{Campo solenoidale\index{campo!solenoidale}}
 Un campo $\ve F$ si dice solenoidale se:
 \begin{description}
-\item[legge differenziale]$$\forall x,y,z\qquad \diver\ve F(x,y,z)=0$$
-\item[legge integrale]$$\forall S \qquad\phi_S(\ve F)=0$$
+\item[legge differenziale]\begin{equation*}\forall x,y,z\qquad \diver\ve F(x,y,z)=0\end{equation*}
+\item[legge integrale]\begin{equation*}\forall S \qquad\phi_S(\ve F)=0\end{equation*}
 \end{description}
 \section{Circuitazione\index{circuitazione}}
 L'integrale di un campo vettoriale $\ve C(x,y,z)$ calcolato su una linea chiusa $\Gamma$ è chiamato circuitazione. Se dividiamo il percorso in pezzetti $\ud \ve s$ tangenti, allora la componente del campo parallela a $\ud \ve s$ sarà $\ud \ve s\cdot \ve C$ e la circuitazione è 
@@ -156,13 +158,13 @@ L'integrale di un campo vettoriale $\ve C(x,y,z)$ calcolato su una linea chiusa 
 \oint_\Gamma \ve C\cdot\ud\ve s
 \end{equation}
 Se dividiamo  $\Gamma$ in due cicli $\Gamma_1$ e $\Gamma_2$ appare chiaro che:
-$$\oint_{\Gamma_1} \ve C\cdot\ud \ve s+\oint_{\Gamma_2} \ve C\cdot\ud\ve s=\oint_\Gamma\ve C\cdot\ud\ve s$$
+\begin{equation*}\oint_{\Gamma_1} \ve C\cdot\ud \ve s+\oint_{\Gamma_2} \ve C\cdot\ud\ve s=\oint_\Gamma\ve C\cdot\ud\ve s\end{equation*}
 Possiamo continuare così fino ad ottenere dei cicli chiusi piccoli a piacere, il risultato sarebbe lo stesso in quanto le linee adiacenti si annullerebbero e rimarrebbe solo la parte esterna.
 \subsection{Teorema di Stokes\index{teorema!di Stokes}}
 Immaginiamo un rettangolo orientato come gli assi di lati $\ud x$ e $\ud y$. Sia $A$ il vertice sinistro inferiore di coordinate $(x,y)$ (vedi figura \ref{stokes_ret}). Vogliamo calcolare la circuitazione del campo $\ve C(\ve r)$ sul rettangolo. Sviluppando con Taylor al primo ordine:
-$$C_x(C)=C_x(A)+\frac{\partial C_x}{\partial y}\ud y$$
-$$\left[C_x(A)-C_x(C)\right]\ud x=-\frac{\partial C_x}{\partial y}\ud x\ud y$$
-$$\left[C_y(B)-C_y(D)\right]\ud x=\frac{\partial C_y}{\partial y}\ud x\ud y$$
+\begin{equation*}C_x(C)=C_x(A)+\frac{\partial C_x}{\partial y}\ud y\end{equation*}
+\begin{equation*}\left[C_x(A)-C_x(C)\right]\ud x=-\frac{\partial C_x}{\partial y}\ud x\ud y\end{equation*}
+\begin{equation*}\left[C_y(B)-C_y(D)\right]\ud x=\frac{\partial C_y}{\partial y}\ud x\ud y\end{equation*}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.8]{immagini/fisica2/stockes_ret}
@@ -184,39 +186,43 @@ $z$ in questo caso è la componente normale alla superficie. In generale:
 
 \section{Coordinate\index{coordinate|(}\index{sistema!di riferimento}}
 Consideriamo un sistema di coordinate in $\field{R}^n$, fissiamo una base $\{\ver e_j\}_{j=1}^n$, ogni vettore lo possiamo scrivere univocamente nella forma:
-$$\ve r=u_1\ver e_1+\cdots+u_n\ver e_n$$
+\begin{equation*}\ve r=u_1\ver e_1+\cdots+u_n\ver e_n\end{equation*}
 \subsection{Coordinate curvilinee}
 \begin{Def}[Superficie Coordinata]
 Una superficie coordinata \index{superficie!coordinata} è il luogo dei punti dove:
-$$u_j=\const$$
+\begin{equation*}u_j=\const\end{equation*}
 con $j$ fissato.
 \end{Def}
 \begin{Def}[Linea Coordinata]
 Una linea coordinata \index{linea!coordinata} è il luogo dei punti dove:
-$$\left\{\begin{array}{l}
+\begin{equation*}
+\left\{\begin{array}{l}
 u_j=\const\\
 u_k=\const
-\end{array}\right.$$
+\end{array}\right.
+\end{equation*}
 con $j\neq k$ fissati.
 \end{Def}
 \begin{Def}[Versori delle coordinate\index{versore}]
 Il versore delle coordinate $\ver e_j$ è il vettore ortogonale alle superfici coordinate $u_j=\const$ e tangente alle linee coordinate $u_{\forall k\neq j}=\const$.
 \end{Def}
 Consideriamo ora solo $\field{R}^3$. Un cambiamento di coordinate è una trasformazione biunivoca, non necessariamente lineare, del tipo:
-$$\left\{\begin{array}{l}
+\begin{equation*}
+\left\{\begin{array}{l}
 u_1=u_1(x,y,z)\\
 u_2=u_2(x,y,z)\\
 u_3=u_3(x,y,z)\\
-\end{array}\right.$$
+\end{array}\right.
+\end{equation*}
 \subsubsection{Versori}
 Conoscendo la trasformazione delle coordinate, il versore $i$--esimo delle nuove coordinate si scrive:
-$$\ver e_i=\dfrac{\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right) }{D_i}$$
+\begin{equation*}\ver e_i=\dfrac{\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right) }{D_i}\end{equation*}
 $D_i$ è il fattore di normalizzazione:
-$$D_i=\sqrt{\left(\frac{\partial x}{\partial u_i}\right)^2+\left(\frac{\partial y}{\partial u_i}\right)^2+\left(\frac{\partial z}{\partial u_i}\right)^2}$$
+\begin{equation*}D_i=\sqrt{\left(\frac{\partial x}{\partial u_i}\right)^2+\left(\frac{\partial y}{\partial u_i}\right)^2+\left(\frac{\partial z}{\partial u_i}\right)^2}\end{equation*}
 \subsection{Coordinate cartesiane\index{coordinate!cartesiane}}
 \subsubsection{Superfici coordinate}
 Per definizione una superficie coordinata è 
-$$
+\begin{equation*}
 \left\{\begin{array}{l}
 x=\const\\
 y=t\\
@@ -235,10 +241,10 @@ z=t\end{array}\right.
 x=t\\
 y=t\\
 z=\const\end{array}\right.
-$$
+\end{equation*}
 che sono tre famiglie di piani, ognuna con piani ortogonali ad un asse diverso.
 \subsubsection{Linee Coordinate}
-$$
+\begin{equation*}
 \left\{\begin{array}{l}
 x=\const\\
 y=\const\\
@@ -257,31 +263,31 @@ z=\const\end{array}\right.
 x=\const\\
 y=t\\
 z=\const\end{array}\right.
-$$
+\end{equation*}
 che sono tre famiglie di rette, ognuna con rette parallele ad un asse diverso\footnote{$\const$ indica costanti non necessariamente uguali, quindi nella prima famiglia non è detto che $x=y$}.
 \subsection{Coordinate cilindriche\index{coordinate!cilindriche}}
 La trasformazione rispetto alle coordinate cartesiane è 
-$$\left\{\begin{array}{l}
+\begin{equation*}\left\{\begin{array}{l}
 x=\rho\cos\theta\\
 y=\rho\sin\theta\\
 z=w\\
 \end{array}\right.
-$$
+\end{equation*}
 \subsubsection{Superfici Coordinate}
 Se fissiamo $\rho=\const$ e facciamo variare le altre due coordinate otteniamo un cilindro; se fissiamo $\theta$ un semipiano perpendicolare al piano individuato dagli assi cartesiani $xy$, che ha origine sulla retta $x=y=0$; se fissiamo $w$ otteniamo un piano come in coordinate cartesiane.
 \subsubsection{Linee Coordinate}
 Se facciamo variare solo $\rho$ otteniamo una semiretta uscente dall'origine; se facciamo variare solo $\theta$ una circonferenza che giace in un piano parallelo al piano $xy$; se facciamo variare solo $w$ otteniamo una retta parallela all'asse $z$.
 \subsubsection{Versori}
-$$D_\rho=\sqrt{\left(\frac{\partial x}{\partial\rho}\right)^2+\left(\frac{\partial y}{\partial \rho}\right)^2+\left(\frac{\partial z}{\partial \rho}\right)^2}=\sqrt{\cos^2\theta+\sin^2\theta}=1$$
-$$D_\theta=\sqrt{\left(\frac{\partial x}{\partial\theta}\right)^2+\left(\frac{\partial y}{\partial \theta}\right)^2+\left(\frac{\partial z}{\partial \theta}\right)^2}=\sqrt{\left(-\rho\sin\theta\right)^2+\left(\rho\cos\theta\right)^2}=\rho$$
-$$D_w=1$$
-$$\ver e_\rho=\frac{\frac{\partial x}{\partial\rho}\ve i+\frac{\partial y}{\partial\rho}\ve j+\frac{\partial z}{\partial\rho}\ve k}{D_\rho}=\cos\theta\ve i+\sin\theta\ve j$$
-$$\ver e_\theta=\frac{\frac{\partial x}{\partial\theta}\ve i+\frac{\partial y}{\partial\theta}\ve j+\frac{\partial z}{\partial\theta}\ve k}{D_\theta}=-\sin\theta\ve i+\cos\theta\ve j$$
-$$\ver e_w=\ve k$$
+\begin{equation*}D_\rho=\sqrt{\left(\frac{\partial x}{\partial\rho}\right)^2+\left(\frac{\partial y}{\partial \rho}\right)^2+\left(\frac{\partial z}{\partial \rho}\right)^2}=\sqrt{\cos^2\theta+\sin^2\theta}=1\end{equation*}
+\begin{equation*}D_\theta=\sqrt{\left(\frac{\partial x}{\partial\theta}\right)^2+\left(\frac{\partial y}{\partial \theta}\right)^2+\left(\frac{\partial z}{\partial \theta}\right)^2}=\sqrt{\left(-\rho\sin\theta\right)^2+\left(\rho\cos\theta\right)^2}=\rho\end{equation*}
+\begin{equation*}D_w=1\end{equation*}
+\begin{equation*}\ver e_\rho=\frac{\frac{\partial x}{\partial\rho}\ve i+\frac{\partial y}{\partial\rho}\ve j+\frac{\partial z}{\partial\rho}\ve k}{D_\rho}=\cos\theta\ve i+\sin\theta\ve j\end{equation*}
+\begin{equation*}\ver e_\theta=\frac{\frac{\partial x}{\partial\theta}\ve i+\frac{\partial y}{\partial\theta}\ve j+\frac{\partial z}{\partial\theta}\ve k}{D_\theta}=-\sin\theta\ve i+\cos\theta\ve j\end{equation*}
+\begin{equation*}\ver e_w=\ve k\end{equation*}
 Notare che $\ver e_\theta$ e $\ver e_\rho$ sono ortogonali e che ogni vettore si scrive come $\ve r=r\ver e_\rho$.
 \subsection{Coordinate sferiche\index{coordinate!sferiche}}
 La trasformazione dalla coordinate cartesiane e quella inversa sono:
-$$\left\{\begin{array}{l}
+\begin{equation*}\left\{\begin{array}{l}
 x=\rho\sin\theta\cos\varphi\\
 y=\rho\sin\theta\sin\varphi\\
 z=\rho\cos\theta\\
@@ -292,17 +298,17 @@ z=\rho\cos\theta\\
 \theta=\arctan\frac{\sqrt{x^2+y^2}}{z}\\
 \varphi=\arctan\frac{y}{x}\\
 \end{array}\right.
-$$
+\end{equation*}
 con $\rho\in(0,+\infty)$, $\theta\in[0,\pi]$, $\varphi\in[0,2\pi)$.
 \subsubsection{Superfici Coordinate}
 Fissando solo $\rho$ si ottiene una sfera; fissando solo $\theta$ un cono; fissando solo $\varphi$ si ottiene un semipiano.
 \subsubsection{Linee Coordinate}
 Variando solo $\rho$ si ottiene una semiretta; variando solo $\theta$ una circonferenza; variando solo $\varphi$ una circonferenza.
 \subsubsection{Versori}
-$$D_\rho=1\qquad D_\theta=\rho\qquad D_\varphi=\varphi\sin\theta$$
-$$\ver e_\rho=\sin\theta\cos\varphi\ver \imath+\sin\theta\cos\varphi\ver \jmath+\cos\theta\ver k$$
-$$\ver e_\theta=\cos\theta\cos\varphi\ver \imath+\cos\theta\sin\varphi\ver \jmath-\sin\theta\ver k$$
-$$\ver e_\varphi=-\sin\varphi\ver \imath+\cos\varphi\ver \jmath$$
+\begin{equation*}D_\rho=1\qquad D_\theta=\rho\qquad D_\varphi=\varphi\sin\theta\end{equation*}
+\begin{equation*}\ver e_\rho=\sin\theta\cos\varphi\ver \imath+\sin\theta\cos\varphi\ver \jmath+\cos\theta\ver k\end{equation*}
+\begin{equation*}\ver e_\theta=\cos\theta\cos\varphi\ver \imath+\cos\theta\sin\varphi\ver \jmath-\sin\theta\ver k\end{equation*}
+\begin{equation*}\ver e_\varphi=-\sin\varphi\ver \imath+\cos\varphi\ver \jmath\end{equation*}
 \index{coordinate|)}
 \chapter{Elettrostatica\index{elettrostatica}}
 Tutta l'elettrodinamica nel vuoto può essere descritta con le quattro equazioni di Maxwell\index{Maxwell}
@@ -374,43 +380,43 @@ Il coulomb e lo stat-coulomb nonostante siano unità della stessa grandezza hann
 \end{figure}
 \end{Es}
 Ci si chiede l'equilibrio del pendolo in figura. Se $q_1q_2<0$ allora l'equilibrio è $x=0$.
-$$\ve F_e=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{d^2}\ver e_{q_1,q_2}=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{4x^2}\ver x$$
-$$\ve P=-mg\ver \jmath$$
+\begin{equation*}\ve F_e=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{d^2}\ver e_{q_1,q_2}=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{4x^2}\ver x\end{equation*}
+\begin{equation*}\ve P=-mg\ver \jmath\end{equation*}
 Scomponendo sugli assi e imponendo l'equilibrio:
-$$\left\{\begin{array}{l}
+\begin{equation*}\left\{\begin{array}{l}
 T\sin\alpha\ver \imath-\dfrac{q_1q_2}{4\pi\varepsilon_0}\dfrac{1}{4x^2}\ver \imath=0\\
 T\cos\alpha\ver \jmath-mg\ver \jmath=0
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 Dividendo e usando $x=l\sin\alpha$
-$$\tan\alpha=\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}\frac{1}{\sin^2\alpha}$$
-$$\sin^2\alpha=1-\frac{1}{1+\tan^2\alpha}\qquad\frac{1}{\sin^2\alpha}=\frac{1+\tan^2\alpha}{\tan^2\alpha}$$
-$$\tan^3\alpha=\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}(1+\tan^2\alpha)$$
+\begin{equation*}\tan\alpha=\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}\frac{1}{\sin^2\alpha}\end{equation*}
+\begin{equation*}\sin^2\alpha=1-\frac{1}{1+\tan^2\alpha}\qquad\frac{1}{\sin^2\alpha}=\frac{1+\tan^2\alpha}{\tan^2\alpha}\end{equation*}
+\begin{equation*}\tan^3\alpha=\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}(1+\tan^2\alpha)\end{equation*}
 Ipotizziamo che $\alpha\ll 1$, allora $\tan\alpha\simeq\alpha$:
-$$\alpha=\sqrt[3]{\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}}$$
+\begin{equation*}\alpha=\sqrt[3]{\frac{q_1q_2}{16\pi\varepsilon_0mgl^2}}\end{equation*}
 Naturalmente se $y_1\neq y_2$ allora le soluzioni potrebbero essere altre. Se scostiamo di poco una massa dalla posizione di equilibrio $x_0=l\alpha$ di $\delta_x=(x-x_0)$ la forza (primo sviluppo di Taylor) risulta:
-$$F(x)=F(x_0-\delta_x)=F(x_0)+F'(x_0)\delta_x=F'(x_0)\delta_x$$
+\begin{equation*}F(x)=F(x_0-\delta_x)=F(x_0)+F'(x_0)\delta_x=F'(x_0)\delta_x\end{equation*}
 l'equazione del moto diventa:
-$$m\ddot x=F'(x_0)\delta_x$$
+\begin{equation*}m\ddot x=F'(x_0)\delta_x\end{equation*}
 
 
 \section{Densità di carica\index{densità di carica}}
 Al posto di immaginare la materia come un discreto con cariche puntiformi possiamo immaginarla, a livello macroscopico, come un continuo, definendo una densità di carica volumetrica. Sia $V$ un volume, e $\Delta V$ una porzione di essa. All'interno di $\Delta V$ è contenuta la carica $\Delta q$. Definiamo densità volumetrica di carica la funzione\index{densità di carica!volumetrica}:
-$$\rho\left({\ve r}\right)=\lim_{\Delta V\to 0}\frac{\Delta q}{\Delta V}=\frac{\ud q}{\ud V}$$
+\begin{equation*}\rho\left({\ve r}\right)=\lim_{\Delta V\to 0}\frac{\Delta q}{\Delta V}=\frac{\ud q}{\ud V}\end{equation*}
 La carica totale è allora:
-$$Q=\int_V\rho(\ve r)\,\ud V$$
+\begin{equation*}Q=\int_V\rho(\ve r)\,\ud V\end{equation*}
 Allo stesso modo possiamo definire una densità superficiale di carica \index{densità di carica!superficiale}$\sigma(\ve r)$, o lineare \index{densità di carica!lineare}$\lambda(\ve r)$.
 \subsection{Forza}
 La forza dell'elementino $\ud V$ sulla carica puntiforme esterna $q$ è 
-$$\ud\ve F=\frac{1}{4\pi\varepsilon_0}\frac{q\,\ud q}{\norm{\ve r-{\ve r}\,^\prime}^3}\left(\ve r-{\ve r}\,^\prime\right)$$
-$$\ve F=\int_V \ud \ve F=\frac{q}{4\pi\varepsilon_0}\int_V\frac{\
-\rho(\ve r\,^\prime)\left(\ve r-{\ve r}\,^\prime\right)}{\norm{\ve r-{\ve r}\,^\prime}^3}\,\ud V$$
+\begin{equation*}\ud\ve F=\frac{1}{4\pi\varepsilon_0}\frac{q\,\ud q}{\norm{\ve r-{\ve r}\,^\prime}^3}\left(\ve r-{\ve r}\,^\prime\right)\end{equation*}
+\begin{equation*}\ve F=\int_V \ud \ve F=\frac{q}{4\pi\varepsilon_0}\int_V\frac{\
+\rho(\ve r\,^\prime)\left(\ve r-{\ve r}\,^\prime\right)}{\norm{\ve r-{\ve r}\,^\prime}^3}\,\ud V\end{equation*}
 \section{Campo elettrico\index{campo!elettrico}\index{campo!elettrostatico}}
 Fino ad ora abbiamo usato il concetto di azione a distanza\index{azione a distanza},
-%$${\oint\limits_0^1}_{\Gamma}$$
-%$$\mathop{{\int\!\!\!\!\!\int}\mkern-21mu \bigcirc}\limits_{3}{{\mathop{\rm{x}}}}$$
-%$$\mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu\bigodot}\limits_{0}{{\mathop{\rm x}}}}$$
+%\begin{equation*}{\oint\limits_0^1}_{\Gamma}\end{equation*}
+%\begin{equation*}\mathop{{\int\!\!\!\!\!\int}\mkern-21mu \bigcirc}\limits_{3}{{\mathop{\rm{x}}}}\end{equation*}
+%\begin{equation*}\mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu\bigodot}\limits_{0}{{\mathop{\rm x}}}}\end{equation*}
 cioè una carica produce direttamente (o attraverso le linee di forza) una forza su un'altra carica. L'altro modo di pensare è che una carica modifica il campo elettrostatico, il quale produce una forza su un'altra carica. Definiamo il campo elettrostatico:
-$$\ve E=\frac{\ve F}{q}$$
+\begin{equation*}\ve E=\frac{\ve F}{q}\end{equation*}
 con $\ve F$ la forza esercitata dalla carica generante il campo sulla carica esplorativa e $q$ il valore della carica esplorativa, cioè la carica su cui agisce il campo. Può essere interpretato come la forza nell'unità di carica. Per una carica puntiforme $q$ nell'origine abbiamo:
 \begin{equation}
 \ve E=\frac{1}{4\pi\varepsilon_0}\frac{q}{{\norm{\ve r}}^3}\ve r
@@ -423,13 +429,13 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
 \includegraphics[scale=0.6]{immagini/fisica2/filo_inf}
 \end{figure}
 Im\-ma\-gi\-nia\-mo un filo infinito in coincidenza dell'asse $x$ sul quale sia depositata una densità lineare $\lambda$ uniforme. Il fatto che il filo sia di lunghezza infinita semplifica notevolmente i conti per motivi di simmetria, infatti possiamo dire in qualunque punto lungo l'asse $y$ ci mettiamo di avere metà filo a destra e metà a sinistra. Sia $P$ un punto sull'asse $y$: $P=(0,R,0)$. Consideriamo un elementino del filo $\ud x$, esisterà un altro elementino simmetrico che annulla la componente $x$ del campo; questo per ogni porzione del filo si consideri, in quanto infinito. L'elementino $\ud x$ genera in $P$ un campo $\ud \ve E$. La carica su $\ud x$ è $\ud q=\ud x\lambda$, quindi:
-$$\ud\ve E=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}\ve r$$
-$$\ud E_y=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}r\cos\theta\quad \ud E_x=\ud E_z=0$$
-$$x=R\tan\theta\quad\ud x=R\frac{1}{\cos^2\theta}\ud\theta\quad r=\frac{R}{\cos\theta}$$
+\begin{equation*}\ud\ve E=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}\ve r\end{equation*}
+\begin{equation*}\ud E_y=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}r\cos\theta\quad \ud E_x=\ud E_z=0\end{equation*}
+\begin{equation*}x=R\tan\theta\quad\ud x=R\frac{1}{\cos^2\theta}\ud\theta\quad r=\frac{R}{\cos\theta}\end{equation*}
 \begin{align*}E_y&=\int\ud E_y=\int_{-\infty}^{+\infty}\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^2}\cos\theta=\frac{\lambda}{4\pi\varepsilon_0}\int_{-\infty}^{+\infty}\frac{\ud x}{r^2}\cos\theta\\
 &=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{R}\int_{-\frac{\pi}{2}}^{+\frac{\pi}{2}}\cos\theta\ud\theta=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{R}
 \end{align*}
-$$\ve E=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{R}\ver{j}$$
+\begin{equation*}\ve E=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{R}\ver{j}\end{equation*}
 L'ipotesi del filo infinito fisicamente può essere interpretato come $R\ll l$ con $l$ la lunghezza del filo.
 \end{Es}
 \begin{Es}[Anello]
@@ -440,7 +446,7 @@ Vogliamo calcolare il valore di $\ve E$ lungo l'asse di un anello con carica tot
 \includegraphics[scale=0.45]{immagini/fisica2/anello}
 \end{figure}
 Data la simmetria del problema usiamo coordinate cilindriche. Per ragioni di simmetria il campo sarà rivolto come il versore $\ver e_w$. Ricaviamo il versore $\ver e$:
-$$\ver e=\cos\alpha\ver e_w+\sin\alpha\ver e_r=\frac{w}{d}\ver e_w+\frac{R}{d}\ver e_r$$
+\begin{equation*}\ver e=\cos\alpha\ver e_w+\sin\alpha\ver e_r=\frac{w}{d}\ver e_w+\frac{R}{d}\ver e_r\end{equation*}
 Sull'elementino infinitesimo dell'anello è depositata la carica $\ud q=\frac{q \ud \theta}{2\pi}$ e $d^2=w^2+R^2$:
 \begin{align*}
 \ve E(0,0,w)&=\int_C\frac{\ud q}{4\pi\varepsilon_0d^2}\ver e\\
@@ -450,7 +456,7 @@ Sull'elementino infinitesimo dell'anello è depositata la carica $\ud q=\frac{q 
 &=\frac{q}{4\pi\varepsilon_0}\frac{w}{(R^2+w^2)^{\frac{3}{2}}}\ver e_w\\
 \end{align*}
 Se $w\to +\infty$ coerentemente:
-$$\ve E(0,0,w)\to\frac{q}{4\pi\varepsilon_0}\frac{\ver e_w}{w^2}$$
+\begin{equation*}\ve E(0,0,w)\to\frac{q}{4\pi\varepsilon_0}\frac{\ver e_w}{w^2}\end{equation*}
 cioè come un punto.
 \end{Es}
 \begin{Es}[Disco]
@@ -539,13 +545,13 @@ Infatti $\ud a\cos\theta=\ud a_0$ cioè l'elementino di area infinitesima orient
 Questo importante risultato è indipendente dalla geometria della superficie, infatti l'integrale dell'angolo solido su qualsiasi superficie considerata nella sua interezza è $4\pi$ (qui si nota la comodità del sistema razionalizzato). Il risultato poi è valido per qualsiasi forza del tipo $\frac{1}{r^2}$ infatti mentre l'area aumenta col quadrato della distanza, il campo diminuisce col quadrato della distanza e le due cose si semplificano a vicenda.
 
 Se la carica fosse sul bordo della superficie, l'integrale dell'angolo solido sarebbe stato $2\pi$ e quindi:
-$$\Phi_S(\ve E)=\frac{1}{2}\frac{q}{\varepsilon_0}$$
+\begin{equation*}\Phi_S(\ve E)=\frac{1}{2}\frac{q}{\varepsilon_0}\end{equation*}
 
-Se la carica fosse stata presa all'esterno della superficie allora il flusso attraverso essa sarebbe stato nullo (da una parte entra, dall'altra esce in egual misura), infatti considerando un areola infinitesima $\ud a_1$ o meglio la sua componente normale al campo $\ud a_{01}$ ne corrisponde una $\ud a_{02}$ dove il flusso è uscente. Il flusso netto attraverso queste due superfici è $$\ud\Phi_S(\ve E)=\frac{q}{4\pi\varepsilon_0}\left(\ud\omega_1-\ud\omega_2\right)=0$$
+Se la carica fosse stata presa all'esterno della superficie allora il flusso attraverso essa sarebbe stato nullo (da una parte entra, dall'altra esce in egual misura), infatti considerando un areola infinitesima $\ud a_1$ o meglio la sua componente normale al campo $\ud a_{01}$ ne corrisponde una $\ud a_{02}$ dove il flusso è uscente. Il flusso netto attraverso queste due superfici è \begin{equation*}\ud\Phi_S(\ve E)=\frac{q}{4\pi\varepsilon_0}\left(\ud\omega_1-\ud\omega_2\right)=0\end{equation*}
 perché $\ud\omega_1=\ud\omega_2$ e perché naturalmente ad ogni areola in cui il campo entra corrisponde una ed una sola areola in cui il campo esce.
 
 Se mettiamo più di una carica puntiforme usiamo il principio di sovrapposizione sul campo, e quindi sul flusso:
-$$\ve E=\sum_{i=1}^n \ve E_i\Rightarrow \Phi_S(\ve E)=\oint_S\left(\sum_{i=1}^n\ve E\right)\ve n\,\ud a$$
+\begin{equation*}\ve E=\sum_{i=1}^n \ve E_i\Rightarrow \Phi_S(\ve E)=\oint_S\left(\sum_{i=1}^n\ve E\right)\ve n\,\ud a\end{equation*}
 \begin{Teo}[Gauss per cariche puntiformi]
 Sia $S$ una superficie chiusa e $\{q_i\}_{i=1}^n$ cariche interne ad $S$, definiamo $Q=\sum_{i=1}^n q_i$ allora:
 \begin{equation}
@@ -560,7 +566,7 @@ Sia $S$ una superficie chiusa, al suo interno vi sia una distribuzione continua 
 \end{equation}
 \end{Teo}
 Usando il teorema della divergenza:
-$$\Phi_S(\ve E)=\int_S\ve E\cdot\ve n\,\ud a=\int_V\diver\ve E\,\ud v=\frac{1}{\varepsilon_0}\int_V\rho\,\ud v$$
+\begin{equation*}\Phi_S(\ve E)=\int_S\ve E\cdot\ve n\,\ud a=\int_V\diver\ve E\,\ud v=\frac{1}{\varepsilon_0}\int_V\rho\,\ud v\end{equation*}
 Allora dato che l'integrale vale per qualsiasi superficie e quindi volume, abbiamo:
 \begin{equation}
 \diver \ve E(\ve r)=\frac{\rho(\ve r)}{\varepsilon_0}
@@ -572,20 +578,20 @@ che esprime il teorema di Gauss in forma differenziale. Riassumendo:
 con $Q$ le cariche interne ad $S$.
 \begin{Es}[campo sfera piena]
 Sia $B$ una sfera piena di raggio $R$ centrata nell'origine, con densità di carica $\rho$ uniforme. Vogliamo il campo elettrico. Data la simmetria usiamo coordinate sferiche. Dobbiamo dividere lo spazio in due semispazi, uno con $r<R$ e l'altro con $r>R$.
-$$\ve E(r,\theta,\varphi)=E_r\ver e_r+E_\theta\ver e_\theta+E_\varphi \ver e_\varphi=E_r(r)\ver e_r$$
+\begin{equation*}\ve E(r,\theta,\varphi)=E_r\ver e_r+E_\theta\ver e_\theta+E_\varphi \ver e_\varphi=E_r(r)\ver e_r\end{equation*}
 infatti il campo è radiale e dipende solo dalla distanza dal centro per ragioni di simmetria per rotazioni.
 All'esterno, $r>R$, allora prendiamo una superficie $S$ sferica passante per $P$:
-$$\Phi_S(\ve E)=\oint_S\ve E\cdot\ve n\,\ud a=\oint_S E\ud a=E\oint_S \ud a=4\pi r^2 E$$
+\begin{equation*}\Phi_S(\ve E)=\oint_S\ve E\cdot\ve n\,\ud a=\oint_S E\ud a=E\oint_S \ud a=4\pi r^2 E\end{equation*}
 Per il teorema di Gauss:
-$$\Phi_S(\ve E)=\frac{Q}{\varepsilon_0}=\frac{\frac{4}{3}\pi R^3\rho}{\varepsilon_0}$$
+\begin{equation*}\Phi_S(\ve E)=\frac{Q}{\varepsilon_0}=\frac{\frac{4}{3}\pi R^3\rho}{\varepsilon_0}\end{equation*}
 confrontando:
-$$\ve E(\ve r)=\frac{\rho}{3\varepsilon_0}\frac{R^3}{r^2}\ver e_r=\frac{Q^{\text{tot}}}{4\pi\varepsilon_0}\frac{1}{r^2}\ver e_r$$
+\begin{equation*}\ve E(\ve r)=\frac{\rho}{3\varepsilon_0}\frac{R^3}{r^2}\ver e_r=\frac{Q^{\text{tot}}}{4\pi\varepsilon_0}\frac{1}{r^2}\ver e_r\end{equation*}
 Esattamente come se tutta la carica fosse concentrata al centro. All'interno $r<R$, prendiamo una superficie gaussiana $S$ passante per $P$:
-$$\Phi_S(\ve E)=\oint_S\ve E\cdot\ve n\,\ud a=\oint_S E\ud a=E\oint_S \ud a=4\pi r^2 E$$
+\begin{equation*}\Phi_S(\ve E)=\oint_S\ve E\cdot\ve n\,\ud a=\oint_S E\ud a=E\oint_S \ud a=4\pi r^2 E\end{equation*}
 Questa volta le cariche contenute nella superficie gaussiana non sono tutte le cariche:
-$$\Phi_S(\ve E)=\frac{Q}{\varepsilon_0}=\frac{\frac{4}{3}\pi r^3\rho}{\varepsilon_0}$$
+\begin{equation*}\Phi_S(\ve E)=\frac{Q}{\varepsilon_0}=\frac{\frac{4}{3}\pi r^3\rho}{\varepsilon_0}\end{equation*}
 confrontando:
-$$\ve E(\ve r)=\frac{\rho}{3\varepsilon_0}r\ve e_r$$
+\begin{equation*}\ve E(\ve r)=\frac{\rho}{3\varepsilon_0}r\ve e_r\end{equation*}
 Il massimo si ha quando $\norm{\ve r}=R$. La funzione che descrive il campo è continua (basta verificarlo per $r=R$), ma ha un punto angoloso.
 \begin{figure}[htbp]
 \centering
@@ -600,12 +606,12 @@ Consideriamo un piano uniformemente carico con distribuzione $\sigma$. Per ragio
 =&\frac{Q}{\varepsilon_0}=\frac{1}{\varepsilon_0}\int_A \sigma\,\ud a=\frac{\sigma A}{\varepsilon_0}
 \end{align*}
 Allora:
-$$E=\frac{\sigma}{2\varepsilon_0}$$
+\begin{equation*}E=\frac{\sigma}{2\varepsilon_0}\end{equation*}
 Notare che non dipende dalla distanza.
 \end{Es}
 \begin{Es}[condensatore piano\index{condensatore!piano}]
 Consideriamo due lastre molto vicine, che equivale a dire due lastre infinite, parallele con distribuzione $\pm\sigma$. Usando il risultato dell'esempio precedente e del principio di sovrapposizione, ricordando che stiamo sommando quantità vettoriali, possiamo dire che il campo all'esterno è nullo ovunque, mentre tra le due armature è doppio:
-$$E=\frac{\sigma}{\varepsilon_0}$$
+\begin{equation*}E=\frac{\sigma}{\varepsilon_0}\end{equation*}
 diretto dall'armatura positiva a quella negativa.
 \end{Es}
 \section{Potenziale elettrostatico\index{potenziale!elettrostatico}}
@@ -625,12 +631,12 @@ La differenza di potenziale tra $P_1$ e $P_2$ è il lavoro svolto per spostare u
  \includegraphics{immagini/fisica2/lavoro_campo}
 \end{figure}
 
-Consideriamo un campo $\ve E(\ve r)$ e una carica $q_0=\unita{1}\coulomb$ che si muove su una curva $\Gamma$ congiungente $P_1$ e $P_2$. Dividiamo $\Gamma$ in infinitesimi pezzi $\ud\ve l$, il lavoro elementare compiuto dal campo è 
-$$\delta L_c=\ve F_c\cdot\ud\ve l$$
+Consideriamo un campo $\ve E(\ve r)$ e una carica $q_0$ che si muove su una curva $\Gamma$ congiungente $P_1$ e $P_2$. Dividiamo $\Gamma$ in infinitesimi pezzi $\ud\ve l$, il lavoro elementare compiuto dal campo è 
+\begin{equation*}\delta L_c=\ve F_c\cdot\ud\ve l\end{equation*}
 Il lavoro totale compiuto dal campo è l'integrale di tutti i lavori elementari:
-$$L_c=\int_{P_1}^{P_2}\ve F_c\cdot\ud\ve l=\int_{P_1}^{P_2}q_0\ve E(\ve r)\cdot \ud \ve l$$
+\begin{equation*}L_c=\int_{P_1}^{P_2}\ve F_c\cdot\ud\ve l=\int_{P_1}^{P_2}q_0\ve E(\ve r)\cdot \ud \ve l\end{equation*}
 Allora noi dovremo svolgere un lavoro $L=-L_c$ perché la nostra forza $\ve F=-\ve F_c$, dunque:
-$$\frac{L}{q_0}=-\int_{P_1}^{P_2}\frac{\ve F_c\cdot\ud\ve l}{q_0}=-\int_{P_1}^{P_2}\ve E(\ve r)\cdot\ud\ve l$$
+\begin{equation*}\frac{L}{q_0}=-\int_{P_1}^{P_2}\frac{\ve F_c\cdot\ud\ve l}{q_0}=-\int_{P_1}^{P_2}\ve E(\ve r)\cdot\ud\ve l\end{equation*}
 Questa è la differenza di potenziale tra $P_1$ e $P_2$ se si dimostra che non dipende dal cammino, cioè da $\Gamma$.
 
 Consideriamo il campo generato da una carica puntiforme nell'origine, allora per andare da $P_1$ a $P_2$:
@@ -645,11 +651,11 @@ Dunque non dipende dal cammino percorso e possiamo dire che:
 \end{equation}
 \end{Teo}
 Possiamo prendere un riferimento $P_0$ e dire che $\varphi(P_0)=k$, allora $\varphi(P_1)$ sarà il lavoro per portare la carica da $P_0$ a $P_1$ e sarà la differenza di potenziale tra $P_0$ e $P_1$; $\varphi(P_2)$ la differenza di potenziale tra $P_0$ e $P_2$. Allora:
-$$\Delta \varphi=-\int_{P_1}^{P_2}\ve E\cdot\ud\ve l=-\int_{P_1}^{P_0}\ve E\cdot\ud\ve l-\int_{P_0}^{P_2}\ve E\cdot\ud\ve l=\varphi(P_0)-\varphi(P_1)+\varphi(P_2)-\varphi(P_0)$$
+\begin{equation*}\Delta \varphi=-\int_{P_1}^{P_2}\ve E\cdot\ud\ve l=-\int_{P_1}^{P_0}\ve E\cdot\ud\ve l-\int_{P_0}^{P_2}\ve E\cdot\ud\ve l=\varphi(P_0)-\varphi(P_1)+\varphi(P_2)-\varphi(P_0)\end{equation*}
 Dunque è indipendente dalla scelta di $P_0$. Per convenzione\footnote{un'altra convenzione è mettere il potenziale della Terra uguale a zero, vedi \eqref{potenziale_terra} a pag.\@\pageref{potenziale_terra}}:
-$$\varphi(\infty)=0$$
+\begin{equation*}\varphi(\infty)=0\end{equation*}
 Quindi per portare una carica dall'infinito:
-$$\frac{L}{q_0}=-\int_{\infty}^{P}\ve E\cdot\ud \ve l=\varphi(P)$$
+\begin{equation*}\frac{L}{q_0}=-\int_{\infty}^{P}\ve E\cdot\ud \ve l=\varphi(P)\end{equation*}
 Definiamo il potenziale in un punto (avendo preso come riferimento l'infinito):
 \begin{Def}[potenziale]
 \begin{equation}
@@ -658,21 +664,37 @@ Definiamo il potenziale in un punto (avendo preso come riferimento l'infinito):
 il lavoro che devo fare per portare la carica unitaria dall'infinito al punto contro le forze del campo.
 \end{Def}
 \begin{Es}[carica puntiforme nell'origine]
-$$\varphi(\ve r)=-\int_{\infty}^r\frac{q}{4\pi\varepsilon_0}\frac{\ve r\cdot\ud\ve l}{r^3}=-\frac{q}{4\pi\varepsilon_0}\int_\infty^r\frac{\ve r\cdot\ud\ve l}{r^3}=\frac{q}{4\pi\varepsilon_0}\frac{1}{r}$$
+\begin{equation*}
+\varphi(\ve r)=-\int_{\infty}^r\frac{q}{4\pi\varepsilon_0}\frac{\ve r\cdot\ud\ve l}{r^3}=-\frac{q}{4\pi\varepsilon_0}\int_\infty^r\frac{r}{r^3}\ud r=\frac{q}{4\pi\varepsilon_0}\frac{1}{r}
+\end{equation*}
 \end{Es}
 \subsection{Potenziale di qualsiasi distribuzione}
-$$\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\left[\sum_i\frac{q_i}{\norm{\ve r-\ve r_i}}+\int_S\frac{\sigma({\ve r}\,')}{\norm{\ve r-\ve r\,'}}\ud a+\int_V\frac{\rho({\ve r}\,')}{\norm{\ve r-{\ve r}\,'}}\ud V\right]$$
+L'espressione del potenziale può essere ricavata notando che $\ve\nabla\frac{1}{r}=\frac{\ve r}{r^3}$:
+\begin{equation}
+\begin{split}
+ \ve E &= \frac{1}{\giorgi}\int_V \rho(\ve r')\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}\,\ud V'\\
+&=-\frac{1}{\giorgi}\int_V \rho(\ve r')\ve\nabla\left(\frac{1}{\ve r-\ve r'}\right)\,\ud V'\\
+&=-\ve\nabla\int_V \frac{1}{\giorgi}\frac{\rho(\ve r')}{\ve r-\ve r'}\,\ud V'\\
+&=-\ve\nabla\varphi(\ve r)
+\end{split}
+\end{equation}
+per vedere che questo $\varphi$ è proprio il potenziale di prima
+\begin{equation*}
+\grad \varphi\cdot\ud\ve l=\ud \varphi=\frac{\delta L}{q}=-\ve E\cdot\ud \ve l\Rightarrow \ve E=-\grad\varphi
+\end{equation*}
+In generale, considerando anche cariche puntiformi e superficiali:
+\begin{equation}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\left[\sum_i\frac{q_i}{\norm{\ve r-\ve r_i}}+\int_S\frac{\sigma({\ve r}\,')}{\norm{\ve r-\ve r\,'}}\ud a+\int_V\frac{\rho({\ve r}\,')}{\norm{\ve r-{\ve r}\,'}}\ud V\right]\end{equation}
 \section{Energia potenziale\index{energia!potenziale!elettrostatica}}
 Il potenziale è indipendente dalla carica di prova, l'energia potenziale no. \`E la stessa differenza che c'è tra la forza elettrostatica e il campo elettrostatico, quindi:
-$$\Delta W=q\Delta \varphi$$
+\begin{equation*}\Delta W=q\Delta \varphi\end{equation*}
 Rifacendo il discorso per il potenziale: siano $A$ e $B$ due punti, l'integrale è indipendente dal percorso quindi:
-$$L_A^B=\int_A^B \ve F\cdot\ud\ve l=-q\int_A^B\ve E\cdot\ud\ve l=q\Delta \varphi=\Delta W=W_B-W_A$$
+\begin{equation*}L_A^B=\int_A^B \ve F\cdot\ud\ve l=-q\int_A^B\ve E\cdot\ud\ve l=q\Delta \varphi=\Delta W=W_B-W_A\end{equation*}
 Per il calcolo abbiamo usato la forza contro le forze del campo, non la forza del campo. Il lavoro a sinistra il lavoro contro le forze del campo, mentre l'energia potenziale a destra è relativa alle forze del campo: ecco perché non c'è il meno.
 \subsection{Energia di un sistema di cariche\index{energia!di un sistema di cariche}}
 Prendiamo una carica $q_1$, portiamola dall'infinito alla posizione $\ve r_1$: non serve compiere lavoro. Ora abbiamo un campo, con un potenziale $\varphi_1(\ve r)$. Prendiamo un'altra carica $q_2$ e portiamola dall'infinito alla posizione $\ve r_2$: dobbiamo compiere un lavoro contro le forze del campo:
-$$L_\infty^{\ve r_2}=\int_\infty^{\ve r_2}\ve F\cdot\ud \ve l=-q_2\int_\infty^{\ve r_2} \ve E\cdot\ud \ve l=q_2\varphi_1(\ve r_2)$$
+\begin{equation*}L_\infty^{\ve r_2}=\int_\infty^{\ve r_2}\ve F\cdot\ud \ve l=-q_2\int_\infty^{\ve r_2} \ve E\cdot\ud \ve l=q_2\varphi_1(\ve r_2)\end{equation*}
 Aggiungiamo una carica $q_3$ in posizione $\ve r_3$, altro lavoro:
-$$L_\infty^{\ve r_3}=q_3\varphi_1(\ve r_3)+q_3\varphi_2(\ve r_3)$$
+\begin{equation*}L_\infty^{\ve r_3}=q_3\varphi_1(\ve r_3)+q_3\varphi_2(\ve r_3)\end{equation*}
 Il lavoro che compiamo va ad accrescere l'energia potenziale del sistema $W$, a questo punto:
 \begin{align*}
 W&=q_2\varphi_1(\ve r_2)+q_3\varphi_1(\ve r_3)+q_3\varphi_2(\ve r_3)\\
@@ -687,24 +709,23 @@ W=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^{N}\sum_{j\neq i}^{N}\frac{q_iq_j}{\norm
 Il fattore $\frac{1}{2}$ serve perché altrimenti le coppie sarebbero contate due volte, mentre non conta l'ordine.
 \subsection{Unità di misura}
 Nell'SI il potenziale si misura in volt\index{volt}:
-$$[\varphi]=\frac{\joule}{\coulomb}=\volt$$
+\begin{equation*}[\varphi]=\frac{\joule}{\coulomb}=\volt\end{equation*}
 allora essendo $\ve E=-\ve\nabla\varphi$ il campo lo possiamo esprimere in:
-$$[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}$$
-$$[U]=\joule=[q\varphi]=\coulomb\usk\volt$$
+\begin{equation*}[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}\end{equation*}
+\begin{equation*}[U]=\joule=[q\varphi]=\coulomb\usk\volt\end{equation*}
 \subsubsection{Coppia stesso segno}
 Se il campo è generato da una sorgente positiva, allora se muoviamo $+q$ il suo potenziale vale zero all'infinito e vale infinito a zero. Stessa cosa se la sorgente è negativa e la carica esploratrice negativa.
 \subsubsection{Coppia segno opposto}
 \`E come il caso gravitazionale, essendo in questo caso la forza attrattiva. Il potenziale è massimo e nullo all'infinito, mentre è meno infinito a zero.
 \section{Maxwell per l'elettrostatica}
-$$\grad \varphi\cdot\ud\ve l=\ud \varphi=\frac{\delta L}{q}=-\ve E\cdot\ud \ve l\Rightarrow \ve E=-\grad\varphi$$
 \begin{equation}
 \ve E=-\ve \nabla\varphi
 \label{campo_pot}
 \end{equation}
 Inoltre:
-$$\oint\ve E\cdot\ud\ve l=-\oint\grad\varphi\cdot\ud\ve l=\oint\ud\varphi=0$$
+\begin{equation*}\oint\ve E\cdot\ud\ve l=-\oint\grad\varphi\cdot\ud\ve l=\oint\ud\varphi=0\end{equation*}
 la possiamo scrivere in forma differenziale usando la \eqref{campo_pot}:
-$$\rot\ve E=-\rot\grad\varphi=0$$
+\begin{equation*}\rot\ve E=-\rot\grad\varphi=0\end{equation*}
 Abbiamo allora le equazioni di Maxwell per l'elettrostatica in forma integrale:
 \begin{subequations}
 \begin{gather}
@@ -732,20 +753,20 @@ Consideriamo un dipolo, cioè un sistema di due cariche uguali, con segno oppost
 \label{dipolo01}
 \end{align}
 I due denominatori della \eqref{dipolo01} li possiamo sviluppare:
-$$\left(z^2+\rho^2+\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1+\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}$$
-$$\left(z^2+\rho^2-\delta z+\frac{\delta ^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1-\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}$$
+\begin{equation*}\left(z^2+\rho^2+\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1+\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}\end{equation*}
+\begin{equation*}\left(z^2+\rho^2-\delta z+\frac{\delta ^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1-\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}\end{equation*}
 se vogliamo considerare $\ve E$ a grande distanza equivale a dire che $\delta$ deve essere molto piccolo, quindi il termine $\delta^2$ non lo consideriamo. Ricordiamo lo sviluppo binomiale:
-$$\left(1+x\right)^\alpha=1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2}x^2+\cdots$$
+\begin{equation*}\left(1+x\right)^\alpha=1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2}x^2+\cdots\end{equation*}
 Allora usando solo il primo ordine:
-$$\left(z^2+\rho^2+\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}\simeq\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1-\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)$$
-$$\left(z^2+\rho^2-\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}\simeq\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1+\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)$$
+\begin{equation*}\left(z^2+\rho^2+\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}\simeq\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1-\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)\end{equation*}
+\begin{equation*}\left(z^2+\rho^2-\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}\simeq\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1+\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)\end{equation*}
 sostituendo nella \eqref{dipolo01}:
 \begin{align*}
 \varphi&=\varphi(\rho,z)=\frac{1}{4\pi\varepsilon_0}\frac{1}{\sqrt{\rho^2+z^2}}\left\{-q\left(1-\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)+q\left(1+\frac{1}{2}\frac{\delta z}{\rho^2+z^2}\right)\right\}\\
 &=\frac{q}{4\pi\varepsilon_0}\frac{\delta z}{\left(\rho^2+z^2\right)^\frac{3}{2}}
 \end{align*}
 che è l'espressione del potenziale del dipolo in coordinate cilindriche. Ma $\sqrt{z^2+\rho^2}=\norm{\ve r}$, definiamo $\ve p=\pm |q|\delta \ver e_z$, con il verso tale che sia diretto dalla carica negativa a quella positiva, momento del dipolo. Essendo $\ve r=\rho\ver e_r+z\ver e_z$ allora $\ve p\cdot\ve r=q\delta z$. In funzione di $\ve r$:
-$$\varphi=\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\frac{\ve p\cdot\ve r}{{\norm{\ve r}}^3}$$
+\begin{equation*}\varphi=\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\frac{\ve p\cdot\ve r}{{\norm{\ve r}}^3}\end{equation*}
 Dunque il potenziale decresce con $r^2$. Usando $\ve\nabla\left(\frac{1}{r}\right)=-\frac{\ve r}{r^3}$, lo possiamo anche scrivere come:
 \begin{equation}
 \varphi(\ve r)=-\frac{1}{4\pi\varepsilon_0}\ve p\cdot\ve\nabla\left(\frac{1}{r}\right)
@@ -761,11 +782,11 @@ con $\Phi_0$ il potenziale sulla carica($\frac{1}{4\pi\varepsilon_0}\frac{1}{r}$
 \subsubsection{Altra dimostrazione}
 Immaginiamo una carica $q$ nell'origine, allora il suo potenziale è $\varphi_0\left(\ve r\right)=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}$
 spostiamo di $\Delta\ve r=\frac{\ve\delta}{2}$ la carica, allora:
-$$\varphi_+\left(\ve r\right)=\varphi_0(\ve r-\Delta \ve r)=\simeq\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}$$
+\begin{equation*}\varphi_+\left(\ve r\right)=\varphi_0(\ve r-\Delta \ve r)=\simeq\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\end{equation*}
 La stessa cosa la possiamo fare con una carica $-q$ e spostarla dall'altra parte $-\Delta\ve r$:
-$$\varphi_-\left(\ve r\right)=\varphi_0(\ve r+\Delta \ve r)\simeq-\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=-\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}$$
+\begin{equation*}\varphi_-\left(\ve r\right)=\varphi_0(\ve r+\Delta \ve r)\simeq-\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=-\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\end{equation*}
 Essendo $\delta\ll r$ allora è una buona approssimazione. Il potenziale totale:
-$$\varphi\left(\ve r\right)=\varphi_++\varphi_-=-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\ve\delta=-\frac{1}{4\pi\varepsilon_0}\ve p\cdot\ve\nabla\left(\frac{1}{r}\right)$$
+\begin{equation*}\varphi\left(\ve r\right)=\varphi_++\varphi_-=-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\ve\delta=-\frac{1}{4\pi\varepsilon_0}\ve p\cdot\ve\nabla\left(\frac{1}{r}\right)\end{equation*}
 
 
 \subsection{Campo elettrostatico\index{campo!elettrostatico!del dipolo}}
@@ -777,37 +798,37 @@ E_y&=-\frac{\partial\varphi}{\partial y}=\frac{3py}{4\pi\varepsilon_0}y\frac{1}{
 E_z&=-\frac{\partial\varphi}{\partial z}=\frac{3py}{4\pi\varepsilon_0}z\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3py}{4\pi\varepsilon_0}z\frac{1}{r^5}\\
 \end{align*}
 definiamo:
-$$E_\perp=\sqrt{E_x^2+E_z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}\sqrt{x^2+z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{r^{5}}\sqrt{x^2+z^2}$$
+\begin{equation*}E_\perp=\sqrt{E_x^2+E_z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}\sqrt{x^2+z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{r^{5}}\sqrt{x^2+z^2}\end{equation*}
 allora:
-$$E=\sqrt{E_y^2+E_\perp^2}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{\frac{3y^2}{r^2}+1}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{3\cos^2\theta+1}$$
+\begin{equation*}E=\sqrt{E_y^2+E_\perp^2}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{\frac{3y^2}{r^2}+1}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{3\cos^2\theta+1}\end{equation*}
 in forma vettoriale:
-$$\ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}$$
+\begin{equation*}\ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation*}
 Esso decresce con $r^3$.
 \subsection{Energia potenziale\index{energia!potenziale!del dipolo}}
 Mettiamo un dipolo in un campo elettrico $\ve E$. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
-$$W=W_B+W_A=q(\varphi_B-\varphi_A)$$
+\begin{equation*}W=W_B+W_A=q(\varphi_B-\varphi_A)\end{equation*}
 Calcoliamo il potenziale $\varphi_B$ sviluppando $\varphi_A$ nell'intorno di $\varphi_A$:
-$$\varphi_B\simeq\varphi_A+\ve\nabla\varphi\cdot\ve\delta$$
+\begin{equation*}\varphi_B\simeq\varphi_A+\ve\nabla\varphi\cdot\ve\delta\end{equation*}
 Allora l'energia diventa:
-$$W=q\left(\varphi_A+\ve\nabla\varphi\cdot\ve\delta-\varphi_A\right)=q\ve\delta\cdot\ve\nabla\varphi=-\ve p\cdot\ve E$$
+\begin{equation*}W=q\left(\varphi_A+\ve\nabla\varphi\cdot\ve\delta-\varphi_A\right)=q\ve\delta\cdot\ve\nabla\varphi=-\ve p\cdot\ve E\end{equation*}
 Si deduce che la posizione di equilibrio stabile, che corrisponde all'energia minima, si ha quando $\ve p//\ve E$ cioè quando il dipolo è orientato come il campo elettrico esterno. Quando $\ve p$ è antiparallelo al campo elettrico si ha un equilibrio instabile.
 \subsection{Forza\index{forza!sul dipolo}}
 \label{forza_dipolo100}
-$$\ve F=-\ve\nabla W=\ve\nabla\left(\ve p\cdot\ve E\right)=\left(\ve p\cdot\ve\nabla\right)\ve E$$
+\begin{equation*}\ve F=-\ve\nabla W=\ve\nabla\left(\ve p\cdot\ve E\right)=\left(\ve p\cdot\ve\nabla\right)\ve E\end{equation*}
 per esempio:
-$$F_x=\left(p_x\frac{\partial E_x}{\partial x}+p_y\frac{\partial E_x}{\partial y}+p_z\frac{\partial E_x}{\partial z}\right)$$
+\begin{equation*}F_x=\left(p_x\frac{\partial E_x}{\partial x}+p_y\frac{\partial E_x}{\partial y}+p_z\frac{\partial E_x}{\partial z}\right)\end{equation*}
 \subsection{Momento\index{momento!sul dipolo}}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica2/dipolo_mom}
 \end{figure}
 Il lavoro per far ruotare il sistema di $\ud\theta$ è 
-$$\delta L=-M\ud\theta$$
+\begin{equation*}\delta L=-M\ud\theta\end{equation*}
 notare che $\theta$ diminuisce, quindi la sua variazione è negativa. Essendo il sistema isolato il lavoro compiuto deve tramutarsi in variazione di energia potenziale:
-$$\ud W=\delta L=M\ud\theta$$
+\begin{equation*}\ud W=\delta L=M\ud\theta\end{equation*}
 Allora:
-$$M=\frac{\ud W}{\ud\theta}=\frac{-pE\cos\theta}{\ud\theta}=pE\sin\theta$$
-$$\ve M=\ve p\times\ve E$$
+\begin{equation*}M=\frac{\ud W}{\ud\theta}=\frac{-pE\cos\theta}{\ud\theta}=pE\sin\theta\end{equation*}
+\begin{equation*}\ve M=\ve p\times\ve E\end{equation*}
 che fa ruotare il dipolo fino alla posizione di equilibrio. Questa relazione può essere calcolata semplicemente dalla definizione di momento torcente:
 \begin{equation*}
  \ve M = \ve r_+\times \ve F_+ + \ve r_-\times\ve F_- = q(\ve r_+-\ve r_-)\times \ve E=\ve p\times\ve E
@@ -831,9 +852,9 @@ $
 A\ar[rruuu]^{\ve r}\ar[rrrrr]^{\ve r\,'}&&&&&B\ar[llluuu]_{\ve r-\ve r\,'}
 }$\end{center}
 Usando il teorema dei coseni possiamo scrivere:
-$$\norm{\ve r-\ve r\,'}=\sqrt{r^2+r'^2-2\ve r\cdot \ve r\,'}=r\sqrt{1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}}$$
+\begin{equation*}\norm{\ve r-\ve r\,'}=\sqrt{r^2+r'^2-2\ve r\cdot \ve r\,'}=r\sqrt{1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}}\end{equation*}
 Ricordando che:
-$$(1+x)^{-\frac{1}{2}}=1-\frac{1}{2}x+\frac{3}{8}x^2+\cdots$$
+\begin{equation*}(1+x)^{-\frac{1}{2}}=1-\frac{1}{2}x+\frac{3}{8}x^2+\cdots\end{equation*}
 si ha:
 \begin{align*}
 {\norm{\ve r-\ve r\,'}}^{-1}=&\frac{1}{r}\left(1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}\right)^{-\frac{1}{2}}\\
@@ -848,11 +869,11 @@ Nell'ultimo passaggio abbiamo considerato che $r\gg r'$. Sostituendo l'ultimo ri
 \left.+\frac{1}{2}\int_V\rho(\ve r\,')\left[\frac{3\left(\ve r\cdot\ve r\,'\right)^2}{r^5}-\frac{r'^2}{r^3}\right]\,\ud v\right\}
 \end{multline}
 Analizziamo i termini della \eqref{multipolo02}. Il primo:
-$$\frac{1}{4\pi\varepsilon_0}\frac{1}{r}\int_V\rho(\ve r\,')\,\ud v=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}$$
+\begin{equation*}\frac{1}{4\pi\varepsilon_0}\frac{1}{r}\int_V\rho(\ve r\,')\,\ud v=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}\end{equation*}
 è il potenziale di un monopolo, cioè il potenziale di un punto in cui è accumulata tutta la carica della distribuzione. A grande distanza è un'approssimazione accettabile. Il secondo termine corregge il precedente:
-$$\frac{1}{4\pi\varepsilon_0}\frac{\ve r}{r^3}\cdot\int_V\rho(\ve r\,')\ve r\,'\,\ud v$$
+\begin{equation*}\frac{1}{4\pi\varepsilon_0}\frac{\ve r}{r^3}\cdot\int_V\rho(\ve r\,')\ve r\,'\,\ud v\end{equation*}
 è il potenziale di un dipolo, infatti possiamo definire:
-$$\ve p=\int_V\rho(\ve r\,')\ve r\,'\ud v$$
+\begin{equation*}\ve p=\int_V\rho(\ve r\,')\ve r\,'\ud v\end{equation*}
 momento di dipolo della distribuzione di carica. Gli altri termini sono i potenziali di quadripolo, ottupolo, \ldots Notare che:
 \begin{equation}
 \ve\delta=\frac{\ve p}{|q|}=\frac{\int_V\rho(\ve r\,')\ve r\,'\ud v}{|q|}
@@ -880,7 +901,7 @@ Se carichiamo un conduttore gli elettroni dopo una frazione di tempo trovano una
 L'induzione elettrostatica è quel fenomeno per cui in presenza di un campo elettrico esterno le cariche libere in un conduttore si ridistribuiscono.
 \end{Def}
 Se mettiamo un conduttore in uno spazio in cui è presente un campo elettrico $\ve E_\text{ext}$ gli elettroni al suo interno si muovono in senso opposto ad $\ve E_\text{ext}$. In questo modo creano un accumulo di cariche che a sua volta crea un campo elettrico indotto dalla carica migrata $\ve E_i$. In pochissimo tempo gli elettroni arrivano ad un a posizione di equilibrio in cui:
-$$\ve E=\ve E_i+\ve E_\text{ext}=0$$
+\begin{equation*}\ve E=\ve E_i+\ve E_\text{ext}=0\end{equation*}
 Possiamo allora affermare che (a parte il brevissimo istante in cui le cariche creano raggiungono l'equilibrio) il campo elettrico totale all'interno di un conduttore ideale è nullo. Anche il campo esterno risulta deformato dalla nuova distribuzione di cariche e a grande distanza torna ad essere quello in assenza di distribuzione di cariche. Se il campo elettrico all'interno è nullo le cariche devono essersi accumulate sul bordo del conduttore, infatti:
 consideriamo una superficie chiusa completamente compresa nel conduttore; essendo il campo interno nullo, per il teorema di Gauss, anche la carica deve essere nulla. Facciamo tendere questa superficie alla superficie del conduttore, la carica è sempre nulla. Per la conservazione della carica questa può essere solo sul bordo del conduttore.
 
@@ -888,7 +909,7 @@ consideriamo una superficie chiusa completamente compresa nel conduttore; essend
 Vogliamo calcolare il campo elettrico in prossimità della superficie del conduttore. Sappiamo già che questo è perpendicolare alla superficie. Sulla superficie si è distribuita una densità superficiale di carica $\sigma$ a causa del campo elettrico esterno, tale che $\int_S \sigma\ud a=Q$. Ipotizziamo che $Q=0$, cioè il conduttore sia inizialmente scarico.
 
 Consideriamo un cilindretto di basi infinitesime $\ud A$, una interna e l'altra esterna al conduttore, perpendicolare alla superficie del conduttore. Il flusso attraverso la superficie laterale è nullo in quanto $\ve E\perp\ve n$, e anche il flusso attraverso la superficie interna al conduttore è nullo perché qui il campo è nullo. Rimane solo la superficie all'esterno del conduttore, per Gauss:
-$$\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{Q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}$$
+\begin{equation*}\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{Q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}\end{equation*}
 ma $\ve E//\ve n$ ed è costante: $\int_{S_1}\ve E\cdot\ve n=E\Delta S_1$:
 \begin{Teo}[Coulomb]
 In prossimità di un conduttore il campo elettrico totale è \begin{equation}
@@ -900,12 +921,12 @@ Potrebbe sorgere un dubbio. Se usiamo il teorema di Coulomb su un piano infinito
 
 \subsection{Pressione elettrostatica\index{pressione!elettrostatica}}
 Consideriamo un conduttore carico. Le cariche si distribuiranno sulla superficie. Consideriamo due punti $A$ e $B$ in prossimità di un elementino $\ud a$ della superficie del conduttore. $A$ sia esterno, $B$ interno. Il campo su $A$ è la somma del campo $\ve E_1$ generato dalle cariche appartenenti all'area $\ud a$ e $\ve E_2$ generato dalle cariche distribuite sul resto della superficie. Lo stesso per un punto $B$ interno al conduttore. Mentre però passando da $A$ a $B$ il campo $\ve E_2$ rimane pressoché costante, $\ve E_1$ cambia di verso. Dunque:
-$$\ve E_A=\ve E_1+\ve E_2=\frac{\sigma}{\varepsilon_0}\ve n$$
-$$\ve E_B=-\ve E_1+\ve E_2=0$$
+\begin{equation*}\ve E_A=\ve E_1+\ve E_2=\frac{\sigma}{\varepsilon_0}\ve n\end{equation*}
+\begin{equation*}\ve E_B=-\ve E_1+\ve E_2=0\end{equation*}
 Infatti $B$ è all'interno del conduttore. Dalle precedenti ricaviamo:
-$$\ve E_2=\ve E_1=\frac{\sigma}{2\varepsilon_0}\ve n$$
+\begin{equation*}\ve E_2=\ve E_1=\frac{\sigma}{2\varepsilon_0}\ve n\end{equation*}
 Sulle cariche su $\ud a$ la forza è 
-$$\ud \ve F=\left(\frac{1}{2}\frac{\sigma}{\varepsilon_0}\ve n\right)\sigma\ud a$$
+\begin{equation*}\ud \ve F=\left(\frac{1}{2}\frac{\sigma}{\varepsilon_0}\ve n\right)\sigma\ud a\end{equation*}
 La forza sull'unità di area è detta pressione elettrostatica:
 \begin{equation}
 P=\frac{\ud(\ve F\cdot \ve n)}{\ud a}=\frac{1}{2}\frac{\sigma^2}{\varepsilon_0}
@@ -934,23 +955,23 @@ Im\-ma\-gi\-nia\-mo una fanciulla rinchiusa dentro un conduttore cavo. Adamo, al
 \end{Es}
 \section{Potere dispersivo delle punte\index{potere dissipativo delle punte}}
 In un conduttore carico la densità di carica sugli spigoli è maggiore che altrove. Consideriamo una punta carica nell'atmosfera vicino ad una candela. Si osserva che la fiamma oscilla a causa di un vento ionico. Infatti la carica sul conduttore attira ioni dell'atmosfera di segno opposto che lentamente neutralizzano la carica sul conduttore e contemporaneamente respinge gli ioni con lo stesso segno.. Si crea così un movimento di cariche, in questo caso particelle cariche dell'aria che muovono la fiamma. Per spiegare il fenomeno interpretiamo gli spigoli come zone dove il raggio di curvatura è più piccolo. Consideriamo allora due sfere cariche con raggi diversi $R>r$ collegate a grande distanza (niente induzione) da un filo. Sulla prima sfera:
-$$V_1=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{R}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_R}{R}4\pi R^2=\frac{\sigma_R R}{\varepsilon_0}=\frac{Q}{4\varepsilon_0\pi R}$$
+\begin{equation*}V_1=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{R}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_R}{R}4\pi R^2=\frac{\sigma_R R}{\varepsilon_0}=\frac{Q}{4\varepsilon_0\pi R}\end{equation*}
 Sulla seconda:
-$$V_2=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{r}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_r}{r}4\pi r^2=\frac{\sigma_r r}{\varepsilon_0}=\frac{q}{4\varepsilon_0\pi r}$$
+\begin{equation*}V_2=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{r}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_r}{r}4\pi r^2=\frac{\sigma_r r}{\varepsilon_0}=\frac{q}{4\varepsilon_0\pi r}\end{equation*}
 ma $V_1=V_2$ perché un unico conduttore, allora:
 \begin{equation}
 \frac{Q}{R}=\frac{q}{r}
 \label{candela01}
 \end{equation}
 La carica è proporzionale al raggio, la densità superficiale di carica:
-$$\sigma_R=\frac{Q}{4\pi R^2}\qquad \sigma_r=\frac{q}{4\pi r^2}$$
+\begin{equation*}\sigma_R=\frac{Q}{4\pi R^2}\qquad \sigma_r=\frac{q}{4\pi r^2}\end{equation*}
 Allora il rapporto tra le densità di carica (usando la precedente e la \eqref{candela01}):
-$$\frac{\sigma_R}{\sigma_r}=\frac{Qr^2}{qR^2}=\frac{r}{R}<1$$
+\begin{equation*}\frac{\sigma_R}{\sigma_r}=\frac{Qr^2}{qR^2}=\frac{r}{R}<1\end{equation*}
 Dunque $\sigma_R<\sigma_r$ e, per il teorema di Coulomb, in prossimità dei conduttori:
-$$E_r>E_R$$
+\begin{equation*}E_r>E_R\end{equation*}
 \section{Capacità elettrica\index{capacità elettrica}}
 Consideriamo un conduttore isolato. Carichiamolo con una carica $q$; il conduttore raggiungerà un certo pontenziale:
-$$\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma(\ve r\,')\,\ud a'}{\norm{\ve r-\ve r\,'}}$$
+\begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma(\ve r\,')\,\ud a'}{\norm{\ve r-\ve r\,'}}\end{equation*}
 Se aggiugiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si definisce:
 \begin{Def}[capacità di un conduttore]
 \begin{equation}
@@ -960,9 +981,9 @@ C=\frac{q}{V}
 Esso è costante, dipende solo dalla geometria del conduttore. Si misura in $\text{farad}=\farad=\frac{\text{coulomb}}{\text{volt}}$.
 \begin{Es}[sfera]
 Calcoliamo la capacità di una sfera conduttrice di raggio $R$. Sapendo che la carica si distribuisce uniformemente per simmetria:
-$$\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma$$
-$$\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\oint_S\frac{\sigma(\ve r\,')\,\ud a'}{R}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{4\pi R^2 R}4\pi R^2=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}$$
-$$C=\frac{Q}{\varphi}=4\pi\varepsilon_0R$$
+\begin{equation*}\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma\end{equation*}
+\begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\oint_S\frac{\sigma(\ve r\,')\,\ud a'}{R}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{4\pi R^2 R}4\pi R^2=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}\end{equation*}
+\begin{equation*}C=\frac{Q}{\varphi}=4\pi\varepsilon_0R\end{equation*}
 Se $R=\unita{1}\metre$ allora $C=\unita{10^{-10}}\farad$. Il farad è un'unità generalmente grande.
 \end{Es}
 \subsection{Condensatore}
@@ -982,49 +1003,49 @@ Se colleghiamo il corpo $B$ a terra otteniamo un condensatore. I due conduttori 
 La carica del condensatore è il valore assoluto della carica immagazzinata da uno dei due conduttori di un condensatore.
 \end{Def}
 \begin{Def}[capacità del condensatore]
-$$C=\frac{Q}{\Delta V}$$
+\begin{equation*}C=\frac{Q}{\Delta V}\end{equation*}
 con $Q$ la carica del condensatore e $\Delta V$ la differenza di potenziale tra le due armature.
 \end{Def}
 Essa dipende solo dalla geometria del condensatore.
 \subsubsection{Esempi di geometrie}
 \begin{Es}[piano]
 Consideriamo due lastre infinite $A$ e $B$ parallele, a distanza $d$. La carica si distribuisce uniformemente:
-$$\sigma=\frac{Q}{S}$$
+\begin{equation*}\sigma=\frac{Q}{S}\end{equation*}
 Il campo del condensatore è 
-$$\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath$$
-$$\Delta V=V_B-V_A=-\int_A^B\ve E\cdot\ud l=-\ve E\int_A^B\ud l=-\frac{\sigma}{\varepsilon_0}d$$
-$$C=\frac{Q}{\Delta V}=\frac{\sigma S}{\sigma d}\varepsilon_0=\frac{S}{d}\varepsilon_0$$
+\begin{equation*}\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath\end{equation*}
+\begin{equation*}\Delta V=V_B-V_A=-\int_A^B\ve E\cdot\ud l=-\ve E\int_A^B\ud l=-\frac{\sigma}{\varepsilon_0}d\end{equation*}
+\begin{equation*}C=\frac{Q}{\Delta V}=\frac{\sigma S}{\sigma d}\varepsilon_0=\frac{S}{d}\varepsilon_0\end{equation*}
 Da questo esempio si deduce che $\varepsilon_0$ si può esprimere in $\farad\per\meter$.
 \end{Es}
 \begin{Es}[sferico]
 Consideriamo due sfere con raggi $a<b$ concentriche. Sia $q$ la carica del condensatore. Il campo all'interno può essere calcolato con Gauss. Pensiamo una superficie gaussiana sferica con raggio $r:a<r<b$ concentrica al condensatore. Allora:
-$$\Phi_S(\ve E)=E 4\pi r^2=\frac{Q}{\varepsilon_0}=\frac{q}{\varepsilon_0}\qquad \ve E=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\ver e_r$$
+\begin{equation*}\Phi_S(\ve E)=E 4\pi r^2=\frac{Q}{\varepsilon_0}=\frac{q}{\varepsilon_0}\qquad \ve E=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\ver e_r\end{equation*}
 diretto radialmente, il verso è dato dal segno di $q$. Calcoliamo la differenza di potenziale tra le due sfere scegliendo un percorso $\Gamma$ radiale:
-$$\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{4\pi\varepsilon_0}\int_a^b\frac{1}{r^2}\ud r=\frac{q}{4\pi\varepsilon_0}\left(\frac{1}{a}-\frac{1}{b}\right)$$
-$$C=\frac{q}{\Delta V}=\frac{q4\pi\varepsilon_0}{q}\left(\frac{ab}{b-a}\right)=4\pi\varepsilon_0\frac{ab}{b-a}$$
+\begin{equation*}\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{4\pi\varepsilon_0}\int_a^b\frac{1}{r^2}\ud r=\frac{q}{4\pi\varepsilon_0}\left(\frac{1}{a}-\frac{1}{b}\right)\end{equation*}
+\begin{equation*}C=\frac{q}{\Delta V}=\frac{q4\pi\varepsilon_0}{q}\left(\frac{ab}{b-a}\right)=4\pi\varepsilon_0\frac{ab}{b-a}\end{equation*}
 \end{Es}
 \begin{Es}[cilindrico]
 Consideriamo un condensatore formato da due cilindri coassiali con raggi $a<b$ e altezza $h$. Sia $q$ la carica del condensatore. Per calcolare il campo serviamoci di una superficie gaussiana cilindrica coassiale di altezza $h$ con raggio $r:a<r<b$, consideriamo il condensatore infinito:
-$$\Phi_S(\ve E)=E2\pi rh=\frac{Q}{\varepsilon_0}=\frac{q}{\varepsilon_0}\qquad \ve E=\frac{1}{2\pi\varepsilon_0}\frac{q}{hr}\ver e_r$$
+\begin{equation*}\Phi_S(\ve E)=E2\pi rh=\frac{Q}{\varepsilon_0}=\frac{q}{\varepsilon_0}\qquad \ve E=\frac{1}{2\pi\varepsilon_0}\frac{q}{hr}\ver e_r\end{equation*}
 diretto perpendicolarmente ai due cilindri. La differenza di potenziale tra le due armature è 
-$$\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{2\pi\varepsilon_0h}\int_a^b\frac{\ud r}{r}=\frac{q}{2\pi\varepsilon_0h}\log\frac{b}{a}$$
-$$C=\frac{q}{\Delta V}=\frac{2\pi\varepsilon_0h}{\log\frac{b}{a}}$$
+\begin{equation*}\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{2\pi\varepsilon_0h}\int_a^b\frac{\ud r}{r}=\frac{q}{2\pi\varepsilon_0h}\log\frac{b}{a}\end{equation*}
+\begin{equation*}C=\frac{q}{\Delta V}=\frac{2\pi\varepsilon_0h}{\log\frac{b}{a}}\end{equation*}
 \end{Es}
 \subsection{Energia di un condensatore}
 Tra le altre cose un condensatore serve per immagazzinare energia\footnote{per esempio nei flash delle macchine fotografiche}. Sappiamo che l'energia potenziale di un sistema di cariche è 
-$$W=\frac{1}{2}\sum q_i\varphi_i$$
+\begin{equation*}W=\frac{1}{2}\sum q_i\varphi_i\end{equation*}
 $\varphi_i$ è il potenziale delle cariche nelle loro posizioni. \`E anche il lavoro necessario per portare le cariche dall'infinito alla loro posizione. Se lavoriamo con distribuzioni di cariche allora:
-$$W=\frac{1}{2}\int_S\Bigl(\sigma(x,y,z)\ud a\varphi(x,y,z)\Bigr)+\frac{1}{2}\int_V\Bigl(\rho(x,y,z)\ud v\varphi(x,y,z)\Bigr)$$
+\begin{equation*}W=\frac{1}{2}\int_S\Bigl(\sigma(x,y,z)\ud a\varphi(x,y,z)\Bigr)+\frac{1}{2}\int_V\Bigl(\rho(x,y,z)\ud v\varphi(x,y,z)\Bigr)\end{equation*}
 Stiamo parlando di conduttori e quindi la carica si distribuisce sulla superficie. Siano $S_1,\ldots,S_n$ le superfici:
-$$W=\frac{1}{2}\sum_{i=1}^N\int_{S_i}\varphi_{S_i}\sigma_i\,\ud a_i=\frac{1}{2}\sum_{i=1}^N\varphi_{S_i}q_{i}$$
+\begin{equation*}W=\frac{1}{2}\sum_{i=1}^N\int_{S_i}\varphi_{S_i}\sigma_i\,\ud a_i=\frac{1}{2}\sum_{i=1}^N\varphi_{S_i}q_{i}\end{equation*}
 Nel caso del condensatore $N=2$, $q_1=-q_2=q$:
-$$W=\frac{1}{2}\left(|q|\varphi_A-|q|\varphi_B\right)=\frac{1}{2}|q|\Delta V$$
+\begin{equation*}W=\frac{1}{2}\left(|q|\varphi_A-|q|\varphi_B\right)=\frac{1}{2}|q|\Delta V\end{equation*}
 
 \begin{Es}[condensatore piano]
 Calcoliamo l'energia di un condensatore piano in un altro modo. L'energia può essere intesa come il lavoro necessario per carica le due armature portando le cariche dall'armatura $B$ all'armatura $A$. Siano inizialmente scarichi. Se porto $\ud q$ da $B$ a $A$ non compio lavoro, perché non c'è campo elettrico che mi ostacola. Per portare la seconda carica $\ud q$ devo compiere un lavoro:
-$$\ud W=\ud q\Delta V$$
+\begin{equation*}\ud W=\ud q\Delta V\end{equation*}
 Integrando:
-$$W=\int_0^Q\ud W=\int_0^Q\ud q\Delta V=\int_0^Q\frac{q}{C}\,\ud q=\frac{Q^2}{2C}=\frac{1}{2}Q\Delta V$$
+\begin{equation*}W=\int_0^Q\ud W=\int_0^Q\ud q\Delta V=\int_0^Q\frac{q}{C}\,\ud q=\frac{Q^2}{2C}=\frac{1}{2}Q\Delta V\end{equation*}
 \end{Es}
 
 Usando la definizione di capacità l'energia può essere scritta in modi diversi:
@@ -1038,7 +1059,7 @@ L'energia è sotto forma di campo elettrostatico.
 Sia un condensatore a facce piane e parallele di superficie $S$, con carica $Q$ a distanza $d_0$. Considerando il caso a carica e potenziale costante (isolato o collegato ad un generatore) vogliamo conoscere il lavoro per spostare le armature a distanza $d_F$, la variazione di energia e il potenziale finale.
 
 Consideriamo il caso isolato. $Q=\const$.
-$$
+\begin{equation*}
 \left.
 \begin{array}{lcl}
 \text{inizio}&C_0=\varepsilon_0\dfrac{S}{d_0}&Q=C_0\Delta V_0=\varepsilon_0\dfrac{S}{d_0}\Delta V_0\\
@@ -1047,21 +1068,21 @@ $$
 \end{array}\right\}
 \Rightarrow
 \Delta V_F=\frac{d_F}{d_0}\Delta V_0
-$$
+\end{equation*}
 Il lavoro lo possiamo calcolare come variazione di energia potenziale $L_C=-\Delta W$; ma noi vogliamo il lavoro fatto contro le forze del campo: $L=-L_C$:
 \begin{align*}
 L&=W_F-W_0=\frac{1}{2}C_F\Delta V_F^2-\frac{1}{2}C_0\Delta V_0^2=\frac{1}{2}\varepsilon_0\frac{S}{d_F}\frac{d_F^2}{d_0^2}\Delta V_0^2-\frac{1}{2}\varepsilon_0\frac{S}{d_0}\Delta V_0^2\\
 &=\frac{1}{2}\varepsilon_0\left(\frac{d_F}{d_0^2}-\frac{1}{d_0^2}\right)\Delta V_0^2 S
 \end{align*}
 Oppure lo possiamo calcolare dalla forza:
-$$\delta L=\ve F\cdot\ud \ve x=QE\ud x=Q\frac{\sigma}{2\varepsilon_0}\ud x=Q\frac{Q}{2S\varepsilon_0}\ud x=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}\ud x$$
+\begin{equation*}\delta L=\ve F\cdot\ud \ve x=QE\ud x=Q\frac{\sigma}{2\varepsilon_0}\ud x=Q\frac{Q}{2S\varepsilon_0}\ud x=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}\ud x\end{equation*}
 La forza la si poteva anche ricavare da $\delta F=\ud W$. La forza risulta costante, grazie al fatto che nell'approssimazione il campo campo è costante e parallela allo spostamento.
-$$L=\int_{d_0}^{d_F}\delta L=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}(d_F-d_0)$$
+\begin{equation*}L=\int_{d_0}^{d_F}\delta L=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}(d_F-d_0)\end{equation*}
 che, anche se non sembra, è uguale all'espressione trovata in precedenza. La variazione di energia potenziale è uguale al lavoro.
 
 Consideriamo ora il caso di potenziale $\Delta V=\const$.
-$$\delta L=\ve F\cdot\ud \ve x=QE\ud x=\frac{Q^2}{2\varepsilon_0S}\ud x=\frac{C^2\Delta V^2}{2\varepsilon_0S}\ud x=\frac{\varepsilon_0^2S^2\Delta V^2}{2\varepsilon_0Sx^2}\ud x=\frac{\varepsilon_0S\Delta V^2}{2x^2}\ud x$$
-$$L=\int_{d_0}^{d_F}\delta L=\frac{\varepsilon_0S\Delta V^2}{2}\int_{d_0}^{d_F}\frac{1}{x^2}\ud x=\frac{1}{2}\varepsilon_0\left(\frac{1}{d_0}-\frac{1}{d_F}\right)\Delta V^2S$$
+\begin{equation*}\delta L=\ve F\cdot\ud \ve x=QE\ud x=\frac{Q^2}{2\varepsilon_0S}\ud x=\frac{C^2\Delta V^2}{2\varepsilon_0S}\ud x=\frac{\varepsilon_0^2S^2\Delta V^2}{2\varepsilon_0Sx^2}\ud x=\frac{\varepsilon_0S\Delta V^2}{2x^2}\ud x\end{equation*}
+\begin{equation*}L=\int_{d_0}^{d_F}\delta L=\frac{\varepsilon_0S\Delta V^2}{2}\int_{d_0}^{d_F}\frac{1}{x^2}\ud x=\frac{1}{2}\varepsilon_0\left(\frac{1}{d_0}-\frac{1}{d_F}\right)\Delta V^2S\end{equation*}
 Non possiamo più dire che la variazione di energia potenziale è il lavoro, perché il condensatore non è isolato, anche il generatore compie lavoro.
 \begin{align*}
 \Delta W&=W_F-W_0=\frac{1}{2}C_F\Delta V^2-\frac{1}{2}C_0\Delta V^2=\frac{1}{2}V^2\left(\varepsilon_0\frac{S}{d_F}-\varepsilon_0\frac{S}{d_0}\right)\\
@@ -1075,20 +1096,20 @@ Non possiamo più dire che la variazione di energia potenziale è il lavoro, per
 \includegraphics[scale=1.2]{immagini/fisica2/cond2}
 \end{figure}
 $n$ condensatori sono collegati in serie quando la $\Delta V$ ai capi della combinazione è la somma delle $\Delta V_i$. Siano all'inizio scarichi. Se poniamo una carica $q$ sull'armatura del primo condensatore allora sulla seconda armatura del primo condensatore si crea per induzione una carica opposta $-q$ e sulla prima armatura del secondo condensatore una carica $q$ in modo che la somma della seconda armatura del primo condensatore e la prima del secondo condensatore, che formano un unico conduttore, sia nulla. Se poi l'ultimo condensatore lo colleghiamo a terra avremo che per ogni condensatore si avrà una carica $q$ sulla prima armatura e $-q$ sulla seconda. La carica di ogni condensatore è allora la stessa, quindi la differenza di potenziale di ogni condensatore dipenderà solo dalla propria capacità 
-$$\Delta\varphi_i=\frac{q}{C_i}$$
+\begin{equation*}\Delta\varphi_i=\frac{q}{C_i}\end{equation*}
 Abbiamo detto che la differenza di potenziale tra i capi $A$ e $B$ è la somma delle differenze di potenziali:
-$$\varphi_A-\varphi_B=\sum_{i=1}^N\varphi_i=\sum_{i=1}^N\frac{q}{C_i}=q\sum_{i=1}^N\frac{1}{C_i}$$
+\begin{equation*}\varphi_A-\varphi_B=\sum_{i=1}^N\varphi_i=\sum_{i=1}^N\frac{q}{C_i}=q\sum_{i=1}^N\frac{1}{C_i}\end{equation*}
 Il condensatore equivalente, cioè quello che sostituito al sistema in serie produce gli stessi effetti, è quello con capacità 
-$$\frac{1}{C_\text{eq}}=\sum_{i=1}^N\frac{1}{C_i}$$
+\begin{equation*}\frac{1}{C_\text{eq}}=\sum_{i=1}^N\frac{1}{C_i}\end{equation*}
 \subsubsection{Parallelo}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica2/cond3}
 \end{figure}
 In parallelo la differenza di potenziale di ogni condensatore è uguale. La somma delle cariche è 
-$$Q=\sum_{i=1}^N q_i=\sum_{i=1}^N C_i\varphi$$
+\begin{equation*}Q=\sum_{i=1}^N q_i=\sum_{i=1}^N C_i\varphi\end{equation*}
 Allora il condensatore equivalente ha capacità 
-$$C_\text{eq}=\sum_{i=1}^N C_i$$
+\begin{equation*}C_\text{eq}=\sum_{i=1}^N C_i\end{equation*}
 
 \chapter{Problema generale dell'elettrostatica}
 Abbiamo detto che l'elettrostatica è descritta da due leggi:
@@ -1108,11 +1129,11 @@ Sostituendola nella \eqref{div_E} otteniamo:
 \label{Poisson01}
 \end{equation}
 Si può anche scrivere:
-$$\nabla^2\varphi=\ve\nabla\cdot\ve\nabla\varphi=\diver\grad\varphi={\frac{\partial^2 \varphi}{\partial x^2}+\frac{\partial^2 \varphi}{\partial y^2}+\frac{\partial^2 \varphi}{\partial z^2}}=-\frac{\rho}{\varepsilon_0}$$
+\begin{equation*}\nabla^2\varphi=\ve\nabla\cdot\ve\nabla\varphi=\diver\grad\varphi={\frac{\partial^2 \varphi}{\partial x^2}+\frac{\partial^2 \varphi}{\partial y^2}+\frac{\partial^2 \varphi}{\partial z^2}}=-\frac{\rho}{\varepsilon_0}\end{equation*}
 L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conosenza di $\varphi$ $\ve E=-\ve\nabla\varphi$.
 
 Se la sorgente del campo è data esclusivamente da cariche elettriche in un volume allora l'unica soluzione è 
-$$\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'$$
+\begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'\end{equation*}
 Il problema diventa più complesso quando si inseriscono dei conduttori che subiscono l'induzione elettrostatica.
 \section{Funzioni armoniche}
 Se non ci sono cariche, cioè $\rho=0$, allora l'equazione di Poisson diventa:
@@ -1149,32 +1170,32 @@ Tentiamo di risolvere l'equazione di Laplace, cioè quando non ci sono cariche l
 \end{equation}
 \section{Caso monodimensionale}
 Supponiamo che il potenziale $\varphi$ dipenda solo dalla coordinata $x$, allora $\frac{\partial\varphi}{\partial x}=\frac{\partial\varphi}{\partial y}=0$ e l'equazione di Laplace diventa:
-$$\frac{\ud^2\varphi}{\ud x^2}=0$$
+\begin{equation*}\frac{\ud^2\varphi}{\ud x^2}=0\end{equation*}
 Allora:
-$$\frac{\ud \varphi}{\ud x}=a\qquad \varphi=ax+b$$
+\begin{equation*}\frac{\ud \varphi}{\ud x}=a\qquad \varphi=ax+b\end{equation*}
 \begin{Es}[condensatore]
 Consideriamo due piani paralleli, tenuti a potenziali $\varphi_1<\varphi_2$, a distanza $d$. Possiamo usare l'equazione di Laplace perché non ci sono cariche libere. Vogliamo il potenziale tra i due piani. Esso dipende solo dalla coordinata $x$ e quindi è un problema monodimensionale. Sia primo piano di equazione $x=0$. La soluzione generale è 
-$$\varphi(x)=ax+b$$
+\begin{equation*}\varphi(x)=ax+b\end{equation*}
 Le condizioni al contorno sono:
-$$\varphi(0)=\varphi_1\qquad\varphi(d)=\varphi_2$$
+\begin{equation*}\varphi(0)=\varphi_1\qquad\varphi(d)=\varphi_2\end{equation*}
 Allora:
-$$\varphi(x)=\frac{\varphi_2-\varphi_1}{d}x+\varphi_2$$
+\begin{equation*}\varphi(x)=\frac{\varphi_2-\varphi_1}{d}x+\varphi_2\end{equation*}
 Il campo:
-$$\ve E_E=-\ve\nabla\varphi=\frac{\varphi_1-\varphi_2}{d}\ver \imath$$
+\begin{equation*}\ve E_E=-\ve\nabla\varphi=\frac{\varphi_1-\varphi_2}{d}\ver \imath\end{equation*}
 Usando il teorema di Coulomb:
-$$\sigma=\varepsilon_0E=\frac{\varphi_1-\varphi_2}{d}\varepsilon_0$$
+\begin{equation*}\sigma=\varepsilon_0E=\frac{\varphi_1-\varphi_2}{d}\varepsilon_0\end{equation*}
 \end{Es}
 \begin{Es}[sfera in condensatore]
 Sia una sfera conduttrice di raggio $R$ al centro di un condensatore a faccie piane e parallele. Consideriamo un sistema di riferimento centrato nella sfera. Sia $\pm\sigma$ la densità di carica sulle facce a distanza $2d$, allora il campo elettrico esterno, cioè prodotto dal condensatore è 
-$$\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath$$
+\begin{equation*}\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath\end{equation*}
 fissiamo il riferimento del potenziale sulla prima armatura che poniamo a terra. Il potenziale esterno:
-$$\varphi_{E}(x)=-\frac{\sigma}{\varepsilon_0}(x+d)$$
+\begin{equation*}\varphi_{E}(x)=-\frac{\sigma}{\varepsilon_0}(x+d)\end{equation*}
 Usiamo le coordinate polari. Sia $\ve R$ tale che $\norm{\ve R}=R$. Il potenziale esterno sulla superficie del conduttore:
-$$\varphi_E(\ve R)=-\frac{\sigma}{\varepsilon_0}\left(R\cos\theta+d\right)$$
+\begin{equation*}\varphi_E(\ve R)=-\frac{\sigma}{\varepsilon_0}\left(R\cos\theta+d\right)\end{equation*}
 Le cariche indotte sulla sfera produrranno un campo e un potenziale indotto che si sommerà 
-$$\varphi_T=\varphi_E+\varphi_I$$
+\begin{equation*}\varphi_T=\varphi_E+\varphi_I\end{equation*}
 Il conduttore è una superficie equipotenziale e quindi $\varphi_T$ deve essere costante.
-$$\varphi_T(\ve R)=\varphi_E(\ve R)+\varphi_I(\ve R)=\const$$
+\begin{equation*}\varphi_T(\ve R)=\varphi_E(\ve R)+\varphi_I(\ve R)=\const\end{equation*}
 \begin{align*}
 \varphi_I(\ve R)&=\const-\varphi_E(\ve R)=\const+\frac{\sigma}{\varepsilon_0}(R\cos\theta+d)=\const+\frac{\sigma}{\varepsilon_0}d+\frac{\sigma}{\varepsilon_0}R\cos\theta\\
 &=\const+\frac{\sigma}{\varepsilon_0}d+\frac{\sigma}{\varepsilon_0}\ve R\cdot\ver \imath
@@ -1201,11 +1222,11 @@ essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine d
 \section{Modello del gas di elettroni liberi\index{modello del gas di elettroni liberi}}
 Ipotizziamo che gli elettroni liberi si muovano come gli atomi di un gas classico, quindi con urti casuali, ecc\ldots
 In assenza di campo elettrico gli elettroni saranno in agitazione termica con una velocità $v_T$ di agitazione termica:
-$$K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT$$
+\begin{equation*}K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT\end{equation*}
 con $f=3$ gradi di libertà  $k$ costante di Boltzman. Alla temperatura di $\unita{300}\kelvin$:
-$$v_T=\sqrt{\frac{3kT}{m}}\simeq \unita{10^5}\metrepersecond$$
+\begin{equation*}v_T=\sqrt{\frac{3kT}{m}}\simeq \unita{10^5}\metrepersecond\end{equation*}
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
-$$\tau=\frac{l}{v_T}$$
+\begin{equation*}\tau=\frac{l}{v_T}\end{equation*}
 Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
 \section{Densità di corrente}
 Consideriamo un conduttore con $N$ portatori di carica per unità di volume, tutti uguali, con carica $q$ e velocità di deriva $v_D$. Nel tempo $\ud t$ attraverso una sezione $\ud A$ passa una quantità di carica:
@@ -1220,7 +1241,7 @@ Si definisce $\ve J$ densità di corrente:
 \end{equation}
 \end{Def}
 Allora la \eqref{densita_corrente01} si scrive come:
-$$\ud I=\ve J\cdot\ve n\,\ud a$$
+\begin{equation*}\ud I=\ve J\cdot\ve n\,\ud a\end{equation*}
 E la corrente totale:
 \begin{equation}
 I=\int_S \ve J\cdot \ve n\,\ud a
@@ -1241,7 +1262,7 @@ I=\frac{\ud Q}{\ud t}=\frac{\ud}{\ud t}\int_V\rho\,\ud V
 \label{densita_corrente03}
 \end{equation}
 Confrontando la \eqref{densita_corrente02} e la \eqref{densita_corrente03} si ottiene:
-$$\int_V\frac{\partial \rho}{\partial t}=-\int_V\ve\nabla\cdot\ve J\,\ud V$$
+\begin{equation*}\int_V\frac{\partial \rho}{\partial t}=-\int_V\ve\nabla\cdot\ve J\,\ud V\end{equation*}
 per l'arbitrarietà di $V$:
 \begin{legge}[conservazione della carica\index{conservazione!della carica}]
 \begin{equation}
@@ -1250,46 +1271,46 @@ per l'arbitrarietà di $V$:
 \label{conservazione della carica}
 \end{legge}
 la legge \eqref{conservazione della carica} è detta anche principio di continuità \index{principio! di continuità}. Le sorgenti del campo $\ve J$ sono le variazioni di densità di carica. In condizioni stazionarie $\frac{\partial\rho}{\partial t}=0$ e dunque:
-$$\diver \ve J=0$$
+\begin{equation*}\diver \ve J=0\end{equation*}
 e dunque $\ve J$ è un campo solenoidale, non ha sorgenti.
 \section{Conducibilità elettrica\index{conducibilità elettrica}}
 Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni; notare che $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N_0(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
-$$N(t+\ud t)=N(t)-N(t)\frac{\ud t}{\tau}$$
+\begin{equation*}N(t+\ud t)=N(t)-N(t)\frac{\ud t}{\tau}\end{equation*}
 Facendo il primo sviluppo di Taylor:
-$$N(t+\ud t)=N(t)+\frac{\ud N}{\ud t}\ud t$$
+\begin{equation*}N(t+\ud t)=N(t)+\frac{\ud N}{\ud t}\ud t\end{equation*}
 Confrontando:
-$$\ud N(t)=-N(t)\frac{\ud t}{\tau}$$
+\begin{equation*}\ud N(t)=-N(t)\frac{\ud t}{\tau}\end{equation*}
 che rappresenta il numero di elettroni che hanno subito un urto nell'intervallo $\ud t$ dopo il tempo $t$.
-$$\frac{\ud N}{N}=-\frac{\ud t}{\tau}\ud t$$
+\begin{equation*}\frac{\ud N}{N}=-\frac{\ud t}{\tau}\ud t\end{equation*}
 Risolvendo:
-$$\log N(t)=-\frac{t}{\tau}+c$$
-$$N(t)=e^{-\frac{t}{\tau}+c}=Ae^{-\frac{t}{\tau}}$$
+\begin{equation*}\log N(t)=-\frac{t}{\tau}+c\end{equation*}
+\begin{equation*}N(t)=e^{-\frac{t}{\tau}+c}=Ae^{-\frac{t}{\tau}}\end{equation*}
 Imponendo che $N(0)=N_0$:
-$$N(t)=N_0e^{-\frac{t}{\tau}}$$
+\begin{equation*}N(t)=N_0e^{-\frac{t}{\tau}}\end{equation*}
 Il numero di elettroni che non hanno subito una collisione decresce molto rapidamente. La probabilità che al tempo $t$ un elettrone non abbia subito collisioni è
-$$P(t)=\frac{N(t)}{N_0}=e^{\frac{-t}{\tau}}$$
+\begin{equation*}P(t)=\frac{N(t)}{N_0}=e^{\frac{-t}{\tau}}\end{equation*}
 Vogliamo ora sapere quanto ci vuole ad avere un urto qualsiasi al tempo $t$:
-$$\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau$$
+\begin{equation*}\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau\end{equation*}
 Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il successivo, sempre di quella particella, ma è anche il tempo medio che al tempo $t$ bisogna attendere per avere il primo urto tra due particelle qualsiasi. Naturalmente essendo indipendente dal tempo $\tau$ è anche il tempo medio dall'ultimo urto. Possiamo calcolare la velocità di deriva, considerando l'accelerazione data dal campo elettrico durante il tempo dall'ultimo urto:
-$$\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e\tau}{m_\mathrm{e}}{\ve E}$$
+\begin{equation*}\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e\tau}{m_\mathrm{e}}{\ve E}\end{equation*}
 Usando la densità di corrente:
-$$\ve J=-Ne\ve v_D=\frac{e^2\tau N}{m_\mathrm{e}}\ve E=\sigma\ve E$$
+\begin{equation*}\ve J=-Ne\ve v_D=\frac{e^2\tau N}{m_\mathrm{e}}\ve E=\sigma\ve E\end{equation*}
 $\sigma$ è la conducibilità elettrica:
-$$\sigma=\frac{e^2\tau N}{m_\mathrm{e}}=\frac{e^2Nl}{m_\mathrm{e}v_D}$$
+\begin{equation*}\sigma=\frac{e^2\tau N}{m_\mathrm{e}}=\frac{e^2Nl}{m_\mathrm{e}v_D}\end{equation*}
 La conducibilità elettrica ci dice come il conduttore risponde al campo elettrico, l'ostacolo che gli elettroni incontrano nel loro moto; alta conducibilità significa alta disposizione da parte del conduttore di mettere in moto i suoi elettroni. Se supponiamo che $\sigma$ non dipenda dallo spazio, cioè il conduttore sia omogeneo, che $\sigma$ non dipenda da $E$, cioè che il conduttore sia lineare e che non dipenda dalla direzione di $\ve E$ cioè sia isotropo e quindi $\ve J$ abbia la direzione di $\ve E$ allora $\sigma$ è uno scalare, altrimenti è un tensore $3\times 3$ del second'ordine:
-$$\ve J=\ten{\sigma}\ve E$$
+\begin{equation*}\ve J=\ten{\sigma}\ve E\end{equation*}
 \subsection{Resistività \index{resistività}}
 \begin{Def}[resistività elettrica]
 La resistività $\rho$ è l'inverso della conducibilità 
-$$\rho=\frac{1}{\sigma}$$
+\begin{equation*}\rho=\frac{1}{\sigma}\end{equation*}
 \end{Def}
 Più la resistività è alta più la risposta al campo elettrico del conduttore sarà bassa.
 \subsection{Unità di misura}
-$$[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\reciprocal\ohm\usk\reciprocal\metre$$
-$$[\rho]=\ohm\usk\meter$$
+\begin{equation*}[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\reciprocal\ohm\usk\reciprocal\metre\end{equation*}
+\begin{equation*}[\rho]=\ohm\usk\meter\end{equation*}
 con:
-$$\ohm=\frac{\volt}{\ampere}=\text{ohm}$$
-$$\text{ohm}^{-1}=\text{mho}=\mho=\siemens=\text{siemens}$$
+\begin{equation*}\ohm=\frac{\volt}{\ampere}=\text{ohm}\end{equation*}
+\begin{equation*}\text{ohm}^{-1}=\text{mho}=\mho=\siemens=\text{siemens}\end{equation*}
 \index{ohm}\index{mho}\index{siemens}
 \section{Legge di Ohm\index{legge!di Ohm}}
 \begin{figure}[htbp]
@@ -1313,7 +1334,7 @@ I=JS=\sigma E S=\Delta V\frac{S}{l}\sigma
 \end{equation}
 che è la legge di Ohm. Di solito si introduce la:
 \begin{Def}[resistenza elettrica\index{resistenza!elettrica}]
-$$R=\rho\frac{l}{S}$$
+\begin{equation*}R=\rho\frac{l}{S}\end{equation*}
 \end{Def}
 e la \eqref{ohm03} diventa:
 \begin{legge}[Ohm]
@@ -1324,17 +1345,17 @@ e la \eqref{ohm03} diventa:
 che in realtà stata introdotta come legge sperimentale. I materiali che rispettano questa legge sono detti ohmnici.
 \subsection{Temperatura}
 La temperatura modifica $\rho$ in quanto al crescere della temperatura i nuclei degli elettroni si muovono più velocemente e gli urti con gli elettroni diventano più probabili. L'aumento di resistività del tipo:
-$$\rho(T)=\rho_0\left[1+a\left(T-T_0\right)+b\left(T-T_0\right)^2+c\left(T-T_0\right)^3+\cdots\right]$$
+\begin{equation*}\rho(T)=\rho_0\left[1+a\left(T-T_0\right)+b\left(T-T_0\right)^2+c\left(T-T_0\right)^3+\cdots\right]\end{equation*}
 di solito $a>b>c>\cdots$ e si considera solo il primo termine:
-$$\rho(T)=\rho_0\left(1+\alpha\left(T-T_0\right)\right)$$
+\begin{equation*}\rho(T)=\rho_0\left(1+\alpha\left(T-T_0\right)\right)\end{equation*}
 considerandolo come uno sviluppo di Taylor:
-$$\alpha=\frac{1}{\rho_0}\left.\frac{\partial \rho}{\partial T}\right|_{T_0}$$
+\begin{equation*}\alpha=\frac{1}{\rho_0}\left.\frac{\partial \rho}{\partial T}\right|_{T_0}\end{equation*}
 Per i semiconduttori \index{semiconduttori} $\alpha<0$. Ad una certa temperatura, detta temperatura critica\index{temperatura!critica}, la resistività crolla e si a il fenomeno della superconduttività \index{superconduttività}\index{superconduttori}.
 
 Il modello basato sul gas di elettroni non riesce a spiegare questo andamento, infatti:
-$$v_T=\sqrt{3\frac{kT}{m_\mathrm{e}}}$$
+\begin{equation*}v_T=\sqrt{3\frac{kT}{m_\mathrm{e}}}\end{equation*}
 cioè $\rho\propto v_T\propto\sqrt{T}$ invece che $\rho\propto T$. Inoltre non riesce a spiegare la diversità di $\rho$ tra i diversi materiali, sia conduttori che non, infatti
-$$\rho=\frac{m_\mathrm{e}}{e^2N\tau}=\frac{m_\mathrm{e}}{eN}\frac{v_T}{l}$$
+\begin{equation*}\rho=\frac{m_\mathrm{e}}{e^2N\tau}=\frac{m_\mathrm{e}}{eN}\frac{v_T}{l}\end{equation*}
 dice solo che la variazione tra i diversi materiali è data da $N$, che in realtà non varia di molto da conduttore a conduttore. Nella realtà $\rho$ è influenzato da numerosi fattori tra cui le impurezze cioè il disordine del reticolo.
 
 \subsection{Resistori}
@@ -1350,13 +1371,13 @@ Un circuito è una successione chiusa di resistori e generatori di forza elettro
 \subsubsection{Resistori in serie e in parallelo}
 \paragraph{Serie\index{resistori!in serie}}
 I resistori si dicono collegati in serie quando sono attraversati tutti dalla stessa corrente. Applicando la legge di Ohm:
-$$V_1-V_2=IR_1\qquad \cdots \qquad V_{n-1}-V_{n}=IR_n$$
+\begin{equation*}V_1-V_2=IR_1\qquad \cdots \qquad V_{n-1}-V_{n}=IR_n\end{equation*}
 Sommando tutte le espressioni si ottiene che la caduta di tensione ai capi della rete è 
-$$V_1-V_n=I\sum_{i=1}^N R_i$$
+\begin{equation*}V_1-V_n=I\sum_{i=1}^N R_i\end{equation*}
 Quindi la resistenza equivalente, la resistenza di quel resistore che produce gli stessi effetti dei resistori in serie, è la somma delle resistenze.
 \paragraph{Parallelo\index{resistori!in parallelo}}
 I resistori si dicono collegai in parallelo quando ai capi di ogni resistore è applicata la stessa differenza di potenziale. Applicando ancora la legge di Ohm:
-$$\frac{V_1-V_2}{R_1}\qquad\cdots\qquad\frac{V_1-V_2}{R_n}=I_n$$
+\begin{equation*}\frac{V_1-V_2}{R_1}\qquad\cdots\qquad\frac{V_1-V_2}{R_n}=I_n\end{equation*}
 Sommando si ottiene che il reciproco del resistore equivalente è la somma dei reciproci dei resistori in parallelo.
 \begin{Es}[resistenza corpo esteso]
 \begin{figure}[htbp]
@@ -1366,13 +1387,13 @@ Sommando si ottiene che il reciproco del resistore equivalente è la somma dei r
 \label{res_trapezio}
 \end{figure}
 Consideriamo il corpo in figura \eqref{res_trapezio}. Vogliamo calcolare la resistenza tra i capi $A$ e $B$. Scomponiamo la geometria in tanti elementini di altezza $\ud z$, essi risultano in parallelo. La loro resistenza:
-$$\ud R=\rho\frac{l}{A}=\rho\frac{y}{h\ud z}$$
+\begin{equation*}\ud R=\rho\frac{l}{A}=\rho\frac{y}{h\ud z}\end{equation*}
 con $y$ che varia tra $a$ e $b$. Troviamo $\delta$:
-$$c\tan\beta=b-a\qquad (c-z)\tan\beta=\delta\qquad \delta=(c-z)\frac{b-a}{c}$$
+\begin{equation*}c\tan\beta=b-a\qquad (c-z)\tan\beta=\delta\qquad \delta=(c-z)\frac{b-a}{c}\end{equation*}
 Allora $y$:
-$$y=a+\delta=a+\frac{(c-z)(b-a)}{c}=b+\frac{z}{c}(a-b)\qquad\ud y=\frac{a-b}{c}\ud z$$
-$$\frac{1}{R}=\int_0^c\frac{1}{\ud R}=\int_0^c\frac{h\ud z}{\rho y}=\frac{hc}{\rho(a-b)}\int_b^a\frac{\ud y}{y}=\frac{hc}{\rho(a-b)}\log\frac{a}{b}$$
-$$R=\frac{\rho(a-b)}{hc\log\frac{a}{b}}$$
+\begin{equation*}y=a+\delta=a+\frac{(c-z)(b-a)}{c}=b+\frac{z}{c}(a-b)\qquad\ud y=\frac{a-b}{c}\ud z\end{equation*}
+\begin{equation*}\frac{1}{R}=\int_0^c\frac{1}{\ud R}=\int_0^c\frac{h\ud z}{\rho y}=\frac{hc}{\rho(a-b)}\int_b^a\frac{\ud y}{y}=\frac{hc}{\rho(a-b)}\log\frac{a}{b}\end{equation*}
+\begin{equation*}R=\frac{\rho(a-b)}{hc\log\frac{a}{b}}\end{equation*}
 
 
 \end{Es}
@@ -1380,24 +1401,24 @@ $$R=\frac{\rho(a-b)}{hc\log\frac{a}{b}}$$
 
 \section{Tempo di rilassamento\index{tempo!di rilassamento!di un conduttore}}
 Vogliamo sapere quanto è il tempo necessario per un conduttore per eliminare un eccesso di carica. Consideriamo un conduttore isotropo, omogeneo, lineare, con conducibilità $\sigma$, con un eccesso di carica al tempo zero $\rho_0(\ve r)$ in una regione limitata di spazio. Si creerà un campo elettrico e quindi una densità di corrente $\ve J=\sigma\ve E$. Vogliamo studiare l'evolversi di $\rho(\ve r,t)$. Sappiamo:
-$$\diver\ve E=\frac{\rho(\ve r,t)}{\varepsilon_0}\qquad\diver\ve J=-\frac{\partial\rho(\ve r,t)}{\partial t}$$
+\begin{equation*}\diver\ve E=\frac{\rho(\ve r,t)}{\varepsilon_0}\qquad\diver\ve J=-\frac{\partial\rho(\ve r,t)}{\partial t}\end{equation*}
 Essendo $\ve J=\sigma\ve E$:
-$$\sigma\diver\ve E=-\frac{\partial\rho}{\partial t}$$
+\begin{equation*}\sigma\diver\ve E=-\frac{\partial\rho}{\partial t}\end{equation*}
 Sostituendo:
-$$\frac{\sigma}{\varepsilon_0}\rho=-\frac{\partial\rho}{\partial t}$$
+\begin{equation*}\frac{\sigma}{\varepsilon_0}\rho=-\frac{\partial\rho}{\partial t}\end{equation*}
 Risolvendo:
-$$\frac{\ud\rho}{\rho}=-\frac{\sigma}{\varepsilon_0}\ud t\qquad \log\rho=-\frac{\sigma}{\varepsilon_0}t+c\qquad \rho=Ae^{-\frac{\sigma}{\varepsilon_0}t}=\rho_0 e^{-\frac{\sigma}{\varepsilon_0}t}$$
+\begin{equation*}\frac{\ud\rho}{\rho}=-\frac{\sigma}{\varepsilon_0}\ud t\qquad \log\rho=-\frac{\sigma}{\varepsilon_0}t+c\qquad \rho=Ae^{-\frac{\sigma}{\varepsilon_0}t}=\rho_0 e^{-\frac{\sigma}{\varepsilon_0}t}\end{equation*}
 Chiamando $\tau=\frac{\sigma}{\varepsilon_0}$ tempo caratteristico, o tempo di rilassamento:
-$$\rho=\rho_0e^{-\tau t}$$
+\begin{equation*}\rho=\rho_0e^{-\tau t}\end{equation*}
 Il tempo caratteristico \index{tempo!caratteristico} è quel tempo dopo il quale la densità di carica si è ridotta di $\frac{1}{e}$. Dopo qualche $\tau$ possiamo considerare tutto l'eccesso di carica eliminato.
 
 \section{Generatori\index{generatori}}
 Con un campo elettrostatico si possono creare correnti, come visto nel paragrafo precedente, ma non mantenerle in quanto il fenomeno si esaurisce in pochissimo tempo. I generatori possono mantenere una differenza di potenziale costate tra i poli o morsetti o variarla secondo una funzione, tipicamente sinuisoidale. Nel primo caso si parla di pile\index{pila} o batterie\index{batteria}. In un circuito chiuso:
-$$\oint_C\ve E\cdot\ud\ve l=0$$
+\begin{equation*}\oint_C\ve E\cdot\ud\ve l=0\end{equation*}
 Essendo $\ve J=\sigma \ve E$:
-$$\oint_C\ve J\cdot\ud\ve l=\sigma\oint_C\ve E\cdot\ud\ve l=0$$
+\begin{equation*}\oint_C\ve J\cdot\ud\ve l=\sigma\oint_C\ve E\cdot\ud\ve l=0\end{equation*}
 \`E assurdo perché non ci sarebbe corrente. Dobbiamo supporre ci siano alte forze, non conservative, che non sono svolte dal campo elettrostatico, essendo il suo lavoro nullo. Tali forze sono localizzate nel generatore. Consideriamo allora un a altro campo $E_i$, il campo elettrico impresso \index{campo!elettrico!impresso}o elettromotore \index{campo!elettromotore}che si somma al campo elettrostatico:
-$$\ve E_T=\ve E+\ve E_i\qquad \ve J=\sigma(\ve E+\ve E_i)$$
+\begin{equation*}\ve E_T=\ve E+\ve E_i\qquad \ve J=\sigma(\ve E+\ve E_i)\end{equation*}
 Il campo impresso nasce quando si è in presenza di una disomogeneità  come ad esempio all'interno della pila.
 \begin{figure}[htbp]
 \centering
@@ -1407,7 +1428,7 @@ Il campo impresso nasce quando si è in presenza di una disomogeneità  come ad 
 
 \subsection{Resistenza interna}
 Ogni generatore reale è caratterizzato da una resistenza interna $r$ e da una forza elettromotrice $\varepsilon$. Se gli colleghiamo un resistore con resistenza $R$ la circuitazione del campo elettrostatico deve essere nulla e quindi anche la variazione di potenziale. Allora se ai capi del generatore ideale c'è una differenza di potenziale $\varepsilon$ la caduta di tensione attraverso $R$ e $r$ deve essere uguale e contraria a $\varepsilon$. La differenza di tensione del generatore reale è minore di quella del generatore ideale e in particolare:
-$$V_2-V_1=\varepsilon-Ir$$
+\begin{equation*}V_2-V_1=\varepsilon-Ir\end{equation*}
 
 Se in un ramo di circuito con estremi $A$ e $B$ ci sono dei resistori in serie e un generatore vale:
 \begin{legge}[Ohm generalizzata\index{legge!di Ohm!generalizzata}]
@@ -1419,9 +1440,9 @@ con $R=\sum R_i+r$.
 \end{legge}
 \subsubsection{Potenza massima}
 Vogliamo sapere quando un circuito assorbe la potenza massima. Riassumiamo tutto il circuito con un resistore con resistenza $R$, che rappresenta il carico cioè tutte le resistenze collegate al generatore reale, un generatore ideale e una resistenza interna $r$. Sappiamo che la potenza è 
-$$P=RI^2=R\left(\frac{\varepsilon}{R+r}\right)^2$$
+\begin{equation*}P=RI^2=R\left(\frac{\varepsilon}{R+r}\right)^2\end{equation*}
 Vogliamo sapere qual è l'$R$ ottimale per cui viene dissipata la potenza maggiore su $R$. Deriviamo in $R$:
-$$\frac{\ud P}{\ud R}=\varepsilon^2\left[\frac{1}{(R+r)^2}-\frac{2R}{(r+R)^3}\right]$$
+\begin{equation*}\frac{\ud P}{\ud R}=\varepsilon^2\left[\frac{1}{(R+r)^2}-\frac{2R}{(r+R)^3}\right]\end{equation*}
 che ha uno zero per $r=R$.
 
 Se $r$ è molto diverso da $R$ gran parte dell'energia viene dispersa su $r$, cioè all'interno del generatore.
@@ -1430,7 +1451,7 @@ Se $r$ è molto diverso da $R$ gran parte dell'energia viene dispersa su $r$, ci
 L'effetto Joule può essere spiegato sia da un punto di vista macroscopico che microscopico utilizzando il modello del gas di elettroni liberi. L'effetto Joule avviene ogni qualvolta la corrente passa attraverso un resistore.
 \subsection{Macroscopico}
 Quando una carica $\ud q$ passa da un potenziale $V_B$ a un potenziale $V_A$ ci sarà una variazione di energia potenziale; per definizione:
-$$\ud W=\ud q(V_B-V_A)$$
+\begin{equation*}\ud W=\ud q(V_B-V_A)\end{equation*}
 ma $\ud q=I(t)\ud t$, sostituendo:
 \begin{legge}[Joule\index{legge!di Joule}]
 \begin{equation}
@@ -1439,22 +1460,22 @@ ma $\ud q=I(t)\ud t$, sostituendo:
 \end{legge}
 \subsubsection{corrente stazionaria}
 Nel caso stazionario $I(t)=I$:
-$$W=\int_0^t I(V_B-V_A)\ud t=I(V_B-V_A)t$$
+\begin{equation*}W=\int_0^t I(V_B-V_A)\ud t=I(V_B-V_A)t\end{equation*}
 se il conduttore è ohmnico $I=\frac{\Delta V}{R}$:
-$$W=RI^2t$$
+\begin{equation*}W=RI^2t\end{equation*}
 e la potenza:
-$$P=\frac{\ud W}{\ud t}=I\Delta V=RI^2=\frac{\Delta V^2}{R}$$
+\begin{equation*}P=\frac{\ud W}{\ud t}=I\Delta V=RI^2=\frac{\Delta V^2}{R}\end{equation*}
 
 \subsection{Microscopico}
 Consideriamo un conduttore con $N$ portatori di carica nell'unità di volume. Il singolo elettrone ha in media $\tau^{-1}$ collisioni nell'unità di tempo. Quindi nell'elementino di volume $\ud v$ nel tempo $\ud t$ avvengono $N\frac{\ud v}{\tau}\ud t$ collisioni. Tra un urto e un altro un elettrone viene accelerato con una forza $-eE$ parallela al campo elettrico. Lo spostamento sarà $v_D\tau$. Allora il lavoro sarà 
-$$\ud L_e=\ve F\cdot\ve s=-eEv_D\tau$$
+\begin{equation*}\ud L_e=\ve F\cdot\ve s=-eEv_D\tau\end{equation*}
 considerando tutti gli elettroni nel volume $\ud v$, la potenza:
-$$\ud P=-\frac{N\ud v}{\tau}eEv_D\tau$$
+\begin{equation*}\ud P=-\frac{N\ud v}{\tau}eEv_D\tau\end{equation*}
 Ricordando che:
-$$v_D=-\frac{eE}{m\tau}\qquad\sigma=\frac{e^2N}{m}\tau$$
-$$\ud P=\frac{e^2NE^2}{m}\tau\ud v=\sigma E^2\ud v$$
+\begin{equation*}v_D=-\frac{eE}{m\tau}\qquad\sigma=\frac{e^2N}{m}\tau\end{equation*}
+\begin{equation*}\ud P=\frac{e^2NE^2}{m}\tau\ud v=\sigma E^2\ud v\end{equation*}
 Se consideriamo un filo conduttore questo avrà una lunghezza $l$ e una sezione $S$ e una differenza di potenziale $V_A-V_B=El$.
-$$P=\int_V\ud P=\sigma E^2\int_V\ud v=\sigma E^2(Sl)=\sigma\frac{\Delta V^2}{l^2}Sl=\sigma\frac{S}{l}\Delta V^2=\frac{\Delta V^2}{R}$$
+\begin{equation*}P=\int_V\ud P=\sigma E^2\int_V\ud v=\sigma E^2(Sl)=\sigma\frac{\Delta V^2}{l^2}Sl=\sigma\frac{S}{l}\Delta V^2=\frac{\Delta V^2}{R}\end{equation*}
 
 
 
@@ -1472,70 +1493,70 @@ chiamata forza di Lorentz\index{Lorentz}\index{forza!di Lorentz}. Essa è dirett
 \end{equation}
 \subsection{Definizione operativa}
 Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
-$$\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v$$
+\begin{equation*}\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v\end{equation*}
 Allora\footnote{??!!}:
-$$\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v$$
+\begin{equation*}\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v\end{equation*}
 Facciamo due misure usando $q$ e due velocità ortogonali $\ve v_1$, $\ve v_2$:
-$$\ve B=\frac{\ve F_1\times \ve v_1}{qv_1^2}+c_1\ve v_1\qquad\ve B=\frac{\ve F_2\times\ve v_2}{qv_1^2}+c_2\ve v_2$$
+\begin{equation*}\ve B=\frac{\ve F_1\times \ve v_1}{qv_1^2}+c_1\ve v_1\qquad\ve B=\frac{\ve F_2\times\ve v_2}{qv_1^2}+c_2\ve v_2\end{equation*}
 Moltiplichiamole scalarmente per $v_1$:
-$$\frac{\left(\ve F_1\times \ve v_1\right)\cdot\ve v_1}{qv_1^2}+c_1v_1^2=\frac{\left(\ve F_2\times\ve v_2\right)\cdot v_1}{qv_1^2}+c_2\underbrace{\left(\ve v_2\cdot \ve v_1\right)}_{0}$$
-$$c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}$$
-$$\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1$$
+\begin{equation*}\frac{\left(\ve F_1\times \ve v_1\right)\cdot\ve v_1}{qv_1^2}+c_1v_1^2=\frac{\left(\ve F_2\times\ve v_2\right)\cdot v_1}{qv_1^2}+c_2\underbrace{\left(\ve v_2\cdot \ve v_1\right)}_{0}\end{equation*}
+\begin{equation*}c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\end{equation*}
+\begin{equation*}\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1\end{equation*}
 \subsection{Unità di misura}
-$$[B]=[mlq^{-1}t^{-1}]=\frac{\newton\usk\second}{\coulomb\usk\meter}=\frac{\volt\usk\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\unita{10^4}\gauss=10^4\,\text{gauss}$$\index{gauss}
+\begin{equation*}[B]=[mlq^{-1}t^{-1}]=\frac{\newton\usk\second}{\coulomb\usk\meter}=\frac{\volt\usk\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\unita{10^4}\gauss=10^4\,\text{gauss}\end{equation*}\index{gauss}
 Dove $\weber=\text{weber}={\volt\usk\second}$, $\tesla=\text{tesla}=\frac{\weber}{\meter\squared}$.\index{weber}
 \begin{Es}[elettrone in campo magnetico]
 \label{es_Larmor}
 Spariamo un elettrone in un campo magnetico $\ve B$ con velocità $\ve v_0=\ve v(0)$. Per semplicità scegliamo un sistema di riferimento in modo che $\ve B=B\ver k$ e che $\ve r(0)=0$. Ad ogni istante sull'elettrone agisce la forza di Lorentz:
-$$\ve F(t)=-e\ve v(t)\times \ve B$$
+\begin{equation*}\ve F(t)=-e\ve v(t)\times \ve B\end{equation*}
 Scomponiamo le componenti:
-$$\left\{
+\begin{equation*}\left\{
 \begin{array}{l}
 ma_x=F_x=-e\left(v_yB_z-v_zB_y\right)=-ev_yB\\
 ma_y=F_y=e\left(v_xB_z-v_zB_x\right)=ev_xB\\
 ma_z=F_z=-e\left(v_xB_y-v_yB_x\right)=0\\
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 riassumendo:
-$$\left\{
+\begin{equation*}\left\{
 \begin{array}{l}
 \ddot x=-\frac{eB}{m}\dot y\\
 \ddot y=\frac{eB}{m}\dot x\\
 \ddot z=0\\
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 che è un sistema di equazioni differenziali del second'ordine accoppiate. Operiamo la sostituzione $\frac{\ud}{\ud t}\ve r=\ve v$:
-$$
+\begin{equation*}
 \left\{
 \begin{array}{l}
 \dot v_x=-\omega v_y\\
 \dot v_y=\omega v_x\\
 \dot v_z=0\\
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 con $\omega=\frac{eB}{m}$. L'ultima ha naturalmente soluzione:
-$$z=v_{z_0}t$$
+\begin{equation*}z=v_{z_0}t\end{equation*}
 Deriviamo la prima:
-$$\ddot v_x=-\omega\dot v_y=-\omega^2 v_x$$
+\begin{equation*}\ddot v_x=-\omega\dot v_y=-\omega^2 v_x\end{equation*}
 e la seconda:
-$$\ddot v_y=\omega\dot v_x=-\omega^2 v_y$$
+\begin{equation*}\ddot v_y=\omega\dot v_x=-\omega^2 v_y\end{equation*}
 Abbiamo disaccopiato le equazioni. Una soluzione generale della prima è 
-$$v_x=A\sin\left(\omega t+\varphi\right)$$
+\begin{equation*}v_x=A\sin\left(\omega t+\varphi\right)\end{equation*}
 Sostituendo troviamo anche la seconda:
-$$v_y=-A\cos\left(\omega t+\varphi\right)$$
+\begin{equation*}v_y=-A\cos\left(\omega t+\varphi\right)\end{equation*}
 La forza di Lorentz non compie lavoro, quindi si deve conservare l'energia cinetica essendo $v_z$ costante si deve conservare la quantità 
-$$v_x^2+v_y^2=v_{x_0}^2+v_{y_0}^2=v_\perp^2$$
+\begin{equation*}v_x^2+v_y^2=v_{x_0}^2+v_{y_0}^2=v_\perp^2\end{equation*}
 Allora $A=v_\perp$. Manca da ricavare $\varphi$:
-$$\left\{\begin{array}{l}
+\begin{equation*}\left\{\begin{array}{l}
 v_x=v_\perp\sin\left(\omega t+\varphi\right)\\
 v_y=-v_\perp\cos\left(\omega t+\varphi\right)
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 Imponendo che $\ve v(0)=\ve v_0$:
-$$\left\{\begin{array}{l}
+\begin{equation*}\left\{\begin{array}{l}
 v_x(0)=v_\perp\sin\left(\varphi\right)=v_{x_0}\\
 v_y(0)=-v_\perp\cos\left(\varphi\right)=v_{y_0}
-\end{array}\right.$$
+\end{array}\right.\end{equation*}
 Dividendo:
-$$\varphi=\arctan{\left(-\frac{v_{x_0}}{v_{y_0}}\right)}$$
+\begin{equation*}\varphi=\arctan{\left(-\frac{v_{x_0}}{v_{y_0}}\right)}\end{equation*}
 Per trovare $x$, $y$ basta integrare, si trova:
-$$\left\{
+\begin{equation*}\left\{
 \begin{array}{l}
 x=-\frac{v_\perp}{\omega}\cos\left(\omega t+\varphi\right)\\
 y=-\frac{v_\perp}{\omega}\sin\left(\omega t+\varphi\right)\\
@@ -1545,9 +1566,9 @@ z=v_{z_0}t\\
 v_\perp=\sqrt{v_{x_0}^2+v_{y_0}^2}\\
 \omega=\frac{eB}{m}\\
 \varphi=\arctan{\left(-\frac{v_{x_0}}{v_{y_0}}\right)}\\
-\end{array}$$
+\end{array}\end{equation*}
 \`E l'equazione di un elica con asse parallelo a $\ve B$. Se si considera solo la proiezione sul piano $xy$ si trova una circonferenza con raggio:
-$$r_L=\frac{v_\perp}{\omega}$$
+\begin{equation*}r_L=\frac{v_\perp}{\omega}\end{equation*}
 chiamato raggio di Larmor\index{raggio!di Larmor}\index{Larmor}.
 \end{Es}
 \begin{Es}[spettrometro di massa\index{spettrometro!di massa}]\label{spettrometro01}
@@ -1558,11 +1579,11 @@ Lo spettrometro di massa è uno strumento che consente di determinare con alta p
 \caption{spettrometro di massa}
 \end{figure}
 La prima parte è detta separatore di velocità \index{separatore!di velocità}. Le particelle focalizzate da fenditure entrano con velocità casuale e vengono sottoposte a un campo magnetico $\ve B$ e uno elettrico $\ve E$ ortogonali. La forza risultante è 
-$$F=q(E+vB)$$
+\begin{equation*}F=q(E+vB)\end{equation*}
 essendo $\ve v\perp\ve B$. Solo le particelle che hanno una certa velocità e cioè 
-$$v=\frac{E}{B}$$
+\begin{equation*}v=\frac{E}{B}\end{equation*}
 non sono deviate dai campi e quindi riescono a uscire dal separatore di velocità  Nella seconda parte le particelle cariche subiscono una deviazione dovuta al campo magnetico $\ve B\,'$. Misurando dove le particelle colpiranno lo schermo si può dedurre il raggio di Larmor e ricavare la massa:
-$$m=\frac{qB'B}{E}r_L$$
+\begin{equation*}m=\frac{qB'B}{E}r_L\end{equation*}
 \end{Es}
 
 \section{Forza magnetica su una corrente\index{forza!magnetica!su corrente}}
@@ -1589,7 +1610,7 @@ L'espressione \eqref{forza_lorentz_e2} può essere semplificata ricordando che p
 \ve F=-NSle\ve v_D\times\ve B=Sl\ve J\times\ve B
 \end{equation}
 L'intensità di corrente è 
-$$I=\iint_S \ve J\cdot \ve n\,\ud a=JS=Nev_DS$$
+\begin{equation*}I=\iint_S \ve J\cdot \ve n\,\ud a=JS=Nev_DS\end{equation*}
 Dunque la forza per unità di volume è $\ve J\times\ve B$. Ora possiamo definire $\ve l$ con modulo $l$ e direzione e verso quelli di $\ve J$, dunque:
 \begin{equation}
 \ve F=SJ\ve l\times\ve B=I\ve l\times \ve B
@@ -1612,51 +1633,51 @@ La seconda formula di Laplace\index{Laplace}\index{seconda formula di Laplace} n
 \end{equation}
 \begin{Es}[effetto Hall]
 L'effetto Hall avviene nei conduttori percorsi da corrente in un campo magnetico $\ve B$. Immaginiamo una lastra conduttrice di larghezza $w$ e altezza $t$. Sia $v_D$ la velocità di deriva degli elettroni. Essi saranno deviati con una forza:
-$$\ve F=-e\ve v_D\times \ve B$$
+\begin{equation*}\ve F=-e\ve v_D\times \ve B\end{equation*}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.4]{immagini/fisica2/Hall}
 \end{figure}
 Si crea allora un accumulo di cariche da un lato e del segno opposto sull'altro: si crea un campo elettrico $\ve E_H$ ortogonale alla direzione della corrente. Tra i due lati della lastra di è formata una differenza di potenziale $\Delta V_H=E_Hw$. Il sistema raggiunge l'equilibrio quando la forza sugli elettroni:
-$$\ve F=-e\ve v_D\times B-e\ve E_H$$
+\begin{equation*}\ve F=-e\ve v_D\times B-e\ve E_H\end{equation*}
 è nulla cioè quando la forza del campo elettrico è uguale e contraria alla forza di Lorentz. Ricordando che la velocità è ortogonale al campo magnetico e al campo elettrico:
-$$E_H=v_DB$$
+\begin{equation*}E_H=v_DB\end{equation*}
 Ricordando l'espressione di $v_D$:
-$$v_D=\frac{J}{Ne}=\frac{I}{SNe}=\frac{I}{wtNe}$$
-$$\Delta V_H=E_Hw=\frac{I}{tNe}B$$
+\begin{equation*}v_D=\frac{J}{Ne}=\frac{I}{SNe}=\frac{I}{wtNe}\end{equation*}
+\begin{equation*}\Delta V_H=E_Hw=\frac{I}{tNe}B\end{equation*}
 \end{Es}
 
 \section{Momento su un circuito\index{momento!su un circuito}}
 Sia $C$ un circuito piano chiuso attraversato da una corrente stazionaria $I$ immerso in un campo magnetico $\ve B$ uniforme. Dalla \eqref{forza_lorentz_4} deduciamo che sulla spira agisce una forza nulla:
-$$\ve F=\oint_C I\ud\ve l\times\ve B=I\oint_C\ud \ve l\times\ve B=I\left(\oint_C\ud\ve l\right)\times\ve B=0$$
+\begin{equation*}\ve F=\oint_C I\ud\ve l\times\ve B=I\oint_C\ud \ve l\times\ve B=I\left(\oint_C\ud\ve l\right)\times\ve B=0\end{equation*}
 in quanto $0=\oint_C \ud \ve l\neq\oint_C\ud l$. Scegliamo un sistema di riferimento $xyz$ in modo che il piano $xy$ contenga $C$ e la proiezione di $\ve B$ sia parallela all'asse $x$; sia $\theta$ l'angolo che $\ve B$ forma con $z$. Allora:
-$$B_z=B\cos\theta\qquad B_x=B\sin\theta$$
+\begin{equation*}B_z=B\cos\theta\qquad B_x=B\sin\theta\end{equation*}
 Suddividiamo il circuito in tante striscie infinitesime. Se la corrente di $C$ gira in verso antiorario, anche quella nelle strisce; in questo modo i lati adiacenti si cancellano. Ogni spira a causa del campo magnetico è soggetta ad una forza:
-$$\ud\ve F=I\ud\ve l\times\ve B$$
-$$\norm{\ud\ve F}=I\ud lB_x\sin\alpha=\ud yB\sin\theta I$$
+\begin{equation*}\ud\ve F=I\ud\ve l\times\ve B\end{equation*}
+\begin{equation*}\norm{\ud\ve F}=I\ud lB_x\sin\alpha=\ud yB\sin\theta I\end{equation*}
 Dunque la forza è massima quando la spira è perpendicolare al campo magnetico.
-$$\ud \ve M=IlB\ud y\sin\theta\ve n=I\ud a B\ve n$$
-$$\ud m=I\ud a\ve n$$
-$$\ud\ve M=\ud\ve m\times\ve B$$
-$$\ve M=\iint_S\ud\ve m\times \ve B=\iint I\ud a\ve n\times B=I\ve n\left(\iint_S\ud a\right)\times \ve B=IS\ve n\times \ve B$$
+\begin{equation*}\ud \ve M=IlB\ud y\sin\theta\ve n=I\ud a B\ve n\end{equation*}
+\begin{equation*}\ud m=I\ud a\ve n\end{equation*}
+\begin{equation*}\ud\ve M=\ud\ve m\times\ve B\end{equation*}
+\begin{equation*}\ve M=\iint_S\ud\ve m\times \ve B=\iint I\ud a\ve n\times B=I\ve n\left(\iint_S\ud a\right)\times \ve B=IS\ve n\times \ve B\end{equation*}
 Definiamo il momento di dipolo magnetico\index{momento!di dipolo magnetico}:
-$$\ve m=IS\ve n$$
+\begin{equation*}\ve m=IS\ve n\end{equation*}
 allora:
-$$\ve M=\ve m\times \ve B$$
+\begin{equation*}\ve M=\ve m\times \ve B\end{equation*}
 \section{Ago magnetico\index{ago magnetico}}
 Un ago magnetico immerso in un campo magnetico costante $\ve B$ si comporta come un circuito, cioè subisce un momento che lo fa disporre parallelamente alle linee del campo:
-$$\ve M=\ve K\times\ve B$$
+\begin{equation*}\ve M=\ve K\times\ve B\end{equation*}
 con $\ve K$ è un vettore che dipende dalle caratteristiche dell'ago, ed è orientato secondo la linea polo sud, polo nord dell'ago.
 
 Il suo comportamento è analogo a quello del dipolo elettrico, con momento di dipolo $\ve p=q\delta$. Possiamo immaginare l'ago magnetico come costituito da due cariche magnetiche di segno opposto $q_m$, una al polo nord e l'altra al polo sud. Definiamo $\ve m$ momento magnetico dell'ago in modo tale che:
-$$\ve K=\ve m=q_m \ve\delta$$
+\begin{equation*}\ve K=\ve m=q_m \ve\delta\end{equation*}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica2/ago}
 \end{figure}
 \subsection{Lamina magnetica\index{lamina!magnetica}}
 Suddividiamo una spira di area $S$ in infinitesime spire di area $\ud a$. Ogni spira avrà un momento magnetico $\ud\ve m=I\ud a\ve n$. Per analogia con il dipolo possiamo anche dire che $\ud\ve m=\sigma_m\ud a \ve \delta$ e allora:
-$$\sigma_m=\frac{I}{\delta}$$
+\begin{equation*}\sigma_m=\frac{I}{\delta}\end{equation*}
 rappresenta la densità di carica magnetica sulle faccie di una lamina magnetica con lamine a distanza $\delta$, che a grande distanza è equivalente alla spira iniziale.
 
 \section{Campi magnetici generati da correnti\index{campi magnetici!generati da correnti}}
@@ -1669,16 +1690,16 @@ B=k\frac{I}{r}
 \end{equation}
 \end{legge}
 con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre $k=1$, in realtà si pone:
-$$k=\frac{\mu_0}{2\pi}$$
+\begin{equation*}k=\frac{\mu_0}{2\pi}\end{equation*}
 con $\mu_0$ la permeabilità magnetica del vuoto:
-$$\mu_0=\unita{4\pi\times 10^{-7}}\henry\per\meter$$
+\begin{equation*}\mu_0=\unita{4\pi\times 10^{-7}}\henry\per\meter\end{equation*}
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
-$$\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I$$
+\begin{equation*}\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\end{equation*}
 con $\ver s$ è un versore orientato come il verso della corrente, mentre $\ve r$ è il vettore che individua il punto rispetto al filo, ha quindi il modulo della distanza tra il filo e il punto.
 \subsubsection{unità di misura\index{weber}}
-$$\left[\mu_0\right]=\frac{\text{weber}}{\text{metro}\cdot\text{ampere}}=\frac{\volt\usk\second}{\meter\usk\ampere}=\frac{\ohm\usk\second}{\meter}=\frac{\henry}{\meter}$$
+\begin{equation*}\left[\mu_0\right]=\frac{\text{weber}}{\text{metro}\cdot\text{ampere}}=\frac{\volt\usk\second}{\meter\usk\ampere}=\frac{\ohm\usk\second}{\meter}=\frac{\henry}{\meter}\end{equation*}
 con:
-$$\henry=\text{ohm}\cdot\text{secondo}=\text{henry}$$
+\begin{equation*}\henry=\text{ohm}\cdot\text{secondo}=\text{henry}\end{equation*}
 \subsection{Prima formula di Laplace\index{prima formula di Laplace}\index{Laplace}}
 La prima legge di Laplace stabilisce che un elemento $\ud \ve l$ di circuito percorso da una corrente $I$ produce in un punto $P$ distate $\ve r$ da esso un vettore di induzione magnetica:
 \begin{equation}
@@ -1699,9 +1720,9 @@ Essendo $I\ud \ve l=\ve J\ud v$:
 \includegraphics[scale=0.5]{immagini/fisica2/magneto_filo}
 \end{figure}
 Ricaviamo la legge di Biot--Savart. Chiamiamo $\ve r$ la distanza di $P$ dall'elementino $\ud l$ e $R$ la distanza dal filo. Allora:
-$$\ud \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud\ve l\times\ve r}{\norm{\ve r}^3}\qquad\ud B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud l\sin\theta}{r^2}$$
+\begin{equation*}\ud \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud\ve l\times\ve r}{\norm{\ve r}^3}\qquad\ud B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud l\sin\theta}{r^2}\end{equation*}
 ma:
-$$r=\frac{R}{\sin\theta}\qquad l=\frac{R}{\tan\left(\pi-\theta\right)}=-\frac{R}{\tan\theta}\qquad \ud l=\frac{R}{\sin^2\theta}\ud\theta$$
+\begin{equation*}r=\frac{R}{\sin\theta}\qquad l=\frac{R}{\tan\left(\pi-\theta\right)}=-\frac{R}{\tan\theta}\qquad \ud l=\frac{R}{\sin^2\theta}\ud\theta\end{equation*}
 \end{Es}
 \begin{align*}
 B\left(\ve r\right)&=\frac{\mu_0}{4\pi}I\int_{-\infty}^{+\infty}\frac{\sin\theta}{r^2}\,\ud l=\frac{\mu_0}{4\pi}I\int_{0}^{\pi}\frac{\sin\theta\sin^2\theta}{R^2}\frac{R}{\sin^2\theta}\ud\theta\\
@@ -1713,30 +1734,30 @@ in forma vettoriale:
 \end{equation}
 \begin{Es}[spira circolare\index{spira}]
 Consideriamo un circuito di forma circolare, con raggio $R$. Vogliamo il campo magnetico lungo l'asse. Per ragioni di simmetria il campo magnetico risultate è ortogonalmente al piano della spira. Usiamo le coordinate cilindriche. $P$ avrà coordinate $(0,0,w)$, individuato dal vettore $\ve r=w \ver e_w$, mentre l'elementino $\ud l$ della spira sarà individuato dal vettore $\ve r\,'=r'\ver e_r$. L'elementino $\ud\ve l=R\ud\theta\ver e_\theta$.
-$$\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^2}=\frac{\mu_0}{4\pi}\int_0^{2\pi}\frac{IR\ud\theta\ver e_\theta\times\left(w\ver w_z-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}$$
+\begin{equation*}\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^2}=\frac{\mu_0}{4\pi}\int_0^{2\pi}\frac{IR\ud\theta\ver e_\theta\times\left(w\ver w_z-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}\end{equation*}
 Ricordando che:
-$$\ver e_\theta\times\ver e_w=\ver e_r\qquad \ver e_\theta\times\ver e_r=\ver e_w\qquad \int_0^{2\pi} \ud\theta\ver e_r=\int_0^{2\pi}\left(\cos\theta\ver \imath+\sin\theta\ver \jmath\right)\,\ud \theta=0$$
+\begin{equation*}\ver e_\theta\times\ver e_w=\ver e_r\qquad \ver e_\theta\times\ver e_r=\ver e_w\qquad \int_0^{2\pi} \ud\theta\ver e_r=\int_0^{2\pi}\left(\cos\theta\ver \imath+\sin\theta\ver \jmath\right)\,\ud \theta=0\end{equation*}
 \begin{align*}
 \ve B\left(w\right)&=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}\int_0^{2\pi}\left(w\ver e_r+R\ver e_w\right)\ud\theta=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}R\ver e_w 2\pi\\
 &=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+w^2\right)^{\frac{3}{2}}}\,\ver e_w
 \end{align*}
 Nel caso particolare $w=0$ si ha:
-$$\ve B=\frac{\mu_0}{2}\frac{I}{R}\,\ver e_w$$
+\begin{equation*}\ve B=\frac{\mu_0}{2}\frac{I}{R}\,\ver e_w\end{equation*}
 \end{Es}
 \begin{Es}[solenoide\index{solenoide}]
 Immaginiamo il solenoide come l'insieme di tante spire affiancate e usiamo il principio di sovrapposizione. Sia $N$ il numero di spire per unità di lunghezza, $l$ la sua lunghezza. Il campo magnetico generato da una spira che non si trovi nell'origine, ma ad una distanza $w'$ sull'asse è 
-$$\ve B_S\left(w\right)=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w$$
+\begin{equation*}\ve B_S\left(w\right)=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w\end{equation*}
 Essendo $N\ud w$ il numero di spire in $\ud w$:
 \begin{align*}
 \ve B(w)=&\int_{-\frac{l}{2}}^{\frac{l}{2}}B_SN\ud w\,\ver e_w=\int_{-\frac{l}{2}}^{\frac{l}{2}}\frac{\mu_0}{2}\frac{INR^2\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w\\
 =&\frac{\mu_0INR^2}{2}\ver e_w\int_{-\frac{l}{2}}^{\frac{l}{2}}\frac{\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}
 \end{align*}
 Occupiamoci dell'integrale, usiamo la sostituzione $u=w-w'$ quindi $\ud u=\ud w$:
-$$\int\frac{\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}=\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}$$
+\begin{equation*}\int\frac{\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}=\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}\end{equation*}
 \end{Es}
 Sostituendo ora $u=R\sinh t$, $\ud u=R\cosh t\ud t$:
-$$\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}
-=\int\frac{R\cosh t}{R^3\left(1+\sinh^2t\right)^{\frac{3}{2}}}\ud t=\int\frac{\ud t}{R^2\cosh^2 t}=\frac{1}{R^2}\tanh t$$
+\begin{equation*}\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}
+=\int\frac{R\cosh t}{R^3\left(1+\sinh^2t\right)^{\frac{3}{2}}}\ud t=\int\frac{\ud t}{R^2\cosh^2 t}=\frac{1}{R^2}\tanh t\end{equation*}
 Risostituiamo:
 \begin{align*}
 \frac{1}{R^2}\tanh t&=\frac{1}{R^2}\frac{\sinh\arcsinh\frac{u}{R}}{\cosh\arcsinh\frac{u}{R}}=\frac{u}{R^3}\frac{1}{\sqrt{1+\sinh^2\arcsinh\frac{u}{R}}}\\
@@ -1748,7 +1769,7 @@ Allora:
 &=\dfrac{\mu_0NI}{2R}\ver e_w\left(\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}+\dfrac{\frac{l}{2}+w'}{\sqrt{1+\left(\frac{\frac{l}{2}+w'}{R}\right)^2}}\right)
 \end{align*}
 che rappresenta il campo magnetico generato da un solenoide di lunghezza $l$, se $l\to\infty$:
-$$\ve B=\mu_0IN$$
+\begin{equation*}\ve B=\mu_0IN\end{equation*}
 Infatti per esempio, usando al primo passaggio H\^{o}pital:
 \begin{multline*}\lim_{l\to\infty}\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}=\lim_{l\to\infty}\frac{1}{\left[1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2\right]^{\frac{l}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}\\
 =\lim_{l\to\infty}\frac{1}{\left[\left(\frac{\frac{l}{2}-2'}{R}\right)^2\left(\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}+1\right)\right]^{-\frac{1}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}=\lim_{l\to\infty}\frac{1}{\left(1+\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}\right)^{-\frac{1}{2}}}=1
@@ -1792,7 +1813,7 @@ La forza sul secondo:
 \ud \ve F=I_2\ud\ve l_2\times\ve B(d)=-\frac{\mu_0}{2\pi}\frac{I_1}{d}I_2\ud l_2\left(\ver k\times\ver \imath\right)=-\frac{\mu_0}{2\pi}\frac{I_1I_2}{d}\ud l_2\ver \jmath
 \end{equation}
 Integrando:
-$$\ve F=-\frac{\mu_0}{2\pi}\frac{I_1I_2}{d}l\ver \jmath$$
+\begin{equation*}\ve F=-\frac{\mu_0}{2\pi}\frac{I_1I_2}{d}l\ver \jmath\end{equation*}
 Se la corrente fosse stata di verso opposto allora la forza sarebbe stata repulsiva.
 \subsubsection{Definizione di ampere\index{ampere}}
 Dalla \eqref{pre_ampere} possiamo dire:
@@ -1806,11 +1827,11 @@ l'ampere è quella corrrente che passando tra due fili distanti $\unita{1}\meter
 
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
 Prendiamo un filo rettilineo, calcoliamo la circuitazione di $\ve B$ lungo una linea di forza:
-$$\oint\ve B\cdot\ud\ve l=\oint B\,\ud l=\oint\frac{\mu_0}{2\pi}\frac{I}{R}\,\ud l=\frac{\mu_0}{2\pi}\frac{I}{R}2\pi R=\mu_0 I$$
+\begin{equation*}\oint\ve B\cdot\ud\ve l=\oint B\,\ud l=\oint\frac{\mu_0}{2\pi}\frac{I}{R}\,\ud l=\frac{\mu_0}{2\pi}\frac{I}{R}2\pi R=\mu_0 I\end{equation*}
 Questo risultato vale per qualsiasi percorso purché concateni una corrente $I$. Consideriamo un circuito che non concatena nessuna corrente:
-$$\int_1\ve B\cdot\ud \ve l=0\qquad\int_3\ve B\cdot\ud \ve l=0$$
-$$\int_2\ve B\cdot\ud \ve l=\frac{\mu_0}{2\pi}\frac{I}{r_2}(r_2\theta)\qquad
-\int_4\ve B\cdot\ud \ve l=-\frac{\mu_0}{2\pi}\frac{I}{r_1}(r_1\theta)$$
+\begin{equation*}\int_1\ve B\cdot\ud \ve l=0\qquad\int_3\ve B\cdot\ud \ve l=0\end{equation*}
+\begin{equation*}\int_2\ve B\cdot\ud \ve l=\frac{\mu_0}{2\pi}\frac{I}{r_2}(r_2\theta)\qquad
+\int_4\ve B\cdot\ud \ve l=-\frac{\mu_0}{2\pi}\frac{I}{r_1}(r_1\theta)\end{equation*}
 Sommando si ottiene che la circuitazione è nulla. Generalizzando si arriva al teorema di Ampere:
 \begin{Teo}[Ampere\index{teorema!di Ampere}]
 Sia $I$ la corrente totale che il percorso $C$ concatena:
@@ -1823,11 +1844,11 @@ se la corrente viene concatenata $n$ volte va contata $n$ volte. La corrente va 
 La circuitazione dipende dal cammino della circuitazione, infatti $\ve B$ non è un campo conservativo.
 \subsection{Forma differenziale}
 Essendo:
-$$I=\int_S\ve J\cdot\ve n\,\ud a$$
+\begin{equation*}I=\int_S\ve J\cdot\ve n\,\ud a\end{equation*}
 sostituendola nella \eqref{circ_ampere} si ha:
-$$\oint_C \ve B\cdot\ud \ve l=\mu_0\int_S\ve J\cdot\ve n\,\ud a$$
+\begin{equation*}\oint_C \ve B\cdot\ud \ve l=\mu_0\int_S\ve J\cdot\ve n\,\ud a\end{equation*}
 Usando il teorema del rotore:
-$$\int_S\rot\ve B\cdot\ve n\,\ud a=\mu_0\int_S\ve J\cdot\ve n\,\ud a$$
+\begin{equation*}\int_S\rot\ve B\cdot\ve n\,\ud a=\mu_0\int_S\ve J\cdot\ve n\,\ud a\end{equation*}
 Essendo $S$ qualsiasi:
 \begin{equation}
 \rot\ve B=\mu_0\ve J
@@ -1838,10 +1859,10 @@ Sia un cilindro rotante lungo l'asse con periodo $T$, all'interno del quale ci s
 \centering
 \includegraphics[scale=0.4]{immagini/fisica2/cilindro_magnetico}
 \end{figure}
-$$I=\frac{Q}{T}=\frac{\int_V \rho\,\ud v}{T}=\frac{\rho l\pi\left(R^2-r^2\right)}{T}$$
+\begin{equation*}I=\frac{Q}{T}=\frac{\int_V \rho\,\ud v}{T}=\frac{\rho l\pi\left(R^2-r^2\right)}{T}\end{equation*}
 Per il teorema di Ampere:
-$$\oint_C \ve B\cdot\ud\ve l=Bl=\mu_0 I=\mu_0\frac{\rho l\pi\left(R^2-r^2\right)}{T}$$
-$$B=\mu_0\frac{\rho\pi\left(R^2-r^2\right)}{T}$$
+\begin{equation*}\oint_C \ve B\cdot\ud\ve l=Bl=\mu_0 I=\mu_0\frac{\rho l\pi\left(R^2-r^2\right)}{T}\end{equation*}
+\begin{equation*}B=\mu_0\frac{\rho\pi\left(R^2-r^2\right)}{T}\end{equation*}
 \end{Es}
 
 
@@ -1856,7 +1877,7 @@ In forma differenziale:
 \diver\ve B=0
 \end{equation}
 Questa espressione poteva essere ricavata calcolando:
-$$\diver\ve B=\diver \left\{\frac{\mu_0}{4\pi}\int\frac{\ve J\left(\ve r\,'\right)\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'\right\}=0$$
+\begin{equation*}\diver\ve B=\diver \left\{\frac{\mu_0}{4\pi}\int\frac{\ve J\left(\ve r\,'\right)\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'\right\}=0\end{equation*}
 \section{Maxwell per la magnetostatica}
 \begin{gather}
 \ve\nabla\cdot\ve B=0\\
@@ -1896,7 +1917,7 @@ Tutto ciò lo possiamo ottenere mantenendo $P$ fermo e spostando la spira di $-\
 -\oint_C\frac{\ve r\cdot(\ud \ve s\times\ud\ve l)}{r^3}
 \end{equation*}
 è uguale a $\ud\omega$, la variazione di $\omega$, l'angolo solido con cui $P$ vede $C$, durante lo spostamento $\ud\ve s$. $\ud \ve a\cdot\ve r=\ud a_0 r$ area perpendicolare a $\ve r$:
-$$\frac{\ve r\cdot\ud\ve a}{r^3}=\frac{r\ud a_0}{r^3}=\frac{\ud a_0}{r^2}=\ud\ud\omega$$
+\begin{equation*}\frac{\ve r\cdot\ud\ve a}{r^3}=\frac{r\ud a_0}{r^3}=\frac{\ud a_0}{r^2}=\ud\ud\omega\end{equation*}
 integrando si trova $\ud\omega$. Allora:
 \begin{equation}
 \ud\varphi_m=\frac{I}{4\pi}\ud\omega
@@ -1908,7 +1929,7 @@ e quindi:
 \end{equation}
 
 Suddividiamo la superficie $S$ delimitata da $C$ in tante spire di area $\ud a$ percorse da corrente $I$. Per il solito discorso sommando tutte le $\ud a$ si torna alla spira $C$. Il verso della corrente determina l'orientamento delle spire. Essendo:
-$$\omega=\int_S\frac{\ud\ve a\cdot\ve r}{r^3}$$
+\begin{equation*}\omega=\int_S\frac{\ud\ve a\cdot\ve r}{r^3}\end{equation*}
 possiamo scrivere la \eqref{potenziale_magnetico_03} come:
 \begin{equation}
 \varphi_m=\frac{1}{4\pi}\int_S\frac{I\ud\ve a\cdot\ve r}{r^3}
@@ -2016,13 +2037,13 @@ A differenza che nei conduttori negli isolanti o dielettrici gli elettroni sono 
 ma $\ve E_P=\ve E_P(\ve E_T)$.
 
 Consideriamo un approccio fenomenologico. Consideriamo un condensatore a facce piane e parallele. La sua capacità è $C_0=\varepsilon_0\frac{S}{d}$. Se sulle armature depositiamo una carica $q$ si creerà una differenza di potenziale $\Delta V_0=E_0d=\frac{\sigma}{\varepsilon_0}d$. Inseriamo un dielettrico tra le armature, si nota che la capacità è aumentata di un fattore $\varepsilon_r>1$:
-$$C=\varepsilon_rC_0$$
+\begin{equation*}C=\varepsilon_rC_0\end{equation*}
 $\varepsilon_r$ è caratteristica del dielettrico. $\Delta V$ è diminuita:
-$$\Delta V=\frac{Q}{C}=\frac{Q}{\varepsilon_r C_0}=\frac{\Delta V_0}{\varepsilon_r}$$
+\begin{equation*}\Delta V=\frac{Q}{C}=\frac{Q}{\varepsilon_r C_0}=\frac{\Delta V_0}{\varepsilon_r}\end{equation*}
 anche il campo è diminuito:
-$$E=\frac{\Delta V}{d}=\frac{\Delta V_0}{\varepsilon_rd}=\frac{E_0}{\varepsilon_r}$$
+\begin{equation*}E=\frac{\Delta V}{d}=\frac{\Delta V_0}{\varepsilon_rd}=\frac{E_0}{\varepsilon_r}\end{equation*}
 allora la forza:
-$$F=qE=\frac{qE_0}{\varepsilon_r}$$
+\begin{equation*}F=qE=\frac{qE_0}{\varepsilon_r}\end{equation*}
 La legge di Coulomb nei dielettrici diventa:
 \begin{equation}
 \ve F=\frac{q}{4\pi\varepsilon_0\varepsilon_r}\frac{\ve r-\ve r\,'}{{\norm{\ve r-\ve r\,'}}^3}
@@ -2218,9 +2239,9 @@ V=V_\text{dielettrico}-V_\text{cavità}
 Dove $S_\text{dielettrico}$ e $V_\text{dielettrico}$ sono la superficie e il volume del dielettrico senza la cavità Se però sciegliamo la cavitàcilindrica con asse parallelo al campo nel dielettrico isotropo sulla superficie laterale sarà parallelo e quindi le cariche superficiali di polarizzazione $\sigma_p=\ve P\cdot\ve n$ si disporranno solo sulle basi del cilindro, ma queste tendono a zero. Allora le cariche di polarizzazione si dispongono solo sulla superficie esterna del dielettrico, il contributo delle cariche di polarizzazione sulla superficie della cavitàànullo, allora nell'integrale potremo usare $S_\text{dielettrico}$. Per le densità volumetriche di polarizzazione basta considerare che il volume della cavitàtende a zero e quindi sono trascurabili, $V_\text{dielettrico}$ può essere usato nell'integrale. Allora l'espressione per il campo elettrico all'interno del dielettrico è uguale all'espressione per il campo esterno \eqref{campo_elettrico_esterno_dielettrico} nell'ipotesi di cavitàaghiforme orientata come il campo nel dielettrico e dielettrico isotropo.
 
 In tutto il ragionamento c'è un grosso problema che ci costringeràa introdurre delle relazioni che tengono conto della natura del materiale: le cariche di polarizzazione che compaiono nell'espressione per il campo elettrico interno o esterno al dielettrico \eqref{campo_elettrico_esterno_dielettrico} sono in funzione del vettore di polarizzazione $\ve P(\ve r)$ il quale dipende oltre che dal campo elettrico esterno che causa la polarizzazione, ma anche dal campo elettrico creato dalla polarizzazione stessa. Il problema è ciclico:
-$$
+\begin{equation*}
 \ve E_\text{pol}\left(\sigma_p(\ve P(\ve E_\text{pol},\ve E_\text{ext}),\rho_p(\ve P(\ve E_\text{pol},\ve E_\text{ext}))\right)
-$$
+\end{equation*}
 \section{Teorema di Gauss\index{teorema!di Gauss!nei dielettrici}}
 Cerchiamo una forma generale del teorema di Gauss che valga anche in presenza di dielettrici. Come visto nella sezione \ref{teorema_di_gauss} a pag.~\pageref{teorema_di_gauss} il teorema di Gauss:
 \begin{equation}
@@ -2332,8 +2353,8 @@ In passato $\chi_e$ era definito come
 \chi_e^\star=\frac{\chi_e}{\varepsilon_0}
 \end{equation}
 che è adimensionale, quindi le equazioni erano scritte come:
-$$
-\ve P=\varepsilon_0\chi_e^\star\ve E\qquad\varepsilon=\varepsilon_0\left(1+\chi_e^\star\right)\qquad\varepsilon_r=1+\chi_e^\star$$
+\begin{equation*}
+\ve P=\varepsilon_0\chi_e^\star\ve E\qquad\varepsilon=\varepsilon_0\left(1+\chi_e^\star\right)\qquad\varepsilon_r=1+\chi_e^\star\end{equation*}
 \section{Maxwell per i dielettrici}
 Nel caso statico siamo in grado di scrivere le equazioni che descrivono totalmente il campo elettrico. Innanzitutto dobbiamo includere la relazione costituiva:
 \begin{equation}
@@ -2746,7 +2767,7 @@ In un circuito isolato il campo magnetico generato dal circuito è funzione dell
 \end{equation}
 quindi il flusso del campo magnetico:
 \begin{equation}
-\Phi(\ve B)=\Phi(\ve B)(I)
+\Phi(\ve B)=\Phi(\ve B(I))
 \end{equation}
 cioè anch'esso è funzione della corrente la quale è funzione del tempo: $I=I(t)$, allora, in questo caso cioè se la variazione di flusso è data esclusivamente da variazioni di corrente (per esempio il circuito è indeformabile), la legge dell'induzione la possiamo scrivere:
 \begin{equation}
@@ -3491,10 +3512,10 @@ C'àuna contraddizione. Faraday introduce le correnti di spostamento $\ve J_s$ c
 D=\sigma(t)
 \end{equation*}
 con $\sigma$ la densità di carica sulle armature del condensatore. Il flusso all'interno del condensatore:
-$$\phi(\ve D)=S\sigma(t)=q(t)$$
+\begin{equation*}\phi(\ve D)=S\sigma(t)=q(t)\end{equation*}
 Derivando nel tempo:
-$$\frac{\partial\phi(\ve D)}{\partial t}=\frac{\ud q}{\ud t}(t)=I(t)$$
-$$\frac{\partial\ve D}{\partial t}=\ve J_S$$
+\begin{equation*}\frac{\partial\phi(\ve D)}{\partial t}=\frac{\ud q}{\ud t}(t)=I(t)\end{equation*}
+\begin{equation*}\frac{\partial\ve D}{\partial t}=\ve J_S\end{equation*}
 
 \subsection{Calcolo correnti di spostamento}
 Partiamo dall'equazione di continuità che sicuramente è giusta:
