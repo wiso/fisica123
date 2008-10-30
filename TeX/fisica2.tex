@@ -2029,6 +2029,12 @@ che si riassume, tenendo conto che l'area è $A=\pi r'^2$:
 
 
 \chapter{Dielettrici\index{dielettrici}}
+Se vogliamo calcolare esattamente il campo elettrico a livello microscopico \index{campo!elettrico!microscopico}$\ve\varepsilon$ all'interno della matateria quello che dovremo conoscere è la distribuzione di carica microscopica. Questa distribuzione di carica è generata dagli elettroni e dai protoni. La soluzione delle equazioni di Maxwell per l'elettrostatica è:
+\begin{equation}
+ \ve\varepsilon(\ve x) = \frac{1}{\giorgi}\int \rho(\ve x')\frac{\ve x -\ve x'}{\norm{\ve x-\ve x'}^3}\,\ud V'
+\end{equation}
+questa soluzione non è molto utile, in quanto $\rho$ dovrebbe essere conosciuta con precisione a livello microscopico ed è la sovrapposizione di moltissime particelle; inoltre il risultato $\ve\varepsilon$ varierebbe molto velocemente su scala microscopica. Per un'analisi macroscopica non abbiamo bisogno di questa precisione, e quindi possiamo lavorare con una $\rho$ e una $\ve\varepsilon$ mediata.
+
 \section{Isolanti\index{isolanti}}
 A differenza che nei conduttori negli isolanti o dielettrici gli elettroni sono fortemente legati ai nuclei e non si possono allontanare. Su di essi però agisce una forza $\ve F=-e\ve E_0$ se sottoposti ad un campo elettrico esterno $\ve E_0$. Non si parla di moto di cariche, ma di spostamento. Gli elettroni spostandosi dalla loro posizione originaria fanno si che il centro di carica positiva e negativa non coincidano più. Il dielettrico si dice polarizzato e il fenomeno è chiamato polarizzazione\index{polarizzazione}. In questo modo si crea un campo elettrico di polarizzazione $\ve E_P$; il campo elettrico totale:
 \begin{equation}
@@ -2090,9 +2096,9 @@ A seconda della composizione e anche della geometria che ne deriva le molecole p
 
 Se consideriamo un campione abbastanza numeroso di molecole polari la media dei momenti di dipolo sarà nulla, essendo l'orientazione dei singoli dipoli casuale.
 \subsection{Polarizzazione per orientamento\index{polarizzazione!per orientamento}}
-Un campo elettrico su una molecola polare tenderà ad orientare il suo momento di dipolo parallelamente al campo. Questo non vuol dire che tutte le molecole sono orientate siano orientate parallelamente al campo elettrico, in quanto il movimento che prevale è quello di agitazione termica, che mediamente è nullo. Se lo eliminiamo vedremo i momenti di dipolo che oscillano attorno alla direzione parallela al campo elettrico esterno. In generale si noterà che ogni singolo dipolo avrà mediamente una componente non nulla nella direzione del campo elettrico. La molecola è polarizzata per orientamento.
+Un campo elettrico esterno su una molecola polare tenderà ad orientare il suo momento di dipolo parallelamente al campo. Questo non vuol dire che tutte le molecole sono orientate siano orientate parallelamente al campo elettrico, in quanto il movimento che prevale è quello di agitazione termica, che mediamente è nullo. Se lo eliminiamo vedremo i momenti di dipolo che oscillano attorno alla direzione parallela al campo elettrico esterno. In generale si noterà che ogni singolo dipolo avrà mediamente una componente non nulla nella direzione del campo elettrico. La molecola è polarizzata per orientamento.
 \subsection{Polarizzazione per deformazione\index{polarizzazione!per deformazione}}
-Se mettiamo un atomo, o una molecola apolare, in un campo elettrico risulterà deformato: il centro di carica positiva e negativa non coincederanno pi, si è creato un momento di dipolo indotto\index{momento!di dipolo!indotto}, il dielettrico è polarizzato per deformazione. Anche le molecole polari subiscono questo effetto, ma è di gran lunga inferiore alla polarizzazione per orientamento.
+Se mettiamo un atomo, o una molecola apolare, in un campo elettrico risulterà deformato: il centro di carica positiva e negativa non coincederanno più, si è creato un momento di dipolo indotto\index{momento!di dipolo!indotto}, il dielettrico è polarizzato per deformazione. Anche le molecole polari subiscono questo effetto, ma è di gran lunga inferiore alla polarizzazione per orientamento.
 \subsection{Vettore polarizzazione elettrica}
 Consideriamo un elemento $\Delta V$ di un dielettrico polarizzato. Questo presenterà un momento di dipolo:
 \begin{equation*}
@@ -2103,7 +2109,7 @@ Consideriamo un elemento $\Delta V$ di un dielettrico polarizzato. Questo presen
 \ve P(\ve r)=\frac{\Delta\ve p(\ve r)}{\Delta V}
 \label{vettore_polarizzazione_elettrica}
 \end{equation}
-con $\Delta V$ si intende un elemento di volume sufficientemente piccolo da un punto di vista macroscopico in modo che $\ve P$ possa essere assunto uniforme all'interno di $\Delta V$, da un punto di vista macroscopico abbastanza grande per contenere abbastanza atomi da variare con continuità
+con $\Delta V$ si intende un elemento di volume sufficientemente piccolo da un punto di vista macroscopico in modo che $\ve P$ possa essere assunto uniforme all'interno di $\Delta V$, da un punto di vista microscopico abbastanza grande per contenere abbastanza atomi da variare con continuità.
 \end{Def}
 $\ve P$ è dato dalla somma di tutti i momenti di dipolo delle singole molecole:
 \begin{equation}
@@ -2494,7 +2500,7 @@ a questo va aggiunto il momento magnetico di dipolo intrinseco o di spin dovuto 
 \ve M=\frac{\sum_i\ve m_i}{\Delta V}
 \label{intensita_magnetizzazione}
 \end{equation}
-usando sempre la convenzione di $\Delta V$ piccolo dal punto di vista macroscopico e grande dal punto di vista microscopico. Il vettore intensitàdi magnetizzazione è anche detto semplicemente magnetizzazione.
+usando sempre la convenzione di $\Delta V$ piccolo dal punto di vista macroscopico e grande dal punto di vista microscopico. Il vettore intensità di magnetizzazione è anche detto semplicemente magnetizzazione.
 \end{Def}
 Se non applichiamo un campo magnetico esterno mediamente $\ve M$ è nullo in quanto $\ve m$ è orientato casualmente nello spazio. Per alcuni materiali questo non è del tutto vero. Quando applichiamo un campo magnetico esterno questo crea una coppia di forze sui dipoli che tende a farli disporre secondo un orientamento, allora $\ve M$ è diverso da zero e il materiale è magnetizzato. Il momento che si crea:
 \begin{equation*}
