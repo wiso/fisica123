@@ -132,7 +132,7 @@ Lungo l'asse $x$:
 \begin{equation*}f_x\rho\ud x\ud y\ud z+p(x)\ud y\ud z-(p(x)+\frac{\partial p}{\partial x}\ud x)\ud y\ud z=0\end{equation*}
 \begin{equation*}f_x\rho\ud x\ud y\ud z-\frac{\partial p}{\partial {x}}\ud x\ud y\ud z=0\end{equation*}
 \begin{equation*}f_x\rho=\frac{\partial p}{\partial x}\quad f_y\rho=\frac{\partial p}{\partial y}\quad f_z\rho=\frac{\partial p}{\partial z}\end{equation*}
-\begin{equation*}\ve f\rho=\ve\nabla p\end{equation*}
+\begin{equation}\ve f\rho=\ve\nabla p\end{equation}
 
 \subsubsection{Stevino}
 Nelle ipotesi di Stevino c'è solo il peso, quindi $\ve f=\ve g$
@@ -149,13 +149,13 @@ Segue che le superficie isobariche coincidono con le superfici equipotenziali. N
 \includegraphics[scale=0.65]{immagini/fisica1/fluido_rotazione}
 \caption{Elemento di un fluido in rotazione}
 \end{figure}
-Per lavorare in un sistema inerziale aggiungiamo la forza fittizia $m\omega^2 r$, $r$ è la distanza dal centro generica, nel nostro caso $R$ è la distanza dell'elemento $\ud m$ dall'asse.
+Per lavorare in un sistema non inerziale ed usare la legge di Newton aggiungiamo la forza fittizia $m\omega^2 r$, $r$ è la distanza dal centro, la distanza dell'elemento $\ud m$ dall'asse.
 \begin{equation*}\text{Nella direzione radiale } f_r=\omega^2 r\end{equation*}
-\begin{equation*}f_r\rho=\rho\omega^2 y=\frac{\ud p}{\ud r}\qquad \ud p=\rho\omega^2 y\ud r\end{equation*}
-\begin{equation*}\int_{p_\text{asse}}^p\ud p=\int_0^R \rho\omega^2 y\ud r\end{equation*}
+\begin{equation*}f_r\rho=\rho\omega^2 y=\frac{\ud p}{\ud y}\qquad \ud p=\rho\omega^2 y\ud y\end{equation*}
+\begin{equation*}\int_{p_\text{asse}}^p\ud p=\int_0^R \rho\omega^2 y\ud y\end{equation*}
 \begin{equation*}p-p_\text{asse}=\rho\omega^2\frac{R^2}{2}\qquad p=p_\text{asse}+\frac{\rho\omega^2}{2}R^2\end{equation*}
 \begin{equation*}p_\text{asse}=p_0-\rho gz\qquad p=p_0-\rho gz+\frac{\rho\omega^2}{2}R^2\end{equation*}
-Su una superficie isobarica $p=\const$, $p_0=\const$
+Su una superficie isobarica $p=\const$,
 \begin{equation*}\rho gz=\const+\frac{\rho\omega^2}{2}R^2\end{equation*}
 \begin{equation*}z=\const+\frac{\rho\omega^2}{2\rho g}R^2=\const+\frac{\omega^2}{2g}R^2=\const+\frac{\omega^2}{2g}(x^2+y^2)\end{equation*}
 \`E un paraboloide:
@@ -253,7 +253,7 @@ L'aria sotto le ali di un aereo è più lenta di quella che passa sopra, quindi 
 \begin{equation*}p+\frac{1}{2}\rho v^2=\const\end{equation*}
 quindi se diminuisce $v$ deve aumentare $p$ e allora si ho una pressione dell'aria sull'ala e quindi la forza che tiene in aria l'aeroplano.
 \end{Es}
-\section{Viscosità\index{viscosità}}
+\section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
 \label{viscosita fisica1}
 \begin{figure}[htbp]
 \centering
@@ -333,25 +333,28 @@ Due sistemi hanno la stessa temperatura se sono in equilibrio termico. Due siste
 \end{Pri}
 
 \section{Temperatura\index{temperatura}}
-\index{termometro}Il termometro è lo strumento per la misurazione della temperatura $T$. Per fare un termometro scelgo una proprietà $X$ che varia in funzione di $T$. Se $X$ varia linearmente in funzione di $T$ allora (in kelvin):
+\index{termometro}Il termometro è lo strumento per la misurazione della temperatura $T$. Per fare un termometro si sceglie una proprietà $X$ che varia in funzione di $T$. Se $X$ varia linearmente in funzione di $T$ allora (in kelvin):
 \begin{equation}
 T(X)=273.16\frac{X}{X_\text{triplo}}
 \end{equation}
-$X_\text{triplo}$ è la misura di $X$ al punto triplo dell'acqua ($\unita{0.01}\degreecelsius$). In questo modo la temperatura del punto triplo dell'acqua è di $\unita{273.16}\kelvin$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
+$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\unita{0.01}\degreecelsius$). In questo modo la temperatura del punto triplo dell'acqua è di $\unita{273.16}\kelvin$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
 
 \subsection{Termometro a gas perfetto a volume costante\index{termometro!a gas perfetto}}
 Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costate da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costate e si legge il valore di pressione. La pressione per mantenere il volume costate è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
 
 \section{Legge dei gas perfetti\index{legge!dei gas perfetti}}
 \begin{legge}[Avogadro(1811)]
-Uguali moli di gas, alla stessa pressione e temperatura contengono lo stesso numero $N_A$ di molecole, detto numero di Avogadro.
+Uguali moli di gas, alla stessa pressione e temperatura contengono lo stesso numero $N_A$ di molecole, detto numero di Avogadro\index{Numero di!Avogadro}.
 \end{legge}
+Il numero di Avogadro vale circa $6.022\times 10^{23}$.
 \begin{legge}[Boyle\index{Boyle}\index{legge!di Boyle}]
+In una trasformazione a temperatura costate (isoterma):
 \begin{equation}
 p\propto\frac{1}{V}
 \end{equation}
 \end{legge}
 \begin{legge}[Gay Lussac\index{legge!di Gay Lussac}\index{Gay Lussac}]
+In una trasformazione a volume costante (isocora):
 \begin{equation}
 p\propto{T}
 \end{equation}
@@ -360,7 +363,7 @@ Il tutto si riassume nell'equazione dei gas perfetti\index{equazione! dei gas pe
 \begin{equation}
 pV=nRT=\frac{N}{N_A}RT=N\frac{R}{N_A}T=NkT
 \end{equation}
-con $R$ costante dei gas, $k$ costante di Boltzman.
+con $R$ costante dei gas, $k=\frac{R}{N_A}$ costante di Boltzman\index{costante! di Boltzman}.
 \section{Dilatazione termica\index{dilatazione termica}}
 \subsection{Dilatazione termica dei solidi}
 \subsubsection{lineare}
@@ -408,7 +411,7 @@ F_x\frac{2L}{v_x}=F_x\Delta t=\Delta p_x=-2mv_x
 \begin{equation}
 F_x=-\frac{mv_x^2}{L}
 \end{equation}
-è la forza media (nel tempo) che applica la parete del recipiente sulla particella. Per il terzo principio della dinamica la particella sulla parere esercita una forza uguale e contraria, chiamiamola ancora $\ve F$ cambiando ora punto di vista, quello della particella:
+è la forza media (nel tempo) che la parete del recipiente applica sulla particella. Per il terzo principio della dinamica la particella sulla parere esercita una forza uguale e contraria, chiamiamola ancora $\ve F$ cambiando ora punto di vista, quello della particella:
 \begin{equation}
 F_x=\frac{mv_x^2}{L}
 \end{equation}
@@ -1125,7 +1128,7 @@ Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono inv
 \includegraphics[scale=0.7]{immagini/fisica1/Morley}
 \caption{Esperimento di Michelson--Morley}
 \end{figure}
-Maxwell dice: ``$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$'', cioè che la velocità della luce nel vuoto è costante e non dipende dal sistema di riferimento, contrariamente a quanto si ricava dalle trasformate di Galileo. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si inventa l'etere, un sistema di riferimento privilegiato che permea tutto l'universo; Michelson--Morley dimostrano che questo non può esistere.\index{etere}
+Maxwell dice: ``$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$'', cioè che la velocità della luce \index{velocità!della luce nel vuoto}\index{c@$c$|see{velocità della luce nel vuoto}}nel vuoto è costante e non dipende dal sistema di riferimento, contrariamente a quanto si ricava dalle trasformate di Galileo. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si inventa l'etere, un sistema di riferimento privilegiato che permea tutto l'universo; Michelson--Morley dimostrano che questo non può esistere.\index{etere}
 
 Nell'esperimento la luce proviene da una sorgente $S$, viene parzialmente riflessa da uno specchio semiargentato $M$ e contemporaneamente trasmessa. La luce quindi segue due cammini: $\text{I}$ e $\text{II}$; si riflette sugli specchi $M_1$ e $M_2$ e si riunisce in un raggio unico, prima di arrivare ad un'analizzatore. Le lunghezze dei percorsi dopo lo specchio $M$, $l_1$ e $l_2$ sono circa uguali, ma non uguali se riferite alla lunghezza d'onda della luce, quindi nell'analizzatore si dovrebbe vedere una figura d'interferenza. Si suppone che l'etere sia il sistema di riferimento assoluto e che l'apparecchio si muova con velocità $v$ verso destra, quindi si può supporre che sia l'etere a spostarsi verso sinistra con velocità $v$, il ``vento d'etere''. Non si considera il percorso dalla sorgente allo specchio $M$ e dallo specchio $M$ al rivelatore, in quanto i raggi viaggiano insieme. Il tempo per andare da $M$ a $M_1$ e tornare è:
 \begin{equation*}t_1=\frac{l_1}{c-v}+\frac{l_1}{c+v}=\frac{l_1(2c)}{c^2-v^2}=\frac{2c}{c^2}\frac{l_1}{1-\left(\frac{v}{c}\right)^2}=\frac{2l_1}{c}\frac{1}{1-\left(\frac{v}{c}\right)^2}\end{equation*}
