@@ -1,8 +1,8 @@
 \chapter{\index{meccanica dei fluidi|(}Meccanica dei fluidi}
 Un fluido è un liquido o un gas. La meccanica dei fluidi applica le leggi della meccanica classica ai fluidi descrivendo tutto in termini di pressione, volume, portata.
-\section{\index{fluidostatica}FluidoStatica}
+\section{\index{fluidostatica}Fluidostatica}
 \subsection{\index{pressione}Pressione e \index{densità}densità}
-La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare, infatti la forza agisce sempre perpendicolarmente alla superficie. Se avesse una componente tangenziale il fluido si muoverebbe e non parleremmo più di fluidostatica. Un'altro modo analogo usando il vettore normale è
+La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare, infatti la forza agisce sempre perpendicolarmente alla superficie. Se avesse una componente tangenziale il fluido si muoverebbe e non parleremmo più di fluidostatica. Un altro modo analogo usando il vettore normale è
 \begin{Def}[pressione]
 \begin{equation}
 p=\frac{\ud\ve F\cdot \ve n}{\ud A}
@@ -31,7 +31,7 @@ Il fluido è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è l
 \begin{equation*}p_0=\text{pressione atmosferica}\end{equation*}
 \begin{equation*}\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^h \rho g\,\ud y=-\rho g\int_0^h\!\ud y\end{equation*}
 \begin{equation*}p=p_0-\rho g h\end{equation*}
-che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se considereriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizziamo che \begin{equation*}\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\end{equation*}
+che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizziamo che \begin{equation*}\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\end{equation*}
 \begin{equation*}\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\end{equation*}
 \begin{equation*}\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\end{equation*}
 \begin{equation}
@@ -313,7 +313,7 @@ La termodinamica si occupa di scambi di energia e di cambiamento di stato di sis
 
 Una variabile di stato è una variabile\index{variabile!di stato} stazionaria(costante nel tempo), isotropa (uguale in tutte le direzioni), omogenea (uguale nello spazio).
 
-Un sistema\index{sistema} è la porzione di materia sotto osservazione, l'ambiente \index{ambiente} tutto il resto. L'universo termodinamico\index{universo!termodinamico} è l'unione del sistema con l'ambiente. Un sistema aperto \index{sistema!aperto} scambia energia e materia con l'ambiente, un sistema chiuso \index{sistema!chiuso} scambia solo energia, un sistema isolato \index{sistema!isolato}non scambia nè energia nè materia. Una parete adiabatica \index{parete!adiabatica}è una parete che non lascia passare calore, una diatermica \index{parete!diatermica}lascia passare calore.
+Un sistema\index{sistema} è la porzione di materia sotto osservazione, l'ambiente \index{ambiente} tutto il resto. L'universo termodinamico\index{universo!termodinamico} è l'unione del sistema con l'ambiente. Un sistema aperto \index{sistema!aperto} scambia energia e materia con l'ambiente, un sistema chiuso \index{sistema!chiuso} scambia solo energia, un sistema isolato \index{sistema!isolato}non scambia né energia ne materia. Una parete adiabatica \index{parete!adiabatica}è una parete che non lascia passare calore, una diatermica \index{parete!diatermica}lascia passare calore.
 
 Le variabili di stato vanno considerate dopo un certo tempo di rilassamento del sistema. La termodinamica classica si occupa dei sistemi all'equilibrio, analizza i sistemi prima e dopo le trasformazioni. Le trasformazioni \index{trasformazioni!quasistatiche}vengono considerate quasi statiche, cioè trasformazioni che passano attraverso infiniti stati di equilibrio in un tempo infinitamente lungo. Queste trasformazioni sono dette anche reversibili\index{trasformazioni!reversibili}.
 
@@ -363,7 +363,7 @@ Il tutto si riassume nell'equazione dei gas perfetti\index{equazione! dei gas pe
 \begin{equation}
 pV=nRT=\frac{N}{N_A}RT=N\frac{R}{N_A}T=NkT
 \end{equation}
-con $R$ costante dei gas, $k=\frac{R}{N_A}$ costante di Boltzman\index{costante! di Boltzman}.
+con $R$ costante dei gas, $k=\frac{R}{N_A}$ costante di Boltzmann\index{costante! di Boltzmann}.
 \section{Dilatazione termica\index{dilatazione termica}}
 \subsection{Dilatazione termica dei solidi}
 \subsubsection{lineare}
@@ -1029,8 +1029,8 @@ $P$ è la probabilità che il sistema si configuri in un dato stato termodinamic
 
 $S$ è una variabile termodinamica estensiva, quindi per calcolare l'entropia del sistema si somma $S_1$ della parte sinistra e $S_2$ della parte destra. Le variabili termodinamiche come $T$, $p$ sono intensive e sommarle in questo caso non ha senso.
 \begin{legge}[legge di Boltzman]
-\index{Boltzman}\index{legge!di Boltzman}
-Entropia secondo Boltzman\index{entropia!secondo Boltzman}:
+\index{Boltzmann}\index{legge!di Boltzmann}
+Entropia secondo Boltzmann\index{entropia!secondo Boltzmann}:
 \begin{equation}
 S=k\log P
 \end{equation}
@@ -1208,7 +1208,7 @@ t'=\lambda_{41}x+\lambda_{42}y+\lambda_{44}t\\\end{array}\right.
 
 \end{itemize}
 
-Se mettiamo una sbarra verticalmente con un'estremo in $O'$, questo misura che la lunghezza è $1$. La sbarra si muove con $O'$ e quindi questa è la lunghezza a riposo. Questa lunghezza a riposo dovrà essere uguale anche se è osservata da $O$. Mettiamo la sbarra ferma rispetto ad $O'$, quindi $O$ vede una lunghezza:
+Se mettiamo una sbarra verticalmente con un estremo in $O'$, questo misura che la lunghezza è $1$. La sbarra si muove con $O'$ e quindi questa è la lunghezza a riposo. Questa lunghezza a riposo dovrà essere uguale anche se è osservata da $O$. Mettiamo la sbarra ferma rispetto ad $O'$, quindi $O$ vede una lunghezza:
 \begin{equation*}y=\frac{1}{\lambda_{22}}\end{equation*}
 mettiamo ora la sbarra ferma rispetto a $O$, $O'$ vede una lunghezza:
 \begin{equation*}y'=\lambda_{22}\end{equation*}
@@ -1584,7 +1584,7 @@ Einstein si interrogava di come le forze potessero propagarsi, in particolare qu
 
 \index{relatività!speciale|)}
 \chapter{Onde\index{onde}}
-Le onde sono un moto che traporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinale sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Di solito quando si parla di onde si parla di treno d'onde\index{treno d'onde} periodico, il caso più semplice è l'onda armonica\index{onda!armonica} in cui tutte le particelle subiscono un moto armonico semplice. Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
+Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinale sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Di solito quando si parla di onde si parla di treno d'onde\index{treno d'onde} periodico, il caso più semplice è l'onda armonica\index{onda!armonica} in cui tutte le particelle subiscono un moto armonico semplice. Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
 
 Se mandiamo due impulsi in un mezzo elastico:
 \begin{figure}[htbp]

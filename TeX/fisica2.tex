@@ -128,7 +128,7 @@ Risulta allora:
 \begin{equation*}\phi(1)=- F_x(1)\Delta y\Delta z\end{equation*}
 \begin{equation*}\phi(2)=\left[F_x(1)+\frac{\partial F_x}{\partial x}\Delta x\right]\Delta y\Delta z\end{equation*}
 \begin{equation*}\phi(1\cup 2)=\frac{\partial F_x}{\partial x}\Delta x\Delta y\Delta z\end{equation*}
-e similmente per le altre faccie, il flusso totale è allora:
+e similmente per le altre facce, il flusso totale è allora:
 \begin{equation*}\int_{\text{cubo}} \ve F\cdot\ud a=\left(\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}\right)\Delta x\Delta y\Delta z\end{equation*}
 
 
@@ -355,7 +355,7 @@ dove $\ve r_{12}$ è il vettore che individua $q_2$ rispetto a $q_1$ e $\ver r_{
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=1,angle=-90]{immagini/fisica2/forza_coulomb}
+\includegraphics[scale=1]{immagini/fisica2/forza_coulomb}
 \end{figure}
 La \eqref{coulomb01} la possiamo riscrivere usando la \eqref{norm02}:
 \begin{equation*}\ve{F}_{12}=K_e\frac{q_1q_2}{r_{12}^3}\ve{r_{12}}\end{equation*}
@@ -422,7 +422,7 @@ con $\ve F$ la forza esercitata dalla carica generante il campo sulla carica esp
 \ve E=\frac{1}{4\pi\varepsilon_0}\frac{q}{{\norm{\ve r}}^3}\ve r
 \end{equation}
 \subsection{Definizione operativa\index{campo!elettrostatico}}
-Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è una definizione puramente matematica. Il problema dal punto di vista operativo è che se vogliamo misurare un campo elettrostatico con una carica di prova, questa modificherà la distribuzione di cariche generatrici del campo e quindi usando cariche di prova diverse troveremo campi leggermente diversi. Bisogna allora usare cariche di prova più piccole possibili, in teoria tendenti a zero. In realtà il campo non dipende dalla carica di prova, è una proprietà fisica dello spazio, ma per misurarlo abbiamo bisogno di una carica di prova. Si potrebbe difinire il campo elettrostatico come $\ve E=\lim_{q\to 0}\frac{\ve F}{q}$.
+Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è una definizione puramente matematica. Il problema dal punto di vista operativo è che se vogliamo misurare un campo elettrostatico con una carica di prova, questa modificherà la distribuzione di cariche generatrici del campo e quindi usando cariche di prova diverse troveremo campi leggermente diversi. Bisogna allora usare cariche di prova più piccole possibili, in teoria tendenti a zero. In realtà il campo non dipende dalla carica di prova, è una proprietà fisica dello spazio, ma per misurarlo abbiamo bisogno di una carica di prova. Si potrebbe definire il campo elettrostatico come $\ve E=\lim_{q\to 0}\frac{\ve F}{q}$.
 \begin{Es}[campo elettrico di una distribuzione lineare]
 \begin{figure}[htbp]
 \centering
@@ -464,7 +464,7 @@ cioè come un punto.
  \centering
  \includegraphics[scale=0.8]{immagini/fisica2/disco}
 \end{figure}
- Consideriamo un disco di raggio $R$ e carica superficiale uniforme $\sigma$. Calcoliamo il campo elettrostatico sull'asse del disco $z$ nel punto $\ve r$. La carica di un elementino infinesimo sarà:
+ Consideriamo un disco di raggio $R$ e carica superficiale uniforme $\sigma$. Calcoliamo il campo elettrostatico sull'asse del disco $z$ nel punto $\ve r$. La carica di un elementino infinitesimo sarà:
 \begin{equation*}
  \ud q' = \sigma\ud a = \sigma r'\ud\varphi'\ud r'
 \end{equation*}
@@ -708,7 +708,7 @@ W=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^{N}\sum_{j\neq i}^{N}\frac{q_iq_j}{\norm
 \end{equation}
 Il fattore $\frac{1}{2}$ serve perché altrimenti le coppie sarebbero contate due volte, mentre non conta l'ordine.
 \subsection{Unità di misura}
-Nell'SI il potenziale si misura in volt\index{volt}:
+Nel SI il potenziale si misura in volt\index{volt}:
 \begin{equation*}[\varphi]=\frac{\joule}{\coulomb}=\volt\end{equation*}
 allora essendo $\ve E=-\ve\nabla\varphi$ il campo lo possiamo esprimere in:
 \begin{equation*}[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}\end{equation*}
@@ -949,7 +949,7 @@ Se avvicino un corpo $A$ carico a un $B$ scarico, le cariche su $B$ si ridistrib
 \caption{Induzione elettrostatica}
 \end{figure}
 \subsection{Induzione completa\index{induzione elettrostatica!completa}}
-Consideriamo un conduttore cavo scarico. Poniamo all'interno del conduttore una carica $q$. Applichiamo il teorema di Gauss all'interno del conduttore. Il campo è zero, allora la carica totale interna al condensatore è nulla. Facendo tendere la superficie gaussiana alla superficie interna si scopre che ci deve essere una carica $-q$ sulla parete interna del conduttore che bilancia la carica $q$ interna, in modo che la carica totale interna alla superficie gaussiana sia nulla. Sulla superficie esterna invece ci deve essere una carica $q$ in modo che il corpo sia ancora complessiavamente scarico. La carica indotta è uguale alla carica inducente. Questo fenomeno avviene solo quando il corpo inducente è totalmente racchiuso dal corpo indotto.
+Consideriamo un conduttore cavo scarico. Poniamo all'interno del conduttore una carica $q$. Applichiamo il teorema di Gauss all'interno del conduttore. Il campo è zero, allora la carica totale interna al condensatore è nulla. Facendo tendere la superficie gaussiana alla superficie interna si scopre che ci deve essere una carica $-q$ sulla parete interna del conduttore che bilancia la carica $q$ interna, in modo che la carica totale interna alla superficie gaussiana sia nulla. Sulla superficie esterna invece ci deve essere una carica $q$ in modo che il corpo sia ancora complessivamente scarico. La carica indotta è uguale alla carica inducente. Questo fenomeno avviene solo quando il corpo inducente è totalmente racchiuso dal corpo indotto.
 \begin{Es}[schermo elettrostatico\index{schermo elettrostatico} -- lo smerdatore]
 Im\-ma\-gi\-nia\-mo una fanciulla rinchiusa dentro un conduttore cavo. Adamo, all'esterno, ha molta voglia di sperimentare. Prova a farsi notare avvicinando una carica positiva al conduttore. Sull'esterno si accumula una carica negativa, all'interno positiva. La fanciulla non si accorge di niente essendo il campo elettrico interno invariato. La fanciulla, tutta sola, prova a farsi notare, agitando una carica positiva. Sulla parete interna si crea un accumulo di cariche positive, all'esterno negative, ma Adamo non percepisce nessuna variazione del campo elettrostatico. Il conduttore cavo funziona da schermo elettrostatico.
 \end{Es}
@@ -972,7 +972,7 @@ Dunque $\sigma_R<\sigma_r$ e, per il teorema di Coulomb, in prossimità dei cond
 \section{Capacità elettrica\index{capacità elettrica}}
 Consideriamo un conduttore isolato. Carichiamolo con una carica $q$; il conduttore raggiungerà un certo pontenziale:
 \begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma(\ve r\,')\,\ud a'}{\norm{\ve r-\ve r\,'}}\end{equation*}
-Se aggiugiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si definisce:
+Se aggiungiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si definisce:
 \begin{Def}[capacità di un conduttore]
 \begin{equation}
 C=\frac{q}{V}
@@ -1130,7 +1130,7 @@ Sostituendola nella \eqref{div_E} otteniamo:
 \end{equation}
 Si può anche scrivere:
 \begin{equation*}\nabla^2\varphi=\ve\nabla\cdot\ve\nabla\varphi=\diver\grad\varphi={\frac{\partial^2 \varphi}{\partial x^2}+\frac{\partial^2 \varphi}{\partial y^2}+\frac{\partial^2 \varphi}{\partial z^2}}=-\frac{\rho}{\varepsilon_0}\end{equation*}
-L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conosenza di $\varphi$ $\ve E=-\ve\nabla\varphi$.
+L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conoscenza di $\varphi$ $\ve E=-\ve\nabla\varphi$.
 
 Se la sorgente del campo è data esclusivamente da cariche elettriche in un volume allora l'unica soluzione è 
 \begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'\end{equation*}
@@ -1186,7 +1186,7 @@ Usando il teorema di Coulomb:
 \begin{equation*}\sigma=\varepsilon_0E=\frac{\varphi_1-\varphi_2}{d}\varepsilon_0\end{equation*}
 \end{Es}
 \begin{Es}[sfera in condensatore]
-Sia una sfera conduttrice di raggio $R$ al centro di un condensatore a faccie piane e parallele. Consideriamo un sistema di riferimento centrato nella sfera. Sia $\pm\sigma$ la densità di carica sulle facce a distanza $2d$, allora il campo elettrico esterno, cioè prodotto dal condensatore è 
+Sia una sfera conduttrice di raggio $R$ al centro di un condensatore a facce piane e parallele. Consideriamo un sistema di riferimento centrato nella sfera. Sia $\pm\sigma$ la densità di carica sulle facce a distanza $2d$, allora il campo elettrico esterno, cioè prodotto dal condensatore è 
 \begin{equation*}\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath\end{equation*}
 fissiamo il riferimento del potenziale sulla prima armatura che poniamo a terra. Il potenziale esterno:
 \begin{equation*}\varphi_{E}(x)=-\frac{\sigma}{\varepsilon_0}(x+d)\end{equation*}
@@ -1223,7 +1223,7 @@ essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine d
 Ipotizziamo che gli elettroni liberi si muovano come gli atomi di un gas classico, quindi con urti casuali, ecc\ldots
 In assenza di campo elettrico gli elettroni saranno in agitazione termica con una velocità $v_T$ di agitazione termica:
 \begin{equation*}K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT\end{equation*}
-con $f=3$ gradi di libertà  $k$ costante di Boltzman. Alla temperatura di $\unita{300}\kelvin$:
+con $f=3$ gradi di libertà  $k$ costante di Boltzmann. Alla temperatura di $\unita{300}\kelvin$:
 \begin{equation*}v_T=\sqrt{\frac{3kT}{m}}\simeq \unita{10^5}\metrepersecond\end{equation*}
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
 \begin{equation*}\tau=\frac{l}{v_T}\end{equation*}
@@ -1413,7 +1413,7 @@ Chiamando $\tau=\frac{\sigma}{\varepsilon_0}$ tempo caratteristico, o tempo di r
 Il tempo caratteristico \index{tempo!caratteristico} è quel tempo dopo il quale la densità di carica si è ridotta di $\frac{1}{e}$. Dopo qualche $\tau$ possiamo considerare tutto l'eccesso di carica eliminato.
 
 \section{Generatori\index{generatori}}
-Con un campo elettrostatico si possono creare correnti, come visto nel paragrafo precedente, ma non mantenerle in quanto il fenomeno si esaurisce in pochissimo tempo. I generatori possono mantenere una differenza di potenziale costate tra i poli o morsetti o variarla secondo una funzione, tipicamente sinuisoidale. Nel primo caso si parla di pile\index{pila} o batterie\index{batteria}. In un circuito chiuso:
+Con un campo elettrostatico si possono creare correnti, come visto nel paragrafo precedente, ma non mantenerle in quanto il fenomeno si esaurisce in pochissimo tempo. I generatori possono mantenere una differenza di potenziale costate tra i poli o morsetti o variarla secondo una funzione, tipicamente sinusoidale. Nel primo caso si parla di pile\index{pila} o batterie\index{batteria}. In un circuito chiuso:
 \begin{equation*}\oint_C\ve E\cdot\ud\ve l=0\end{equation*}
 Essendo $\ve J=\sigma \ve E$:
 \begin{equation*}\oint_C\ve J\cdot\ud\ve l=\sigma\oint_C\ve E\cdot\ud\ve l=0\end{equation*}
@@ -1537,7 +1537,7 @@ Deriviamo la prima:
 \begin{equation*}\ddot v_x=-\omega\dot v_y=-\omega^2 v_x\end{equation*}
 e la seconda:
 \begin{equation*}\ddot v_y=\omega\dot v_x=-\omega^2 v_y\end{equation*}
-Abbiamo disaccopiato le equazioni. Una soluzione generale della prima è 
+Abbiamo disaccoppiato le equazioni. Una soluzione generale della prima è 
 \begin{equation*}v_x=A\sin\left(\omega t+\varphi\right)\end{equation*}
 Sostituendo troviamo anche la seconda:
 \begin{equation*}v_y=-A\cos\left(\omega t+\varphi\right)\end{equation*}
@@ -1652,7 +1652,7 @@ Sia $C$ un circuito piano chiuso attraversato da una corrente stazionaria $I$ im
 \begin{equation*}\ve F=\oint_C I\ud\ve l\times\ve B=I\oint_C\ud \ve l\times\ve B=I\left(\oint_C\ud\ve l\right)\times\ve B=0\end{equation*}
 in quanto $0=\oint_C \ud \ve l\neq\oint_C\ud l$. Scegliamo un sistema di riferimento $xyz$ in modo che il piano $xy$ contenga $C$ e la proiezione di $\ve B$ sia parallela all'asse $x$; sia $\theta$ l'angolo che $\ve B$ forma con $z$. Allora:
 \begin{equation*}B_z=B\cos\theta\qquad B_x=B\sin\theta\end{equation*}
-Suddividiamo il circuito in tante striscie infinitesime. Se la corrente di $C$ gira in verso antiorario, anche quella nelle strisce; in questo modo i lati adiacenti si cancellano. Ogni spira a causa del campo magnetico è soggetta ad una forza:
+Suddividiamo il circuito in tante strisce infinitesime. Se la corrente di $C$ gira in verso antiorario, anche quella nelle strisce; in questo modo i lati adiacenti si cancellano. Ogni spira a causa del campo magnetico è soggetta ad una forza:
 \begin{equation*}\ud\ve F=I\ud\ve l\times\ve B\end{equation*}
 \begin{equation*}\norm{\ud\ve F}=I\ud lB_x\sin\alpha=\ud yB\sin\theta I\end{equation*}
 Dunque la forza è massima quando la spira è perpendicolare al campo magnetico.
@@ -1678,7 +1678,7 @@ Il suo comportamento è analogo a quello del dipolo elettrico, con momento di di
 \subsection{Lamina magnetica\index{lamina!magnetica}}
 Suddividiamo una spira di area $S$ in infinitesime spire di area $\ud a$. Ogni spira avrà un momento magnetico $\ud\ve m=I\ud a\ve n$. Per analogia con il dipolo possiamo anche dire che $\ud\ve m=\sigma_m\ud a \ve \delta$ e allora:
 \begin{equation*}\sigma_m=\frac{I}{\delta}\end{equation*}
-rappresenta la densità di carica magnetica sulle faccie di una lamina magnetica con lamine a distanza $\delta$, che a grande distanza è equivalente alla spira iniziale.
+rappresenta la densità di carica magnetica sulle facce di una lamina magnetica con lamine a distanza $\delta$, che a grande distanza è equivalente alla spira iniziale.
 
 \section{Campi magnetici generati da correnti\index{campi magnetici!generati da correnti}}
 Una corrente crea un campo magnetico. Al posto di usare una carica di prova per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo crea un campo magnetico le cui linee di forza si chiudono su se stesso.
@@ -1820,9 +1820,9 @@ Dalla \eqref{pre_ampere} possiamo dire:
 \begin{equation}
 \frac{\ud F}{\ud l}=\frac{\mu_0}{2\pi}\frac{I_1I_2}{d}
 \end{equation}
-e defire l'ampere usando solo quantità meccaniche come la forza e la distanza:
+e definire l'ampere usando solo quantità meccaniche come la forza e la distanza:
 \begin{Def}[ampere]
-l'ampere è quella corrrente che passando tra due fili distanti $\unita{1}\meter$ produce una forza per unità di lunghezza pari a \unita{2\times 10^{-7}}\newton.
+l'ampere è quella corrente che passando tra due fili distanti $\unita{1}\meter$ produce una forza per unità di lunghezza pari a \unita{2\times 10^{-7}}\newton.
 \end{Def}
 
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
@@ -1912,7 +1912,7 @@ dove abbiamo battezzato $\ve r:=(\ve r-\ve r\,')$ che quindi indica il vettore c
 \ud\varphi_m=-\frac{I}{4\pi}\oint_C\frac{\ve r\cdot(\ud \ve s\times\ud\ve l)}{r^3}
 \label{variazione_campo_magnetico02}
 \end{equation}
-Tutto ciò lo possiamo ottenere mantenendo $P$ fermo e spostando la spira di $-\ud\ve s$ e la variazione del campo magnetico sarebbe ancora \eqref{variazione_campo_magnetico02}. Durante questo spostemento i vettori $\ud\ve l$ e $\ud \ve s$ descrivono un'area $\ud \ve a=-\ud\ve s\times\ud\ve l$ che compare nella \eqref{variazione_campo_magnetico02} e punta nel semispazio di $P$. Vogliamo dimostrare che l'integrale:
+Tutto ciò lo possiamo ottenere mantenendo $P$ fermo e spostando la spira di $-\ud\ve s$ e la variazione del campo magnetico sarebbe ancora \eqref{variazione_campo_magnetico02}. Durante questo spostamento i vettori $\ud\ve l$ e $\ud \ve s$ descrivono un'area $\ud \ve a=-\ud\ve s\times\ud\ve l$ che compare nella \eqref{variazione_campo_magnetico02} e punta nel semispazio di $P$. Vogliamo dimostrare che l'integrale:
 \begin{equation*}
 -\oint_C\frac{\ve r\cdot(\ud \ve s\times\ud\ve l)}{r^3}
 \end{equation*}
@@ -1963,7 +1963,7 @@ in quando il rotore di un gradiente è sempre nullo. Tra le tante possibili scel
 \diver\ve A=0
 \label{gauge_magnetos}
 \end{equation}
-queto è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, ma allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
+questo è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, ma allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
 \begin{equation}
 \rot\ve B=\mu_0\ve J
 \end{equation}
@@ -2010,7 +2010,7 @@ con $\theta$ l'angolo tra $\ve r'$ e l'asse $y$. Consideriamo $r\gg r'$, conside
 \begin{equation}
 \norm{\ve r-\ve r'}=\frac{1}{r}\left[1+\frac{r' y\cos\theta+r' x\sin\theta}{r^2}+\ldots\right]
 \end{equation}
-Tenentdo conto che:
+Tenendo conto che:
 \begin{equation}
 \ud \ve l'=-\left(r'\ud\theta\cos\theta\ver\imath+r'\ud\theta\sin\theta\ver\jmath\right)
 \end{equation}
@@ -2029,7 +2029,7 @@ che si riassume, tenendo conto che l'area è $A=\pi r'^2$:
 
 
 \chapter{Dielettrici\index{dielettrici}}
-Se vogliamo calcolare esattamente il campo elettrico a livello microscopico \index{campo!elettrico!microscopico}$\ve\varepsilon$ all'interno della matateria quello che dovremo conoscere è la distribuzione di carica microscopica. Questa distribuzione di carica è generata dagli elettroni e dai protoni. La soluzione delle equazioni di Maxwell per l'elettrostatica è:
+Se vogliamo calcolare esattamente il campo elettrico a livello microscopico \index{campo!elettrico!microscopico}$\ve\varepsilon$ all'interno della materia quello che dovremo conoscere è la distribuzione di carica microscopica. Questa distribuzione di carica è generata dagli elettroni e dai protoni. La soluzione delle equazioni di Maxwell per l'elettrostatica è:
 \begin{equation}
  \ve\varepsilon(\ve x) = \frac{1}{\giorgi}\int \rho(\ve x')\frac{\ve x -\ve x'}{\norm{\ve x-\ve x'}^3}\,\ud V'
 \end{equation}
@@ -2088,17 +2088,17 @@ Consideriamo le nostre molecole polarizzate come dei dipoli, e il dielettrico co
 \includegraphics[scale=0.3]{immagini/fisica2/distr_dipoli}
 \end{figure}
 \subsection{Momento atomico\index{momento!atomico}}
-Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distaza $a\simeq \unita{0.5}\angstrom$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
+Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distanza $a\simeq \unita{0.5}\angstrom$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
 
-Se consideriamo la meccanica quantistica attorno al nucleo l'elettrone assomiglia a una distribuzione negatva di raggio $a$. Essendo la distribuzione a simmetria sferica, tutti gli atomi non sottoposti a campi elettrici non hanno momento di dipolo essendo i centri di cariche positive e negative coincidenti.
-\subsection{Molecole polari\index{molecole!polari}\index{molecole!apolari}}
+Se consideriamo la meccanica quantistica attorno al nucleo l'elettrone assomiglia a una distribuzione negativa di raggio $a$. Essendo la distribuzione a simmetria sferica, tutti gli atomi non sottoposti a campi elettrici non hanno momento di dipolo essendo i centri di cariche positive e negative coincidenti.
+\subsection{Molecole polari\index{molecole!polari}\index{molecole!polari}}
 A seconda della composizione e anche della geometria che ne deriva le molecole possono essere polari o apolari. Per esempio O$_2$, H$_2$, CO$_2$ sono apolari, mentre H$_2$O, HCl, NaCl presentano un momento di dipolo.
 
 Se consideriamo un campione abbastanza numeroso di molecole polari la media dei momenti di dipolo sarà nulla, essendo l'orientazione dei singoli dipoli casuale.
 \subsection{Polarizzazione per orientamento\index{polarizzazione!per orientamento}}
 Un campo elettrico esterno su una molecola polare tenderà ad orientare il suo momento di dipolo parallelamente al campo. Questo non vuol dire che tutte le molecole sono orientate siano orientate parallelamente al campo elettrico, in quanto il movimento che prevale è quello di agitazione termica, che mediamente è nullo. Se lo eliminiamo vedremo i momenti di dipolo che oscillano attorno alla direzione parallela al campo elettrico esterno. In generale si noterà che ogni singolo dipolo avrà mediamente una componente non nulla nella direzione del campo elettrico. La molecola è polarizzata per orientamento.
 \subsection{Polarizzazione per deformazione\index{polarizzazione!per deformazione}}
-Se mettiamo un atomo, o una molecola apolare, in un campo elettrico risulterà deformato: il centro di carica positiva e negativa non coincederanno più, si è creato un momento di dipolo indotto\index{momento!di dipolo!indotto}, il dielettrico è polarizzato per deformazione. Anche le molecole polari subiscono questo effetto, ma è di gran lunga inferiore alla polarizzazione per orientamento.
+Se mettiamo un atomo, o una molecola apolare, in un campo elettrico risulterà deformato: il centro di carica positiva e negativa non coincideranno più, si è creato un momento di dipolo indotto\index{momento!di dipolo!indotto}, il dielettrico è polarizzato per deformazione. Anche le molecole polari subiscono questo effetto, ma è di gran lunga inferiore alla polarizzazione per orientamento.
 \subsection{Vettore polarizzazione elettrica}
 Consideriamo un elemento $\Delta V$ di un dielettrico polarizzato. Questo presenterà un momento di dipolo:
 \begin{equation*}
@@ -2130,7 +2130,7 @@ Il potenziale generato da tutto il dielettrico di volume $V$ sarà
 \varphi(\ve r)=\int_V\ud\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\ve P(\ve r\,')\cdot\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\ud v'
 \label{potenziale_dielettrico03}
 \end{equation}
-Possiamo introddure il gradiente, rispetto alle coordinate primate, usando la relazione:
+Possiamo introdurre il gradiente, rispetto alle coordinate primate, usando la relazione:
 \begin{equation}
 \ve\nabla'\frac{1}{\norm{\ve r-\ve r\,'}}=\frac{\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \end{equation}
@@ -2203,13 +2203,13 @@ All'interno di un dielettrico il campo elettrico varia da punto a punto in modo 
 \begin{enumerate}
 \item{Si prende il valore medio nel tempo e nello spazio del campo elettrico effettivamente esistente definito come la forza su una carica di prova e la sua carica;}
 \item{Si considera la media del campo elettrico generato da tutte le molecole polarizzate e dalle cariche libere su una singola molecola interna al dielettrico, in parole povere $\ve E=\ve E_{\text{ext}}+\frac{\ve{P}}{3\varepsilon_0}$;}
-\item{Si immagina una cavitàaghiforme all'interno del dielettrico in cui ci sia il vuoto. Il campo elettrico nel dielettrico sarà il campo elettrico nella cavitàindex{cavitàaghiforme};}
+\item{Si immagina una cavità aghiforme all'interno del dielettrico in cui ci sia il vuoto. Il campo elettrico nel dielettrico sarà il campo elettrico nella cavità \index{cavità!aghiforme};}
 \end{enumerate}
 Anche all'interno del dielettrico deve valere:
 \begin{equation*}
 \oint_C \ve E\cdot\ud\ve l=0
 \end{equation*}
-infatti il dielettrico può essere visto come un insieme di cariche nel vuoto ferme. Scaviamo una cavitàcilintrica molto sottile, aghiforme di volume $V_0$ e superficie $S_0$ all'interno del nostro dielettrico di volume $V$ e superficie $S$ polatizzato con vettore di polarizazzione $\ve P(\ve r)$. All'interno della cavitàci sia il vuoto e la sua presenza non alteri la polarizzazione del dielettrico. Calcoliamo la circuitazione del campo elettrico lungo un circuito rettangolare con i lati maggiori paralleli all'asse del cilindro, uno all'interno della cavità l'altro fuori. Il campo all'interno della cavitàsia $\ve E_0$, nel dielettrico $\ve E_d$:
+infatti il dielettrico può essere visto come un insieme di cariche nel vuoto ferme. Scaviamo una cavità cilintrica molto sottile, aghiforme di volume $V_0$ e superficie $S_0$ all'interno del nostro dielettrico di volume $V$ e superficie $S$ polatizzato con vettore di polarizazzione $\ve P(\ve r)$. All'interno della cavità ci sia il vuoto e la sua presenza non alteri la polarizzazione del dielettrico. Calcoliamo la circuitazione del campo elettrico lungo un circuito rettangolare con i lati maggiori paralleli all'asse del cilindro, uno all'interno della cavità l'altro fuori. Il campo all'interno della cavità sia $\ve E_0$, nel dielettrico $\ve E_d$:
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.4]{immagini/fisica2/aghiforme}
@@ -2226,11 +2226,11 @@ Essendo $\Delta l_1$ uguale a $\Delta l_2$:
 E_{0\tan}=E_{d\tan}
 \label{E_tangente10}
 \end{equation}
-Cioàla componente parallela alla superficie del cilindro del campo elettrico interno ed esterno alla cavitàin prossimitàdella superficie sono uguali, quindi la componente parallela varia con continuità Se ora scegliamo una cavitàcilindrica con asse parallela al campo elettrico nel dielettrico otteniamo che $E_d=E_{d\tan}$. Considiriamo anche un materiale isotropo, allora la polarizzazione è parallela al campo elettrico esterno. Concludiamo che $E_d=E_{0\tan}$. Si può dimostrare che con tutte queste ipotesi:
+Cioè la componente parallela alla superficie del cilindro del campo elettrico interno ed esterno alla cavità in prossimità della superficie sono uguali, quindi la componente parallela varia con continuità. Se ora scegliamo una cavità cilindrica con asse parallela al campo elettrico nel dielettrico otteniamo che $E_d=E_{d\tan}$. Considiriamo anche un materiale isotropo, allora la polarizzazione è parallela al campo elettrico esterno. Concludiamo che $E_d=E_{0\tan}$. Si può dimostrare che con tutte queste ipotesi:
 \begin{equation}
 \ve E_0=\ve E_d
 \end{equation}
-Allora tutto il campo elettrico varia con continuità ed essendo la cavitàuna regione esterna al dielettrico e vuota possiamo usare la formula per il campo elettrico esterno generato da un dielettrico polarizzato \eqref{campo_elettrico_esterno_dielettrico}:
+Allora tutto il campo elettrico varia con continuità ed essendo la cavità una regione esterna al dielettrico e vuota possiamo usare la formula per il campo elettrico esterno generato da un dielettrico polarizzato \eqref{campo_elettrico_esterno_dielettrico}:
 \begin{equation}
 \ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma_p(\ve r\,')(\ve r-\ve r\,')}{\norm{\ve r-\ve r\,'}^3}\,\ud a'+\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho_p(\ve r\,')(\ve r-\ve r\,')}{\norm{\ve r-\ve r\,'}^3}\,\ud v'
 \end{equation}
@@ -2242,9 +2242,9 @@ S=S_\text{cavità} +S_\text{dielettrico}\\
 V=V_\text{dielettrico}-V_\text{cavità}
 \end{gather}
 \end{subequations}
-Dove $S_\text{dielettrico}$ e $V_\text{dielettrico}$ sono la superficie e il volume del dielettrico senza la cavità Se però sciegliamo la cavitàcilindrica con asse parallelo al campo nel dielettrico isotropo sulla superficie laterale sarà parallelo e quindi le cariche superficiali di polarizzazione $\sigma_p=\ve P\cdot\ve n$ si disporranno solo sulle basi del cilindro, ma queste tendono a zero. Allora le cariche di polarizzazione si dispongono solo sulla superficie esterna del dielettrico, il contributo delle cariche di polarizzazione sulla superficie della cavitàànullo, allora nell'integrale potremo usare $S_\text{dielettrico}$. Per le densità volumetriche di polarizzazione basta considerare che il volume della cavitàtende a zero e quindi sono trascurabili, $V_\text{dielettrico}$ può essere usato nell'integrale. Allora l'espressione per il campo elettrico all'interno del dielettrico è uguale all'espressione per il campo esterno \eqref{campo_elettrico_esterno_dielettrico} nell'ipotesi di cavitàaghiforme orientata come il campo nel dielettrico e dielettrico isotropo.
+Dove $S_\text{dielettrico}$ e $V_\text{dielettrico}$ sono la superficie e il volume del dielettrico senza la cavità. Se però sciegliamo la cavità cilindrica con asse parallelo al campo nel dielettrico isotropo sulla superficie laterale sarà parallelo e quindi le cariche superficiali di polarizzazione $\sigma_p=\ve P\cdot\ve n$ si disporranno solo sulle basi del cilindro, ma queste tendono a zero. Allora le cariche di polarizzazione si dispongono solo sulla superficie esterna del dielettrico, il contributo delle cariche di polarizzazione sulla superficie della cavità è nullo, allora nell'integrale potremo usare $S_\text{dielettrico}$. Per le densità volumetriche di polarizzazione basta considerare che il volume della cavità tende a zero e quindi sono trascurabili, $V_\text{dielettrico}$ può essere usato nell'integrale. Allora l'espressione per il campo elettrico all'interno del dielettrico è uguale all'espressione per il campo esterno \eqref{campo_elettrico_esterno_dielettrico} nell'ipotesi di cavità aghiforme orientata come il campo nel dielettrico e dielettrico isotropo.
 
-In tutto il ragionamento c'è un grosso problema che ci costringeràa introdurre delle relazioni che tengono conto della natura del materiale: le cariche di polarizzazione che compaiono nell'espressione per il campo elettrico interno o esterno al dielettrico \eqref{campo_elettrico_esterno_dielettrico} sono in funzione del vettore di polarizzazione $\ve P(\ve r)$ il quale dipende oltre che dal campo elettrico esterno che causa la polarizzazione, ma anche dal campo elettrico creato dalla polarizzazione stessa. Il problema è ciclico:
+In tutto il ragionamento c'è un grosso problema che ci costringerà a introdurre delle relazioni che tengono conto della natura del materiale: le cariche di polarizzazione che compaiono nell'espressione per il campo elettrico interno o esterno al dielettrico \eqref{campo_elettrico_esterno_dielettrico} sono in funzione del vettore di polarizzazione $\ve P(\ve r)$ il quale dipende oltre che dal campo elettrico esterno che causa la polarizzazione, ma anche dal campo elettrico creato dalla polarizzazione stessa. Il problema è ciclico:
 \begin{equation*}
 \ve E_\text{pol}\left(\sigma_p(\ve P(\ve E_\text{pol},\ve E_\text{ext}),\rho_p(\ve P(\ve E_\text{pol},\ve E_\text{ext}))\right)
 \end{equation*}
@@ -2317,7 +2317,7 @@ Per chiudere il problema, cioè determinare il campo elettrico serve una nuova e
 \begin{equation}
 \ve P(\ve r)=\chi_e\ve E(\ve r)
 \end{equation}
-Dove $\chi_e$ è la suscettivitàdel dielettrico\index{suscettivitàdielettrica}.
+Dove $\chi_e$ è la suscettività del dielettrico\index{suscettività dielettrica}.
 \begin{equation*}
 [\chi_e] = \farad\reciprocal\meter
 \end{equation*}
@@ -2333,7 +2333,7 @@ Se sostituiamo nel vettore induzione elettrica \eqref{vettore_induzione_elettric
 \varepsilon=\left(\varepsilon_0+\chi_e\right)
 \end{equation}
 \end{Def}
-chiamata anche permittivitàdielettrica\index{permittivitàelettrica}
+chiamata anche permittività dielettrica\index{permittività elettrica}
 usando questa definizione la \eqref{induzione_elettrica16} diventa:
 \begin{equation}
 \ve D=\varepsilon\ve E
@@ -2343,7 +2343,7 @@ usando questa definizione la \eqref{induzione_elettrica16} diventa:
 \varepsilon_r=\frac{\varepsilon}{\varepsilon_0}=\left(1+\frac{\chi_e}{\varepsilon_0}\right)
 \end{equation}
 \end{Def}
-chiamata anche permittivitàdielettrica relativa del mezzo rispetto al vuoto. \`E uno scalare adimensionale e per il vuoto $\varepsilon_r=1$, per i materiali è maggliore di $1$. Si ha allora:
+chiamata anche permittività dielettrica relativa del mezzo rispetto al vuoto. \`E uno scalare adimensionale e per il vuoto $\varepsilon_r=1$, per i materiali è maggliore di $1$. Si ha allora:
 \begin{equation}
 \varepsilon=\varepsilon_0\varepsilon_r
 \end{equation}
@@ -2406,7 +2406,7 @@ D_{1n}\ud A_1-D_{2n}\ud A_2=\sigma\ud A
 D_{1n}-D_{2n}=\sigma
 \label{D_normale02}
 \end{equation}
-Se non c'è carica sulla superficie di separazione allora le due componenti normali sono uguali e $D_n$ varia con continuità
+Se non c'è carica sulla superficie di separazione allora le due componenti normali sono uguali e $D_n$ varia con continuità.
 \subsection{$\vec E$ tangente}
 \begin{figure}[htbp]
 \centering
@@ -2428,24 +2428,24 @@ Essendo $\ud l_1$, $\ud l_2$ infinitesimi $\ve E$ si mantiene costante su di ess
 \begin{equation}
 \ve E_{1\tan}=\ve E_{2\tan}
 \end{equation}
-essendo $\ud l_1=\ud l_2$. La componente tangente varia con continuità
+essendo $\ud l_1=\ud l_2$. La componente tangente varia con continuità.
 
 Riprendiamo l'equazione sulla componente normale di $\ve D$ \eqref{D_normale02} nell'ipotesi che sulla superficie non ci sia carica libera:
 \begin{equation}
 D_{1n}=D_{2n}
 \end{equation}
-cioè la componente di $\ve D$ normale alla superficie di separazione varia con continuità Usando:
+cioè la componente di $\ve D$ normale alla superficie di separazione varia con continuità. Usando:
 \begin{equation}
 \ve D=\varepsilon\ve E=\varepsilon_0\varepsilon_r \ve E
 \end{equation}
 \begin{equation}
 \varepsilon_0\varepsilon_{r1} E_{1n}=\varepsilon_0\varepsilon_{r2} E_{2n}
 \end{equation}
-quindi la componente normale di $\ve E$ non varia con continuità
+quindi la componente normale di $\ve E$ non varia con continuità.
 \begin{equation}
 \frac{E_{1n}}{E_{2n}}=\frac{\varepsilon_{r2}}{\varepsilon_{r1}}
 \end{equation}
-In modo analogo si può mostrare che anche la componente di $\ve D$ tangente subisce discontinuità
+In modo analogo si può mostrare che anche la componente di $\ve D$ tangente subisce discontinuità.
 \begin{equation}
 \frac{D_{1\tan}}{D_{2\tan}}=\frac{\varepsilon_{r2}}{\varepsilon_{r1}}
 \end{equation}
@@ -2495,7 +2495,7 @@ a questo va aggiunto il momento magnetico di dipolo intrinseco o di spin dovuto 
 \begin{equation}
 \ve m=q_m\ve\delta
 \end{equation}
-\begin{Def}[intensitàdi magnetizzazione]
+\begin{Def}[intensità di magnetizzazione]
 \begin{equation}
 \ve M=\frac{\sum_i\ve m_i}{\Delta V}
 \label{intensita_magnetizzazione}
@@ -2516,7 +2516,7 @@ I materiali paramagnetici aumentano il campo magnetico in quanto i dipoli magnet
 \left[M\right]=\ampere\per\meter
 \end{equation*}
 \section{Approccio teorico}
-Un materiale magnetizzato può essere studiato facendo ricorso alle correnti di magnetizzazione oppure usando i dipoli magnetici. Usando il secondo approccio non si fa altro che rifare quello che è stato fatto per i dielettrici, cioè trovare delle densità di carica fittizie che interpretino i fenomeni. Usando i dipoli si useràil potenziale scalare magnetico, mentre usando le correnti di magnetizzazione il potenziale scalare magnetico.
+Un materiale magnetizzato può essere studiato facendo ricorso alle correnti di magnetizzazione oppure usando i dipoli magnetici. Usando il secondo approccio non si fa altro che rifare quello che è stato fatto per i dielettrici, cioè trovare delle densità di carica fittizie che interpretino i fenomeni. Usando i dipoli si userà il potenziale scalare magnetico, mentre usando le correnti di magnetizzazione il potenziale scalare magnetico.
 \begin{center}
 $
 \xymatrix{
@@ -2535,7 +2535,7 @@ Se cosideriamo un materiale magnetico caratterizzato da un vettore magnetizzazio
 
 Consideriamo una magnetizzazione non uniforme. In questo caso le correnti elementari adiacenti non si annullano totalmente, la risultante è una corrente macroscopica all'interno del materiale, oltre alla corrente superficiale.
 
-Consideriamo il caso generale di un materiale non uniformemente magnetizzato. Consideriamo due parallelepipedi infinitesimi di volume $\ud V_1$ e $\ud V_2$, di lati $\ud x$, $\ud y$, $\ud z$, adiacenti lungo la direzione $y$. Se nel primo volumetto c'è una magnetizzazoine $\ve M(x,y,z)$ nel secondo sarà 
+Consideriamo il caso generale di un materiale non uniformemente magnetizzato. Consideriamo due parallelepipedi infinitesimi di volume $\ud V_1$ e $\ud V_2$, di lati $\ud x$, $\ud y$, $\ud z$, adiacenti lungo la direzione $y$. Se nel primo volumetto c'è una magnetizzazoine $\ve M(x,y,z)$ nel secondo sarà:
 \begin{equation}
 \ve M(x,y+\ud y,z)=\ve M+\frac{\partial\ve M}{\partial y}\ud y
 \end{equation}
@@ -2656,7 +2656,7 @@ tornando al vettore potenziale:
 \end{split}
 \end{equation}
 avendo usato la \eqref{correnti_superficiali} e la \eqref{99}. Da qui si potrebbe trovare $\ve B$ con la relazione $B=\rot\ve A$.
-\section{Vettore intensitàmagnetica $\vec H$}
+\section{Vettore intensità magnetica $\vec H$}
 Dal teorema di Ampere avevamo che:
 \begin{equation}
 \rot\ve B=\mu_0\ve J
@@ -2670,7 +2670,7 @@ portando tutto in un unico rotore (il rotore è un operatore lineare):
 \rot\left(\frac{\ve B}{\mu_0}-\ve M\right)=\ve J
 \label{rotB99}
 \end{equation}
-\begin{Def}[vettore intensitàmagnetica\index{vettore!intensitàmagnetica}]
+\begin{Def}[vettore intensità magnetica\index{vettore!intensità magnetica}]
 \begin{equation}
 \ve H=\left(\frac{\ve B}{\mu_0}-\ve M\right)
 \end{equation}
@@ -2751,7 +2751,7 @@ La potenza del generatore $V_0I$ in parte è dissipata per effetto Joule $RI^2$ 
 \begin{equation}
 V_0I = RI^2+Fv
 \end{equation}
-Se la sbarra fosse fissa l'ultimo addendo sarebbe nullo e l'intensitàdella corrente sarebbe $\frac{V}{R}=I_0$, ora invece:
+Se la sbarra fosse fissa l'ultimo addendo sarebbe nullo e l'intensità della corrente sarebbe $\frac{V}{R}=I_0$, ora invece:
 \begin{equation}
 \frac{V_0}{R}=I_0=I+\frac{Fv}{I}\frac{1}{R}
 \end{equation}
@@ -2759,7 +2759,7 @@ La corrente che circola è inferiore a $I_0$ di:
 \begin{equation}
 I_0-I=\frac{Fv}{I}\frac{1}{R}
 \end{equation}
-àcome se nel circuito oltre che alla forze elettromotrice $V_0$ agisse una forza elettromotrice $V$ in senso opposto:
+è come se nel circuito oltre che alla forze elettromotrice $V_0$ agisse una forza elettromotrice $V$ in senso opposto:
 \begin{equation}
 V=-\frac{Fv}{I}=-lBv=-lB\frac{\ud s}{\ud t}=-\frac{\ud \phi(\ve B)}{\ud t}
 \end{equation}
@@ -2853,7 +2853,7 @@ L=\frac{\mu_0}{2\pi}\log\frac{b}{a}
 \index{autoinduttanza|)}
 \index{mutua induttanza|(}
 \section{Mutua induttanza}
-Consideriamo $n$ circuiti separati percorsi da correnti. Il circuito $j$ produrràun campo magnetico $\ve B_j$ il quale concateneràil cirtuito $i$ creando un flusso: $\Phi_{ij}$ cioè il flusso sul circuito $i$--esimo creato dal circuito $j$--esimo. Il flusso totale sul circuito $i$ sarà 
+Consideriamo $n$ circuiti separati percorsi da correnti. Il circuito $j$ produrrà un campo magnetico $\ve B_j$ il quale concatenerà il cirtuito $i$ creando un flusso: $\Phi_{ij}$ cioè il flusso sul circuito $i$--esimo creato dal circuito $j$--esimo. Il flusso totale sul circuito $i$ sarà:
 \begin{equation}
 \Phi_i=\sum_{j=1}^n\Phi_{ij}
 \end{equation}
@@ -2872,7 +2872,7 @@ Naturalmente
 M_{ii}=L_i
 \end{equation}
 \subsection{Simmetria di $M$}
-La matrice $M=M_{ij}$ è simmetrica. Dobbiamo dimostrare che $M_{ij}=M_{ji}$. Limitiamoci a considerare due circuiti e dimostriamo $M_{21}=M_{12}$. Il primo circuito genereràun flusso sul secondo:
+La matrice $M=M_{ij}$ è simmetrica. Dobbiamo dimostrare che $M_{ij}=M_{ji}$. Limitiamoci a considerare due circuiti e dimostriamo $M_{21}=M_{12}$. Il primo circuito genererà un flusso sul secondo:
 \begin{equation}
 \Phi_2(\ve B_1)=\int_{S_2}\int_{C_1}I_1\frac{\ud l_1\times\left(\ve r_2-\ve r_1\right)}{\norm{\ve r_2-\ve r_1}^3}\cdot n_2\,\ud a_2
 \end{equation}
@@ -2964,7 +2964,7 @@ Una maglia è un percorso chiuso formato da elementi della rete
 \end{Def}
 Nel risolvere i circuiti, cioè determinare i valori delle correnti che attraversano i componenti o nel determinare la caduta di potenziale su di essi, si usano le leggi di Kirchhoff\index{Kirchhoff}:
 \begin{legge}[legge dei nodi]
-La somma delle intensitàdelle correnti entranti in un nodo è uguale alla somma delle intensitàdelle correnti uscenti
+La somma delle intensità delle correnti entranti in un nodo è uguale alla somma delle intensità delle correnti uscenti
 \end{legge}
 \begin{legge}[legge delle maglie]
 La somma col segno delle forze elettromotrici in un maglia è uguale alla somma delle cadute di tensione di tutti gli elementi della maglia
@@ -2981,7 +2981,7 @@ essendo $\Delta V=\frac{q}{C}$:
 RI+L\frac{\ud I}{\ud t}-\frac{q}{C}=0
 \label{LRC_con_q0}
 \end{equation}
-derivando e tenendo conto che $I=-\frac{\ud q}{\ud t}$ poichàla corrente positiva si genera per diminuzione di $q$ sul condensatore:
+derivando e tenendo conto che $I=-\frac{\ud q}{\ud t}$ poichà la corrente positiva si genera per diminuzione di $q$ sul condensatore:
 \begin{equation}
 L\frac{\ud^2I}{\ud t^2}+R\frac{\ud I}{\ud t}+\frac{I}{C}=0
 \end{equation}
@@ -3061,7 +3061,7 @@ e si parla di sottosmorzamento. La soluzione generale \eqref{soluzione_generale_
 \begin{equation}
 I(t)=I_1e^{-(\gamma-j \omega)t}+I_2e^{-(\gamma+j \omega)t}
 \end{equation}
-con $\omega=\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}$. Imponiamo $I(0)=0$ che ci fornirà$I_1=-I_2$ e la soluzione diventa:
+con $\omega=\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}$. Imponiamo $I(0)=0$ che ci fornirà $I_1=-I_2$ e la soluzione diventa:
 \begin{equation}
 I(t)=I_2\left(e^{-(\gamma+j\omega)t}-e^{-(\gamma-j\omega)t}\right)
 \end{equation}
@@ -3073,7 +3073,7 @@ e la soluzione
 \begin{equation}
 I(t)=\frac{q_0\omega_0^2}{2\omega}j\left(e^{-(\gamma+j\omega)t}-e^{-(\gamma-j\omega)t}\right)=\frac{q_0\omega_0^2}{2\omega}j\left(e^{-j\omega t}-e^{j\omega t}\right)e^{-\gamma t}
 \end{equation}
-poichà
+poiché
 \begin{multline}
 j\left[e^{-j\omega t}-e^{j\omega t}\right]=j\left[\left(\cos(-\omega t)+j\sin(-\omega
 t)\right)-\left(\cos(\omega t)+j\sin(\omega t)\right)\right]\\
@@ -3112,7 +3112,7 @@ I(t)=q_0e^{-\gamma t}\left(\gamma\cos(\omega t)+\omega\sin(\omega t)\right)
 
 
 \section{RLC serie altenata}
-Consideriamo un circuito RLC in alternata. Il genaratore forniràai suoi capi una tensione:
+Consideriamo un circuito RLC in alternata. Il genaratore fornirà ai suoi capi una tensione:
 \begin{equation}
 V(t)=V_0\cos\left(\omega t\right)=\Re(V_0 e^{j\omega t})
 \end{equation}
@@ -3245,7 +3245,7 @@ Introduciamo la grandezza coefficiente di smorzamento $\gamma$:
 \begin{equation}
 \gamma = \frac{R}{2L}
 \end{equation}
-e il fattore di merito o di qualità$Q_0$:
+e il fattore di merito o di qualità $Q_0$:
 \begin{equation}
 Q_0 = {\omega_0L}{R}=\frac{\omega_0}{2\gamma}
 \end{equation}
@@ -3280,7 +3280,7 @@ V_{0C}\simeq I_0|Z_C|=\frac{V_0}{\omega L}\frac{1}{\omega C}=\frac{1}{\omega^2 L
 \end{gather}
 \end{itemize}
 \subsubsection{Ampiezza di banda}
-La frequenza $\omega_0$ è un punto, che essendo un punto è impossibile da raggiungere. Quello che vogliamo è che il massimo della caduta di potenziale sulla resistenza sia ``largo'' in modo tale che se la nostra frequenza non è precisamente $\omega_0$ abbiamo lo stesso risonanza. Scriviamo l'intensitàdi corrente in funzione di $Q_0=\frac{\omega_0L}{R}$:
+La frequenza $\omega_0$ è un punto, che essendo un punto è impossibile da raggiungere. Quello che vogliamo è che il massimo della caduta di potenziale sulla resistenza sia ``largo'' in modo tale che se la nostra frequenza non è precisamente $\omega_0$ abbiamo lo stesso risonanza. Scriviamo l'intensità di corrente in funzione di $Q_0=\frac{\omega_0L}{R}$:
 \begin{equation}
 I_0=\frac{V_0}{|Z|}=\frac{\frac{V_0}{R}}{\sqrt{1+Q_0^2\left(\frac{\omega^2-\omega_0^2}{\omega\omega_0}\right)^2}}
 \end{equation}
@@ -3320,7 +3320,7 @@ derivando:
 \section{Cavi coassiali}
 Il cavo coassiale\index{cavo!coasiale} è costituito da filo conduttore coassiale con un conduttore cilindrico cavo. Tra i due conduttori è posto del dielettrico.
 \subsection{Propagazione dell'onda}
-Sia $a$ il raggio del conduttore interno, $b$ quello del dielettrico con permeabilitàmagnetica trascurabile ($\mu_r\simeq 1$) e permittivitàdielettrica relativa $\epsilon_r$. Lavoriamo con l'approssimazione di cavo infinito e orientiamo il cavo in modo che abbia l'asse $z$ coassiale. Consideriamo:
+Sia $a$ il raggio del conduttore interno, $b$ quello del dielettrico con permeabilità magnetica trascurabile ($\mu_r\simeq 1$) e permittività dielettrica relativa $\epsilon_r$. Lavoriamo con l'approssimazione di cavo infinito e orientiamo il cavo in modo che abbia l'asse $z$ coassiale. Consideriamo:
 \begin{equation}
 \diver\ve D=\rho
 \end{equation}
@@ -3417,7 +3417,7 @@ e la soluzione è del tipo:
 \lambda(z,t)=\psi(z\pm vt)
 \end{equation}
 
-Ipotizziamo che all'estremitàdel cavo sia applicata una differenza di potenziale $V$:
+Ipotizziamo che all'estremità del cavo sia applicata una differenza di potenziale $V$:
 \begin{equation}
 V = \varphi(t)
 \end{equation}
@@ -3425,7 +3425,7 @@ fissando $z$ la differenza di potenziale tra il coduttore esterno e quello inter
 \begin{equation}
 V(z,t)=\int_a^b\ve E\cdot\ud\ve r=\int_a^b\frac{1}{\varepsilon}\ve D\cdot\ud\ve r=\int_a^b\frac{\lambda(z,t)}{2\varepsilon\pi r}\,\ud r=\frac{\lambda(z,t)}{2\pi\varepsilon}\log\frac{b}{a}
 \end{equation}
-la quantità $\frac{2\pi\varepsilon}{\log\frac{b}{a}}$ è la capacità$C$ per unità di lunghezza di un condensatore cilindrico, come un questo caso.
+la quantità $\frac{2\pi\varepsilon}{\log\frac{b}{a}}$ è la capacità $C$ per unità di lunghezza di un condensatore cilindrico, come un questo caso.
 \begin{equation}
 V(z,t)=\frac{\lambda(z,t)}{C}
 \end{equation}
@@ -3433,7 +3433,7 @@ quindi anche la differenza di potenziale è un'onda. Inoltre anche la corrente $
 \subsection{Rappresentazione a elementi concetrati}
 Si può dimostrare che un cavo coassiale si comporta come un circuito formato dal ripertersi di una certa combinazione di elementi concentrati.
 
-La resistenza $R$ per unità di lunghezza tiene conto della perdita di tensione sul cavo. La capacità$C$ per unità di lunghezza è quella del cilindro, usata nel paragrafo precedente. La conduttanza $G$ tiene conto delle perdite sul condensatore attraverso il dielettrico.
+La resistenza $R$ per unità di lunghezza tiene conto della perdita di tensione sul cavo. La capacità $C$ per unità di lunghezza è quella del cilindro, usata nel paragrafo precedente. La conduttanza $G$ tiene conto delle perdite sul condensatore attraverso il dielettrico.
 \subsection{Impedenza caratteristica}
 L'impedenza caratteristica $Z_0$ è quell'impedenza tale che inserita come carico risulta uguale all'impedenza della linea.
 \begin{equation}
@@ -3499,7 +3499,7 @@ vediamo se è compatibile con le equazioni di Maxwell.
 \begin{equation}
 \diver\ve J=\diver\rot\ve H=0\neq -\frac{\partial\rho}{\partial t}
 \end{equation}
-perché la divergenza di un rotore è sempre nulla. L'equazione di continuitànon è compatibile con le nostre equazioni. \`E compatibile se e solo se $\diver\ve J=0$ cioè se $\frac{\partial\rho}{\partial t}=0$ ovvero se la corrente è stazionaria. Concludiamo che le relazioni fino ad ora esposte valgono solo nel caso stazionario.
+perché la divergenza di un rotore è sempre nulla. L'equazione di continuità non è compatibile con le nostre equazioni. \`E compatibile se e solo se $\diver\ve J=0$ cioè se $\frac{\partial\rho}{\partial t}=0$ ovvero se la corrente è stazionaria. Concludiamo che le relazioni fino ad ora esposte valgono solo nel caso stazionario.
 \section{Corrente di spostamento}
 \begin{figure}[htbp]
 \centering
@@ -3513,7 +3513,7 @@ perché concatena la corrente $I$, usando l'altra superficie:
 \begin{equation}
 \oint_C\ve H\cdot\ud\ve l=\int_{S_2}\ve J\cdot\ve n\,\ud a=0
 \end{equation}
-C'àuna contraddizione. Faraday introduce le correnti di spostamento $\ve J_s$ che chiudono il circuito. Essendo $\diver\ve D=\rho$ allora in questo caso, all'interno del condensatore:
+C'è una contraddizione. Faraday introduce le correnti di spostamento $\ve J_s$ che chiudono il circuito. Essendo $\diver\ve D=\rho$ allora in questo caso, all'interno del condensatore:
 \begin{equation*}
 D=\sigma(t)
 \end{equation*}
@@ -3569,7 +3569,7 @@ L'ultima può essere riscritta tenendo conte che $\ve D=\varepsilon_0\ve E+\ve P
 \end{equation}
 Si notano tre densità di correnti, una di cariche libere $\ve J$, mentre la corrente di spostamento è divisa in $\varepsilon_0\frac{\partial\ve E}{\partial t}$ e $\frac{\partial\ve P}{\partial t}$ che è presente solo nei dielettrici.
 \subsection{Equazione di continuità}
-L'equazione di continuitààgià contenuta nelle equazioni di Maxwell:
+L'equazione di continuità è già contenuta nelle equazioni di Maxwell:
 \begin{equation}
 \diver\rot\ve H=\diver\left(\ve J+\frac{\partial\ve D}{\partial t}\right)=
 \diver\ve J+\frac{\partial}{\partial t}\diver\ve D=\diver\ve J+\frac{\partial\rho}{\partial t}=0
@@ -3623,7 +3623,7 @@ con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica. Si ottiene infine:
 \frac{\partial W_{em}}{\partial t}=P_j+\int_S\ve S\cdot\ve n\,\ud a
 \end{equation}
 dove $W_{em}$ è l'energia elettromagnetica. Si deduce che la potenza è dissipata per due fattori: l'effetto Joule $P_j$ e l'irraggiamento attraverso la superficie.
-\section{Quantitàdi moto elettromagnetica}
+\section{Quantità di moto elettromagnetica}
 In un sistema meccanico isolato la quantità di moto $\ve{G^M}$ è una costante del moto e vale:
 \begin{equation}
 \ve F=\frac{\ud \ve{G^M}}{\ud t}
@@ -3683,7 +3683,7 @@ possiamo definire anche una densità di quantità di moto elettromagnetica:
 \ve g=\left(\ve D\times\ve B\right)=\varepsilon\mu\left(\ve E\times\ve H\right)=\varepsilon\mu\ve S=\frac{1}{c^2}\ve S
 \end{equation}
 \section{Potenziali del campo elettromagnetico}
-Poichàla divergenza di $\ve B$ è nulla esiste un vettore $\ve A$ detto potenziale magnetico tale che:
+Poiché la divergenza di $\ve B$ è nulla esiste un vettore $\ve A$ detto potenziale magnetico tale che:
 \begin{equation}
 \ve B=\rot\ve A
 \label{ppp02}
@@ -3722,7 +3722,7 @@ Si può dimostrare una cosa analoga anche per $\ve A$ partendo dal rotore di $\v
 \begin{equation}
 \rot\ve H=\frac{1}{\mu}\rot\rot\ve A=\frac{\partial D}{\partial t}+\ve J=\varepsilon\frac{\partial}{\partial t}\left(-\frac{\partial \ve A}{\partial t}-\grad\varphi\right)+\ve J
 \end{equation}
-avendo usato le \eqref{ppp01} e \eqref{ppp02}. Poichà
+avendo usato le \eqref{ppp01} e \eqref{ppp02}. Poiché
 \begin{equation}
 \ve\nabla\times\left(\ve\nabla\times\ve u\right)=\ve\nabla\left(\ve\nabla\cdot\ve u\right)-\left(\ve\nabla\cdot\ve\nabla\right)\ve u
 \end{equation}
@@ -4026,7 +4026,7 @@ Consideriamo un'onda polarizzata lungo l'asse $z$:
 L'ultimo termine è proporzionale a $\frac{v}{c}$, che solitamente è molto piccolo, quindi trascurabile. L'equazione dell'onda sarà \begin{equation}
 \ve E=E_z\ver k=E_{0_z}e^{j\left(\omega t-kx\right)}\ver k
 \end{equation}
-poichàle dimensioni atomiche sono molto piccole, la variazione di $x$ sarà molto piccola rispetto alla variazione temporale, quindi trascuriamo la fase spaziale, quindi la nostra onda diventerà
+poiché le dimensioni atomiche sono molto piccole, la variazione di $x$ sarà molto piccola rispetto alla variazione temporale, quindi trascuriamo la fase spaziale, quindi la nostra onda diventerà
 \begin{equation}
 E_z=E_{0_z}e^{j\left(\omega t\right)}
 \end{equation}
