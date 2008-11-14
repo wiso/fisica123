@@ -73,7 +73,7 @@ fattore&prefisso&simbolo\\
 Il femtometro ($\femto\meter$) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@$\femto\meter$|see{Fermi}}, unità usata in fisica nucleare.
 
 \chapter{\index{vettore}Vettori}
-Un vettore è simile a un segmento orientato, ogni vettore individua un punto. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
+Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
 
 I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso gli si pensa come elementi di classi di equivalenza i cui rappresentati sono i vettori applicati nell'origine.
 \section{\index{versore}Versori e \index{coordinate}coordinate}
@@ -231,20 +231,6 @@ U}{\partial z}\ve k\right)
 \chapter{Cinematica}
 \section{\index{posizione}Vettore posizione}
 Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi sempre si parlerà del piano piuttosto che dello spazio, ma i risultati sono del tutto analoghi} $Oxy$ il vettore che congiunge l'origine con un punto $P$ è il vettore posizione $\ve r$ che individua $P$ in quel sistema di riferimento. Poiché il punto può spostarsi nel tempo $\ve r$ sarà funzione del tempo $\ve r=\ve r(t)$ e descriverà al variare del tempo tutte le posizioni occupate da $P$ cioè la sua traiettoria.
-%\begin{figure}[htbp]
-%\centering{
-%\xy %(0,0)*+{O};(0,20)*+{\ve r(t)};(60,0)*+{\ve r(t+\Delta t)};
-%**\crv{},
-%**\crv~pC{(38,35)},
-%(1,0)*+!U{1},(-1,0)*+!U{-1},
-%(2,-1)*+!R{1},(0,1)*+!R{-1},
-%(2,-1)*+!RU{P},(-1,2)*+!UR{-P},
-%(1.3333,1.6667)*+!UR{-2P},
-%(-1,2.3)*+++!D{\infty}*=0{},{\ar+(-.2,.2)}
-
-%\endxy}
-%\end{figure}
-
 
 \begin{figure}[htbp]
 \centering
@@ -342,14 +328,16 @@ t)=R^2\omega^4\end{equation*}
 \section{\index{moto!circolare}Moto circolare}
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.6]{immagini/fisica1/CorPol}
+\includegraphics[scale=1]{immagini/fisica1/CorPol}
 \caption{\index{coordinate!polari}Coordinate polari}
 \end{figure}
 \begin{equation*}\ve r=R\ve u_r\end{equation*}
-$$\left\{\begin{array}{ll}
+\begin{equation*}
+\left\{\begin{array}{ll}
 \ve u_r=\cos\theta(t)\ve i+\sin\theta(t)\ve j\\
 \ve u_\theta=-\sin\theta(t)\ve i+\cos\theta(t)\ve j
-\end{array}\right.$$
+\end{array}\right.
+\end{equation*}
 \begin{equation*}\frac{\ud\ve u_\theta}{\ud t}=-\dot{\theta}\cos\theta\ve i-\dot{\theta}\sin\theta\ve j=-\dot{\theta}\ve u_r\end{equation*}
 \begin{align*}
 \ve v&=\frac{\ud \ve r}{\ud t}=\frac{\ud\left(R\ve
@@ -1230,8 +1218,14 @@ per il quale $\sum\stackrel{\text{Est}}{\ve F}=0$&$\ve P=\sum
 
 \chapter{Lavoro ed energia}
 \section{\index{lavoro}Lavoro definizione}
-Il lavoro è una grandezza scalare. Distinguiamo i seguenti casi particolari:
-
+Il lavoro è una grandezza scalare.
+\begin{Def}[lavoro]
+Definiamo lavoro $L$ fatto dalla $\ve F$ sul punto $P$ lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\ve F\cdot\ud\ve s$:
+\begin{equation}
+L=\int_\Gamma\ve F\cdot\ud \ve s
+\end{equation}
+\end{Def}
+Distinguiamo i seguenti casi particolari:
 \begin {enumerate}
 \item[a)]  Forza costante e parallela allo spostamento
 \begin{equation*}L=Fs\end{equation*}
@@ -1240,18 +1234,12 @@ Il lavoro è una grandezza scalare. Distinguiamo i seguenti casi particolari:
 \begin{equation*}L=Fs\cos\alpha=\ve F \cdot \ve s\end{equation*}
 
 \item[c)] Forza parallela ma variabile
-\begin{equation*}L=\int_A^B F(x)\ud x\end{equation*}
+\begin{equation*}L=\int_A^B F(x)\,\ud x\end{equation*}
 
 \item[d)] Forza variabile, traiettoria qualsiasi (caso generale)
 \begin{equation*}\delta L=\ve F\cdot\ud \ve s\end{equation*}
-\begin{equation*}{L=\int_A^B\delta L \  \text{curvilineo}}\end{equation*}
+\begin{equation*}{L=\int_A^B\delta L \quad \text{curvilineo}}\end{equation*}
 \end{enumerate}
-\begin{Def}[lavoro]
-Definiamo lavoro $L$ fatto dalla $\ve F$ sul punto $P$ lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\ve F\cdot\ud\ve r$:
-\begin{equation}
-L=\int_\Gamma\ve F\cdot\ud \ve r
-\end{equation}
-\end{Def}
 \begin{Es}[attrito costante su traiettoria semicircolare]
 \begin{equation*}F_A=\mu N=\mu mg\quad \delta L=\ve F_A\cdot\ud \ve s=-\mu mg\ud s\end{equation*}
 $$L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud

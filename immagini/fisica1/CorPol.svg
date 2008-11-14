@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5 -->
+<!-- CreationDate: Fri Nov 14 12:56:39 2008 -->
+<!-- Magnification: 1.050 -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="173.40021"
+   height="93.805275"
+   viewBox="2488 3908 4611 2532"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="CorPol.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0">
+  <metadata
+     id="metadata41">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs39">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 94.499992 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="342 : 94.499992 : 1"
+       inkscape:persp3d-origin="171 : 62.999995 : 1"
+       id="perspective43" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="749"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="2.6824219"
+     inkscape:cx="171.67322"
+     inkscape:cy="95.084396"
+     inkscape:window-x="0"
+     inkscape:window-y="19"
+     inkscape:current-layer="g4"
+     inkscape:document-units="px"
+     units="cm" />
+  <g
+     style="fill:none;stroke:#000000;stroke-width:0.025in"
+     id="g4"
+     transform="translate(-38.759087,-10)">
+<!-- Arc --><!-- Line -->    <polyline
+       points="2692,6330 7068,6330 "
+       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline8" />
+<!-- Arrowhead on XXXpoint 2692 6330 - 7102 6330-->    <polyline
+       points="6958 6362 7084 6330 6958 6299 "
+       style="stroke:#000000;stroke-width:8"
+       id="polyline10" />
+<!-- Line -->    <polyline
+       points="2692,6330 4617,4593 "
+       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline12" />
+<!-- Arrowhead on XXXpoint 2692 6330 - 4641 4571-->    <polyline
+       points="4556 4689 4628 4582 4513 4643 "
+       style="stroke:#000000;stroke-width:8"
+       id="polyline14" />
+<!-- Line -->    <polyline
+       points="4629,4582 4026,3932 "
+       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline16" />
+<!-- Arrowhead on XXXpoint 4629 4582 - 4004 3909-->    <polyline
+       points="4123 3992 4015 3922 4077 4035 "
+       style="stroke:#000000;stroke-width:8"
+       id="polyline18" />
+<!-- Line -->    <polyline
+       points="4629,4582 5278,3979 "
+       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline20" />
+<!-- Arrowhead on XXXpoint 4629 4582 - 5301 3956-->    <polyline
+       points="5217 4076 5289 3968 5174 4030 "
+       style="stroke:#000000;stroke-width:8"
+       id="polyline22" />
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="4044.3425"
+       y="5820.4502"
+       font-style="normal"
+       font-weight="normal"
+       font-size="189"
+       id="text24"
+       style="font-size:161.16036987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:#000000;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       sodipodi:linespacing="125%"><tspan
+         style="font-style:italic;-inkscape-font-specification:BKM-cmbxti10 Italic"
+         id="tspan2423">θ</tspan></text>
+<!-- Text --><!-- Text --><!-- Text --><!-- Text -->    <text
+       xml:space="preserve"
+       x="5169.0352"
+       y="4535"
+       font-style="normal"
+       font-weight="normal"
+       font-size="101"
+       id="text32"
+       style="font-size:134.30030823px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;stroke:#000000;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       sodipodi:linespacing="125%">r</text>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="4411.7578"
+       y="4157"
+       font-style="normal"
+       font-weight="normal"
+       font-size="101"
+       id="text34"
+       style="font-size:101px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke:#000000;font-family:Times"><tspan
+         style="font-style:italic"
+         id="tspan2427">θ</tspan></text>
+<!-- Text -->    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:8.08947372;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3204"
+       sodipodi:cx="2710.8364"
+       sodipodi:cy="6319.5327"
+       sodipodi:rx="1259.8829"
+       sodipodi:ry="1259.8829"
+       d="M 3642.9412,5471.8973 A 1259.8829,1259.8829 0 0 1 3970.6916,6327.8955"
+       sodipodi:start="5.5452132"
+       sodipodi:end="6.2898231"
+       sodipodi:open="true" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2395"
+       style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"><flowRegion
+         id="flowRegion2397"><rect
+           id="rect2399"
+           width="2831.8325"
+           height="1348.4917"
+           x="116.90211"
+           y="2248.1873" /></flowRegion><flowPara
+         id="flowPara2401" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:161.16036987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       x="3628.4709"
+       y="5270.5171"
+       id="text2407"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2409"
+         x="3628.4709"
+         y="5270.5171">r</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="text2411"
+       y="6358.5312"
+       x="2517.1836"
+       style="font-size:161.16036987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       xml:space="preserve"><tspan
+         y="6358.5312"
+         x="2517.1836"
+         id="tspan2413"
+         sodipodi:role="line">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:161.16036987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       x="5053.9443"
+       y="4502.5068"
+       id="text2415"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2417"
+         x="5053.9443"
+         y="4502.5068">u</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="text2419"
+       y="4124.3198"
+       x="4297.5708"
+       style="font-size:161.16036987px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:BKM-cmbxti10;-inkscape-font-specification:BKM-cmbxti10"
+       xml:space="preserve"><tspan
+         y="4124.3198"
+         x="4297.5708"
+         id="tspan2421"
+         sodipodi:role="line">u</tspan></text>
+  </g>
+</svg>
