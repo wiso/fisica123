@@ -802,7 +802,9 @@ definiamo:
 allora:
 \begin{equation*}E=\sqrt{E_y^2+E_\perp^2}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{\frac{3y^2}{r^2}+1}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{3\cos^2\theta+1}\end{equation*}
 in forma vettoriale:
-\begin{equation*}\ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation*}
+\begin{equation}
+\label{eq:campo_dipolo}
+\ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation}
 Esso decresce con $r^3$.
 \subsection{Energia potenziale\index{energia!potenziale!del dipolo}}
 Mettiamo un dipolo in un campo elettrico $\ve E$. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
@@ -879,6 +881,93 @@ momento di dipolo della distribuzione di carica. Gli altri termini sono i potenz
 \ve\delta=\frac{\ve p}{|q|}=\frac{\int_V\rho(\ve r\,')\ve r\,'\ud v}{|q|}
 \end{equation}
 individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipoli|)}\index{multipoli|)}
+\begin{Es}[Doppio anello]
+ Siano due anelli sottili di raggio $R$ nel piano $x$--$y$ ad altezza $z=\pm\frac{d}{2}$ e con il centro sull'asse $z$. Gli anelli sono uniformemente carichi con densità lineare $\pm\lambda$. Calcolare il campo elettrico totale lungo l'asse $z$, fare un'approssimazione per $|z|\gg d,R$.
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica2/due_anelli_schema}
+ % due_anelli_schema.pdf: 436x297 pixel, 72dpi, 15.38x10.48 cm, bb=0 0 436 297
+\end{figure}
+
+Il campo elettrico può essere trovato con il principio di sovrappossizione, calcolando separatamente i campi generati da ciascun anello. Come calcolato nell'esempio \ref{es:anello} il campo elettrico generato da un anello nell'origine lungo il suo asse è:
+\begin{align*}
+ \ve E_0(0,0,z)&=\frac{q}{4\pi\varepsilon_0}\frac{z}{(R^2+z^2)^{\frac{3}{2}}}\ver e_z\\
+             &=\frac{\lambda R}{2\varepsilon_0}\frac{z}{(R^2+z^2)^{\frac{3}{2}}}\ver e_z
+\end{align*}
+quindi il campo elettrico generato dai due anelli è:
+\begin{align*}
+ \ve E(0,0,z)&=\ve E_{+\frac{d}{2}}+\ve E_{-\frac{d}{2}}\\
+               &=\frac{\lambda R}{2\varepsilon_0}\left\{
+                  \frac{z-\frac{d}{2}}{\left[R^2+(z-\frac{d}{2})^2\right]^{\frac{3}{2}}}
+                 -\frac{z+\frac{d}{2}}{\left[R^2+(z+\frac{d}{2})^2\right]^{\frac{3}{2}}}\right\}\ver e_z
+\end{align*}
+Per ottenere un'appossimazione per $|z|\gg d,R$ possiamo fare uno sviluppo di Taylor:
+\begin{multline*}
+ \frac{z-\frac{d}{2}}{\left[R^2+(z-\frac{d}{2})^2\right]^{\frac{3}{2}}}
+=\frac{1}{z^2}\frac{(1-\frac{d}{2z})}{\left[\underbrace{\left(\frac{R}{z}\right)^2}_{\simeq 0}+\left(1-\frac{d}{2z}\right)^2\right]^{3/2}}\\
+\simeq\frac{1}{z^2}\left(1-\frac{d}{2z}\right)\left(1+\frac{3d}{2z}\right)
+\simeq\frac{1}{z^2}\left(1+\frac{d}{z}\right)
+\end{multline*}
+%%%%%%%%%%
+%%%%%%%%%%
+%%%%%%%%%% NON TORNA UN MODULO!!!!!
+%%%%%%%%%%
+La semplificazione $\left(\frac{R}{z}\right)^2\simeq 0$ e anche quella nell'ultimo passaggio sono giustificate dal fatto che la nostra espanzione è al primo grado. Quindi la nostra approssimazione per il campo elettrostatico:
+\begin{equation*}
+ \ve E(0,0,z) \simeq \frac{\lambda R}{2\varepsilon_0}\frac{1}{z^2}\left\{\left(1+\frac{d}{z}\right)-\left(1-\frac{d}{z}\right)\right\}\ver e_z
+ = \frac{\lambda R}{\varepsilon_0}\frac{d}{z^3}\ver e_z
+\end{equation*}
+Notiamo che la dipendenza da $\frac{1}{r^3}$ è tipica dei dipoli \eqref{eq:campo_dipolo}, infatti il sistema è approssimabile con un dipolo che punta dall'anello negativo a quello positivo:
+\begin{equation*}
+ \ve p = \int_\Gamma \ve r\,\ud q = \int_{\Gamma_+} \left\{\frac{d}{2}\ver e_z+R\ver u_r\right\}\left(\lambda R\ud\phi\right) + \int_{\Gamma_-} \left\{-\frac{d}{2}\ver e_z+R\ver u_r\right\}\left(-\lambda R\ud\phi\right)
+\end{equation*}
+spezzando gli integrali le parti che contengono $\ver u_r$ si annullano, in quando la somma di tutti i versori radiali, al variare dell'angolo $\phi$ fa il vettore nullo.
+\begin{equation*}
+ \ve p = 2\pi\lambda R d\ver e_z
+\end{equation*}
+questo vuol dire che il nostro sistema è assimilabile a un sistema di due cariche di carica $\pm 2\pi\lambda R $ e distanti $d$, quindi come se fossero messe nel centro degli anelli. Usando l'espressione del campo elettrico generato da un dipolo \eqref{eq:campo_dipolo}:
+\begin{align*}
+ \ve E(0,0,z) &= \frac{1}{\giorgi}\left\{3(\ve p\cdot\ve r)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\\
+              &= \frac{1}{\giorgi}\left\{3(2\pi\lambda R d\ver e_z\cdot z\ver e_z)\frac{z\ver e_z}{|z|^5}-\frac{2\pi\lambda R d\ver e_z}{|z|^3}\right\}\\
+              &= \frac{\lambda R}{\varepsilon_0}\frac{d}{|z|^3}\ver e_z
+\end{align*}
+avendo usato $\ve r=z\ver e_z$ e quindi $r = |z|$.
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica2/due_anelli}
+ % due_anelli.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+ \caption{campo elettrostatico di due anelli lungo l'asse $z$ (esatto, approssimazione di dipolo e anelli singoli)}
+\end{figure}
+\end{Es}
+\begin{Es}[Doppio anello 2]
+  Calcolare il lavoro che deve essere fatto dall'esterno per portare una carica $e$ da un punto infinitamente lontano all'origine. Calcolare il lavoro che dev'essere fatto per portare un dipolo $\ve p$ con il verso lungo l'asse $z$ da un punto infinitamente lontano all'origine.
+
+  Il lavoro fatto dal campo si può calcolare come variazione dell'energia potenziale. Quindi il lavoro fatto dall'esterno sarà l'opposto del lavoro fatto dal campo:
+  \begin{equation*}
+   L_\text{ext} = -L_\text{campo} = e(\varphi(0)-\varphi(\infty))
+  \end{equation*}
+   Per valutare il potenziale al posto di fare la derivata del campo lo si può calcolare dalla definizione. Il potenziale generato da una spira nell'origine è:
+  \begin{equation*}
+   \varphi_0 = \frac{1}{\giorgi}\int\frac{\ud q}{\norm{\ve r - \ve r'}} = \frac{1}{\giorgi}\int\frac{\lambda R\ud\phi}{\left[R^2+\left(z-\frac{d}{2}\right)^2\right]^{1/2}}=\frac{\lambda R}{2\varepsilon_0}\frac{1}{\sqrt{z^2+R^2}}
+  \end{equation*}
+   quindi il potenziale dei due anelli:
+  \begin{equation*}
+   \varphi = \varphi_{+\frac{d}{2}} + \varphi_{-\frac{d}{2}} = \frac{\lambda R}{2\varepsilon_0}\left\{\frac{1}{\sqrt{\left(z-\frac{d}{2}\right)^2+R^2}}-\frac{1}{\sqrt{\left(z+\frac{d}{2}\right)^2+R^2}}\right\}
+  \end{equation*}
+  poiché $\varphi(0)=0$ e $\varphi(\infty)=0$ il lavoro è nullo.
+
+  Il lavoro fatto per spostare il dipolo si può fare in maniera analoga, ricordando che l'energia potenziale di un dipolo che interagisce con un campo elettromagnetico è $-\ve p\cdot \ve E$.
+  \begin{align*}
+   W(0) &= -\ve p\cdot \frac{\lambda R}{2\varepsilon_0}\left\{
+                  \frac{z-\frac{d}{2}}{\left[R^2+\left(z-\frac{d}{2}\right)^2\right]^{\frac{3}{2}}}
+                 -\frac{z+\frac{d}{2}}{\left[R^2+\left(z+\frac{d}{2}\right)^2\right]^{\frac{3}{2}}}\right\}_{z=0}\ver e_z\\
+        &= p\frac{\lambda R}{2\varepsilon_0}
+                  \frac{d}{\left[R^2+\left(\frac{d}{2}\right)^2\right]^{\frac{3}{2}}}
+  \end{align*}
+essendo $W(\infty)=0$ questo è già il lavoro.
+\end{Es}
+
+
 
 \chapter{Elettrostatica nei conduttori\index{elettrostatica!nei conduttori}}
 \section{Conduttori ed isolanti\index{conduttori}\index{isolanti}}
@@ -1467,14 +1556,34 @@ e la potenza:
 \begin{equation*}P=\frac{\ud W}{\ud t}=I\Delta V=RI^2=\frac{\Delta V^2}{R}\end{equation*}
 
 \subsection{Microscopico}
-Consideriamo un conduttore con $N$ portatori di carica nell'unità di volume. Il singolo elettrone ha in media $\tau^{-1}$ collisioni nell'unità di tempo. Quindi nell'elementino di volume $\ud v$ nel tempo $\ud t$ avvengono $N\frac{\ud v}{\tau}\ud t$ collisioni. Tra un urto e un altro un elettrone viene accelerato con una forza $-eE$ parallela al campo elettrico. Lo spostamento sarà $v_D\tau$. Allora il lavoro sarà 
-\begin{equation*}\ud L_e=\ve F\cdot\ve s=-eEv_D\tau\end{equation*}
+Consideriamo un conduttore con $N$ portatori di carica nell'unità di volume.
+\begin{equation*}
+ L_e=\ve F\cdot\ve s
+\end{equation*}
+la potenza:
+\begin{equation*}
+ P_e =\ve F\cdot\ve v
+\end{equation*}
 considerando tutti gli elettroni nel volume $\ud v$, la potenza:
-\begin{equation*}\ud P=-\frac{N\ud v}{\tau}eEv_D\tau\end{equation*}
+\begin{equation*}
+  \ud P=\ve F\cdot\ve v=-eN\ud v\ve E\cdot \ve v = \ve E\cdot\ve J\ud v =\sigma E^2\ud v
+\end{equation*}
+Si puo anche ragiornare come segue.  Il singolo elettrone ha in media $\tau^{-1}$ collisioni nell'unità di tempo. Quindi nell'elementino di volume $\ud v$ nel tempo $\ud t$ avvengono $N\frac{\ud v}{\tau}\ud t$ collisioni. Tra un urto e un altro un elettrone viene accelerato con una forza $-eE$ parallela al campo elettrico costante. Lo spostamento sarà $v_D\tau$ parallelo al campo elettrico. Allora il lavoro su un elettrone sarà
+\begin{equation*}
+ \ud L_e =\ve F\cdot\ve s=-e Ev_D\ud t
+\end{equation*}
+e su tutti gli elettroni nel volume $\ud v$:
+\begin{equation*}
+ \ud L = -e Ev_D\ud t N\ud v
+\end{equation*}
+Considerando tutti gli elettroni del volume $\ud v$ la potenza:
+\begin{equation*}
+ \ud P=-\frac{N\ud v}{\tau}eEv_d\tau
+\end{equation*}
 Ricordando che:
 \begin{equation*}v_D=-\frac{eE}{m\tau}\qquad\sigma=\frac{e^2N}{m}\tau\end{equation*}
 \begin{equation*}\ud P=\frac{e^2NE^2}{m}\tau\ud v=\sigma E^2\ud v\end{equation*}
-Se consideriamo un filo conduttore questo avrà una lunghezza $l$ e una sezione $S$ e una differenza di potenziale $V_A-V_B=El$.
+Se consideriamo un filo conduttore di lunghezza $l$ e sezione $S$ con una differenza di potenziale $V_A-V_B=El$.
 \begin{equation*}P=\int_V\ud P=\sigma E^2\int_V\ud v=\sigma E^2(Sl)=\sigma\frac{\Delta V^2}{l^2}Sl=\sigma\frac{S}{l}\Delta V^2=\frac{\Delta V^2}{R}\end{equation*}
 
 

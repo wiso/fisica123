@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="480"
+   viewBox="0 0 600 480"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="due_anelli.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata81">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="748"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.89666667"
+     inkscape:cx="485.4112"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     inkscape:current-layer="g76" />
+  <desc
+     id="desc4">Produced by GNUPLOT 4.2 patchlevel 3  </desc>
+  <defs
+     id="defs6">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 240 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="600 : 240 : 1"
+       inkscape:persp3d-origin="300 : 160 : 1"
+       id="perspective83" />
+    <circle
+       id="gpDot"
+       r="1" />
+    <path
+       id="gpPt0"
+       style="stroke-width:0.222"
+       d="M-1,0 h2 M0,-1 v2" />
+    <path
+       id="gpPt1"
+       style="stroke-width:0.222"
+       d="M-1,-1 L1,1 M1,-1 L-1,1" />
+    <path
+       id="gpPt2"
+       style="stroke-width:0.222"
+       d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1" />
+    <rect
+       id="gpPt3"
+       style="stroke-width:0.222"
+       x="-1"
+       y="-1"
+       width="2"
+       height="2" />
+    <use
+       xlink:href="#gpPt3"
+       id="gpPt4"
+       style="fill:currentColor; stroke:none" />
+    <circle
+       id="gpPt5"
+       style="stroke-width:0.222"
+       cx="0"
+       cy="0"
+       r="1" />
+    <use
+       xlink:href="#gpPt5"
+       id="gpPt6"
+       style="fill:currentColor; stroke:none" />
+    <path
+       id="gpPt7"
+       style="stroke-width:0.222"
+       d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z" />
+    <use
+       xlink:href="#gpPt7"
+       id="gpPt8"
+       style="fill:currentColor; stroke:none" />
+    <use
+       xlink:href="#gpPt7"
+       id="gpPt9"
+       transform="rotate(180)" />
+    <use
+       xlink:href="#gpPt9"
+       id="gpPt10"
+       style="fill:currentColor; stroke:none" />
+    <use
+       xlink:href="#gpPt3"
+       id="gpPt11"
+       transform="rotate(45)" />
+    <use
+       xlink:href="#gpPt11"
+       id="gpPt12"
+       style="fill:currentColor; stroke:none" />
+  </defs>
+  <g
+     style="fill:none; color:white; stroke:white; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g22" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g24">
+    <path
+       d="M25.6,16.6 L25.6,463.4 L574.4,463.4 L574.4,16.6 L25.6,16.6 Z "
+       id="path26" />
+  </g>
+  <g
+     style="fill:none; color:red; stroke:red; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g28" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g30">
+    <g
+       transform="translate(507.3,39.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g32">
+      <text
+         id="text34">Anelli</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:red; stroke:red; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g36">
+    <path
+       d="M 515.59998,34.599998 C 529.66665,34.599998 543.73332,34.599998 557.79999,34.599998 M 25.6,238.5 C 89.094756,236.92024 153.57565,237.28944 215.34113,220.45177 C 228.60944,216.70222 245.34116,216.97073 253.58759,229.86265 C 271.35349,257.64619 275.60634,291.28264 285.38749,322.26084 C 288.36673,330.94148 290.65576,340.20984 297.20001,347 C 306.94863,344.20684 307.97052,331.81109 311.33874,323.54113 C 321.58467,292.56867 325.48168,258.67874 343.17786,230.72051 C 351.35376,216.79816 369.08171,216.55859 382.86352,220.68229 C 445.24972,237.52235 510.31212,237.00909 574.40002,238.5"
+       id="path38"
+       style="stroke:#ff0000;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+  <g
+     style="fill:none; color:green; stroke:green; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g40" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g42">
+    <g
+       transform="translate(507.3,57.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g44">
+      <text
+         id="text46">Dipolo</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:green; stroke:green; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g48">
+    <path
+       d="M 515.59998,52.599998 C 529.66665,52.599998 543.73332,52.599998 557.79999,52.599998 M 25.6,236.60001 C 66.879533,234.27719 109.45344,234.1017 148.68621,219.52602 C 177.34849,209.00049 196.56996,182.57462 205.85586,154.4113 C 221.42819,110.16845 226.49542,62.969115 231.60001,16.6 M 368.39999,16.6 C 373.92679,66.10063 379.12074,116.5784 397.50117,163.27392 C 407.67587,189.21263 427.70379,211.88181 454.63213,220.79719 C 492.95379,233.98846 534.34723,234.41628 574.40002,236.60001"
+       id="path50"
+       style="stroke:#0000ff;stroke-opacity:1;fill:none;fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+  <g
+     style="fill:none; color:blue; stroke:blue; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g52" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g54">
+    <g
+       transform="translate(507.3,75.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g56">
+      <text
+         id="text58">Anello +</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:blue; stroke:blue; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g60">
+    <path
+       d="M 515.59998,70.599998 C 529.66665,70.599998 543.73332,70.599998 557.79999,70.599998 M 25.6,319.5 C 79.249941,347.41215 118.12035,397.24442 141.89215,451.96864 C 143.54272,455.77253 145.1616,459.59066 146.8,463.39999 M 296.89999,463.39999 C 300.91559,314.46982 304.59398,165.52992 308.60001,16.6 M 458.70001,16.6 C 481.90237,73.863016 519.29685,127.07999 574.40002,157.39999"
+       id="path62"
+       style="stroke:#00ff00;stroke-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0" />
+  </g>
+  <g
+     style="fill:none; color:cyan; stroke:cyan; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g64" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g66">
+    <g
+       transform="translate(507.3,93.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g68">
+      <text
+         id="text70">Anello -</text>
+    </g>
+  </g>
+  <g
+     style="fill:none;color:cyan;stroke:cyan;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0"
+     id="g72">
+    <path
+       d="M 515.59998,88.599998 C 529.66665,88.599998 543.73332,88.599998 557.79999,88.599998 M 25.6,157.39999 C 80.667976,127.12008 118.12294,73.832827 141.3,16.6 M 291.39999,16.6 C 295.40614,165.5298 299.0843,314.46996 303.10001,463.39999 M 453.20001,463.39999 C 476.38115,405.8439 514.65972,352.00949 570.13547,321.90366 C 571.55699,321.10244 572.97851,320.30122 574.40002,319.5"
+       id="path74"
+       style="stroke:#ff00ff;stroke-opacity:1;fill:none;fill-opacity:1;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0" />
+  </g>
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g76">
+    <path
+       d="M25.6,16.6 L25.6,463.4 L574.4,463.4 L574.4,16.6 L25.6,16.6 Z "
+       id="path78" />
+  </g>
+</svg>
