@@ -5,6 +5,12 @@ EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps)
 
 images: pdf eps
 
+remove_pdf:
+	rm $(PDFS) --force
+
+remove_eps:
+	rm $(EPSS) --force
+
 pdf: $(PDFS)
 
 eps: $(EPSS)
