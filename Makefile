@@ -25,6 +25,10 @@ $(IND):	$(IST)
 	latex $(SOURCE)
 	makeindex -s $(IST) $(IDX)
 
+$(TARGET).bbl: $(TEXSRC) $(BIBSRC)
+	latex $(TARGET).tex
+	bibtex $(TARGET)
+
 clean:
 	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc
 
