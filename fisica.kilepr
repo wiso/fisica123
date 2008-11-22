@@ -6,7 +6,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
 kileversion=2.0
-lastDocument=fisica_linux.tex
+lastDocument=TeX/fisica2.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -68,28 +68,28 @@ order=15
 
 [item:TeX/fisica1_1modulo.tex]
 archive=true
-column=43
+column=28
 encoding=UTF-8
 highlight=LaTeX
-line=1240
+line=1208
 open=true
 order=1
 
 [item:TeX/fisica1_2modulo.tex]
 archive=true
-column=0
+column=67
 encoding=UTF-8
 highlight=LaTeX
-line=97
+line=1605
 open=true
 order=2
 
 [item:TeX/fisica2.tex]
 archive=true
-column=70
+column=201
 encoding=UTF-8
 highlight=LaTeX
-line=1585
+line=1442
 open=true
 order=5
 
@@ -185,10 +185,10 @@ order=-1
 
 [item:fisica_linux.tex]
 archive=true
-column=30
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=38
+line=152
 open=true
 order=14
 
@@ -1554,6 +1554,15 @@ order=-1
 [item:immagini/fisica1/firma_daniele.ps]
 archive=true
 column=0
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:immagini/fisica1/fluido_accelerato.pdf]
+archive=true
+column=32563
 encoding=
 highlight=
 line=0

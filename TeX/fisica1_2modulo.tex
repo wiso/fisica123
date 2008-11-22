@@ -137,16 +137,42 @@ Lungo l'asse $x$:
 \begin{equation*}f_x\rho=\frac{\partial p}{\partial x}\quad f_y\rho=\frac{\partial p}{\partial y}\quad f_z\rho=\frac{\partial p}{\partial z}\end{equation*}
 \begin{equation}\ve f\rho=\ve\nabla p\end{equation}
 
-\subsubsection{Stevino}
+\begin{Es}[Forza peso -- Stevino]
 Nelle ipotesi di Stevino c'è solo il peso, quindi $\ve f=\ve g$
 \begin{equation*}f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p\end{equation*}
 
-\subsubsection{Superfici isobariche\index{superficie!isobarica}}
 \begin{equation*}U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\end{equation*}
 \begin{equation*}\rho U_m=-p+\const\end{equation*}
-Segue che le superficie isobariche coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali.
-
-\subsection{Fluido in rotazione\index{moto!circolare!di un fluido}}
+Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali.
+\end{Es}
+\begin{Es}[Fluido in accelerazione]
+ \begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica1/fluido_accelerato}
+ % fluido_accelerato.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+\end{figure}
+ Se un fluido è accelerato verso destra con accelerazione $a$ allora usando le forze fittizie: $\ve F=m\ve g-m\ve a$:
+\begin{equation*}
+ \ve f = -g\ver j - a \ver i
+\end{equation*}
+l'equazione differenziale risultante:
+\begin{equation*}
+ \begin{cases}
+  -a\rho=\frac{\partial p}{\partial x}\\
+  -g\rho=\frac{\partial p}{\partial y}
+ \end{cases}
+\end{equation*}
+la cui soluzione è:
+\begin{equation*}
+ p = \rho(-ax-gy)
+\end{equation*}
+e le superfici equipotenziali:
+\begin{equation*}
+ y = -\frac{p}{\rho g} - \frac{a}{g}x
+\end{equation*}
+che è un piano la cui pendenza è proporzionale all'accelerazione del sistema.
+\end{Es}
+\begin{Es}[Fluido in rotazione\index{moto!circolare!di un fluido}]
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.65]{immagini/fisica1/fluido_rotazione}
@@ -169,7 +195,7 @@ Su una superficie isobarica $p=\const$,
 \end{figure}
 \subsubsection{Archimede per le rotazioni}
 se $\rho_s>\rho_f$ il corpo si muove verso l'esterno.
-
+\end{Es}
 
 \section{Dinamica dei fluidi\index{dinamica!dei fluidi}}
 
@@ -1562,7 +1588,7 @@ Più $\beta$ tende a $1$ e più i due assi del nuovo sistema di riferimento tend
 $A$ e $B$ sono due eventi simultanei per $OXY$, ma non lo sono per $OX'Y'$. Analogamente si dimostra la contrazione delle lunghezze.
 
 \subsection{Curve di calibrazione\index{curve! di calibrazione}}
-\begin{figure}[!htbp]
+\begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/Minkowski_calibrazione}
    \caption{Curve di calibrazione}

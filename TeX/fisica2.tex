@@ -1219,7 +1219,7 @@ Sostituendola nella \eqref{div_E} otteniamo:
 \end{equation}
 Si può anche scrivere:
 \begin{equation*}\nabla^2\varphi=\ve\nabla\cdot\ve\nabla\varphi=\diver\grad\varphi={\frac{\partial^2 \varphi}{\partial x^2}+\frac{\partial^2 \varphi}{\partial y^2}+\frac{\partial^2 \varphi}{\partial z^2}}=-\frac{\rho}{\varepsilon_0}\end{equation*}
-L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conoscenza di $\varphi$ $\ve E=-\ve\nabla\varphi$.
+L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conoscenza di $\varphi$: $\ve E=-\ve\nabla\varphi$.
 
 Se la sorgente del campo è data esclusivamente da cariche elettriche in un volume allora l'unica soluzione è 
 \begin{equation*}\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'\end{equation*}
@@ -1232,6 +1232,7 @@ Se non ci sono cariche, cioè $\rho=0$, allora l'equazione di Poisson diventa:
 \end{equation}
 detta equazione di Laplace\index{equazione!di Laplace}\index{Laplace}. Una funzione che rispetta la \eqref{eq_laplace} e che abbia derivate prime continue è detta armonica\index{funzione!armonica}. Quindi se non ci sono cariche $\varphi$ è armonica. La zona di armonicità di una funzione è l'insieme dei punti dove la funzione è armonica.
 \subsection{Teoremi}
+Tipicamente i problemi di elettrostatica vengono formulati attraverso le condizioni di Dirichlet o di Neumann. Le prime impogono che la funzione $\phi$ assuma certi valori su una superficie, le seconde invece impongono condizioni sulle derivate normali (derivata direzionale rispetto alla normale della superficie).
 \begin{Teo}[unicità  problema di Dirichlet]
 Data una superficie chiusa $S$ la funzione armonica che su $S$ assume il valore $\varphi_S$ è unica.
 \end{Teo}
@@ -1337,7 +1338,7 @@ I=\int_S \ve J\cdot \ve n\,\ud a
 \end{equation}
 che è l'espressione di un flusso, precisamente il flusso di $\ve J$:
 \begin{equation}
-I=\Phi_S\left(\ve j\right)
+I=\Phi_S\left(\ve J\right)
 \end{equation}
 \subsection{Conservazione della carica\index{conservazione!della carica}}
 Applicando il teorema della divergenza:
@@ -1378,7 +1379,7 @@ Imponendo che $N(0)=N_0$:
 \begin{equation*}N(t)=N_0e^{-\frac{t}{\tau}}\end{equation*}
 Il numero di elettroni che non hanno subito una collisione decresce molto rapidamente. La probabilità che al tempo $t$ un elettrone non abbia subito collisioni è
 \begin{equation*}P(t)=\frac{N(t)}{N_0}=e^{\frac{-t}{\tau}}\end{equation*}
-Vogliamo ora sapere quanto ci vuole ad avere un urto qualsiasi al tempo $t$:
+Vogliamo ora sapere quanto tempo ci vuole ad avere un urto qualsiasi al tempo $t$:
 \begin{equation*}\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau\end{equation*}
 Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il successivo, sempre di quella particella, ma è anche il tempo medio che al tempo $t$ bisogna attendere per avere il primo urto tra due particelle qualsiasi. Naturalmente essendo indipendente dal tempo $\tau$ è anche il tempo medio dall'ultimo urto. Possiamo calcolare la velocità di deriva, considerando l'accelerazione data dal campo elettrico durante il tempo dall'ultimo urto:
 \begin{equation*}\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e\tau}{m_\mathrm{e}}{\ve E}\end{equation*}
@@ -1439,7 +1440,7 @@ di solito $a>b>c>\cdots$ e si considera solo il primo termine:
 \begin{equation*}\rho(T)=\rho_0\left(1+\alpha\left(T-T_0\right)\right)\end{equation*}
 considerandolo come uno sviluppo di Taylor:
 \begin{equation*}\alpha=\frac{1}{\rho_0}\left.\frac{\partial \rho}{\partial T}\right|_{T_0}\end{equation*}
-Per i semiconduttori \index{semiconduttori} $\alpha<0$. Ad una certa temperatura, detta temperatura critica\index{temperatura!critica}, la resistività crolla e si a il fenomeno della superconduttività \index{superconduttività}\index{superconduttori}.
+Per i semiconduttori \index{semiconduttori} $\alpha<0$. Ad una certa temperatura, detta temperatura critica\index{temperatura!critica}, la resistività crolla e si ha il fenomeno della superconduttività\index{superconduttività}\index{superconduttori}.
 
 Il modello basato sul gas di elettroni non riesce a spiegare questo andamento, infatti:
 \begin{equation*}v_T=\sqrt{3\frac{kT}{m_\mathrm{e}}}\end{equation*}
