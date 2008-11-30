@@ -1404,35 +1404,67 @@ con:
 \index{ohm}\index{mho}\index{siemens}
 \section{Legge di Ohm\index{legge!di Ohm}}
 \begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.35]{immagini/fisica2/ohm1}
+ \centering
+ \includegraphics[scale=0.4]{immagini/fisica2/ohm1}
 \end{figure}
-Consideriamo un filo metallico lineare, isotropo, omogeneo, di lunghezza $l$ e sezione $S$, con conduttività $\sigma$. Sia $\Delta V$ la differenza di potenziale mantenuta tra i due capi, con $V_1>V_2$. Si crea allora un campo elettrico all'interno del conduttore e se $l\gg r$:
+Consideriamo un filo isotropo, omogeneo, di lunghezza $l$ e sezione $\Sigma$ variabile e con conduttività $\sigma$. Sia $\Delta V$ la differenza di potenziale mantenuta tra i due capi, con $V_1>V_2$. Consideriamo la differenza di potenziale tra due porzioni di superfici equipotenziali:
 \begin{equation}
-\Delta V=V_1-V_2=-(V_2-V_1)=\int_\Gamma \ve E\cdot \ud \ve l=El
-\label{ohm01}
+ \ud V = \ve E\cdot\ud \ve l = \frac{\ve J}{\sigma}\cdot\ud\ve l=\frac{\ve J}{\sigma}\cdot\ver n\,\ud l
 \end{equation}
-Con $\Gamma$ una qualsiasi curva che collega le due estremità  La corrente invece:
+dove $\ver n$ è la normale alla superficie. Se integriamo sulla superficie:
 \begin{equation}
-I=\int_S\ve J\cdot\ve n\,\ud a=JS
-\label{ohm02}
+ \int\ud V\,\ud\Sigma=\int\frac{\ve J}{\sigma}\cdot\ver n\,\ud l\,\ud\Sigma
 \end{equation}
-grazie al fatto che $\ve J//\ve n$ in quanto isotropo. Ricordando che $\ve J=\sigma \ve E$, dalla \eqref{ohm01} $E=\frac{\Delta V}{l}$ e sviluppando la \eqref{ohm02}:
+poiché la superficie su cui stiamo integrando è equipotenziale $\ud V$ è costante su tutta la superficie e può uscire dall'integrale:
 \begin{equation}
-I=JS=\sigma E S=\Delta V\frac{S}{l}\sigma
-\label{ohm03}
+ \ud V\int\ud\Sigma = \ud V\Sigma=\frac{\left[\int\ve J\cdot\ud\ve \Sigma\right]\ud l}{\sigma}
 \end{equation}
-che è la legge di Ohm. Di solito si introduce la:
+e si è supposto che $\sigma$ sia anch'essa costante su tutta la superficie. Integrando su tutta la lunghezza del conduttore:
+\begin{equation}
+ \Delta V = \int\ud V=\int\frac{I\ud l}{\Sigma\sigma}
+\end{equation}
+Essendo gli elementini in serie la corrente è la stessa per tutti, mentre la sezione e la conducibilità potrebbero dipendere dalla posizione: $\sigma=\sigma(l)$, $\Sigma=\Sigma(l)$:
+\begin{equation}
+ \Delta V = I\int \frac{\ud l}{\Sigma\sigma}=IR
+\end{equation}
 \begin{Def}[resistenza elettrica\index{resistenza!elettrica}]
-\begin{equation*}R=\rho\frac{l}{S}\end{equation*}
+ \begin{equation}R=\int_A^B \frac{\rho}{\Sigma}\,\ud l\end{equation}
 \end{Def}
-e la \eqref{ohm03} diventa:
 \begin{legge}[Ohm]
+ \begin{equation}
+  \Delta V=IR
+ \end{equation}
+ \end{legge}
+che in realtà è stata introdotta come legge sperimentale. I materiali che rispettano questa legge sono detti ohmnici.\index{materiale ohmnico}
+\begin{Es}[Filo]
+ Un filo a sezione $S$, resistività $\rho$ entrambi costanti e lunghezza $L$, avrà resistenza:
 \begin{equation}
-\Delta V=IR
+ R=\int_A^B \frac{\rho}{\Sigma}\ud l=\rho\frac{L}{S}
 \end{equation}
-\end{legge}
-che in realtà stata introdotta come legge sperimentale. I materiali che rispettano questa legge sono detti ohmnici.
+\end{Es}
+\begin{Es}[Conduttori cilindrici]
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.35]{immagini/fisica2/conduttore_cilindrico}
+ % conduttore_cilindrico.pdf: 317x458 pixel, 72dpi, 11.18x16.16 cm, bb=0 0 317 458
+\end{figure}
+ Consideriamo due superfici cilindriche concentriche, e tra queste inseriamo un materiale con resistività $\rho$ uniforme. Appichiamo una $\Delta V$ sulle due superfici, vogliamo sapere quanto è la corrente che scorre.
+\begin{equation*}
+ R = \frac{\Delta V}{I} = \rho\int\frac{\ud l}{\Sigma(l)}
+\end{equation*}
+dove $l$ è la distanza tra un conduttore e l'altro, quindi il raggio. Per la geometria dei conduttori
+\begin{equation*}
+ \Sigma(r) = 2\pi rh
+\end{equation*}
+\begin{equation*}
+ R = \rho\int\frac{\ud r}{2\pi rh}=\frac{\rho}{2\pi h}\log\left(\frac{r_B}{r_A}\right)
+\end{equation*}
+\begin{equation*}
+ I = \frac{\Delta V}{R} = \Delta V \frac{2\pi h}{\rho\log\frac{r_B}{r_A}}
+\end{equation*}
+\end{Es}
+
+
 \subsection{Temperatura}
 La temperatura modifica $\rho$ in quanto al crescere della temperatura i nuclei degli elettroni si muovono più velocemente e gli urti con gli elettroni diventano più probabili. L'aumento di resistività del tipo:
 \begin{equation*}\rho(T)=\rho_0\left[1+a\left(T-T_0\right)+b\left(T-T_0\right)^2+c\left(T-T_0\right)^3+\cdots\right]\end{equation*}
@@ -1755,6 +1787,10 @@ Si crea allora un accumulo di cariche da un lato e del segno opposto sull'altro:
 Ricordando l'espressione di $v_D$:
 \begin{equation*}v_D=\frac{J}{Ne}=\frac{I}{SNe}=\frac{I}{wtNe}\end{equation*}
 \begin{equation*}\Delta V_H=E_Hw=\frac{I}{tNe}B\end{equation*}
+Si può definire una\index{resistenza!di Hall} resistenza di Hall:
+\begin{equation*}
+ R_H = \frac{\Delta V_H}{I}=\frac{1}{tNe}B
+\end{equation*}
 \end{Es}
 
 \section{Momento su un circuito\index{momento!su un circuito}}
@@ -1774,6 +1810,7 @@ Definiamo il momento di dipolo magnetico\index{momento!di dipolo magnetico}:
 \begin{equation*}\ve m=IS\ve n\end{equation*}
 allora:
 \begin{equation*}\ve M=\ve m\times \ve B\end{equation*}
+che ricorda l'analoga espressione per il dipolo elettrico: $\ve M=\ve p\times\ve E$.
 \section{Ago magnetico\index{ago magnetico}}
 Un ago magnetico immerso in un campo magnetico costante $\ve B$ si comporta come un circuito, cioè subisce un momento che lo fa disporre parallelamente alle linee del campo:
 \begin{equation*}\ve M=\ve K\times\ve B\end{equation*}
@@ -1813,7 +1850,7 @@ con:
 \subsection{Prima formula di Laplace\index{prima formula di Laplace}\index{Laplace}}
 La prima legge di Laplace stabilisce che un elemento $\ud \ve l$ di circuito percorso da una corrente $I$ produce in un punto $P$ distate $\ve r$ da esso un vettore di induzione magnetica:
 \begin{equation}
-\ud\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\frac{\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}I
+\ud\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \end{equation}
 Per un circuito generico possiamo usare il principio di sovrapposizione con tutti gli elementini $\ud\ve l$  del circuito:
 \begin{equation}
@@ -1932,7 +1969,7 @@ Dalla \eqref{pre_ampere} possiamo dire:
 \end{equation}
 e definire l'ampere usando solo quantità meccaniche come la forza e la distanza:
 \begin{Def}[ampere]
-l'ampere è quella corrente che passando tra due fili distanti $\unita{1}\meter$ produce una forza per unità di lunghezza pari a \unita{2\times 10^{-7}}\newton.
+l'ampere è quella corrente che passando tra due fili distanti $\unita{1}\meter$ produce una forza per unità di lunghezza pari a \unita{2\times 10^{-7}}\newton\per\meter.
 \end{Def}
 
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
@@ -1988,6 +2025,10 @@ In forma differenziale:
 \end{equation}
 Questa espressione poteva essere ricavata calcolando:
 \begin{equation*}\diver\ve B=\diver \left\{\frac{\mu_0}{4\pi}\int\frac{\ve J\left(\ve r\,'\right)\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'\right\}=0\end{equation*}
+%\begin{align*}
+%\ve\nabla\cdot\ve B &= \frac{\mu_0}{4\pi}\int\ve\nabla\cdot\frac{\ve J\left(\ve r\,'\right)\times\left(\ve %r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'\\
+%&=
+%\end{align*}
 \section{Maxwell per la magnetostatica}
 \begin{gather}
 \ve\nabla\cdot\ve B=0\\
