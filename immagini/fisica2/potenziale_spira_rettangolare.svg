@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="480"
+   viewBox="0 0 600 480"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="potenziale_spira_rettangolare.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata115">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="748"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.90166667"
+     inkscape:cx="478.0037"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg2" />
+  <desc
+     id="desc4">Produced by GNUPLOT 4.2 patchlevel 3  </desc>
+  <defs
+     id="defs6">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3268"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path3265"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 240 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="600 : 240 : 1"
+       inkscape:persp3d-origin="300 : 160 : 1"
+       id="perspective117" />
+    <circle
+       id="gpDot"
+       r="1" />
+    <path
+       id="gpPt0"
+       style="stroke-width:0.222"
+       d="M-1,0 h2 M0,-1 v2" />
+    <path
+       id="gpPt1"
+       style="stroke-width:0.222"
+       d="M-1,-1 L1,1 M1,-1 L-1,1" />
+    <path
+       id="gpPt2"
+       style="stroke-width:0.222"
+       d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1" />
+    <rect
+       id="gpPt3"
+       style="stroke-width:0.222"
+       x="-1"
+       y="-1"
+       width="2"
+       height="2" />
+    <use
+       xlink:href="#gpPt3"
+       id="gpPt4"
+       style="fill:currentColor; stroke:none" />
+    <circle
+       id="gpPt5"
+       style="stroke-width:0.222"
+       cx="0"
+       cy="0"
+       r="1" />
+    <use
+       xlink:href="#gpPt5"
+       id="gpPt6"
+       style="fill:currentColor; stroke:none" />
+    <path
+       id="gpPt7"
+       style="stroke-width:0.222"
+       d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z" />
+    <use
+       xlink:href="#gpPt7"
+       id="gpPt8"
+       style="fill:currentColor; stroke:none" />
+    <use
+       xlink:href="#gpPt7"
+       id="gpPt9"
+       transform="rotate(180)" />
+    <use
+       xlink:href="#gpPt9"
+       id="gpPt10"
+       style="fill:currentColor; stroke:none" />
+    <use
+       xlink:href="#gpPt3"
+       id="gpPt11"
+       transform="rotate(45)" />
+    <use
+       xlink:href="#gpPt11"
+       id="gpPt12"
+       style="fill:currentColor; stroke:none" />
+  </defs>
+  <g
+     style="fill:none; color:white; stroke:white; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g22" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g24">
+    <path
+       d="M67.1,426.0 L76.1,426.0 M574.4,426.0 L565.4,426.0 "
+       id="path26" />
+    <g
+       transform="translate(58.8,430.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g28">
+      <text
+         id="text30"> 0.01</text>
+    </g>
+    <path
+       d="M67.1,392.7 L71.6,392.7 M574.4,392.7 L569.9,392.7 M67.1,373.2 L71.6,373.2 M574.4,373.2 L569.9,373.2    M67.1,359.4 L71.6,359.4 M574.4,359.4 L569.9,359.4 M67.1,348.6 L71.6,348.6 M574.4,348.6 L569.9,348.6    M67.1,339.9 L71.6,339.9 M574.4,339.9 L569.9,339.9 M67.1,332.5 L71.6,332.5 M574.4,332.5 L569.9,332.5    M67.1,326.0 L71.6,326.0 M574.4,326.0 L569.9,326.0 M67.1,320.4 L71.6,320.4 M574.4,320.4 L569.9,320.4    M67.1,315.3 L76.1,315.3 M574.4,315.3 L565.4,315.3 "
+       id="path32" />
+    <g
+       transform="translate(58.8,319.8)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g34">
+      <text
+         id="text36"> 0.1</text>
+    </g>
+    <path
+       d="M67.1,282.0 L71.6,282.0 M574.4,282.0 L569.9,282.0 M67.1,262.5 L71.6,262.5 M574.4,262.5 L569.9,262.5    M67.1,248.7 L71.6,248.7 M574.4,248.7 L569.9,248.7 M67.1,238.0 L71.6,238.0 M574.4,238.0 L569.9,238.0    M67.1,229.2 L71.6,229.2 M574.4,229.2 L569.9,229.2 M67.1,221.8 L71.6,221.8 M574.4,221.8 L569.9,221.8    M67.1,215.4 L71.6,215.4 M574.4,215.4 L569.9,215.4 M67.1,209.7 L71.6,209.7 M574.4,209.7 L569.9,209.7    M67.1,204.6 L76.1,204.6 M574.4,204.6 L565.4,204.6 "
+       id="path38" />
+    <g
+       transform="translate(58.8,209.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g40">
+      <text
+         id="text42"> 1</text>
+    </g>
+    <path
+       d="M67.1,171.3 L71.6,171.3 M574.4,171.3 L569.9,171.3 M67.1,151.8 L71.6,151.8 M574.4,151.8 L569.9,151.8    M67.1,138.0 L71.6,138.0 M574.4,138.0 L569.9,138.0 M67.1,127.3 L71.6,127.3 M574.4,127.3 L569.9,127.3    M67.1,118.5 L71.6,118.5 M574.4,118.5 L569.9,118.5 M67.1,111.1 L71.6,111.1 M574.4,111.1 L569.9,111.1    M67.1,104.7 L71.6,104.7 M574.4,104.7 L569.9,104.7 M67.1,99.0 L71.6,99.0 M574.4,99.0 L569.9,99.0    M67.1,94.0 L76.1,94.0 M574.4,94.0 L565.4,94.0 "
+       id="path44" />
+    <g
+       transform="translate(58.8,98.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g46">
+      <text
+         id="text48"> 10</text>
+    </g>
+    <path
+       d="M67.1,60.6 L71.6,60.6 M574.4,60.6 L569.9,60.6 M67.1,41.2 L71.6,41.2 M574.4,41.2 L569.9,41.2    M67.1,27.3 L71.6,27.3 M574.4,27.3 L569.9,27.3 M67.1,16.6 L71.6,16.6 M574.4,16.6 L569.9,16.6    M117.8,426.0 L117.8,417.0 M117.8,16.6 L117.8,25.6 "
+       id="path50" />
+    <g
+       transform="translate(117.8,448.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g52">
+      <text
+         id="text54">-4</text>
+    </g>
+    <path
+       d="M219.3,426.0 L219.3,417.0 M219.3,16.6 L219.3,25.6 "
+       id="path56" />
+    <g
+       transform="translate(219.3,448.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g58">
+      <text
+         id="text60">-2</text>
+    </g>
+    <path
+       d="M320.8,426.0 L320.8,417.0 M320.8,16.6 L320.8,25.6 "
+       id="path62" />
+    <g
+       transform="translate(320.8,448.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g64">
+      <text
+         id="text66"> 0</text>
+    </g>
+    <path
+       d="M422.2,426.0 L422.2,417.0 M422.2,16.6 L422.2,25.6 "
+       id="path68" />
+    <g
+       transform="translate(422.2,448.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g70">
+      <text
+         id="text72"> 2</text>
+    </g>
+    <path
+       d="M523.7,426.0 L523.7,417.0 M523.7,16.6 L523.7,25.6 "
+       id="path74" />
+    <g
+       transform="translate(523.7,448.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g76">
+      <text
+         id="text78"> 4</text>
+    </g>
+    <path
+       d="M67.1,16.6 L67.1,426.0 L574.4,426.0 L574.4,16.6 L67.1,16.6 Z "
+       id="path80" />
+    <g
+       transform="translate(320.7,475.5)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle"
+       id="g82">
+      <text
+         id="text84">z</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:red; stroke:red; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g86" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g88">
+    <g
+       transform="translate(507.3,39.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g90">
+      <text
+         id="text92">esatto</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:red; stroke:red; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g94">
+    <path
+       d="M515.6,34.6 L557.8,34.6 M67.1,407.1 L72.2,404.4 L77.3,401.5 L82.5,398.6 L87.6,395.7 L92.7,392.6    L97.8,389.6 L103.0,386.4 L108.1,383.2 L113.2,380.0 L118.3,376.6 L123.5,373.2 L128.6,369.7 L133.7,366.2    L138.8,362.5 L144.0,358.8 L149.1,355.0 L154.2,351.1 L159.3,347.1 L164.5,343.0 L169.6,338.8 L174.7,334.5    L179.8,330.0 L185.0,325.5 L190.1,320.8 L195.2,316.1 L200.3,311.1 L205.5,306.1 L210.6,300.9 L215.7,295.6    L220.8,290.1 L226.0,284.5 L231.1,278.7 L236.2,272.8 L241.3,266.8 L246.4,260.6 L251.6,254.3 L256.7,247.9    L261.8,241.4 L266.9,234.9 L272.1,228.5 L277.2,222.1 L282.3,215.8 L287.4,209.9 L292.6,204.4 L297.7,199.4    L302.8,195.1 L307.9,191.7 L313.1,189.3 L318.2,188.1 L323.3,188.1 L328.4,189.3 L333.6,191.7 L338.7,195.1    L343.8,199.4 L348.9,204.4 L354.1,209.9 L359.2,215.8 L364.3,222.1 L369.4,228.5 L374.6,234.9 L379.7,241.4    L384.8,247.9 L389.9,254.3 L395.1,260.6 L400.2,266.8 L405.3,272.8 L410.4,278.7 L415.5,284.5 L420.7,290.1    L425.8,295.6 L430.9,300.9 L436.0,306.1 L441.2,311.1 L446.3,316.1 L451.4,320.8 L456.5,325.5 L461.7,330.0    L466.8,334.5 L471.9,338.8 L477.0,343.0 L482.2,347.1 L487.3,351.1 L492.4,355.0 L497.5,358.8 L502.7,362.5    L507.8,366.2 L512.9,369.7 L518.0,373.2 L523.2,376.6 L528.3,380.0 L533.4,383.2 L538.5,386.4 L543.7,389.6    L548.8,392.6 L553.9,395.7 L559.0,398.6 L564.2,401.5 L569.3,404.4 L574.4,407.1 "
+       id="path96" />
+  </g>
+  <g
+     style="fill:none; color:blue; stroke:blue; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g98" />
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g100">
+    <g
+       transform="translate(507.3,57.1)"
+       style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end"
+       id="g102">
+      <text
+         id="text104">dipolo</text>
+    </g>
+  </g>
+  <g
+     style="fill:none; color:blue; stroke:blue; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g106">
+    <path
+       d="M515.6,52.6 L557.8,52.6 M67.1,403.4 L72.2,400.5 L77.3,397.5 L82.5,394.4 L87.6,391.3 L92.7,388.1    L97.8,384.8 L103.0,381.4 L108.1,378.0 L113.2,374.5 L118.3,370.9 L123.5,367.2 L128.6,363.4 L133.7,359.5    L138.8,355.5 L144.0,351.3 L149.1,347.1 L154.2,342.7 L159.3,338.2 L164.5,333.6 L169.6,328.8 L174.7,323.8    L179.8,318.6 L185.0,313.3 L190.1,307.8 L195.2,302.0 L200.3,296.0 L205.5,289.7 L210.6,283.2 L215.7,276.3    L220.8,269.1 L226.0,261.5 L231.1,253.5 L236.2,245.0 L241.3,236.0 L246.4,226.4 L251.6,216.0 L256.7,205.0    L261.8,192.9 L266.9,179.8 L272.1,165.4 L277.2,149.3 L282.3,131.3 L287.4,110.7 L292.6,86.6 L297.7,57.6    L302.8,21.4 L303.3,16.6 M338.2,16.6 L338.7,21.4 L343.8,57.6 L348.9,86.6 L354.1,110.7 L359.2,131.3    L364.3,149.3 L369.4,165.4 L374.6,179.8 L379.7,192.9 L384.8,205.0 L389.9,216.0 L395.1,226.4 L400.2,236.0    L405.3,245.0 L410.4,253.5 L415.5,261.5 L420.7,269.1 L425.8,276.3 L430.9,283.2 L436.0,289.7 L441.2,296.0    L446.3,302.0 L451.4,307.8 L456.5,313.3 L461.7,318.6 L466.8,323.8 L471.9,328.8 L477.0,333.6 L482.2,338.2    L487.3,342.7 L492.4,347.1 L497.5,351.3 L502.7,355.5 L507.8,359.5 L512.9,363.4 L518.0,367.2 L523.2,370.9    L528.3,374.5 L533.4,378.0 L538.5,381.4 L543.7,384.8 L548.8,388.1 L553.9,391.3 L559.0,394.4 L564.2,397.5    L569.3,400.5 L574.4,403.4 "
+       id="path108" />
+  </g>
+  <g
+     style="fill:none; color:black; stroke:black; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter"
+     id="g110">
+    <path
+       d="M67.1,16.6 L67.1,426.0 L574.4,426.0 L574.4,16.6 L67.1,16.6 Z "
+       id="path112" />
+  </g>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
+     d="M 321.62662,361.33087 L 423.65989,361.33087"
+     id="path2490" />
+  <text
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+     x="334.45087"
+     y="349.84103"
+     id="text4563"><tspan
+       sodipodi:role="line"
+       id="tspan4565"
+       x="334.45087"
+       y="349.84103">a = b</tspan></text>
+</svg>

@@ -1854,7 +1854,7 @@ La prima legge di Laplace stabilisce che un elemento $\ud \ve l$ di circuito per
 \end{equation}
 Per un circuito generico possiamo usare il principio di sovrapposizione con tutti gli elementini $\ud\ve l$  del circuito:
 \begin{equation}
-\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\oint_C\frac{\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
+\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\oint_C I\frac{\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \label{campo_spira_laplace}
 \end{equation}
 Essendo $I\ud \ve l=\ve J\ud v$:
@@ -1862,11 +1862,12 @@ Essendo $I\ud \ve l=\ve J\ud v$:
 \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int\frac{\ve J\left(\ve r\,'\right)\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'
 \end{equation}
 \begin{Es}[filo infinito\index{filo infinito}]
+\label{Es:filo_infinito}
+Ricaviamo la legge di Biot--Savart. Chiamiamo $\ve r$ la distanza di $P$ dall'elementino $\ud l$ e $R$ la distanza dal filo. Allora:
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica2/magneto_filo}
 \end{figure}
-Ricaviamo la legge di Biot--Savart. Chiamiamo $\ve r$ la distanza di $P$ dall'elementino $\ud l$ e $R$ la distanza dal filo. Allora:
 \begin{equation*}\ud \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud\ve l\times\ve r}{\norm{\ve r}^3}\qquad\ud B\left(\ve r\right)=\frac{\mu_0}{4\pi}I\frac{\ud l\sin\theta}{r^2}\end{equation*}
 ma:
 \begin{equation*}r=\frac{R}{\sin\theta}\qquad l=\frac{R}{\tan\left(\pi-\theta\right)}=-\frac{R}{\tan\theta}\qquad \ud l=\frac{R}{\sin^2\theta}\ud\theta\end{equation*}
@@ -1916,11 +1917,103 @@ Allora:
 &=\dfrac{\mu_0NI}{2R}\ver e_w\left(\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}+\dfrac{\frac{l}{2}+w'}{\sqrt{1+\left(\frac{\frac{l}{2}+w'}{R}\right)^2}}\right)
 \end{align*}
 che rappresenta il campo magnetico generato da un solenoide di lunghezza $l$, se $l\to\infty$:
-\begin{equation*}\ve B=\mu_0IN\end{equation*}
+\begin{equation*}\ve B=\mu_0IN\ver e_w\end{equation*}
 Infatti per esempio, usando al primo passaggio H\^{o}pital:
 \begin{multline*}\lim_{l\to\infty}\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}=\lim_{l\to\infty}\frac{1}{\left[1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2\right]^{\frac{l}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}\\
 =\lim_{l\to\infty}\frac{1}{\left[\left(\frac{\frac{l}{2}-2'}{R}\right)^2\left(\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}+1\right)\right]^{-\frac{1}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}=\lim_{l\to\infty}\frac{1}{\left(1+\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}\right)^{-\frac{1}{2}}}=1
 \end{multline*}
+\begin{Es}[Spira rettangolare]
+ Sia una spira rettangolare di lati $a$, $b$ percorsa dalla corrente $I$. Vogliamo calcolare il campo magnetico generato lungo il suo asse, al variare di $z$.
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.4]{immagini/fisica2/spira_rettangolare}
+ % spira_quadrata.pdf: 421x264 pixel, 72dpi, 14.85x9.31 cm, bb=0 0 421 264
+\end{figure}
+È opportuno calcolare prima il campo generato da ciascun lato. Prendiamo quindi un filo di lunghzza $l$ e calcoliamo il campo sul suo asse, ad una distanza $R$, che cosideriamo l'origine del nostro sistema ($\ve r=0$).
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.6]{immagini/fisica2/filo_spiraquadrata}
+ % filo_spiraquadrata.pdf: 157x266 pixel, 72dpi, 5.54x9.38 cm, bb=0 0 157 266
+\end{figure}
+Il campo generato da un elementino:
+\begin{equation*}
+ \ud\ve B = \frac{\mu_0}{4\pi}I\frac{\ud\ve l\times(\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}=\frac{\mu_0}{4\pi}I\frac{\ud\ve l\times(-\ve r')}{r'^3}
+\end{equation*}
+il modulo:
+\begin{equation*}
+ \ud B = \frac{\mu_0}{4\pi}I\frac{\ud l\sin\theta}{r'^2}
+\end{equation*}
+scriviamo tutto in funzione dell'angolo $\theta$, variabile sulla quale integreremo:
+\begin{equation*}
+ \frac{1}{r'^2} = \frac{\sin^2\theta}{R^2}\qquad l = -R\cot\theta\qquad\ud l = \frac{R}{\sin^2\theta}\ud\theta
+\end{equation*}
+\begin{equation*}
+ \ud B = \frac{\mu_0}{4\pi}\frac{\sin\theta}{R}\,\ud\theta
+\end{equation*}
+Il campo totale\footnote{Si poteva anche integrale in $\ud l$ tra $\pm\frac{L}{2}$ usando $r'=\sqrt{R^2+l^2}$ e $\sin\theta=\frac{R}{\sqrt{R^2+l^2}}$:
+\begin{equation*}
+ B = \frac{\mu_0}{4\pi}I\int_{-\frac{L}{2}}^{\frac{L}{2}}\ud l\frac{R}{(R^2+l^2)^{3/2}}=\frac{\mu_0}{4\pi}\frac{I}{R}\int\frac{1}{\cosh^2 x}\,\ud x=\frac{\mu_0}{4\pi}\frac{I}{R}\left[\frac{l/R}{\sqrt{1+\left(l/R\right)^2}}\right]_{-L/2}^{L/2}
+\end{equation*}
+avendo usato la sostituzione $\sinh x=\frac{l}{R}$.
+}:
+\begin{equation*}
+ B = \frac{\mu_0}{4\pi R}I\int_{\theta_\text{min}}^{\theta_\text{max}}\sin\theta\ud\theta
+\end{equation*}
+con $\theta_\text{min}\in (0,\frac{\pi}{2})$ e $\theta_\text{max}\in (\frac{\pi}{2},\pi)$. Per simmetria il campo generato dalla metà inferiore del filo è uguale a quello generato dalla parte superiore:
+\begin{equation*}
+ B = 2\left[\frac{\mu_0}{4\pi R}I\int_{0}^{\theta_\text{max}}\sin\theta\ud\theta\right]= 2\left[-\frac{\mu_0}{4\pi R}I\cos\theta_\text{max}\right]=\frac{\mu_0}{2\pi R}I\frac{L/2}{\sqrt{R^2+(L/2)^2}}
+\end{equation*}
+con
+\begin{equation*}
+ \cos(\pi-\theta_\text{max})=-\cos\theta_\text{max} = \frac{L/2}{r_\text{max}'}=\frac{L/2}{\sqrt{R^2+(L/2)^2}}
+\end{equation*}
+vettorialmente:
+\begin{equation*}
+ \ve B = \frac{\mu_0}{2\pi R}I\frac{L/2}{\sqrt{R^2+(L/2)^2}}\ver u_\theta
+\end{equation*}
+Fin qui, abbiamo in pratica rifatto l'esempio \ref{Es:filo_infinito}. Ritornando alla spira rettangolare l'unica cosa da fare è sommare i contributi dei singoli lati:
+\begin{align*}
+ B_1 = B_3 &= \frac{\mu_0}{2\pi R_b}I\frac{b/2}{\sqrt{R_b^2+(b/2)^2}}\\
+ B_2 = B_4 &= \frac{\mu_0}{2\pi R_a}I\frac{a/2}{\sqrt{R_a^2+(a/2)^2}}\\
+\end{align*}
+\begin{figure}[htbp]
+ \centering
+ \subfigure{\includegraphics[scale=0.4]{immagini/fisica2/spira_rettangolare2}}
+ % spira_rettangolare2.pdf: 421x418 pixel, 72dpi, 14.85x14.75 cm, bb=0 0 421 418
+ \qquad
+ \subfigure{\includegraphics[scale=0.2]{immagini/fisica2/spira_rettangolare3}}
+\end{figure}
+con:
+\begin{equation*}
+ R_b = \sqrt{z^2+(a/2)^2}\qquad R_a = \sqrt{z^2+(b/2)^2}
+\end{equation*}
+Sommando vettorialmente le uniche componenti che non si annullano sono quelle lungo l'asse $z$:
+\begin{equation*}
+ B_{1,z} = B_{3,z} = B_1\cos\alpha\qquad\cos\alpha = \frac{a/2}{R_b}
+\end{equation*}
+l'angolo $\alpha$ tra $\ve B_1$ e l'asse $z$ è lo stesso tra la base $a$ e l'ipotenusa $R_b$ del triangolo evidenziato in figura; questo perché sono legati da una rotazione di 90 gradi (la tangente e il raggio sono sempre perpendicolari).
+\begin{equation*}
+ B_{1,z} = B_{3,z} = \frac{\mu_0}{8\pi}\frac{I}{R_b^2}\frac{ab}{\sqrt{R_b^2+(b/2)^2}} = \frac{\mu_0}{8\pi}\frac{I}{z^2+(a/2)^2}\frac{ab}{\sqrt{z^2+(a/2)^2+(b/2)^2}}
+\end{equation*}
+e analogamente per gli altri due lati. Infine il campo totale:
+\begin{equation*}
+ \ve B = 2\frac{\mu_0}{8\pi}\frac{Iab}{\sqrt{z^2+(a/2)^2+(b/2)^2}}\left[\frac{1}{z^2+(a/2)^2}+\frac{1}{z^2+(b/2)^2}\right]\ver u_z
+\end{equation*}
+a grande distanza, $z\gg a,b$:
+\begin{equation*}
+ \ve B (z\gg a,b) = \frac{\mu_0}{2\pi}\frac{Iab}{|z|^3}\ver u_z
+\end{equation*}
+se introduciamo il momento magnetico della spira $\ve m=Iab\ver u_z$:
+\begin{equation*}
+ \ve B (z\gg a,b) = \frac{\mu_0}{4\pi}\frac{2\ve m}{|z|^3}
+\end{equation*}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica2/potenziale_spira_rettangolare}
+ % potenziale_spira_rettangolare.: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+ \caption{Potenziale di una spira quadrata di lato $a=2$ esatto e in approssimazione di dipolo. La scala delle ordinate è logaritmica e le unità sono arbitrarie}
+\end{figure}
+\end{Es}
 
 \subsection{Forze tra due circuiti\index{forza!tra circuiti}}
 Prendiamo due circuiti generici $C_1$ e $C_2$ percorsi da correnti stazionarie $I_1$ e $I_2$. Usando la prima formula di Laplace possiamo dire che la forza che l'elementino $\ud\ve l_2$ del secondo circuito risente del campo magnetico del primo è 
