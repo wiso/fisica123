@@ -37,8 +37,9 @@ $(IND):
 	echo ************************
 	echo     creazione indice
 	echo ************************
-	$(LATEX) $(MAIN_SOURCE)
+	$(PDFLATEX) $(MAIN_SOURCE)
 	$(MAKEINDEX) $(IDX)
+#TODO: PDFLATEX / LATEX
 
 $(BBL): $(TEXSRC) $(BIBSRC)
 	$(LATEX) $(TARGET).tex
