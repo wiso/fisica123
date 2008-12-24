@@ -3,17 +3,17 @@ SVGS = $(wildcard *.svg) $(wildcard */*.svg)
 PDFS = $(FIGS:.fig=.pdf) $(SVGS:.svg=.pdf)
 EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps)
 
-images: pdf eps
+images: pdf_images eps_images
 
-remove_pdf:
+remove_pdf_images:
 	rm $(PDFS) --force
 
-remove_eps:
+remove_eps_images:
 	rm $(EPSS) --force
 
-pdf: $(PDFS)
+pdf_images: $(PDFS)
 
-eps: $(EPSS)
+eps_images: $(EPSS)
 
 %.pdf: %.fig
 	fig2dev -L pdf $< $@ 

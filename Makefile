@@ -1,36 +1,51 @@
 # sperimentale
-NAME	= fisica_linux 
-SOURCE	= fisica_linux.tex
-OUTDVI  = $(SOURCE:.tex=.dvi)
-OUTPDF	= $(SOURCE:.tex=.pdf)
-IST	= $(SOURCE:.tex=.ist)
-IND	= $(SOURCE:.tex=.ind)
-IDX	= $(SOURCE:.tex=.idx)
 
+NAME	= fisica_linux
+MAIN_SOURCE	= $(NAME).tex
+OUTDVI  = $(NAME).dvi
+OUTPDF	= $(NAME).pdf
+IST	= $(NAME).ist
+IND	= $(NAME).ind
+IDX	= $(NAME).idx
+BBL	= $(NAME).bbl
 
-dvi:	$(SOURCE) $(IND) $(OUTDVI)
+LATEX	= latex
+PDFLATEX = pdflatex
+BIBTEX	= bibtex
+MAKEINDEX = makeindex
 
-pdf:	$(SOURCE) $(IND) $(OUTPDF)
+pdf:	$(MAIN_SOURCE) $(IND) pdf_images $(OUTPDF)
 
-$(OUTPDF):	$(SOURCE) $(IND)
-	pdflatex $(SOURCE)
+dvi:	$(MAIN_SOURCE) $(IND) eps_images $(OUTDVI)
 
-$(OUTDVI):	$(SOURCE) $(IND)
-	latex $(SOURCE)
+images: pdf_images eps_images
 
-$(IND):	$(IST)
+pdf_images:
+	@$(MAKE) -C immagini pdf_images
+
+eps_images:
+	@$(MAKE) -C immagini eps_images
+
+$(OUTPDF):	$(MAIN_SOURCE) $(IND)
+	$(PDFLATEX) $(MAIN_SOURCE)
+	@while (grep "Rerun to get cross-references" $(NAME).log > /dev/null ); do echo '** Re-running LaTeX **'; $(PDFLATEX) $(MAIN_SOURCE); done
+
+$(OUTDVI):	$(MAIN_SOURCE) $(IND)
+	$(LATEX) $(MAIN_SOURCE)
+
+$(IND):	
 	echo ************************
 	echo     creazione indice
 	echo ************************
-	latex $(SOURCE)
-	makeindex -s $(IST) $(IDX)
+	$(LATEX) $(MAIN_SOURCE)
+	$(MAKEINDEX) $(IDX)
 
-$(TARGET).bbl: $(TEXSRC) $(BIBSRC)
-	latex $(TARGET).tex
-	bibtex $(TARGET)
+$(BBL): $(TEXSRC) $(BIBSRC)
+	$(LATEX) $(TARGET).tex
+	$(BIBTEX) $(TARGET)
 
 clean:
-	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc
+	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc *.tex~ TeX/*.tex~ TeX/*.aux TeX/*.backup TeX/*.bak
 
 tar:	
 	clean
