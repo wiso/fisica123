@@ -725,15 +725,18 @@ L=\Delta E
 \end{equation}
 \subsection{Relazione di Mayer\index{Mayer}\index{relazione!di Mayer}}
 \label{mayer}
-\begin{figure}[!htbp]
+Mostriamo la relazione tra $c_V$ e $c_p$. Consideriamo una trasformazione isocora e una isobara che partono dalla stessa situazione iniziale, e arrivano in configurazioni diverse, ma con la stessa temperatura:
+\begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/pV2_win}
 \end{figure}
-\begin{equation*}A\rightarrow B\quad V=\const\quad \text{I}\end{equation*}
-\begin{equation*}A\rightarrow C\quad p=\const\quad \text{II}\end{equation*}
+\begin{align*}
+A\rightarrow B&\quad&V=\const&\quad&\text{I}\\
+A\rightarrow C&\quad&p=\const&\quad&\text{II}
+\end{align*}
 \begin{equation*}\Delta E_I=Q_I+L_I=Q_I=nc_V\Delta T\end{equation*}
 \begin{equation*}\Delta E_{II}=Q_{II}+L_{II}=nc_p\Delta T-p\Delta V\end{equation*}
-$E_B=E_C$ perché $E$ dipende solo da $T$
+$E_B=E_C$ perché $E$ dipende solo da $T$, quindi:
 \begin{equation*}\Delta E_I=\Delta E_{II}\end{equation*}
 \begin{equation*}nc_V\Delta T=nc_p\Delta T-p\Delta V\end{equation*}
 \begin{equation*}nc_V\Delta T=nc_p\Delta T-nR\Delta T\end{equation*}
@@ -752,17 +755,18 @@ per una isocora che lavora alle stesse temperature $\ud E=\delta Q=nc_V\ud T$
 \begin{equation*}\log\frac{T_f}{T_i}=\frac{c_V-c_p}{c_V}\log\frac{V_f}{V_i}=(1-\gamma)\log\frac{V_f}{V_i}\end{equation*}
 \begin{equation*}\log\frac{T_f}{T_i}=\log\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\end{equation*}
 \begin{equation*}\frac{T_f}{T_i}=\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\qquad T_fV_f^{\gamma-1}=T_iV_i^{\gamma-1}\qquad\end{equation*}
-\begin{equation*}TV^{\gamma-1}=\const \qquad PVV{\gamma-1}=\const\end{equation*}
+\begin{equation*}TV^{\gamma-1}=\const\end{equation*}
+usando $PV=nRT$ e quindi $T=\const PV$:
+\begin{equation*}PVV^{\gamma-1}=\const\end{equation*}
 \begin{equation}
 PV^\gamma=\const\quad\text{Relazione di Poisson}
 \end{equation}
 
 
-
 \subsection{Trasformazioni politropiche\index{trasformazioni!politropiche}}
 Nelle trasformazioni politropiche $c$ è ritenuto costante.
 \begin{equation*}\ud E=\delta Q+\delta L=nc\ud T-p\ud V\end{equation*}
-\begin{equation*}\text{per una isocora}\quad \ud E=nc_V\ud T\end{equation*}
+Il ragionamento è simile a quanto fatto con le adiabatiche; consideriamo una trasformazione isocora che lavora tra le stesse temperature $\ud E=nc_V\ud T$
 \begin{equation*}nc\ud T-p\ud V=nc_V\ud T\end{equation*}
 \begin{equation*}nc\ud T-\frac{nRT}{V}\ud V=nc_V\ud T\end{equation*}
 \begin{equation*}(c_V-c)\ud T=-\frac{RT}{V}\ud V\quad \int_{T_0}^{T_f}\frac{c_V-c}{T}\ud T=-\int_{V_0}^{V_f}\frac{R}{V}\ud V\end{equation*}
@@ -791,10 +795,10 @@ Adiabatica&$pV^\gamma=\const$&$k=\gamma>1$&$c=0$\\
 \end{figure}
 
 \begin{center}
-\begin{tabular}{l|ccc}
+\begin{tabular}{lccc}
 &$L$&$Q$&$\Delta E$\\
 \hline
-Isoterma&$-nRT\log\frac{V_f}{V_0}$&$nRT\log\frac{V_f}{V_0}$&$0=nc_V\Delta T$\\
+Isoterma&$-nRT\log\frac{V_f}{V_0}$&$nRT\log\frac{V_f}{V_0}$&$nc_V\Delta T=0$\\
 Isocora&$0$&$nc_V\Delta T$&$nc_V\Delta T$\\
 Isobara&$-p\Delta V$&$nc_p\Delta T$&$nc_V\Delta T$\\
 Adiabatica&$nc_V\Delta T$&$0$&$nc_V\Delta T$\\
