@@ -138,13 +138,14 @@ v_z=|\ve v|\cos\gamma
 \subsubsection{Vettore inverso}
 Il vettore inverso ha stesso modulo del vettore, stessa direzione,
 ma verso opposto.
-$$-\ve v=-(v_x\ve i+v_y\ve j+v_z \ve k)=-v_x\ve i-v_y\ve
-j-v_z\ve k$$
+\begin{equation*}
+-\ve v=-(v_x\ve i+v_y\ve j+v_z \ve k)=-v_x\ve i-v_y\ve
+j-v_z\ve k
+\end{equation*}
 Naturalmente ogni vettore ha inverso e la loro somma è nulla e $-\ve 0=\ve 0$.
 
 \subsubsection{Somma}
-Per sommare due vettori per via geometrica si usa la regola del
-parallelogramma, per via analitica si sommano le componenti:
+La somma di due vettori è il vettore che ha come componenti la somma delle componenti. Dal punto di vista grafico equivale a usare la regolare del parallelogramma:
 \begin{multline*}
 \ve a+\ve b=(a_x\ve i+a_y\ve j+a_z \ve k)+(b_x\ve
 i+b_y\ve j+b_z\ve k)=\\
@@ -246,14 +247,14 @@ Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi semp
 \subsection{Vettore spostamento}
 \parbox[c]{\textwidth}{
 \begin{align*}
-\ve s\left(t,\Delta t\right)&=\Delta \ve r(t,\Delta t)\\
+\ve s\left(t,t+\Delta t\right)&=\Delta \ve r(t,t+\Delta t)\\
 &=\ve r\left(t+\Delta t\right)-\ve r\left(t\right)=x\left(t+\Delta t\right)\ve i+y\left(t+\Delta t\right)\ve j-x\left(t\right)\ve i-y\left(t\right)\ve j\\
 &=\left[x(t+\Delta t)-x(\Delta t)\right]\ve i+[y(t+\Delta t)-y(t)]\ve j=\Delta x\ve i+\Delta y \ve j
 \end{align*}
 }
 \section{\index{velocità}Vettore velocità}
 \begin{Def}[\index{velocità!media}Velocità Media]
-$$\ve v_m(t,t+\Delta t)=\frac{\Delta\ve r(t+\Delta t)}{\Delta
+$$\ve v_m(t,t+\Delta t)=\frac{\Delta\ve r(t,t+\Delta t)}{\Delta
 t}=\frac{1}{\Delta t}\{\Delta x\ve i+\Delta y\ve
 j\}=\frac{\Delta x}{\Delta t}\ve i+\frac{\Delta y}{\Delta t}\ve
 j$$
@@ -385,9 +386,15 @@ componenti:
 \theta$
 \end{enumerate}
 \section{\index{moto!armonico}Moto armonico}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.6]{immagini/fisica1/oscillatore_fase}
+ % oscillatore_fase.: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+ \caption{Traiettorie nello spazio delle configurazioni dell'oscillatore armonico a partire da diverse condizioni iniziali}
+\end{figure}
 Il moto armonico è un moto con equazione differenziale:
 \begin{equation*}\ddot x=-k x\end{equation*}
-cioè:
+la cui soluzione è:
 \begin{equation*}x=A\sin(\omega t+\varphi)\end{equation*}
 \begin{equation*}v=\frac{\ud x}{\ud t}=A\omega\cos(\omega t+\varphi)\end{equation*}
 \begin{equation*}a=\frac{\ud v}{\ud t}=-A\omega^2\sin(\omega t+\varphi)=-\omega^2 x=\ddot x\end{equation*}
@@ -395,6 +402,12 @@ cioè:
  Per esempi (pendoli, molle) vedi sezione \ref{armonico} a
 pagina \pageref{armonico}
 \subsection{Moto armonico smorzato\index{moto!armonico!smorzato}}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.6]{immagini/fisica1/oscillatore_smorzato_fase}
+ % oscillatore_smorzato_fase.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+ \caption{Traiettorie nello spazio delle configurazioni dell'oscillazione smorzato con coefficiente di attrito debole}
+\end{figure}
 Introduciamo nel moto armonico una forza smorzatrice, per esempio una forza d'attrito che varia con la velocità:
 \begin{equation*}F=-\gamma \frac{\ud x}{\ud t}\end{equation*}
 \begin{equation*}m\ddot x=-kx-\gamma\dot x\qquad m\ddot x+\gamma\dot x+kx=0\end{equation*}
@@ -422,7 +435,7 @@ a seconda che le radici del polinomio siano reali o complesse si possono disting
 \begin{equation*}s_{1/2}=\dfrac{-\dfrac{1}{\tau}\pm\sqrt{\dfrac{1}{\tau^2}-4\omega_0^2}}{2}=-\frac{1}{2\tau}\pm i\omega\end{equation*}
 \begin{align*}x(t)&=A_1e^{s_1it}+A_2e^{s_2it}=A_1e^{-\frac{t}{2\tau}-i\omega t}+A_2e^{-\frac{t}{2\tau}+i\omega t}=\\
 &=e^{-\frac{t}{2\tau}}\left(A_1e^{-i\omega t}+A_2e^{i\omega t}\right)=A e^{-\frac{t}{2\tau}}\sin(\omega t +\varphi)\end{align*}
-quindi è un moto armonico con frequenza $\omega=\sqrt{\omega_0-\frac{1}{4\tau^2}}$ la cui ampiezza diminuisce con un fattore frenante $e^{-\frac{t}{2\tau}}$.\footnote{Il caso in cui ci siano due radici coincidenti è tralasciato poiché puntiforme}
+quindi è un moto armonico con frequenza $\omega=\sqrt{\omega_0-\frac{1}{4\tau^2}}$ la cui ampiezza diminuisce con un fattore frenante $e^{-\frac{t}{2\tau}}$.\footnote{Il caso critico in cui ci siano due radici coincidenti è tralasciato poiché puntiforme}
 \end{description}
 
 \section{\index{trasformazioni!di Galileo}Trasformazioni di Galileo}
@@ -625,7 +638,13 @@ T=2\pi\sqrt\frac{m}{k}=\frac{2\pi}{\omega}$$
 \begin{equation*}mg\sin\theta=-ml\frac{\ud^2\theta}{\ud t}\end{equation*}
 \begin{equation*}g\sin\theta=-l\frac{\ud^2\theta}{\ud t}\end{equation*}
 per piccole oscillazioni\footnote{è il primo sviluppo del polinomio di Taylor}: $\sin\theta\simeq\theta$
-\begin{equation*}g\theta=-l\frac{\ud^2\theta}{\ud t}\end{equation*}
+\begin{equation*}\frac{\ud^2\theta}{\ud t^2}=-\frac{g}{l}\theta\end{equation*}
+si noti che questa equazione altro non è che l'equazione di un oscillatore armonico\footnote{Questo succede sempre quando si considerano piccole oscillazioni nell'intorno di un punto di equilibrio stabile $x_0$:
+\begin{equation*}
+ m\ddot x \simeq \underbrace{F(x_0)}_0 + \left.\frac{\ud F}{\ud x}\right|_{x_0} (x-x_0) = k (x-x_0)
+\end{equation*}
+con $\left.\frac{\ud F}{\ud x}\right|_{x_0}=k<0$ perché è un punto di equilibrio stabile.
+}.
 $$g\theta=-l\ddot\theta\qquad \theta=A\sin\left(\omega
 t+\varphi\right)$$
 $$\theta=-\frac{l}{g}\,\ddot\theta\qquad\ddot\theta=-A\omega^2\sin\left(\omega
@@ -1108,13 +1127,13 @@ Il momento d'inerzia di una circonferenza rispetto al centro di massa è \mbox{$
 \begin{equation*}I_0=I_{CM}+MR^2=\frac{1}{2}MR^2+MR^2=\frac{3}{2}MR^2>I_{CM}\end{equation*}
 \end{Es}
 \section{\index{momento!di una forza}Momento di una forza}
-$$\text{Rispetto al polo $0$ fisso:}\quad\ve{\tau}_0=\ve r \times \ve F=\left |
-\begin{array}{lll}
-\ve i & \ve j & \ve k\\
-x & y & z\\
-F_x & F_y &F_z\\
-\end{array}
-\right|$$
+\begin{Def}[Momento di una forza]
+Il momento di una forza (o momento torcente) rispetto ad un polo fisso $O$
+ \begin{equation}
+  \ve{\tau}_O=\ve r \times \ve F
+ \end{equation}
+dove $\ve r$ è il vettore che individua il punto di applicazione dela forza rispetto al polo.
+\end{Def}
 \begin{equation*}\delta L=\ud K\qquad \ud \ve s=\ve r\ud \theta\end{equation*}
 \begin{equation*}\delta L=F\ud s\cos \phi=Fr\ud\theta\cos\phi\end{equation*}
 \begin{equation*}K=\frac{1}{2}I\omega^2\qquad\ud K=I\omega\ud\omega\end{equation*}
