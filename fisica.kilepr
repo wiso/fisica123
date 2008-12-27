@@ -68,19 +68,19 @@ order=15
 
 [item:TeX/fisica1_1modulo.tex]
 archive=true
-column=286
+column=75
 encoding=UTF-8
 highlight=LaTeX
-line=1136
+line=1608
 open=true
 order=1
 
 [item:TeX/fisica1_2modulo.tex]
 archive=true
-column=0
+column=17
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=885
 open=true
 order=2
 

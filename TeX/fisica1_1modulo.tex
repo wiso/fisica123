@@ -1243,40 +1243,38 @@ per il quale $\sum\stackrel{\text{Est}}{\ve F}=0$&$\ve P=\sum
 
 \chapter{Lavoro ed energia}
 \section{\index{lavoro}Lavoro definizione}
-Il lavoro è una grandezza scalare.
 \begin{Def}[lavoro]
 Definiamo lavoro $L$ fatto dalla $\ve F$ sul punto $P$ lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\ve F\cdot\ud\ve s$:
 \begin{equation}
 L=\int_\Gamma\ve F\cdot\ud \ve s
 \end{equation}
+Il lavoro è una grandezza scalare. Nel SI si misura in joule ($\joule$)\index{Joule}.
 \end{Def}
 Distinguiamo i seguenti casi particolari:
-\begin {enumerate}
-\item[a)]  Forza costante e parallela allo spostamento
+\begin{description}
+\item[Forza costante e parallela allo spostamento]
 \begin{equation*}L=Fs\end{equation*}
-
-\item[b)] Forza costante non parallela allo spostamento
+\item[Forza costante non parallela allo spostamento]
 \begin{equation*}L=Fs\cos\alpha=\ve F \cdot \ve s\end{equation*}
-
-\item[c)] Forza parallela ma variabile
+\item[Forza parallela ma variabile]
 \begin{equation*}L=\int_A^B F(x)\,\ud x\end{equation*}
-
-\item[d)] Forza variabile, traiettoria qualsiasi (caso generale)
+\item[Forza variabile, traiettoria qualsiasi (caso generale)]
 \begin{equation*}\delta L=\ve F\cdot\ud \ve s\end{equation*}
 \begin{equation*}{L=\int_A^B\delta L \quad \text{curvilineo}}\end{equation*}
-\end{enumerate}
+\end{description}
 \begin{Es}[attrito costante su traiettoria semicircolare]
 \begin{equation*}F_A=\mu N=\mu mg\quad \delta L=\ve F_A\cdot\ud \ve s=-\mu mg\ud s\end{equation*}
-$$L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud
-s=-\mu mg\pi R$$
+\begin{equation*}L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud
+s=-\mu mg\pi R\end{equation*}
 \end{Es}
 \subsection{Lavoro nei moti rotatori}
-Corpo rigido ruotante attorno ad un asse. $\ud s$ lo spostamento
-infinitesimale corrispondete a $\ud \theta$, $\phi$ l'angolo
+Consideriamo un corpo rigido ruotante attorno ad un asse. Sia $\ud s$ lo spostamento
+infinitesimo corrispondete a $\ud \theta$, $\phi$ l'angolo
 compreso tra la forza e il vettore $\ve r$:
-
-$$\delta L=(F\sin \phi)\ud s=(F \sin \phi)(r
-\ud\theta)=(rF\sin\phi)\ud \theta=\tau_z\ud\theta$$
+\begin{equation*}
+\delta L=(F\sin \phi)\ud s=(F \sin \phi)(r
+\ud\theta)=(rF\sin\phi)\ud \theta=\tau_z\ud\theta
+\end{equation*}
 \begin{equation*}L=\int_{\theta_i}^{\theta_f}\tau_z\ud\theta\end{equation*}
 Se durante la rotazione il momento torcente resta costante, il
 lavoro svolto da questo momento torcente è:
@@ -1318,7 +1316,7 @@ $$
 z}{\partial y^2}\qquad \frac{\partial^2 z}{\partial x\partial
 y}\qquad\frac{\partial^2 z}{\partial y\partial x}$$
 \begin{Teo}[Shwartz]
-Sotto opportune ipotesi\footnote{Sia $\Omega\subseteq\field{R}^n$ aperto e sia $f:\Omega\to\mathbb{R}$. Supponiamo che le derivate parziali miste $\frac{\partial^2 f}{\partial x_k\partial x_j}$, $\frac{\partial^2 f}{\partial x_j\partial x_k}$ esistano in un intorno $a\in\Omega$ e siano continue in $a$. Allora esse sono uguali in $a$} le derivate seconde parziali incrociate sono uguali:
+Sotto opportune ipotesi\footnote{Sia $\Omega\subseteq\field{R}^n$ aperto e sia $f:\Omega\to\mathbb{R}$. Supponiamo che le derivate parziali miste $\frac{\partial^2 f}{\partial x_k\partial x_j}$, $\frac{\partial^2 f}{\partial x_j\partial x_k}$ esistano in un intorno di $a\in\Omega$ e siano continue in $a$. Allora esse sono uguali in $a$} le derivate seconde parziali incrociate sono uguali:
 \begin{equation*}\frac{\partial^2 z}{\partial x\partial y}=\frac{\partial^2 z}{\partial y\partial x}\end{equation*}
 \end{Teo}
 \begin{Def}[\index{forma differenziale! lineare}Forma differenziale lineare]
@@ -1542,16 +1540,7 @@ U(P)&=-\frac{Gmm'}{2rR}\int_{R-r}^{r+R}\ud x=-\frac{Gmm'}{2rR}[r+R-R+r]\\
 Quindi un punto all'interno del guscio non risente di alcuna
 forza, questo lo si può dimostrare ragionando con in coni, in
 quanto per ogni cono le forze sono uguali.
-
-\begin{figure}[htbp]
-\centering
-\subfigure[Ideale]{\includegraphics[scale=0.6]{immagini/fisica1/gr_ideal_cava}}\quad
-\subfigure[Reale]{\includegraphics[scale=0.6]{immagini/fisica1/gr_real_cava}}
-\caption{Forza in una sfera cava ideale (a) e reale (b)}
-\end{figure}
-
 \subsection{Caso sfera piena}
-
 All'esterno:
 \begin{equation*}F=-G\frac{Mm'}{r^2}\end{equation*}
 Dentro:
@@ -1606,6 +1595,20 @@ schiacciamento dei poli. Per quanto riguarda la forza centrifuga
 questa è nulla ai poli e massima all'equatore quindi:
 \begin{equation*}F_C=m\omega^2R\qquad F_N=mg_{\text{polo}}\end{equation*}
 \begin{equation*}\frac{F_C}{F_N}=\frac{\omega^2R}{g_{\text{polo}}}=\frac{(2\pi)^2}{T^2}\frac{R}{g_{\text{polo}}}\end{equation*}
+\begin{Es}[Satelliti geostazionari]
+ I satelliti geostazionari sono satelliti che per il sistema di riferimento della Terra, sono fermi. Questo vuol dire che ha lo stesso periodo della Terra:
+\begin{equation*}
+ F = G\frac{Mm}{R^2} = m\frac{v^2}{R}\quad\Rightarrow v=\sqrt{\frac{GM}{R}}
+\end{equation*}
+\begin{equation*}
+ T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = \unita{1}\dday
+\end{equation*}
+\begin{equation*}
+ R = \sqrt[3]{\frac{GMT^2}{4\pi^2}}\simeq \unita{42\times 10^3}\kilo\meter
+\end{equation*}
+quindi l'altitudine sarà $d = R - R_\oplus\simeq 36\times 10^3\kilo\meter$.
+\end{Es}
+
 \section{\index{bilancia!di torsione}Misurazione della costante di gra\-vi\-ta\-zio\-ne u\-ni\-ver\-sa\-le}
 Cavendish con l'articolo ``Misura della massa terrestre'' nel
 1798 è il primo a misurare la costante di gravitazione universale
