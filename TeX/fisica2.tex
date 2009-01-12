@@ -1316,8 +1316,8 @@ In assenza di campo elettrico gli elettroni saranno in agitazione termica con un
 con $f=3$ gradi di libertà  $k$ costante di Boltzmann. Alla temperatura di $\unita{300}\kelvin$:
 \begin{equation*}v_T=\sqrt{\frac{3kT}{m}}\simeq \unita{10^5}\metrepersecond\end{equation*}
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
-\begin{equation*}\tau=\frac{l}{v_T}\end{equation*}
-Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
+\begin{equation*}l = \tau v_T\end{equation*}
+Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva\index{velocità!di deriva}, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
 \section{Densità di corrente}
 Consideriamo un conduttore con $N$ portatori di carica per unità di volume, tutti uguali, con carica $q$ e velocità di deriva $v_D$. Nel tempo $\ud t$ attraverso una sezione $\ud A$ passa una quantità di carica:
 \begin{equation}
@@ -1364,7 +1364,7 @@ la legge \eqref{conservazione della carica} è detta anche principio di continui
 \begin{equation*}\diver \ve J=0\end{equation*}
 e dunque $\ve J$ è un campo solenoidale, non ha sorgenti.
 \section{Conducibilità elettrica\index{conducibilità elettrica}}
-Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni; notare che $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N_0(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
+Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni, ovviamente $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N_0(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
 \begin{equation*}N(t+\ud t)=N(t)-N(t)\frac{\ud t}{\tau}\end{equation*}
 Facendo il primo sviluppo di Taylor:
 \begin{equation*}N(t+\ud t)=N(t)+\frac{\ud N}{\ud t}\ud t\end{equation*}
@@ -1373,16 +1373,15 @@ Confrontando:
 che rappresenta il numero di elettroni che hanno subito un urto nell'intervallo $\ud t$ dopo il tempo $t$.
 \begin{equation*}\frac{\ud N}{N}=-\frac{\ud t}{\tau}\ud t\end{equation*}
 Risolvendo:
-\begin{equation*}\log N(t)=-\frac{t}{\tau}+c\end{equation*}
-\begin{equation*}N(t)=e^{-\frac{t}{\tau}+c}=Ae^{-\frac{t}{\tau}}\end{equation*}
+\begin{equation*}\log N(t)=-\frac{t}{\tau}+c \qquad N(t)=e^{-\frac{t}{\tau}+c}=Ae^{-\frac{t}{\tau}}\end{equation*}
 Imponendo che $N(0)=N_0$:
 \begin{equation*}N(t)=N_0e^{-\frac{t}{\tau}}\end{equation*}
 Il numero di elettroni che non hanno subito una collisione decresce molto rapidamente. La probabilità che al tempo $t$ un elettrone non abbia subito collisioni è
 \begin{equation*}P(t)=\frac{N(t)}{N_0}=e^{\frac{-t}{\tau}}\end{equation*}
-Vogliamo ora sapere quanto tempo ci vuole ad avere un urto qualsiasi al tempo $t$:
+Vogliamo ora sapere quanto tempo ci vuole ad avere un urto qualsiasi dopo il tempo $t$:
 \begin{equation*}\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau\end{equation*}
 Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il successivo, sempre di quella particella, ma è anche il tempo medio che al tempo $t$ bisogna attendere per avere il primo urto tra due particelle qualsiasi. Naturalmente essendo indipendente dal tempo $\tau$ è anche il tempo medio dall'ultimo urto. Possiamo calcolare la velocità di deriva, considerando l'accelerazione data dal campo elettrico durante il tempo dall'ultimo urto:
-\begin{equation*}\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e\tau}{m_\mathrm{e}}{\ve E}\end{equation*}
+\begin{equation*}\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e}{m_\mathrm{e}}{\ve E}\tau\end{equation*}
 Usando la densità di corrente:
 \begin{equation*}\ve J=-Ne\ve v_D=\frac{e^2\tau N}{m_\mathrm{e}}\ve E=\sigma\ve E\end{equation*}
 $\sigma$ è la conducibilità elettrica:
@@ -1441,6 +1440,11 @@ che in realtà è stata introdotta come legge sperimentale. I materiali che risp
 \begin{equation}
  R=\int_A^B \frac{\rho}{\Sigma}\ud l=\rho\frac{L}{S}
 \end{equation}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica2/filo_serpente}
+ % filo_serpente.pdf: 0x0 pixel, 0dpi, nanxnan cm, bb=
+\end{figure}
 \end{Es}
 \begin{Es}[Conduttori cilindrici]
 \begin{figure}[htbp]
