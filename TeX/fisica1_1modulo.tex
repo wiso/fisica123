@@ -1,4 +1,6 @@
 \part[Fisica 1]{Fisica 1\\\vspace{1cm}\large{Meccanica, Energia, Gravitazione, Fluidi, Termodinamica, Relatività Speciale, Onde}}
+\parttoc
+\mtcskip
 
 
 \begin{savequote}
@@ -8,6 +10,7 @@ Se puzza è chimica\\
 Se è verdognolo e si muove è biologia\\
 \end{savequote}
 \chapter{Grandezze e misure}
+\minitoc
 \section{\index{grandezze}Grandezze}
 Le grandezze sono enti di cui si occupa la fisica. Esse devono essere misurabili attraverso un metodo operativo, inoltre richiedono delle unità di misura con le quali avviene il confronto.
 \newline\par
@@ -73,6 +76,7 @@ fattore&prefisso&simbolo\\
 Il femtometro ($\femto\meter$) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@$\femto\meter$|see{Fermi}}, unità usata in fisica nucleare.
 
 \chapter{\index{vettore}Vettori}
+\minitoc
 Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
 
 I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso gli si pensa come elementi di classi di equivalenza i cui rappresentati sono i vettori applicati nell'origine.
@@ -171,8 +175,8 @@ Il prodotto scalare usato in fisica è il prodotto scalare canonico della geomet
 \begin{equation*}p_s=|\ve a||\ve b| \cos \alpha\end{equation*}
  con $\alpha$ l'angolo compreso tra i due vettori. Da qui si deduce che $\ve i \cdot \ve i=1$, $\ve i
 \cdot \ve j=0$, ecc., che due vettori ortogonali hanno prodotto scalare nullo e che due vettori hanno prodotto scalare massimo quando sono paralleli.
-$$p_s=\ve a \cdot \ve b=(a_x\ve i+a_y\ve j+a_z\ve k)\cdot(b_x\ve
-i+b_y\ve j+b_z\ve k)=a_xb_x+a_yb_y+a_zb_z$$
+\[p_s=\ve a \cdot \ve b=(a_x\ve i+a_y\ve j+a_z\ve k)\cdot(b_x\ve
+i+b_y\ve j+b_z\ve k)=a_xb_x+a_yb_y+a_zb_z\]
 \subsubsection{\index{prodotto!vettoriale}Prodotto Vettoriale}
 Matematicamente il prodotto vettoriale non è facile da definire. Esso restituisce un vettore che ha direzione ortogonale al piano individuato dai due vettori, verso ricavabile dalla regola della mano destra, e modulo:
 \begin{equation*}|\ve p_v|=ab\sin \alpha\end{equation*} con $\alpha$ angolo tra i due vettori\footnote{è molto semplice ricordarsi la formula del prodotto vettoriale, basta ciclare sulle variabili. Per esempio la componente $x$ del prodotto vettoriale è $a_yb_z-a_zb_y$ in cui l'ordine è $x$ (la componente) e poi $y$, $z$, seguito dalla sottrazione al contrario (è antisimmetrico)}.
@@ -185,11 +189,11 @@ i+b_y\ve j+b_z\ve k)\\
 \end{align*}
 
 Il prodotto scalare può essere calcolato come determinante di una matrice $3\times 3$:
-$$\ve p_v=
+\[\ve p_v=
 \left| \begin{array}{ccc} \ve i & \ve j & \ve k\\
 a_x & a_y & a_z\\
 b_x & b_y& b_z
- \end{array} \right|$$
+ \end{array} \right|\]
 
 Il prodotto vettoriale è antisimmetrico cioè $\ve a \wedge \ve
 b=-\left(\ve b \wedge \ve a\right)$. Il modulo del prodotto
@@ -236,6 +240,7 @@ U}{\partial z}\ve k\right)
 \end{equation*}
 
 \chapter{Cinematica}
+\minitoc
 \section{\index{posizione}Vettore posizione}
 Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi sempre si parlerà del piano piuttosto che dello spazio, ma i risultati sono del tutto analoghi} $Oxy$ il vettore che congiunge l'origine con un punto $P$ è il vettore posizione $\ve r$ che individua $P$ in quel sistema di riferimento. Poiché il punto può spostarsi nel tempo $\ve r$ sarà funzione del tempo $\ve r=\ve r(t)$ e descriverà al variare del tempo tutte le posizioni occupate da $P$ cioè la sua traiettoria.
 
@@ -254,10 +259,10 @@ Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi semp
 }
 \section{\index{velocità}Vettore velocità}
 \begin{Def}[\index{velocità!media}Velocità Media]
-$$\ve v_m(t,t+\Delta t)=\frac{\Delta\ve r(t,t+\Delta t)}{\Delta
+\[\ve v_m(t,t+\Delta t)=\frac{\Delta\ve r(t,t+\Delta t)}{\Delta
 t}=\frac{1}{\Delta t}\{\Delta x\ve i+\Delta y\ve
 j\}=\frac{\Delta x}{\Delta t}\ve i+\frac{\Delta y}{\Delta t}\ve
-j$$
+j\]
 \end{Def}
 \begin{Def}[\index{velocità!istantanea}Velocità Istantanea]
 \begin{equation*}\ve v(t)=\lim_{\Delta t\rightarrow 0}\ve v_m(t,t+\Delta t)=\lim_{\Delta t\rightarrow 0} \frac{\Delta\ve r}{\Delta t}(t)={\left.\frac{\ud \ve r}{\ud t}\right|_t}=\left.\frac{\ud x}{\ud t}\right|_t\ve i+\left.\frac{\ud y}{\ud t}\right|_t\ve j\end{equation*}
@@ -353,28 +358,28 @@ t}\\
 &=R\left(-\dot\theta\sin\theta\ve i+\dot\theta\cos\theta\ve
 j\right)=R\dot\theta\ve u_\theta
 \end{align*}
-$$\ve a=\frac{\ud\ve v}{\ud t}=\frac{\ud\left(R\dot\theta\ve
+\[\ve a=\frac{\ud\ve v}{\ud t}=\frac{\ud\left(R\dot\theta\ve
 u_\theta\right)}{\ud t}=R\ddot\theta\ve
 u_\theta+R\dot\theta\frac{\ud\ve u_\theta}{\ud
-t}=R\ddot\theta\ve u_\theta-R\dot\theta^2\ve u_r$$
+t}=R\ddot\theta\ve u_\theta-R\dot\theta^2\ve u_r\]
 
 
 \section{\index{moto!in coordinate polari}Moto qualsiasi in coordinate polari}
 \begin{equation*}\ve r(t)=r\ve u_r\end{equation*}
 \begin{equation*}\ve u_r=\cos\theta\ve i+\sin\theta\ve j\qquad \ve u_\theta=-\sin\theta\ve i+\cos\theta\ve j\end{equation*}
-$$\frac{\ud\ve u_r}{\ud t}=-\dot\theta\sin\theta\ve
+\[\frac{\ud\ve u_r}{\ud t}=-\dot\theta\sin\theta\ve
 i+\dot\theta\cos\theta\ve j=\dot\theta\left(-\sin\theta\ve
-i+\cos\theta\ve j\right)=\dot\theta\ve u_\theta$$
-$$\frac{\ud\ve u_\theta}{\ud t}=-\dot\theta\cos\theta\ve
+i+\cos\theta\ve j\right)=\dot\theta\ve u_\theta\]
+\[\frac{\ud\ve u_\theta}{\ud t}=-\dot\theta\cos\theta\ve
 i-\dot\theta\cos\theta\ve j=-\dot\theta\left(\cos\theta\ve
-i+\sin\theta\ve j\right)=-\dot\theta\ve u_r$$
-$$\ve v=\frac{\ud\ve r}{\ud t}=\dot r\ve u_r+r\frac{\ud\ve
-u_r}{\ud t}=\dot r\ve u_r+r\dot\theta\ve u_\theta$$
-$$\ve a=\frac{\ud\ve v}{\ud t}=\ddot r\ve u_r+\dot
+i+\sin\theta\ve j\right)=-\dot\theta\ve u_r\]
+\[\ve v=\frac{\ud\ve r}{\ud t}=\dot r\ve u_r+r\frac{\ud\ve
+u_r}{\ud t}=\dot r\ve u_r+r\dot\theta\ve u_\theta\]
+\[\ve a=\frac{\ud\ve v}{\ud t}=\ddot r\ve u_r+\dot
 r\dot\theta\ve u_\theta+\dot r\dot\theta\ve
 u_\theta+r\ddot\theta\ve u_\theta-r\dot\theta^2\ve u_r=\ve
 u_r\left(\ddot r-r\dot\theta^2\right)+\ve u_\theta\left(2\dot
-r\dot\theta+r\ddot\theta\right)$$
+r\dot\theta+r\ddot\theta\right)\]
 
  I vettori velocità e accelerazione vengono scomposti in due
 componenti:
@@ -393,7 +398,9 @@ componenti:
  \caption{Traiettorie nello spazio delle configurazioni dell'oscillatore armonico a partire da diverse condizioni iniziali}
 \end{figure}
 Il moto armonico è un moto con equazione differenziale:
-\begin{equation*}\ddot x=-k x\end{equation*}
+\begin{eqimp}{equation}
+\ddot x=-k x
+\end{eqimp}
 la cui soluzione è:
 \begin{equation*}x=A\sin(\omega t+\varphi)\end{equation*}
 \begin{equation*}v=\frac{\ud x}{\ud t}=A\omega\cos(\omega t+\varphi)\end{equation*}
@@ -457,24 +464,24 @@ t+\ve r\,'$
 \end{legge}
 \begin{legge}[composizione delle velocità]
 \index{composizione delle velocità}
-$$\ve v=\frac{\ud\ve r}{\ud t}=\frac{\ud}{\ud t}\left(\ve u
+\[\ve v=\frac{\ud\ve r}{\ud t}=\frac{\ud}{\ud t}\left(\ve u
 t+\ve r\,'\right)=\frac{d}{\ud t}\left(\ve u
 t\right)+\frac{\ud\ve r\,'}{\ud t}=\ve u+\frac{\ud\ve r\,'}{\ud
-t'}=\ve u+\ve v\,'$$
+t'}=\ve u+\ve v\,'\]
 velocità assoluta = velocità relativa + \index{velocità!di trascinamento}velocità di trascinamento
 \end{legge}
 \begin{legge}[invarianza dell'accelerazione]
-$$\ve a=\frac{\ud \ve v}{\ud t}=\frac{\ud}{\ud t}(\ve u+\ve
+\[\ve a=\frac{\ud \ve v}{\ud t}=\frac{\ud}{\ud t}(\ve u+\ve
 v\,')=0+\frac{\ud \ve v\,'}{\ud t}=\frac{\ud \ve v\,'}{\ud
-t'}=\ve a'$$
+t'}=\ve a'\]
 L'accelerazione quindi è invariante
 \end{legge}
-$$\left\{\begin{array}{ll}
+\[\left\{\begin{array}{ll}
 \ve r=\ve r\,'+\ve u t&\text{trasformate di Galileo}\\
 \ve v=\ve u+\ve v\,'&\text{somma delle velocità}\\
 \ve a=\ve a\,'&\text{invarianza dell'accelerazione}\\
 t=t'&\text{ipotesi del tempo assoluto}\\
-\end{array}\right.$$
+\end{array}\right.\]
 Esse valgono nell'ipotesi che se $t=0=t'$ allora $\ve r\,'=\ve r$.
 Non esiste un sistema di riferimento assoluto.
 \subsection{Invarianza e covarianza\index{invarianza}\index{covarianza}}
@@ -486,6 +493,7 @@ Una legge si dice covariante se la sua espressione è uguale alla sua trasformat
 
 
 \chapter{Dinamica}
+\minitoc
 
 \section{\index{forza!fondamentale}Forze fondamentali}
 \begin{enumerate}
@@ -576,14 +584,14 @@ macchina a fermarsi?
 \newline $F=ma=mct$
 
 Il risultato si trova integrando le definizioni di accelerazione, velocità e spazio.
-$$a=\frac{\ud v}{\ud t}=ct \quad \Rightarrow \quad\ud v=ct\,\ud
-t\quad\Rightarrow\quad\int_{v_0}^v\ud v=\int_0^t ct\,\ud t$$
+\[a=\frac{\ud v}{\ud t}=ct \quad \Rightarrow \quad\ud v=ct\,\ud
+t\quad\Rightarrow\quad\int_{v_0}^v\ud v=\int_0^t ct\,\ud t\]
 \begin{equation*}v-v_0=\frac{ct^2}{2}\qquad v=\frac{ct^2}{2}+v_0\end{equation*}
-$$v=\frac{\ud x}{\ud t}\qquad\int_0^t v\,\ud t=\int_0^x\ud
-x\qquad\int_0^t\frac{ct^2}{2}+v_0\,\ud t=\int_0^x\ud x$$
+\[v=\frac{\ud x}{\ud t}\qquad\int_0^t v\,\ud t=\int_0^x\ud
+x\qquad\int_0^t\frac{ct^2}{2}+v_0\,\ud t=\int_0^x\ud x\]
 \begin{equation*}\frac{ct^3}{6}+v_0t=x\qquad x=v_0t+\frac{ct^3}{6}\end{equation*}
-$$v_f=0\qquad v_f=0=\frac{ct^2}{2}+v_0\qquad
-t=\sqrt{\frac{-2v_0}{c}}\simeq \unita{4.30}\second$$
+\[v_f=0\qquad v_f=0=\frac{ct^2}{2}+v_0\qquad
+t=\sqrt{\frac{-2v_0}{c}}\simeq \unita{4.30}\second\]
 \end{Es}
 
 \subsection{\index{forza!variabile!nello spazio}Forze variabili nello spazio}
@@ -592,8 +600,8 @@ t=\sqrt{\frac{-2v_0}{c}}\simeq \unita{4.30}\second$$
 
 \begin{equation}F=-kx=ma\end{equation}
 \begin{equation*}a=\frac{\ud v}{\ud t}=\frac{\ud^2 x}{\ud t^2}\end{equation*}
-$$-kx=m\frac{\ud^2 x}{\ud t^2}\qquad m\frac{\ud^2 x}{\ud
-t}+kx=0\qquad x=-\frac{m\ddot x}{k}$$
+\[-kx=m\frac{\ud^2 x}{\ud t^2}\qquad m\frac{\ud^2 x}{\ud
+t}+kx=0\qquad x=-\frac{m\ddot x}{k}\]
 la soluzione generale è del tipo:
 \begin{equation}x(t)=A\sin(\omega t+\varphi)\end{equation}
 con $\omega=\sqrt{\frac{k}{m}}$, da cui si può ricavare anche:
@@ -601,8 +609,8 @@ con $\omega=\sqrt{\frac{k}{m}}$, da cui si può ricavare anche:
 \begin{equation*}\ddot x(t)=-A\omega^2\sin(\omega t+\varphi)=\omega^2x\end{equation*}
 \begin{equation*}x=-\frac{1}{\omega^2}\ddot x\end{equation*}
 confrontando questa funzione con quella trovata prima si ha che:
-$$\frac{1}{\omega^2}=\frac{m}{k}\qquad \omega^2=\frac{k}{m}\qquad
-\omega=\sqrt{\frac{k}{m}}$$
+\[\frac{1}{\omega^2}=\frac{m}{k}\qquad \omega^2=\frac{k}{m}\qquad
+\omega=\sqrt{\frac{k}{m}}\]
 come già accennato. L'equazione del moto è quindi:
 \begin{equation}
 x=A\sin\left(\sqrt{\frac{k}{m}}\,t+\varphi\right)
@@ -611,8 +619,8 @@ le costanti $A$ e $\varphi$ sono da trovarsi con le condizioni iniziali. L'ampie
 \begin{equation*}x_{\text{max}}=A\end{equation*}
 e il periodo:
 \begin{equation*}\sqrt{\frac{k}{m}}\,(t+T)+\varphi=\sqrt\frac{k}{m}\,t+\varphi+2\pi\end{equation*}
-$$\sqrt{\frac{k}{m}}\,T=2\pi\qquad
-T=2\pi\sqrt\frac{m}{k}=\frac{2\pi}{\omega}$$
+\[\sqrt{\frac{k}{m}}\,T=2\pi\qquad
+T=2\pi\sqrt\frac{m}{k}=\frac{2\pi}{\omega}\]
 \subsubsection{\index{moto!del pendolo}Moto del pendolo}
 \begin{figure}[htbp]
 \centering
@@ -645,15 +653,15 @@ si noti che questa equazione altro non è che l'equazione di un oscillatore armo
 \end{equation*}
 con $\left.\frac{\ud F}{\ud x}\right|_{x_0}=k<0$ perché è un punto di equilibrio stabile.
 }.
-$$g\theta=-l\ddot\theta\qquad \theta=A\sin\left(\omega
-t+\varphi\right)$$
-$$\theta=-\frac{l}{g}\,\ddot\theta\qquad\ddot\theta=-A\omega^2\sin\left(\omega
-t+\varphi\right)=-\omega^2\theta$$
+\[g\theta=-l\ddot\theta\qquad \theta=A\sin\left(\omega
+t+\varphi\right)\]
+\[\theta=-\frac{l}{g}\,\ddot\theta\qquad\ddot\theta=-A\omega^2\sin\left(\omega
+t+\varphi\right)=-\omega^2\theta\]
 \begin{equation*}\theta=-\frac{\ddot\theta}{\omega^2}\qquad \frac{1}{\omega^2}=\frac{l}{g}\qquad\omega^2=\frac{g}{l}\qquad\omega=\sqrt\frac{g}{l}\end{equation*}
 \begin{equation*}\theta=A\sin\left(\sqrt\frac{g}{l}\,t+\varphi\right)\end{equation*}
-$$2\pi+\sqrt\frac{g}{l}t+\varphi=\sqrt\frac{g}{l}(t+T)+\varphi\qquad
+\[2\pi+\sqrt\frac{g}{l}t+\varphi=\sqrt\frac{g}{l}(t+T)+\varphi\qquad
 \sqrt\frac{g}{l}T=2\pi\qquad
-T=2\pi\sqrt\frac{l}{g}=\frac{2\pi}{\omega}$$
+T=2\pi\sqrt\frac{l}{g}=\frac{2\pi}{\omega}\]
 
 \subsection{\index{forza!variabile!nella velocità}Forze variabili nella velocità}
 Su un corpo in caduta agisce la forza di Stokes: $F_s=-\beta v$,
@@ -665,14 +673,14 @@ mezzo e dalla geometria del corpo.
 \begin{equation*}mg-\beta v=ma=m\frac{\ud v}{\ud t}\end{equation*}
 \begin{equation*}mg-\beta v=m\frac{\ud v}{\ud t}\qquad \ud t\left(mg-\beta v\right)=m\ud v\end{equation*}
 \begin{equation*}\int_0^t\ud t=\int_{v_0}^v\frac{m}{mg-\beta v}\,\ud v\end{equation*}
-$$t=\left[-\frac{m}{\beta}\ln\left(mg-\beta
+\[t=\left[-\frac{m}{\beta}\ln\left(mg-\beta
 v\right)\right]_{v_0}^{v}=-\frac{m}{\beta}\left(\ln\left(mg-\beta
-v\right)-\ln\left(mg-\beta v_0\right)\right)=$$
+v\right)-\ln\left(mg-\beta v_0\right)\right)=\]
 \begin{equation*}=-\frac{m}{\beta}\ln\frac{mg-\beta v}{mg-\beta v_0}\qquad-\frac{\beta t}{m}=\ln\frac{mg-\beta v}{mg-\beta v_0}\end{equation*}
 \begin{equation*}e^{-\frac{\beta t}{m}}=e^{\ln\frac{mg-\beta v}{mg-\beta v_0}}=\frac{mg-\beta v}{mg-\beta v_0}\end{equation*}
 \begin{equation*}(mg-\beta v)=(mg-\beta v_0)e^{-\frac{\beta t}{m}}\end{equation*}
-$$v=\frac{mg}{\beta}\left(1-e^{-\frac{\beta
-t}{m}}\right)+v_0e^{-\frac{\beta t}{m}}$$
+\[v=\frac{mg}{\beta}\left(1-e^{-\frac{\beta
+t}{m}}\right)+v_0e^{-\frac{\beta t}{m}}\]
 
 se $t\rightarrow +\infty$ allora $v\rightarrow\frac{mg}{\beta}$
 
@@ -717,18 +725,18 @@ a_x=&\frac{\ud v_x}{\ud t}=a'_{x'}\cos\left(\omega t\right)-\omega v'_{x'}\sin\l
 &-2\omega\left[v'_{x'}\sin\left(\omega t\right)+v'_{y'}\cos\left(\omega t\right)\right]\\
 =&a'_{x}-\omega^2 x-2\omega v'_{y}
 \end{align*}
-$$\ve \omega\times\ve v'=\left|\begin{array}{ccc}
+\[\ve \omega\times\ve v'=\left|\begin{array}{ccc}
 \ve i&\ve j&\ve k\\
 0&0&\omega\\
 v'_{x'}&v'_{y'}&v'_{z'}\\
 \end{array}
 \right|
-=-\omega v'_{y'}\ve i+\omega v'_{x'}\ve j$$
+=-\omega v'_{y'}\ve i+\omega v'_{x'}\ve j\]
 
-$$\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 a_x=a'_x-\omega^2 x+2\left(\ve \omega\times\ve v'\right)_x\\
 a_y=a'_y-\omega^2 y+2\left(\ve \omega\times\ve v'\right)_y\\
-\end{array}\right.$$
+\end{array}\right.\]
 
 \begin{equation*}\ve a=\ve a'-\omega^2 \ve r+2\left(\ve\omega\times\ve v'\right)\end{equation*}
 \begin{equation*}m\ve a=m\ve a'-m\omega^2\ve r+2m\left(\ve\omega\times\ve v'\right)=\ve F\end{equation*}
@@ -819,10 +827,10 @@ velocità iniziali $v$ e $V$.
 
 \begin{Es}[decadimento]
 L'uranio decade in questo modo:
-\begin{equation*}\mathrm{U}^{238}_{92}\rightarrow \mathrm{Th}^{234}_{90}+\alpha^4_2\end{equation*}
-\begin{equation*}\ve p_f=m_{\mathrm{Th}}\ve v_{\mathrm{Th}}+m_\alpha \ve v_\alpha=\ve p_0=0\end{equation*}
-\begin{equation*}m_{\mathrm{Th}}v_{\mathrm{Th}}=m_\alpha v_\alpha\qquad v_\alpha=\unita{2\times \power{10}{7}}\metrepersecond\end{equation*}
-\begin{equation*}v_{\mathrm{Th}}=\frac{m_\alpha v_\alpha}{m_{\mathrm{Th}}}=\unita{3.4\times
+\begin{equation*}\ce{^{238}_{92}U -> ^{234}_{90}Th + ^{4}_{2}\alpha}\end{equation*}
+\begin{equation*}\ve p_f=m_{\ce{Th}}\ve v_{\ce{Th}}+m_\alpha \ve v_\alpha=\ve p_0=0\end{equation*}
+\begin{equation*}m_{\ce{Th}}v_{\ce{Th}}=m_\alpha v_\alpha\qquad v_\alpha=\unita{2\times \power{10}{7}}\metrepersecond\end{equation*}
+\begin{equation*}v_{\ce{Th}}=\frac{m_\alpha v_\alpha}{m_{\ce{Th}}}=\unita{3.4\times
 10^5}\metrepersecond\end{equation*}
 \end{Es}
 
@@ -839,7 +847,9 @@ z_{CM}=\frac{\sum^N_{i=1}\left(z_im_i\right)}{M}\end{equation*}
 \begin{equation*}M\ve v_{CM}={\sum^N_{i=1}m_i\ve v_i}=\ve p\end{equation*}
 \begin{equation*}\frac{\ud \ve p}{\ud t}=\frac{\ud}{\ud t}M\ve v_{CM}=M\ve a_{CM}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}\end{equation*}
 \begin{Teo}
-\begin{equation}M\ve V_{CM}=\ve P \qquad M\ve a_{CM}=\sum \stackrel{\text{Est}}{\ve F_i}\end{equation}
+\begin{eqimp}{equation}
+M\ve V_{CM}=\ve P \qquad M\ve a_{CM}=\sum \stackrel{\text{Est}}{\ve F_i}
+\end{eqimp}
 Se il sistema è isolato $\sum \stackrel{\text{Est}}{\ve F}=0$
 \begin{equation*}M\ve a_{CM}=0 \Rightarrow \ve a_{CM}=0\end{equation*}
 allora il centro di massa si muove di moto rettilineo uniforme.
@@ -935,12 +945,12 @@ Gli urti si classificano in elastici ed anelastici. Gli urti reali sono una via 
 
 \subsubsection{Urti in 1 dimensione}
 
-$$ \left \{
+\[ \left \{
 \begin{array}{ll}
    m_1v_{i,1}+m_2v_{i,2}=m_1v_{f,1}+m_2v_{f,2} & v_{1,f}=? \\
    \frac{1}{2}m_1v_{i,1}^2+\frac{1}{2}m_2v_{i,2}^2=\frac{1}{2}m_1v_{f,1}^2+\frac{1}{2}m_2v_{f,2}^2 & v_{2,f}=?
    \end{array}
-   \right.$$
+   \right.\]
 \begin{equation*}v_{1,f}=\frac{2m_2}{m_1+m_2}v_{i,2}-v_{i,1}\frac{m_2-m_1}{m_1+m_2}\end{equation*}
 \begin{equation*}v_{2,f}=\frac{2m_1}{m_1+m_2}v_{i,1}-v_{i,2}\frac{m_1-m_2}{m_1+m_2}\end{equation*}
 
@@ -973,40 +983,40 @@ $$ \left \{
 \subsubsection{Urti in due dimensioni}
 Due corpi di massa $m_1$, $m_2$, prima dell'urto velocità $\ve v_{i,2}=0$, $\ve v_{i,1}$, il secondo corpo è fermo, dopo l'urto velocità $\ve v_{f,1}$, $\ve v_{f,2}$.
 
-$$\left\{
+\[\left\{
 \begin{array}{l}
 m_1\ve v_{i,1}=m_1\ve v_{f,1}+m_2\ve v_{f,2}\\
 \frac{1}{2}m_1 v_{i,1}^2=\frac{1}{2}m_1 v_{f,1}^2+\frac{1}{2}m_2
 v_{f,2}^2
-\end{array}\right.$$
+\end{array}\right.\]
 
-$$\left\{
+\[\left\{
 \begin{array}{l}
 m_1v_{i,1}=m_iv_{f,1}\cos\varphi_1+m_2v_{f,2}\cos\varphi_2\\
 0=m_1v_{f,1}\sin\varphi_1-m_2v_{f,2}\sin\varphi_2\\
 \frac{1}{2}m_1 v_{i,1}^2=\frac{1}{2}m_1 v_{f,1}^2+\frac{1}{2}m_2
 v_{f,2}^2
-\end{array}\right.$$
+\end{array}\right.\]
 Il sistema è formato da 3 equazioni, ma da 4 incognite
 ($\varphi_1, \varphi_2, v_{f,1}, v_{f,2}$), ha $\infty^1$
 soluzioni.
 
 Nel caso particolare di $m_1=m_2$ si ha:
-$$\frac{1}{2}m v_{i,1}^2=\frac{1}{2}m
-v_{f,1}^2+\frac{1}{2}m v_{f,2}^2$$
-$$\left\{
+\[\frac{1}{2}m v_{i,1}^2=\frac{1}{2}m
+v_{f,1}^2+\frac{1}{2}m v_{f,2}^2\]
+\[\left\{
 \begin{array}{l}
 v_{i,1}^2=v_{f,1}^2+v_{f,2}^2\\
 m^2v_{i,1}^2=m^2v_{f,1}^2+m^2v_{f,2}^2+2m^2v_{1,f}v_{2,f}\cos\alpha
 \end{array}
-\right.$$
+\right.\]
 
-$$\left\{
+\[\left\{
 \begin{array}{l}
 v_{i,1}^2=v_{f,1}^2+v_{f,2}^2\\
 v_{i,1}^2=v_{f,1}^2+v_{f,2}^2+2v_{1,f}v_{2,f}\cos\alpha
 \end{array}
-\right.$$
+\right.\]
 
 quindi $\cos \alpha=0\quad\Rightarrow\quad\alpha=\unita{90}\degree$, oppure $v_{1,f}=0$ e $v_{2,f}=v_{1,i}$
 
@@ -1033,8 +1043,8 @@ Consideriamo un sistema di riferimento $\ast$ inerziale rispetto
 al CM con la stessa velocità del CM.
 
 \begin{equation*}\ve P^\ast_{\text{prima}}=(m+M)\ve V_{\text{CM}}^\ast=0\end{equation*}
-$$\ve P^\ast_{\text{dopo}}=0\quad\text{sono attaccati}\quad \ve
-v=0$$ Quindi tutta l'energia cinetica è persa.
+\[\ve P^\ast_{\text{dopo}}=0\quad\text{sono attaccati}\quad \ve
+v=0\] Quindi tutta l'energia cinetica è persa.
 \end{Es}
 \section{\index{momento!d'inerzia}Momento d'inerzia}
 Corpo rigido(CR): presi due punti qualsiasi la loro distanza
@@ -1067,9 +1077,9 @@ Essendo $\ve r$ relativo a un punto $O$ allora anche $I$ sarà relativo ad $O$. 
 \end{minipage}
 
 \subsubsection{Barra sottile per il centro di massa}
-$$I_c=\int_{-l/2}^{l/2}\frac{M}{l}\ud x
+\[I_c=\int_{-l/2}^{l/2}\frac{M}{l}\ud x
 x^2=\frac{M}{l}\int_{-l/2}^{l/2}x^2 \ud
-x=\frac{M}{3l}\left(\frac{l^3}{8}+\frac{l^3}{8}\right)=\frac{M}{12}l^2$$
+x=\frac{M}{3l}\left(\frac{l^3}{8}+\frac{l^3}{8}\right)=\frac{M}{12}l^2\]
 
 \subsubsection{Disco}
 
@@ -1081,8 +1091,8 @@ x=\frac{M}{3l}\left(\frac{l^3}{8}+\frac{l^3}{8}\right)=\frac{M}{12}l^2$$
 
 \begin{equation*}\frac{\ud m}{M}=\frac{2\pi r\ud r}{\pi R^2}\end{equation*}
 \begin{equation*}\ud m=M\frac{2\ud r}{R^2}r\end{equation*}
-$$I_O=\int_O^R\frac{M}{R^2}2\ud r r^3=\frac{2M}{R^2}\int_O^R r^3
-\ud r=\frac{2M}{R^2}\cdot\frac{R^4}{4}=\frac{1}{2}MR^2$$
+\[I_O=\int_O^R\frac{M}{R^2}2\ud r r^3=\frac{2M}{R^2}\int_O^R r^3
+\ud r=\frac{2M}{R^2}\cdot\frac{R^4}{4}=\frac{1}{2}MR^2\]
 
 \subsubsection{Sfera omogenea}
 
@@ -1109,9 +1119,9 @@ Dividiamo la sfera in tanti dischetti:
    \includegraphics[scale=0.45]{immagini/fisica1/steiner}
 \end{figure}
 \begin{equation*}\ve r_i=\ve r_C+\ve r_i\,'\end{equation*}
-$$\ve r_i\cdot\ve r_i=r_i^2=\left(\ve
+\[\ve r_i\cdot\ve r_i=r_i^2=\left(\ve
 r_C+r_i\,'\right)\cdot\left(\ve r_C+\ve r_i\,'\right)\Rightarrow
-r_i^2=r_C^2+r_i\,'^2+2\ve r_C\cdot\ve r_i\,'$$
+r_i^2=r_C^2+r_i\,'^2+2\ve r_C\cdot\ve r_i\,'\]
 \begin{align*}
 I_0&=\sum m_ir_i^2=\sum r_C^2m_i+\sum r_i\,'^2m_i+\sum m_i
 \cdot 2\ve r_C\cdot \ve r_i\,'\\
@@ -1119,8 +1129,8 @@ I_0&=\sum m_ir_i^2=\sum r_C^2m_i+\sum r_i\,'^2m_i+\sum m_i
 r_C\cdot\sum m_i\ve r_i\,'=d^2M+I_{C}+2\ve r_C\cdot\sum m_i\cdot
 \ve r_i\,'\end{align*}
 Per ipotesi $C$ è il $CM$ del sistema
-$$I_0=d^2 M+I_{CM}+2\ve r_i\frac{\sum m_i\ve r_i\,'}{M}\cdot
-M=d^2M+I_{CM}+2\ve r_i\cdot \ve r\,_{CM}^{CM} M=d^2M+I_{CM}$$
+\[I_0=d^2 M+I_{CM}+2\ve r_i\frac{\sum m_i\ve r_i\,'}{M}\cdot
+M=d^2M+I_{CM}+2\ve r_i\cdot \ve r\,_{CM}^{CM} M=d^2M+I_{CM}\]
 Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
 \begin{Es}
 Il momento d'inerzia di una circonferenza rispetto al centro di massa è \mbox{$I_{CM}=\frac{1}{2}MR^2$}, per un estremo è:
@@ -1138,8 +1148,8 @@ dove $\ve r$ è il vettore che individua il punto di applicazione dela forza ris
 \begin{equation*}\delta L=F\ud s\cos \phi=Fr\ud\theta\cos\phi\end{equation*}
 \begin{equation*}K=\frac{1}{2}I\omega^2\qquad\ud K=I\omega\ud\omega\end{equation*}
 \begin{equation*}Fr\ud\theta\cos\phi=I\omega\ud\omega\end{equation*}
-$$Fr\frac{\ud\theta}{\ud t}\cos\phi=I\omega\frac{\ud\omega}{\ud
-t}$$
+\[Fr\frac{\ud\theta}{\ud t}\cos\phi=I\omega\frac{\ud\omega}{\ud
+t}\]
 \begin{equation*}Fr\omega\cos\phi=I\omega\alpha\end{equation*}
 \begin{equation*}Fr\cos\phi=I\alpha\end{equation*}
 \begin{equation*}Fr\sin\beta=I\alpha\end{equation*}
@@ -1150,8 +1160,8 @@ t}$$
 \frac{\ud \ve l_0}{\ud t}&=\frac{\ud}{\ud t}\left(\ve r\times m\ve v\right)= \frac{\ud\ve r}{\ud t}\times m\ve v+\ve r\times\frac{\ud m\ve v}{\ud t}\\
 &=\ve v\times m\ve v+\ve r \times m\ve a=\ve r\times m\ve a=\ve r\times\ve F=\ve \tau_0
 \end{align*}
-$$\frac{\ud\ve l_0}{\ud t}=\ve \tau_0\qquad\text{analoga
-a}\qquad\frac{\ud \ve p}{\ud t}=\ve F$$
+\[\frac{\ud\ve l_0}{\ud t}=\ve \tau_0\qquad\text{analoga
+a}\qquad\frac{\ud \ve p}{\ud t}=\ve F\]
 \subsection{Sistema di N punti}
 \begin{equation*}\ve L_0=\sum_{i=1}^N \ve l_{0_i}\end{equation*}
 \begin{align*}\frac{\ud \ve L_0}{\ud t}&=\sum_{i=1}^{N}\frac{\ud \ve l_{0_i}}{\ud
@@ -1172,14 +1182,15 @@ perché $\left(\ve r_1-\ve r_2\right)\parallel \ve F_{1,2}$
 \subsection{Conservazione del momento angolare}
 Se il sistema è isolato si ha: $\stackrel{\text{Est}}{\ve
 F}=0\Rightarrow \stackrel{\text{Est}}{\ve \tau}=0$
-$$\frac{\ud \ve L_0}{\ud t}=\ve \tau_0=0\qquad \ve
-L_0=\overrightarrow{\const}$$ e quindi
+\[\frac{\ud \ve L_0}{\ud t}=\ve \tau_0=0\qquad \ve
+L_0=\overrightarrow{\const}\]
+ e quindi
 $I\omega={\const}$. Tutto ciò per la simmetria per
 rotazioni.
 \subsection{Rotazione intorno a $O'$ mobile}
 \begin{equation*}\ve r_i=\ve r_{O'}+\ve r_i\,'\qquad \ve r_i\,'=\ve r_i-\ve r_{O'}\end{equation*}
-$$L_{O'}=\sum\ve r_i\,'\times m\ve v_i=\sum(\ve r_i-\ve
-r_{O'})\times m\ve v_i$$
+\[L_{O'}=\sum\ve r_i\,'\times m\ve v_i=\sum(\ve r_i-\ve
+r_{O'})\times m\ve v_i\]
 \begin{align*}
 \frac{\ud L_{O'}}{\ud t}&=\sum(v_i-v_{O'})\times m\ve v_i+r_i\,' m\ve a_i=-\sum\ve v_{O'}\times m_i\ve v_i+\sum\ve r_i\,'\times\ve F_i\\
 &=\ve v_{O'}\times\sum m_i\ve v_i+\ve \tau_{O'}=-\ve
@@ -1195,14 +1206,14 @@ v_{CM}\parallel\ve P\Rightarrow -\ve v_O\times\ve P=0$
 \subsection{Rotazione intorno ad un asse}
 \begin{equation*}\ve l_i=\ve r_i\times m_i\ve v_i\end{equation*}
 \begin{equation*}l_{i_z}=|\ve l_i|\sin\theta_i\end{equation*}
-$$|\ve l_i|=r_im_iv_i\qquad l_{i_z}=r_im_iv_i\sin\theta_i\qquad
-\omega d_i=v_i$$
+\[|\ve l_i|=r_im_iv_i\qquad l_{i_z}=r_im_iv_i\sin\theta_i\qquad
+\omega d_i=v_i\]
 \begin{equation*}l_{i_z}=m_id_i\omega d_i=md_i^2\omega\end{equation*}
 \begin{equation*}l_{i_z}=m_i\omega R_i^2\end{equation*}
 \begin{equation*}L_z=\sum l_{i_z}=\sum(m_id_i^2)\omega=I\omega\end{equation*}
 \begin{equation*}L_z=I\omega\end{equation*}
-$$\frac{\ud l_{i_z}}{\ud t}=I\frac{\ud \omega}{\ud
-t}=I\alpha\qquad \stackrel{\text{Est}}{\tau_{z}}=I\alpha$$
+\[\frac{\ud l_{i_z}}{\ud t}=I\frac{\ud \omega}{\ud
+t}=I\alpha\qquad \stackrel{\text{Est}}{\tau_{z}}=I\alpha\]
 \subsection{Corpo simmetrico rispetto all'asse di rotazione}
 \begin{equation*}\ve l_i+\ve l_{i'}=\alpha\ve k\end{equation*}
 \begin{equation*}L=I\omega=L_z\end{equation*}
@@ -1242,6 +1253,7 @@ per il quale $\sum\stackrel{\text{Est}}{\ve F}=0$&$\ve P=\sum
 \end{small}
 
 \chapter{Lavoro ed energia}
+\minitoc
 \section{\index{lavoro}Lavoro definizione}
 \begin{Def}[lavoro]
 Definiamo lavoro $L$ fatto dalla $\ve F$ sul punto $P$ lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\ve F\cdot\ud\ve s$:
@@ -1284,11 +1296,11 @@ lavoro svolto da questo momento torcente è:
  \begin{equation*}P=\frac{\ud L}{\ud t}\end{equation*}
 \end{Def}
 La potenza si misura nel SI in $\joule\per\second$ cioè \watt(watt).
-$$P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
-t}=\ve F\cdot \ve v$$
+\[P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
+t}=\ve F\cdot \ve v\]
 \subsection{Potenza nei moti rotatori}
-$$P=\frac{\ud L}{\ud t}=\frac{\tau_z\ud\theta}{\ud
-t}=\tau_z\omega$$
+\[P=\frac{\ud L}{\ud t}=\frac{\tau_z\ud\theta}{\ud
+t}=\tau_z\omega\]
 
 \section[Energia Cinetica]{\index{energia!cinetica}Energia Cinetica}
 \begin{Def}[energia cinetica]
@@ -1311,10 +1323,10 @@ Il lavoro è allora la variazione dell'energia cinetica
 \index{derivata!parziale}derivata parziale:
 \begin{equation*}\frac{\partial z}{\partial x}=\frac{\partial f}{\partial x}=\frac{\ud f}{\ud x}\ \text{considerando $y$ costante}\end{equation*}
 derivate seconde parziali:
-$$
+\[
 \frac{\partial^2 z}{\partial x^2}\qquad \frac{\partial^2
 z}{\partial y^2}\qquad \frac{\partial^2 z}{\partial x\partial
-y}\qquad\frac{\partial^2 z}{\partial y\partial x}$$
+y}\qquad\frac{\partial^2 z}{\partial y\partial x}\]
 \begin{Teo}[Shwartz]
 Sotto opportune ipotesi\footnote{Sia $\Omega\subseteq\field{R}^n$ aperto e sia $f:\Omega\to\mathbb{R}$. Supponiamo che le derivate parziali miste $\frac{\partial^2 f}{\partial x_k\partial x_j}$, $\frac{\partial^2 f}{\partial x_j\partial x_k}$ esistano in un intorno di $a\in\Omega$ e siano continue in $a$. Allora esse sono uguali in $a$} le derivate seconde parziali incrociate sono uguali:
 \begin{equation*}\frac{\partial^2 z}{\partial x\partial y}=\frac{\partial^2 z}{\partial y\partial x}\end{equation*}
@@ -1371,8 +1383,11 @@ Considerando solo forze conservative:
 \index{forza!conservativa}Per verificare se una forza è conservativa:
 
 \begin{enumerate}
-\item$$\frac {\partial F_x}{\partial y}=\frac {\partial
-F_y}{\partial x}$$ se sì allora è conservativa, se no non lo è
+\item
+\[\frac {\partial F_x}{\partial y}=\frac {\partial
+F_y}{\partial x}
+\]
+ se sì allora è conservativa, se no non lo è
 
 \item\begin{equation*}U(0)=0 \qquad L_0^P=U(0)-U(P)=-U(P)\end{equation*}
 \begin{equation*}U(P)=-\int_0^P \ve F\cdot\ud \ve s\end{equation*}
@@ -1464,6 +1479,7 @@ Quando è in B
 \end{Es}
 
 \chapter{\index{gravitazione}Gravitazione}
+\minitoc
 \section{Cenni storici}
 I sistemi gravitazionali storici più celebri sono stati:
 \begin{itemize}
@@ -1508,9 +1524,9 @@ $\ud A$ è l'area compresa tra le due sezioni.
 \end{figure}
 \begin{equation*}F=G\frac{Mm}{r^2}\end{equation*}
 \begin{equation*}r'=R\sin\theta\qquad \ud A=2\pi r'R\ud\theta\end{equation*}
-$$\frac{\ud m}{M}=\frac{\ud
+\[\frac{\ud m}{M}=\frac{\ud
 A}{4\pi R^2}=\frac{2\pi r'R\ud\theta}{4\pi
-R^2}=\frac{R\sin\theta\ud\theta}{2R}=\frac{\sin\theta\ud\theta}{2}$$
+R^2}=\frac{R\sin\theta\ud\theta}{2R}=\frac{\sin\theta\ud\theta}{2}\]
 \begin{equation*}\ud m=\frac{M\sin\theta\ud\theta}{2}\end{equation*}
 \begin{equation*}U=-\frac{Gmm'}{r}\qquad\ud U=-\frac{G\ud m m'}{x}\end{equation*}
 \begin{equation*}x^2=R^2+r^2-2rR\cos\theta\end{equation*}
@@ -1527,8 +1543,9 @@ x=-\frac{Gmm'}{2rR}[r+R-r+r]\\
 &=-\frac{Gmm'}{2rR}2R=-\frac{Gmm'}{r}
 \end{align*}
 Possiamo quindi concentrare tutta la massa nel centro della palla (se $P$ sta fuori).
-Se $P$ è esterno: $$U=-\frac{Gmm'}{r}\qquad F=-\frac{\ud U}{\ud
-r}=\frac{Gmm'}{r^2}$$
+Se $P$ è esterno: 
+\[U=-\frac{Gmm'}{r}\qquad F=-\frac{\ud U}{\ud
+r}=\frac{Gmm'}{r^2}\]
 Se $P$ è interno vale il discorso precedente fino alla scelta degli
 estremi:
 \begin{align*}
@@ -1570,20 +1587,25 @@ due punti che interagiscono.
 
 
 
-$$\frac{\ud\ve L_S}{\ud t}=\ve\tau_S=0\quad\text{perché }\ve
-F\parallel\ve r$$
+\[
+\frac{\ud\ve L_S}{\ud t}=\ve\tau_S=0\quad\text{perché }\ve
+F\parallel\ve r
+\]
 \begin{equation*}\ve L_S=\ve r\times m\ve v=\overrightarrow{\const}\end{equation*}
 \begin{equation*}L_S=rmv\sin\phi={\const}\end{equation*}
 \begin{equation*}\ud h=\ud s\sin\phi\end{equation*}
-$$\text{velocità areolare}=\frac{\ud A}{\ud t}=\frac{r\ud h}{2\ud
-t}=\frac{r\sin\phi\ud s}{2\ud t}=\frac{r}{2}v\sin\phi$$
-$$L_S=\frac{\ud A}{\ud t}2m\qquad\frac{\ud A}{\ud
-t}=\frac{L_S}{2m}=\const$$
+\index{velocità!areolare}
+\[
+\text{velocità areolare}=\frac{\ud A}{\ud t}=\frac{r\ud h}{2\ud
+t}=\frac{r\sin\phi\ud s}{2\ud t}=\frac{r}{2}v\sin\phi
+\]
+\[L_S=\frac{\ud A}{\ud t}2m\qquad\frac{\ud A}{\ud
+t}=\frac{L_S}{2m}=\const\]
 \subsection{Terza legge}
 \begin{equation*}F=\frac{GM_Sm}{R^2}=ma=\frac{mv^2}{R}=\omega^2Rm\end{equation*}
 \begin{equation*}\frac{GM_S}{R^2}=\omega^2R\qquad \omega=\frac{2\pi}{T}\end{equation*}
-$$\frac{GM_S}{R^2}=\frac{4\pi^2}{T^2}R\qquad
-T^2=\frac{4\pi^2}{GM_S}R^3$$
+\[\frac{GM_S}{R^2}=\frac{4\pi^2}{T^2}R\qquad
+T^2=\frac{4\pi^2}{GM_S}R^3\]
 \begin{equation*}\frac{T^2}{R^3}=\frac{4\pi^2}{GM_S}=\const\end{equation*}
 
 \section{\index{accelerazione!di gravità}Accelerazione di gravità}
@@ -1634,8 +1656,8 @@ alla forza elastica di richiamo.
 Per massa inerziale si intende quella grandezza usata in dinamica
 per esempio \mbox{$\ve F=m\ve a$}. Per massa gravitazionale si intende quella usata nella gravitazione per esempio $F=G\frac{Mm}{r^2}$. Anche se la questione è aperta $m_i$ è proporzionale a $m_g$ infatti se $B$ e $C$ sono attratti da $A$ si ha:
 \begin{equation*}\frac{F_{BA}}{F_{CA}}=\frac{Gm_{Bg}m_{ag}}{Gm_{Cg}m_{ag}}=\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}a_b}{m_{ci}a_c}\end{equation*}
-$$\text{se }a_C=a_B\Rightarrow\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}}{m_{Ci}}\Rightarrow
-m_{Bg}=\frac{m_{Cg}}{m_{Ci}}\cdot m_{Bi}$$
+\[\text{se }a_C=a_B\Rightarrow\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}}{m_{Ci}}\Rightarrow
+m_{Bg}=\frac{m_{Cg}}{m_{Ci}}\cdot m_{Bi}\]
 \section{\index{principio!di equivalenza}Principio di equivalenza}
 \begin{Pri}[equivalenza di Einstein]
 nessun esperimento può rivelare la differenza tra un sistema di riferimento inerziale immerso in un campo gravitazionale $\ve j$ e un sistema non inerziale con accelerazione costante $\ve a=-\ve j$
@@ -1646,9 +1668,9 @@ nessun esperimento può rivelare la differenza tra un sistema di riferimento ine
 \begin{equation*}p=\frac{L^2}{m\alpha}\end{equation*}
 \begin{equation*}\alpha=GMm\end{equation*}
 \begin{equation*}e=\text{eccentricità}=\sqrt{1+2^{\frac{EL^2}{m\alpha}}}\end{equation*}
-$$\begin{array}{llc}
+\[\begin{array}{llc}
 e>1&E>0&\text{iperbole}\\
 e=1&E=0&\text{parabola}\\
 0<e<1&E<0&\text{ellisse}\\
 e=0&E<0&\text{circonferenza}\\
-\end{array}$$
+\end{array}\]

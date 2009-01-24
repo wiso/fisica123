@@ -36,7 +36,7 @@
 \input{TeX/packages}
 %*******************************VERSIONE***************************************
 
-\newcommand{\versione}{1.10.00}
+\newcommand{\versione}{1.10.02}
 
 % non modificare! le righe sotto si aggiornano da sole ogni volta
 % che viene fatto un update (svn up), o un check out (svn co)
@@ -58,6 +58,7 @@
 %*********************************NUOVE TABELLE********************************
 \newenvironment{tabellacostanti}{\begin{tabular}{p{3.4cm}lp{4.5cm}ll} \hline
 costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
+
 %*********************************NUOVI AMBIENTI*******************************
 \newenvironment{definizioneunita}{\begin{quote}}{\end{quote}}
 
@@ -100,6 +101,8 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 
 \makeindex
 
+\setcounter{parttocdepth}{0}
+
 %%******************************INCLUDE ONLY***********************************
 % se si vuole compilare solo una parte scommentare la riga relativa alla
 % sezione che si vuole compilare
@@ -113,6 +116,8 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \input{TeX/titolo}
 \input{TeX/intro}
 %%*******************************INDICE****************************************
+\doparttoc
+\dominitoc
 \tableofcontents
 
 %*******************************CORPO PRINCIPALE*******************************
