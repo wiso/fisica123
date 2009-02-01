@@ -9,20 +9,20 @@ Dinanzi a me non fuor cose create\\ se non etterne, e io etterno duro.\\ Lasciat
 \minitoc
 \section{Mole\index{mole}}
 \begin{Def}[mole]
-Una mole è definita come la quantità di materia che contiene un numero di elementi uguale al numero di atomi che ci sono in $\unita{12}\gram$ di $^{12}\mathrm{C}$. Usando la mole deve essere specificato il tipo di elementi (atomi, molecole, \ldots).
+Una mole è definita come la quantità di materia che contiene un numero di elementi uguale al numero di atomi che ci sono in $\SI{12}{\gram}$ di $^{12}\mathrm{C}$. Usando la mole deve essere specificato il tipo di elementi (atomi, molecole, \ldots).
 \end{Def}
-Segue che una mole di $^{12}\mathrm{C}$ corrisponde a $\unita{12}\gram$, ma una mole di $\mathrm{C}$ corrisponde a poco più di $\unita{12}\gram$ perché in un campione naturale di $\mathrm{C}$ sono contenuti anche isotopi più pesanti.
+Segue che una mole di $^{12}\mathrm{C}$ corrisponde a $\SI{12}{\gram}$, ma una mole di $\mathrm{C}$ corrisponde a poco più di $\SI{12}{\gram}$ perché in un campione naturale di $\mathrm{C}$ sono contenuti anche isotopi più pesanti.
 \begin{Def}[numero di Avogadro\index{numero!di Avogadro}]
-Il numero di Avogadro è il numero di atomi in $\unita{12}\gram$ di $^{12}\mathrm{C}$
+Il numero di Avogadro è il numero di atomi in $\SI{12}{\gram}$ di $^{12}\mathrm{C}$
 \end{Def}
 Quindi una mole di una data sostanza corrisponde a un numero di Avogadro di molecole o atomi di quella sostanza.
 \section{Unità di massa atomica\index{unità di massa atomica}}
 Nel 1815 Proust\index{Proust} propose di introdurre la massa atomica relativa, riferita alla massa dell'idrogeno uguale a $1$. Le masse atomiche degli altri elementi risultano essere molto vicine a numeri interi. Un altro metodo era quello di riferire la massa atomica al sedicesimo delle massa dell'atomo di ossigeno. Oggi ci si riferisce al $^{12}\mathrm{C}$:
 \begin{Def}[unità di massa atomica]
-Una massa atomica ($\unita{1}\atomicmass$) è pari al dodicesimo della massa del $^{12}\mathrm{C}$.
+Una massa atomica ($\SI{1}{\atomicmass}$) è pari al dodicesimo della massa del $^{12}\mathrm{C}$.
 \end{Def}
-Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\unita{12}\gram$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\unita{12}\gram/N_A$, quindi il dodicesimo:
-\begin{equation*}\unita{1}\atomicmass = \frac{\gram\usk\reciprocal\mole}{N_A} = \frac{\gram\usk\reciprocal\mole}{6.022\ldots\times 10^{23}\;\reciprocal\mole}\simeq \unita{1.6605402\times 10^{-27}}\kilogram\end{equation*}
+Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\SI{12}{\gram}$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\SI{12}{\gram}/N_A$, quindi il dodicesimo:
+\[\SI{1}{\atomicmass} = \frac{\gram\per\mole}{N_A} = \frac{\gram\per\mole}{6.022\ldots\times 10^{23}\;\per\mole}\simeq \SI{1.6605402E-27}{\kilogram} \]
 
 \chapter{Gas\index{gas}}
 \minitoc
@@ -102,9 +102,9 @@ e allora:
 
 
 Se $f_x$ è la densità di probabilità allora è normalizzata a $1$ $Nf_x$ è normalizzata ad $N$ numero di molecole. Possiamo scrivere:
-\begin{equation*}\ud P(v_x) = f(v_x)\,\ud v_x\end{equation*}
+\[\ud P(v_x) = f(v_x)\,\ud v_x\]
 oppure
-\begin{equation*}\ud N(v_x) = Nf(v_x)\,\ud v_x\end{equation*}
+\[\ud N(v_x) = Nf(v_x)\,\ud v_x\]
 Allora:
 \begin{equation}
 N\int_{v_{x_1}}^{v_{x_2}} f(v_x)\,\ud v_x
@@ -435,7 +435,7 @@ Supponendo che tra un urto e l'altro si muova di moto rettilineo uniforme. L'ene
 \label{Browniano12}
 \end{equation}
 Il teorema dell'impulso dice:
-\begin{equation*}\int_{t_1}^{t_2}\ve F\,\ud t=\Delta \ve Q=m\left(\ve v(t_2)-\ve v(t_1)\right)\end{equation*}
+\[\int_{t_1}^{t_2}\ve F\,\ud t=\Delta \ve Q=m\left(\ve v(t_2)-\ve v(t_1)\right)\]
 vogliamo calcolare la forza media dall'istante iniziale $t_1=0$, in cui la particella è nell'origine ferma ($\ve v(0)=0$), ad un istante generico $t$:
 \begin{equation}
 \media{\ve F}=\frac{1}{t_2-t_1}\int_{t_1=0}^{t_2=t}\ve F\,\ud t=\frac{1}{t}\int_0^t\ve F\,\ud t=\frac{m\left(\ve v(t)-\ve v(0)\right)}{t}=m\frac{\ve v(t)}{t}
@@ -575,7 +575,7 @@ Applicando solo il campo elettrico:
 \ve r=\frac{qE}{2m}t^2+\ve v_0 t
 \end{equation}
 essendo
-\begin{equation*}\ve E=-E\ver \jmath\qquad \ve v_0=v_0\ver \imath\end{equation*}
+\[\ve E=-E\ver \jmath\qquad \ve v_0=v_0\ver \imath\]
 \begin{equation}
 \left\{
 \begin{array}{l}
@@ -632,7 +632,7 @@ spesso si usa $E=E^\star$, quindi:
 \begin{equation}
 \frac{q}{m}=-\frac{y}{L(L+2D)}\frac{E}{\left(B^\star\right)^2}
 \end{equation}
-che corrisponde a circa $-\unita{1.758}\coulomb\reciprocal\kilogram$.
+che corrisponde a circa $-\SI{1.758}{\coulomb\per\kilogram}$.
 \section{Esperimento di Millikan\index{Millikan}\index{esperimento!di Millikan}}
 L'esperimenti do Millikan dimostra che la carica è quantizzata e ne trova il valore minimo. Si consideri la caduta di una goccia d'olio supposta sferica nell'aria. Le forze agenti sono la gravità, la spinta di Archimede e la forza di Stokes:
 \begin{equation}
@@ -980,9 +980,9 @@ con $n$ naturale. Consideriamo $\lambda\ll L$. Differenziando:
 \ud n=-\frac{2}{\lambda^2}L\ud \lambda
 \end{equation}
 \begin{Es}[numero di modi di oscillare]
-Se una corda è lunga $L=\unita{1}\meter$ e l'intervallo di lunghezze d'onda è $(\lambda,\lambda+\Delta\lambda)=(\unita{1}\centi\meter,\unita{1.1}\centi\meter)$ allora ci sono:
+Se una corda è lunga $L=\SI{1}{\meter}$ e l'intervallo di lunghezze d'onda è $(\lambda,\lambda+\Delta\lambda)=(\SI{1}{\centi\meter},\SI{1.1}{\centi\meter})$ allora ci sono:
 \begin{equation*}
-\Delta n=\frac{2L}{\lambda^2}\Delta\lambda=\frac{2\cdot\unita{1}{\meter}}{(\unita{0.01}\meter)^2}\,\unita{0.001}\meter=20
+\Delta n=\frac{2L}{\lambda^2}\Delta\lambda=\frac{2\cdot\SI{1}{\meter}}{(\SI{0.01}{\meter})^2}\,\SI{0.001}{\meter}=20
 \end{equation*}
 modi di oscillare.
 
@@ -1111,7 +1111,7 @@ V=\frac{1}{2}\beta x^2
 dato che l'equazione del moto armonico, considerando come condizioni iniziale $x=0$ e velocità massima:
 \begin{gather}
 x(t)=A\sin\left(\sqrt{\frac{\beta}{m}}t\right)\\
-\dot x(t)=A\sqrt{\frac{\beta}{m}}\cos^2\left(\sqrt{\frac{\beta}{m}}t\right)
+\dot x(t)=A\sqrt{\frac{\beta}{m}}\cos\left(\sqrt{\frac{\beta}{m}}t\right)
 \end{gather}
 possiamo ricavare come variano $E_C$ e $U$:
 \begin{gather}
@@ -1134,11 +1134,11 @@ E=3kN_AT=3RT
 \end{equation}
 Allora possiamo calcolare il calore specifico a volume costante:
 \begin{equation}
-c_v=\frac{\ud E}{\ud T}=3R\simeq \unita{24.94}\joule\usk\reciprocal\mole\usk\reciprocal\kelvin
+c_v=\frac{\ud E}{\ud T}=3R\simeq \SI{24.94}{\joule\per\mole\per\kelvin}
 \end{equation}
 che è la legge di Doulon--Petit\index{Doulong}\index{Petit}\index{legge!Doulong--Petit}. Nella semplice derivazione non abbiamo tenuto conto dei possibili cambiamenti della struttura cristallina e dell'energia associata agli elettroni liberi (nei metalli). I dati sperimentali mostrano che la legge di Doulong--Petit funziona solo per temperature molto alte e vale per tutti i materiali solidi. Il teorema di equipartizione dell'energia fallisce.
 \section{Einstein\index{Einstein}}
-Nel 1906 Einstein derivò il calore specifico dei solidi assumendo ipotesi simili a quelle di Planck per la radiazione di corpo nero. Assumiamo che il nostro solido contenga $N$ atomi, e possa essere rappresentato come $3N$ oscillatori. Il modello di Eintein si caratterizza per associare ad ogni oscillatore la stessa frequenza $\nu$ uguale per tutti. In accordo con Planck l'energia di un oscillatore può essere\footnote{in realtà sarebbe più corretto\begin{equation*}\epsilon_n=\left(n+\frac{1}{2}\right)h\nu\end{equation*}}:
+Nel 1906 Einstein derivò il calore specifico dei solidi assumendo ipotesi simili a quelle di Planck per la radiazione di corpo nero. Assumiamo che il nostro solido contenga $N$ atomi, e possa essere rappresentato come $3N$ oscillatori. Il modello di Eintein si caratterizza per associare ad ogni oscillatore la stessa frequenza $\nu$ uguale per tutti. In accordo con Planck l'energia di un oscillatore può essere\footnote{in realtà sarebbe più corretto\[\epsilon_n=\left(n+\frac{1}{2}\right)h\nu\]}:
 \begin{equation}
 \epsilon_n=nh\nu\quad n\in\field{N}
 \end{equation}
@@ -1215,15 +1215,15 @@ allora invertendo:
 \label{taglio_Debye}
 \end{equation}
 facendo un conto approssimativo\footnote{
-\begin{equation*}
-\frac{N}{V}=\unita{10^{28}}\meter\rpcubed\quad c_S=c_\text{suono}=\unita{10^3}\meter\per\second
-\end{equation*}
-\begin{equation*}
-\nu_D=\sqrt[3]{\frac{9N}{4\pi V}\left(\frac{1}{c_S^3}\right)^{-1}}\simeq \unita{2\times 10^{12}}\hertz
+\[
+\frac{N}{V}=\SI{1E28}{\per\meter^3}\quad c_S=c_\text{suono}=\SI{1E3}{\meter\per\second}
+\]
+\[
+\nu_D=\sqrt[3]{\frac{9N}{4\pi V}\left(\frac{1}{c_S^3}\right)^{-1}}\simeq \SI{2E12}{\hertz}
 \qquad
-\lambda_D = c_S\nu_D \simeq \unita{5\times 10^{-10}}\meter=\unita{5}\angstrom
-\end{equation*}
-} si arriva ad una lunghezza d'onda dell'ordine della distanza tra gli atomi. Questo è in netto contrasto con l'ipotesi iniziale soprattutto per le alte frequenze.
+\lambda_D = c_S\nu_D \simeq \SI{5E-10}{\meter}=\SI{5}{\angstrom}
+\]}
+ si arriva ad una lunghezza d'onda dell'ordine della distanza tra gli atomi. Questo è in netto contrasto con l'ipotesi iniziale soprattutto per le alte frequenze.
 Possiamo inserire l'equazione \eqref{taglio_Debye} nella \eqref{udn09}:
 \begin{equation}
 \left(\frac{2}{c_T^3}+\frac{1}{c_L^3}\right)=\frac{9N}{4\pi V}\frac{1}{\nu_D^3}\quad\Rightarrow\quad
@@ -1274,7 +1274,7 @@ per basse temperature tende a zero come $T^3$, mentre all'infinito vale $3R$.
 \section{Boltzmann}
 Consideriamo un sistema in equilibrio ad un certa temperatura $T$. Qual è la probabilità di trovare il sistema in equilibrio, isolato dall'ambiente, con energia $E$? Sperimentalmente posso misurare ad intervalli di tempo ravvicinati l'energia interna. Oppure posso prendere diversi sistemi, che comunicano solo con scambi di calore e valutare le loro energie interne. \`E la stessa cosa.
 
-Consideriamo due sistemi $1$ e $2$ a contatto identici in equilibrio termico. La distribuzione di probabilità del primo corpo è uguale a quella del secondo: $P_1=P_2$, perché la probabilità di trovare il primo sistema ad energia $E$ è la stessa di trovare il secondo corpo ad energia $E$. Questa probabilità sarà proporzionale alla temperatura. La probabilità che i due corpi abbiamo energia $E_1$ e $E_2$ rispettivamente è $P(E_1)P_(E_2)$. Consideriamo i due sistemi come un unico sistema. Definiamo $P'$ la densità di probabilità di trovare il sistema globale all'energia $E'=E_1+E_2$ e il sistema $1$ all'energia $E_1$ e il sistema $2$ all'energia $E_2$:
+Consideriamo due sistemi $1$ e $2$ a contatto identici in equilibrio termico. La distribuzione di probabilità del primo corpo è uguale a quella del secondo: $P_1=P_2$, perché la probabilità di trovare il primo sistema ad energia $E$ è la stessa di trovare il secondo corpo ad energia $E$. Questa probabilità sarà proporzionale alla temperatura. La probabilità che i due corpi abbiamo energia $E_1$ e $E_2$ rispettivamente è $P(E_1)P(E_2)$. Consideriamo i due sistemi come un unico sistema. Definiamo $P'$ la densità di probabilità di trovare il sistema globale all'energia $E'=E_1+E_2$ e il sistema $1$ all'energia $E_1$ e il sistema $2$ all'energia $E_2$:
 \begin{equation}
 P'(E'=E_1+E_2)=P(E_1)P(E_2)
 \end{equation}
@@ -1562,7 +1562,7 @@ All'equilibrio termico ogni sistema raggiunge la stessa configurazione che avreb
 \index{calore specifico!dei gas|(}
 Per un gas monoatomico l'energia interna è $E=\frac{3}{2}NkT$, quindi il suo calore specifico $c_v=\frac{1}{n}\frac{\partial}{\partial T} E=\frac{3}{2}R$. Per i gas poliatomici bisogna considerare anche l'energia dovuta alle rotazioni e alle vibrazioni. Il problema è che questi gradi di libertà in più si attivano al variare della temperatura.
 
-Ignoriamo l'enenergia legata agli elettroni. Questi per essere eccitati hanno bisogno di energie dell'ordine di $\unita{1}\electronvolt$, cioè di una temperatura di circa $\unita{10^4}\kelvin$. A questa temperatura il gas ha subito dei cambiamenti tali che il nostro modello non è più valido. Dopo il grado di libertà traslazionale, che è sempre attivo, si attiva il grado rotazionale. L'energia rotazionale è dell'ordine di $\unita{10^{-4}}\electronvolt$. L'energia vibrazionale invece è maggiore, dell'ordine di $\unita{(10^{-3}\div 10^{-1})}\electronvolt$ e quindi necessitano una temperatura maggiore per essere attivati. A temperature molto alte tutti i gradi di libertà sono attivati, quindi per una molecola biatomica sono 7 (3 traslazionali, 2 rotazionali e 2 vibrazionali, considerando l'energia potenziale come grado di libertà)\footnote{problema a due corpi: 6 gradi di libertà più uno potenziale}. Quindi l'energia totale in accordo con il principio di equipartizione:
+Ignoriamo l'enenergia legata agli elettroni. Questi per essere eccitati hanno bisogno di energie dell'ordine di $\SI{1}{\electronvolt}$, cioè di una temperatura di circa $\SI{1E4}{\kelvin}$. A questa temperatura il gas ha subito dei cambiamenti tali che il nostro modello non è più valido. Dopo il grado di libertà traslazionale, che è sempre attivo, si attiva il grado rotazionale. L'energia rotazionale è dell'ordine di $\SI{1E-4}{\electronvolt}$. L'energia vibrazionale invece è maggiore, dell'ordine di $\SIrange{1E-3}{1E-1}{\eV}$ e quindi necessitano una temperatura maggiore per essere attivati. A temperature molto alte tutti i gradi di libertà sono attivati, quindi per una molecola biatomica sono 7 (3 traslazionali, 2 rotazionali e 2 vibrazionali, considerando l'energia potenziale come grado di libertà)\footnote{problema a due corpi: 6 gradi di libertà più uno potenziale}. Quindi l'energia totale in accordo con il principio di equipartizione:
 \begin{equation}
 \lim_{T\to\infty}E=\frac{7}{2}NkT
 \end{equation}
@@ -1697,9 +1697,9 @@ Osservando il decadimento di uranio osservò due tipi di radiazioni $\alpha$ e $
 Thomson usò queste particelle per i suoi esperimenti sfruttando la loro grande massa ed energia.
 \section{Scattering di Thomson}
 \subsubsection{modello di Thomson}
-Il modello di Thomson descrive il nucleo come una densità di carica positiva che contiene gran parte della massa atomica in cui sono immersi gli elettroni, in modo che all'esterno l'atomo risulti neutro. Questo modello viene escluso dagli esperimenti di scattering di Ruttherford.  Gli esperimenti di scattering avvenivano su vari metalli: un fascio collimato di particelle $\alpha$ colpiva nel vuoto una sottile lamina metallica. Le particelle che passavano colpivano uno schermo che si illuminava quando veniva colpito. In questo modo era possibile misurare gli angoli di scattering. Gran parte delle particelle erano deviate di angoli molto piccoli, dell'ordine di $\unita{1}\degree$. Tuttavia in modo inastpettato alcune particelle erano deviate di $\unita{90}\degree$ o più. Se assumiamo il modello di Thomson fer avere una deflessione della traiettoria la particella $\alpha$ deve entrare nell'atomo, cioè nella densità di carica positiva, perché all'esterno la particella $\alpha$ vede l'atomo neutro.
+Il modello di Thomson descrive il nucleo come una densità di carica positiva che contiene gran parte della massa atomica in cui sono immersi gli elettroni, in modo che all'esterno l'atomo risulti neutro. Questo modello viene escluso dagli esperimenti di scattering di Ruttherford.  Gli esperimenti di scattering avvenivano su vari metalli: un fascio collimato di particelle $\alpha$ colpiva nel vuoto una sottile lamina metallica. Le particelle che passavano colpivano uno schermo che si illuminava quando veniva colpito. In questo modo era possibile misurare gli angoli di scattering. Gran parte delle particelle erano deviate di angoli molto piccoli, dell'ordine di $\SI{1}{\degree}$. Tuttavia in modo inastpettato alcune particelle erano deviate di $\SI{90}{\degree}$ o più. Se assumiamo il modello di Thomson fer avere una deflessione della traiettoria la particella $\alpha$ deve entrare nell'atomo, cioè nella densità di carica positiva, perché all'esterno la particella $\alpha$ vede l'atomo neutro.
 
-Consideriamo la collisione di una particella $\alpha$ con un elettrone. Essendo la massa della particella $\alpha$ circa $7294$ volte la massa dell'elettrone possiamo dire $m_\alpha\gg m_{\mathrm{e}}$. Dalla teoria sugli urti, imponendo la conservazione della quantità di moto e dell'energia cinetica, considerando il caso monodimensionale e considerando il caso limite\footnote{vedi \ref{casilimiteurti} a pag.\@\pageref{casilimiteurti}} $m_\alpha\gg m_{\mathrm{e}}$ con l'elettrone inizialmente fermo si ha che dopo l'urto la particella $\alpha$ prosegue con la velocità che aveva prima dell'urto, mentre l'elettrone acquista una velocità pari a due volte quella della particella $\alpha$. Se vogliamo una deviazione della traiettoria della particella $\alpha$ dobbiamo far si che l'urto avvenga di striscio. Ipotizzando il caso di deviazione massima, cioè quando $\Delta \ve p_\alpha$ è ortogonale a $\ve p_\alpha$ abbiamo che $\frac{\Delta p_\alpha}{p_\alpha}=\tan\theta\sim\theta$. Facendo i conti a caso, dicendo che $\Delta p_\alpha$ è uguale a $-\Delta p_\mathrm{e}=2m_\mathrm{e}v_\alpha\simeq 2m_\alpha v_\alpha/7294$ si ottiene che $\theta\sim \unita{0.01}\degree$.
+Consideriamo la collisione di una particella $\alpha$ con un elettrone. Essendo la massa della particella $\alpha$ circa $7294$ volte la massa dell'elettrone possiamo dire $m_\alpha\gg m_{\mathrm{e}}$. Dalla teoria sugli urti, imponendo la conservazione della quantità di moto e dell'energia cinetica, considerando il caso monodimensionale e considerando il caso limite\footnote{vedi \ref{casilimiteurti} a pag.\@\pageref{casilimiteurti}} $m_\alpha\gg m_{\mathrm{e}}$ con l'elettrone inizialmente fermo si ha che dopo l'urto la particella $\alpha$ prosegue con la velocità che aveva prima dell'urto, mentre l'elettrone acquista una velocità pari a due volte quella della particella $\alpha$. Se vogliamo una deviazione della traiettoria della particella $\alpha$ dobbiamo far si che l'urto avvenga di striscio. Ipotizzando il caso di deviazione massima, cioè quando $\Delta \ve p_\alpha$ è ortogonale a $\ve p_\alpha$ abbiamo che $\frac{\Delta p_\alpha}{p_\alpha}=\tan\theta\sim\theta$. Facendo i conti a caso, dicendo che $\Delta p_\alpha$ è uguale a $-\Delta p_\mathrm{e}=2m_\mathrm{e}v_\alpha\simeq 2m_\alpha v_\alpha/7294$ si ottiene che $\theta\sim \SI{0.01}{\degree}$.
 
 Consideriamo l'effetto della carica positiva. Una sfera di raggio $R$ uniformente carica con carica totale $Q$ produce una forza su una particella $\alpha$ a distanza $r$ dal centro:
 \begin{equation}
@@ -1716,16 +1716,16 @@ ipotizzando il caso di deviazione massima, cioè quando $\Delta\ve p\perp\ve p$ 
 \begin{equation*}
 \tan\theta=\frac{\Delta p}{p}\sim\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{R^2}\frac{2R}{m_\alpha v^2}=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{R\left(\frac{1}{2}m_\alpha v^2\right)}
 \end{equation*}
-se assumiamo $q_\alpha=2e$ con un'energia di $\unita{5}\mega\electronvolt$, incidente su una lastra di oro con $Q=79e$ e $R=\unita{1}\angstrom$ abbiamo:
+se assumiamo $q_\alpha=2e$ con un'energia di $\SI{5}{\mega\electronvolt}$, incidente su una lastra di oro con $Q=79e$ e $R=\SI{1}{\angstrom}$ abbiamo:
 \begin{equation*}
-\theta\sim\tan\theta=\unita{0.026}\degree
+\theta\sim\tan\theta=\SI{0.026}{\degree}
 \end{equation*}
 
-Secondo questo calcolo pedestre la maggior parte delle particelle dovrebbe essere scatterata con un angolo di $\unita{1}\degree$. Si può dimostrare che la frazione di particelle scatterate con un angolo maggiore di $\theta$ è $e^{-(\theta/\media{\theta})^2}$. Se assumiamo $\media{\theta}=\unita{1}\degree$ allora la frazione scatteerata con angolo maggiore di $\unita{90}\degree$ è $e^{-(90/1)^2}\simeq 10^{-3500}$. La frazione osservata da Ruttherford era di $\frac{1}{8000}$, in disaccordo col modello di Thomson. L'atomo di Thomson non è in grado di deflettere abbastanza le particelle $\alpha$.
+Secondo questo calcolo pedestre la maggior parte delle particelle dovrebbe essere scatterata con un angolo di $\SI{1}{\degree}$. Si può dimostrare che la frazione di particelle scatterate con un angolo maggiore di $\theta$ è $e^{-(\theta/\media{\theta})^2}$. Se assumiamo $\media{\theta}=\SI{1}{\degree}$ allora la frazione scatteerata con angolo maggiore di $\SI{90}{\degree}$ è $e^{-(90/1)^2}\simeq 10^{-3500}$. La frazione osservata da Ruttherford era di $\frac{1}{8000}$, in disaccordo col modello di Thomson. L'atomo di Thomson non è in grado di deflettere abbastanza le particelle $\alpha$.
 
-Se ora proviamo a calcolare quale deve essere il raggio dell'atomo (prima avevamo assunto $\unita{1}\angstrom$) per avere uno scattering di $\unita{1}\degree$:
+Se ora proviamo a calcolare quale deve essere il raggio dell'atomo (prima avevamo assunto $\SI{1}{\angstrom}$) per avere uno scattering di $\SI{1}{\degree}$:
 \begin{equation*}
-R=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{\frac{1}{2}m_\alpha v^2}=\unita{4.6\times 10^{-4}}\angstrom
+R=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{\frac{1}{2}m_\alpha v^2}=\SI{4.6E-4}{\angstrom}
 \end{equation*}
 Ruttherford concluse che per avere angoli di scattering come quelli osservati la carica positiva doveva avere un volume molto piccolo rispetto al volume dell'atomo.
 \section{Scattering di Ruttherford}
@@ -1873,7 +1873,7 @@ sostituendo:
 \end{split}
 \end{equation}
 \subsection{Raggio nucleare}
-Per stimare il raggio nucleare: sia $A$ il numero di nucleoni $r_\text{nucleone}\simeq \unita{1.4\times 10^{-15}}\meter$ il raggio di un nucleone, allora il volume di tutto il nucleo:
+Per stimare il raggio nucleare: sia $A$ il numero di nucleoni $r_\text{nucleone}\simeq \SI{1.4E-15}{\meter}$ il raggio di un nucleone, allora il volume di tutto il nucleo:
 \begin{equation*}
 A\frac{4}{3}\pi r^3_\text{nucleone}\!\!=\frac{4}{3}\pi r^3_\text{nucleo}
 \end{equation*}
@@ -1943,7 +1943,7 @@ trovando $r$:
 r=n^2\frac{\hslash^2\giorgi}{m_{\mathrm{e}}Ze^2}=n^2\frac{a_0}{Z}
 \label{Bohr04}
 \end{equation}
-con $a_0=\frac{\hslash^2\giorgi}{m_\mathrm{e}e^2}\simeq \unita{0.529}\angstrom$ il primo raggio di Bohr\index{raggio!di Bohr}. Al variare di $n\in\field{N}$ la \eqref{Bohr04} rappresenta il raggio di tutte le orbite stabili.
+con $a_0=\frac{\hslash^2\giorgi}{m_\mathrm{e}e^2}\simeq \SI{0.529}{\angstrom}$ il primo raggio di Bohr\index{raggio!di Bohr}. Al variare di $n\in\field{N}$ la \eqref{Bohr04} rappresenta il raggio di tutte le orbite stabili.
 
 Per la velocità sostituiamo nell'espressione \eqref{bohrv01} ricavata dalla quantizzazione del momento angolare il valore del raggio per le orbite stabili \eqref{Bohr04}:
 \begin{equation}
@@ -1970,10 +1970,10 @@ E&=-\frac{1}{2}\frac{1}{\giorgi}\frac{Ze^2}{r}=-\frac{1}{2}\frac{1}{\giorgi}\fra
 \end{equation}
 con
 \begin{equation}
-R_\infty=\frac{m_e e^4}{8\varepsilon_0^2h^3 c}=\frac{\alpha^2m_\mathrm{e}c}{2h}\simeq 1.0974\times 10^7\reciprocal\metre
+R_\infty=\frac{m_e e^4}{8\varepsilon_0^2h^3 c}=\frac{\alpha^2m_\mathrm{e}c}{2h}\simeq \SI{1.0974E7}{\per\metre}
 \end{equation}
 \begin{equation}
-E_0=\frac{1}{(\giorgi)^2}\frac{m_{\mathrm{e}}e^4}{2\hslash^2}=\frac{\alpha^2}{2}m_\mathrm{e}c^2=R_\infty hc\simeq \unita{13.6}{\electronvolt}
+E_0=\frac{1}{(\giorgi)^2}\frac{m_{\mathrm{e}}e^4}{2\hslash^2}=\frac{\alpha^2}{2}m_\mathrm{e}c^2=R_\infty hc\simeq \SI{13.6}{\electronvolt}
 \end{equation}
 l'energia della prima orbita che corrisponde quindi all'energia che devo fornire ad un atomo per strappare l'elettrone sul livello più basso, che è l'energia di ionizzazione. Il salto energetico di un elettrone che passa da $n=n_1$ a $n=n_2$:
 \begin{equation}
@@ -2000,13 +2000,13 @@ R=\frac{\mu e^2}{8\varepsilon_0^2h^3 c}=R_\infty\frac{\mu}{m_\mathrm{e}}\xrighta
 \begin{Es}[Riga $\mathrm{H}_\alpha$]
 La riga $\mathrm{H}_\alpha$ è quella corrispondente alla transizione $n=3\to2$ nell'idrogeno. Calcoliamo il numero d'onda
 \begin{multline*}
-\frac{1}{\lambda}=R\left(\frac{1}{n_2}-\frac{1}{n_1}\right)=R_\infty\frac{\mu}{m_\mathrm{e}}\left(\frac{1}{2^2}-\frac{1}{3^2}\right)=\frac{5}{36}R_\infty\frac{Zm_\mathrm{p}}{Z m_\mathrm{p}+m_\mathrm{e}}\\=\frac{5}{36}R_\infty\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}\simeq 1.523\times 10^6\reciprocal\meter
+\frac{1}{\lambda}=R\left(\frac{1}{n_2}-\frac{1}{n_1}\right)=R_\infty\frac{\mu}{m_\mathrm{e}}\left(\frac{1}{2^2}-\frac{1}{3^2}\right)=\frac{5}{36}R_\infty\frac{Zm_\mathrm{p}}{Z m_\mathrm{p}+m_\mathrm{e}}\\=\frac{5}{36}R_\infty\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}\simeq \SI{1.523E6}{\per\meter}
 \end{multline*}
 avendo usato $n_1=3$, $n_2=2$ e $Z=1$. La lunghezza d'onda:
 \begin{equation*}
-\lambda\simeq \unita{6.565\times 10^{-7}}\meter
+\lambda\simeq \SI{6.565E-7}{\meter}
 \end{equation*}
-Se avessimo usato $R_\infty$ al posto di $R$ sarebbe risultato: $\lambda\simeq \unita{6.561\times 10^{-7}}\meter$. Infatti la correzione per l'idrogeno della massa ridotta:
+Se avessimo usato $R_\infty$ al posto di $R$ sarebbe risultato: $\lambda\simeq \SI{6.561E-7}{\meter}$. Infatti la correzione per l'idrogeno della massa ridotta:
 \begin{equation*}
 \mu_\mathrm{H}=\frac{m_\mathrm{e}m_\mathrm{p}}{m_\mathrm{e}-m_\mathrm{p}}=\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}m_\mathrm{e}\simeq 1.0005 \times m_\mathrm{e}
 \end{equation*}

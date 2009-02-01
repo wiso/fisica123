@@ -9,13 +9,13 @@ La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}
 p=\frac{\ud\ve F\cdot \ve n}{\ud A}
 \end{equation}
 \end{Def}
-La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che però è usualmente piccola, comuni sono anche: $\bbar=\unita{10^5}\pascal$, $\atmosphere=\unita{1.013\times 10^5}\pascal$, $\torr=\mmHg=\unita{1/760}\atmosphere$.
+La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che però è usualmente piccola, comuni sono anche: $\SI{}{\bbar}=\SI{1E5}{\pascal}$, $\SI{}{\atmosphere}=\SI{1.013E5}{\pascal}$, $\SI{}{\torr}=\SI{}{\mmHg}=\SI{1/760}{\atmosphere}$.
 \begin{Def}[densità (locale)]
 \begin{equation}
 \rho(\ve r)=\frac{\ud m}{\ud V}
 \end{equation}
 \end{Def}
-si misura in $\kilogram\per\cubic\metre$.
+si misura in \SI{}{\kilogram/\metre^3}.
 
 \subsection{\index{legge!di Stevino}Legge di Stevino}
 \label{stevino11}
@@ -26,20 +26,20 @@ si misura in $\kilogram\per\cubic\metre$.
 
 
 Il fluido è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è la forza dovuta alla pressione della parte superiore del fluido, $\ve F_2$ a quella inferiore.
-\begin{equation*}-\ud mg-(p+\ud p)A+pA=0\qquad -\ud mg-dpA=0\end{equation*}
-\begin{equation*}\ud m=\rho \ud V=\rho A\ud y\qquad -\rho A\ud y g-\ud p A=0\end{equation*}
-\begin{equation*}\ud p=-\rho g \ud y\end{equation*}
-\begin{equation*}p_0=\text{pressione atmosferica}\end{equation*}
-\begin{equation*}\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^h \rho g\,\ud y=-\rho g\int_0^h\!\ud y\end{equation*}
-\begin{equation*}p=p_0-\rho g h\end{equation*}
-che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizziamo che \begin{equation*}\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\end{equation*}
-\begin{equation*}\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\end{equation*}
-\begin{equation*}\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\end{equation*}
+\[-\ud mg-(p+\ud p)A+pA=0\qquad -\ud mg-dpA=0\]
+\[\ud m=\rho \ud V=\rho A\ud y\qquad -\rho A\ud y g-\ud p A=0\]
+\[\ud p=-\rho g \ud y\]
+\[p_0=\text{pressione atmosferica}\]
+\[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^h \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
+\[p=p_0-\rho g h\]
+che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizziamo che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+\[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
+\[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
 p=p_0e^{-\frac{\rho_0 g}{p_0}y}
 \label{legge_atmosfera}
 \end{equation}
-\begin{equation*}p=p_0e^{-\frac{y}{\lambda}}\qquad \lambda=\frac{p_0}{\rho_0 g}\quad \text{è una lunghezza}\end{equation*}
+\[p=p_0e^{-\frac{y}{\lambda}}\qquad \lambda=\frac{p_0}{\rho_0 g}\quad \text{è una lunghezza}\]
 che è la legge dell'atmosfera.
 
 \subsection{\index{legge!dei vasi comunicanti}Legge dei vasi comunicanti}
@@ -50,11 +50,11 @@ Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e
 \caption{Vasi comunicanti}
 \label{vasicom}
 \end{figure}
-\begin{equation*}p_A=p_B\qquad p_0+\rho_1 gh_1=p_0+\rho_2gh_2\end{equation*}
-\begin{equation*}\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\end{equation*}
+\[p_A=p_B\qquad p_0+\rho_1 gh_1=p_0+\rho_2gh_2\]
+\[\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\]
 in particolare se $\rho_1=\rho_2$ allora $h_1=h_2$.
 \subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli 1664}
-L'esperimento (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \unita{0.76}\meter.
+L'esperimento (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \SI{0.76}{\meter}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.7]{immagini/fisica1/Torricelli}
@@ -63,7 +63,7 @@ L'esperimento (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindr
 \end{figure}
 
 Il punto A e il punto B sono allo stesso livello, quindi: $p_A=p_B$
-\begin{equation*}p_A=p_0\qquad p_B=\rho_{\mathrm{Hg}}gh\qquad p_0=\rho_\mathrm{Hg}gh=\unita{1}\atmosphere\end{equation*}
+\[p_A=p_0\qquad p_B=\rho_{\mathrm{Hg}}gh\qquad p_0=\rho_\mathrm{Hg}gh=\SI{1}{\atmosphere} \]
 Si misura in questo modo la pressione atmosferica, in $\mmHg$.\index{pressione! atmosferica}
 
 L'esperimento di Torricelli suscitò clamore perché Torricelli suppose che nella zona superiore del tubo ci ``fosse'' del vuoto.\index{vuoto}
@@ -76,12 +76,12 @@ In due semisfere attaccate in modo da creare una sfera unica viene diminuita la 
 \end{figure}
 
 Consideriamo la strisciolina $\ud m$
-\begin{equation*}F=\int\ud F\end{equation*}
-\begin{equation*}\ud A=2\pi R\sin\theta R\ud\theta=2\pi R^2\sin\theta\ud\theta\end{equation*}
-\begin{equation*}\ud F_x=p_0 2\pi R^2\sin\theta\ud\theta\cos\theta\end{equation*}
-\begin{equation*}\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\end{equation*}
-\begin{equation*}\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\end{equation*}
-\begin{equation*}\text{se } R=\unita{1}\metre\quad F_x=\unita{3.14\times 10^5}\newton\end{equation*}
+\[F=\int\ud F\]
+\[\ud A=2\pi R\sin\theta R\ud\theta=2\pi R^2\sin\theta\ud\theta\]
+\[\ud F_x=p_0 2\pi R^2\sin\theta\ud\theta\cos\theta\]
+\[\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\]
+\[\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\]
+\[\text{se } R=\SI{1}{\metre} \quad F_x=\SI{3.14E5}{\newton} \]
 
 \subsection{Principio di Pascal\index{principio!di Pascal}}
 \begin{Pri}[Pascal]
@@ -115,8 +115,8 @@ Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché 
 \includegraphics[scale=1.4]{immagini/fisica1/firma_daniele}
 }
 Ghiaccio in acqua $\Longrightarrow$ si scioglie
-\begin{equation*}V_\text{totale}-V_\text{emergente}=V_\text{totale}\frac{\rho_\text{ghiaccio}}{\rho_\text{\ce{H2O}}}\end{equation*}
-\begin{equation*}V_\text{totale}\simeq 10 V_\text{emergente}\end{equation*}
+\[V_\text{totale}-V_\text{emergente}=V_\text{totale}\frac{\rho_\text{ghiaccio}}{\rho_\text{\ce{H2O}}}\]
+\[V_\text{totale}\simeq 10 V_\text{emergente}\]
 \end{Es}
 \subsection{Condizione generale di equilibrio}
 \begin{figure}[htbp]
@@ -124,26 +124,26 @@ Ghiaccio in acqua $\Longrightarrow$ si scioglie
    \includegraphics[scale=0.4]{immagini/fisica1/equilibrio}
 \end{figure}
 Forze di volume: proporzionali al volume
-\begin{equation*}\ve f=\frac{\ve F}{m}\end{equation*}
+\[\ve f=\frac{\ve F}{m}\]
 notare che $\ve f$ è un'accelerazione.
 
 
 Forze di superficie: dovute al liquido che lo circonda, proporzionali alla superficie
-\begin{equation*}F=pA\end{equation*}
+\[F=pA\]
 Lungo l'asse $x$:
 
-\begin{equation*}f_x\ud m+p(x)\ud z\ud y-p(x+\ud x)\ud y\ud z=0\end{equation*}
-\begin{equation*}f_x\rho\ud x\ud y\ud z+p(x)\ud y\ud z-(p(x)+\frac{\partial p}{\partial x}\ud x)\ud y\ud z=0\end{equation*}
-\begin{equation*}f_x\rho\ud x\ud y\ud z-\frac{\partial p}{\partial {x}}\ud x\ud y\ud z=0\end{equation*}
-\begin{equation*}f_x\rho=\frac{\partial p}{\partial x}\quad f_y\rho=\frac{\partial p}{\partial y}\quad f_z\rho=\frac{\partial p}{\partial z}\end{equation*}
+\[f_x\ud m+p(x)\ud z\ud y-p(x+\ud x)\ud y\ud z=0\]
+\[f_x\rho\ud x\ud y\ud z+p(x)\ud y\ud z-(p(x)+\frac{\partial p}{\partial x}\ud x)\ud y\ud z=0\]
+\[f_x\rho\ud x\ud y\ud z-\frac{\partial p}{\partial {x}}\ud x\ud y\ud z=0\]
+\[f_x\rho=\frac{\partial p}{\partial x}\quad f_y\rho=\frac{\partial p}{\partial y}\quad f_z\rho=\frac{\partial p}{\partial z}\]
 \begin{equation}\ve f\rho=\ve\nabla p\end{equation}
 
 \begin{Es}[Forza peso -- Stevino]
 Nelle ipotesi di Stevino c'è solo il peso, quindi $\ve f=\ve g$
-\begin{equation*}f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p\end{equation*}
+\[f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p\]
 
-\begin{equation*}U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\end{equation*}
-\begin{equation*}\rho U_m=-p+\const\end{equation*}
+\[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
+\[\rho U_m=-p+\const\]
 Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali.
 \end{Es}
 \begin{Es}[Fluido in accelerazione]
@@ -180,14 +180,14 @@ che è un piano la cui pendenza è proporzionale all'accelerazione del sistema.
 \caption{Elemento di un fluido in rotazione}
 \end{figure}
 Per lavorare in un sistema non inerziale ed usare la legge di Newton aggiungiamo la forza fittizia $m\omega^2 r$, $r$ è la distanza dal centro, la distanza dell'elemento $\ud m$ dall'asse.
-\begin{equation*}\text{Nella direzione radiale } f_r=\omega^2 r\end{equation*}
-\begin{equation*}f_r\rho=\rho\omega^2 y=\frac{\ud p}{\ud y}\qquad \ud p=\rho\omega^2 y\ud y\end{equation*}
-\begin{equation*}\int_{p_\text{asse}}^p\ud p=\int_0^R \rho\omega^2 y\ud y\end{equation*}
-\begin{equation*}p-p_\text{asse}=\rho\omega^2\frac{R^2}{2}\qquad p=p_\text{asse}+\frac{\rho\omega^2}{2}R^2\end{equation*}
-\begin{equation*}p_\text{asse}=p_0-\rho gz\qquad p=p_0-\rho gz+\frac{\rho\omega^2}{2}R^2\end{equation*}
+\[\text{Nella direzione radiale } f_r=\omega^2 r\]
+\[f_r\rho=\rho\omega^2 y=\frac{\ud p}{\ud y}\qquad \ud p=\rho\omega^2 y\ud y\]
+\[\int_{p_\text{asse}}^p\ud p=\int_0^R \rho\omega^2 y\ud y\]
+\[p-p_\text{asse}=\rho\omega^2\frac{R^2}{2}\qquad p=p_\text{asse}+\frac{\rho\omega^2}{2}R^2\]
+\[p_\text{asse}=p_0-\rho gz\qquad p=p_0-\rho gz+\frac{\rho\omega^2}{2}R^2\]
 Su una superficie isobarica $p=\const$,
-\begin{equation*}\rho gz=\const+\frac{\rho\omega^2}{2}R^2\end{equation*}
-\begin{equation*}z=\const+\frac{\rho\omega^2}{2\rho g}R^2=\const+\frac{\omega^2}{2g}R^2=\const+\frac{\omega^2}{2g}(x^2+y^2)\end{equation*}
+\[\rho gz=\const+\frac{\rho\omega^2}{2}R^2\]
+\[z=\const+\frac{\rho\omega^2}{2\rho g}R^2=\const+\frac{\omega^2}{2g}R^2=\const+\frac{\omega^2}{2g}(x^2+y^2)\]
 \`E un paraboloide:
 \begin{figure}[htbp]
 \centering
@@ -237,7 +237,7 @@ Fissiamo $\Delta t$ tale che $h=v_1\Delta t$
 \item fluido che esce in $\Delta t\quad \rho\Delta V=\rho A_2v_2\Delta t$
 \end{enumerate}
 Naturalmente le masse entranti e uscenti sono uguali, quindi (legge di Leonardo\index{legge!di Leonardo}\index{Leonardo}):
-\begin{equation*}A_1v_1=A_2v_2\end{equation*}
+\[A_1v_1=A_2v_2\]
 
 Portata volumica\index{portata!volumica}: $Q_v=Av$
 
@@ -252,7 +252,7 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 
 
 Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
-\begin{equation*}\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\end{equation*}
+\[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
 \begin{equation*}
 \left\{
         \begin{array}{lll}
@@ -262,25 +262,25 @@ Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
         \end{array}
 \right.
 \end{equation*}
-\begin{equation*}\Delta K=\frac{1}{2}\Delta m(v_2^2-v_1^2)\end{equation*}
-\begin{equation*}L_1+L_2+L_P=\Delta K\end{equation*}
-\begin{equation*}p_1A_1v_1\Delta t-p_2A_2v_2\Delta t-\Delta mg(h_2-h_1)=\frac{1}{2}\Delta m(v_2^2-v_1^2)\end{equation*}
+\[\Delta K=\frac{1}{2}\Delta m(v_2^2-v_1^2)\]
+\[L_1+L_2+L_P=\Delta K\]
+\[p_1A_1v_1\Delta t-p_2A_2v_2\Delta t-\Delta mg(h_2-h_1)=\frac{1}{2}\Delta m(v_2^2-v_1^2)\]
 \begin{align*}
 &\Delta m\left[\left(gh_1-gh_2\right)+\frac{p_1A_1v_1\Delta t}{\Delta m}-\frac{p_2A_2v_2\Delta t}{\Delta m}\right]\\
 =&\Delta m\left[\left(gh_1-gh_2\right)+\frac{p_1A_1v_1\Delta t}{\rho A_1v_1\Delta t}-\frac{p_2A_2v_2\Delta t}{\rho A_2v_2\Delta t}\right]\\
 =&\Delta m\left[gh_1-gh_2+\frac{p_1}{\rho}-\frac{p_2}{\rho}\right]=L\\
 =&\Delta K=\frac{1}{2}\Delta m(v_2^2-v_1^2)
 \end{align*}
-\begin{equation*}gh_1-gh_2+\frac{p_1}{\rho}-\frac{p_2}{\rho}=\frac{1}{2}(v_2^2-v_1^2)\end{equation*}
-\begin{equation*}gh_1+\frac{p_1}{\rho}+\frac{1}{2}v_1^2=gh_2+\frac{p_2}{\rho}+\frac{1}{2}v_2^2\end{equation*}
+\[gh_1-gh_2+\frac{p_1}{\rho}-\frac{p_2}{\rho}=\frac{1}{2}(v_2^2-v_1^2)\]
+\[gh_1+\frac{p_1}{\rho}+\frac{1}{2}v_1^2=gh_2+\frac{p_2}{\rho}+\frac{1}{2}v_2^2\]
 Teorema di Bernoulli:
-\begin{equation*}\rho gh+p+\frac{1}{2}\rho v^2=\const\end{equation*}
+\[\rho gh+p+\frac{1}{2}\rho v^2=\const\]
 L'espressione è molto simile alla conservazione dell'energia meccanica.
-\begin{equation*}mgh+\frac{1}{2}mv^2=\const\end{equation*}
+\[mgh+\frac{1}{2}mv^2=\const\]
 
 \begin{Es}[ali di aereo]
 L'aria sotto le ali di un aereo è più lenta di quella che passa sopra, quindi dalla legge di Bernoulli, considerando l'altezza uguale:
-\begin{equation*}p+\frac{1}{2}\rho v^2=\const\end{equation*}
+\[p+\frac{1}{2}\rho v^2=\const\]
 quindi se diminuisce $v$ deve aumentare $p$ e allora si ho una pressione dell'aria sull'ala e quindi la forza che tiene in aria l'aeroplano.
 \end{Es}
 \section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
@@ -295,7 +295,7 @@ quindi se diminuisce $v$ deve aumentare $p$ e allora si ho una pressione dell'ar
 La pressione diminuisce, si ha una perdita di carico per un fluido viscoso a causa degli attriti interni. Siamo a regime laminare (velocità basse).
 
 
-\begin{equation*}F=\eta A\frac{\ud v}{\ud z}\qquad\ve F=\eta A \ve\nabla v\qquad\eta=\text{coefficiente di viscosità}\end{equation*}
+\[F=\eta A\frac{\ud v}{\ud z}\qquad\ve F=\eta A \ve\nabla v\qquad\eta=\text{coefficiente di viscosità}\]
 
 \subsection{Legge di Poiseuille}
 
@@ -306,26 +306,26 @@ La pressione diminuisce, si ha una perdita di carico per un fluido viscoso a cau
 
 
 La velocità sarà massima al centro e minima ai bordi. Considero la porzione di fluido tra $r$ e $r+\ud r$. Le forze $F_3$ e $F_4$ sono dovute alle porzioni di fluido più esterne (più lente) e quelle più interne (più veloci).
-\begin{equation*}F_1=(p+\Delta p)2\pi r\ud r\qquad F_2=-p2\pi r\ud r\end{equation*}
-\begin{equation*}F_3=L2\pi (r+\ud r)\eta\left. \frac{\ud v}{\ud r}\right|_{r+\ud r}\quad \frac{\ud v}{\ud r}<0\end{equation*}
-\begin{equation*}F_4=-L2\pi r\eta\left.\frac{\ud v}{\ud r}\right|_r\end{equation*}
-\begin{equation*}0=\sum F=(p+\Delta p)2\pi r\ud r-p 2\pi r\ud r+L 2\pi (r+\ud r)\eta\left.\frac{\ud v}{\ud r}\right|_{r+\ud r}\!\!\!\!\!\!\!\!\!\!-L2\pi r\eta\left.\frac{\ud v}{\ud r}\right|_r\end{equation*}
-\begin{equation*}\text{Taylor nell'intorno di $x=r$:\quad} \left.\frac{\ud v}{\ud r}\right|_x=\left.\frac{\ud v}{\ud r}\right|_r+\left.\frac{\ud^2 v}{\ud r^2}\right|_r(x-r)+\ldots\end{equation*}
+\[F_1=(p+\Delta p)2\pi r\ud r\qquad F_2=-p2\pi r\ud r\]
+\[F_3=L2\pi (r+\ud r)\eta\left. \frac{\ud v}{\ud r}\right|_{r+\ud r}\quad \frac{\ud v}{\ud r}<0\]
+\[F_4=-L2\pi r\eta\left.\frac{\ud v}{\ud r}\right|_r\]
+\[0=\sum F=(p+\Delta p)2\pi r\ud r-p 2\pi r\ud r+L 2\pi (r+\ud r)\eta\left.\frac{\ud v}{\ud r}\right|_{r+\ud r}\!\!\!\!\!\!\!\!\!\!-L2\pi r\eta\left.\frac{\ud v}{\ud r}\right|_r\]
+\[\text{Taylor nell'intorno di $x=r$:\quad} \left.\frac{\ud v}{\ud r}\right|_x=\left.\frac{\ud v}{\ud r}\right|_r+\left.\frac{\ud^2 v}{\ud r^2}\right|_r(x-r)+\ldots\]
 
 
-\begin{equation*}0=\Delta p r\ud r+\eta L\left\{(r+\ud r)\left.\frac{\ud v}{\ud r}\right|_{r+\ud r}\!\!\!\!\!\!\!\!\!\!-r\left.\frac{\ud v}{\ud r}\right|_r\right\}\simeq\end{equation*}
-\begin{equation*}\simeq\Delta p r\ud r+\eta L\left\{(r+\ud r)\left[\left.\frac{\ud v}{\ud r}\right|_r+\left.\frac{\ud^2 v}{\ud r^2}\right|_r\ud r\right]-r\left.\frac{\ud v}{\ud r}\right|_r\right\}=\end{equation*}
-\begin{equation*}=\Delta p r\ud r+\eta L\left\{r\frac{\ud v}{\ud r}+r\frac{\ud^2 v}{\ud r^2}\ud r+\ud r\frac{\ud v}{\ud r}+\frac{\ud^2 v}{\ud r^2}\ud r^2-r\frac{\ud v}{\ud r}\right\}\simeq\end{equation*}
-\begin{equation*}\simeq\Delta p r \ud r+\eta L\left[r\frac{\ud^2 v}{\ud r^2}\ud r+\frac{\ud v}{\ud r}\ud r\right]=0\end{equation*}
-\begin{equation*}\Delta p r+\eta L\left[r\frac{d^2 v}{\ud r^2}+\frac{\ud v}{\ud r}\right]=0\end{equation*}
-\begin{equation*}r\Delta p+\eta L\frac{\ud}{\ud r}\left(r \frac{\ud v}{\ud r}\right)=0\end{equation*}
-\begin{equation*}r\Delta p=-\eta L\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\end{equation*}
-\begin{equation*}\int r\Delta p\,\ud r=-\eta L\int\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\ud r\end{equation*}
-\begin{equation*}\Delta p\frac{1}{2}r^2=-\eta L r\frac{\ud v}{\ud r}+c\qquad c=0\end{equation*}
-\begin{equation*}\Delta p\frac{1}{2}r=-\eta L \frac{\ud v}{\ud r}\end{equation*}
-\begin{equation*}\frac{\Delta p}{2}\int_R^r r\,\ud r=-\eta L\int_0^v \ud v\end{equation*}
-\begin{equation*}\frac{\Delta p}{4}\left[r^2-R^2\right]=-\eta Lv\end{equation*}
-\begin{equation*}v=-\frac{\Delta p}{4}\frac{r^2-R^2}{\eta L}=\frac{\Delta p}{4\eta L}\left(R^2-r^2\right)\end{equation*}
+\[0=\Delta p r\ud r+\eta L\left\{(r+\ud r)\left.\frac{\ud v}{\ud r}\right|_{r+\ud r}\!\!\!\!\!\!\!\!\!\!-r\left.\frac{\ud v}{\ud r}\right|_r\right\}\simeq\]
+\[\simeq\Delta p r\ud r+\eta L\left\{(r+\ud r)\left[\left.\frac{\ud v}{\ud r}\right|_r+\left.\frac{\ud^2 v}{\ud r^2}\right|_r\ud r\right]-r\left.\frac{\ud v}{\ud r}\right|_r\right\}=\]
+\[=\Delta p r\ud r+\eta L\left\{r\frac{\ud v}{\ud r}+r\frac{\ud^2 v}{\ud r^2}\ud r+\ud r\frac{\ud v}{\ud r}+\frac{\ud^2 v}{\ud r^2}\ud r^2-r\frac{\ud v}{\ud r}\right\}\simeq\]
+\[\simeq\Delta p r \ud r+\eta L\left[r\frac{\ud^2 v}{\ud r^2}\ud r+\frac{\ud v}{\ud r}\ud r\right]=0\]
+\[\Delta p r+\eta L\left[r\frac{d^2 v}{\ud r^2}+\frac{\ud v}{\ud r}\right]=0\]
+\[r\Delta p+\eta L\frac{\ud}{\ud r}\left(r \frac{\ud v}{\ud r}\right)=0\]
+\[r\Delta p=-\eta L\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\]
+\[\int r\Delta p\,\ud r=-\eta L\int\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\ud r\]
+\[\Delta p\frac{1}{2}r^2=-\eta L r\frac{\ud v}{\ud r}+c\qquad c=0\]
+\[\Delta p\frac{1}{2}r=-\eta L \frac{\ud v}{\ud r}\]
+\[\frac{\Delta p}{2}\int_R^r r\,\ud r=-\eta L\int_0^v \ud v\]
+\[\frac{\Delta p}{4}\left[r^2-R^2\right]=-\eta Lv\]
+\[v=-\frac{\Delta p}{4}\frac{r^2-R^2}{\eta L}=\frac{\Delta p}{4\eta L}\left(R^2-r^2\right)\]
 \begin{align*}
 Q_v&=\int v \,\ud A=\int_0^R v(r)2\pi r\,\ud r=\int_0^R\frac{2\pi r\Delta p}{4\eta L}(R^2-r^2)\,\ud r\\
 &=\frac{1}{2}\pi\int_0^R\frac{r\Delta p}{\eta L}\left(R^2-r^2\right)\ud r\\
@@ -367,7 +367,7 @@ Due sistemi hanno la stessa temperatura se sono in equilibrio termico. Due siste
 \begin{equation}
 T(X)=273.16\frac{X}{X_\text{triplo}}
 \end{equation}
-$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\unita{0.01}\degreecelsius$). In questo modo la temperatura del punto triplo dell'acqua è di $\unita{273.16}\kelvin$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
+$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\SI{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\SI{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
 
 \subsection{Termometro a gas perfetto a volume costante\index{termometro!a gas perfetto}}
 Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costate da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costate e si legge il valore di pressione. La pressione per mantenere il volume costate è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
@@ -458,13 +458,13 @@ analogamente per le altre componenti, che si sommano per dare $\overline {v^2}=\
 \overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}=\frac{1}{3}\overline{v^2}
 \end{equation}
 La pressione media (facendo la media tra tutte le particelle) esercitata da una particella sulla parete $A_1$ è:
-\begin{equation*}\overline {P_{1i}} = \frac{\sum P_{1i}}{N}=\frac{\sum m v_{xi}^2}{NV}=\frac{m\overline{v_x^2}}{V}\end{equation*}
+\[\overline {P_{1i}} = \frac{\sum P_{1i}}{N}=\frac{\sum m v_{xi}^2}{NV}=\frac{m\overline{v_x^2}}{V}\]
 Tutte le molecole eserciteranno una pressione media (facendo la media nel tempo) sulla parete $A_1$:
 \begin{equation}
 \overline{P_x}=\frac{Nm\overline{v_x^2}}{V}=\frac{1}{3}\frac{Nm\overline{v^2}}{V}
 \end{equation}
 Il numero di molecole è così straordinariamente grande che la pressione sulla nostra parete non varia nel tempo, quindi $\overline P=P$, allora:
-\begin{equation*}P_x V=\frac{1}{3}Nm\overline{v^2}\end{equation*}
+\[P_x V=\frac{1}{3}Nm\overline{v^2}\]
 Ma la pressione è uguale su tutte le pareti, quindi:
 \begin{equation}
 PV=\frac{1}{3}mN\overline {v^2}=\frac{1}{3}M\overline{v^2}
@@ -491,15 +491,15 @@ v_{qm}=\sqrt{\frac{3P}{\rho}}
 \subsection{Libero cammino medio\index{libero cammino medio}}
 \label{libero cammino medio fisica1}
 Il libero cammino medio $\lambda$ è lo spazio medio in cui una particella non subisce urti con altra particelle. Supponiamo di avere molecole di diametro $d$. Avviene una interazione solo se i due centri delle molecole si avvicinano a una distanza inferiore a $d$. Si può pensare anche che la molecola considerata abbia diametro $2d$ e le altre siano puntiformi. Nel tempo $t$ la molecola spazza il volume di un cilindro di sezione $\pi d^2$ e di lunghezza $L_{cil}=vt$ con $v$ velocità della molecola. Supponiamo che il gas sia racchiuso in un volume $V$e contenga $N$ molecole. Il numero di molecole contenuto nel cilindro è quindi:
-\begin{equation*}N_{\text{cil}}=N\frac{V_{\text{cil}}}{V}=N\frac{\pi d^2vt}{V}\end{equation*}
+\[N_{\text{cil}}=N\frac{V_{\text{cil}}}{V}=N\frac{\pi d^2vt}{V}\]
 Questo rappresenta anche il numero medio di urti nel tempo $t$ della molecola. Ad ogni urti la molecola cambia direzione, ma spazza sempre il volume di un cilindro analogo.
 
 Il libero cammino medio è la distanza totale percorsa diviso il numero di urti subiti:
-\begin{equation*}\lambda=\frac{L_{\text{cil}}}{N_{\text{cil}}}=vt\frac{V}{N\pi d^2vt}=\frac{V}{N\pi d^2}\end{equation*}
+\[\lambda=\frac{L_{\text{cil}}}{N_{\text{cil}}}=vt\frac{V}{N\pi d^2vt}=\frac{V}{N\pi d^2}\]
 Essendo $pV=NkT \Rightarrow V/N=kT/p$
-\begin{equation*}\lambda=\frac{kT}{\pi d^2 p}\end{equation*}
+\[\lambda=\frac{kT}{\pi d^2 p}\]
 L'equazione è stata ricavata pensando che le molecole siano bersagli fermi. Le velocità semplificate non sono le stesse. Quella al numeratore è $\overline{v}$ la velocità molecolare media misurata rispetto al recipiente che contiene il gas. Quella al denominatore rappresenta la velocità relativa media $v_\text{rel}$ rispetto alle altre molecole. Si può dimostrare che $v_\text{rel}=\overline{v}\sqrt{2}$ e quindi:
-\begin{equation*}\lambda=\frac{kT}{\sqrt{2}\pi d^2p}\end{equation*}
+\[\lambda=\frac{kT}{\sqrt{2}\pi d^2p}\]
 Bisogna tenere anche conto che al di sotto di una certa pressione il libero cammino medio eccede le dimensioni del contenitore e il concetto stesso di libero cammino  medio perde di significato.
 
 \subsection{Distribuzione delle velocità\index{distribuzione!delle velocità}}
@@ -521,9 +521,9 @@ Al crescere della temperatura la velocità media delle molecole aumenta e la cur
 \caption{Distribuzione di Maxwell; velocità più probabile(blu), velocità media(rossa), velocità quadratica media(verde)}
 \end{figure}
 La velocità più probabile è quella in corrispondenza della quale la distribuzione ha un massimo, quindi:
-\begin{equation*}4\pi N\frac{\ud}{\ud v}\left(\frac{m}{2\pi kT}\right)^{\frac{3}{2}}v^2e^{-\frac{mv^2}{2kT}}=0\end{equation*}
-\begin{equation*}2ve^{-\frac{mv^2}{2kT}}-\frac{v^3m}{kT}e^{-\frac{mv^2}{2kT}}=0\end{equation*}
-\begin{equation*}e^{-\frac{mv^2}{2kT}}v\left(2-v^2\frac{m}{kT}\right)=0\end{equation*}
+\[4\pi N\frac{\ud}{\ud v}\left(\frac{m}{2\pi kT}\right)^{\frac{3}{2}}v^2e^{-\frac{mv^2}{2kT}}=0\]
+\[2ve^{-\frac{mv^2}{2kT}}-\frac{v^3m}{kT}e^{-\frac{mv^2}{2kT}}=0\]
+\[e^{-\frac{mv^2}{2kT}}v\left(2-v^2\frac{m}{kT}\right)=0\]
 \begin{equation}
 v_p=\sqrt\frac{2kT}{m}=\sqrt\frac{2RT}{M}
 \end{equation}
@@ -537,7 +537,7 @@ v_p=\sqrt\frac{2kT}{m}=\sqrt\frac{2RT}{M}
 \begin{equation}
 \overline{v^2}=\int_0^\infty v^2N(v)\ud v=\frac{3kT}{m}
 \end{equation}
-\begin{equation*}v_\text{qm}=\sqrt{\overline{v^2}}\end{equation*}
+\[v_\text{qm}=\sqrt{\overline{v^2}}\]
 
 
 
@@ -561,10 +561,10 @@ v_p=\sqrt\frac{2kT}{m}=\sqrt\frac{2RT}{M}
 \end{figure}
 
 Una molecola monoatomica di una gas ha solo energia cinetica $E=\frac{1}{2}mv^2$
-\begin{equation*}v=\sqrt{\frac{2}{m}E}\end{equation*}
+\[v=\sqrt{\frac{2}{m}E}\]
 Il numero di molecole che ha una certa velocità è uguale al numero di molecole che ha una certa energia:
-\begin{equation*}N(E)\ud E=N(v)\ud v\end{equation*}
-\begin{equation*}N(E)=N(v)\frac{\ud v}{\ud E}=N(v)\sqrt\frac{2}{m}\frac{1}{2}E^{-\frac{1}{2}}\end{equation*}
+\[N(E)\ud E=N(v)\ud v\]
+\[N(E)=N(v)\frac{\ud v}{\ud E}=N(v)\sqrt\frac{2}{m}\frac{1}{2}E^{-\frac{1}{2}}\]
 Distribuzione Maxwell--Boltzmann dell'energia:
 \begin{equation}
 N(E)=\frac{2N}{\sqrt{\pi}}\frac{1}{(kT)^{\frac{3}{2}}}\sqrt{E}e^{-\frac{E}{kT}}
@@ -641,12 +641,12 @@ c^{\text{mol}}=\frac{Q}{\Delta T n}=\frac{Q}{\Delta T}\frac{M}{m}=cM
 con $M=\frac{m}{n}$ massa molare\index{massa!molare}, $n$ numero di moli. Spesso $c^{\text{mol}}$ è indicato semplicemente con $c$.
 \end{Def}
 
-\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi è circa $\unita{25}\joule\per\mole\usk\kelvin$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
+\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi è circa $\si{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
 
 
 \section{Energia interna\index{energia!interna}}
 L'energia interna di un gas perfetto è data solo dall'energia cinetica in quanto si è supposto che non ci sia energia potenziale. Per una molecola monoatomica $K=\frac{3}{2}kT$, per $n$ moli $E=K_n=nN_A\frac{3}{2}kT=\frac{3}{2}nRT$. Le molecole non puntiformi hanno anche energia cinetica rotazionale. Una molecola che possa ruotare su tutti i tre assi ha energia interna:
-\begin{equation*}E=K=\frac{1}{2}mv_x^2+\frac{1}{2}mv_y^2+\frac{1}{2}mv_z^2+\frac{1}{2}I_x\omega_x^2+\frac{1}{2}I_y\omega_y^2+\frac{1}{2}I_z\omega_z^2\end{equation*}
+\[E=K=\frac{1}{2}mv_x^2+\frac{1}{2}mv_y^2+\frac{1}{2}mv_z^2+\frac{1}{2}I_x\omega_x^2+\frac{1}{2}I_y\omega_y^2+\frac{1}{2}I_z\omega_z^2\]
 La molecola ha quindi 6 gradi di libertà, 3 traslatori e 3 rotazionali. Una molecola monoatomica ha solo 3 gradi traslatori e nessuno rotazionale in quanto essendo puntiforme $I=0$, una molecola biatomica ha 5 gradi di libertà.
 \subsection{Principio di equipartizione dell'energia\index{principio!di equipartizione!dell'energia}}
 Il principio di equipartizione dell'energia di Maxwell\index{Maxwell} dice che mediamente l'energia si ripartisce in modo equo tra i gradi di libertà. Ogni grado di libertà riceve $\frac{1}{2}kT$ di energia.
@@ -660,19 +660,19 @@ con $f$ il numero di gradi di libertà delle particelle.
 Si deduce che l'energia interna di un gas dipende esclusivamente dalla temperatura.
 \subsection{Calore specifico molare dei solidi\index{capacità!termica!dei solidi}\index{calore specifico!dei solidi}}
 Gli atomi dei solidi sono disposti secondo strutture reticolari e possono vibrare intorno alle loro posizioni di equilibrio in tre direzioni. Ogni atomo dispone anche di energia potenziale, quindi altri tre gradi di libertà. Avendo in totale 6 gradi di libertà dall'equazione \eqref{equipartizione_00} si ha:
-\begin{equation*}E=3nRT\end{equation*}
+\[E=3nRT\]
 Se forniamo $Q$ calore al solido esso si trasformerà tutto in energia interna non compiendo il solido alcun lavoro:
-\begin{equation*}Q=\Delta E=3nR\Delta T=nc\Delta T\end{equation*}
-\begin{equation*}c=\frac{3nR\Delta T}{n\Delta T}=3R\simeq \unita{25}\joule\per\mole\usk\kelvin\end{equation*}
+\[Q=\Delta E=3nR\Delta T=nc\Delta T\]
+\[c=\frac{3nR\Delta T}{n\Delta T}=3R\simeq \SI{25}{\joule\per\mole\per\kelvin} \]
 come previsto da Doulong\index{Doulong} e Petit\index{Petit}.
 \subsection{Calore specifico dei gas\index{calore specifico!dei gas}\index{capacità!termica!dei gas}}
 Come dimostrato più avanti in una trasformazione isocora tutto il calore si trasforma in variazione di energia interna in quanto non si compie lavoro.
-\begin{equation*}c_V=\frac{Q}{n\Delta T}=\frac{\Delta E}{n\Delta T}=\frac{\frac{f}{2}nR\Delta T}{n\Delta T}=\frac{f}{2}R\end{equation*}
-\begin{equation*}c_p=c_V+R\quad\text{vedi relazione di Mayer \ref{mayer} pag.\pageref{mayer}}\end{equation*}
+\[c_V=\frac{Q}{n\Delta T}=\frac{\Delta E}{n\Delta T}=\frac{\frac{f}{2}nR\Delta T}{n\Delta T}=\frac{f}{2}R\]
+\[c_p=c_V+R\quad\text{vedi relazione di Mayer \ref{mayer} pag.\pageref{mayer}}\]
 
 \section{Primo principio della termodinamica\index{primo principio della termodinamica}\index{principio!primo della termodinamica}}
 Consideriamo positivo qualsiasi cosa aumenti l'energia interna quindi consideriamo positivo il lavoro compiuto dall'ambiente sul sistema e positivo il calore ceduto dall'ambiente al sistema.
-\begin{equation*}\Delta E=Q+L=E_f-E_i\end{equation*}
+\[\Delta E=Q+L=E_f-E_i\]
 con $E_f$, $E_i$ l'energia interna del sistema finale ed iniziale; $\Delta E$ dipende solo dalla situazione finale ed iniziale del sistema (per un gas solo dalla temperatura), quindi è una funzione di stato\index{funzione!di stato}, cioè una funzione che non dipende dalla particolare trasformazione, dal cammino percorso, ma solo dalle situazioni iniziali e finali. Mentre $L$ e $Q$ non sono funzioni di stato, la loro somma lo è. Questo è il primo principio della termodinamica:
 \begin{Pri}[primo principio della termodinamica]
 \begin{subequations}
@@ -697,7 +697,7 @@ Le trasformazioni le possiamo dividere in due gruppi:
 \subsection{Calcolo del lavoro\index{lavoro!su un gas}}
 \subsubsection{Caso generale}
 Considerando una trasformazione reversibile e un gas perfetto:
-\begin{equation*}\delta L=-F\ud x=-pA\ud x=-p\,\ud V\end{equation*}
+\[\delta L=-F\ud x=-pA\ud x=-p\,\ud V\]
 \begin{equation}
 L=-\int_{V_0}^{V_f} p\,\ud V
 \label{lavoro_gas02}
@@ -735,30 +735,30 @@ Mostriamo la relazione tra $c_V$ e $c_p$. Consideriamo una trasformazione isocor
 A\rightarrow B&\quad&V=\const&\quad&\text{I}\\
 A\rightarrow C&\quad&p=\const&\quad&\text{II}
 \end{align*}
-\begin{equation*}\Delta E_I=Q_I+L_I=Q_I=nc_V\Delta T\end{equation*}
-\begin{equation*}\Delta E_{II}=Q_{II}+L_{II}=nc_p\Delta T-p\Delta V\end{equation*}
+\[\Delta E_I=Q_I+L_I=Q_I=nc_V\Delta T\]
+\[\Delta E_{II}=Q_{II}+L_{II}=nc_p\Delta T-p\Delta V\]
 $E_B=E_C$ perché $E$ dipende solo da $T$, quindi:
-\begin{equation*}\Delta E_I=\Delta E_{II}\end{equation*}
-\begin{equation*}nc_V\Delta T=nc_p\Delta T-p\Delta V\end{equation*}
-\begin{equation*}nc_V\Delta T=nc_p\Delta T-nR\Delta T\end{equation*}
+\[\Delta E_I=\Delta E_{II}\]
+\[nc_V\Delta T=nc_p\Delta T-p\Delta V\]
+\[nc_V\Delta T=nc_p\Delta T-nR\Delta T\]
 \begin{equation}
 c_p-c_V=R\qquad\text{Relazione di Mayer}
 \end{equation}
 
 \subsection{Adiabatiche}
-\begin{equation*}Q=0\qquad \ud E=\delta Q+\delta L=\delta L=-p\ud V\end{equation*}
+\[Q=0\qquad \ud E=\delta Q+\delta L=\delta L=-p\ud V\]
 per una isocora che lavora alle stesse temperature $\ud E=\delta Q=nc_V\ud T$
-\begin{equation*}nc_V\ud T=-p\ud V=-\frac{nRT}{V}\ud V\end{equation*}
-\begin{equation*}c_V\ud T=-\frac{RT}{V}\ud V\end{equation*}
-\begin{equation*}\int_{T_i}^{T_f}\frac{c_V}{T}\,\ud T=-\int_{V_i}^{V_f}\frac{R}{V}\ud V\end{equation*}
-\begin{equation*}c_V\log\frac{T_f}{T_i}=-R\log\frac{V_f}{V_i}\end{equation*}
-\begin{equation*}R=c_p-c_V\qquad \gamma=\frac{c_p}{c_V}>1\end{equation*}
-\begin{equation*}\log\frac{T_f}{T_i}=\frac{c_V-c_p}{c_V}\log\frac{V_f}{V_i}=(1-\gamma)\log\frac{V_f}{V_i}\end{equation*}
-\begin{equation*}\log\frac{T_f}{T_i}=\log\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\end{equation*}
-\begin{equation*}\frac{T_f}{T_i}=\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\qquad T_fV_f^{\gamma-1}=T_iV_i^{\gamma-1}\qquad\end{equation*}
-\begin{equation*}TV^{\gamma-1}=\const\end{equation*}
+\[nc_V\ud T=-p\ud V=-\frac{nRT}{V}\ud V\]
+\[c_V\ud T=-\frac{RT}{V}\ud V\]
+\[\int_{T_i}^{T_f}\frac{c_V}{T}\,\ud T=-\int_{V_i}^{V_f}\frac{R}{V}\ud V\]
+\[c_V\log\frac{T_f}{T_i}=-R\log\frac{V_f}{V_i}\]
+\[R=c_p-c_V\qquad \gamma=\frac{c_p}{c_V}>1\]
+\[\log\frac{T_f}{T_i}=\frac{c_V-c_p}{c_V}\log\frac{V_f}{V_i}=(1-\gamma)\log\frac{V_f}{V_i}\]
+\[\log\frac{T_f}{T_i}=\log\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\]
+\[\frac{T_f}{T_i}=\left(\frac{V_f}{V_i}\right)^{\left(1-\gamma\right)}\qquad T_fV_f^{\gamma-1}=T_iV_i^{\gamma-1}\qquad\]
+\[TV^{\gamma-1}=\const\]
 usando $PV=nRT$ e quindi $T=\const PV$:
-\begin{equation*}PVV^{\gamma-1}=\const\end{equation*}
+\[PVV^{\gamma-1}=\const\]
 \begin{equation}
 PV^\gamma=\const\quad\text{Relazione di Poisson}
 \end{equation}
@@ -766,19 +766,19 @@ PV^\gamma=\const\quad\text{Relazione di Poisson}
 
 \subsection{Trasformazioni politropiche\index{trasformazioni!politropiche}}
 Nelle trasformazioni politropiche $c$ è ritenuto costante.
-\begin{equation*}\ud E=\delta Q+\delta L=nc\ud T-p\ud V\end{equation*}
+\[\ud E=\delta Q+\delta L=nc\ud T-p\ud V\]
 Il ragionamento è simile a quanto fatto con le adiabatiche; consideriamo una trasformazione isocora che lavora tra le stesse temperature $\ud E=nc_V\ud T$
-\begin{equation*}nc\ud T-p\ud V=nc_V\ud T\end{equation*}
-\begin{equation*}nc\ud T-\frac{nRT}{V}\ud V=nc_V\ud T\end{equation*}
-\begin{equation*}(c_V-c)\ud T=-\frac{RT}{V}\ud V\quad \int_{T_0}^{T_f}\frac{c_V-c}{T}\ud T=-\int_{V_0}^{V_f}\frac{R}{V}\ud V\end{equation*}
-\begin{equation*}(c_V-c)\int_{T_0}^{T_f}\frac{\ud T}{T}=-R\int_{V_0}^{V_f}\frac{\ud V}{V}\end{equation*}
-\begin{equation*}\int_{T_0}^{T_f}\frac{\ud T}{T}=-\frac{c_p-c_V}{c_V-c}\int_{V_0}^{V_f}\frac{\ud V}{V}\end{equation*}
-\begin{equation*}\log\frac{T_f}{T_0}=-\frac{c_p-c_V}{c_V-c}\log\frac{V_f}{V_0}=\frac{c_p-c_V}{c_V-c}\log\frac{V_0}{V_f}\end{equation*}
-\begin{equation*}(k-1)=\frac{c_p-c_V}{c_V-c}\end{equation*}
-\begin{equation*}\log\frac{T_f}{T_0}=\log\left[\left(\frac{V_0}{V_f}\right)^{k-1}\right]\qquad\frac{T_f}{T_0}=\left(\frac{V_0}{V_f}\right)^{k-1}\end{equation*}
-\begin{equation*}T_fV_f^{k-1}=T_0V_0^{k-1}\qquad TV^{k-1}=\const\end{equation*}
-\begin{equation*}PVV^{k-1}=(nR)\const\qquad PV^k=\const\end{equation*}
-\begin{equation*}k=\frac{c_p-c}{c_V-c}\qquad c=\frac{kc_V-c_p}{k-1}\end{equation*}
+\[nc\ud T-p\ud V=nc_V\ud T\]
+\[nc\ud T-\frac{nRT}{V}\ud V=nc_V\ud T\]
+\[(c_V-c)\ud T=-\frac{RT}{V}\ud V\quad \int_{T_0}^{T_f}\frac{c_V-c}{T}\ud T=-\int_{V_0}^{V_f}\frac{R}{V}\ud V\]
+\[(c_V-c)\int_{T_0}^{T_f}\frac{\ud T}{T}=-R\int_{V_0}^{V_f}\frac{\ud V}{V}\]
+\[\int_{T_0}^{T_f}\frac{\ud T}{T}=-\frac{c_p-c_V}{c_V-c}\int_{V_0}^{V_f}\frac{\ud V}{V}\]
+\[\log\frac{T_f}{T_0}=-\frac{c_p-c_V}{c_V-c}\log\frac{V_f}{V_0}=\frac{c_p-c_V}{c_V-c}\log\frac{V_0}{V_f}\]
+\[(k-1)=\frac{c_p-c_V}{c_V-c}\]
+\[\log\frac{T_f}{T_0}=\log\left[\left(\frac{V_0}{V_f}\right)^{k-1}\right]\qquad\frac{T_f}{T_0}=\left(\frac{V_0}{V_f}\right)^{k-1}\]
+\[T_fV_f^{k-1}=T_0V_0^{k-1}\qquad TV^{k-1}=\const\]
+\[PVV^{k-1}=(nR)\const\qquad PV^k=\const\]
+\[k=\frac{c_p-c}{c_V-c}\qquad c=\frac{kc_V-c_p}{k-1}\]
 \subsubsection{Tutte le trasformazioni come politropiche}
 \begin{center}
 \begin{tabular}{l|ccc}
@@ -828,24 +828,24 @@ La macchine termiche trasformano il calore in lavoro. I frigoriferi trasformano 
 \end{enumerate}}
 Nota: $Q_1>0$, $Q_2<0$, $L<0$
 
-\begin{equation*}Q=Q_1-|Q_2|=-L\end{equation*}
-\begin{equation*}Q_2=nRT\log\frac{V_D}{V_C}\end{equation*}
-\begin{equation*}T_1V_B^{\gamma-1}=T_2V_C^{\gamma-1}\end{equation*}
-\begin{equation*}T_1V_A^{\gamma-1}=T_2V_D^{\gamma-1}\end{equation*}
-\begin{equation*}\left(\frac{V_B}{V_A}\right)^{\gamma-1}=\left(\frac{V_C}{V_D}\right)^{\gamma-1}\qquad \frac{V_B}{V_A}=\frac{V_C}{V_D}\end{equation*}
+\[Q=Q_1-|Q_2|=-L\]
+\[Q_2=nRT\log\frac{V_D}{V_C}\]
+\[T_1V_B^{\gamma-1}=T_2V_C^{\gamma-1}\]
+\[T_1V_A^{\gamma-1}=T_2V_D^{\gamma-1}\]
+\[\left(\frac{V_B}{V_A}\right)^{\gamma-1}=\left(\frac{V_C}{V_D}\right)^{\gamma-1}\qquad \frac{V_B}{V_A}=\frac{V_C}{V_D}\]
 I calori stanno alle temperature.
 
 Il rendimento $\eta$ sarà maggiore quanto maggiore è il lavoro svolto dalla macchina sull'ambiente con minore scambio di calore.
-\begin{equation*}\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=1-\frac{|Q_2|}{Q_1}=1-\frac{nRT_2\log\frac{V_C}{V_D}}{nRT_1\log\frac{V_B}{V_A}}=1-\frac{T_2}{T_1}<1\end{equation*}
+\[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=1-\frac{|Q_2|}{Q_1}=1-\frac{nRT_2\log\frac{V_C}{V_D}}{nRT_1\log\frac{V_B}{V_A}}=1-\frac{T_2}{T_1}<1\]
 La condizione migliore è quella della macchina perfetta \index{macchina!perfetta}in cui tutto il calore è trasformato in lavoro, $\eta_\text{perfetta}= 1$
 
 \subsection{Frigorifero\index{frigorifero}\index{macchina!frigorifera}}
 Si esegue il ciclo di Carnot al contrario. Si fornisce quindi lavoro e si ha un trasferimento di calore, trasferendolo dalla sorgente fredda a quella più calda.
 Il coefficiente di merito sarà maggiore quando è maggiore il calore trasferito e minore il lavoro necessario.
 Nota: $Q_1<0$, $Q_2>0$, $L>0$
-\begin{equation*}0=L+Q=L+Q_2-|Q_1|\end{equation*}
-\begin{equation*}L=|Q_1|-Q_2\qquad\frac{Q_1}{Q_2}=\frac{T_1}{T_2}\end{equation*}
-\begin{equation*}\eta=\frac{Q_2}{L}=\frac{Q_2}{|Q_1|-Q_2}=\frac{T_2}{T_1-T_2}>0\end{equation*}
+\[0=L+Q=L+Q_2-|Q_1|\]
+\[L=|Q_1|-Q_2\qquad\frac{Q_1}{Q_2}=\frac{T_1}{T_2}\]
+\[\eta=\frac{Q_2}{L}=\frac{Q_2}{|Q_1|-Q_2}=\frac{T_2}{T_1-T_2}>0\]
 Il frigorifero perfetto trasferisce calore dalla sorgente più fredda a quella più calda senza bisogno di lavoro, quindi $\eta\rightarrow\infty$
 
 \subsection{Ciclo Otto\index{ciclo!Otto}}
@@ -859,23 +859,23 @@ Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
 \item[] OA=espulsione gas combusti
 \end{itemize}
 
-\begin{equation*}Q_{BC}=nc_V\Delta T=nc_V(T_C-T_B)>0\end{equation*}
-\begin{equation*}Q_{DA}=nc_V\Delta T=nc_V(T_A-T_D)<0\end{equation*}
-\begin{equation*}L+Q_{BC}-|Q_{DA}|=0 \qquad L=|Q_{DA}|-Q_{BC}<0\qquad |L|=Q_{BC}-|Q_{DA}|\end{equation*}
-\begin{equation*}\eta=\frac{|L|}{Q_{BC}}=\frac{Q_{BC}-|Q_{DA}|}{Q_{BC}}=1-\frac{|Q_{DA}|}{Q_{BC}}=1-\frac{nc_V(T_D-T_A)}{nc_V(T_C-T_B)}=1-\frac{T_D-T_A}{T_C-T_C}\end{equation*}
+\[Q_{BC}=nc_V\Delta T=nc_V(T_C-T_B)>0\]
+\[Q_{DA}=nc_V\Delta T=nc_V(T_A-T_D)<0\]
+\[L+Q_{BC}-|Q_{DA}|=0 \qquad L=|Q_{DA}|-Q_{BC}<0\qquad |L|=Q_{BC}-|Q_{DA}|\]
+\[\eta=\frac{|L|}{Q_{BC}}=\frac{Q_{BC}-|Q_{DA}|}{Q_{BC}}=1-\frac{|Q_{DA}|}{Q_{BC}}=1-\frac{nc_V(T_D-T_A)}{nc_V(T_C-T_B)}=1-\frac{T_D-T_A}{T_C-T_C}\]
 
 Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=\frac{V_2}{V_1}$
-\begin{equation*}TV^{\gamma-1}=\const\end{equation*}
+\[TV^{\gamma-1}=\const\]
 
 \begin{equation*}\left\{
 \begin{array}{l}
 T_CV_1^{\gamma-1}=T_DV_2^{\gamma-1}\\
 T_BV_1^{\gamma-1}=T_AV_2^{\gamma-1}\\
 \end{array}\right.\end{equation*}
-\begin{equation*}(T_C-T_B)V_1^{\gamma-1}=(T_D-T_A)V_2^{\gamma-1}\end{equation*}
-\begin{equation*}\frac{T_D-T_A}{T_C-T_B}=\left(\frac{V_1}{V_2}\right)^{\gamma-1}\end{equation*}
+\[(T_C-T_B)V_1^{\gamma-1}=(T_D-T_A)V_2^{\gamma-1}\]
+\[\frac{T_D-T_A}{T_C-T_B}=\left(\frac{V_1}{V_2}\right)^{\gamma-1}\]
 
-\begin{equation*}\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\end{equation*}
+\[\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\]
 
 Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta=0.55$. In realtà con questo rapporto di compressione nella macchine reali si ha $\eta=0.3$.
 
@@ -931,10 +931,10 @@ a parità di temperature non esiste macchina con rendimento migliore di quella d
 \end{Teo}
 \subsubsection{Dimostrazione caso con due sorgenti}
 Per assurdo: $\exists M: \eta_M>\eta_C$. Con la macchina di Carnot posso variare a piacimento il lavoro tenendo fisso $\eta$ allungando le isoterme. Scelgo una macchina di Carnot tale che $L_C=L_M$. Le macchine lavorano alle stesse temperature per ipotesi. La macchina $M$ avendo maggior rendimento avrà bisogno di meno calore, infatti:
-\begin{equation*}\eta_M=\frac{|L_M|}{Q_M}>\eta_C=\frac{|L_C|}{Q_C}=\frac{|L_M|}{Q_C}\end{equation*}
-\begin{equation*}\frac{|L_M|}{Q_M}>\frac{|L_M|}{Q_C} \qquad Q_M<Q_C\end{equation*}
+\[\eta_M=\frac{|L_M|}{Q_M}>\eta_C=\frac{|L_C|}{Q_C}=\frac{|L_M|}{Q_C}\]
+\[\frac{|L_M|}{Q_M}>\frac{|L_M|}{Q_C} \qquad Q_M<Q_C\]
 
-Combino la macchina $M$ con la macchina di Carnot fatta funzionare al contrario, trovo un antikelvin. Assurdo, quindi: \begin{equation*}\eta_M\leq\eta_C\end{equation*}
+Combino la macchina $M$ con la macchina di Carnot fatta funzionare al contrario, trovo un antikelvin. Assurdo, quindi: \[\eta_M\leq\eta_C\]
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/M+c-1}
@@ -947,34 +947,34 @@ Se la macchina è reversibile $\eta_M=\eta_C$. Per assurdo $\eta_M<\eta_C$, $M^{
 
 \section{Entropia\index{entropia}}
 Consideriamo una trasformazione reversibile per un gas perfetto:
-\begin{equation*}\delta Q+\delta L=\ud E\qquad \delta Q-p\ud V=nc_V\ud T\end{equation*}
-\begin{equation*}\delta Q=nc_V\ud T+p\ud V\end{equation*}
-\begin{equation*}\frac{\delta Q}{T}\;\text{è un differenziale esatto?}\end{equation*}
+\[\delta Q+\delta L=\ud E\qquad \delta Q-p\ud V=nc_V\ud T\]
+\[\delta Q=nc_V\ud T+p\ud V\]
+\[\frac{\delta Q}{T}\;\text{è un differenziale esatto?}\]
 Per verificarlo integriamo la quantità e vediamo se si può esprime come differenza di funzioni che dipendono solo dallo stato iniziale e finale del sistema e non dalla particolare trasformazione. L'integrale quindi sarà una funzione di stato.
 \begin{align*}
 \int_i^f\frac{\delta Q}{T}&=\int_i^f\frac{nc_V\ud T+p\,\ud V}{T}=\int_{T_i}^{T_f}\frac{nc_V\ud T}{T}+\int_{V_i}^{V_f}\frac{p\,\ud V}{T}\\
 &=nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+\int_{V_i}^{V_f}\frac{\frac{nRT}{V}\ud V}{T}=nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+nR\int_{V_i}^{V_f}\frac{\ud V}{V}\\
 &=(nc_V\log T_f+nR\log V_f)-(nc_V\log T_i+nR\log V_i)=S(f)-S(i)\\&=\Delta S
 \end{align*}
-\begin{equation*}S=nc_V\log T+nR\log V+\const=\text{entropia}\end{equation*}
-\begin{equation*}\int_i^f\frac{\delta Q}{T}=\Delta S\qquad \oint\frac{\delta Q}{T}=0\end{equation*}
+\[S=nc_V\log T+nR\log V+\const=\text{entropia}\]
+\[\int_i^f\frac{\delta Q}{T}=\Delta S\qquad \oint\frac{\delta Q}{T}=0\]
 L'entropia è una funzione di stato.
 \subsubsection{Isocora}
-\begin{equation*}\Delta S=nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_0}=nc_V\log\frac{T_f}{T_i}\end{equation*}
+\[\Delta S=nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_0}=nc_V\log\frac{T_f}{T_i}\]
 \subsubsection{Isobara}
-\begin{equation*}\frac{V_i}{V_f}=\frac{T_i}{T_f}\end{equation*}
+\[\frac{V_i}{V_f}=\frac{T_i}{T_f}\]
 \begin{align*}
 \Delta S=&nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_i}=nc_V\log\frac{T_f}{T_i}+nR\log\frac{T_f}{T_i}\\
 =&\log\frac{T_f}{T_i}(c_V+R)=nc_p\log\frac{T_f}{T_i}
 \end{align*}
 \subsubsection{Adiabatica}
-\begin{equation*}\delta Q=0 \Rightarrow \Delta S=0\end{equation*}
+\[\delta Q=0 \Rightarrow \Delta S=0\]
 Le adiabatiche vengono anche chiamate trasformazioni isoentropiche
 \subsubsection{Isoterma}
-\begin{equation*}\Delta S=nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_0}=nR\log\frac{V_f}{V_0}=\frac{Q}{T}\end{equation*}
+\[\Delta S=nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_0}=nR\log\frac{V_f}{V_0}=\frac{Q}{T}\]
 \subsubsection{Espansione libera}
 L'espansione libera è una adiabatica irreversibile, quindi non si può concludere che $\Delta S=0$. Lo stato iniziale e quello finale sono alla stessa temperatura, quindi si trovano sulla stessa isoterma. La trasformazione pur non essendo isoterma ha $\Delta S$ di una isoterma. Se il volume finale è il doppio di quello iniziale:
-\begin{equation*}\Delta S=nR\log\frac{V_f}{V_i}=nR\log 2\end{equation*}
+\[\Delta S=nR\log\frac{V_f}{V_i}=nR\log 2\]
 
 \subsection{Entropia nei cicli\index{entropia!nei cicli}}
 Consideriamo una macchina $M$ generica, assorbe da $N$ sorgenti di calore a temperature diverse $T_i$ calore $Q_i>0$. La sorgente $0$ a temperatura $T_0$ non ha nulla a che fare con la macchina $M$.
@@ -985,12 +985,12 @@ Costruiamo delle macchine di Carnot $C_i$ che lavorano ciascuna tra le temperatu
 \includegraphics[scale=0.5]{immagini/fisica1/hell_machine}
 \end{figure}
 
-\begin{equation*}\frac{Q_i}{Q_{i,0}}=-\frac{T_i}{T_0}\qquad Q_{i,0}=-\frac{T_0Q_i}{T_i}\end{equation*}
-\begin{equation*}H=\text{macchina infernale}=M+\sum_{i=1}^{N}C_i^{-1}\end{equation*}
+\[\frac{Q_i}{Q_{i,0}}=-\frac{T_i}{T_0}\qquad Q_{i,0}=-\frac{T_0Q_i}{T_i}\]
+\[H=\text{macchina infernale}=M+\sum_{i=1}^{N}C_i^{-1}\]
 $Q_{H,0}=0$. $H$ usa solo la sorgente a $T_0$, quindi non può produrre lavoro:
-\begin{equation*}L_H\geq0\qquad Q_H=-L_H\leq 0\qquad Q_{i,0}:=-Q_{i,0}=\frac{T_0Q_i}{T_i}\quad\text{perché $C^{-1}$}\end{equation*}
-\begin{equation*}Q_0^{C^{-1}}=\sum Q_{i,0}^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\end{equation*}
-\begin{equation*}Q_H=Q_0^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\leq 0\qquad \sum\frac{Q_i}{T_i}\leq 0\end{equation*}
+\[L_H\geq0\qquad Q_H=-L_H\leq 0\qquad Q_{i,0}:=-Q_{i,0}=\frac{T_0Q_i}{T_i}\quad\text{perché $C^{-1}$}\]
+\[Q_0^{C^{-1}}=\sum Q_{i,0}^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\]
+\[Q_H=Q_0^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\leq 0\qquad \sum\frac{Q_i}{T_i}\leq 0\]
 passando a variabili continue:
 \begin{equation}
 \oint\frac{\delta Q}{T}\leq 0\quad\text{diseguaglianza di Clausius}
@@ -999,13 +999,13 @@ passando a variabili continue:
 la disequazione vale per qualsiasi gas, per qualsiasi trasformazione.
 
 Se $M$ reversibile costruisco $H'=M^{-1}+\sum_{i=1}^N C_i$, $Q$ è cambiato si segno, quindi la diseguaglianza diventa:
-\begin{equation*}\oint\frac{\delta Q}{T}\geq0\end{equation*}
+\[\oint\frac{\delta Q}{T}\geq0\]
 Confrontando questa diseguaglianza con quella di Clausius \eqref{clausius_dis} si conclude che per una macchina reversibile:
 \begin{equation}
 \oint\frac{\delta Q}{T}=0
 \end{equation}
 Infatti considerando trasformazioni reversibili $\Delta S$ è una funzione di stato:
-\begin{equation*}\int_i^f\frac{\delta Q}{T}=S(f)-S(i)\qquad\oint\frac{\delta Q}{T}=\int_A^A\frac{\delta Q}{T}=S(A)-S(A)=0\end{equation*}
+\[\int_i^f\frac{\delta Q}{T}=S(f)-S(i)\qquad\oint\frac{\delta Q}{T}=\int_A^A\frac{\delta Q}{T}=S(A)-S(A)=0\]
 
 \subsection{Entropia per qualsiasi trasformazione\index{entropia! per qualsiasi trasformazione}}
 Considerando un ciclo con trasformazioni irreversibili:
@@ -1014,36 +1014,36 @@ Considerando un ciclo con trasformazioni irreversibili:
 \includegraphics[scale=0.5]{immagini/fisica1/ciclo_misto}
 \end{figure}
 
-\begin{equation*}\oint\frac{\delta Q}{T}\leq 0\end{equation*}
-\begin{equation*}\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}-\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}\leq 0\end{equation*}
-\begin{equation*}\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}\leq\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}=\Delta S\end{equation*}
+\[\oint\frac{\delta Q}{T}\leq 0\]
+\[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}-\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}\leq 0\]
+\[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}\leq\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}=\Delta S\]
 Per una trasformazione qualsiasi (anche irreversibile):
-\begin{equation*}\Delta S\geq\int_i^f\frac{\delta Q}{T}\end{equation*}
+\[\Delta S\geq\int_i^f\frac{\delta Q}{T}\]
 Nel caso sia reversibile vale l'uguaglianza.
 
 \subsection{Entropia e secondo principio}
-\begin{equation*}\Delta S\geq\int_i^f\frac{\delta Q}{T}\end{equation*}
+\[\Delta S\geq\int_i^f\frac{\delta Q}{T}\]
 se consideriamo un sistema isolato $\delta Q=0$ quindi
-\begin{equation*}\Delta S\geq 0\end{equation*}
+\[\Delta S\geq 0\]
 Se avvengono solo trasformazioni reversibili $\Delta S=0$ quindi l'entropia dell'universo non può diminuire. Le trasformazioni reversibili si dice che non lasciano traccia entropica. L'aumento dell'entropia è equivalente al secondo principio (enunciato di Kelvin o di Clausius):
 \subsubsection{Macchina perfetta\index{macchina!perfetta}}
 
-\begin{equation*}\Delta S_\text{sistema}=0 \qquad\text{perché ciclo}\end{equation*}
-\begin{equation*}\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_\text{sorgente}\end{equation*}
-\begin{equation*}\Delta S_\text{universo}=\Delta S_\text{sorgente}=\frac{Q_1}{T_1}<0\end{equation*}
-\begin{equation*}\Delta S<0\qquad \text{impossibile}\end{equation*}
+\[\Delta S_\text{sistema}=0 \qquad\text{perché ciclo}\]
+\[\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_\text{sorgente}\]
+\[\Delta S_\text{universo}=\Delta S_\text{sorgente}=\frac{Q_1}{T_1}<0\]
+\[\Delta S<0\qquad \text{impossibile}\]
 $Q_1$ è negativo perché lo si deve considerare dal punto di vista della sorgente per calcolare la variazione di entropia della sorgente.
 
 \subsubsection{Frigorifero perfetto\index{frigorifero!perfetto}}
 
 
-\begin{equation*}|Q_1|=|Q_2|=Q\end{equation*}
-\begin{equation*}\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_1+\Delta S_2=\frac{|Q|}{T_1}-\frac{|Q|}{T_2}=|Q|\left(\frac{1}{T_1}-\frac{1}{T_2}\right)<0\end{equation*}
-\begin{equation*}\Delta S<0\qquad \text{impossibile}\end{equation*}
+\[|Q_1|=|Q_2|=Q\]
+\[\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_1+\Delta S_2=\frac{|Q|}{T_1}-\frac{|Q|}{T_2}=|Q|\left(\frac{1}{T_1}-\frac{1}{T_2}\right)<0\]
+\[\Delta S<0\qquad \text{impossibile}\]
 questo perché $T_1>T_2$; se fosse $T_2>T_1$ cioè il calore circolasse dalla sorgente calda a quella fredda $\Delta S\geq 0$ e non ci sarebbe nulla di assurdo.
 
 \subsubsection{Secondo principio\index{secondo principio della termodinamica}\index{principio!secondo della termodinamica}}
-\begin{equation*}\Delta S_\text{sistema isolato}\geq 0\end{equation*}
+\[\Delta S_\text{sistema isolato}\geq 0\]
 L'uguaglianza solo per trasformazioni reversibili.
 
 
@@ -1056,9 +1056,9 @@ L'uguaglianza solo per trasformazioni reversibili.
 
 Nell'espansione libera (o di Joule\footnote{si legge giul, non giaul (è francese!)}) si verifica sperimentalmente che la temperatura non varia. Essa è una trasformazione irreversibile spontanea. \`E isolata dall'ambiente essendo le pareti adiabatiche. Le pareti sono indeformabili, non viene compiuto lavoro. $\Delta S_\text{ambiente}=0$ $V_f=2V_i$
 
-\begin{equation*}\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_\text{ambiente}=nR\log\frac{V_f}{V_i}=nR\log 2>0\end{equation*}
+\[\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_\text{ambiente}=nR\log\frac{V_f}{V_i}=nR\log 2>0\]
 
-\begin{equation*}P=\text{numero di microstati che danno luogo ad uno stato termodinamico}\end{equation*}
+\[P=\text{numero di microstati che danno luogo ad uno stato termodinamico}\]
 $P$ è la probabilità che il sistema si configuri in un dato stato termodinamico a meno di un coefficiente, chiamata anche molteplicità.
 
 $S$ è una variabile termodinamica estensiva, quindi per calcolare l'entropia del sistema si somma $S_1$ della parte sinistra e $S_2$ della parte destra. Le variabili termodinamiche come $T$, $p$ sono intensive e sommarle in questo caso non ha senso.
@@ -1086,7 +1086,7 @@ $N_S$&$N_D$&$P$\\
 Si nota che è più probabile osservare una configurazione in cui l'entropia è aumentata (3,3) che una dove l'entropia non è aumentata. Con questo approccio non si esclude l'ipotesi che l'entropia possa diminuire, ma è estremamente improbabile, soprattutto se si considera un numero di particelle estremamente più grande.
 
 In generale lo stato più probabile è quello con $\frac{N}{2}$ particelle a destra e a sinistra, quindi:
-\begin{equation*}P=\binom{N}{n}=\frac{N!}{\left(\frac{N}{2}\right)!\left(\frac{N}{2}\right)!}=\frac{N!}{\left[\left(\frac{N}{2}\right)!\right]^2}\end{equation*}
+\[P=\binom{N}{n}=\frac{N!}{\left(\frac{N}{2}\right)!\left(\frac{N}{2}\right)!}=\frac{N!}{\left[\left(\frac{N}{2}\right)!\right]^2}\]
 Stearling: $\log n!\sim n\log n-n$
 \begin{align*}
 \log P&=\log N!-2\log\left(\frac{N}{2}!\right)\sim N\log N-N-2\left[\frac{N}{2}\log\frac{N}{2}-\frac{N}{2}\right]=\\
@@ -1094,41 +1094,41 @@ Stearling: $\log n!\sim n\log n-n$
 &=N\log 2
 \end{align*}
 
-\begin{equation*}S_f=k\log P=kN\log 2=nR\log 2\end{equation*}
+\[S_f=k\log P=kN\log 2=nR\log 2\]
 la formula è identica a quella trovata a livello macroscopico considerando la variazione di entropia dell'espansione libera come la variazione dell'entropia di una isoterma.
 
 \begin{Es}[Esempio ghiaccio]
-Ghiaccio a $T_G=\unita{273.15}\kelvin$ di massa $m$ in acqua a $T_A=\unita{(273.15+\varepsilon)}\kelvin$
+Ghiaccio a $T_G=\SI{273.15}{\kelvin}$ di massa $m$ in acqua a $T_A=\unit{(273.15+\varepsilon)}\kelvin$
 \begin{align*}
 \Delta S_\text{acqua}=&S_\text{acqua}-S_\text{ghiaccio e acqua}\\
 =&\int_\text{ghiaccio}^\text{acqua}\frac{\delta Q}{T}=\frac{1}{T_0}\int_\text{ghiaccio}^\text{acqua}\delta Q=\frac{Q}{T_0}=\frac{\lambda m}{T_0}>0
 \end{align*}
-\begin{equation*}\Delta S_\text{ghiaccio}=\frac{\lambda m}{T_0}\end{equation*}
-\begin{equation*}\Delta S_\text{vasca}=-\frac{\lambda m}{T_0}\end{equation*}
-\begin{equation*}\Delta S_\text{universo}=0\quad\text{perché reversibile}\end{equation*}
+\[\Delta S_\text{ghiaccio}=\frac{\lambda m}{T_0}\]
+\[\Delta S_\text{vasca}=-\frac{\lambda m}{T_0}\]
+\[\Delta S_\text{universo}=0\quad\text{perché reversibile}\]
 \end{Es}
 \subsection{Grafici S/T}
 L'area sottesa un grafico p/V era il lavoro svolto durante la trasformazione. In un grafico S/T sarà:
-\begin{equation*}\int_A^B T\ud S=\int_A^B\delta Q=Q\end{equation*}
+\[\int_A^B T\ud S=\int_A^B\delta Q=Q\]
 \subsubsection{Ciclo di Carnot\index{ciclo!di Carnot}}
-\begin{equation*}\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=\frac{\Delta S_1T_1-|\Delta S_2| T_2}{\Delta S_1 T_1}=\frac{\Delta S\Delta T}{\Delta S T_1}=\frac{T_1-T_2}{T_1}=1-\frac{T_2}{T_1}\end{equation*}
+\[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=\frac{\Delta S_1T_1-|\Delta S_2| T_2}{\Delta S_1 T_1}=\frac{\Delta S\Delta T}{\Delta S T_1}=\frac{T_1-T_2}{T_1}=1-\frac{T_2}{T_1}\]
 Nota che: $\Delta S_1=-\Delta S_2$, ne segue che $\Delta S_\text{macchina}=0$. Ma anche \mbox{$\Delta S_\text{sorgenti}=0$} perché $\frac{Q_1}{T_1}=-\frac{Q_2}{T_2}$, quindi $\Delta S_\text{universo}=0$, infatti la trasformazione è reversibile.
 
 L'espressione del rendimento è identica a quella trovata in precedenza.
 \subsection{Generalizzazione del principio di Carnot\index{principio!di Carnot}}
 Immaginiamo una macchina infernale che scambia calore con più sorgenti, con temperature comprese tra $T_{\max}$ e $T_{\min}$.
-\begin{equation*}\sum\frac{Q_i}{T_i}=\sum\frac{Q_{a,i}}{T_i}-\sum\frac{|Q_{c,i}|}{T_i}\leq 0\end{equation*}
-\begin{equation*}\sum\frac{Q_{a,i}}{T_{\max}} \leq \sum\frac{Q_{a,i}}{T_i}\leq\sum\frac{|Q_{c,i}|}{T_i}\leq\sum\frac{|Q_{c,i}|}{T_{\min}}\end{equation*}
-\begin{equation*}\frac{\sum Q_{a,i}}{\sum|Q_{c,i}|}\leq\frac{T_{\max}}{T_{\min}}\qquad \frac{\sum |Q_{c,i}|}{\sum Q_{a,i}}\geq\frac{T_{\min}}{T_{\max}}\end{equation*}
-\begin{equation*}L+\sum Q_{a,i}-\sum|Q_{c,i}|=0\quad |L|=-L=\sum Q_{a,i}-\sum|Q_{c,i}|\end{equation*}
-\begin{equation*}\eta_M=\frac{|L|}{Q_a}=\frac{|L|}{\sum Q_{a,i}}=\frac{\sum Q_{a,i}-\sum |Q_{c,i}|}{\sum Q_{a,i}}=1-\frac{\sum|Q_{c,i}|}{\sum Q_{a,i}}\leq 1-\frac{T_{\min}}{T_{\max}}=\eta_C\end{equation*}
-\begin{equation*}\eta_M\leq\eta_C\end{equation*}
+\[\sum\frac{Q_i}{T_i}=\sum\frac{Q_{a,i}}{T_i}-\sum\frac{|Q_{c,i}|}{T_i}\leq 0\]
+\[\sum\frac{Q_{a,i}}{T_{\max}} \leq \sum\frac{Q_{a,i}}{T_i}\leq\sum\frac{|Q_{c,i}|}{T_i}\leq\sum\frac{|Q_{c,i}|}{T_{\min}}\]
+\[\frac{\sum Q_{a,i}}{\sum|Q_{c,i}|}\leq\frac{T_{\max}}{T_{\min}}\qquad \frac{\sum |Q_{c,i}|}{\sum Q_{a,i}}\geq\frac{T_{\min}}{T_{\max}}\]
+\[L+\sum Q_{a,i}-\sum|Q_{c,i}|=0\quad |L|=-L=\sum Q_{a,i}-\sum|Q_{c,i}|\]
+\[\eta_M=\frac{|L|}{Q_a}=\frac{|L|}{\sum Q_{a,i}}=\frac{\sum Q_{a,i}-\sum |Q_{c,i}|}{\sum Q_{a,i}}=1-\frac{\sum|Q_{c,i}|}{\sum Q_{a,i}}\leq 1-\frac{T_{\min}}{T_{\max}}=\eta_C\]
+\[\eta_M\leq\eta_C\]
 
 
 \section{Scala termodinamica o assoluta\index{scala termodinamica}\index{scala assoluta}}
-La scala di temperatura definita come quella del termometro a gas risulta limitata per temperature molto basse, al di sotto della quale ($\unita{1}\kelvin$) non esiste materia allo stato gassoso. Per questo motivo viene definita la scala termodinamica. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
-\begin{equation*}\eta_\text{rev}=\eta_C=1-\frac{T_2}{T_1}=1-\frac{|Q_2|}{Q_1}\end{equation*}
-\begin{equation*}\frac{\theta_2}{\theta_1}=\frac{|Q_2|}{Q_1}=\frac{T_2}{T_1}\end{equation*}
+La scala di temperatura definita come quella del termometro a gas risulta limitata per temperature molto basse, al di sotto della quale ($\SI{1}{\kelvin}$) non esiste materia allo stato gassoso. Per questo motivo viene definita la scala termodinamica. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
+\[\eta_\text{rev}=\eta_C=1-\frac{T_2}{T_1}=1-\frac{|Q_2|}{Q_1}\]
+\[\frac{\theta_2}{\theta_1}=\frac{|Q_2|}{Q_1}=\frac{T_2}{T_1}\]
 
 
 
@@ -1166,7 +1166,7 @@ Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono inv
 Maxwell dice: ``$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$'', cioè che la velocità della luce \index{velocità!della luce nel vuoto}\index{c@$c$|see{velocità della luce nel vuoto}}nel vuoto è costante e non dipende dal sistema di riferimento, contrariamente a quanto si ricava dalle trasformate di Galileo. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si inventa l'etere, un sistema di riferimento privilegiato che permea tutto l'universo; Michelson--Morley dimostrano che questo non può esistere.\index{etere}
 
 Nell'esperimento la luce proviene da una sorgente $S$, viene parzialmente riflessa da uno specchio semiargentato $M$ e contemporaneamente trasmessa. La luce quindi segue due cammini: $\text{I}$ e $\text{II}$; si riflette sugli specchi $M_1$ e $M_2$ e si riunisce in un raggio unico, prima di arrivare ad un'analizzatore. Le lunghezze dei percorsi dopo lo specchio $M$, $l_1$ e $l_2$ sono circa uguali, ma non uguali se riferite alla lunghezza d'onda della luce, quindi nell'analizzatore si dovrebbe vedere una figura d'interferenza. Si suppone che l'etere sia il sistema di riferimento assoluto e che l'apparecchio si muova con velocità $v$ verso destra, quindi si può supporre che sia l'etere a spostarsi verso sinistra con velocità $v$, il ``vento d'etere''. Non si considera il percorso dalla sorgente allo specchio $M$ e dallo specchio $M$ al rivelatore, in quanto i raggi viaggiano insieme. Il tempo per andare da $M$ a $M_1$ e tornare è:
-\begin{equation*}t_1=\frac{l_1}{c-v}+\frac{l_1}{c+v}=\frac{l_1(2c)}{c^2-v^2}=\frac{2c}{c^2}\frac{l_1}{1-\left(\frac{v}{c}\right)^2}=\frac{2l_1}{c}\frac{1}{1-\left(\frac{v}{c}\right)^2}\end{equation*}
+\[t_1=\frac{l_1}{c-v}+\frac{l_1}{c+v}=\frac{l_1(2c)}{c^2-v^2}=\frac{2c}{c^2}\frac{l_1}{1-\left(\frac{v}{c}\right)^2}=\frac{2l_1}{c}\frac{1}{1-\left(\frac{v}{c}\right)^2}\]
 Il percorso $\text{II}$ è ortogonale al vento d'etere, per semplicità si considera il punto di vista del vento d'etere:
 \begin{figure}[htbp]
 \centering
@@ -1175,14 +1175,14 @@ Il percorso $\text{II}$ è ortogonale al vento d'etere, per semplicità si consi
 \end{figure}
 
 \parbox[]{\textwidth}{
-\begin{equation*}s=2\sqrt{l_2^2+\left(\frac{vt_2}{2}\right)^2}=ct_2\end{equation*}
-\begin{equation*}l_2^2+\frac{v^2t_2^2}{4}=\frac{c^2t_2^2}{4}\qquad l_2^2=\frac{1}{4}\left(c^2-v^2\right)t_2^2\end{equation*}
-\begin{equation*}t_2=\frac{2l_2}{\sqrt{c^2-v^2}}=\frac{2l_2}{c}\frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}\end{equation*}
+\[s=2\sqrt{l_2^2+\left(\frac{vt_2}{2}\right)^2}=ct_2\]
+\[l_2^2+\frac{v^2t_2^2}{4}=\frac{c^2t_2^2}{4}\qquad l_2^2=\frac{1}{4}\left(c^2-v^2\right)t_2^2\]
+\[t_2=\frac{2l_2}{\sqrt{c^2-v^2}}=\frac{2l_2}{c}\frac{1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}\]
 }
 La differenza di tempo dei due cammini è:
-\begin{equation*}\Delta t=t_2-t_1=\frac{2}{c}\left\{\frac{l_2}{\sqrt{1-\left(\frac{v}{c}\right)^2}}-\frac{l_1}{1-\left(\frac{v}{c}\right)^2}\right\}\end{equation*}
+\[\Delta t=t_2-t_1=\frac{2}{c}\left\{\frac{l_2}{\sqrt{1-\left(\frac{v}{c}\right)^2}}-\frac{l_1}{1-\left(\frac{v}{c}\right)^2}\right\}\]
 si osserva quindi una figura di interferenza. Se l'apparecchiatura viene ruotata di $90^\circ$ $l_1$ e $l_2$ si invertono:
-\begin{equation*}\Delta t'={t_2}'-{t_1}'=\frac{2}{c}\left\{\frac{l_2}{{1-\left(\frac{v}{c}\right)^2}}-\frac{l_1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}\right\}\end{equation*}
+\[\Delta t'={t_2}'-{t_1}'=\frac{2}{c}\left\{\frac{l_2}{{1-\left(\frac{v}{c}\right)^2}}-\frac{l_1}{\sqrt{1-\left(\frac{v}{c}\right)^2}}\right\}\]
 
 \parbox[]{\textwidth}{
 Si dovrebbe osservare una figura di interferenza diversa:
@@ -1191,9 +1191,9 @@ Si dovrebbe osservare una figura di interferenza diversa:
 =&\frac{2}{c}(l_1+l_2)\left\{1+\left(\frac{v}{c}\right)^2+\ldots-\left(1+\frac{1}{2}\left(\frac{v}{c}\right)^2\right)\right\}\\
 \simeq&\frac{2}{c}(l_1+l_2)\frac{1}{2}\left(\frac{v}{c}\right)^2=\frac{l_1+l_2}{c}\left(\frac{v}{c}\right)^2\end{align*}
 }
-Con più riflessioni si riesce ad avere $l_1+l_2=\unita{20}\metre$, considerando il Sole come riferimento assoluto si ha $v=\unita{30}\kilo\meter\per\second$ e $\lambda=\unita{500\times 10^{-9}}\metre$.
+Con più riflessioni si riesce ad avere $l_1+l_2=\SI{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\si{30}{\kilo\meter\per\second}$ e $\lambda=\SI{500E-9}{\metre}$.
 Il numero di frange che scorrono dovrebbe essere:
-\begin{equation*}\Delta N=\frac{\Delta}{T}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\end{equation*}
+\[\Delta N=\frac{\Delta}{T}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\]
 La sensibilità dello strumento era $\Delta N=0.01$. Se ci fosse stato l'etere con quella velocità sarebbe stato osservato. La ricerca dell'etere ripetuta in più mesi dell'anno, di giorno e di notte, usando luce solare, stellare ed artificiale, con dispositivi diversi, usando bracci diversi, telescopi o osservando fenomeni elettrici diede risultato negativo. Nel 1907 Nobel per Michelson.
 \index{esperimento!di Michelson--Morley|)}
 \section{Postulati di Einstein\index{Einstein!postulati di}\index{postulato!di Einstein}}
@@ -1230,43 +1230,43 @@ t'=\lambda_{41}x+\lambda_{42}y+\lambda_{44}t\\\end{array}\right.
 ``Solo'' 9 incognite. Ipotesi aggiuntive:
 \begin{itemize}
 \item[-] al tempo $t=t'=0$ gli orologi coincidono e anche i sistemi di riferimento $O\equiv O'$, in particolare per $t=0$ e $x=0$ segue $x'=0$ cioè
-\begin{equation*}x'=\lambda_{11}x+\lambda_{12}y+\lambda_{14}t\end{equation*}
-\begin{equation*}0=\lambda_{11}\cdot 0+\lambda_{12}y+\lambda_{14}\cdot 0\end{equation*}
-\begin{equation*}\lambda_{12}=0\end{equation*}
+\[x'=\lambda_{11}x+\lambda_{12}y+\lambda_{14}t\]
+\[0=\lambda_{11}\cdot 0+\lambda_{12}y+\lambda_{14}\cdot 0\]
+\[\lambda_{12}=0\]
 \item[-] come sopra:
-\begin{equation*}t'=\lambda_{41}x+\lambda_{42}y+\lambda_{44}t\end{equation*}
-\begin{equation*}0=0+\lambda_{42}y+0\end{equation*}
-\begin{equation*}\lambda_{42}=0\end{equation*}
+\[t'=\lambda_{41}x+\lambda_{42}y+\lambda_{44}t\]
+\[0=0+\lambda_{42}y+0\]
+\[\lambda_{42}=0\]
 \item[-] la traslazione del sistema in moto è orizzontale, quindi $y'=0\Leftrightarrow y=0$ sempre.
-\begin{equation*}\lambda_{21}=0\end{equation*}
-\begin{equation*}\lambda_{24}=0\end{equation*}
+\[\lambda_{21}=0\]
+\[\lambda_{24}=0\]
 
 \end{itemize}
 
 Se mettiamo una sbarra verticalmente con un estremo in $O'$, questo misura che la lunghezza è $1$. La sbarra si muove con $O'$ e quindi questa è la lunghezza a riposo. Questa lunghezza a riposo dovrà essere uguale anche se è osservata da $O$. Mettiamo la sbarra ferma rispetto ad $O'$, quindi $O$ vede una lunghezza:
-\begin{equation*}y=\frac{1}{\lambda_{22}}\end{equation*}
+\[y=\frac{1}{\lambda_{22}}\]
 mettiamo ora la sbarra ferma rispetto a $O$, $O'$ vede una lunghezza:
-\begin{equation*}y'=\lambda_{22}\end{equation*}
+\[y'=\lambda_{22}\]
 Le due situazioni sono simmetriche e quindi non esistendo un sistema privilegiato le due grandezze devono essere uguali:
-\begin{equation*}\lambda_{22}=\frac{1}{\lambda_{22}}\qquad\lambda^2_{22}=1\end{equation*}
+\[\lambda_{22}=\frac{1}{\lambda_{22}}\qquad\lambda^2_{22}=1\]
 Si scarta la soluzione negativa, in quanto si vuole che gli assi abbiano lo stesso verso.
 
 
 \parbox[]{\textwidth}{
 Seguiamo il moto dell'origine del sistema $O'$. Qui, per ogni istante:
-\begin{equation*}x'=0\end{equation*}
+\[x'=0\]
 Per $O$ lo stesso moto è descritto da:
-\begin{equation*}x=ut\qquad x-ut=0\end{equation*}
+\[x=ut\qquad x-ut=0\]
 Ci si aspetta allora un'equazione del tipo
-\begin{equation*}x'=\lambda(x-ut)\end{equation*}
+\[x'=\lambda(x-ut)\]
 }
 
 A $t=0$, $O\equiv O'$, $t=t'$ scatta un'onda luminosa dalle origini, questa ha un fronte sferico con raggio $R$ e per il secondo principio di Einstein ha velocità $c$ uguale in tutti e due i sistemi. Il sistema $O'$ sta arrivando da sinistra, passa in coincidenza con $O$, si sincronizzano gli orologi e parte il fronte d'onda. I due osservatori osservano un fronte d'onda che ha centro nei propri sistemi di riferimento, anche se non sono più coincidenti:
-\begin{equation*}x^2+y^2+z^2=R^2=(ct)^2\end{equation*}
-\begin{equation*}x'^2+y'^2+z'^2=R'^2=(ct')^2\end{equation*}
-\begin{equation*}x^2+y^2+z^2-ct^2=0=x'^2+y'^2+z'^2-(ct')^2\end{equation*}
-\begin{equation*}x^2-c^2t^2=x'^2-c^2t'^2=\lambda^2(x-ut)^2-c^2(\lambda_{41}x+\lambda_{44}t)^2=\end{equation*}
-\begin{equation*}=\lambda^2x^2+\lambda^2 u^2t^2-2\lambda^2 xut-c^2\lambda_{41}^2x^2-c^2\lambda_{44}^2t^2-2c^2\lambda_{41} x\lambda_{44} t\end{equation*}
+\[x^2+y^2+z^2=R^2=(ct)^2\]
+\[x'^2+y'^2+z'^2=R'^2=(ct')^2\]
+\[x^2+y^2+z^2-ct^2=0=x'^2+y'^2+z'^2-(ct')^2\]
+\[x^2-c^2t^2=x'^2-c^2t'^2=\lambda^2(x-ut)^2-c^2(\lambda_{41}x+\lambda_{44}t)^2=\]
+\[=\lambda^2x^2+\lambda^2 u^2t^2-2\lambda^2 xut-c^2\lambda_{41}^2x^2-c^2\lambda_{44}^2t^2-2c^2\lambda_{41} x\lambda_{44} t\]
 Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sistema di tre incognite e tre equazioni:
 \begin{equation*}\left\{
 \begin{array}{l}
@@ -1282,15 +1282,15 @@ Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sis
 
 \end{array}\right.\end{equation*}
 Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
-\begin{equation*}\lambda^4u^2=c^4\lambda_{41}^2\lambda_{44}^2=c^4\frac{\lambda^2-1}{c^2}\frac{c^2+\lambda^2u^2}{c^2}=\end{equation*}
-\begin{equation*}=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u+\lambda^2c^2+\lambda^4u^2\end{equation*}
-\begin{equation*}0=-c^2-\lambda^2u^2+\lambda^2c^2\end{equation*}
-\begin{equation*}\lambda^2=\frac{c^2}{c^2-u^2}=\frac{1}{1+\frac{u^2}{c^2}}\end{equation*}
-\begin{equation*}\lambda=\dfrac{1}{\sqrt{1-\left(\dfrac{u}{c}\right)^2}}=\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\end{equation*}
-\begin{equation*}\lambda_{41}^2=\frac{\lambda^2-1}{c^2}=\frac{\beta^2}{c^2(1-\beta^2)}\end{equation*}
-\begin{equation*}\lambda_{41}=\pm\frac{\beta}{c\sqrt{1-\beta^2}}\end{equation*}
-\begin{equation*}\lambda_{44}^2=\frac{c^2+\lambda^2u^2}{c^2}=\frac{1}{1-\beta^2}\end{equation*}
-\begin{equation*}\lambda_{44}=\pm\frac{1}{\sqrt{1-\beta^2}}\end{equation*}
+\[\lambda^4u^2=c^4\lambda_{41}^2\lambda_{44}^2=c^4\frac{\lambda^2-1}{c^2}\frac{c^2+\lambda^2u^2}{c^2}=\]
+\[=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u+\lambda^2c^2+\lambda^4u^2\]
+\[0=-c^2-\lambda^2u^2+\lambda^2c^2\]
+\[\lambda^2=\frac{c^2}{c^2-u^2}=\frac{1}{1+\frac{u^2}{c^2}}\]
+\[\lambda=\dfrac{1}{\sqrt{1-\left(\dfrac{u}{c}\right)^2}}=\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\]
+\[\lambda_{41}^2=\frac{\lambda^2-1}{c^2}=\frac{\beta^2}{c^2(1-\beta^2)}\]
+\[\lambda_{41}=\pm\frac{\beta}{c\sqrt{1-\beta^2}}\]
+\[\lambda_{44}^2=\frac{c^2+\lambda^2u^2}{c^2}=\frac{1}{1-\beta^2}\]
+\[\lambda_{44}=\pm\frac{1}{\sqrt{1-\beta^2}}\]
 Diamo segno positivo a $\lambda_{44}$ e negativo a $\lambda_{41}$, in quanto se consideriamo un istante molto prossimo al momento della partenza allora $x\rightarrow 0$, $t'$ deve essere positivo (il tempo scorre nello stesso verso) e quindi $\lambda_{44}>0$.
 \subsection{Trasformate di Lorentz e Galileo}
 Se $u\ll c$, cioè se $\beta\rightarrow 0$ $\Rightarrow$ Lorentz $\rightarrow$ ``buon'' Galileo e il tempo assoluto.
@@ -1335,11 +1335,11 @@ Considerando che $0<\beta<1\Rightarrow\gamma>1$ si ha che $l<l'$, cioè $O$ osse
 
 \section{Dilatazione dei tempi\index{dilatazione dei tempi}}
 Consideriamo eventi osservati da $O'$ nello stesso spazio ($x'_A\equiv x'_B$) a distanza di tempo $\tau'=t'_B-t'_A$.
-\begin{equation*}t'=\gamma\left(t-\frac{\beta}{c}x\right)\end{equation*}
+\[t'=\gamma\left(t-\frac{\beta}{c}x\right)\]
 Per simmetria posso dire direttamente che:
-\begin{equation*}t=\gamma\left(t'+\frac{\beta}{c}x'\right)\end{equation*}
-\begin{equation*}t_A=\gamma\left(t'_A+\frac{\beta}{c}x'_A\right)\end{equation*}
-\begin{equation*}t_B=\gamma\left(t'_B+\frac{\beta}{c}x'_B\right)\end{equation*}
+\[t=\gamma\left(t'+\frac{\beta}{c}x'\right)\]
+\[t_A=\gamma\left(t'_A+\frac{\beta}{c}x'_A\right)\]
+\[t_B=\gamma\left(t'_B+\frac{\beta}{c}x'_B\right)\]
 \begin{equation}
 \tau=t_B-t_A=\gamma\left(t'_B-t'_A+\frac{\beta}{c}\left(x'_B-x'_A\right)\right)=\gamma\left(t'_B-t'_A\right)=\gamma\tau'
 \end{equation}
@@ -1347,14 +1347,14 @@ Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$ cioè $O$ vede l'evento più l
 
 \begin{Es}[produzione e decadimento di mesoni $\pi^+$]
 Un protone colpisce un altro protone fermo:
-\begin{equation*}p+p\rightarrow p+n+\pi^+\end{equation*}
+\[p+p\rightarrow p+n+\pi^+\]
 Il mesone decade:
-\begin{equation*}\pi^+ \rightarrow \mu ^+ + \nu\end{equation*}
+\[\pi^+ \rightarrow \mu ^+ + \nu\]
 
-Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media $\tau'=\unita{1.88\times 10^{-8}}\second$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
-\begin{equation*}\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\unita{1.3\times 10^{-7}}\second\end{equation*}
+Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media $\tau'=\SI{1.88E-8}{\second}$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
+\[\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\SI{1.3E-7}{\second} \]
 La distanza percorsa dal mesone, prima di decadere, osservata dal laboratorio è quindi:
-\begin{equation*}d=\tau u=\tau \beta c\simeq \unita{39}\metre\end{equation*}
+\[d=\tau u=\tau \beta c\simeq \SI{39}{\metre} \]
 \end{Es}
 
 \section{Composizione delle velocità\index{composizione delle velocità!relativistiche}}
@@ -1366,38 +1366,38 @@ v'_{x'}=\frac{\ud x'}{\ud t'}=\frac{\ud x'}{\ud t}\frac{\ud t}{\ud t'}=\frac{\ud
 v'_{y'}=\frac{\ud y'}{\ud t'}=\frac{\ud y}{\ud t'}=\frac{\ud y}{\ud t}\frac{\ud t}{\ud t'}=v_y\frac{1}{\frac{\ud t'}{\ud t}}=\dfrac{v_y}{\gamma\left(1-\dfrac{\beta}{c}\dfrac{\ud x}{\ud t}\right)}=\dfrac{v_y\sqrt{1-\beta^2}}{1-\dfrac{\beta}{c}v_x}
 \end{equation}
 Un'analoga equazione vale per $v'_{z'}$ essendo come $v'_{y'}$ una velocità trasversa rispetto ad $u$.
-\begin{equation*}\lim_{\beta\rightarrow 0}v'_{x'}=v_x-u\qquad \lim_{\beta\rightarrow 0} v'_{y'}=v_y\end{equation*}
+\[\lim_{\beta\rightarrow 0}v'_{x'}=v_x-u\qquad \lim_{\beta\rightarrow 0} v'_{y'}=v_y\]
 cioè la composizione delle velocità secondo Galileo.
 
 \begin{Es}[decadimento $\pi^0$]
 $\pi^0$ decade con un decadimento elettromagnetico del tipo:
-\begin{equation*}\pi^0\rightarrow \gamma\gamma\end{equation*}
+\[\pi^0\rightarrow \gamma\gamma\]
 Per la conservazione della quantità di moto i due fotoni devono avere velocità opposte, $c$ misurate sia dal sistema del laboratorio ($O$) sia dal sistema in moto con il $\pi^0$, $O'$. Supponiamo che i fotoni si propaghino secondo l'asse $x$ e che il mesone si muovesse alla velocità $u$ verso destra rispetto ad $O$. Per Einstein la velocità dei due fotoni vista da $O$ e da $O'$ è uguale.
 Per il fotone che va a destra:
-\begin{equation*}v_x=\frac{v'_{x'}+u}{1+\frac{\beta}{c}v'_{x'}}=\frac{c+u}{1+\frac{u}{c^2}c}=c\end{equation*}
+\[v_x=\frac{v'_{x'}+u}{1+\frac{\beta}{c}v'_{x'}}=\frac{c+u}{1+\frac{u}{c^2}c}=c\]
 Per l'altro:
-\begin{equation*}v_x=\frac{-c+u}{1-\frac{u}{c^2}(-c)}=-c\end{equation*}
+\[v_x=\frac{-c+u}{1-\frac{u}{c^2}(-c)}=-c\]
 \end{Es}
 \section{Massa\index{massa!relativistica}}
 Dalla conservazione della quantità di moto ricaviamo la massa relativistica. Siano $O$ e $O'$ due osservatori dotati di due pistole identiche con proiettili identici, cioè con stesse masse a riposo. $O'$ si muove verso destra rispetto ad $O$ con velocità costante  $\ve u$. Gli assi $x$ e $x'$ non coincidono, sono sfasati, ma questo conta poco perché considerando le velocità, cioè derivando, il problema scompare. $O'$ spara in direzione di $O$ cioè nel verso delle $y$ decrescenti. $O$ vede il suo proiettile con velocità\marginpar{\begin{small}tratto da \cite{modern}\end{small}}:
-\begin{equation*}\dot y'_{O'}=-U\qquad\dot{x'}_{O'}=0\end{equation*}
+\[\dot y'_{O'}=-U\qquad\dot{x'}_{O'}=0\]
 $O$ vede il proiettile di $O'$ con velocità:
-\begin{equation*}\dot y_{O'}=\frac{\dot y'_{O'}\sqrt{1-\beta^2}}{1-\frac{\beta}{c}\dot x'_{O'}}=-\sqrt{1-\frac{u^2}{c^2}}U\end{equation*}
+\[\dot y_{O'}=\frac{\dot y'_{O'}\sqrt{1-\beta^2}}{1-\frac{\beta}{c}\dot x'_{O'}}=-\sqrt{1-\frac{u^2}{c^2}}U\]
 $O$ spara a $O'$ nel verso delle $y$ crescenti e misura la velocità del proiettile:
-\begin{equation*}\dot y_{O}=U\qquad \dot x_{O}=0\end{equation*}
+\[\dot y_{O}=U\qquad \dot x_{O}=0\]
 e $O'$ vede il proiettile di $O$ con:
-\begin{equation*}\dot y'_{O}=\sqrt{1-\frac{u^2}{c^2}}U\end{equation*}
+\[\dot y'_{O}=\sqrt{1-\frac{u^2}{c^2}}U\]
 la quantità di moto si deve conservare quindi $O$ vede:
-\begin{equation*}m_{O}U+m_{O'}\dot y_{O'}=0\end{equation*}
-\begin{equation*}m_{O'}=\frac{m_OU}{\sqrt{1-\frac{u^2}{c^2}}}U=\frac{m_O}{\sqrt{1-\frac{u^2}{c^2}}}\end{equation*}
+\[m_{O}U+m_{O'}\dot y_{O'}=0\]
+\[m_{O'}=\frac{m_OU}{\sqrt{1-\frac{u^2}{c^2}}}U=\frac{m_O}{\sqrt{1-\frac{u^2}{c^2}}}\]
 Considerando $O$ fermo:
-\begin{equation*}m_{O}=m_0=\text{massa a riposo}\end{equation*}
-\begin{equation*}m=\frac{m_0}{\sqrt{1-\beta^2}}=\gamma m_0\end{equation*}
-\begin{equation*}\beta\rightarrow 1\Rightarrow m\rightarrow +\infty\end{equation*}
+\[m_{O}=m_0=\text{massa a riposo}\]
+\[m=\frac{m_0}{\sqrt{1-\beta^2}}=\gamma m_0\]
+\[\beta\rightarrow 1\Rightarrow m\rightarrow +\infty\]
 \section{Quantità di moto\index{quantità di moto!relativistica}}
-\begin{equation*}p=mv=\frac{m_0}{\sqrt{1-\beta^2}}\beta c=\gamma m_0 v\end{equation*}
+\[p=mv=\frac{m_0}{\sqrt{1-\beta^2}}\beta c=\gamma m_0 v\]
 $\beta$ della particella. Con questa nuova definizione di quantità di moto essa si conserva ancora, anche in contesto relativistico.
-\begin{equation*}\beta\rightarrow 1\Rightarrow p\rightarrow +\infty\end{equation*}
+\[\beta\rightarrow 1\Rightarrow p\rightarrow +\infty\]
 
 \begin{Es}[quantità di moto classica vs relativistica]
 \begin{figure}[htbp]
@@ -1406,9 +1406,9 @@ $\beta$ della particella. Con questa nuova definizione di quantità di moto essa
    \caption{(a) prima dell'urto; (b) dopo l'urto}
 \end{figure}
 Urto frontale tra due particelle con stessa massa e velocità, sull'asse $x$. Dopo l'urto le particelle possono andare su qualunque direzione, ipotizziamo quella verticale. La quantità di moto si conserva, infatti all'inizio:
-\begin{equation*}p_x=mv_x-mv_x=0\qquad p_y=mv_y-mv_y=0\end{equation*}
+\[p_x=mv_x-mv_x=0\qquad p_y=mv_y-mv_y=0\]
 e dopo l'urto:
-\begin{equation*}p_x=mv_x-mv_x=0\qquad p_y=mv_y-mv_y=0\end{equation*}
+\[p_x=mv_x-mv_x=0\qquad p_y=mv_y-mv_y=0\]
 Quindi sembra che la conservazione della quantità di moto classica funzioni. Cambiamo sistema di riferimento, consideriamo quello solidale con la seconda particella. Essa prima dell'urto si muove con velocità $u=v$ verso sinistra. Utilizzando le composizioni delle velocità relativistiche:
 \begin{figure}[htbp]
    \centering
@@ -1439,22 +1439,22 @@ La quantità di moto fallisce. Bisogna considerare la correzione della massa.
    \caption{Velocità in funzione dell'energia cinetica con diverse masse}
 \end{figure}
 Per far funzionare il teorema $L=\Delta K$ bisogna cambiare la definizione di energia cinetica.\index{energia!cinetica!relativistica}
-\begin{equation*}m=\frac{m_0}{\sqrt{1-\beta^2}}\end{equation*}
-\begin{equation*}m^2(1-\beta^2)=m_0^2\quad m^2c^2-m^2v^2=m_0^2c^2\end{equation*}
-\begin{equation*}2mc^2\ud m-2mv^2\ud m-2m^2v\ud v=0\end{equation*}
-\begin{equation*}c^2\ud m=v^2\ud m+mv\ud v\end{equation*}
+\[m=\frac{m_0}{\sqrt{1-\beta^2}}\]
+\[m^2(1-\beta^2)=m_0^2\quad m^2c^2-m^2v^2=m_0^2c^2\]
+\[2mc^2\ud m-2mv^2\ud m-2m^2v\ud v=0\]
+\[c^2\ud m=v^2\ud m+mv\ud v\]
 Considerando solo una forza diretta come l'asse $x$:
-\begin{equation*}L=\int_A^B \ve F\ud \ve x=\int\frac{\ud \ve p}{\ud t}\ud \ve x=\int\ud \ve p\,\frac{\ud\ve x}{\ud t}=\int \ve v\ud \ve p=\int \ve v\ud(m\ve v)=\Delta K=\end{equation*}
-\begin{equation*}=\!\int(\ud m\ve v+m\ud\ve v)\ve v=\!\!\int\!(\ud mv^2+mv\ud v)=c^2\!\!\!\int_{v_A}^{v_B}\!\!\!\!\ud m=\left(m\left(v_B\right)-m\left(v_A\right)\right)c^2\end{equation*}
+\[L=\int_A^B \ve F\ud \ve x=\int\frac{\ud \ve p}{\ud t}\ud \ve x=\int\ud \ve p\,\frac{\ud\ve x}{\ud t}=\int \ve v\ud \ve p=\int \ve v\ud(m\ve v)=\Delta K=\]
+\[=\!\int(\ud m\ve v+m\ud\ve v)\ve v=\!\!\int\!(\ud mv^2+mv\ud v)=c^2\!\!\!\int_{v_A}^{v_B}\!\!\!\!\ud m=\left(m\left(v_B\right)-m\left(v_A\right)\right)c^2\]
 Se $K(0)=0$ in accordo con quella classica:
-\begin{equation*}K(B)=K(B)-K(0)=\Delta K=(m_B-m_0)c^2\quad K=mc^2-m_0c^2\end{equation*}
-\begin{equation*}\underbrace{m_0c^2}_{\text{energia a riposo}}+\underbrace{K}_{\text{energia cinetica}}=\underbrace{mc^2}_{\text{energia totale}}\end{equation*}
-\begin{equation*}E=mc^2\qquad \Delta E=\Delta K=L\end{equation*}
-\begin{equation*}K=mc^2-m_0c^2=\frac{m_0c^2}{\sqrt{1-\beta^2}}-m_0c^2=m_0c^2\left(\frac{1}{\sqrt{1-\beta^2}}-1\right)=m_0c^2\left(\gamma-1\right)\end{equation*}
+\[K(B)=K(B)-K(0)=\Delta K=(m_B-m_0)c^2\quad K=mc^2-m_0c^2\]
+\[\underbrace{m_0c^2}_{\text{energia a riposo}}+\underbrace{K}_{\text{energia cinetica}}=\underbrace{mc^2}_{\text{energia totale}}\]
+\[E=mc^2\qquad \Delta E=\Delta K=L\]
+\[K=mc^2-m_0c^2=\frac{m_0c^2}{\sqrt{1-\beta^2}}-m_0c^2=m_0c^2\left(\frac{1}{\sqrt{1-\beta^2}}-1\right)=m_0c^2\left(\gamma-1\right)\]
 \subsection{Energia cinetica classica}
-\begin{equation*}v\ll c\qquad m_0c^2\left(1+\frac{1}{2}\beta^2+\ldots-1\right)=\frac{1}{2}m_0\beta^2c^2=\frac{1}{2}m_0v^2\end{equation*}
+\[v\ll c\qquad m_0c^2\left(1+\frac{1}{2}\beta^2+\ldots-1\right)=\frac{1}{2}m_0\beta^2c^2=\frac{1}{2}m_0v^2\]
 \subsection{Urti ed energia}
-\begin{equation*}E=m_0c^2+K=mc^2\end{equation*}
+\[E=m_0c^2+K=mc^2\]
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/urto_rel}
@@ -1464,11 +1464,11 @@ La massa durante l'urto può aumentare, si creano nuove particelle. Non basta av
 
 \subsection{Conservazione dell'energia}
 In meccanica classica il teorema della conservazione dell'energia diceva che l'energia totale si conservava:
-\begin{equation*}K+U=E=\const\end{equation*}
+\[K+U=E=\const\]
 L'energia potenziale ha sempre la stessa definizione, il lavoro è definito come variazione dell'energia totale ($mc^2$):
-\begin{equation*}\int_{r_1}^{r_2}\ve F\cdot \ud\ve r=U(\ve r_1)-U(\ve r_2)=\int_{r_1}^{r_2}\ud K=m_{r_2}c^2-m_{r_1}c^2\end{equation*}
-\begin{equation*}m_{r_1}c^2+U(r_1)=m_{r_2}c^2+U(r_2)\end{equation*}
-\begin{equation*}mc^2+U=\const\end{equation*}
+\[\int_{r_1}^{r_2}\ve F\cdot \ud\ve r=U(\ve r_1)-U(\ve r_2)=\int_{r_1}^{r_2}\ud K=m_{r_2}c^2-m_{r_1}c^2\]
+\[m_{r_1}c^2+U(r_1)=m_{r_2}c^2+U(r_2)\]
+\[mc^2+U=\const\]
 
 \section{Quantità di moto ed energia\index{quantità di moto!relativistica}\index{energia!relativistica}}
 \begin{equation*}\left\{
@@ -1480,24 +1480,24 @@ p=\dfrac{m_0}{\sqrt{1-\beta^2}}\beta c\\
 \dfrac{p}{E}=\dfrac{\beta}{c}
 \quad\Rightarrow\quad\beta E=pc
 \end{equation*}
-\begin{equation*}E^2=\frac{m_0^2c^4}{1-\beta^2}\qquad E^2-\beta^2 E^2=m_0^2c^4\qquad E^2-p^2c^2=m_0^2c^4\end{equation*}
-\begin{equation*}E^2=(m_0c^2)^2+(pc)^2\end{equation*}
+\[E^2=\frac{m_0^2c^4}{1-\beta^2}\qquad E^2-\beta^2 E^2=m_0^2c^4\qquad E^2-p^2c^2=m_0^2c^4\]
+\[E^2=(m_0c^2)^2+(pc)^2\]
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.4]{immagini/fisica1/Trg_rel}
 \end{figure}
 
 \section{Elettronvolt\index{elettronvolt}}
-La carica dell'elettrone vale circa $\unita{1.6\times 10^{-19}}\coulomb$. $\unita{1}\electronvolt$ è quell'energia che acquista un elettrone accelerato da una ddp di $\unita{1}\volt$
+La carica dell'elettrone vale circa $\SI{1.6E-19}{\coulomb}$. $\SI{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\SI{1}{\volt}$
 \begin{equation*}
-E=qV\qquad \electronvolt=q_e(\unita{1}\volt)=\unita{1.6\times 10^{-19}}\joule
+E=qV\qquad \electronvolt=q_e(\SI{1}{\volt})=\SI{1.6E-19}{\joule}
 \end{equation*}
 Molto usati sono i multipli: \kilo\electronvolt (chev), \mega\electronvolt (mev), \giga\electronvolt (gev), \tera\electronvolt (tev), \peta\electronvolt (pev).
 
 Anche le masse e le quantità di moto si possono esprimere in \electronvolt, combinando opportunamente con $c$.
-\begin{equation*}E=mc^2\end{equation*}
-\begin{equation*}\unita{1}\kilogram\,c^2=\unita{1}\kilogram(\unita{3\times 10^8}\metrepersecond)=\unita{9\times 10^{16}}\joule=\unita{5.62\times 10^{35}}\electronvolt\end{equation*}
-\begin{equation*}\unita{1}\electronvolt/c^2=\unita{1.78\times 10^{-36}}\kilogram\end{equation*}
+\[E=mc^2\]
+\[\SI{1}{\kilo\gram},c^2=\SI{1}{\kilo\gram}(\si{3E8}{\metre\per\second})=\SI{9E16}{\joule}=\SI{5.62E35}{\electronvolt} \]
+\[\SI{1}{\electronvolt}/c^2=\SI{1.78E-36}{\kilogram} \]
 \begin{Es}[decadimento particella strana]
 Si vuole determinare il momento finale dei prodotti del decadimento della $K_0$:
 \begin{figure}[htbp]
@@ -1506,9 +1506,9 @@ Si vuole determinare il momento finale dei prodotti del decadimento della $K_0$:
    \caption{Un protone urta un protone fisso, si genera un $K_0$ che non è rilevabile in quanto neutro, dopo $\tau$ decade nei mesoni}
    \label{}
 \end{figure}
-\begin{equation*}K_0\rightarrow \pi^+\,\pi^-\end{equation*}
-\begin{equation*}m_0^{K_0}=\unita{500}\mega\electronvolt\per c^2\qquad m_0^{\pi^+}=\unita{140}\mega\electronvolt\per c^2\end{equation*}
-\begin{equation*}\tau_{K_0}=\unita{0.9\times 10^{-10}}\second\end{equation*}
+\[K_0\rightarrow \pi^+\,\pi^-\]
+\[m_0^{K_0}=\SI[per=slash,eVcorrb=0.4ex]{500}{\mega\eVperc\squared} \qquad m_0^{\pi^+}=\SI{140}{\mega\eVperc\squared}\]
+\[\tau_{K_0}=\SI{0.9E-10}{\second} \]
 Nel sistema di $K_0$ l'impulso dei mesoni è:
 \begin{figure}[htbp]
    \centering
@@ -1521,34 +1521,34 @@ Nel sistema di $K_0$ l'impulso dei mesoni è:
 m_0^{\pi^+}=m_0^{\pi^-}=m_0^{\pi}\qquad p_{\pi^+}=p_{\pi^-}=p_{\pi}\quad E_0=E_f
 \end{equation*}
 
-\begin{equation*}E_0=m_0^{K_0}c^2=E_f=\sqrt{(m_0^{\pi^+}c^2)^2+p_{\pi^+}^2c^2}+\sqrt{(m_0^{\pi^-}c^2)^2+p_{\pi^-}^2c^2}=\end{equation*}
-\begin{equation*}=2\sqrt{(m_0^\pi c^2)^2+p_{\pi}^2c^2}\end{equation*}
-\begin{equation*}(m_0^{K_0})^2c^4=4(m_0^\pi c^2)^2+4p_{\pi}^2c^2\end{equation*}
-\begin{equation*}p_\pi^2=\frac{(m_0^{K_0})^2c^4-4(m_0^{\pi})^2c^4}{4c^2}=\frac{(m_0^K)^2c^2}{4}-(m_0^\pi)^2c^2\end{equation*}
-\begin{equation*}p_\pi=c\sqrt{\frac{(m_0^K)^2}{4}-(m_0^\pi)^2}\end{equation*}
+\[E_0=m_0^{K_0}c^2=E_f=\sqrt{(m_0^{\pi^+}c^2)^2+p_{\pi^+}^2c^2}+\sqrt{(m_0^{\pi^-}c^2)^2+p_{\pi^-}^2c^2}=\]
+\[=2\sqrt{(m_0^\pi c^2)^2+p_{\pi}^2c^2}\]
+\[(m_0^{K_0})^2c^4=4(m_0^\pi c^2)^2+4p_{\pi}^2c^2\]
+\[p_\pi^2=\frac{(m_0^{K_0})^2c^4-4(m_0^{\pi})^2c^4}{4c^2}=\frac{(m_0^K)^2c^2}{4}-(m_0^\pi)^2c^2\]
+\[p_\pi=c\sqrt{\frac{(m_0^K)^2}{4}-(m_0^\pi)^2}\]
 \end{Es}
 \section{Forza e accelerazione\index{forza!relativistica}\index{accelerazione!relativistica}}
 Newton: $\ve F=m\ve a$
-\begin{equation*}\ud K=\ve F\cdot\ve{ \ud s}\end{equation*}
-\begin{equation*}E=mc^2=K+m_0c^2\qquad \ud m=\frac{1}{c^2}\ud K=\frac{1}{c^2}\ve F\cdot \ud \ve s\end{equation*}
+\[\ud K=\ve F\cdot\ve{ \ud s}\]
+\[E=mc^2=K+m_0c^2\qquad \ud m=\frac{1}{c^2}\ud K=\frac{1}{c^2}\ve F\cdot \ud \ve s\]
 partiamo da quantità che abbiamo già ben definito in relatività: $p$ e $t$
-\begin{equation*}\ve F=\frac{\ud \ve p}{\ud t}=\frac{\ud}{\ud t}(m\ve v)=\frac{\ud m}{\ud t}\ve v+m\frac{\ud \ve v}{\ud t}=\frac{1}{c^2}\ve F\frac{\ud \ve s}{\ud t}\ve v+m\ve a=\frac{1}{c^2}(\ve F\ve v)\ve v+m\ve a\end{equation*}
+\[\ve F=\frac{\ud \ve p}{\ud t}=\frac{\ud}{\ud t}(m\ve v)=\frac{\ud m}{\ud t}\ve v+m\frac{\ud \ve v}{\ud t}=\frac{1}{c^2}\ve F\frac{\ud \ve s}{\ud t}\ve v+m\ve a=\frac{1}{c^2}(\ve F\ve v)\ve v+m\ve a\]
 La direzione di $\ve F$ e di $\ve a$ non è la stessa (!)
 \subsection{Casi Particolari}
 \subsubsection{$\ve F // \ve v$}
-\begin{equation*}F=\frac{1}{c^2}Fv^2+ma\end{equation*}
-\begin{equation*}F=\frac{ma}{1-\beta^2}=\frac{m_0}{1-\beta^2}(1-\beta^2)^{-1/2}a=\underbrace{\frac{m_0}{(1-\beta^2)^{3/2}}}_{\text{massa longitudinale}}a=m_{//}a\end{equation*}\index{massa!longitudinale}
+\[F=\frac{1}{c^2}Fv^2+ma\]
+\[F=\frac{ma}{1-\beta^2}=\frac{m_0}{1-\beta^2}(1-\beta^2)^{-1/2}a=\underbrace{\frac{m_0}{(1-\beta^2)^{3/2}}}_{\text{massa longitudinale}}a=m_{//}a\]\index{massa!longitudinale}
 \subsubsection{$\ve F\bot\ve v$}
-\begin{equation*}\ve F=m\ve a=\underbrace{\frac{m_0}{\sqrt{1-\beta^2}}}_\text{massa trasversa}\ve a=m_\perp \ve a\end{equation*}\index{massa!trasversa}
+\[\ve F=m\ve a=\underbrace{\frac{m_0}{\sqrt{1-\beta^2}}}_\text{massa trasversa}\ve a=m_\perp \ve a\]\index{massa!trasversa}
 \begin{Es}[elettrone in campo magnetico]
-\begin{equation*}\ve F=q\ve v\times\ve B\end{equation*}
+\[\ve F=q\ve v\times\ve B\]
 Campo magnetico ortogonale alla velocità\footnote{per una trattazione più completa vedi \ref{es_Larmor} a pag.\@\pageref{es_Larmor}}
-\begin{equation*}F=qvB=m_\bot\frac{v^2}{r}\end{equation*}
-\begin{equation*}r=\frac{m_\bot v}{qB}=\frac{p}{qB}\end{equation*}
-\begin{equation*}\ve F\bot \ve v\Rightarrow L=0\Rightarrow v=\const\Rightarrow p=\const\Rightarrow r=\const\end{equation*}
-\begin{equation*}B=\unita{2}\weber\per\meter\squared\qquad K=\unita{10}\mega\electronvolt\end{equation*}
-\begin{equation*}r=\unita{1.8}\centi\meter \quad\text{Relativistico}\end{equation*}
-\begin{equation*}r=\unita{0.5}\centi\meter \quad\text{Classico}\end{equation*}
+\[F=qvB=m_\bot\frac{v^2}{r}\]
+\[r=\frac{m_\bot v}{qB}=\frac{p}{qB}\]
+\[\ve F\bot \ve v\Rightarrow L=0\Rightarrow v=\const\Rightarrow p=\const\Rightarrow r=\const\]
+\[B=\SI{2}{\weber\per\meter\squared} \qquad K=\SI{10}{\mega\electronvolt} \]
+\[r=\SI{1.8}{\centi\meter} \quad\text{Relativistico}\]
+\[r=\SI{0.5}{\centi\meter} \quad\text{Classico}\]
 \end{Es}
 
 
@@ -1561,7 +1561,7 @@ Campo magnetico ortogonale alla velocità\footnote{per una trattazione più comp
 Lo spazio di Minkowski è utile per dare un significato geometrico alla relatività speciale.
 Per comodità grafiche consideriamo solo una coordinata spaziale e una temporale. Sull'asse delle ascisse rappresentiamo $x$ e sull'asse delle ordinate il tempo moltiplicato per $c$, che lo rende uno spazio.
 La bisettrice dei quadranti è la linea di universo della luce, essa rappresenta il cammino di un raggio luminoso.
-\begin{equation*}\frac{\ud w}{\ud x}=\frac{\ud(ct)}{\ud x}=c\frac{1}{\frac{\ud x}{\ud t}}=\frac{c}{v}>1\end{equation*}
+\[\frac{\ud w}{\ud x}=\frac{\ud(ct)}{\ud x}=c\frac{1}{\frac{\ud x}{\ud t}}=\frac{c}{v}>1\]
 Quindi la traiettoria di ogni punto massivo nel piano di Minkowski deve avere tangente in ogni punto maggiore di uno, altrimenti andrebbe più veloce della luce.
 Creiamo un nuovo sistema di riferimento inerziale.
 \begin{equation*}\left\{\begin{array}{l}
@@ -1577,11 +1577,11 @@ w'=\frac{w-\beta x}{\sqrt{1-\beta^2}}\\
    \includegraphics[scale=0.6]{immagini/fisica1/Mink2}
 \end{wrapfigure}
 
-\begin{equation*}w'=ct'=\frac{ct-\beta x}{\sqrt{1-\beta^2}}\end{equation*}
+\[w'=ct'=\frac{ct-\beta x}{\sqrt{1-\beta^2}}\]
 asse $x'$: $w'=0$, cioè
-\begin{equation*}w=\beta x\end{equation*}
+\[w=\beta x\]
 asse $w'$: $x'=0$, cioè
-\begin{equation*}w=\frac{x}{\beta}\end{equation*}
+\[w=\frac{x}{\beta}\]
 
 Più $\beta$ tende a $1$ e più i due assi del nuovo sistema di riferimento tendono alla bisettrice del primo--terzo quadrante.
 
@@ -1609,9 +1609,9 @@ w'=0\\
 \end{array}\right.\qquad \left\{\begin{array}{l}
 x^2(1-\beta^2)=1\\
 x=\frac{1}{\sqrt{1-\beta^2}}\end{array}\right.\end{equation*}
-\begin{equation*}x'=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta w}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta^2 x}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\dfrac{\beta^2}{\sqrt{1-\beta^2}}}{\sqrt{1-\beta^2}}=1\end{equation*}
-\begin{equation*}P_1(1,0)\qquad P_2(0,1)\end{equation*}
-\begin{equation*}\overline{OP_1}>\overline{01}\qquad\overline{OP_2}>\overline{01}\end{equation*}
+\[x'=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta w}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta^2 x}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\dfrac{\beta^2}{\sqrt{1-\beta^2}}}{\sqrt{1-\beta^2}}=1\]
+\[P_1(1,0)\qquad P_2(0,1)\]
+\[\overline{OP_1}>\overline{01}\qquad\overline{OP_2}>\overline{01}\]
 
 
 \section{Dubbi di Einstein}
@@ -1627,55 +1627,55 @@ Se mandiamo due impulsi in un mezzo elastico:
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/Onda1}
 \end{figure}
-\begin{equation*}f(x)=f(x')=f(x-vt)\end{equation*}
+\[f(x)=f(x')=f(x-vt)\]
 questo perché la forma d'onda non cambia. Questa è un'onda progressiva\index{onda!progressiva}, cioè un'onda che si propaga nel verso positivo delle $x$, se fosse al contrario sarebbe un'onda regressiva\index{onda!regressiva} e sarebbe
-\begin{equation*}f(x)=f(x+vt)\end{equation*}
+\[f(x)=f(x+vt)\]
 \section{Onde sinusoidali}
 Caso onda progressiva: $y(x,t)=f(x-vt)$
 al tempo zero:
-\begin{equation*}y(x,0)=f(x)=y_m\sin\left(\frac{2\pi}{\lambda} x\right)\end{equation*}
-\begin{equation*}\lambda=vT\end{equation*}
-\begin{equation*}y(x,t)=f(x-vt)=y_m\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)\right]=y_m\sin\left(kx-\omega t\right)\end{equation*}
-\begin{equation*}k=\frac{2\pi}{\lambda}\qquad \omega=\frac{2\pi}{T}=2\pi\nu\end{equation*}
+\[y(x,0)=f(x)=y_m\sin\left(\frac{2\pi}{\lambda} x\right)\]
+\[\lambda=vT\]
+\[y(x,t)=f(x-vt)=y_m\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)\right]=y_m\sin\left(kx-\omega t\right)\]
+\[k=\frac{2\pi}{\lambda}\qquad \omega=\frac{2\pi}{T}=2\pi\nu\]
 $k$ numero d'onda, $\omega$ pulsazione. Considerando anche la fase $\varphi$:
-\begin{equation*}y(x,t)=y_m\sin\left(kx-\omega t+\varphi\right)\end{equation*}
+\[y(x,t)=y_m\sin\left(kx-\omega t+\varphi\right)\]
 \section{Corda Tesa\index{onda!su corda tesa}\index{corda tesa}}
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.4]{immagini/fisica1/Onde_Corda}
 \end{figure}
 Trascuriamo il peso. Sull'elemento infinitesimo $\ud x$ agiscono due tensioni:
-\begin{equation*}\ve T'+\ve T=\ud m \ve a\end{equation*}
+\[\ve T'+\ve T=\ud m \ve a\]
 \begin{equation*}\left\{\begin{array}{l}
 T'\cos\alpha'-T\cos\alpha=\ud m a_x=0\\
 T'\sin\alpha'-T\sin\alpha=\ud m a_y\\
 \end{array}\right.\end{equation*}
 Per deformazioni piccole usiamo il primo sviluppo di Taylor:
-\begin{equation*}\cos \alpha=1+\ldots\qquad \sin \alpha=\alpha+\ldots\end{equation*}
+\[\cos \alpha=1+\ldots\qquad \sin \alpha=\alpha+\ldots\]
 \begin{equation*}\left\{\begin{array}{l}
 T'=T\\
 T'\alpha'-T\alpha=\ud m a_y=\ud m a\\
 \end{array}\right.\end{equation*}
 Ma il primo sviluppo di Taylor del seno è uguale a quello della tangente:
-\begin{equation*}T\tan\alpha'-T\tan\alpha=\ud m a\end{equation*}
+\[T\tan\alpha'-T\tan\alpha=\ud m a\]
 Ma la tangente è la derivata delle $y$ nelle $x$:
-\begin{equation*}T\left.\frac{\partial y}{\partial x}\right |_{x+\ud x}\!\!\!\!\!\!\!\!\!\!-T\left.\frac{\partial y}{\partial x}\right|_{x}=\ud m\frac{\partial^2 y}{\partial t^2}\end{equation*}
-\begin{equation*}T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\frac{\partial^2 y}{\partial t^2}\ud m\end{equation*}
+\[T\left.\frac{\partial y}{\partial x}\right |_{x+\ud x}\!\!\!\!\!\!\!\!\!\!-T\left.\frac{\partial y}{\partial x}\right|_{x}=\ud m\frac{\partial^2 y}{\partial t^2}\]
+\[T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\frac{\partial^2 y}{\partial t^2}\ud m\]
 Chiamiamo $\rho$ la densità lineare:
-\begin{equation*}\rho=\frac{\ud m}{\ud s}\qquad \ud m=\rho s\qquad \ud s\cos\alpha=\ud x\qquad\ud m=\rho\ud x\end{equation*}
-\begin{equation*}T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\rho\frac{\partial^2 y}{\partial t^2}\ud x\end{equation*}
-\begin{equation*}\frac{\partial^2 y}{\partial x^2}=\frac{\rho}{T}\frac{\partial^2 y}{\partial t^2}\qquad\text{equazione di D'Alembert}\end{equation*}
+\[\rho=\frac{\ud m}{\ud s}\qquad \ud m=\rho s\qquad \ud s\cos\alpha=\ud x\qquad\ud m=\rho\ud x\]
+\[T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\rho\frac{\partial^2 y}{\partial t^2}\ud x\]
+\[\frac{\partial^2 y}{\partial x^2}=\frac{\rho}{T}\frac{\partial^2 y}{\partial t^2}\qquad\text{equazione di D'Alembert}\]
 
 \parbox[]{\textwidth}{
 \section{Equazione differenziale di un'onda\index{equazione!differenziale di un'onda}}
 Nel caso progressivo:
-\begin{equation*}y=f(x-vt)\qquad z=x-vt\end{equation*}
-\begin{equation*}\frac{\partial y}{\partial z}=\frac{\partial y}{\partial t}\frac{\partial t}{\partial z}=\frac{\partial y}{\partial t}\frac{1}{\frac{\partial z}{\partial t}}=-\frac{1}{v}\frac{\partial y}{\partial t}\end{equation*}
-\begin{equation*}\frac{\partial y}{\partial z}=\frac{\partial y}{\partial x}\frac{\partial x}{\partial z}=\frac{\partial y}{\partial x}\frac{1}{\frac{\partial z}{\partial x}}=\frac{\partial y}{\partial x}\end{equation*}
+\[y=f(x-vt)\qquad z=x-vt\]
+\[\frac{\partial y}{\partial z}=\frac{\partial y}{\partial t}\frac{\partial t}{\partial z}=\frac{\partial y}{\partial t}\frac{1}{\frac{\partial z}{\partial t}}=-\frac{1}{v}\frac{\partial y}{\partial t}\]
+\[\frac{\partial y}{\partial z}=\frac{\partial y}{\partial x}\frac{\partial x}{\partial z}=\frac{\partial y}{\partial x}\frac{1}{\frac{\partial z}{\partial x}}=\frac{\partial y}{\partial x}\]
 }
 
-\begin{equation*}\frac{\partial^2 y}{\partial z^2}=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial z}\right)\frac{\partial t}{\partial t}=\frac{\partial}{\partial t}\left(-\frac{1}{v}\frac{\partial y}{\partial t}\right)\frac{\partial t}{\partial z}=\frac{1}{-v}\left(\frac{\partial^2 y}{\partial t^2}\right)\frac{1}{-v}=\frac{1}{v^2}\frac{\partial^2 y}{\partial t^2}\end{equation*}
-\begin{equation*}\frac{\partial^2 y}{\partial z^2}=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial z}\right)=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial x}\right)\frac{\partial x}{\partial x}=\frac{\partial}{\partial x}\left(\frac{\partial y}{\partial x}\right)\frac{\partial x}{\partial z}=\frac{\partial^2 y}{\partial x^2}\end{equation*}
+\[\frac{\partial^2 y}{\partial z^2}=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial z}\right)\frac{\partial t}{\partial t}=\frac{\partial}{\partial t}\left(-\frac{1}{v}\frac{\partial y}{\partial t}\right)\frac{\partial t}{\partial z}=\frac{1}{-v}\left(\frac{\partial^2 y}{\partial t^2}\right)\frac{1}{-v}=\frac{1}{v^2}\frac{\partial^2 y}{\partial t^2}\]
+\[\frac{\partial^2 y}{\partial z^2}=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial z}\right)=\frac{\partial}{\partial z}\left(\frac{\partial y}{\partial x}\right)\frac{\partial x}{\partial x}=\frac{\partial}{\partial x}\left(\frac{\partial y}{\partial x}\right)\frac{\partial x}{\partial z}=\frac{\partial^2 y}{\partial x^2}\]
 
 \begin{equation}
 \frac{\partial^2 y}{\partial x^2}=\frac{1}{v^2}\frac{\partial^2 y}{\partial t^2}
@@ -1685,8 +1685,8 @@ Nel caso della corda tesa $v=\sqrt{\frac{T}{\rho}}$. Nella velocità ci sono sem
 
 Nel caso di onda regressiva l'equazione differenziale è uguale, anche nei segni.
 \section{Velocità e accelerazione trasversale}
-\begin{equation*}u_y(x,t)=\frac{\partial y}{\partial t}=\frac{\partial}{\partial t}\left[y_m\sin\left(kx-\omega t\right)\right]=-y_m\omega\cos\left(kx-\omega t\right)\end{equation*}
-\begin{equation*}a_y(x,t)=\frac{\partial u_y}{\partial t}=-y_m\omega^2\sin\left(kx-\omega t\right)=-\omega^2 y\end{equation*}
+\[u_y(x,t)=\frac{\partial y}{\partial t}=\frac{\partial}{\partial t}\left[y_m\sin\left(kx-\omega t\right)\right]=-y_m\omega\cos\left(kx-\omega t\right)\]
+\[a_y(x,t)=\frac{\partial u_y}{\partial t}=-y_m\omega^2\sin\left(kx-\omega t\right)=-\omega^2 y\]
 \section{Principio di sovrapposizione\index{principio!di sovrapposizione}}
 \begin{Pri}[sovrapposizione]
 In un mezzo in cui due onde si sovrappongono, la perturbazione è la somma delle due onde.
@@ -1698,7 +1698,7 @@ In un mezzo in cui due onde si sovrappongono, la perturbazione è la somma delle
    \caption{Interferenza distruttiva\index{interferenza!distruttiva}}
 \end{figure}
 L'interferenza è la sovrapposizione di due onde sinusoidali. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, ma con diversa fase. La differenza di fase è la costante di fase.
-\begin{equation*}y_1=y_m\sin(kx-\omega t)\qquad y_2=y_m\sin(kx-\omega t+\varphi)\end{equation*}
+\[y_1=y_m\sin(kx-\omega t)\qquad y_2=y_m\sin(kx-\omega t+\varphi)\]
 \begin{align*}
 y_1+y_2&=y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\phi\right)\right]\\
 &=y_m\left[2\cos\frac{\varphi}{2}\sin\left(kx-\omega t+\frac{\varphi}{2}\right)\right]\\
@@ -1722,8 +1722,8 @@ y=&y_1+y_2=y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx+\omega t\right)\ri
 \end{align*}
 }
 La parte spaziale e quella temporale si separano. Se consideriamo con ampiezza $2y_m\sin\left(kx\right)$ allora ci sono dei punti dove il seno si annulla che non vibrano, sono i \index{nodi}nodi, mentre dove la vibrazione è massima ci sono i ventri\index{ventri}. Nodi:
-\begin{equation*}\sin\left(kx\right)=0\qquad kx=0,\pi,\ldots\end{equation*}
-\begin{equation*}n\pi=kx\qquad k=\frac{2\pi}{\lambda}\qquad x=n\frac{\lambda}{2}\end{equation*}
+\[\sin\left(kx\right)=0\qquad kx=0,\pi,\ldots\]
+\[n\pi=kx\qquad k=\frac{2\pi}{\lambda}\qquad x=n\frac{\lambda}{2}\]
 Le onde stazionarie non trasportano energia.
 \begin{figure}[htbp]
    \centering
@@ -1736,7 +1736,7 @@ Le onde stazionarie non trasportano energia.
 \section{Effetto Doppler\index{effetto!Doppler}\index{Doppler}}
 L'effetto Doppler si sviluppa quando la sorgente delle onde e l'osservatore sono in moto relativo.
 Immaginando la sorgente che emette onde con velocità di propagazione $u$ e lunghezza d'onda $\lambda$ ferma e l'osservatore in allontanamento con velocità $v$ il numero di fronti d'onda che l'osservatore riceve nel tempo $t$ è:
-\begin{equation*}N=\nu t=\nu_0t-\frac{vt}{\lambda}\end{equation*}
+\[N=\nu t=\nu_0t-\frac{vt}{\lambda}\]
 \begin{subequations}
 \begin{equation}
 \nu=\nu_0+\frac{v}{\lambda}=\nu_0-\frac{v}{u}\nu_0=\nu_0\left(1-\frac{v}{u}\right)
@@ -1763,7 +1763,7 @@ T=\frac{T_0\left(1-\beta\right)}{\sqrt{1-\beta^2}}
 \end{equation}
 \end{subequations}
 \section{Suono\index{suono}}
-Il suono è un'onda longitudinale che si propaga di solito nell'aria provocando zone con maggiore pressione e zone con minore pressione e quindi zone con maggior densità e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\unita{20\div20000}\hertz$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
+Il suono è un'onda longitudinale che si propaga di solito nell'aria provocando zone con maggiore pressione e zone con minore pressione e quindi zone con maggior densità e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange[tophrase=dots]{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
 \begin{equation}
 v=\sqrt{\frac{B}{\rho}}
 \end{equation}
@@ -1772,16 +1772,16 @@ $B$ è il coefficiente di comprimibilità definito come:
 B=\frac{-\Delta p}{\Delta V/V}
 \end{equation}
 Se approssimiamo il comportamento dell'aria ad un gas adiabatico, supponendo quindi che il suono si propaghi più veloce del calore si ha:
-\begin{equation*}PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\end{equation*}
-\begin{equation*}\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\unita{330}\metrepersecond\end{equation*}
+\[PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\]
+\[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\SI{330}{\metre\per\second} \]
 \section{Grandezze caratteristiche}
 \begin{description}
 \item[intensità\index{intensità!del suono} del suono] $I=\text{Energia}/\text{tempo superficie}$\\
-\item[soglia\index{soglia!di udibilità} di udibilità] $I_0=\unita{10^{-12}}\watt\per\meter\squared$\\
+\item[soglia\index{soglia!di udibilità} di udibilità] $I_0=\SI{1E-12}{\watt\per\meter\squared}$\\
 \item[altezza\index{altezza!del suono} del suono]la frequenza\\
 \item[timbro \index{timbro}del suono] è la forma d'onda, cioè la composizione in armoniche dello sviluppo di Fourier\\
-\item[sensazione\index{sensazione sonora} sonora] non è lineare $10\log_{10} I/I_0$ e si misura in decibel $\deci\bell$\\
-\item[soglia del \index{soglia!del dolore}dolore] $\unita{120}\deci\bell$\\
+\item[sensazione\index{sensazione sonora} sonora] non è lineare $10\log_{10} I/I_0$ e si misura in decibel \SI{}{\deci\bel}\\
+\item[soglia del \index{soglia!del dolore}dolore] $\SI{120}{\deci\bel}$\\
 \end{description}
 
 
@@ -1840,22 +1840,22 @@ Se approssimiamo il comportamento dell'aria ad un gas adiabatico, supponendo qui
 %\includegraphics[scale=0.5]{immagini/fisica1/riflessione}
 %\end{figure}
 %\subsection{Elissoide}
-%\begin{equation*}\overline{F_1P}=\overline{F_2P}\end{equation*}
+%\[\overline{F_1P}=\overline{F_2P}\]
 %\subsection{Specchi sferici\index{specchio!sferico}}
 %Angoli piccoli, piccole aperture.
 %Specchio concavo $R>0$, specchio convesso $R<0$.
 %Immagine reale $q>0$, immagine virtuale $q<0$
-%\begin{equation*}\frac{1}{p}+\frac{1}{q}=\frac{1}{f}\end{equation*}
+%\[\frac{1}{p}+\frac{1}{q}=\frac{1}{f}\]
 %Quindi se i raggi sono paralleli:
-%\begin{equation*}p\rightarrow{\infty}\Rightarrow p\rightarrow f=\frac{R}{2}\end{equation*}
+%\[p\rightarrow{\infty}\Rightarrow p\rightarrow f=\frac{R}{2}\]
 %\section{Rifrazione\index{rifrazione}}
 %La rifrazione avviene quando cambia il mezzo:
-%\begin{equation*}\frac{\sin i}{\sin r}=n_{12}=\frac{n_2}{n_1}\end{equation*}
-%\begin{equation*}n_{12}=\text{indice di rifrazione relativo ai due mezzi}\end{equation*}
-%\begin{equation*}n_1=\text{indice di rifrazione assoluto del primo mezzo (rispetto al vuoto)}>1\end{equation*}
+%\[\frac{\sin i}{\sin r}=n_{12}=\frac{n_2}{n_1}\]
+%\[n_{12}=\text{indice di rifrazione relativo ai due mezzi}\]
+%\[n_1=\text{indice di rifrazione assoluto del primo mezzo (rispetto al vuoto)}>1\]
 %l percorso non risulta il più corto, ma è il più breve (è un minimo):
-%\begin{equation*}t_A^B=t_1+t_2=\frac{AP}{v_1}+\frac{PB}{v_2}=\frac{n_1}{c}AP+\frac{n_2}{c}PB=\frac{1}{c}(%n_1AP+n_2PB)\end{equation*}
+%\[t_A^B=t_1+t_2=\frac{AP}{v_1}+\frac{PB}{v_2}=\frac{n_1}{c}AP+\frac{n_2}{c}PB=\frac{1}{c}(%n_1AP+n_2PB)\]
 %
 %\subsection{Lenti sottili\index{lenti!sottili}}
-%\begin{equation*}\frac{1}{p}+\frac{1}{q}=\frac{1}{f}=(n-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\end{equation*}
+%\[\frac{1}{p}+\frac{1}{q}=\frac{1}{f}=(n-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\]
 %\index{ottica!geometrica|)}
