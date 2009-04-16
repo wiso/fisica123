@@ -1,12 +1,13 @@
 [General]
 archive=tar zcvf '%S.tar.gz' %F
+def_graphic_ext=
 extIsRegExp=false
 extensions=.eps .pdf .dvi .ps .fig .log .aux .gif .jpg .png .fig
 img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
-kileversion=2.0
-lastDocument=TeX/citazioni.tex
+kileversion=2.1
+lastDocument=TeX/costanti.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -95,10 +96,10 @@ order=5
 
 [item:TeX/fisica3.tex]
 archive=true
-column=263
+column=21
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=1037
 open=true
 order=3
 
