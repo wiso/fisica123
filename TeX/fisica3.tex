@@ -710,22 +710,22 @@ I raggi arrivano nella regione dei campi con una velocità $\ve v_0=v_{0x}\ver \
 Notiamo che la forza elettrica modifica solo la $v_y$ che non influenza la $\ve F_B$, quindi potremmo usare semplicemente i procedimenti fatti precedentemente. Impostando il problema di Cauchy usando il formalismo newtoniano $m\ddot{\ve r}=\ve F$:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 m\ddot x&=-qB\dot z\\
 m\ddot y&=-qE\\
 m\ddot z&=qB\dot x
-\end{split}
+\end{aligned}
 \right.
 \qquad
 \left\{
-\begin{split}
+\begin{aligned}
 x(0)&=0\\
 y(0)&=0\\
 z(0)&=0\\
 \dot x(0)&=v_{0x}\\
 \dot y(0)&=0\\
 \dot z(0)&=0\\
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 La seconda equazione è disaccoppiata dalle altre ed è facilmente integrabile:
@@ -735,10 +735,10 @@ y(t)=-\frac{1}{2}\frac{qE}{m}t^2
 Per disaccoppiare le rimanenti possiamo derivarle ulteriormente:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 m\dddot x&=-qB\ddot z\\
 m\dddot z&=qB\ddot x
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 Partiamo dalla seconda, sostituendo $\ddot x$:
@@ -783,28 +783,28 @@ x(t)=C_4-C_4\cos\left(\frac{qB}{m}t\right)+v_{0x}\frac{m}{qB}\sin\left(\frac{qB}
 Usiamo le condizioni di accoppiamento:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 \ddot x&=-\frac{qB}{m}\dot z\\
 \ddot z&=\frac{qB}{m}\dot x\\
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 facendo le derivate:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 C_4\frac{qB}{m}\cos\left(\frac{qB}{m}t\right)-v_{0x}\sin\left(\frac{qB}{m}t\right)=-C_1\frac{qB}{m}\sin\left(\frac{qB}{m}t\right)\\
 C_1\frac{qB}{m}\cos\left(\frac{qB}{m}t\right)=C_4\frac{qB}{m}\sin\left(\frac{qB}{m}t\right)+v_{0x}\cos\left(\frac{qB}{m}t\right)
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 Riscriviamo in questo modo:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 qBC_4\cos\left(\frac{qB}{m}t\right)+\left(qBC_1-v_{0x}m\right)\sin\left(\frac{qB}{m}t\right)=0\\
 \left(C_1qB+v_{0x}m\right)\cos\left(\frac{qB}{m}\right)-C_4qB\sin\left(\frac{qB}{m}t\right)=0
-\end{split}
+\end{aligned}
 \label{sistema_molto_bastardo}
 \right.
 \end{equation}
@@ -833,18 +833,18 @@ e sostituendo $C_4=0$ si ottiene $C_1=\frac{v_{0x}m}{qB}$. Allo stesso modo sost
 Dopo tutti questi conti le equazioni del moto e le velocità delle particelle all'interno del campo magnetico ed elettrico sono:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 x(t)&=\frac{m}{qB}v_{0x}\sin\left(\frac{qB}{m}t\right)\\
 y(t)&=-\frac{1}{2}\frac{qE}{m}t^2\\
 z(t)&=\frac{m}{qB}v_x-\frac{m}{qB}v_x\cos\left(\frac{qB}{m}t\right)
-\end{split}
+\end{aligned}
 \right.\quad
 \left\{
-\begin{split}
+\begin{aligned}
 v_x(t)&=v_{0x}\cos\left(\frac{qB}{m}t\right)\\
 v_y(t)&=\frac{qE}{m}t\\
 v_z(t)&=v_{0x}\sin\left(\frac{qB}{m}t\right)
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 
@@ -1683,7 +1683,7 @@ praticamente identico (a parte il fattore $3$) al calore specifico dei solidi se
 
 \chapter{Scattering}
 \minitoc
-\section{Particelle $\alpha$}
+\section{Particelle \texorpdfstring{$\alpha$}{alfa}}
 Osservando il decadimento di uranio osservò due tipi di radiazioni $\alpha$ e $\beta$. Con un esperimento simile a quello di Thomson per il rapporto carica--massa dell'elettrone misurò il rapporto carica--massa delle particelle $\alpha$ arrivando ad un valore che erà metà di quello del protone. Analizzando lo spettro di emissione delle particelle $\alpha$ concluse che le particelle $\alpha$ altro non erano che $\mathrm{He}^{2+}$. Infatti\footnote{Dai dati sperimentali nella sezione risulta
 \[
 0.503448683\pm 3.47\times 10^{-7}

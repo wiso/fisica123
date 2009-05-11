@@ -80,6 +80,11 @@ Il femtometro ($\femto\meter$) per un puro caso ha lo stesso simbolo e valore de
 Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
 
 I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso gli si pensa come elementi di classi di equivalenza i cui rappresentati sono i vettori applicati nell'origine.
+\begin{figure}[htbp]
+  \centering
+  \input{immagini/fisica1/vettore}
+  \caption{Vettore $\ve v$ applicato nell'origine che individua il punto $P$}
+\end{figure}
 \section{\index{versore}Versori e \index{coordinate}coordinate}
 I versori sono vettori della base ortonormale di $\field{R}^3$ (lo spazio) considerato con il prodotto scalare canonico. In parole povere sono sono vettori di modulo unitario ortogonali a due a due. Solitamente si indicano con $\ver i$, $\ver j$ e $\ver k$ i versori applicati nell'origine, nella direzione degli assi cartesiani del sistema di riferimento. Le loro coordinate sono\footnote{quando si scrive che $\ve v=(a,b,c)$ l'uguaglianza significa che che fissata una base il vettore è rappresentato dalle sue coordinate $(a,b,c)$, ma vettori e coordinate non sono la stessa cosa, per esempio se si fa un cambiamento di base il vettore non cambia, ma le sue coordinate sì.}:
 \[
@@ -156,13 +161,12 @@ i+b_y\ve j+b_z\ve k)=\\
 =(a_x+b_x)\ve i+(a_y+b_y)\ve
 j+(a_z+b_z)\ve k
 \end{multline*}
+
 \begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.5]{immagini/fisica1/somma_vettori}
-\caption{Regola del parallelogramma}
+  \centering
+  \input{immagini/fisica1/somma_vettori}
+  \caption{Regola del parallelogramma}
 \end{figure}
-
-
 
 \subsubsection{Differenza} La differenza di due
 vettori è la somma del primo con l'inverso del secondo. Graficamente $\ve a-\ve b$ è il vettore che congiunge $\ve b$ ad $\ve a$.
@@ -452,7 +456,7 @@ Le trasformazioni di Galileo sono equazioni valide nella meccanica classica che 
 Primo osservatore ``fermo'':$\qquad O\quad\ve r\quad\;\ve
 v\quad\;\ve a$
 
-Secondo osservatore in moto:$\:\quad O'\quad\!\ve r\,'\quad\!\ve
+Secondo osservatore in moto:$\quad O'\quad\!\ve r\,'\quad\!\ve
 v\,'\quad\!\ve a\,'$
 
 In meccanica classica si assume:$\quad t=t'$
@@ -792,7 +796,6 @@ dove nel penultimo passaggio si è usato $\ve A\times(\ve B\times \ve C)=\ve{B}(
 
 
 
-
 \section{\index{quantità di moto}Quantità di moto}
 \begin{Def}[quantità di moto di un punto materiale]
 \begin{equation}
@@ -802,7 +805,7 @@ sinonimi di quantità di moto sono: quantità di modo lineare, momento, momento 
 \end{Def}
 \[\frac{\ud \ve p}{\ud t}=\frac{\ud\left(m\ve v\right)}{\ud t}=m\ve a=\ve F\]
 \[\text{Newton disse: }\ve F=\frac{\ud \ve p}{\ud t}\]
-\subsection{Sistema di $N$ punti}
+\subsection{Sistema di \texorpdfstring{$N$}{N} punti}
 \begin{Def}[quantità di moto di un sistema di $N$ punti]
 La quantità di moto totale di un sistema di $N$ punti è la somma delle quantità di moto.
 \begin{equation}
@@ -1190,7 +1193,7 @@ L_0=\overrightarrow{\const}\]
  e quindi
 $I\omega={\const}$. Tutto ciò per la simmetria per
 rotazioni.
-\subsection{Rotazione intorno a $O'$ mobile}
+\subsection{Rotazione intorno a \texorpdfstring{$O'$}{O'} mobile}
 \[\ve r_i=\ve r_{O'}+\ve r_i\,'\qquad \ve r_i\,'=\ve r_i-\ve r_{O'}\]
 \[L_{O'}=\sum\ve r_i\,'\times m\ve v_i=\sum(\ve r_i-\ve
 r_{O'})\times m\ve v_i\]

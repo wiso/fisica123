@@ -11,7 +11,7 @@
 \usepackage{ifpdf}
 
 \ifpdf
-\typeout{RENDERING PDF DIRETTO - PDF - PDF - PDF}
+\typeout{RENDERING PDF - PDF - PDF - PDF}
 \usepackage[pdftex]{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps,.gif}
 \RequirePackage[pdftex,hyperindex,colorlinks]{hyperref}
@@ -21,7 +21,8 @@
 	pdftitle={Riassunti Fisica 1, Fisica 2, Fisica 3},
 	pdfauthor={Wiso},
 	pdfkeywords={fisica1,fisica2,fisica3},
-	pdfpagemode=Continous
+	pdfpagemode=UseThumbs,
+	pdfpagelayout=OneColumn
 }
 \else
 \typeout{RENDERING DVI - NON PDF - NON PDF - NON PDF}
@@ -30,7 +31,7 @@
 \fi
 \typeout{}\typeout{}
 
-
+\pdfoptionpdfminorversion=6
 
 %********************************PACCHETTI*************************************
 \input{TeX/packages}
