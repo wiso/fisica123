@@ -153,24 +153,24 @@ Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le
  % fluido_accelerato.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
 \end{figure}
  Se un fluido è accelerato verso destra con accelerazione $a$ allora usando le forze fittizie: $\ve F=m\ve g-m\ve a$:
-\begin{equation*}
+\[
  \ve f = -g\ver j - a \ver i
-\end{equation*}
+\]
 l'equazione differenziale risultante:
-\begin{equation*}
+\[
  \begin{cases}
   -a\rho=\frac{\partial p}{\partial x}\\
   -g\rho=\frac{\partial p}{\partial y}
  \end{cases}
-\end{equation*}
+\]
 la cui soluzione è:
-\begin{equation*}
+\[
  p = \rho(-ax-gy)
-\end{equation*}
+\]
 e le superfici equipotenziali:
-\begin{equation*}
+\[
  y = -\frac{p}{\rho g} - \frac{a}{g}x
-\end{equation*}
+\]
 che è un piano la cui pendenza è proporzionale all'accelerazione del sistema.
 \end{Es}
 \begin{Es}[Fluido in rotazione\index{moto!circolare!di un fluido}]
@@ -253,7 +253,7 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 
 Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
 \[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
-\begin{equation*}
+\[
 \left\{
         \begin{array}{lll}
         L_1=F_1\Delta S=F_1v_1\Delta t=p_1A_1v_1\Delta t\\
@@ -261,7 +261,7 @@ Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
         L_P=-\Delta mg(h_2-h_1)
         \end{array}
 \right.
-\end{equation*}
+\]
 \[\Delta K=\frac{1}{2}\Delta m(v_2^2-v_1^2)\]
 \[L_1+L_2+L_P=\Delta K\]
 \[p_1A_1v_1\Delta t-p_2A_2v_2\Delta t-\Delta mg(h_2-h_1)=\frac{1}{2}\Delta m(v_2^2-v_1^2)\]
@@ -435,9 +435,9 @@ Consideriamo $N$ molecole di un gas perfetto in un cubo di spigolo $L$. Prendiam
 \Delta t=\frac{2L}{v_x}
 \end{equation}
 quindi ogni $\Delta t$ ci sarà un urto; per l'impulso
-\begin{equation*}
+\[
 F_x\frac{2L}{v_x}=F_x\Delta t=\Delta p_x=-2mv_x
-\end{equation*}
+\]
 \begin{equation}
 F_x=-\frac{mv_x^2}{L}
 \end{equation}
@@ -703,10 +703,10 @@ L=-\int_{V_0}^{V_f} p\,\ud V
 \label{lavoro_gas02}
 \end{equation}
 Il modulo del lavoro è dunque, considerando il significato geometrico dell'integrale definito, l'area sottesa dalla curva $p=p(V)$. Il meno nella formula \eqref{lavoro_gas02} deriva dal fatto che considerando positivo il lavoro dell'ambiente la forza (dell'ambiente sul sistema) comprime il sistema, per esempio un contenitore con un pistone mobile, quindi lo spostamento è $-\ud x$, perché $x$ diminuisce.
-\begin{equation*}\begin{array}{l}
+\[\begin{array}{l}
 L<0 \Leftrightarrow \text{espansione}\\
 L>0 \Leftrightarrow \text{compressione}\\
-\end{array}\end{equation*}
+\end{array}\]
 
 \subsubsection{Isobara $p=\const$}
 \begin{equation}
@@ -867,11 +867,11 @@ Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
 Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=\frac{V_2}{V_1}$
 \[TV^{\gamma-1}=\const\]
 
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 T_CV_1^{\gamma-1}=T_DV_2^{\gamma-1}\\
 T_BV_1^{\gamma-1}=T_AV_2^{\gamma-1}\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 \[(T_C-T_B)V_1^{\gamma-1}=(T_D-T_A)V_2^{\gamma-1}\]
 \[\frac{T_D-T_A}{T_C-T_B}=\left(\frac{V_1}{V_2}\right)^{\gamma-1}\]
 
@@ -1191,7 +1191,7 @@ Si dovrebbe osservare una figura di interferenza diversa:
 =&\frac{2}{c}(l_1+l_2)\left\{1+\left(\frac{v}{c}\right)^2+\ldots-\left(1+\frac{1}{2}\left(\frac{v}{c}\right)^2\right)\right\}\\
 \simeq&\frac{2}{c}(l_1+l_2)\frac{1}{2}\left(\frac{v}{c}\right)^2=\frac{l_1+l_2}{c}\left(\frac{v}{c}\right)^2\end{align*}
 }
-Con più riflessioni si riesce ad avere $l_1+l_2=\SI{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\si{30}{\kilo\meter\per\second}$ e $\lambda=\SI{500E-9}{\metre}$.
+Con più riflessioni si riesce ad avere $l_1+l_2=\SI{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\SI{30}{\kilo\meter\per\second}$ e $\lambda=\SI{500E-9}{\metre}$.
 Il numero di frange che scorrono dovrebbe essere:
 \[\Delta N=\frac{\Delta}{T}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\]
 La sensibilità dello strumento era $\Delta N=0.01$. Se ci fosse stato l'etere con quella velocità sarebbe stato osservato. La ricerca dell'etere ripetuta in più mesi dell'anno, di giorno e di notte, usando luce solare, stellare ed artificiale, con dispositivi diversi, usando bracci diversi, telescopi o osservando fenomeni elettrici diede risultato negativo. Nel 1907 Nobel per Michelson.
@@ -1221,12 +1221,12 @@ I due pistoleri (Fig.\@ \ref{pistoleri}) sparano quando la luce gli raggiunge. E
 \section{Trasformate di Lorentz\index{trasformate!di Lorentz|(}\index{trasformazioni!di Lorentz|(}\index{Lorentz}}
 Le trasformate i Lorentz sostituiscono le trasformate di Galileo della meccanica classica. Per velocità basse rispetto a quelle della luce le trasformate di Lorentz tendono a quelle di Galileo.
 La funzione che trasforma le coordinate di un sistema di riferimento a quelle di un altro deve essere lineare, in quanto lo spazio è omogeneo. Immaginiamo che l'applicazione non sia omogenea, e quindi non lineare, per esempio: $x'=kx^2$. Se mettiamo una sbarra tra $0$ e $1$ questa misura $\Delta x=1-0=1$, nel nuovo sistema di riferimento misura: $k\cdot 1^2-k\cdot 0^2=k$. Se ora mettiamo la sbarra tra $2$ e $1$ nel primo sistema di riferimento misurerà ancora $1$, mentre nel secondo $k(2^2-1^2)=3k$ ovvero spostando la sbarra nel secondo sistema di riferimento la sua lunghezza cambia: assurdo per l'ipotesi di omogeneità dello spazio; inoltre l'applicazione deve essere anche additiva, perché la lunghezza di due sbarre affiancate deve essere la somma dell'unica sbarra avente lunghezza uguale nel primo sistema di riferimento alla somma delle lunghezze delle due sbarre nel primo sistema di riferimento. Consideriamo il sistema di riferimento $Oxy$ fermo e $O'x'y'$ che si muove rispetto ad $O$ di moto rettilineo uniforme con velocità di trascinamento $u$ nella direzione dell'asse $x$ crescente. L'applicazione è lineare, quindi (in due dimensioni spaziali), in generale:
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 x'=\lambda_{11}x+\lambda_{12}y+\lambda_{14}t\\
 y'=\lambda_{21}x+\lambda_{22}y+\lambda_{24}t\\
 t'=\lambda_{41}x+\lambda_{42}y+\lambda_{44}t\\\end{array}\right.
-\end{equation*}
+\]
 ``Solo'' 9 incognite. Ipotesi aggiuntive:
 \begin{itemize}
 \item[-] al tempo $t=t'=0$ gli orologi coincidono e anche i sistemi di riferimento $O\equiv O'$, in particolare per $t=0$ e $x=0$ segue $x'=0$ cioè
@@ -1268,7 +1268,7 @@ A $t=0$, $O\equiv O'$, $t=t'$ scatta un'onda luminosa dalle origini, questa ha u
 \[x^2-c^2t^2=x'^2-c^2t'^2=\lambda^2(x-ut)^2-c^2(\lambda_{41}x+\lambda_{44}t)^2=\]
 \[=\lambda^2x^2+\lambda^2 u^2t^2-2\lambda^2 xut-c^2\lambda_{41}^2x^2-c^2\lambda_{44}^2t^2-2c^2\lambda_{41} x\lambda_{44} t\]
 Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sistema di tre incognite e tre equazioni:
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 1=\lambda^2-c^2\lambda_{41}^2\\
 -c^2=\lambda^2u^2-c^2\lambda_{44}^2\\
@@ -1280,7 +1280,7 @@ Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sis
 \lambda_{44}^2=\frac{c^2+\lambda^2u^2}{c^2}\\
 -\lambda^2u=c^2\lambda_{41}\lambda_{44}\\
 
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
 \[\lambda^4u^2=c^4\lambda_{41}^2\lambda_{44}^2=c^4\frac{\lambda^2-1}{c^2}\frac{c^2+\lambda^2u^2}{c^2}=\]
 \[=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u+\lambda^2c^2+\lambda^4u^2\]
@@ -1294,7 +1294,7 @@ Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
 Diamo segno positivo a $\lambda_{44}$ e negativo a $\lambda_{41}$, in quanto se consideriamo un istante molto prossimo al momento della partenza allora $x\rightarrow 0$, $t'$ deve essere positivo (il tempo scorre nello stesso verso) e quindi $\lambda_{44}>0$.
 \subsection{Trasformate di Lorentz e Galileo}
 Se $u\ll c$, cioè se $\beta\rightarrow 0$ $\Rightarrow$ Lorentz $\rightarrow$ ``buon'' Galileo e il tempo assoluto.
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 x^\prime=\dfrac{x-ut}{\sqrt{1-\beta^2}}\\
 y^\prime=y\\
@@ -1308,7 +1308,7 @@ x^\prime=x-ut\\
 y'=y\\
 z'=z\\
 t'=t\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 \index{trasformate!di Lorentz|)} \index{trasformazioni!di Lorentz|)}
 \section{Contrazione delle lunghezze\index{contrazione delle lunghezze}}
 \begin{figure}[htbp]
@@ -1318,12 +1318,12 @@ t'=t\\
 \end{figure}
 Consideriamo spazi nello stesso tempo. Posizioniamo un'asta con estremi $A$ e $B$ ferma rispetto ad $O'$, sistema di riferimento inerziale con velocità $u$ rispetto ad $O$.
 $O$ misura nello stesso istante le posizione di $A$ e di $B$, quindi $t_A\equiv t_B$:
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 x'_A=\frac{x_A-ut_A}{\sqrt{1-\beta^2}}\\
 x'_B=\frac{x_B-ut_B}{\sqrt{1-\beta^2}}\\
 \end{array}
-\right.\end{equation*}
+\right.\]
 \begin{align*}
 l'&=x'_B-x'_A=\frac{x_B-x_A-ut_B+ut_A}{\sqrt{1-\beta^2}}=\frac{x_B-x_A-u(t_B-t_A)}{\sqrt{1-\beta^2}}=\frac{x_B-x_A}{\sqrt{1-\beta^2}}\\
 &=\gamma l
@@ -1416,18 +1416,18 @@ Quindi sembra che la conservazione della quantità di moto classica funzioni. Ca
    \caption{(a) prima dell'urto; (b) dopo l'urto}
 \end{figure}
 
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 p'_{x'}=p'_{x'_1}=\dfrac{v+v}{1+\dfrac{v^2}{c^2}}m=\dfrac{2v}{\dfrac{c^2+v^2}{c^2}}m=2mu\dfrac{1}{1+\beta^2}\\
 p'_{y'}=0\\
 \end{array}
-\right. \end{equation*}
-\begin{equation*}\left\{
+\right. \]
+\[\left\{
 \begin{array}{l}
 p'_{x'}=2mv'_{x'}=2mu\\
 p'_{y'}=0\\
 \end{array}
-\right. \end{equation*}
+\right. \]
 La quantità di moto fallisce. Bisogna considerare la correzione della massa.
 \end{Es}
 \section{Energia Relativistica\index{energia!relativistica}}
@@ -1471,7 +1471,7 @@ L'energia potenziale ha sempre la stessa definizione, il lavoro è definito come
 \[mc^2+U=\const\]
 
 \section{Quantità di moto ed energia\index{quantità di moto!relativistica}\index{energia!relativistica}}
-\begin{equation*}\left\{
+\[\left\{
 \begin{array}{l}
 E=mc^2=\dfrac{m_0}{\sqrt{1-\beta^2}}c^2\\
 p=\dfrac{m_0}{\sqrt{1-\beta^2}}\beta c\\
@@ -1479,7 +1479,7 @@ p=\dfrac{m_0}{\sqrt{1-\beta^2}}\beta c\\
 \quad\Rightarrow\quad
 \dfrac{p}{E}=\dfrac{\beta}{c}
 \quad\Rightarrow\quad\beta E=pc
-\end{equation*}
+\]
 \[E^2=\frac{m_0^2c^4}{1-\beta^2}\qquad E^2-\beta^2 E^2=m_0^2c^4\qquad E^2-p^2c^2=m_0^2c^4\]
 \[E^2=(m_0c^2)^2+(pc)^2\]
 \begin{figure}[htbp]
@@ -1489,9 +1489,9 @@ p=\dfrac{m_0}{\sqrt{1-\beta^2}}\beta c\\
 
 \section{Elettronvolt\index{elettronvolt}}
 La carica dell'elettrone vale circa $\SI{1.6E-19}{\coulomb}$. $\SI{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\SI{1}{\volt}$
-\begin{equation*}
+\[
 E=qV\qquad \electronvolt=q_e(\SI{1}{\volt})=\SI{1.6E-19}{\joule}
-\end{equation*}
+\]
 Molto usati sono i multipli: \kilo\electronvolt (chev), \mega\electronvolt (mev), \giga\electronvolt (gev), \tera\electronvolt (tev), \peta\electronvolt (pev).
 
 Anche le masse e le quantità di moto si possono esprimere in \electronvolt, combinando opportunamente con $c$.
@@ -1514,12 +1514,12 @@ Nel sistema di $K_0$ l'impulso dei mesoni è:
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/dec_strano2}
 \end{figure}
-\begin{equation*}
+\[
 \ve p_0=0\quad \Rightarrow \quad \ve p_f=0 = \ve p_{\pi^+}+\ve p_{\pi^-}
-\end{equation*}
-\begin{equation*}
+\]
+\[
 m_0^{\pi^+}=m_0^{\pi^-}=m_0^{\pi}\qquad p_{\pi^+}=p_{\pi^-}=p_{\pi}\quad E_0=E_f
-\end{equation*}
+\]
 
 \[E_0=m_0^{K_0}c^2=E_f=\sqrt{(m_0^{\pi^+}c^2)^2+p_{\pi^+}^2c^2}+\sqrt{(m_0^{\pi^-}c^2)^2+p_{\pi^-}^2c^2}=\]
 \[=2\sqrt{(m_0^\pi c^2)^2+p_{\pi}^2c^2}\]
@@ -1564,14 +1564,14 @@ La bisettrice dei quadranti è la linea di universo della luce, essa rappresenta
 \[\frac{\ud w}{\ud x}=\frac{\ud(ct)}{\ud x}=c\frac{1}{\frac{\ud x}{\ud t}}=\frac{c}{v}>1\]
 Quindi la traiettoria di ogni punto massivo nel piano di Minkowski deve avere tangente in ogni punto maggiore di uno, altrimenti andrebbe più veloce della luce.
 Creiamo un nuovo sistema di riferimento inerziale.
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 x'=\frac{x-ut}{\sqrt{1-\beta^2}}\\
 t'=\frac{t-\frac{\beta}{c}x}{\sqrt{1-\beta^2}}\\
 \end{array}\right.\qquad
 \left\{\begin{array}{l}
 x'=\frac{x-\beta w}{\sqrt{1-\beta^2}}\\
 w'=\frac{w-\beta x}{\sqrt{1-\beta^2}}\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 \begin{wrapfigure}[14]{r}{6cm}
    \centering
    \includegraphics[scale=0.6]{immagini/fisica1/Mink2}
@@ -1599,16 +1599,16 @@ $A$ e $B$ sono due eventi simultanei per $OXY$, ma non lo sono per $OX'Y'$. Anal
    \includegraphics[scale=0.7]{immagini/fisica1/Minkowski_calibrazione}
    \caption{Curve di calibrazione}
 \end{figure}
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 w^2-x^2=1\\
-x^2-w^2=1\end{array}\right.\end{equation*}
+x^2-w^2=1\end{array}\right.\]
 
-\begin{equation*}P_1\left\{\begin{array}{l}
+\[P_1\left\{\begin{array}{l}
 x^2-w^2=1\\
 w'=0\\
 \end{array}\right.\qquad \left\{\begin{array}{l}
 x^2(1-\beta^2)=1\\
-x=\frac{1}{\sqrt{1-\beta^2}}\end{array}\right.\end{equation*}
+x=\frac{1}{\sqrt{1-\beta^2}}\end{array}\right.\]
 \[x'=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta w}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\beta^2 x}{\sqrt{1-\beta^2}}=\dfrac{\dfrac{1}{\sqrt{1-\beta^2}}-\dfrac{\beta^2}{\sqrt{1-\beta^2}}}{\sqrt{1-\beta^2}}=1\]
 \[P_1(1,0)\qquad P_2(0,1)\]
 \[\overline{OP_1}>\overline{01}\qquad\overline{OP_2}>\overline{01}\]
@@ -1646,16 +1646,16 @@ $k$ numero d'onda, $\omega$ pulsazione. Considerando anche la fase $\varphi$:
 \end{figure}
 Trascuriamo il peso. Sull'elemento infinitesimo $\ud x$ agiscono due tensioni:
 \[\ve T'+\ve T=\ud m \ve a\]
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 T'\cos\alpha'-T\cos\alpha=\ud m a_x=0\\
 T'\sin\alpha'-T\sin\alpha=\ud m a_y\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 Per deformazioni piccole usiamo il primo sviluppo di Taylor:
 \[\cos \alpha=1+\ldots\qquad \sin \alpha=\alpha+\ldots\]
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 T'=T\\
 T'\alpha'-T\alpha=\ud m a_y=\ud m a\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 Ma il primo sviluppo di Taylor del seno è uguale a quello della tangente:
 \[T\tan\alpha'-T\tan\alpha=\ud m a\]
 Ma la tangente è la derivata delle $y$ nelle $x$:
@@ -1713,9 +1713,9 @@ L'ampiezza delle onde non è più costante, ma è una funzione armonica. Si dist
 Le onde stazionarie sono il frutto dell'interferenza di un'onda progressiva e una regressiva, tipicamente di un'onda con la sua riflessa.
 
 \parbox[]{\textwidth}{
-\begin{equation*}
+\[
 y_1=y_m\sin\left(kx-\omega t\right)\qquad y_2=y_m\sin\left(kx+\omega t\right)
-\end{equation*}
+\]
 \begin{align*}
 y=&y_1+y_2=y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx+\omega t\right)\right]\\
 =&2y_m\left[\sin\left(kx\right)\cos\left(\omega t\right)\right]
@@ -1749,9 +1749,9 @@ Nel caso inverso nel quale sia la sorgente a muoversi con velocità $v$ bisogna 
 notiamo che non c'è simmetria, cioè se consideriamo sorgente ferma e osservatore in moto con velocità $v$ non otteniamo lo stesso risultato di osservatore fermo e sorgente in moto con velocità $-v$. Questo perché esiste un sistema privilegiato che è il mezzo in cui si propaga l'onda. Questo non è vero per le onde elettromagnetiche.
 \subsection{Effetto Doppler relativistico\index{effetto!Doppler!relativistico}}
 Consideriamo l'ultimo caso trattato in funzione del periodo anziché della frequenza nel caso di onde luminose:
-\begin{equation*}
+\[
 T=T_0'\left(1-\frac{v}{c}\right)
-\end{equation*}
+\]
 $T_0'$ è il periodo proprio della sorgente misurato da un osservatore che si muove con la sorgente alla velocità $v$, quindi dall'osservatore fermo esso viene percepito come:
 \begin{subequations}
 \begin{equation}

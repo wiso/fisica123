@@ -46,7 +46,9 @@ $(BBL): $(TEXSRC) $(BIBSRC)
 	$(BIBTEX) $(TARGET)
 
 clean:
-	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc *.tex~ TeX/*.tex~ TeX/*.aux TeX/*.backup TeX/*.bak
+	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc *.tex~ TeX/*.tex~ TeX/*.aux TeX/*.backup TeX/*.bak fisica_linux.out fisica_linux.blg fisica_linux.idx
+	cat fisica_linux.maf|xargs rm -f
+	rm -f fisica_linux.maf
 
 tar:	
 	clean

@@ -82,19 +82,19 @@ Un vettore è rappresentabile con un segmento orientato, ogni vettore individua 
 I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso gli si pensa come elementi di classi di equivalenza i cui rappresentati sono i vettori applicati nell'origine.
 \section{\index{versore}Versori e \index{coordinate}coordinate}
 I versori sono vettori della base ortonormale di $\field{R}^3$ (lo spazio) considerato con il prodotto scalare canonico. In parole povere sono sono vettori di modulo unitario ortogonali a due a due. Solitamente si indicano con $\ver i$, $\ver j$ e $\ver k$ i versori applicati nell'origine, nella direzione degli assi cartesiani del sistema di riferimento. Le loro coordinate sono\footnote{quando si scrive che $\ve v=(a,b,c)$ l'uguaglianza significa che che fissata una base il vettore è rappresentato dalle sue coordinate $(a,b,c)$, ma vettori e coordinate non sono la stessa cosa, per esempio se si fa un cambiamento di base il vettore non cambia, ma le sue coordinate sì.}:
-\begin{equation*}
+\[
 \ver \imath=\left(\begin{array}{c} 1\\0\\0\\ \end{array}\right)\qquad
 \ver \jmath=\left(\begin{array}{c} 0\\1\\0\\ \end{array}\right)\qquad
 \ver k=\left(\begin{array}{c} 0\\0\\1\\ \end{array}\right)
-\end{equation*}
+\]
 
 Poiché i versori formano una base ogni vettore può essere espresso come una loro combinazione lineare, i coefficienti sono le coordinate\footnote{come già accennato i due simboli di uguaglianza hanno significati diversi, il primo è una vera uguaglianza, il secondo vuol dire che fissata una base, il vettore è rappresentato da quelle coordinate.}:
-\begin{equation*}
+\[
 \ve v=v_x\ve i+v_y\ve j+v_z\ve k=\left(
 \begin{array}{c}
 v_x\\v_y\\v_z\\
 \end{array}\right)
-\end{equation*}
+\]
 \section{Individuazione vettori}
 \begin{figure}[htbp]
  \centering
@@ -103,14 +103,14 @@ v_x\\v_y\\v_z\\
  \caption{l'angolo evidenziato è l'angolo $\alpha$ tra il vettore e l'asse $z$. Quest'angolo appartiene al piano individuato dal vettore e dall'asse $z$ (in grigio)}
 \end{figure}
 I vettori si possono individuare in un sistema di riferimento per via geometria o per via analitica. Individuando un vettore per via geometrica si indica il modulo, e gli angoli che il vettore forma con gli assi cartesiani. Nello spazio:
-\begin{equation*}
+\[
 \left\{
 \begin{array}{l}
 |\ve v|\\
 \alpha,\beta,\gamma
 \end{array}\right. \qquad \text{con}\qquad \cos^2 \alpha+\cos^2 \beta + \cos^2
 \gamma=1
-\end{equation*}
+\]
 Notiamo che gli angoli $\alpha$, $\beta$ e $\gamma$ non sono indipendenti, possiamo ricavarne uno in funzione degli altri; quindi un vettore sarà descritto da tre informazioni, per esempio $|\ve v|$, $\alpha$, $\beta$.
 
 Per via analitica invece bisogna indicare le componenti del vettore rispetto alla base $\{\ve i, \ve j, \ve k\}$: $\left(
@@ -119,7 +119,7 @@ v_x\\v_y\\v_z
 \end{array}\right)
 $.
 \subsection{Passaggio da individuazione geometrica a individuazione analitica}
-\begin{equation*}
+\[
 \left\{
 \begin{array}{l}
 v_x=|\ve v|\cos\alpha\\
@@ -134,7 +134,7 @@ v_z=|\ve v|\cos\gamma
 \cos\gamma=\cfrac{v_z}{|\ve v|}
 \end{array}
 \right.
-\end{equation*}
+\]
 
 
 \section{Operazioni tra i vettori}
@@ -142,10 +142,10 @@ v_z=|\ve v|\cos\gamma
 \subsubsection{Vettore inverso}
 Il vettore inverso ha stesso modulo del vettore, stessa direzione,
 ma verso opposto.
-\begin{equation*}
+\[
 -\ve v=-(v_x\ve i+v_y\ve j+v_z \ve k)=-v_x\ve i-v_y\ve
 j-v_z\ve k
-\end{equation*}
+\]
 Naturalmente ogni vettore ha inverso e la loro somma è nulla e $-\ve 0=\ve 0$.
 
 \subsubsection{Somma}
@@ -220,24 +220,24 @@ La derivata di un vettore è la derivata delle coordinate per i rispettivi verso
 \subsubsection{\index{gradiente}Gradiente}
 \label{gradiente}
 Il gradiente di uno scalare è definito come:
-\begin{equation*}
+\[
 \grad V(x,y,z)=\ve\nabla V(x,y,z)=\frac{\partial V}{\partial x}\ver i + \frac{\partial V}{\partial y}\ver j +\frac{\partial V}{\partial z}\ver k +
-\end{equation*}
+\]
 dove $\ve\nabla$ è un operatore definito come:
-\begin{equation*}
+\[
 \ve\nabla=\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial }{\partial z}\right)
-\end{equation*}
+\]
 con questo operatore abbiamo il divertimento di scrivere le nostre formule per esempio in questo modo:
 
-\begin{equation*}
+\[
 \ve F=-\ve\nabla U
-\end{equation*}
+\]
 invece di:
-\begin{equation*}
+\[
 \ve F=-\left(\frac{\partial U}{\partial
 x}\ve i+\frac{\partial U}{\partial y}\ve j+\frac{\partial
 U}{\partial z}\ve k\right)
-\end{equation*}
+\]
 
 \chapter{Cinematica}
 \minitoc
@@ -310,16 +310,16 @@ circolare in cui il modulo del vettore velocità rimane costante
 nel tempo (mentre la sua direzione varia ed è sempre tangente
 alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\index{omega@$\omega$|see{velocità angolare}}: $\omega=\frac{\ud\theta}{\ud t}$ e l'accelerazione angolare\index{accelerazione!angolare}\index{alpha@$\alpha$|see{accelerazione angolare}} $\alpha=\frac{\ud \omega}{\ud t}$; in realtà sono dei vettori.
 \[\left|\ve v\right|=\const\]
-\begin{equation*}\text{scegliamo $\ve r_0$}:\left\{
+\[\text{scegliamo $\ve r_0$}:\left\{
 \begin{array}{l}
 x=R\\
 y=0\\
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 \[\ve r=R\cos\theta\ve i+R\sin\theta\ve j\]
 \[\theta=\frac{\text{arco}}{\text{raggio}}=\frac{vt}{R}=\omega t\qquad\omega=\dot\theta=\frac{v}{R}=\const\]
 \[\ve r=R\cos(\omega t)\ve i+R\sin(\omega t)\ve j\]
-\begin{equation*}\ve v=\frac{\ud \ve r}{\ud t}=-R\omega\sin(\omega t)\ve
-i+R\omega\cos(\omega t)\ve j\end{equation*}
+\[\ve v=\frac{\ud \ve r}{\ud t}=-R\omega\sin(\omega t)\ve
+i+R\omega\cos(\omega t)\ve j\]
 \begin{align*}|\ve v|^2&=v_x^2+v_y^2=R^2\omega^2\sin^2(\omega
 t)+R^2\omega^2\cos^2(\omega t)\\
 &=R^2\omega^2\left(\sin^2\left(\omega t\right)+\cos^2\left(\omega
@@ -334,8 +334,8 @@ i-R\omega^2\sin(\omega t)\ve j\\
 &=-R\omega^2\left(\cos\left(\omega t\right)\ve i+
 \sin\left(\omega t\right)\ve j\right)=-\omega^2\ve r
 \end{align*}
-\begin{equation*}|\ve a|^2=R^2\omega^4\cos^2(\omega t)+R^2\omega^4\sin^2(\omega
-t)=R^2\omega^4\end{equation*}
+\[|\ve a|^2=R^2\omega^4\cos^2(\omega t)+R^2\omega^4\sin^2(\omega
+t)=R^2\omega^4\]
 \[a=\omega^2R=\omega v=\frac{v^2}{R}\]
 \section{\index{moto!circolare}Moto circolare}
 \begin{figure}[htbp]
@@ -344,12 +344,12 @@ t)=R^2\omega^4\end{equation*}
 \caption{\index{coordinate!polari}Coordinate polari}
 \end{figure}
 \[\ve r=R\ve u_r\]
-\begin{equation*}
+\[
 \left\{\begin{array}{ll}
 \ve u_r=\cos\theta(t)\ve i+\sin\theta(t)\ve j\\
 \ve u_\theta=-\sin\theta(t)\ve i+\cos\theta(t)\ve j
 \end{array}\right.
-\end{equation*}
+\]
 \[\frac{\ud\ve u_\theta}{\ud t}=-\dot{\theta}\cos\theta\ve i-\dot{\theta}\sin\theta\ve j=-\dot{\theta}\ve u_r\]
 \begin{align*}
 \ve v&=\frac{\ud \ve r}{\ud t}=\frac{\ud\left(R\ve
@@ -428,9 +428,9 @@ Una soluzione è:
 \[s^2x(t)+\frac{1}{\tau}sx(t)+\omega_0^2x(t)=0\]
 \[s_{1/2}=\dfrac{-\dfrac{1}{\tau}\pm\sqrt{\dfrac{1}{\tau^2}-4\omega_0^2}}{2}=-\frac{1}{2\tau}\pm\sqrt{\frac{1}{4\tau^2}-\omega_0^2}\]
 quindi la soluzione generale è una combinazione lineare delle soluzioni:
-\begin{equation*}
+\[
  x(t)=A_1e^{s_1t}+A_2e^{s_2t}
-\end{equation*}
+\]
 a seconda che le radici del polinomio siano reali o complesse si possono distinguere due casi:
 \begin{description}
 \item[attrito forte]
@@ -508,9 +508,9 @@ Molte forze sono descritte con leggi che approssimano il loro comportamento, con
 
 \subsection{\index{forza!elastica}Forza elastica}
 \begin{legge}[Hook]
-\begin{equation*}
+\[
 \ve F=-k\Delta\ve x
-\end{equation*}
+\]
  con $\Delta\ve x$ l'allungamento. Questa legge è valida per i corpi elastici e per allungamenti limitati, dopo di che il corpo non si comporta più in modo elastico e rimane deformato.
 \end{legge}
 
@@ -519,13 +519,13 @@ La resistenza del mezzo è quella forza che il fluido in cui è
 immerso un corpo in movimento esercita sul corpo. La forza è
 proporzionale alla velocità, ma può essere anche proporzionale al
 quadrato della velocità.
-\begin{equation*}
+\[
 \ve F=-k\mu \ve v
-\end{equation*}
+\]
 oppure:
-\begin{equation*}
+\[
 \ve F=-k\mu v\ve v
-\end{equation*}
+\]
 dove $\mu$ dipende dalla geometria del corpo,
 $k$ dalla natura del mezzo.
 \subsection{\index{attrito!statico}Attrito statico}
@@ -537,9 +537,9 @@ $f_s\leq\mu_s N$ con $\mu_s$coefficiente di attrito statico
 La forza di attrito è indipendente dalla superficie d'appoggio
 \end{legge}
 \subsection{\index{attrito!dinamico}Attrito dinamico}
-\begin{equation*}
+\[
 F_c=\mu_cN
-\end{equation*}
+\]
 $\mu_c=$ coefficiente di attrito dinamico. $\mu_c<\mu_s$
 
 \section{\index{principi della dinamica}Leggi di Newton}
@@ -628,18 +628,18 @@ T=2\pi\sqrt\frac{m}{k}=\frac{2\pi}{\omega}\]
 \caption{\index{pendolo}Pendolo semplice}
 \end{figure}
 \[\ve F=m\ve g+\ve T=m\ve a\]
-\begin{equation*}\left\{
+\[\left\{
   \begin{array}{l}
   a_r=-\frac{v^2}{l}=-\omega^2 l\\
   a_\theta=\frac{\ud v}{\ud t}
   \end{array}
-  \right.\end{equation*}
-\begin{equation*}\left\{
+  \right.\]
+\[\left\{
   \begin{array}{l}
   mg\cos\theta-T=-m\omega^2l=-m\frac{v^2}{l}\\
   mg\sin\theta=\frac{\ud v}{\ud t}m
   \end{array}
-  \right.\end{equation*}
+  \right.\]
 \[\omega=\frac{v}{l}=\frac{\ud\theta}{\ud t}\]
 \[|v|=\omega l=l\frac{\ud\theta}{\ud t}\]
 \[v=-l\frac{\ud\theta}{\ud t}\]
@@ -648,9 +648,9 @@ T=2\pi\sqrt\frac{m}{k}=\frac{2\pi}{\omega}\]
 per piccole oscillazioni\footnote{è il primo sviluppo del polinomio di Taylor}: $\sin\theta\simeq\theta$
 \[\frac{\ud^2\theta}{\ud t^2}=-\frac{g}{l}\theta\]
 si noti che questa equazione altro non è che l'equazione di un oscillatore armonico\footnote{Questo succede sempre quando si considerano piccole oscillazioni nell'intorno di un punto di equilibrio stabile $x_0$:
-\begin{equation*}
+\[
  m\ddot x \simeq \underbrace{F(x_0)}_0 + \left.\frac{\ud F}{\ud x}\right|_{x_0} (x-x_0) = k (x-x_0)
-\end{equation*}
+\]
 con $\left.\frac{\ud F}{\ud x}\right|_{x_0}=k<0$ perché è un punto di equilibrio stabile.
 }.
 \[g\theta=-l\ddot\theta\qquad \theta=A\sin\left(\omega
@@ -707,15 +707,15 @@ La Terra non è un sistema inerziale\index{sistema!inerziale}, infatti ruota int
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/apparenti2}
 \end{figure}
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 x=x'\cos\theta-y'\sin\theta\\
 y=y'\cos\theta+x'\sin\theta
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 
-\begin{equation*}\left\{\begin{array}{l}
+\[\left\{\begin{array}{l}
 x(t)=x'(t)\cos(\omega t)-y'(t)\sin(\omega t)\\
 y(t)=y'(t)\cos(\omega t)+x'(t)\sin(\omega t)
-\end{array}\right.\end{equation*}
+\end{array}\right.\]
 
 \[v_x=\frac{\ud x}{\ud t}=v'_{x'}\cos\left(\omega t\right)-\omega x'\sin\left(\omega t\right)-v'_{y'}\sin\left(\omega t\right)-\omega y'\cos\left(\omega t\right)\]
 \begin{align*}
@@ -748,32 +748,32 @@ Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma
 \end{Es}
 \subsection{Trattazione generale}
 Consideriamo due sistemi di riferimento in moto rototraslatorio relativo. Siano $\{\ve{e}_i\}_i^3$ e $\{\ve{e}'_i\}_i^3$ i versori dei due sistemi. Ogni vettore di $O$ si scrive come combinazione lineare i cui coefficienti sono le coordinate $\{x_i\}_i^3$:
-\begin{equation*}
+\[
  \ve{x}=\sum_{i=1}^3 x_i\ve{e}_i
-\end{equation*}
+\]
 sia $x_0$ il vettore posizione di $O'$ visto da $O$:
-\begin{equation*}
+\[
  \ve{x_0}=\sum_{i=1}^3 {x_0}_i \ve{e}_i
-\end{equation*}
+\]
 nella base del sistema $O'$ il punto individuato da $\ve x$ rispetto al sistema $O$ è individuato dal vettore $\ve{x'}$:
-\begin{equation*}
+\[
  \ve{x'}=\sum_{i=1}^3 x'_i\ve{e'}_i
-\end{equation*}
+\]
 La relazione che li lega è:
-\begin{equation*}
+\[
  \ve{x} =  \ve{x_0}+\ve{x'}
-\end{equation*}
-\begin{equation*}
+\]
+\[
  \ve{v}=\frac{\ud}{\ud t}\ve{x}=\frac{\ud}{\ud t}\ve{x_0}+\frac{\ud}{\ud t}\ve{x'}=\ve{v_0}+\sum_{i=1}^3\left(\underbrace{\frac{\ud x'_i}{\ud t}\ve{e}'_i}_{\ve{v'}}+x'_i\frac{\ud \ve{e}'}{\ud t}\right)
-\end{equation*}
+\]
 A causa della rotazione il versore del sistema primato ruota, ma il suo modulo non cambia. Dopo un tempo $\ud t$ avrà fatto un angolo $\ud\alpha=\omega\ud t$, quindi per la definizione di angolo $\ud\alpha=\norm{\ud\ve{e'_i}}$, ma allora $\norm{\frac{\ud \ve{e'}_i}{\ud t}} = \omega$. In generale vale:
-\begin{equation*}
+\[
  \frac{\ud\ve{e'_i}}{\ud t}=\ve\omega\times\ve{e'_i}
-\end{equation*}
+\]
 quindi:
-\begin{equation*}
+\[
  \ve{v}=\ve{v'}+\ve{v_0}+\ve{\omega}\times\ve{x'}
-\end{equation*}
+\]
 derivando ancora una volta
 \begin{align*}
  \ve{a}&=\frac{\ud}{\ud t}\ve{v}=\frac{\ud}{\ud t}\left(\frac{\ud x'_i}{\ud t}\ve{e'_i}\right)+\frac{\ud\ve{v_0}}{\ud t}+\ve\omega\times\frac{\ud\ve{x'}}{\ud t}\\
@@ -842,9 +842,9 @@ v_{\ce{Th}}=\frac{m_\alpha v_\alpha}{m_{\ce{Th}}}=\SI{3.4E5}{\metre\per\second}
 \begin{equation}\ve r_{CM}=\frac{\sum^N_{i=1}\left(\ve
 r_im_i\right)}{\sum^N_{i=1}m_i}=\frac{\sum^N_{i=1}\left(\ve
 r_im_i\right)}{M}\end{equation}
-\begin{equation*}x_{CM}=\frac{\sum^N_{i=1}\left(x_im_i\right)}{M} \qquad
+\[x_{CM}=\frac{\sum^N_{i=1}\left(x_im_i\right)}{M} \qquad
 y_{CM}=\frac{\sum^N_{i=1}\left(y_im_i\right)}{M}\qquad
-z_{CM}=\frac{\sum^N_{i=1}\left(z_im_i\right)}{M}\end{equation*}
+z_{CM}=\frac{\sum^N_{i=1}\left(z_im_i\right)}{M}\]
 \end{Def}
 \[\ve v_{CM}=\frac{\ud \ve r_{CM}}{\ud t}=\frac{\sum^N_{i=1}\frac{\ud}{\ud t}\left(m_i\ve r_i\right)}{\sum^N_{i=1}m_i}=\frac{\sum^N_{i=1}\left(m_i\ve v_i\right)}{M}\]
 \[M\ve v_{CM}={\sum^N_{i=1}m_i\ve v_i}=\ve p\]
@@ -925,20 +925,20 @@ superficie del semicerchio è $\frac{\pi r^2}{2}$, quindi
 \ve{J}(t_1,t_2)&=\int_{t_1}^{t_2} \ve{F}\, \ud t=\int_{t_1}^{t_2}m\ve a\, \ud t=m\int_{t_1}^{t_2}\frac{d\ve{v}}{\ud t}\,\ud t=m\int_{t_1}^{t_2}\ud \ve{v}\\
 &=m\left[\ve v(t_2)-\ve v(t_1)\right]=\ve p_2 - \ve p_1=\Delta \ve p
 \end{align*}
-\begin{equation*}
+\[
 \ve J=\int_{t_1}^{t_2}\ve F \ud t=\Delta \ve p
-\end{equation*}
+\]
 Se il sistema è isolato con due corpi si ha:
 
-\begin{equation*}
+\[
 \Delta \ve p_1=\int_{t_1}^{t_2} \ve F_{1,2}\, \ud t\qquad \Delta \ve p_2=\int_{t_1}^{t_2} \ve F_{2,1}\, \ud t
-\end{equation*}
-\begin{equation*}
+\]
+\[
 \Delta \ve p_1 + \Delta \ve p_2=\int\left(\ve F_{1,2}+\ve F_{2,1}\right)\ud t=0=\Delta\ve p_{\text{totale}}
-\end{equation*}
-\begin{equation*}
+\]
+\[
 \ve p_{\text{iniziale}}=\ve p_{\text{finale}}
-\end{equation*}
+\]
 dove si è usato terzo principio della dinamica. La conservazione della quantità di moto vale in tutti i sistemi isolati.
 
 \section{\index{urti}Urti}
@@ -1279,17 +1279,17 @@ Distinguiamo i seguenti casi particolari:
 \end{description}
 \begin{Es}[attrito costante su traiettoria semicircolare]
 \[F_A=\mu N=\mu mg\quad \delta L=\ve F_A\cdot\ud \ve s=-\mu mg\ud s\]
-\begin{equation*}L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud
-s=-\mu mg\pi R\end{equation*}
+\[L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud
+s=-\mu mg\pi R\]
 \end{Es}
 \subsection{Lavoro nei moti rotatori}
 Consideriamo un corpo rigido ruotante attorno ad un asse. Sia $\ud s$ lo spostamento
 infinitesimo corrispondete a $\ud \theta$, $\phi$ l'angolo
 compreso tra la forza e il vettore $\ve r$:
-\begin{equation*}
+\[
 \delta L=(F\sin \phi)\ud s=(F \sin \phi)(r
 \ud\theta)=(rF\sin\phi)\ud \theta=\tau_z\ud\theta
-\end{equation*}
+\]
 \[L=\int_{\theta_i}^{\theta_f}\tau_z\ud\theta\]
 Se durante la rotazione il momento torcente resta costante, il
 lavoro svolto da questo momento torcente è:
@@ -1622,15 +1622,15 @@ questa è nulla ai poli e massima all'equatore quindi:
 \[\frac{F_C}{F_N}=\frac{\omega^2R}{g_{\text{polo}}}=\frac{(2\pi)^2}{T^2}\frac{R}{g_{\text{polo}}}\]
 \begin{Es}[Satelliti geostazionari]
  I satelliti geostazionari sono satelliti che per il sistema di riferimento della Terra, sono fermi. Questo vuol dire che hanno lo stesso periodo della Terra:
-\begin{equation*}
+\[
  F = G\frac{Mm}{R^2} = m\frac{v^2}{R}\quad\Rightarrow v=\sqrt{\frac{GM}{R}}
-\end{equation*}
-\begin{equation*}
+\]
+\[
  T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = \SI{1}{\dday}
-\end{equation*}
-\begin{equation*}
+\]
+\[
  R = \sqrt[3]{\frac{GMT^2}{4\pi^2}}\simeq \SI{42E3}{\kilo\meter}
-\end{equation*}
+\]
 quindi l'altitudine sarà $d = R - R_\oplus\simeq \SI{36E3}{\kilo\meter}$.
 \end{Es}
 

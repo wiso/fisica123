@@ -22,7 +22,9 @@ Nel 1815 Proust\index{Proust} propose di introdurre la massa atomica relativa, r
 Una massa atomica ($\SI{1}{\atomicmass}$) è pari al dodicesimo della massa del $^{12}\mathrm{C}$.
 \end{Def}
 Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\SI{12}{\gram}$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\SI{12}{\gram}/N_A$, quindi il dodicesimo:
-\[\SI{1}{\atomicmass} = \frac{\gram\per\mole}{N_A} = \frac{\gram\per\mole}{6.022\ldots\times 10^{23}\;\per\mole}\simeq \SI{1.6605402E-27}{\kilogram} \]
+\[
+\SI{1}{\atomicmass} = \frac{\gram\per\mole}{N_A} = \frac{\gram\per\mole}{6.022\ldots\times 10^{23}\;\per\mole}\simeq \SI{1.6605402E-27}{\kilogram}
+\]
 
 \chapter{Gas\index{gas}}
 \minitoc
@@ -346,12 +348,12 @@ Calcoliamo il massimo della gaussiana (l'altezza):
 I_{\max}(\nu)\propto N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}\frac{c}{\nu_0}
 \end{equation}
 La larghezza a metà altezza:
-\begin{equation*}
+\[
 I=\frac{I_{\max}}{2}\qquad N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{\frac{-mc^2\left(\nu-\nu_0\right)^2}{2kT\nu_0^2}}\frac{c}{\nu_0}=\frac{1}{2}N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}\frac{c}{\nu_0}
-\end{equation*}
-\begin{equation*}
+\]
+\[
 e^{\frac{-mc^2\left(\nu-\nu_0\right)^2}{2kT\nu_0^2}}=\frac{1}{2}\qquad \frac{mc^2\left(\nu-\nu_0\right)^2}{2kT\nu_0^2}=\log 2
-\end{equation*}
+\]
 quindi:
 \begin{equation}
 \nu_{1/2}=\nu_0\pm\sqrt{\frac{2kT\nu_0^2\log 2}{mc^2}}=\nu_0\pm\frac{\nu_0}{c}\sqrt{\frac{2kT\log 2}{m}}
@@ -376,18 +378,18 @@ L=\frac{1}{\sqrt{2}n\sigma}
 \end{equation}
 \section{Moto Browniano\index{moto!Browniano}}
 \subsection{Cammino casuale\index{cammino!casuale}}
-Consideriamo il moto di una particella in un gas. Questa subirà un certo numero di urti e tra uno e l'altro percorrerà mediamente un certo spostamento, il libero cammino medio $l$. Per descrivere questo spostamento definiamo $\ve L$ un vettore casuale avente aspettazione di modulo $l$ libero cammino medio e direzione casuale uniforme. La domanda è: ``Dopo un certo numero di urti dove sarà la particella?''.
+Consideriamo il moto di una particella in un gas. Questa subirà un certo numero di urti e tra uno e l'altro percorrerà mediamente un certo spostamento, il libero cammino medio $l$. Per descrivere questo spostamento definiamo $\ve L$ un vettore casuale avente aspettazione quadratica di modulo $l^2$ e direzione casuale uniforme: $\media{\norm{\ve L^2}}=l^2$, oppure $L_{\textup{RMS}}=l$. La domanda è: ``Dopo un certo numero di urti dove sarà la particella?''.
 Sappiamo che:
-\begin{equation*}
+\[
 \ve L=\left(
 \begin{array}{l}
 x\\y\\z\\
 \end{array}\right)
-\qquad x=y=z\qquad \media{\norm{\ve L}}=\media{\sqrt{x^2+y^2+z^2}}=\sqrt{3}\media{|x|}=l
-\end{equation*}
+\qquad\media{x^2}=\media{y^2}=\media{z^2}\qquad \media{\norm{\ve L}^2}=\media{x^2+y^2+z^2}=\sqrt{3}\media{x^2}=l
+\]
 quindi:
 \begin{equation}
-\media{|x|}=\media{|y|}=\media{|z|}=\frac{l}{\sqrt{3}}
+\media{x^2}=\media{y^2}=\media{z^2}=\frac{l}{\sqrt{3}}
 \end{equation}
 e naturalmente:
 \begin{equation}
@@ -401,18 +403,15 @@ L\\\theta_L\\\varphi_L\\
 \end{array}\right)\qquad
 \media{L}=l\qquad\media{\theta_L}=\pi\qquad \media{\varphi_L}=\frac{\pi}{2}
 \end{equation}
-Se la particelle parte dall'origine, al primo scontro mediamente la sua posizione sarà $\left<\ve l_1\right>=\left<\ve L + \ve 0\right>$. Naturalmente $\media{l_1^2}=\media{L^2}$. Al secondo urto la sua posizione sarà:
+Se la particelle parte dall'origine, al primo scontro la sua posizione sarà $l_1=\ve L + \ve 0$. Naturalmente $\media{l_1^2}=\media{L^2}=l^2$. Al secondo urto la sua posizione sarà:
 \begin{equation}
 \begin{split}
 \media{l_2^2}&=\media{\left(\ve l_1+\ve L\right)^2}=\media{\norm{\ve l_1}^2+\norm{\ve L}^2+2\norm{\ve L}\norm{\ve l_1}\cos\theta}\\
-&=\media{l_1^2}+\media{L^2}+2\media{Ll_1\cos\theta}=2\media{L^2}=2l^2
+&=\media{l_1^2}+\media{L^2}+2\media{Ll_1\cos\theta}=2l^2
 \end{split}
 \end{equation}
-con $\theta$ l'angolo compreso tra i due vettori. Senza fare i conti è ovvio che $\theta$ è una variabile casuale uniforme che varia tra $[0,2\pi)$. Quindi $\media{\theta}=\frac{\pi}{2}$ e allora:
-\begin{equation*}
-\left<Ll_1\cos\theta\right>=0
-\end{equation*}
-In generale sarà:
+con $\theta$ l'angolo compreso tra i due vettori. $\theta$ è una variabile casuale uniforme che varia tra $[0,\pi]$. Quindi $\media{\cos\theta}=\frac{1}{\pi}\int_0^\pi\cos\theta\,\ud\theta=0$
+In generale dopo l'N-esimo passo sarà:
 \begin{equation}
 \left<l_N^2\right>=Nl^2
 \end{equation}
@@ -420,7 +419,7 @@ con $N$ il numero di urti. Definiamo lo spostamento quadratico medio $l_{qm}^\st
 \begin{equation}
 l_{qm}^\star =\sqrt{\left<l_N^2\right>} = \sqrt{N}l
 \end{equation}
-Ma la velocità scalare media sarà:
+La velocità scalare media sarà:
 \begin{equation}
 \media{v} = \media{\frac{NL}{t}}=\frac{Nl}{t}
 \end{equation}
@@ -442,9 +441,9 @@ vogliamo calcolare la forza media dall'istante iniziale $t_1=0$, in cui la parti
 \label{impulso_massa_brown}
 \end{equation}
 che assomiglia\footnote{era facile:
-\begin{equation*}
+\[
 \media{\ve F}=\media{m\ve a}=m\media{\ve a}=\frac{m}{t}\int_0^t\frac{\ud\ve v}{\ud t}\,\ud t=m\frac{\ve v(t)}{t}
-\end{equation*}
+\]
 assumendo come instante iniziale lo zero e come velocità iniziale zero} ad $\ve F=m\ve a$. Sostituiamo la massa dalla \eqref{impulso_massa_brown} nella \eqref{Browniano12}:
 \begin{equation}
 \media{E}=\frac{1}{2}\frac{\media{F}}{\media{v}}t\frac{\media{r^2}}{t^2}=\frac{1}{2}\frac{\media{F}}{\media{v}}\frac{\media{r^2}}{t}
@@ -468,17 +467,17 @@ Perrin nel 1908 trovò sperimentalmente $N_A$ dalla sedimentazione di particelle
 p=p_0e^{-\frac{\rho_0 g}{p_0}y}
 \end{equation}
 possiamo passare a quantità microscopiche:
-\begin{equation*}
+\[
 p=nKT\qquad p_0=n_0KT\qquad \rho_0=n_0m
-\end{equation*}
+\]
 con $n=\frac{N}{V}$ numero di particelle nell'unità di volume e $m$ massa di una particella di soluto. Allora:
 \begin{equation}
 n=n_0e^{-\frac{mgy}{KT}}=n_0e^{-\frac{N_Amgy}{RT}}
 \end{equation}
 Notiamo come al numeratore dell'esponenziale ci sia l'energia totale. In questo modo possiamo trovare $N_A$ conoscendo $R$ dalla teoria dei gas. Se ora al posto delle molecole di soluto sostituiamo delle particelle di densità $\rho_p$ il loro peso sarà diminuito della spinta di Archimede:
-\begin{equation*}
+\[
 S_A=g\rho V=gm\frac{\rho}{\rho_p}
-\end{equation*}
+\]
 \begin{equation}
 n=n_0 e^{-\frac{N_Amg(\rho_p-\rho)h}{\rho_pRT}}
 \end{equation}
@@ -650,13 +649,13 @@ v_a=\frac{m-V\rho_\text{aria}}{\beta}g
 \label{va11}
 \end{equation}
 questa può essere misurata, infatti dopo qualche costante di tempo $\tau=\frac{m}{\beta}$ si può considerare che la velocità raggiunta sia quella di regime\footnote{risolvendo l'equazione differenziale \eqref{forze_Millikan} in funzione della velocità si trova:
-\begin{equation*}
+\[
 v(t)=\frac{m-V\rho_\text{aria}}{\beta}g\left(1-e^{-\frac{\beta t}{m}}\right)\xrightarrow{t\to +\infty} v_a
-\end{equation*}
+\]
 e allora:
-\begin{equation*}
+\[
 \frac{v(5\tau)-v_a}{v_a}=-e^{-5}\simeq -0,67\%
-\end{equation*}
+\]
 }.
 Sostituendo nella \eqref{forze_Millikan} le espressioni della massa in funzione del volume e l'espressione di $\beta$ e usando la velocità di regime:
 \begin{equation}
@@ -748,9 +747,9 @@ Partiamo dalla seconda, sostituendo $\ddot x$:
 \label{dddotz}
 \end{equation}
 che è autonoma, facile da risolvere:
-\begin{equation*}
+\[
 \lambda^3+\left(\frac{qB}{m}\right)^2\lambda=0\qquad\lambda_1=0\quad\lambda_{2/3}=\pm\frac{qB}{m}i
-\end{equation*}
+\]
 Allora la soluzione generale è:
 \begin{equation}
 z(t)=C_1 e^{\lambda_1t}+C_2 e^{\lambda_2t}+C_3 e^{\lambda_3t}=C_1+C_2\cos\left(\frac{qB}{m}t\right)+C_3\sin\left(\frac{qB}{m}t\right)
@@ -981,15 +980,15 @@ con $n$ naturale. Consideriamo $\lambda\ll L$. Differenziando:
 \end{equation}
 \begin{Es}[numero di modi di oscillare]
 Se una corda è lunga $L=\SI{1}{\meter}$ e l'intervallo di lunghezze d'onda è $(\lambda,\lambda+\Delta\lambda)=(\SI{1}{\centi\meter},\SI{1.1}{\centi\meter})$ allora ci sono:
-\begin{equation*}
+\[
 \Delta n=\frac{2L}{\lambda^2}\Delta\lambda=\frac{2\cdot\SI{1}{\meter}}{(\SI{0.01}{\meter})^2}\,\SI{0.001}{\meter}=20
-\end{equation*}
+\]
 modi di oscillare.
 
 Se avessimo fatto un conto esatto allora:
-\begin{equation*}
+\[
 \Delta n=n_2-n_1=2L\left(\frac{1}{\lambda_2}-\frac{1}{\lambda_1}\right)\simeq 18.1
-\end{equation*}
+\]
 quindi contanto anche gli estremi ci sono 19 modi di oscillare.
 \end{Es}
 
@@ -1046,9 +1045,9 @@ il numero totale di particelle:
 N=\sum_{m=0}^\infty n_m=\sum_{m=0}^\infty n_0e^{-\frac{m\epsilon}{kT}}=n_0\sum_{m=0}^\infty \left(e^{-\frac{\epsilon}{kT}}\right)^m=n_0\frac{1}{1-e^{-\frac{\epsilon}{kT}}}
 \end{equation}
 essendo una serie geometrica di ragione $0<e^{-\frac{\epsilon}{kT}}<1$. L'energia media sarà\footnote{ricordiamo lo sviluppo in serie di $(1-x)^{-2}$:
-\begin{equation*}
+\[
 \left(1-x\right)^{-2}=\sum_{m=0}^{\infty}(m+1)x^m=\sum_{m=1}^\infty m x^{m-1}
-\end{equation*}
+\]
 } allora:
 \begin{equation}
 \begin{split}
@@ -1281,34 +1280,34 @@ P'(E'=E_1+E_2)=P(E_1)P(E_2)
 Ma $P$ e $P'$ sono uguali a meno di un coefficiente in quanto il sistema globale è alla stessa temperatura dei due corpi ed è in equilibrio. Appare chiaro che la funzione cercata è un esponenziale.
 
 Scegliamo $E_1=0$ e $E_2=E$ allora:
-\begin{equation*}
+\[
 P'(E)=P(0)P(E)=P(E_1)P(E_2)
-\end{equation*}
+\]
 usando $E=E_1+E_2$:
-\begin{equation*}
+\[
 P'(E_1+E_2)=P(E_1)P(E_2)=P(0)P(E_1+E_2)
-\end{equation*}
+\]
 vale per ogni $E_1,E_2$:
-\begin{equation*}
+\[
 P(E_1+E_2)P(0)=P(E)P(E_2)
-\end{equation*}
+\]
 se $E_1=E$ e $E_2=\ud E$:
-\begin{equation*}
+\[
 P(E+\ud E)=\frac{1}{P(0)}P(E)P(\ud E)
-\end{equation*}
-\begin{equation*}
+\]
+\[
 \frac{P(E+\ud E)-P(E)}{\ud E}=\frac{\left(\frac{1}{P(0)}P(E)P(\ud E)\right)-P(E)}{\ud E}=\frac{P(E)}{P(0)}\frac{P(\ud E-P(0)}{\ud E}
-\end{equation*}
-\begin{equation*}
+\]
+\[
 \frac{\ud P(E)}{\ud E}=\frac{P(E)}{P(0)}\frac{\ud P(E=0)}{\ud E}
-\end{equation*}
-\begin{equation*}
+\]
+\[
 \frac{\frac{\ud P(E)}{\ud E}}{P(E)}=\frac{1}{P(0)}\frac{\ud P(E=0)}{\ud E}=-\beta
-\end{equation*}
+\]
 con $\beta$ indipendente da $E$
-\begin{equation*}
+\[
 \int_{P(0)}^{P(E)}\frac{\ud P}{P(E)}=\int_0^E-\beta\,\ud E
-\end{equation*}
+\]
 \begin{equation}
 P(E)=P(0)e^{-\beta E}
 \end{equation}
@@ -1317,9 +1316,9 @@ Consideriamo un sistema con vari livelli energetici $E_1, E_2, \ldots$ cioè con
 \begin{equation}
 N(N-1)(N-2)\cdots(N-n_1+1)=\frac{N!}{\left(N-n1\right)!}
 \end{equation}
-possibilità\footnote{\begin{equation*}
+possibilità\footnote{\[
 N!=N(N-1)(N-2)\cdots(N-n_1+1)\cdot(N-n_1)!
-\end{equation*}
+\]
 }. In reatà ci sono $n_1!$ ordini possibili per riempire il livello, ma l'ordine nel nostro caso non conta, quindi dobbiamo dividere per $n_1!$ per far diminuire il numero di scelte:
 \begin{equation}
 \frac{N!}{n_1!(N-n_1)!}
@@ -1400,9 +1399,9 @@ Usando due moltiplicatore di Lagrange $\alpha$ e $\beta$ per minimizzare la funz
 \sum_i\left(\log\frac{n_i}{g_i}\alpha+\beta E_i\right)\ud n_i=0
 \end{equation}
 quindi:
-\begin{equation*}
+\[
 \log \frac{n_i}{g_i}+\alpha+\beta E_i=0
-\end{equation*}
+\]
 invertendo:
 \begin{equation}
 n_i=g_ie^{-\alpha-\beta E_i}
@@ -1450,20 +1449,20 @@ U=-N\frac{\ud}{\ud \beta}(\log Z)
 \end{equation}
 \begin{Es}[sistema a due stati equiprobabili]
 consideriamo un sistema con due stati con energia $E_1=\epsilon$ e $E_2=-\epsilon$, equiprobabili, cioè tali che $g_1=g_2=1$. La funzione di partizione:
-\begin{equation*}
+\[
 Z=\sum_i g_ie^{-\beta E_i}=e^{-\beta E_1}+e^{-\beta E_2}=e^{-\beta \epsilon}+e^{\beta\epsilon}=2\cosh(\beta\epsilon)
-\end{equation*}
+\]
 all'equilibrio i livelli avranno:
-\begin{equation*}
+\[
 \begin{split}
 n_1&=\frac{N}{Z}g_1e^{-\beta E_1}=\frac{N}{2\cosh(\beta\epsilon)}e^{-\beta\epsilon}\\
 n_2&=\frac{N}{Z}g_1e^{-\beta E_2}=\frac{N}{2\cosh(\beta\epsilon)}e^{\beta\epsilon}\\
 \end{split}
-\end{equation*}
+\]
 e l'energia media:
-\begin{equation*}
+\[
 \media{E}=\frac{1}{Z}\sum_i g_i E_ie^{-\beta E_i}=\frac{1}{2\cosh(\beta\epsilon)}\left(\epsilon e^{-\beta\epsilon}-\epsilon e^{\beta \epsilon}\right)=-\epsilon\tanh(\beta\epsilon)
-\end{equation*}
+\]
 \end{Es}
 \section{Temperatura}
 Il parametro $\beta$ ha le dimensioni dell'inverso di un energia. La distribuzione dell'energia in un gas perfetto:
@@ -1686,14 +1685,14 @@ praticamente identico (a parte il fattore $3$) al calore specifico dei solidi se
 \minitoc
 \section{Particelle $\alpha$}
 Osservando il decadimento di uranio osservò due tipi di radiazioni $\alpha$ e $\beta$. Con un esperimento simile a quello di Thomson per il rapporto carica--massa dell'elettrone misurò il rapporto carica--massa delle particelle $\alpha$ arrivando ad un valore che erà metà di quello del protone. Analizzando lo spettro di emissione delle particelle $\alpha$ concluse che le particelle $\alpha$ altro non erano che $\mathrm{He}^{2+}$. Infatti\footnote{Dai dati sperimentali nella sezione risulta
-\begin{equation*}
+\[
 0.503448683\pm 3.47\times 10^{-7}
-\end{equation*}
+\]
 }
 :
-\begin{equation*}
+\[
 \frac{q_{\mathrm{He^{2+}}}}{m_{\mathrm{He}^{2+}}}=\frac{2q_{\mathrm{p}^+}}{4m_{\mathrm{p}^+}}=\frac{1}{2}\frac{q_{\mathrm{p}^+}}{m_{\mathrm{p}^+}}
-\end{equation*}
+\]
 Thomson usò queste particelle per i suoi esperimenti sfruttando la loro grande massa ed energia.
 \section{Scattering di Thomson}
 \subsubsection{modello di Thomson}
@@ -1709,24 +1708,24 @@ F=\left\{\begin{array}{ll}
 \end{array}\right.
 \end{equation}
 il massimo della forza si ha per $r=R$. Assumiamo che la forza agisca solo quando la particella $\alpha$ è all'interno della distribuzione di carica, cioè per un tempo $\Delta t\sim\frac{2R}{v}$. Supponiamo che la forza sia sempre quella massima. La variazione di quantità di moto:
-\begin{equation*}
+\[
 \Delta p\sim F\Delta t=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{R^2}\frac{2R}{v}
-\end{equation*}
+\]
 ipotizzando il caso di deviazione massima, cioè quando $\Delta\ve p\perp\ve p$ si ha:
-\begin{equation*}
+\[
 \tan\theta=\frac{\Delta p}{p}\sim\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{R^2}\frac{2R}{m_\alpha v^2}=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{R\left(\frac{1}{2}m_\alpha v^2\right)}
-\end{equation*}
+\]
 se assumiamo $q_\alpha=2e$ con un'energia di $\SI{5}{\mega\electronvolt}$, incidente su una lastra di oro con $Q=79e$ e $R=\SI{1}{\angstrom}$ abbiamo:
-\begin{equation*}
+\[
 \theta\sim\tan\theta=\SI{0.026}{\degree}
-\end{equation*}
+\]
 
 Secondo questo calcolo pedestre la maggior parte delle particelle dovrebbe essere scatterata con un angolo di $\SI{1}{\degree}$. Si può dimostrare che la frazione di particelle scatterate con un angolo maggiore di $\theta$ è $e^{-(\theta/\media{\theta})^2}$. Se assumiamo $\media{\theta}=\SI{1}{\degree}$ allora la frazione scatteerata con angolo maggiore di $\SI{90}{\degree}$ è $e^{-(90/1)^2}\simeq 10^{-3500}$. La frazione osservata da Ruttherford era di $\frac{1}{8000}$, in disaccordo col modello di Thomson. L'atomo di Thomson non è in grado di deflettere abbastanza le particelle $\alpha$.
 
 Se ora proviamo a calcolare quale deve essere il raggio dell'atomo (prima avevamo assunto $\SI{1}{\angstrom}$) per avere uno scattering di $\SI{1}{\degree}$:
-\begin{equation*}
+\[
 R=\frac{q_\alpha Q}{4\pi\varepsilon_0}\frac{1}{\frac{1}{2}m_\alpha v^2}=\SI{4.6E-4}{\angstrom}
-\end{equation*}
+\]
 Ruttherford concluse che per avere angoli di scattering come quelli osservati la carica positiva doveva avere un volume molto piccolo rispetto al volume dell'atomo.
 \section{Scattering di Ruttherford}
 Assumiamo che la carica del nucleo scatteratore sia concentrata nel nucleo, molto piccolo, posto nell'origine delle coordinate. Definiamo il parametro di impatto $b$ la distanza tra l'asintoto della traiettoria della particella $\alpha$ per $t\to-\infty$ e il nucleo scatteratore. Vogliamo sapere l'angolo $\theta$ tra la direzione dell'asintoto per $t\to-\infty$ e la direzione dell'asintoto per $t\to\infty$.
@@ -1790,9 +1789,9 @@ L^2=m^2v_0^2b^2
 \ddot u+u=-\frac{zZe^2}{\giorgi}\frac{m}{L^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{\Delta}{2b^2}
 \end{equation}
 Per risolvere l'equazione differenziale. Omogenea associata:
-\begin{equation*}
+\[
 \lambda^2-1=0\qquad \lambda=\pm i\qquad u(\varphi)=A\sin\varphi+B\cos\varphi
-\end{equation*}
+\]
 quindi l'equazione differenziale ha soluzione generale:
 \begin{equation}
 u(\varphi)=A\sin\varphi+B\cos\varphi-\frac{\Delta}{2b^2}
@@ -1818,9 +1817,9 @@ In definitiva l'equazione del moto:
 \end{equation}
 \subsubsection{angolo di scattering}
 Calcoliamo gli asintoti dell'orbita per $r\to\pm\infty$ in funzione dell'angolo di scattering $\theta=\pi-\varphi$:
-\begin{equation*}
+\[
 0=\frac{1}{b}\sin\theta-\frac{\Delta}{2b^2}\left(1+\cos\theta\right)
-\end{equation*}
+\]
 ricordando che $\sin\theta=2\sin(\theta/2)\cos(\theta/2)$ e che $\cos\theta=2\cos^2(\theta/2)$:
 \begin{gather*}
 0=\frac{1}{b}\left(2\sin\left(\frac{\theta}{2}\right)\cos\left(\frac{\theta}{2}\right)-\frac{\Delta}{2b}2\cos^2\left(\frac{\theta}{2}\right)\right)\\
@@ -1832,9 +1831,9 @@ b=\frac{\Delta}{2}\cot\left(\frac{\theta}{2}\right)
 \end{equation}
 \section{Analisi scattering}
 Consideriamo lastre molto sottili, quindi escludiamo la possibilità che le particelle $\alpha$ subiscano più scattering. Il numero $n$ di nuclei scatteratori si può ricavare dalla densità $\rho$ del bersaglio, lo spessore $\delta$ e la sua area $A$, infatti:
-\begin{equation*}
+\[
 \rho=\frac{M}{V}=\frac{n\mathcal{M}}{N_A\delta A}
-\end{equation*}
+\]
 con $\mathcal{M}$ la massa molare. Invertendo:
 \begin{equation}
 n=\frac{\rho N_A}{\mathcal{M}}\delta A
@@ -1874,9 +1873,9 @@ sostituendo:
 \end{equation}
 \subsection{Raggio nucleare}
 Per stimare il raggio nucleare: sia $A$ il numero di nucleoni $r_\text{nucleone}\simeq \SI{1.4E-15}{\meter}$ il raggio di un nucleone, allora il volume di tutto il nucleo:
-\begin{equation*}
+\[
 A\frac{4}{3}\pi r^3_\text{nucleone}\!\!=\frac{4}{3}\pi r^3_\text{nucleo}
-\end{equation*}
+\]
 invertendo:
 \begin{equation}
 r_\text{nucleo}\simeq r_\text{nucleone}A^{\frac{1}{3}}
@@ -2003,13 +2002,13 @@ La riga $\mathrm{H}_\alpha$ è quella corrispondente alla transizione $n=3\to2$ 
 \frac{1}{\lambda}=R\left(\frac{1}{n_2}-\frac{1}{n_1}\right)=R_\infty\frac{\mu}{m_\mathrm{e}}\left(\frac{1}{2^2}-\frac{1}{3^2}\right)=\frac{5}{36}R_\infty\frac{Zm_\mathrm{p}}{Z m_\mathrm{p}+m_\mathrm{e}}\\=\frac{5}{36}R_\infty\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}\simeq \SI{1.523E6}{\per\meter}
 \end{multline*}
 avendo usato $n_1=3$, $n_2=2$ e $Z=1$. La lunghezza d'onda:
-\begin{equation*}
+\[
 \lambda\simeq \SI{6.565E-7}{\meter}
-\end{equation*}
+\]
 Se avessimo usato $R_\infty$ al posto di $R$ sarebbe risultato: $\lambda\simeq \SI{6.561E-7}{\meter}$. Infatti la correzione per l'idrogeno della massa ridotta:
-\begin{equation*}
+\[
 \mu_\mathrm{H}=\frac{m_\mathrm{e}m_\mathrm{p}}{m_\mathrm{e}-m_\mathrm{p}}=\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}m_\mathrm{e}\simeq 1.0005 \times m_\mathrm{e}
-\end{equation*}
+\]
 \end{Es}
 \subsection{Correzione relativistica}
 Un'estensione del modello di Bohr potrebbe essere quella di usare orbite ellittiche al posto che circolari. In questo caso l'energia dell'orbita dipenderebbe solamente dall'asse maggiore dell'ellisse e non dall'ecentricità.
@@ -2034,39 +2033,39 @@ Wilson\index{Wilson} e Sommerfeld proposero una regola per la quantizzazione di 
 dove $p$ è una componente della quantità di moto e $q$ una coordinata oppure $p$ è una componente del momento angolare e $q$ un angolo.
 \begin{Es}[particella in un campo centrale su orbita circolare]
 Applichiamo la regola di quantizzazione alla componente ortogonale al piano dell'orbita:
-\begin{equation*}
+\[
 \oint L\,\ud \phi=L\oint\ud\phi=L 2\pi=nh\qquad L=\frac{nh}{2\pi}=n\hslash
-\end{equation*}
+\]
 poiché $L$ è una costante del moto.
 \end{Es}
 \begin{Es}[moto armonico]
 L'equazione del moto armonico:
-\begin{equation*}
+\[
 x=A\sin\omega t
-\end{equation*}
+\]
 con $\omega=\sqrt{\frac{k}{m}}$ e $k$ la costante elastica. L'energia totale, somma della cinetica e potenziale:
-\begin{equation*}
+\[
 E=\frac{1}{2}kA^2=\frac{1}{2}m\omega^2A^2
-\end{equation*}
+\]
 la quantità di moto nella direzione del moto:
-\begin{equation*}
+\[
 p=mv=m\omega A\cos(\omega t)
-\end{equation*}
+\]
 mentre $\ud x$:
-\begin{equation*}
+\[
 \ud x=\omega A\cos(\omega t)\,\ud t
-\end{equation*}
+\]
 usando la regola di Wilson--Sommerfeld:
-\begin{equation*}
+\[
 \begin{split}
 nh&=\oint p\,\ud x=\oint m\omega^2A^2\cos^2(\omega t)\,\ud t=2E\oint\cos^2(\omega t)\\
 &=2E\int_0^T\cos^2(\theta)\frac{\ud \theta}{\omega}=\frac{2E}{\omega}\int_0^{2\pi}\cos^2\theta\,\ud\theta=\frac{2E}{\omega}\pi
 \end{split}
-\end{equation*}
+\]
 invertendo:
-\begin{equation*}
+\[
 E=\frac{nh\omega}{2\pi}=nh\nu=n\hslash\omega
-\end{equation*}
+\]
 \end{Es}
 
 \section{Effetto Compton}
@@ -2089,13 +2088,13 @@ quindi la conservazione dell'energia si scrive come:
 E_{0}+p_\gamma c=\sqrt{E_0^2+(p_e' c)^2}+p_\gamma'c
 \end{equation}
 che può essere scritta come:
-\begin{equation*}
+\[
 E_{0}+c(p_\gamma-p_\gamma')=\sqrt{E_0^2+(p_e'c)^2}
-\end{equation*}
+\]
 elevando al quadrato:
-\begin{equation*}
+\[
 E_0^2+c^2(p_\gamma^2+p_\gamma'^2-2p_\gamma p_\gamma')+2E_0c(p_\gamma-p_\gamma')=E_0^2+(p'_ec)^2
-\end{equation*}
+\]
 \begin{equation}
 c^2(p_\gamma^2+p_\gamma'^2-2p_\gamma p_\gamma')+2E_0c(p_\gamma-p_\gamma')=(p'_ec)^2
 \label{compton03}
@@ -2173,6 +2172,7 @@ Ogniqualvolta un elettrone cambia orbitale deve rispettare le regole di selezion
 \end{subequations}
 \section{Momento magnetico}
 \subsection{Orbitale}
+\label{momento_magnetico_orbitale}
 Consideriamo un elettrone in un atomo di idrogeno. Con il suo moto circolare produce un campo dipolo magnetico:
 \begin{equation}
 \ve\mu=Si\ve n=\pi r^2 \frac{qv}{2\pi r}\ve n=-\frac{1}{2}evr\ve n
@@ -2310,24 +2310,24 @@ Lo stato $2p$ cioè $n=2$, $l=1$ dell'idrogeno ha $j$ che può assumere i valori
 \end{Es}
 \begin{Es}[stato fondamentale dell'idrogeno]
 Calcoliamo quanto vale $J$ e $J_z$ per lo stato fondamentale dell'idrogeno. In questo stato $l=0$. $j$ può valere solo
-\begin{equation*}
+\[
 j=|l-s|=|l+s|=\frac{1}{2}
-\end{equation*}
+\]
 mentre $m_j$ può valere $\pm\frac{1}{2}$.
 Quindi:
-\begin{equation*}
+\[
 J=\sqrt{j(j+1)}\hslash=\frac{\sqrt{3}}{2}\hslash\qquad J_z=m_s\hslash=\pm\frac{\hslash}{2}
-\end{equation*}
+\]
 \end{Es}
 \begin{Es}[stato $p$]
 Calcoliamo quanto vale $J$ per lo stato $p$ dell'idrogeno $l=1$. Quindi $j$ può assumere i valori:
-\begin{equation*}
+\[
 j=|1-\frac{1}{2}|,\ldots,|1+\frac{1}{2}|=\frac{1}{2},\frac{3}{2}
-\end{equation*}
+\]
 e allora:
-\begin{equation*}
+\[
 J=\sqrt{j(j+1)}\hslash=\frac{\sqrt{3}}{2}\hslash,\frac{\sqrt{15}}{2}\hslash
-\end{equation*}
+\]
 se $j=\frac{1}{2}$ allora $m_j=\pm\frac{1}{2}$ e $J_z=\pm\frac{1}{2}\hslash$; se $j=\frac{3}{2}$ allora $m_j=\pm\frac{3}{2},\pm\frac{1}{2}$ e $J_z=\pm\frac{3}{2}\hslash$ o $J_z=\pm\frac{1}{2}\hslash$.
 \end{Es}
 \subsection{Somma di momenti}
@@ -2342,9 +2342,9 @@ j=|j_1-j_2|,|j_1-j_2|+1,\ldots,|j_1+j_2|
 \end{equation}
 \begin{Es}[somma di spin]
 Sommiamo il momento intrinseco di due elettroni $S_1$ e $S_2$. Essendo $S_1=\sqrt{s(s+1)}\hslash$ usando la notazione dell'equazione \eqref{jequation} $j_1=\frac{1}{2}$ e analogamente $j_2=\frac{1}{2}$. Allora:
-\begin{equation*}
+\[
 \ve S=\ve S_1+\ve S_2\qquad S=\sqrt{j(j+1)}\hslash
-\end{equation*}
+\]
 con $j=0,1$, che corrisponde allo spin antiparallelo e parallelo.
 \end{Es}
 \section{Interazione spin--orbita\index{interazione!spin--orbita}}
