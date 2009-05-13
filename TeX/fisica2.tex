@@ -2665,7 +2665,7 @@ Se non c'è carica sulla superficie di separazione allora le due componenti norm
 \subsection{\texorpdfstring{$\vec E$}{E} tangente}
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.5]{immagini/fisica2/contornoEB2}
+\input{immagini/fisica2/contornoEB2}
 \end{figure}
 Calcoliamo al circuitazione su $C$, un rettangolo con lati $\ud l_1$ e $\ud l_2$ paralleli alla superficie di separazione, altezze $\ud h_1$ e $\ud h_2$, in modo tale che la sua superficie contenga la separazione tra i due mezzi. Il rettangolo è infinitesimo e quindi la superficie di separazione di qualsiasi forma è vista da $C$ come un piano. Sappiamo che la circuitazione di $\ve E$ deve essere nulla, o equivalentemente che il rotore di $\ve E$ è zero:
 \begin{equation}
@@ -3839,21 +3839,21 @@ Consideriamo un volume $V$ contenuto nella superficie $S$ all'interno del quale 
 La potenza nel volume:
 \begin{equation}
 \begin{split}
-\ve f\cdot\ve v&=\frac{\ud P_j}{\ud V}=Nq\left(\ve E+\ve v\times\ve B\right)\cdot\ve v=Nq\ve E\cdot\ve v+Nq\ve v\cdot\left(\ve v\times\ve B\right)\\
+\ve f\cdot\ve v&=\frac{\ud P_J}{\ud V}=Nq\left(\ve E+\ve v\times\ve B\right)\cdot\ve v=Nq\ve E\cdot\ve v+Nq\ve v\cdot\left(\ve v\times\ve B\right)\\
 &=Nq\ve v\cdot\ve E=\ve J\cdot\ve E
 \end{split}
 \end{equation}
 Come doveva essere il campo magnetico non compie lavoro. La potenza dissipata per effetto Joule la ricaviamo integrando:
 \begin{equation}
-P_j=\int_V\ve J\cdot\ve E\,\ud v
+P_J=\int_V\ve J\cdot\ve E\,\ud v
 \end{equation}
 Essendo $\ve J=\rot\ve H-\frac{\partial\ve D}{\partial t}$ e usando:
-\begin{equation}
-\diver\left(\ve E\times\ve H\right)=\ve H\cdot\rot\ve E-\ve E\cdot\rot\ve H
-\end{equation}
+\[
+  \diver\left(\ve E\times\ve H\right)=\ve H\cdot\rot\ve E-\ve E\cdot\rot\ve H
+\]
 \begin{equation}
 \begin{split}
-P_j&=\int_V\ve J\cdot\ve E\,\ud v=\int_V\left(\ve E\rot\ve H-\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
+P_J&=\int_V\ve J\cdot\ve E\,\ud v=\int_V\left(\ve E\rot\ve H-\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
 &=-\int_V\diver\left(\ve E\times\ve H\right)\,\ud v+\int_V\ve H\rot\ve E\,\ud v-\int_V\ve E\cdot\frac{\partial\ve D}{\partial t}\,\ud v\\
 &=-\int_S\left(\ve E\times\ve H\right)\cdot\ve n\,\ud a-\int_V\left(\ve H\cdot\frac{\partial\ve B}{\partial t}+\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
 &=-\int_S \ve S\cdot\ve n\,\ud a-\int_V\left(\frac{\partial}{\partial t}\left(\frac{1}{2}\left(\ve H\cdot\ve B\right)+\frac{1}{2}\left(\ve E\cdot\ve D\right)\right)\right)\ud v
@@ -3873,13 +3873,13 @@ e analogamente:
 \end{equation}
 Essendo $w_e=\ve E\cdot\ve D$ l'energia elettrica e $w_h=\ve H\cdot\ve B$ quella magnetica si ha:
 \begin{equation}
-P_j=-\int_S\ve S\cdot\ve n\,\ud a-\int_V\frac{\partial}{\partial t}{w_{em}}\,\ud v=-\int_S\ve S\cdot\ve n\,\ud a-\frac{\partial}{\partial t}{W_{em}}\,\ud v
+P_J=-\int_S\ve S\cdot\ve n\,\ud a-\int_V\frac{\partial}{\partial t}{w_{em}}\,\ud v=-\int_S\ve S\cdot\ve n\,\ud a-\frac{\partial}{\partial t}{W_{em}}\,\ud v
 \end{equation}
 con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica. Si ottiene infine:
 \begin{equation}
-\frac{\partial W_{em}}{\partial t}=P_j+\int_S\ve S\cdot\ve n\,\ud a
+\frac{\partial W_{em}}{\partial t}=P_J+\int_S\ve S\cdot\ve n\,\ud a
 \end{equation}
-dove $W_{em}$ è l'energia elettromagnetica. Si deduce che la potenza è dissipata per due fattori: l'effetto Joule $P_j$ e l'irraggiamento attraverso la superficie.
+dove $W_{em}$ è l'energia elettromagnetica. Si deduce che la potenza è dissipata per due fattori: l'effetto Joule $P_J$ e l'irraggiamento attraverso la superficie.
 \section{Quantità di moto elettromagnetica}
 In un sistema meccanico isolato la quantità di moto $\ve{G^M}$ è una costante del moto e vale:
 \begin{equation}
