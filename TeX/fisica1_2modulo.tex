@@ -10,7 +10,7 @@ p=\frac{\ud\ve F\cdot \ve n}{\ud A}
 \end{equation}
 \end{Def}
 La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che però è usualmente piccola, comuni sono anche: $\SI{}{\bbar}=\SI{1E5}{\pascal}$, $\SI{}{\atmosphere}=\SI{1.013E5}{\pascal}$, $\SI{}{\torr}=\SI{}{\mmHg}=\SI{1/760}{\atmosphere}$.
-\begin{Def}[densità (locale)]
+\begin{Def}[densità locale]
 \begin{equation}
 \rho(\ve r)=\frac{\ud m}{\ud V}
 \end{equation}
@@ -32,7 +32,7 @@ Il fluido è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è l
 \[p_0=\text{pressione atmosferica}\]
 \[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^h \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
 \[p=p_0-\rho g h\]
-che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizziamo che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
 \[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
@@ -43,7 +43,7 @@ p=p_0e^{-\frac{\rho_0 g}{p_0}y}
 che è la legge dell'atmosfera.
 
 \subsection{\index{legge!dei vasi comunicanti}Legge dei vasi comunicanti}
-Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza, quindi per la legge di Stevino:
+Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza, quindi per la legge di Stevino devono avere la stessa pressione infatti il punto inferiore del tubo ad U avrà una certa pressione $P_{\max}$, la pressione nel punto $A$ sarà $P_{\max} - \rho_a g h_{OA}$ e nel punto $B$ $P_{\max} - \rho_a g h_{OB}$, ma $h_{OA}=h_{OB}$. Usando ancora la legge di Stevino:
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/vasi_comunicanti}

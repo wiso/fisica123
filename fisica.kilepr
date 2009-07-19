@@ -7,11 +7,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
 kileversion=2.1
-<<<<<<< .mine
-lastDocument=TeX/fisica1_1modulo.tex
-=======
-lastDocument=TeX/costanti.tex
->>>>>>> .r73
+lastDocument=TeX/fisica1_2modulo.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -73,27 +69,19 @@ order=16
 
 [item:TeX/fisica1_1modulo.tex]
 archive=true
-<<<<<<< .mine
-column=28
-=======
 column=0
->>>>>>> .r73
 encoding=UTF-8
 highlight=LaTeX
-<<<<<<< .mine
-line=1289
-=======
 line=250
->>>>>>> .r73
 open=true
 order=1
 
 [item:TeX/fisica1_2modulo.tex]
 archive=true
-column=86
+column=381
 encoding=UTF-8
 highlight=LaTeX
-line=908
+line=45
 open=true
 order=2
 
@@ -200,8 +188,8 @@ order=-1
 archive=true
 column=0
 encoding=UTF-8
-highlight=None
-line=112
+highlight=LaTeX
+line=110
 open=true
 order=12
 
