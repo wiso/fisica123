@@ -504,19 +504,22 @@ con $d$ il diametro della particella, $m$ la massa di una molecola.
 \begin{equation}
 K=\frac{1}{3}\frac{n\media{v}lc_v}{n_A}
 \end{equation}
-\section{Velocità del suono nei gas}
-Il suono è un'onda longitudinale di spostamento. Consideriamo un tubo di sezione costante $A$ riempito con un gas omogeneo alla pressione $p_0$. Se $A$ è piccolo possiamo parlare di onde monodimensionali che si propagano nella direzione del tubo. Consideriamo un volumetto $V_0$ di lunghezza $\ud x$ e sezione $A$ nella posizione tale che il suo estremo sinistro sia nella posizione $x$. Esso è investito dall'onda $\Delta p(x,t)$, quindi su di esso agisce a sinistra la pressione $p_0+\Delta p(x,t)$ e a destra la pressione $p_0+\Delta p(x+\ud t,t)$. La pressione totale netta:
+
+\section{Suono}
+\subsection{Velocità del suono nei gas}
+Il suono è un'onda longitudinale di spostamento. Consideriamo un tubo di sezione costante $A$ riempito con un gas omogeneo alla pressione $p_0$. Se $A$ è piccolo possiamo parlare di onde monodimensionali che si propagano nella direzione del tubo. Consideriamo un volumetto $V_0$ di lunghezza $\ud x$ e sezione $A$ nella posizione tale che il suo estremo sinistro sia nella posizione $x$. Esso è investito dall'onda $\Delta p(x,t)$, quindi su di esso agisce a sinistra la pressione $p_0+\Delta p(x,t)$ e a destra la pressione $p_0+\Delta p(x+\ud t,t)$. La forza totale esterna esercitata sul volumetto è:
 \begin{equation}
-\Delta p(x+\ud x,t)-\Delta p(x,t)=\frac{\partial(\Delta p)}{\partial x}\ud x
+F=A\left[(p_0+\Delta p(x,t))-(p_0+\Delta p(x+\ud x,t))\right]=-A\frac{\partial(\Delta p)}{\partial x}\ud x
 \end{equation}
-La forza:
+Usando la legge di Newton per il centro di massa (con posizione $\frac{x+x+\ud x}{2}=x$):
 \begin{equation}
-F=A \frac{\partial(\Delta p)}{\partial x}\ud x=ma=-\rho(x,t)V\frac{\partial^2\xi}{\partial t^2}=-\rho(x,t)A\ud x\frac{\partial^2\xi}{\partial t^2}
+F=-A \frac{\partial(\Delta p)}{\partial x}\ud x=ma=\rho(x,t)V\frac{\partial^2\xi}{\partial t^2}=\rho(x,t)A\ud x\frac{\partial^2\xi}{\partial t^2}
 \end{equation}
+dove $\xi(x,t)$ è lo spostamento dal punto di equilibrio delle particelle del gas.
 \begin{equation}
 \frac{\partial(\Delta p)}{\partial x}=-\rho(x,t)\frac{\partial^2\xi}{\partial t^2}
 \end{equation}
-Per far diventare questa equazione l'equazione di un'onda dobbiamo esprimere $\frac{\partial(\Delta p)}{\partial x}$ in funzione di $\frac{\partial^2\xi}{\partial x^2}$. In questo modo $\xi(x,t)$ sarà lo spostamento dal punto di equilibrio delle particelle del gas. Introduciamo il modulo di compressibilità, specifico per ogni gas:
+Per far diventare questa equazione l'equazione di un'onda dobbiamo esprimere $\frac{\partial(\Delta p)}{\partial x}$ in funzione di $\frac{\partial^2\xi}{\partial x^2}$. Per fare questo introduciamo il modulo di compressibilità, specifico per ogni gas:
 \begin{equation}
 B=-\frac{\Delta p}{\Delta V/V}
 \end{equation}
@@ -527,6 +530,7 @@ B=-\frac{\Delta p}{\ud V/V}=-\frac{V}{\ud V}\Delta p=-\frac{A\ud x}{A\ud\xi}\Del
 invertendo:
 \begin{equation}
 \Delta p=-B\frac{\partial\xi}{\partial x}
+\label{eq:pxi}
 \end{equation}
 inserendo:
 \begin{equation}
@@ -534,6 +538,7 @@ inserendo:
 \end{equation}
 \begin{equation}
 \frac{\partial^2\xi}{\partial x^2}=\frac{\rho}{B}\frac{\partial^2\xi}{\partial t^2}
+\label{eq:suono}
 \end{equation}
 che è l'equazione dell'onda cercata, da qui si deduce che la velocità del suono è:
 \begin{equation}
@@ -557,6 +562,91 @@ e la velocità del suono:
 v=\sqrt{\frac{\gamma P}{\rho}}=\sqrt{\frac{\gamma NKT}{V\rho}}=\sqrt{\frac{\gamma NKT}{m}}=\sqrt{\frac{\gamma KT}{\mathcal{M}}}
 \end{equation}
 con $\mathcal{M}$ massa di una molecola e $m$ massa del gas.
+\subsection{Onde di pressione e di densità}
+Il suono oltre che un'onda di spostamento può essere vista come un'onda di pressione e di spostamento. La soluzione dell'equazione \ref{eq:suono} sarà combinazione lineare di:
+\[
+ \xi(x,t) = \xi_m \cos(kx-\omega t)
+\]
+con (\(v=\frac{\omega}{k}\)).
+
+Consideriamo un volumetto di area $A$, spessore $\ud x$ e massa $\ud m$ nella posizione $x$ quando il gas è imperturbato. La densità a riposo sarà $\rho_0=\frac{\ud m}{A\ud x}$. Lo spostamento del volumetto è descritto dalla funzione $\xi(x,t)$. La base sinistra del volumetto si sposterà da $x$ a $x+\xi(x,t)$, mentre quella destra da $x+\ud x$ a $x+\ud x + \xi(x+\ud x)$. Quindi il nuovo spessore del volumetto sarà:
+\begin{equation*}
+ \begin{aligned}
+ x+\ud x + \xi(x+\ud x) - (x+\xi(x,t)) =& \ud x \left(1 + \frac{\xi(x+\ud x)-\xi(x,t)}{\ud x}\right)\\
+ =& \ud x\left(1+\frac{\partial \xi(x,t)}{\partial x}\right)
+\end{aligned}
+\end{equation*}
+e quindi la densità:
+\begin{equation}
+ \rho(x,t) = \frac{\ud m}{A\ud x\left(1+\frac{\partial \xi(x,t)}{\partial x}\right)}=\frac{\rho_0}{1+\frac{\partial \xi(x,t)}{\partial x}}\simeq\rho_0\left(1-\frac{\partial \xi(x,t)}{\partial x}\right)
+\end{equation}
+allora la variazione di pressione $\Delta\rho=\rho-\rho_0$:
+\begin{equation}
+ \Delta\rho(x,t)=-\rho_0\frac{\partial \xi(x,t)}{\partial x}
+\end{equation}
+usando l'onda di spostamento precedente si ottiene:
+\[
+ \Delta\rho(x,t) = \rho_0\xi_m k\sin(kx -\omega t) = \Delta\rho_m\sin(kx -\omega t)
+\]
+
+Per passare ad una descrizione in funzione della pressione bisogna legare la pressione alla densità usando la comprimibilità.
+\[
+ \Delta p = -\frac{B}{V/\Delta V}
+\]
+da $\rho = \frac{m}{V}$:
+\[
+ \Delta\rho = -\frac{m}{V^2}\Delta V\qquad \Delta V=\Delta\rho\frac{V}{\rho}\qquad \frac{\Delta V}{V} = -\frac{\Delta\rho}{\rho}
+\]
+allora sostituendo:
+\begin{equation}
+ \Delta p = -\frac{B}{V/\Delta V} = \frac{B}{\rho}\Delta\rho
+\end{equation}
+e l'onda diventa\footnote{la si poteva ricavare anche direttamente dalla \ref{eq:pxi}}:
+\begin{equation}
+ \Delta p = \Delta \rho_m\frac{B}{\rho_0}\sin(kx -\omega t)=\Delta p_m\sin(kx -\omega t)
+\end{equation}
+
+Infine si può calcolare l'onda di velocità (cioè la velocità di oscillazione dell'elemento attorno al suo punto di equilibrio) semplicemente differenziando lo spostamento:
+\[
+  u(x,t)=\frac{\xi(x,t)}{\partial t} = \omega \xi_m\sin(kx -\omega t)=u_m\sin(kx-\omega t)
+\]
+Si noti come le onde di densità, pressione e velocità siano in fase tra di loro e in controfase con l'onda di spostamento. In tabella \ref{tab:suono} sono riassunte le diverse descrizioni della propagazione del suono.
+
+\begin{table}[htbp]
+\centering
+ \begin{tabular}{l|l}
+  $\xi(x,t)=\xi_m\cos(kx-\omega t)$&\\
+  $\Delta \rho(x,t)=\Delta \rho_m\sin(kx-\omega t)$&$\Delta \rho_m=\rho_0\xi_m k$\\
+  $\Delta p(x,t)=\Delta p_m\sin(kx-\omega t)$&$\Delta p_m=B\xi_m k$\\
+  $u(x,t)=u_m\sin(kx-\omega t)$&$u_m=\omega \xi_m$\\
+ \end{tabular}
+ \caption{Suono come onda di spostamento, densità, pressione e velocità}
+ \label{tab:suono}
+\end{table}
+
+\subsection{Potenza}
+La forza esercitata su una sezione di area $A$ ortogonale a un'onda acustica sarà semplicemente $F=Ap=A\Delta p_m\sin(kx - \omega t)$. La potenza:
+\begin{equation}
+ P = uF = A\Delta p_m u_m\sin^2(kx-\omega t) = \frac{Av(\Delta p_m)^2}{B}\sin^2(kx-\omega t)
+\end{equation}
+poiché le oscillazioni sono molto rapide ($\omega$ grande) rispetto alla sensibilità degli strumenti, quello che si osserva è la media temporale. Sapendo che la media di un seno al quadrato è $\frac{1}{2}$:
+\begin{equation}
+ \media{P} = \frac{Av(\Delta p_m)^2}{2B}=\frac{A(\Delta p_m)^2}{2\rho_0 v}
+\end{equation}
+La potenza è proporzionale al quadrato dell'ampiezza. Si definisce intensità:
+\begin{equation}
+ I=\frac{\media{P}}{A} = \frac{(\Delta p_m)^2}{2\rho v}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
 \chapter{Elettrone\index{elettrone}}
 \minitoc
 \section{Scariche nei gas\index{scariche!nei gas}}
@@ -855,7 +945,7 @@ Un corpo emette della radiazione visibile se è caldo abbastanza. Possiamo scomp
 
 Ogni corpo emettere dell'energia per irraggiamento, cioè radiazione, questo fa si che si crei un equilibrio termico tra vari corpi anche senza un contatto. Infatti se il corpo $A$ è più caldo del corpo $B$, ci sarà un flusso netto di radiazione da $A$ a $B$ fino a quando $B$ assorbendo la radiazione di $A$ convertendola in energia interna non avrà la stessa temperatura di $A$ che contemporaneamente si è raffreddato per perdita di energia interna sotto forma di radiazione verso $B$. Aumentando la temperatura di un corpo aumenta la potenza da esso irradiata.
 
-Consideriamo un intervallo di lunghezze d'onda infinitesimo dello spettro di emissione di vari corpi opachi in equilibrio termico tra loro e l'ambiente. Poiché i corpi sono opachi non possono trasmettere la radiazione, parte di essa sarà assorbita e parte riflessa. Sia $E$ l'energia che arriva su un corpo. La parte di energia riflessa sarà $aE$, quella riflessa $rE$. $a$ è il coefficiente di assorbimento, $r$ di riflessione. Naturalmente essendo tutta la radiazione o riflessa o assorbita:
+Consideriamo un intervallo di lunghezze d'onda infinitesimo dello spettro di emissione di $n$ corpi opachi in equilibrio termico tra loro e l'ambiente. Poiché i corpi sono opachi non possono trasmettere la radiazione, parte di essa sarà assorbita e parte riflessa. Sia $E$ l'energia che arriva su un corpo. La parte di energia riflessa sarà $aE$, quella riflessa $rE$. $a$ è il coefficiente di assorbimento, $r$ di riflessione. Naturalmente essendo tutta la radiazione o riflessa o assorbita:
 \begin{equation}
 E=aE+rE=(a+r)E\quad\Rightarrow \qquad(a+r)=1
 \end{equation}
@@ -878,9 +968,9 @@ o meglio:
 \frac{W_1}{a_1}=\frac{W_2}{a_2}
 \label{emittanza03}
 \end{equation}
-cioè il rapporto $\frac{W}{a}$ è costante per qualsiasi corpo (dipenderà dalla lunghezza d'onda e dalla temperatura). Quindi se un corpo ha un $W$ alto, cioè è un buon emettitore allora avrà un alto valore di $a$ cioè sarà un buon assorbente.
+cioè il rapporto $\frac{W}{a}$ è costante per qualsiasi corpo (dipenderà dalla lunghezza d'onda e dalla temperatura). Quindi se un corpo ha un $W$ alto, cioè è un buon emettitore allora avrà un alto valore di $a$ cioè sarà un buon assorbitore.
 \section{Corpo nero}
-Un corpo nero è un perfetto emettitore, o equivalentemente un perfetto assorbente. Per un corpo nero $a=1$. Il modo pratico per costruire un corpo nero è quello di usare una cavità con un piccolo foro. Ritornando all'equazione \eqref{emittanza03}:
+Un corpo nero è un perfetto emettitore, o equivalentemente un perfetto assorbitore. Per un corpo nero $a=1$. Il modo pratico per costruire un corpo nero è quello di usare una cavità con un piccolo foro. Ritornando all'equazione \eqref{emittanza03}:
 \begin{legge}[Kirchhoff\index{legge!di Kirchhoff}\index{Kirchhoff}]
 Ad una data temperatura
 \begin{equation}
@@ -917,10 +1007,10 @@ W_r&=W_A\sum_{n=0}^\infty\left[(1-a_A)(1-a_B)\right]^n+W_B(1-a_A)\sum_{n=0}^\inf
 \end{split}
 \end{equation}
 avendo ricordato che
-\begin{equation}
+\[
 W_A=a_AW_b\quad W_B=a_BW_b
-\end{equation}
-con $W_b$ la radiazione del corpo nero e una nota relazione algebrica\footnote{
+\]
+con $W_b$ la radiazione del corpo nero e una nota relazione algebrica\footnote{serie geometrica:
 \begin{equation}
 \begin{split}
 \sum_{k=0}^\infty x^k&=\lim_{n\to\infty}\sum_{k=0}^n x^k=\lim_{n\to\infty}\left(1+x+x^2+x^3+\ldots+x^n\right)\\
@@ -944,7 +1034,7 @@ n+1&x=1
 Nel nostro caso $x=(1-a_A)(1-a_B)$ $0<x<1$
 }. Abbiamo allora dimostrato che la radianza che esce dalla fenditura nella cavità è proprio quella del corpo nero.
 \section{Legge Stefan--Boltzmann}
-La potenza per unità di area emessa dal corpo nero è data dall'integrale della curva $R(\lambda)$ su $\field{R}^+$. Stefen trovò empiricamente:
+La potenza per unità di area emessa dal corpo nero $W_b$ è data dall'integrale della curva $R(\lambda)$ su $\field{R}^+$. Stefen trovò empiricamente:
 \begin{legge}[Stefan--Boltzmann]
 \begin{equation}
 W_b=\sigma T^4
@@ -989,7 +1079,7 @@ Se avessimo fatto un conto esatto allora:
 \[
 \Delta n=n_2-n_1=2L\left(\frac{1}{\lambda_2}-\frac{1}{\lambda_1}\right)\simeq 18.1
 \]
-quindi contanto anche gli estremi ci sono 19 modi di oscillare.
+quindi contando anche gli estremi ci sono 19 modi di oscillare.
 \end{Es}
 
 Passiamo al problema tridimensionale. Ipotizziamo che la cavità si cubica di lato $L$. L'onda stazionaria che si propaga sarà del tipo:
@@ -1696,7 +1786,7 @@ Osservando il decadimento di uranio osservò due tipi di radiazioni $\alpha$ e $
 Thomson usò queste particelle per i suoi esperimenti sfruttando la loro grande massa ed energia.
 \section{Scattering di Thomson}
 \subsubsection{modello di Thomson}
-Il modello di Thomson descrive il nucleo come una densità di carica positiva che contiene gran parte della massa atomica in cui sono immersi gli elettroni, in modo che all'esterno l'atomo risulti neutro. Questo modello viene escluso dagli esperimenti di scattering di Ruttherford.  Gli esperimenti di scattering avvenivano su vari metalli: un fascio collimato di particelle $\alpha$ colpiva nel vuoto una sottile lamina metallica. Le particelle che passavano colpivano uno schermo che si illuminava quando veniva colpito. In questo modo era possibile misurare gli angoli di scattering. Gran parte delle particelle erano deviate di angoli molto piccoli, dell'ordine di $\SI{1}{\degree}$. Tuttavia in modo inastpettato alcune particelle erano deviate di $\SI{90}{\degree}$ o più. Se assumiamo il modello di Thomson fer avere una deflessione della traiettoria la particella $\alpha$ deve entrare nell'atomo, cioè nella densità di carica positiva, perché all'esterno la particella $\alpha$ vede l'atomo neutro.
+Il modello di Thomson descrive il nucleo come una densità di carica positiva che contiene gran parte della massa atomica in cui sono immersi gli elettroni, in modo che all'esterno l'atomo risulti neutro. Questo modello viene escluso dagli esperimenti di scattering di Ruttherford.  Gli esperimenti di scattering avvenivano su vari metalli: un fascio collimato di particelle $\alpha$ colpiva nel vuoto una sottile lamina metallica. Le particelle che passavano colpivano uno schermo che si illuminava quando veniva colpito. In questo modo era possibile misurare gli angoli di scattering. Gran parte delle particelle erano deviate di angoli molto piccoli, dell'ordine di $\SI{1}{\degree}$. Tuttavia in modo inastpettato alcune particelle erano deviate di $\SI{90}{\degree}$ o più. Se assumiamo il modello di Thomson per avere una deflessione della traiettoria la particella $\alpha$ deve entrare nell'atomo, cioè nella densità di carica positiva, perché all'esterno la particella $\alpha$ vede l'atomo neutro.
 
 Consideriamo la collisione di una particella $\alpha$ con un elettrone. Essendo la massa della particella $\alpha$ circa $7294$ volte la massa dell'elettrone possiamo dire $m_\alpha\gg m_{\mathrm{e}}$. Dalla teoria sugli urti, imponendo la conservazione della quantità di moto e dell'energia cinetica, considerando il caso monodimensionale e considerando il caso limite\footnote{vedi \ref{casilimiteurti} a pag.\@\pageref{casilimiteurti}} $m_\alpha\gg m_{\mathrm{e}}$ con l'elettrone inizialmente fermo si ha che dopo l'urto la particella $\alpha$ prosegue con la velocità che aveva prima dell'urto, mentre l'elettrone acquista una velocità pari a due volte quella della particella $\alpha$. Se vogliamo una deviazione della traiettoria della particella $\alpha$ dobbiamo far si che l'urto avvenga di striscio. Ipotizzando il caso di deviazione massima, cioè quando $\Delta \ve p_\alpha$ è ortogonale a $\ve p_\alpha$ abbiamo che $\frac{\Delta p_\alpha}{p_\alpha}=\tan\theta\sim\theta$. Facendo i conti a caso, dicendo che $\Delta p_\alpha$ è uguale a $-\Delta p_\mathrm{e}=2m_\mathrm{e}v_\alpha\simeq 2m_\alpha v_\alpha/7294$ si ottiene che $\theta\sim \SI{0.01}{\degree}$.
 
@@ -1745,13 +1835,16 @@ con $Z$ il numero di protoni nel nucleo, ognuno di carica $e$, $z$ il numero di 
 \subsubsection{Orbita}
 Calcoliamo l'orbita della particella $\alpha$ nel campo di forze centrale. Lavoriamo in coordinate polari. Il moto è piano e il momento angolare $\ve L$ è costante del moto:
 \begin{equation}
-L=mvr=mr\frac{\ud\varphi}{\ud t} r=mr^2\dot\varphi=L(t=-\infty)=mvb
+\begin{aligned}
+L=&\left\|\ve r\times m\ve v\right\|=\left\|mr \ver u_r\times(\dot r\ver u_r+r\dot\varphi\ver u_\varphi)\right\|=mr^2\dot\varphi\\
+=&L(t=-\infty)=mvb
+\end{aligned}	
 \end{equation}
 quindi la variabile angolare:
 \begin{equation}
 \dot\varphi=\frac{L}{mr^2}
 \end{equation}
-essendo $\dot\varphi\gtrless0$ allora sarà una funzione monotona.
+essendo $\dot\varphi\gtrless0$ allora $\varphi$ sarà una funzione monotona.
 L'accelerazione centripeta:
 \begin{equation}
 a_r=\ddot r-r\dot\varphi^2
@@ -1761,7 +1854,7 @@ e la forza centripeta è uguale alla forza coulombiana:
 ma_r=m\left(\ddot r-r\dot\varphi^2\right)=\frac{1}{\giorgi}\frac{zZe^2}{r^2}
 \label{scatter_cou_acc}
 \end{equation}
-cambiamo variabile e ricalcoliamo le derivate per poi sostituirle nella \eqref{scatter_cou_acc}:
+cambiamo variabile e ricalcoliamo le derivate per poi sostituirle nella \eqref{scatter_cou_acc} considerando $r=r(u)$, $u=u(\varphi)$, $\varphi=\varphi(t)$:
 \begin{subequations}
 \begin{equation}
 u=\frac{1}{r}
@@ -1778,7 +1871,7 @@ m\left(-\frac{L^2}{m^2}u^2\frac{\ud^2 u}{\ud\varphi^2}-\frac{1}{u}\frac{L^2}{m^2
 \end{equation}
 dividento per $-\frac{L^2}{m}u^2$:
 \begin{equation}
-\ddot u+u=-\frac{zZe^2}{\giorgi}\frac{m}{L^2}
+u''+u=-\frac{zZe^2}{\giorgi}\frac{m}{L^2}
 \end{equation}
 Ricordando:
 \begin{gather*}
@@ -1786,7 +1879,7 @@ Ricordando:
 L^2=m^2v_0^2b^2
 \end{gather*}
 \begin{equation}
-\ddot u+u=-\frac{zZe^2}{\giorgi}\frac{m}{L^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{\Delta}{2b^2}
+u''+u=-\frac{zZe^2}{\giorgi}\frac{m}{L^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{zZe^2}{\giorgi}\frac{m}{m^2v_0^2b^2}=-\frac{\Delta}{2b^2}
 \end{equation}
 Per risolvere l'equazione differenziale. Omogenea associata:
 \[
@@ -1805,7 +1898,7 @@ u(0)=B-\frac{\Delta}{2b^2}=0\Rightarrow B=\frac{\Delta}{2b^2}
 \end{equation}
 e
 \begin{equation}
-\left\{v(\varphi=0)=\dot r(t=-\infty)=\left.\frac{L}{m}\frac{\ud u}{\ud \varphi}\right|_{\varphi=0}=v_0=\frac{L}{mb}\right\}\Leftrightarrow
+\left\{v(\varphi=0)=\dot r(t=-\infty)=-\left.\frac{L}{m}\frac{\ud u}{\ud \varphi}\right|_{\varphi=0}=(-v_0\ver u_r)_r=-v_0=-\frac{L}{mb}\right\}\Leftrightarrow
 \left.\frac{\ud u}{\ud \varphi}\right|_{\varphi=0}=\frac{1}{b}
 \end{equation}
 \begin{equation}
@@ -1813,14 +1906,20 @@ e
 \end{equation}
 In definitiva l'equazione del moto:
 \begin{equation}
-\frac{1}{r}=\frac{1}{b}\sin\varphi-\frac{\Delta}{2b^2}\left(1-\cos\varphi\right)
+\frac{1}{r}=\frac{1}{b}\sin\varphi+\frac{\Delta}{2b^2}\left(\cos\varphi-1\right)
 \end{equation}
+che è l'equazione di un iperbole.
+%\begin{figure}[htbp]
+%  \centering
+%  \input{immagini/fisica3/traiettoria_ruth}
+%  \caption{Traiettoria}
+%\end{figure}
 \subsubsection{angolo di scattering}
 Calcoliamo gli asintoti dell'orbita per $r\to\pm\infty$ in funzione dell'angolo di scattering $\theta=\pi-\varphi$:
 \[
-0=\frac{1}{b}\sin\theta-\frac{\Delta}{2b^2}\left(1+\cos\theta\right)
+0=\frac{1}{b}\sin\theta+\frac{\Delta}{2b^2}\left(\cos\theta-1\right)
 \]
-ricordando che $\sin\theta=2\sin(\theta/2)\cos(\theta/2)$ e che $\cos\theta=2\cos^2(\theta/2)$:
+una soluzione è $\theta = \pi$ che corrisponde a $r\to -\infty$. L'altra si trova ricordando che $\sin\theta=2\sin(\theta/2)\cos(\theta/2)$ e che $1+\cos\theta=2\cos^2(\theta/2)$:
 \begin{gather*}
 0=\frac{1}{b}\left(2\sin\left(\frac{\theta}{2}\right)\cos\left(\frac{\theta}{2}\right)-\frac{\Delta}{2b}2\cos^2\left(\frac{\theta}{2}\right)\right)\\
 \sin\left(\frac{\theta}{2}\right)-\frac{\Delta}{2b}\cos\left(\frac{\theta}{2}\right)=0
@@ -1829,6 +1928,7 @@ da cui si ricava la legge dello scattering coulombiano:
 \begin{equation}
 b=\frac{\Delta}{2}\cot\left(\frac{\theta}{2}\right)
 \end{equation}
+che lega il parametro d'impatto (la condizione iniziale) all'angolo di scattering (la condizione finale).
 \section{Analisi scattering}
 Consideriamo lastre molto sottili, quindi escludiamo la possibilità che le particelle $\alpha$ subiscano più scattering. Il numero $n$ di nuclei scatteratori si può ricavare dalla densità $\rho$ del bersaglio, lo spessore $\delta$ e la sua area $A$, infatti:
 \[
@@ -1838,14 +1938,14 @@ con $\mathcal{M}$ la massa molare. Invertendo:
 \begin{equation}
 n=\frac{\rho N_A}{\mathcal{M}}\delta A
 \end{equation}
-L'intensità del fascio è il numero $N_\alpha$ di particelle $\alpha$ per unità di tempo e unità di area, quindi nell'unità di tempo
+L'intensità del fascio $I_0$ è il numero $N_\alpha$ di particelle $\alpha$ per unità di tempo e unità di area, quindi nell'unità di tempo
 \begin{equation}
 N_\alpha=I_0A
 \end{equation}
 
-Se voglio conoscere le particelle con angolo di scattering $\theta>\theta_0$ allora essendo la cotangente una funzione decrescente saranno quelle particelle con un parametro $b<b_0=\frac{\Delta}{2}\cot\left(\frac{\theta_0}{2}\right)$. Il numero di queste particelle per unità di tempo è il numero di particelle contenute nella circonferenza di raggio $b_0$ moltiplicato per l'intensità: $\pi b_0^2I_0$. La quantità $\pi b_0^2$ è la sezione d'urto per angoli maggiori di $\theta_0$. La sezione d'urto è definita come il numero di particelle scatterate con una certa proprietà diviso l'intensità del fascio. Considerando che ci sono $n$ scatteratori allora il numero di particelle scatterate con angolo maggiore di $\theta_0$ è $\pi b^2I_0\frac{\rho N_A}{\mathcal{M}}\delta A$. Se vogliamo la frazione di particelle dobbiamo dividere per il numero di particelle $\alpha$ totali $I_0A$ e quindi la frazione risulta:
+Se voglio conoscere le particelle con angolo di scattering $\theta>\theta_0$ allora essendo la cotangente una funzione decrescente saranno quelle particelle con un parametro $b<b_0=\frac{\Delta}{2}\cot\left(\frac{\theta_0}{2}\right)$. Il numero di queste particelle per unità di tempo è il numero di particelle contenute nella circonferenza di raggio $b_0$ moltiplicato per l'intensità: $\pi b_0^2I_0$. La quantità $\pi b_0^2$ è la sezione d'urto per angoli maggiori di $\theta_0$. La sezione d'urto è definita come il numero di particelle scatterate con una certa proprietà diviso l'intensità del fascio. Considerando che ci sono $n$ scatteratori allora il numero di particelle scatterate con angolo maggiore di $\theta_0$ è $\pi b_0^2I_0\frac{\rho N_A}{\mathcal{M}}\delta A$. Se vogliamo la frazione di particelle dobbiamo dividere per il numero di particelle $\alpha$ totali $I_0A$ e quindi la frazione di particelle scatterate con angolo maggiore di $\theta_0$ risulta:
 \begin{equation}
-\chi=\pi b^2\frac{\rho N_A}{\mathcal{M}}\delta
+\chi=\pi b_0^2\frac{\rho N_A}{\mathcal{M}}\delta
 \end{equation}
 \subsection{Sezione d'urto differenziale}
 Vogliamo calcolare quante particelle vengono scatterate con angolo compreso tra $\theta$ e $\theta+\ud\theta$. Esse sono quelle particelle scatterate sull'angolo solido $\ud\Omega$:
@@ -1871,6 +1971,13 @@ sostituendo:
 &=\frac{\pi\Delta^2}{4}\frac{\cos\left(\frac{\theta}{2}\right)\sin\left(\frac{\theta}{2}\right)}{\sin^4\left(\frac{\theta}{2}\right)}=\frac{\pi\Delta^2}{8}\frac{\sin\theta}{\sin^4\left(\frac{\theta}{2}\right)}\,\ud\theta=\frac{\,\Delta^2}{16}\frac{1}{\sin^4\left(\frac{\theta}{2}\right)}\,\ud\Omega
 \end{split}
 \end{equation}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.6]{immagini/fisica3/sezione_coulomb}
+ % sezione_coulomb.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
+ \caption{Sezione d'urto differenziale per lo scattering di Coulomb. Gli assi verticali sono logaritmici, il secondo grafico piccolo è un grafico polare. Le curve con $\Delta$ piccolo corripondono a fasci con particelle più energetiche.}
+ \label{fig:sezione_coulomb}
+\end{figure}
 \subsection{Raggio nucleare}
 Per stimare il raggio nucleare: sia $A$ il numero di nucleoni $r_\text{nucleone}\simeq \SI{1.4E-15}{\meter}$ il raggio di un nucleone, allora il volume di tutto il nucleo:
 \[
@@ -1902,9 +2009,9 @@ $R$ è la costante di Rydberg che varia in modo regolare da elemento a elemento 
 \section{Modello di Bohr}
 Come Ruttherford Bohr assunse che gli elettroni di un atomo si muovessero su orbite intorno al nucleo positivo. Il modello non è stabile, perché gli elettroni in moto accelerato irradiano e quindi perdono energia. In questo modo l'orbita dell'elettrone dovrebbe diventare sempre più piccola. Poiché la frequenza emessa da un elettrone in orbita circolare intorno al nucleo è la frequenza del moto si avrebbe uno spettro continuo.
 
-Bohr postulò che un elettrone si può muovere su certe orbite senza irradiare. Chiamò queste orbite stati stazionari. In questo modo le orbite sono quantizzate. Ogni modello quantizzato deve rispettare il principio di corrisponenza cioè quando consideriamo il limete di grandi orbite o grandi energie, molto più grandi del quanto, la teoria quantistica deve contemplare il risultato classico.
+Bohr postulò che un elettrone si può muovere su certe orbite senza irradiare. Chiamò queste orbite stati stazionari. In questo modo le orbite sono quantizzate. Ogni modello quantizzato deve rispettare il principio di corrisponenza cioè quando consideriamo il limite di grandi orbite o grandi energie, molto più grandi del quanto, la teoria quantistica deve contemplare il risultato classico.
 
-Durante il passaggio da uno stato stazionario ad energia $E_i$ ad un altro con energia $E_2$ l'elettrone irradiava onde elettromagnetiche con frequenza tale che:
+Durante il passaggio da uno stato stazionario ad energia $E_i$ ad un altro con energia $E_2$ l'elettrone emette onde elettromagnetiche con frequenza tale che:
 \begin{equation}
 -\Delta E = E_i-E_f=h\nu
 \end{equation}
@@ -2003,7 +2110,7 @@ La riga $\mathrm{H}_\alpha$ è quella corrispondente alla transizione $n=3\to2$ 
 \end{multline*}
 avendo usato $n_1=3$, $n_2=2$ e $Z=1$. La lunghezza d'onda:
 \[
-\lambda\simeq \SI{6.565E-7}{\meter}
+\lambda\simeq \SI{6.565E-7}{\meter}=\SI{656.5}{\nano\meter}
 \]
 Se avessimo usato $R_\infty$ al posto di $R$ sarebbe risultato: $\lambda\simeq \SI{6.561E-7}{\meter}$. Infatti la correzione per l'idrogeno della massa ridotta:
 \[
