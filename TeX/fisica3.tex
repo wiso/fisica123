@@ -63,15 +63,16 @@ cioè 4 volte il volume della molecola. Per una mole, cioè un numero di Avogadr
 b=4N_A\left[\frac{4}{3}\pi\left(\frac{d}{2}\right)^3\right]
 \label{covolume02}
 \end{equation}
-In realtà per alte pressioni le molecole sono molto più vicine e il $4$ che compare nell'espressione \eqref{covolume02} può ridursi notevolmente.
- Per quanto riguarda la pressione per il gas perfetto si assume che non ci siano forze intermolecolari. Su una molecola mediamente il contributo di queste forze sarà nullo, tranne per quelle che si trovano sul bordo, su di queste agirà una forza netta verso l'interno, la pressione quindi va diminuita rispetto a quella del gas ideale. La forza è proporzionale al numero di molecole presenti nell'emisfero di raggio $R$ i cui ha efficacia la forza attrattiva, a sua volta proporzionale alla densità molecolare e quindi alla densità molare $\frac{n}{V}$ L'effetto sommato per tutte le molecole è anch'esso proporzionale alla densità molecolare e quindi a $\frac{n}{V}$. La riduzione di pressione complessiva è quindi proporzionale a $\left(\frac{n}{V}\right)^2$.
+In realtà per alte pressioni le molecole sono molto più vicine e il $4$ che compare nell'espressione \eqref{covolume02} può ridursi notevolmente. Per $n$ moli il volume in meno è $nb$.
+
+Per quanto riguarda la pressione per il gas perfetto si assume che non ci siano forze intermolecolari. Su una molecola mediamente il contributo di queste forze sarà nullo, tranne per quelle che si trovano sul bordo, su di queste agirà una forza netta verso l'interno, quindi la pressione (sulle pareti) va diminuita rispetto a quella del gas ideale. La forza è proporzionale al numero di molecole presenti nell'emisfero di raggio $R$ in cui ha efficacia la forza attrattiva, a sua volta proporzionale alla densità molecolare e quindi alla densità molare $\frac{n}{V}$ L'effetto sommato per tutte le molecole è anch'esso proporzionale alla densità molecolare e quindi a $\frac{n}{V}$. La riduzione di pressione complessiva è quindi proporzionale a $\left(\frac{n}{V}\right)^2$.
 \section{Distribuzione delle velocità\index{distribuzione!delle velocità}}
 \subsection{Distribuzioni delle componenti}
 Consideriamo un gas ideale chiuso in un recipiente, mantenuto ad una temperatura $T$.
 Vogliamo sapere quante molecole hanno una certa velocità compresa tra $v_x$ e $v_x+\ud v_x$ lungo un asse, per esempio l'asse $x$. Indichiamo con $f_x$ la funzione densità di probabilità della variabile casuale $v_x$ che ha dominio $\field{R}$. Ipotesi iniziali:
 \begin{enumerate}
 \item lo spazio è isotropo;\label{ipotesi_max_uno}
-\item la distribuzione delle velocità lungo un asse non è influenzata dalle componenti sugli altri assi;
+\item la distribuzione delle velocità lungo un asse non è influenzata dalle componenti sugli altri assi;\label{ipotesi_max_due}
 \item la velocità quadratica media è $v_{qm}=\sqrt{\media{v^2}}=\sqrt{\frac{3kT}{m}}$;\label{ipotesi_max_tre}
 \end{enumerate}
 L'ipotesi \ref{ipotesi_max_uno} deriva dal fatto che il moto delle molecole è casuale, la \ref{ipotesi_max_tre} deriva dall'energia di un gas ideale $U=\frac{3}{2}kT=\media{\frac{1}{2}mv^2}=\frac{1}{2}m\media{v^2}$. La prima ipotesi significa che:
@@ -103,7 +104,7 @@ e allora:
 \end{equation}
 
 
-Se $f_x$ è la densità di probabilità allora è normalizzata a $1$ $Nf_x$ è normalizzata ad $N$ numero di molecole. Possiamo scrivere:
+Se $f_x$ è la densità di probabilità allora è normalizzata a $1$. $Nf_x$ è normalizzata ad $N$ numero di molecole. Possiamo scrivere:
 \[\ud P(v_x) = f(v_x)\,\ud v_x\]
 oppure
 \[\ud N(v_x) = Nf(v_x)\,\ud v_x\]
@@ -113,12 +114,12 @@ N\int_{v_{x_1}}^{v_{x_2}} f(v_x)\,\ud v_x
 \end{equation}
 sarà il numero di molecole con velocità lungo l'asse $x$ compresa tra $v_{x_1}$ e $v_{x_2}$.
 
-La funzione distribuzione di probabilità di $\ve v$ utilizzando la probabilità composta sarà:
+La funzione distribuzione di probabilità di $\ve v$ utilizzando la probabilità composta di eventi indipendenti (ipotesi \ref{ipotesi_max_due}) sarà:
 \begin{equation}
 F(\ve v)=F(v_x,v_y,v_z)=f_x(v_x)f_y(v_y)f_z(v_z)
 \label{distr_F01}
 \end{equation}
-facciamo il differenziale del logaritmo della \eqref{distr_F01}:
+Quello che vogliamo fare ora trovare la distribuzione più probabile, quindi dovremo massimizzare $F$. Poiché il logaritmo è una funzione crescente possiamo massimizzare il logaritmo di $F$. Il differenziale del logaritmo della \eqref{distr_F01}:
 \begin{equation}
 \begin{split}
 \ud \log F=&\ud\left(\log f_x(v_x)+\log f_y(v_y)+\log f_z(v_z)\right)\\
@@ -133,9 +134,9 @@ G(v_x,v_y,v_z)=v_x^2+v_y^2+v_z^2-\frac{3kT}{m}=0
 \begin{equation}
 \left\{
 \begin{array}{l}
-\frac{\partial F}{\partial v_x}=\frac{f'_x(v_x)}{f_x(v_x)}=\lambda\frac{\partial(v^2)}{\partial v_x}=2\lambda v_x\\
-\frac{\partial F}{\partial v_y}=\frac{f'_y(v_y)}{f_y(v_y)}=\lambda\frac{\partial(v^2)}{\partial v_y}=2\lambda v_y\\
-\frac{\partial F}{\partial v_z}=\frac{f'_z(v_z)}{f_z(v_z)}=\lambda\frac{\partial(v^2)}{\partial v_z}=2\lambda v_z\\
+\frac{\partial\log F}{\partial v_x}=\frac{f'_x(v_x)}{f_x(v_x)}=\lambda\frac{\partial(v^2)}{\partial v_x}=2\lambda v_x\\
+\frac{\partial\log F}{\partial v_y}=\frac{f'_y(v_y)}{f_y(v_y)}=\lambda\frac{\partial(v^2)}{\partial v_y}=2\lambda v_y\\
+\frac{\partial\log F}{\partial v_z}=\frac{f'_z(v_z)}{f_z(v_z)}=\lambda\frac{\partial(v^2)}{\partial v_z}=2\lambda v_z\\
 \end{array}
 \right.
 \end{equation}
@@ -207,7 +208,7 @@ Imponiamo la normalizzazione e la velocità quadrata media:
 \int_{-\infty}^{+\infty}f(v_x)\,\ud v_x=1\qquad\media{v_x^2}=\frac{kT}{m}
 \end{equation}
 \begin{equation}
-\int_{-\infty}^{+\infty}f_0e^{-A^2v_x^2}\,\ud v_x=f_0\int_{-\infty}^{+\infty}e^{-A^2v_x^2}\,\ud v_x=\frac{\sqrt{\pi}}{A}=1
+\int_{-\infty}^{+\infty}f_0e^{-A^2v_x^2}\,\ud v_x=f_0\int_{-\infty}^{+\infty}e^{-A^2v_x^2}\,\ud v_x=f_0 \frac{\sqrt{\pi}}{A}=1
 \end{equation}
 si ricava:
 \begin{equation}
@@ -219,7 +220,7 @@ f(v_x)=\frac{A}{\sqrt{\pi}}e^{-A^2v_x^2}
 \end{equation}
 Imponiamo la velocità quadrata media:
 \begin{equation}
-\int_\field{R}v_x^2\frac{A}{\sqrt{\pi}}e^{-A^2v_x^2}\,\ud v_x=\frac{A}{\sqrt{\pi}}\frac{\sqrt{\pi}}{2A^3}=\frac{1}{2A^2}=\frac{kT}{m}
+\int_\field{R}v_x^2 f(v_x)\,\ud v_x=\int_\field{R}v_x^2\frac{A}{\sqrt{\pi}}e^{-A^2v_x^2}\,\ud v_x=\frac{A}{\sqrt{\pi}}\frac{\sqrt{\pi}}{2A^3}=\frac{1}{2A^2}=\frac{kT}{m}
 \end{equation}
 si ricava:
 \begin{equation}
@@ -229,7 +230,7 @@ La distribuzione delle componenti risulta allora:
 \begin{equation}
 f(v_x)=\sqrt{\frac{m}{2\pi kT}}\,e^{-\dfrac{mv_x^2}{2kT}}
 \end{equation}
-e analogamente per le altre componenti.
+e analogamente per le altre componenti. Si noti come argomento dell'esponenziale decrescente sia il rapporto tra l'energia cinetica ($\frac{1}{2}mv_x^2$) e $kT$.
 \subsection{Distribuzione dei moduli}
 Dati $v_x$, $v_y$, $v_z$ siamo in grado di dare la distribuzione di probabilità:
 \begin{equation}
