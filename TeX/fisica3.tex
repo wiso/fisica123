@@ -2176,14 +2176,21 @@ E=\frac{nh\omega}{2\pi}=nh\nu=n\hslash\omega
 \]
 \end{Es}
 
+
 \section{Effetto Compton}
 \index{effetto!Compton|(}
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[scale=0.5]{immagini/fisica3/compton}
+ \caption{Schema dell'effetto Compton. In blu il fotone, in nero l'elettrone.}
+ \label{fig:compton}
+\end{figure}
 Consideriamo un fotone di frequenza $\nu$ incidente su un elettrone a riposo rispetto al nostro sistema di riferimento. Si osserva che il fotone viene scatterato con un angolo $\theta$ rispetto alla direzione iniziale e con frequenza diversa $\nu'\neq\nu$. Consideriamo un urto relativistico, imponendo la conservazione dell'energia e della quantità di moto, ricordando che:
 \begin{equation}
 E^2=(m_0c^2)^2+(pc)^2=E_0^2+(pc)^2
 \label{compton01}
 \end{equation}
-con $E_0=m_0c^2$ l'energia a riposo. Conservazione dell'energia:
+con $E_0=m_0c^2$ l'energia a riposo dell'elettrone. Conservazione dell'energia:
 \begin{equation}
 E_{e}+E_{\gamma}=E=E'=E_e'+E_{\gamma}'
 \end{equation}
@@ -2195,7 +2202,7 @@ quindi la conservazione dell'energia si scrive come:
 \begin{equation}
 E_{0}+p_\gamma c=\sqrt{E_0^2+(p_e' c)^2}+p_\gamma'c
 \end{equation}
-che può essere scritta come:
+isolando la radice:
 \[
 E_{0}+c(p_\gamma-p_\gamma')=\sqrt{E_0^2+(p_e'c)^2}
 \]
@@ -2211,7 +2218,7 @@ la conservazione della quantità di moto:\
 \begin{equation}
 \ve p_\gamma=\ve p=\ve p'=\ve p_\gamma'+\ve p_e'
 \end{equation}
-passando ai moduli:
+passando ai moduli possiamo trovare il momento dell'elettrone:
 \begin{equation}
 p_e'^2=p_\gamma^2+p_\gamma'^2-2p_\gamma p_\gamma'\cos\theta
 \end{equation}
@@ -2219,7 +2226,7 @@ ricavando dalla \eqref{compton03} $p_e'^2$:
 \begin{equation}
 p_e'^2=p_\gamma^2+p_\gamma'^2-2p_\gamma p_\gamma'+2\frac{E_0}{c}(p_\gamma-p_\gamma')
 \end{equation}
-il sistema di due equazioni ha 4 incognite ($p_e$, $p_\gamma$, $p_\gamma'$ e $\theta$). Sottraendo le ultime due equazioni:
+il sistema di due equazioni ha 4 incognite ($p_e'$, $p_\gamma$, $p_\gamma'$ e $\theta$). Sottraendo le ultime due equazioni:
 \begin{equation}
 -2p_\gamma p_\gamma'\cos\theta=-2p_\gamma p_\gamma'+2\frac{E_0}{c}(p_\gamma-p_\gamma')
 \end{equation}
@@ -2237,13 +2244,13 @@ sostituendo $E_0=m_\mathrm{e}c^2$ con $m_\mathrm{e}$ la massa a riposo dell'elet
 \end{equation}
 si trova:
 \begin{equation}
-\lambda-\lambda'=\frac{h}{m_\mathrm{e}c}\left(1-\cos\theta\right)=\lambda_c\left(1-\cos\theta\right)
+\lambda'-\lambda=\frac{h}{m_\mathrm{e}c}\left(1-\cos\theta\right)=\lambda_c\left(1-\cos\theta\right)
 \end{equation}
 che ha $\infty^{4-2}=\infty^2$ soluzioni. La quantità:
 \begin{equation}
 \lambda_c=\frac{h}{m_\mathrm{e}c}=2\pi\alpha a_0
 \end{equation}
-è chiamata lunghezza d'onda di Compton per l'elettrone.
+è chiamata lunghezza d'onda di Compton per l'elettrone. Come si nota dalla figura \ref{fig:compton} l'effetto è massimo indietro e minimo in avanti.
 \index{effetto!Compton|)}
 \section{Numeri quantici}
 \begin{description}
@@ -2337,7 +2344,7 @@ La variazione di $\ve L$ nel tempo è perpendicolare a $\ve L$. Per i moduli:
 \end{equation}
 Si definisce pulsazione di Larmor la pulsazione della rotazione di $\ve L\neq 0$:
 \begin{equation}
-\omega_L=\frac{\ud\phi}{\ud t}=\frac{\ud}{\ud t}\frac{\ud L}{L\sin\theta}=\frac{\ud}{\ud t}\left(\frac{eLB\sin\theta\ud t}{2m_\e L\sin\theta}\right)=\frac{eB}{2m_\e}
+\omega_L=\frac{\ud\phi}{\ud t}=\frac{\ud L}{\ud t}\frac{1}{L\sin\theta}=\frac{eLB\sin\theta\ud t}{2m_\e L\sin\theta}=\frac{eB}{2m_\e}
 \end{equation}
 Gli atomi infine collidono su uno schermo dove vengono rilevati. L'energia potenziale di un dipolo magnetico nel campo esterno:
 \begin{equation}
@@ -2414,7 +2421,7 @@ m_j=-j,-j+1,\ldots,j
 \end{equation}
 Nella notazione spettroscopica spesso il numero quantico $j$ viene riportato in pedice alla lettera rappresentante l'orbitale.
 \begin{Es}[$2p$]
-Lo stato $2p$ cioè $n=2$, $l=1$ dell'idrogeno ha $j$ che può assumere i valori secondo l'equazione \eqref{varl14}:  $j=|l-s|=|1-\frac{1}{2}|=\frac{1}{2}$ o $j=|l+s|=|1+\frac{1}{2}|=\frac{3}{2}$. Quindi la notazione spettroscopica sarà: $2p_{1/2}$ (per $l=\frac{1}{2}$) o $2p_{3/2}$ (per $l=\frac{3}{2}$).
+Lo stato $2p$ cioè $n=2$, $l=1$ dell'idrogeno ha $j$ che può assumere i valori secondo l'equazione \eqref{varl14}:  $j=|l-s|=|1-\frac{1}{2}|=\frac{1}{2}$ o $j=|l+s|=|1+\frac{1}{2}|=\frac{3}{2}$. Quindi la notazione spettroscopica sarà: $2p_{1/2}$ (per $j=\frac{1}{2}$) o $2p_{3/2}$ (per $j=\frac{3}{2}$).
 \end{Es}
 \begin{Es}[stato fondamentale dell'idrogeno]
 Calcoliamo quanto vale $J$ e $J_z$ per lo stato fondamentale dell'idrogeno. In questo stato $l=0$. $j$ può valere solo
