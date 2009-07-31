@@ -105,8 +105,15 @@ cioè la variazione di pressione si trasmette in tutti i punti del fluido.
 Pascal si divertiva a rompere le botti infilandogli un tubo molto lungo, anche di sezione sottile, in quanto la sezione non conta, pieno d'acqua. La pressione faceva rompere le botti.
 
 \subsection{Principio di Archimede\index{principio!di Archimede}}
-Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché sia in equilibrio deve agire una forza uguale e contraria: la spinta di Archimede $\ve S=-\rho V\ve g$. Essa è dovuta alla differenza di pressione $\Delta p$. Se sostituiamo l'elemento di fluido con un solido il contorno non cambia e quindi la spinta di Archimede risulta uguale. Il peso però è cambiato, quindi in generale non è in equilibrio. Se $P>S$ cioè $\rho_\text{solido}>\rho_\text{liquido}$ sprofonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibri in questo caso è $V_\text{immerso}=V_t\frac{\rho_s}{\rho_l}$
-
+Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché sia in equilibrio deve agire una forza uguale e contraria: la spinta di Archimede $\ve S=-\rho V\ve g$. Essa è dovuta alla differenza di pressione $\Delta p$. Se sostituiamo l'elemento di fluido con un solido il contorno non cambia e quindi la spinta di Archimede risulta uguale. Il peso però è cambiato, quindi in generale non è in equilibrio, infatti la somma delle forze:
+\[
+ \rho V\ve g - \rho_\text{fluido}V\ve g \neq 0
+\]
+Se $P>S$ cioè $\rho>\rho_\text{fluido}$ sprofonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibri in questo caso è:
+\[
+ \rho V\ve g - \rho_\text{fludio}V_\text{immerso}\ve g = 0
+\]
+la soluzione è $V_\text{immerso}=\frac{\rho}{\rho_\text{fluido}}V$ e poiché è sicuramente vero che $V_\text{immerso}\leq V$ allora deve essere $\rho\leq\rho_\text{fluido}$.
 
 
 \begin{Es}[Iceberg]
@@ -140,11 +147,13 @@ Lungo l'asse $x$:
 
 \begin{Es}[Forza peso -- Stevino]
 Nelle ipotesi di Stevino c'è solo il peso, quindi $\ve f=\ve g$
-\[f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p\]
-
+\[
+f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p \quad p=p_0+\rho gz
+\]
+In generale:
 \[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
 \[\rho U_m=-p+\const\]
-Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali.
+Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
 \end{Es}
 \begin{Es}[Fluido in accelerazione]
  \begin{figure}[htbp]
@@ -167,7 +176,7 @@ la cui soluzione è:
 \[
  p = \rho(-ax-gy)
 \]
-e le superfici equipotenziali:
+e le superfici isobariche (ed equipotenziali):
 \[
  y = -\frac{p}{\rho g} - \frac{a}{g}x
 \]
@@ -195,18 +204,20 @@ Su una superficie isobarica $p=\const$,
 \caption{Paraboloide}
 \end{figure}
 \subsubsection{Archimede per le rotazioni}
-se $\rho_s>\rho_f$ il corpo si muove verso l'esterno.
+Come per il caso in cui c'è solo la forza di gravità anche nel caso di fluido in rotazione vale lo stesso risultato, cioè che se l'oggetto è meno denso del fluido si sposta verso l'esterno se più denso verso l'interno. Infatti consideriamo solo la forza centrifuga (oppure il limite per $\omega$ molto alto) allora la spinta di archimede verso l'interno sarà: $\rho_\text{fluido}V\omega^2 r$. Allora la somma delle forze verso l'esterno sarà:
+\[
+ \rho V\omega^2 r-\rho_\text{fluido}V\omega^2 r
+\]
+quindi a meno che $r=0$ il corpo si muove verso l'esterno se $\rho>\rho_\text{fluido}$. Questo è il principio delle centrifughe.
 \end{Es}
 
 \section{Dinamica dei fluidi\index{dinamica!dei fluidi}}
-
-Approccio di Lagrange\index{Lagrange}: si danno le coordinate $x$ di un elemento di flusso in funzione del tempo, è un metodo di analisi complicato.
-
-Approccio di Eulero\index{Eulero}: si studiano le caratteristiche del fluido in un determinato punto. Ci mettiamo in un punto dello spazio e vediamo come variano le grandezze in funzione del tempo. Per descrivere in modo completo bisogna ripetere le misurazioni in modo completo.
-
-\begin{minipage}[]{\textwidth}
+\begin{description}
+\item[Approccio di Lagrange\index{Lagrange}]: si danno le coordinate $x$ di un elemento di flusso in funzione del tempo, è un metodo di analisi complicato.
+\item[Approccio di Eulero\index{Eulero}]: si studiano le caratteristiche del fluido in un determinato punto. Ci mettiamo in un punto dello spazio e vediamo come variano le grandezze in funzione del tempo. Per descrivere in modo completo bisogna ripetere le misurazioni in modo completo.
+\end{description}
 Vengono usate le semplificazioni:
-\begin{enumerate}
+\begin{itemize}
 \item fluidi:
 \begin{itemize}
 \item incomprimibili ($\rho=\const$)
@@ -214,18 +225,17 @@ Vengono usate le semplificazioni:
 \end{itemize}
 \item moto:
 \begin{itemize}
-\item stazionari (i fenomeni non dipendono dal tempo)
-\item irrotazionali (nessun vortice, non caotici), $\mathrm{rot}(\ve v)=0$, $\oint \ve v \ud \ve s=0$
+\item stazionario (i fenomeni non dipendono dal tempo)
+\item irrotazionale (nessun vortice, non caotici), $\mathrm{rot}(\ve v)=0$, $\oint \ve v \ud \ve s=0$
 \end{itemize}
-\end{enumerate}
-\end{minipage}
-Linee di flusso\index{linee!di flusso}: tangenti alla $\ve v$ della particella. Ha senso se il moto è stazionario, cioè se $\ve v$ è costante nel tempo.
-
-Le linee di flusso danno origine al tubo di flusso\index{tubo!di flusso}. Non è possibile che vi sia fuoriuscita di fluido latente per definizione: $\ve v$ è tangente alle linee di flusso.
+\end{itemize}
+\begin{description}
+ \item [Linee di flusso\index{linee!di flusso}]: linee tangenti alla $\ve v$ della particella. Ha senso se il moto è stazionario, cioè se $\ve v$ è costante nel tempo. 
+ \item[Tubo di flusso] Le linee di flusso danno origine al tubo di flusso\index{tubo!di flusso}. Non è possibile che vi sia fuoriuscita di fluido latente per definizione: $\ve v$ è tangente alle linee di flusso.
+\end{description}
 
 \subsection{Equazione di continuità\index{equazione!di continuità}}
 La portata volumica è la quantità di volume che passa nel tempo: $Q=\frac{\ud V}{\ud t}$, ma essendo in regime stazionario la velocità non varia, quindi $Q=\frac{\Delta V}{\Delta t}$, la portata di massa è la quantità di massa nel tempo.
-
 
 \begin{figure}[htbp]
 \centering
@@ -249,15 +259,15 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 \begin{center}
 \includegraphics[scale=0.4]{immagini/fisica1/Bernoulli}
 \end{center}
+Consideriamo un tempo $\Delta t$ piccolo e una porzione di massa $\Delta m$. L'effetto netto tra la situazione iniziale e quella finale è di spostare l'elementino da un'estremità all'altro.
 
-
-Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
+Il lavoro è svolto dalla forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$ poiché non c'è variazione di energia potenziale.
 \[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
 \[
 \left\{
         \begin{array}{lll}
-        L_1=F_1\Delta S=F_1v_1\Delta t=p_1A_1v_1\Delta t\\
-        L_2=-F_2\Delta S=-F_2v_2\Delta t=-p_2A_2v_2\Delta t\\
+        L_1=F_1\Delta S_1=F_1v_1\Delta t=p_1A_1v_1\Delta t\\
+        L_2=-F_2\Delta S_2=-F_2v_2\Delta t=-p_2A_2v_2\Delta t\\
         L_P=-\Delta mg(h_2-h_1)
         \end{array}
 \right.
@@ -273,15 +283,26 @@ Il lavoro è svolto dalla forze: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$
 \end{align*}
 \[gh_1-gh_2+\frac{p_1}{\rho}-\frac{p_2}{\rho}=\frac{1}{2}(v_2^2-v_1^2)\]
 \[gh_1+\frac{p_1}{\rho}+\frac{1}{2}v_1^2=gh_2+\frac{p_2}{\rho}+\frac{1}{2}v_2^2\]
-Teorema di Bernoulli:
-\[\rho gh+p+\frac{1}{2}\rho v^2=\const\]
-L'espressione è molto simile alla conservazione dell'energia meccanica.
-\[mgh+\frac{1}{2}mv^2=\const\]
+\begin{Teo}[Bernoulli]
+ Per un flusso laminare, incomprimibile, non viscoso e irrotazionale vale:
+ \begin{equation}
+  \rho gh+p+\frac{1}{2}\rho v^2=\const
+\end{equation}
+\end{Teo}
+Nel caso che $v=0$ l'unico termine che sopravvive è quello che è chiamato \index{pressione!statica}pressione statica: $p+\rho gh$ in quanto è presente anche quando il fluido è fermo. L'altro termine invece è presente da solo se il fluido scorre in orizzonatale, quindi $\frac{1}{2}\rho v^2$ è detta \index{pressione!dinamica}pressione dinamica. In questo caso:
+\[
+ p_1+\frac{1}{2}\rho v_1^2=p_2+\frac{1}{2}\rho v_2^2=\const
+\]
+quindi si deduce che se la velocità è piccola la pressione è grande. Questo può essere spiegato anche usando l'equazione di continuità, infatti dove il tubo è più stretto la velocità è maggiore, questo significa che ci è stata un'accelerazione e quindi una forza dovuta ad una variazione di pressione che deve essere maggiore dove il tubo è più largo.
 
+L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'energia meccanica.
+\[mgh+\frac{1}{2}mv^2=\const\]
 \begin{Es}[ali di aereo]
 L'aria sotto le ali di un aereo è più lenta di quella che passa sopra, quindi dalla legge di Bernoulli, considerando l'altezza uguale:
-\[p+\frac{1}{2}\rho v^2=\const\]
-quindi se diminuisce $v$ deve aumentare $p$ e allora si ho una pressione dell'aria sull'ala e quindi la forza che tiene in aria l'aeroplano.
+\[p_\text{sopra}+\frac{1}{2}\rho v_\text{sopra}^2=p_\text{sotto}+\frac{1}{2}\rho v_\text{sotto}^2\]
+quindi se $v_\text{sopra}>v_\text{sotto}$ allora $p_\text{sopra}<p_\text{sotto}$ e allora c'è una forza netta verso l'alto.
+
+Un altro contributo viene dal fatto che l'aria è fatta deviare verso il basso e il per terzo principio della dinamica ci deve essere una forza uguale e contrario applicata sulle ali. Tutto questo contribuisce alla \index{portanza}portanza.
 \end{Es}
 \section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
 \label{viscosita fisica1}
@@ -320,18 +341,24 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
 \[\Delta p r+\eta L\left[r\frac{d^2 v}{\ud r^2}+\frac{\ud v}{\ud r}\right]=0\]
 \[r\Delta p+\eta L\frac{\ud}{\ud r}\left(r \frac{\ud v}{\ud r}\right)=0\]
 \[r\Delta p=-\eta L\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\]
-\[\int r\Delta p\,\ud r=-\eta L\int\frac{\ud}{\ud r}\left(r\frac{\ud v}{\ud r}\right)\ud r\]
-\[\Delta p\frac{1}{2}r^2=-\eta L r\frac{\ud v}{\ud r}+c\qquad c=0\]
+\[\int_0^r r'\Delta p\,\ud r'=-\eta L\int_0^r\frac{\ud}{\ud r'}\left(r'\frac{\ud v}{\ud r'}\right)\ud r'\]
+\[\Delta p\frac{1}{2}r^2=-\eta L r\frac{\ud v}{\ud r}\]
 \[\Delta p\frac{1}{2}r=-\eta L \frac{\ud v}{\ud r}\]
-\[\frac{\Delta p}{2}\int_R^r r\,\ud r=-\eta L\int_0^v \ud v\]
+\[\frac{\Delta p}{2}\int_R^r r'\,\ud r'=-\eta L\int_0^v \ud v'\]
 \[\frac{\Delta p}{4}\left[r^2-R^2\right]=-\eta Lv\]
 \[v=-\frac{\Delta p}{4}\frac{r^2-R^2}{\eta L}=\frac{\Delta p}{4\eta L}\left(R^2-r^2\right)\]
 \begin{align*}
 Q_v&=\int v \,\ud A=\int_0^R v(r)2\pi r\,\ud r=\int_0^R\frac{2\pi r\Delta p}{4\eta L}(R^2-r^2)\,\ud r\\
 &=\frac{1}{2}\pi\int_0^R\frac{r\Delta p}{\eta L}\left(R^2-r^2\right)\ud r\\
 &=\frac{\pi}{2}\frac{\Delta p}{\eta L}\int_0^R \left(rR^2-r^3\right)\ud r=\frac{\pi}{2}\frac{\Delta p}{\eta L}\left(\frac{R^4}{2}-\frac{R^4}{4}\right)\\
-&=\frac{\pi\Delta p}{8\eta L}R^4\quad\text{Poiseuille}
+&=\frac{\pi\Delta p}{8\eta L}R^4
 \end{align*}
+  \begin{legge}[Poiseuille]
+  \begin{equation}
+    Q_v=\frac{\pi\Delta p}{8\eta L}R^4 
+  \end{equation}
+\end{legge}
+si definisce una resisteza idraulica $\frac{8\eta L R^4}{\pi}$ in analogia con la resistenza elettrica.
 \index{meccanica dei fluidi|)}
 
 

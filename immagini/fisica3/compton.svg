@@ -14,7 +14,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46"
-   sodipodi:docname="compton2.svg"
+   sodipodi:docname="compton.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <metadata
      id="metadata155">
@@ -40,9 +40,9 @@
      pagecolor="#ffffff"
      id="base"
      showgrid="false"
-     inkscape:zoom="0.6862142"
-     inkscape:cx="328.9097"
-     inkscape:cy="355.01116"
+     inkscape:zoom="1.1837195"
+     inkscape:cx="363.50653"
+     inkscape:cy="252.98672"
      inkscape:window-x="-5"
      inkscape:window-y="-3"
      inkscape:current-layer="g24" />
@@ -288,6 +288,121 @@
        sodipodi:start="5.4628573"
        sodipodi:end="6.2819693"
        sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       style="font-size:30px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="504.09583"
+       y="205.83217"
+       id="text2436"><tspan
+         sodipodi:role="line"
+         id="tspan2438"
+         x="504.09583"
+         y="205.83217">ϑ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="365.99692"
+       y="395.13644"
+       id="text2440"><tspan
+         sodipodi:role="line"
+         id="tspan2442"
+         x="365.99692"
+         y="395.13644">π</tspan></text>
+    <text
+       id="text2444"
+       y="395.13644"
+       x="227.99692"
+       style="font-size:20px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="395.13644"
+         x="227.99692"
+         id="tspan2446"
+         sodipodi:role="line">-π</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="297.99692"
+       y="397.13644"
+       id="text2448"><tspan
+         sodipodi:role="line"
+         id="tspan2450"
+         x="297.99692"
+         y="397.13644">0</tspan></text>
+    <g
+       id="g2464"
+       transform="translate(0,-1.6895895)">
+      <text
+         transform="translate(68,0)"
+         id="text2452"
+         y="213.88966"
+         x="206.97472"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="213.88966"
+           x="206.97472"
+           id="tspan2454"
+           sodipodi:role="line">p</tspan></text>
+      <text
+         id="text2460"
+         y="230.78555"
+         x="291.02582"
+         style="font-size:30px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="230.78555"
+           x="291.02582"
+           id="tspan2462"
+           sodipodi:role="line">ˠ</tspan></text>
+    </g>
+    <g
+       transform="translate(277.09267,-101.37537)"
+       id="g2470">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="206.97472"
+         y="213.88966"
+         id="text2472"
+         transform="translate(68,0)"><tspan
+           sodipodi:role="line"
+           id="tspan2474"
+           x="206.97472"
+           y="213.88966">p'</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:30px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="291.02582"
+         y="230.78555"
+         id="text2476"><tspan
+           sodipodi:role="line"
+           id="tspan2478"
+           x="291.02582"
+           y="230.78555">ˠ</tspan></text>
+    </g>
+    <g
+       id="g2480"
+       transform="translate(281.31664,130.94318)">
+      <text
+         transform="translate(68,0)"
+         id="text2482"
+         y="213.88966"
+         x="206.97472"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="213.88966"
+           x="206.97472"
+           id="tspan2484"
+           sodipodi:role="line">p'</tspan></text>
+      <text
+         id="text2486"
+         y="230.78555"
+         x="291.02582"
+         style="font-size:30px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="230.78555"
+           x="291.02582"
+           id="tspan2488"
+           sodipodi:role="line">e</tspan></text>
+    </g>
   </g>
   <path
      style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"

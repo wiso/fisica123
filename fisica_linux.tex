@@ -1,4 +1,5 @@
 %& -shell-escape -enable-write18 
+% la riga sopra non funziona!
 \typeout{*******************************************************************************}
 \typeout{RENDERING RIASSUNTI DI FISICA INIZIATO}
 \typeout{*******************************************************************************}
@@ -6,7 +7,7 @@
 \typeout{}\typeout{}\typeout{}
 
 %********************************DICHIARAZIONE DOCUMENTO***********************
-%***********PACCHETTI GRAFICI E THUMPDF E HYPEREF******************************
+%***********PACCHETTI GRAFICI E THUMBDF E HYPEREF******************************
 
 \documentclass[a4paper,12pt,twoside,openany,italian]{book}
 \usepackage{ifpdf}
@@ -38,7 +39,7 @@
 \input{TeX/packages}
 %*******************************VERSIONE***************************************
 
-\newcommand{\versione}{1.10.02}
+\newcommand{\versione}{1.10.04}
 
 % non modificare! le righe sotto si aggiornano da sole ogni volta
 % che viene fatto un update (svn up), o un check out (svn co)
@@ -58,6 +59,7 @@
 \input{TeX/math_op}
 
 %*********************************NUOVE TABELLE********************************
+% tabella usata per la definizione delle constanti in appendice
 \newenvironment{tabellacostanti}{\begin{tabular}{p{3.4cm}lp{4.5cm}ll} \hline
 costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 
@@ -96,6 +98,7 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \date{2003--2004--2005}
 \author{Wiso}
 
+% metadata con informazioni sulla licenza
 \ifpdf
 \includexmp{metadata}
 \fi
@@ -109,10 +112,10 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 % se si vuole compilare solo una parte scommentare la riga relativa alla
 % sezione che si vuole compilare
 %\includeonly{TeX/fisica1_1modulo}
-%\includeonly{TeX/fisica1_2modulo}
+\includeonly{TeX/fisica1_2modulo}
 %\includeonly{TeX/fisica1_1modulo,TeX/fisica1_2modulo}
 %\includeonly{TeX/fisica2}
-\includeonly{TeX/fisica3}
+%\includeonly{TeX/fisica3}
 %%********************************INIZIO DOCUMENTO*****************************
 \begin{document}
 \frontmatter
