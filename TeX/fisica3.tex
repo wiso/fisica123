@@ -377,6 +377,156 @@ con $n$ il numero di molecole per volume, $d$ il diametro molecolare, $\sigma=\p
 \begin{equation}
 L=\frac{1}{\sqrt{2}n\sigma}
 \end{equation}
+\subsection{Calcolo della velocità relativa media}
+\label{calcolo_vel_rel_med}
+Per calcolare la velocità relativa media bisogna mediare sia sull'angolo tra le direzioni di due molecole che sulla velocità delle due. Siano $\ve u$, $\ve v$ le velocità di due molecole rispetto ad un'osservatore inerziale con il contenitore del gas. La velocità della seconda molecola rispetto alla prima, è:
+\[
+ \ve r = \ve v - \ve u \qquad \norm{r} = \sqrt{(\ve v-\ve u)^2} = \sqrt{v^2+u^2-2vu\cos(\theta)}
+\]
+dove $\theta$ è l'angolo tra le due velocità misurato nel sistema dell'osservatore. Se supponessimo che le velocità siano uguali e ad un valore fisso ($v=u$) allora:
+\[
+ r = \sqrt{2}v\sqrt{1-\cos(\theta)}
+\]
+Mediando sull'angolo\footnote{si ricorda che l'angolo solido infinitesimo è $\ud\Omega=\sin\theta\,\ud\theta\,\ud\varphi$}:
+\begin{align*}
+ \left.\media{r}_{\theta}\right|_{u=v} =& \frac{1}{4\pi}\int r\,\ud\Omega\\
+           =& \frac{1}{4\pi}\sqrt{2}v\int_0^{2\pi}\ud\varphi\int_0^\pi \ud\theta\sin\theta\sqrt{1-\cos(\theta)}\\
+	   =& -\frac{1}{2}\sqrt{2}v\int_{1}^{-1} \sqrt{1-y}\,\ud y\\
+	   =& \frac{1}{2}\sqrt{2}v\int_0^{\sqrt{2}} 2z^2\,\ud z\\
+	   =& \sqrt{2}v\left.\frac{z^3}{3}\right|_0^{\sqrt{2}}=\frac{4}{3}v
+\end{align*}
+Questo non è il risultato corretto, ma numericamente ci assomiglia. Considerando invece velocità diverse:
+\begin{align*}
+ \media{r}_\theta =& \frac{1}{4\pi}\int r\,\ud\Omega\\
+	   =& \frac{2\pi}{4\pi}\int_0^\pi \sqrt{v^2+u^2-2vu\cos(\theta)}\sin\theta\,\ud\theta\\
+	   =& -\frac{1}{2}\sqrt{v^2+u^2-2uvy}\,\ud y\\
+	   =& -\frac{1}{2}\int_{\sqrt{v^2+u^2-2uv}}^{\sqrt{v^2+u^2+2uv}} z (-\frac{z}{uv})\,\ud z\\
+	   =& \frac{1}{2uv}\int_{|v+u|}^{v+u} z^2\,\ud z\\
+	   =& \frac{(v+u)^3-|v-u|^3}{6uv}=\begin{cases}
+					    \frac{1}{3u}(3u^2+v^2) & v \leq u\\
+					    \frac{1}{3v}(u^2+3v^2) & v \geq u
+					  \end{cases}
+\end{align*}
+questa è la media nell'angolo, ora bisogna mediare sulle velocità usando la distribuzione delle velocità di Maxwell. Mediamo su $u$ usando la distribuzione delle velocità:
+\[
+ f(v)=\frac{4v^2}{\sqrt{\pi}v_p^3} e^{-v^2/v_p^2}
+\]
+dove è stata introdotta per comodità la velocità più probabile: $v_p=\sqrt{\frac{2kT}{m}}$. Mediando su $v$:
+\begin{equation}
+\label{eq:libero_difficile}
+\begin{aligned}
+ \media{r}_{\theta,\norm{v}} &= \int_0^\infty f(v) \media{r}_\theta\,\ud v\\
+    &= \frac{4}{\sqrt{\pi}v_p^3} \left[\int_0^u v^2 e^{-v^2/v_p^2}\frac{3u^2+v^2}{3u}\,\ud v+ \int_u^\infty v^2 e^{-v^2/v_p^2}\frac{u^2+3v^2}{3v}\,\ud v\right]
+\end{aligned}
+\end{equation}
+Questo integrale è abbastanza complicato. Iniziamo con una definizione:
+\begin{equation}
+ \erf(x) = \frac{2}{\pi}\int_0^x e^{-t^2}\,\ud t\qquad \int e^{-x^2}\,\ud x = \frac{\pi}{2}\erf(x)
+\end{equation}
+dove $\erf(x)$ è la funzione dell'errore. Calcoliamo questa primitiva:
+\begin{equation}
+\begin{aligned} 
+ \int x^2 e^{-x^2}\,\ud x &= \int x (x e^{-x^2})\,\ud x = \frac{1}{2}\left[-e^{-x^2} x + \int e^{-x^2}\,\ud x\right]\\
+ &= -\frac{1}{2}e^{-x^2}x+\frac{\sqrt{\pi}}{4}\erf(x)
+\end{aligned}
+\end{equation}
+che serve per calcolare la prima parte del primo integrale nell'equazione \ref{eq:libero_difficile}:
+\begin{equation}
+ \int_0^u v^2 e^{-v^2/v_p^2}\,\ud v =
+ v_p^3\int_0^{u/v_p} y^2 e^{-y^2}\,\ud y =
+ \frac{v_p^2}{4}\left[-2 e^{-u^2/v_p^2} u+\sqrt{\pi}v_p\erf\left(\frac{u}{v_p}\right)\right]
+\end{equation}
+Per il secondo pezzo serve questa primitiva:
+\begin{equation}
+ \begin{aligned}
+ \int x^4 e^{-x^2}\,\ud x &= \int x^3 (x e^{-x^2})\,\ud x = -\frac{1}{2}e^{-x^2} x^3 + \frac{3}{2}\int x^2 e^{-x^2}\,\ud x\\
+			    &= -e^{-x^2}\left(\frac{3}{4}x + \frac{1}{2}x^3\right) + \frac{3}{8}\sqrt{\pi}\erf(x)
+ \end{aligned}
+\end{equation}
+usiamo questo risultato per calcolare il secondo pezzo del primo integrale:
+\begin{equation}
+\begin{aligned}
+ \int_0^u v^4 e^{-v^2/v_p^2}\,\ud v &= v_p^5\int_0^{u/v_p} x^4 e^{-x^2}\,\ud x\\
+ &=-\frac{1}{4}v_p^2 e^{-u^2/v_p^2} u(3v_p^2+2 u^2)+\frac{3}{8}v_p^5\sqrt{\pi}\erf\left(\frac{u}{v_p}\right)
+\end{aligned}
+\end{equation}
+sistemando, il primo integrale risulta:
+\begin{equation}
+\begin{aligned}
+ \frac{4}{\sqrt{\pi}v_p^3}\int_0^u v^2 e^{-v^2/v_p^2}\frac{3u^2+v^2}{3u}\,\ud v &=  \frac{4}{\sqrt{\pi}v_p^3}\frac{1}{3u}\biggl\{\frac{3u^2 v_p^2}{4}\left[-2 e^{-u^2/v_p^2} u+\sqrt{\pi}v_p\erf\left(\frac{u}{v_p}\right)\right] +\\
+ &-\frac{1}{4}v_p^2 e^{-u^2/v_p^2} u(3v_p^2+2 u^2)+\frac{3}{8}v_p^5\sqrt{\pi}\erf\left(\frac{u}{v_p}\right) \biggr\}\\
+ &=\left(\frac{v_p^2}{2 u} + u\right) \erf\left(\frac{u}{v_p}\right)-\frac{3 v_p^2 + 8 u^2}{3 v_p \sqrt{\pi}}e^{-u^2/v_p^2}
+ \end{aligned}
+\end{equation}
+Per il secondo integrale, il primo pezzo:
+\begin{equation}
+ \int_u^\infty v e^{-v^2/v_p^2}\,\ud v = \frac{v_p^2}{2}\int_{u^2/v_p^2}^\infty e^{-y}\,\ud y = \frac{v_p^2}{2}e^{-u^2/v_p^2}
+\end{equation}
+e il secondo pezzo:
+\begin{equation}
+\begin{aligned}
+ \int_u^\infty v^2\left(e^{-v^2/v_p^2} v \,\ud v\right) &= v_p^4\int_{u/v_p}^{\infty} y^2 (y e^{-y^2})\,\ud y\\
+ &=\frac{1}{2}e^{-u^2/v_p^2}v_p^2\left(v_p^2+u^2\right)
+\end{aligned}
+\end{equation}
+Sommando e sistemando il secondo integrale risulta:
+\begin{equation}
+ \begin{aligned}
+ \frac{4}{\sqrt{\pi}v_p^3}\int_u^\infty v^2 e^{-v^2/v_p^2}\frac{u^2+3v^2}{3v}\,\ud v &= \frac{4}{\sqrt{\pi}v_p^3}\biggl\{\frac{u^2}{3} \frac{v_p^2}{2}e^{-u^2/v_p^2} +\\
+ &+\frac{1}{2}e^{-u^2/v_p^2}v_p^2\left(v_p^2+u^2\right)\biggr\}\\
+ &=\frac{2}{3\sqrt{\pi}v_p}e^{-u^2/v_p^2}\left(4u^2+3v_p^2\right)
+ \end{aligned}
+\end{equation}
+Non rimane che sommare i due integrali:
+\begin{equation}
+\begin{aligned}
+ \media{r}_{\theta,\norm{v}}=&\left(\frac{v_p^2}{2 u} + u\right) \erf\left(\frac{u}{v_p}\right)-\frac{3 v_p^2 + 8 u^2}{3 v_p \sqrt{\pi}}e^{-u^2/a^2} + \frac{2}{3\sqrt{\pi}v_p}e^{-u^2/v_p^2}\left(4u^2+3v_p^2\right)\\
+ =&\left(\frac{v_p^2}{2 u} + u\right) \erf\left(\frac{u}{v_p}\right) + \frac{v_p}{\sqrt{\pi}}e^{-u^2/v_p^2}
+\end{aligned}
+\end{equation}
+L'operazione finale è mediare su la velocità $u$:
+\begin{equation}
+ \begin{aligned}
+  \media{r}_{\theta,\norm{v},\norm{u}} &= \int_0^\infty f(u) \media{r}_{\theta,\norm{v}}\,\ud u\\
+				       &= \frac{4}{\sqrt{\pi}v_p^3}\int_0^\infty u^2 e^{-u^2/v_p^2}\left[\left(\frac{v_p^2}{2 u} + u\right) \erf\left(\frac{u}{v_p}\right) + \frac{v_p}{\sqrt{\pi}}e^{-u^2/v_p^2}\right]\,\ud u\\
+				       &= \frac{4v_p}{\sqrt{\pi}}\int_0^\infty x^2 e^{-x^2}\left[\left(\frac{1}{2 x} + x\right) \erf\left(x\right) + \frac{1}{\sqrt{\pi}}e^{-x^2}\right]\,\ud x
+ \end{aligned}
+\end{equation}
+Il primo pezzo dell'integrale:
+\begin{equation}
+\begin{aligned}
+ \int_0^\infty (x e^{-x^2}) \erf(x)\,\ud x &= -\left.\frac{e^{-x^2}}{2}\erf(x)\right|_0^\infty + \int_0^\infty \frac{e^{-x^2}}{2}\frac{2 e^{-x^2}}{\sqrt{\pi}}\,\ud x\\
+					   &=\frac{1}{\sqrt{2\pi}}\int_0^\infty e^{-y^2}\,\ud y\\
+					   &=\left.\frac{1}{2\sqrt{2}}\erf(\sqrt{2x})\right|_0^\infty\\
+					   &=\frac{1}{2\sqrt{2}}
+\end{aligned}
+\end{equation}
+Il pezzo che manca si calcola per parti usando il risultato precedente:
+\begin{equation}
+ \int_0^\infty (x^3 e^{-x^2}) \erf(x)\,\ud x = \frac{5}{8 \sqrt{2}}
+\end{equation}
+
+Per l'ultimo termine dell'integrale:
+\begin{equation}
+ \int_0^\infty x^2 e^{-2x^2}\,\ud u = \frac{1}{2\sqrt{2}}\int_0^\infty y^2 e^{-y^2}\,\ud y = \frac{1}{8}\sqrt{\frac{\pi}{2}}
+\end{equation}
+
+In definitiva:
+\begin{equation}
+\begin{aligned}
+ \media{r}_{\theta,\norm{v},\norm{u}} &= \frac{4v_p}{\sqrt{\pi}}\left(\frac{1}{2}\frac{1}{2\sqrt{2}}+\frac{5}{8\sqrt{2}}+\frac{1}{\sqrt{\pi}}\sqrt{\frac{\pi}{2}}\frac{1}{8}\right)\\
+ &=\frac{v_p}{\sqrt{\pi}}\frac{8}{2\sqrt{2}}=\frac{2\sqrt{2}}{\sqrt{\pi}} v_p = \frac{2\sqrt{2}}{\sqrt{\pi}} \sqrt{\frac{2kT}{m}} = \sqrt{2} \sqrt{\frac{8kT}{\pi m}} = \sqrt{2}\media{u}
+\end{aligned}
+\end{equation}
+che è il risultato voluto. Notiamo che il risultato precedente ($\frac{4}{3}\simeq 1.33$) era numericamente abbastanza corretto ($\sqrt{2}\simeq 1.41$).
+
+
+
+
+
+
+
+
 \section{Moto Browniano\index{moto!Browniano}}
 \subsection{Cammino casuale\index{cammino!casuale}}
 Consideriamo il moto di una particella in un gas. Questa subirà un certo numero di urti e tra uno e l'altro percorrerà mediamente un certo spostamento, il libero cammino medio $l$. Per descrivere questo spostamento definiamo $\ve L$ un vettore casuale avente aspettazione quadratica di modulo $l^2$ e direzione casuale uniforme: $\media{\norm{\ve L^2}}=l^2$, oppure $L_{\textup{RMS}}=l$. La domanda è: ``Dopo un certo numero di urti dove sarà la particella?''.
@@ -1918,9 +2068,9 @@ che è l'equazione di un iperbole.
 \subsubsection{angolo di scattering}
 Calcoliamo gli asintoti dell'orbita per $r\to\pm\infty$ in funzione dell'angolo di scattering $\theta=\pi-\varphi$:
 \[
-0=\frac{1}{b}\sin\theta+\frac{\Delta}{2b^2}\left(\cos\theta-1\right)
+0=\frac{1}{b}\sin\theta+\frac{\Delta}{2b^2}\left(-\cos\theta-1\right)
 \]
-una soluzione è $\theta = \pi$ che corrisponde a $r\to -\infty$. L'altra si trova ricordando che $\sin\theta=2\sin(\theta/2)\cos(\theta/2)$ e che $1+\cos\theta=2\cos^2(\theta/2)$:
+una soluzione è $\theta = \pi$ che corrisponde a $t\to -\infty$. L'altra si trova ricordando che $\sin\theta=2\sin(\theta/2)\cos(\theta/2)$ e che $1+\cos\theta=2\cos^2(\theta/2)$:
 \begin{gather*}
 0=\frac{1}{b}\left(2\sin\left(\frac{\theta}{2}\right)\cos\left(\frac{\theta}{2}\right)-\frac{\Delta}{2b}2\cos^2\left(\frac{\theta}{2}\right)\right)\\
 \sin\left(\frac{\theta}{2}\right)-\frac{\Delta}{2b}\cos\left(\frac{\theta}{2}\right)=0
@@ -1957,7 +2107,7 @@ Il numero di particelle nell'unità di tempo $\ud N$ con parametro compreso tra 
 \begin{equation}
 \ud N=I_0 n2\pi b\ud b
 \end{equation}
-con $n$ il numero di scatteratori. Definiamo la sezione d'urto differenziale:
+con $n$ il numero di scatteratori. Definiamo la sezione d'urto differenziale per un singolo nucleo scatteratore:
 \begin{equation}
 \ud\sigma=\frac{\ud N}{nI_0}=2\pi b\ud b
 \end{equation}
@@ -1979,6 +2129,11 @@ sostituendo:
  \caption{Sezione d'urto differenziale per lo scattering di Coulomb. Gli assi verticali sono logaritmici, il secondo grafico piccolo è un grafico polare. Le curve con $\Delta$ piccolo corripondono a fasci con particelle più energetiche.}
  \label{fig:sezione_coulomb}
 \end{figure}
+a volte la sezione d'urto differenziale viene scritta come:
+\begin{equation}
+ \frac{\ud\sigma}{\ud\Omega} = \frac{1}{4}z^2 Z^2\left(\frac{\hslash c}{E}\right)^2\alpha^2\frac{1}{(1-\cos\theta)^2}
+\end{equation}
+per confrontarlo con altri scatterig. Si noti che non è un processo quantistico infatti gli $\hslash$ si semplificano.
 \subsection{Raggio nucleare}
 Per stimare il raggio nucleare: sia $A$ il numero di nucleoni $r_\text{nucleone}\simeq \SI{1.4E-15}{\meter}$ il raggio di un nucleone, allora il volume di tutto il nucleo:
 \[
