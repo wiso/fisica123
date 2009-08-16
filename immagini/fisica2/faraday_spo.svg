@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5 -->
+<!-- CreationDate: Mon Aug 17 00:52:47 2009 -->
+<!-- Magnification: 1.050 -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4.8in"
+   height="2.0in"
+   viewBox="412 1714 5788 2381"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="faraday_spo.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata93">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs91">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 90 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="432.00003 : 90 : 1"
+       inkscape:persp3d-origin="216.00002 : 60 : 1"
+       id="perspective95" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="746"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="2.0975715"
+     inkscape:cx="128.58833"
+     inkscape:cy="132.43165"
+     inkscape:window-x="-5"
+     inkscape:window-y="-3"
+     inkscape:current-layer="g4" />
+  <g
+     style="stroke-width:.025in; stroke:black; fill:none"
+     id="g4">
+    <ellipse
+       transform="translate(2392,2929) rotate(-0.00000000)"
+       rx="164"
+       ry="992"
+       style="fill:#ffffff;stroke:#000000;stroke-width:8;"
+       id="ellipse29" />
+    <path
+       style="stroke:#000000;stroke-width:7.99869388;stroke-linecap:butt;fill:url(#tile1);stroke-miterlimit:4;stroke-dasharray:31.99477552,31.99477552;stroke-dashoffset:54.39111838"
+       d="M 1795,1748 C 2264.5344,1651.8693 2745.6065,1849.0366 3012.6198,2247.0411 C 3134.3294,2428.4589 3200.5615,2635.2049 3211.3161,2844.1889 C 3224.1555,3093.6856 3157.9234,3346.3723 3012.6198,3562.9589 C 2745.6065,3960.9634 2264.5344,4158.1307 1795,4062"
+       id="path19"
+       sodipodi:nodetypes="csssc" />
+    <path
+       style="stroke:none;stroke-width:8;stroke-linecap:butt;fill:#adadad;fill-opacity:0.20673077000000001;stroke-opacity:1"
+       d="M 1795,1748 A 1181 1181  0  1  1  1795  4062 "
+       id="path6" />
+    <ellipse
+       transform="translate(1795,2906) rotate(-0.00000000)"
+       rx="94"
+       ry="1156"
+       style="fill:#ffffff;stroke:none;stroke-width:8"
+       id="ellipse31" />
+    <ellipse
+       transform="translate(1795,2906) rotate(-0.00000000)"
+       rx="94"
+       ry="1156"
+       style="fill:url(#tile2);stroke:#000000;stroke-width:7.99869388;stroke-miterlimit:4;stroke-dasharray:23.99608164,7.99869388;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse44" />
+    <path
+       transform="translate(2243,2929) rotate(-0.00000000)"
+       style="stroke:#000000;stroke-width:8"
+       d="M 0,992 C -90.528,992 -164,547.584 -164,2.2737368e-13 C -164,-547.584 -90.528,-992 0,-992"
+       id="ellipse25"
+       sodipodi:nodetypes="css" />
+<!-- Arc -->    <g
+       style="stroke:#000000; stroke-width:8"
+       id="g8">
+      <defs
+         id="defs10">
+        <pattern
+           id="tile1"
+           x="0"
+           y="0"
+           width="200"
+           height="200"
+           patternUnits="userSpaceOnUse">
+          <path
+             d="M 100 0 200 100"
+             id="path13" />
+          <path
+             d="M 0 0 200 200"
+             id="path15" />
+          <path
+             d="M 0 100 100 200"
+             id="path17" />
+        </pattern>
+      </defs>
+    </g>
+<!-- Ellipse -->    <path
+       transform="translate(4329,2929) rotate(-0.00000000)"
+       style="stroke:#000000;stroke-width:8"
+       d="M 0,992 C -90.528,992 -164,547.584 -164,2.2737368e-13 C -164,-547.584 -90.528,-992 0,-992"
+       id="ellipse21"
+       sodipodi:nodetypes="css" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:8;fill-opacity:1"
+       d="M 164,0 C 164,547.584 90.528,992 1.0042104e-14,992 C -90.528,992 -164,547.584 -164,1.2148496e-13 C -164,-547.584 -90.528,-992 -3.0126311e-14,-992 C 90.528,-992 164,-547.584 164,0 z"
+       id="ellipse23"
+       transform="translate(4479,2929) rotate(-0.00000000)" />
+<!-- Ellipse --><!-- Ellipse --><!-- Ellipse --><!-- Ellipse --><!-- Ellipse -->    <g
+       style="stroke:#000000; stroke-width:8"
+       id="g33">
+      <defs
+         id="defs35">
+        <pattern
+           id="tile2"
+           x="0"
+           y="0"
+           width="200"
+           height="200"
+           patternUnits="userSpaceOnUse">
+          <path
+             d="M 100 0 0 100"
+             id="path38" />
+          <path
+             d="M 200 0 0 200"
+             id="path40" />
+          <path
+             d="M 200 100 100 200"
+             id="path42" />
+        </pattern>
+      </defs>
+    </g>
+<!-- Line --><!--  0  -->    <polyline
+       points="2246,1937 2404,1937 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline46" />
+<!-- Line --><!--  0  -->    <polyline
+       points="4325,1937 4482,1937 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline48" />
+<!-- Line --><!--  0  -->    <polyline
+       points="4325,3921 4482,3921 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline50" />
+<!-- Line --><!--  0  -->    <polyline
+       points="2246,3921 2404,3921 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline52" />
+<!-- Line -->    <polyline
+       points="425,3070 2078,3070 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline54" />
+<!-- Line -->    <polyline
+       points="425,2834 2078,2834 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline56" />
+<!-- Line --><!-- Line --><!-- Line --><!-- Arrowhead on XXXpoint 661 2929 - 1102 2929--><!-- Line -->    <polyline
+       points="1795,2503 1889,2645 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline66" />
+<!-- Line -->    <polyline
+       points="1889,2645 1984,2503 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline68" />
+<!-- Line -->    <polyline
+       points="1595,3299 1690,3158 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline70" />
+<!-- Line -->    <polyline
+       points="1711,3158 1805,3299 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline72" />
+<!-- Line -->    <polyline
+       points="1370,2173 1370,2172 1371,2170 1372,2165 1375,2159 1377,2152 1381,2142 1386,2133 1392,2122 1398,2113 1406,2103 1415,2094 1425,2087 1438,2080 1451,2076 1469,2074 1489,2075 1511,2078 1535,2086 1560,2094 1584,2106 1607,2118 1629,2132 1650,2146 1671,2162 1691,2178 1711,2194 1729,2208 1746,2223 1761,2237 1774,2247 1782,2256 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline74" />
+<!-- Arrowhead on XXXpoint 1774 2247 - 1805 2278-->    <polyline
+       points="1679 2200 1793 2265 1723 2155 "
+       style="stroke:#000000;stroke-width:8; "
+       id="polyline76" />
+<!-- Text -->    <g
+       id="g3980"
+       transform="translate(0,26.796294)">
+      <g
+         id="g3976">
+        <path
+           style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+           d="M 661,2929 L 1068,2929"
+           id="polyline62" />
+        <path
+           style="stroke:#000000;stroke-width:8"
+           d="M 958,2960 L 1084,2929 L 958,2897"
+           id="polyline64" />
+      </g>
+      <text
+         id="text78"
+         font-size="152"
+         font-weight="normal"
+         font-style="normal"
+         y="2976"
+         x="1181"
+         xml:space="preserve"
+         style="font-size:152px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke:#000000;font-family:Times">I</text>
+    </g>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="3070"
+       y="2173"
+       stroke="#000000"
+       fill="#000000"
+       font-family="Times"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       text-anchor="start"
+       id="text80">S</text>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="3165"
+       y="2267"
+       stroke="#000000"
+       fill="#000000"
+       font-family="Times"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       text-anchor="start"
+       id="text82">2</text>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="1322"
+       y="2314"
+       stroke="#000000"
+       fill="#000000"
+       font-family="Times"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       text-anchor="start"
+       id="text84">1</text>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="1559"
+       y="3874"
+       stroke="#000000"
+       fill="#000000"
+       font-family="Times"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       text-anchor="start"
+       id="text86">C</text>
+<!-- Text -->    <text
+       xml:space="preserve"
+       x="1228"
+       y="2173"
+       stroke="#000000"
+       fill="#000000"
+       font-family="Times"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       text-anchor="start"
+       id="text88">S</text>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.50000001000000005;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 441.1875,83.4375 L 307.71875,84.6875 C 307.70944,84.68761 307.69728,84.687045 307.6875,84.6875 C 306.2819,84.752839 305.16868,88.774244 305.1875,93.65625 C 305.20617,98.500694 306.32783,102.37934 307.71875,102.375 L 307.75,102.375 L 441.83821,102.375 L 441.1875,83.4375 z"
+       transform="matrix(13.398147,0,0,13.398147,412,1698.6668)"
+       id="path2468"
+       sodipodi:nodetypes="ccsscccc" />
+  </g>
+</svg>
