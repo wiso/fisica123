@@ -53,8 +53,8 @@ Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e
 \[p_A=p_B\qquad p_0+\rho_1 gh_1=p_0+\rho_2gh_2\]
 \[\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\]
 in particolare se $\rho_1=\rho_2$ allora $h_1=h_2$.
-\subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli 1664}
-L'esperimento (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \SI{0.76}{\meter}.
+\subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli}
+L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \SI{0.76}{\meter}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.7]{immagini/fisica1/Torricelli}
@@ -78,10 +78,10 @@ In due semisfere attaccate in modo da creare una sfera unica viene diminuita la 
 Consideriamo la strisciolina $\ud m$
 \[F=\int\ud F\]
 \[\ud A=2\pi R\sin\theta R\ud\theta=2\pi R^2\sin\theta\ud\theta\]
-\[\ud F_x=p_0 2\pi R^2\sin\theta\ud\theta\cos\theta\]
+\[\ud F_x=p_0 2\pi \ud A\cos\theta\]
 \[\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\]
 \[\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\]
-\[\text{se } R=\SI{1}{\metre} \quad F_x=\SI{3.14E5}{\newton} \]
+\[\text{se } R=\SI{1}{\metre} \quad F_x\simeq\SI{3E5}{\newton} \]
 
 \subsection{Principio di Pascal\index{principio!di Pascal}}
 \begin{Pri}[Pascal]
@@ -779,7 +779,7 @@ A\rightarrow C&\quad&p=\const&\quad&\text{II}
 \end{align*}
 \[\Delta E_I=Q_I+L_I=Q_I=nc_V\Delta T\]
 \[\Delta E_{II}=Q_{II}+L_{II}=nc_p\Delta T-p\Delta V\]
-$E_B=E_C$ perché $E$ dipende solo da $T$, quindi:
+$E_B=E_h$ perché $E$ dipende solo da $T$, quindi:
 \[\Delta E_I=\Delta E_{II}\]
 \[nc_V\Delta T=nc_p\Delta T-p\Delta V\]
 \[nc_V\Delta T=nc_p\Delta T-nR\Delta T\]
@@ -877,10 +877,13 @@ Nota: $Q_1>0$, $Q_2<0$, $L<0$
 \[T_1V_B^{\gamma-1}=T_2V_C^{\gamma-1}\]
 \[T_1V_A^{\gamma-1}=T_2V_D^{\gamma-1}\]
 \[\left(\frac{V_B}{V_A}\right)^{\gamma-1}=\left(\frac{V_C}{V_D}\right)^{\gamma-1}\qquad \frac{V_B}{V_A}=\frac{V_C}{V_D}\]
-I calori stanno alle temperature.
+Nella macchina di Carnot gli scambi di calore avvengono con delle isoterme, quindi i calori stanno alle temperature:
+\begin{equation}
+ \frac{|Q_2|}{Q_1}=\frac{nRT_2\log\frac{V_C}{V_D}}{nRT_1\log\frac{V_B}{V_A}}=\frac{T_2}{T_1}
+\end{equation}
 
 Il rendimento $\eta$ sarà maggiore quanto maggiore è il lavoro svolto dalla macchina sull'ambiente con minore scambio di calore.
-\[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=1-\frac{|Q_2|}{Q_1}=1-\frac{nRT_2\log\frac{V_C}{V_D}}{nRT_1\log\frac{V_B}{V_A}}=1-\frac{T_2}{T_1}<1\]
+\[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=1-\frac{|Q_2|}{Q_1}=1-\frac{T_2}{T_1}<1\]
 La condizione migliore è quella della macchina perfetta \index{macchina!perfetta}in cui tutto il calore è trasformato in lavoro, $\eta_\text{perfetta}= 1$
 
 \subsection{Frigorifero\index{frigorifero}\index{macchina!frigorifera}}
@@ -952,9 +955,10 @@ I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni c
 Una isoterma sembra violare Kelvin, in realtà trasforma tutto il calore in lavoro, ma non fa solo quello, infatti espande il gas.
 \subsection{\texorpdfstring{$\text{Kelvin}\Leftrightarrow\text{Clausius}$}{Kelvin <=> Clausius}}
 
-Chiamiamo $\media{K}$ antikelvin un ciclo che viola Kelvin e $\media{C}$ anticlausius un ciclo che viola Clausius. Dimostriamo che $(\exists\media{K}\Rightarrow\exists\media{C})\wedge(\exists\media{C}\Rightarrow\exists\media{K})$
-Sommiamo un antikelvin con un frigorifero e otteniamo un anticlausius (Figura \ref{CK1}).
-Sommiamo un anticlausius e una macchina termica e otteniamo un antikelvin (Figura \ref{CK2}).
+Chiamiamo $\bar{K}$ antikelvin un ciclo che viola Kelvin e $\bar{C}$ anticlausius un ciclo che viola Clausius. Dimostriamo che $\exists\bar{K}\Rightarrow\exists\bar{C}$ Sommiamo un antikelvin con un frigorifero e otteniamo un anticlausius (Figura \ref{CK1}). Quindi l'esistenza di un antikelvin implica l'esistenza di un anticlausius. Dopodiché $\nexists\bar{C}\Rightarrow\nexists\bar{K}$.
+
+Sommando un anticlausius e una macchina termica e otteniamo un antikelvin (Figura \ref{CK2}), quindi
+ $\exists\bar{C}\Rightarrow\exists\bar{K}$ e allora $\nexists\bar{K}\Rightarrow\nexists\bar{C}$. In definitiva abbiamo dimostrato che l'enunciato di Clausius e di Kelvin sono equivalenti.
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/AK+Frigo}
@@ -986,7 +990,7 @@ Combino la macchina $M$ con la macchina di Carnot fatta funzionare al contrario,
 \end{figure}
 
 \begin{Cor}
-Se la macchina è reversibile $\eta_M=\eta_C$. Per assurdo $\eta_M<\eta_C$, $M^{-1}+C=\media{C},$ assurdo $\Rightarrow \eta_M\geq\eta_C\Rightarrow \eta_M=\eta_C$
+Se la macchina è reversibile $\eta_M=\eta_C$. Per assurdo $\eta_M<\eta_C$, $M^{-1}+C=\bar{C},$ assurdo $\Rightarrow \eta_M\geq\eta_C\Rightarrow \eta_M=\eta_C$
 \end{Cor}
 
 \section{Entropia\index{entropia}}
@@ -998,7 +1002,7 @@ Per verificarlo integriamo la quantità e vediamo se si può esprime come differ
 \begin{align*}
 \int_i^f\frac{\delta Q}{T}&=\int_i^f\frac{nc_V\ud T+p\,\ud V}{T}=\int_{T_i}^{T_f}\frac{nc_V\ud T}{T}+\int_{V_i}^{V_f}\frac{p\,\ud V}{T}\\
 &=nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+\int_{V_i}^{V_f}\frac{\frac{nRT}{V}\ud V}{T}=nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+nR\int_{V_i}^{V_f}\frac{\ud V}{V}\\
-&=(nc_V\log T_f+nR\log V_f)-(nc_V\log T_i+nR\log V_i)=S(f)-S(i)\\&=\Delta S
+&=(nc_V\log T_f+nR\log V_f)-(nc_V\log T_i+nR\log V_i)=S_f-S_i\\&=\Delta S
 \end{align*}
 \[S=nc_V\log T+nR\log V+\const=\text{entropia}\]
 \[\int_i^f\frac{\delta Q}{T}=\Delta S\qquad \oint\frac{\delta Q}{T}=0\]
