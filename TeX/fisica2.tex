@@ -167,10 +167,10 @@ Immaginiamo un rettangolo orientato come gli assi di lati $\ud x$ e $\ud y$. Sia
 \[\left[C_x(A)-C_x(C)\right]\ud x=-\frac{\partial C_x}{\partial y}\ud x\ud y\]
 \[\left[C_y(B)-C_y(D)\right]\ud x=\frac{\partial C_y}{\partial y}\ud x\ud y\]
 \begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.8]{immagini/fisica2/stockes_ret}
-\label{stokes_ret}
-\caption{teorema di Stokes}
+  \centering
+  \input{immagini/fisica2/stockes_ret}
+  \label{stokes_ret}
+  \caption{teorema di Stokes}
 \end{figure}
 La circuitazione è 
 \begin{align*}
@@ -749,11 +749,18 @@ e in forma differenziale:
 \end{figure}
 \subsection{Potenziale}
 Consideriamo un dipolo, cioè un sistema di due cariche uguali, con segno opposto, poste ad una distanza $\delta$. Data la simmetria cilindrica usiamo coordinate cilindriche e il potenziale nel punto $P$, individuato dal vettore $\ve r$, non dipende da $\theta$:
-\begin{align}
-\varphi=\varphi(\rho,z)&=\frac{1}{4\pi\varepsilon_0}\left\{\frac{-q}{r_1}+\frac{q}{r_2}\right\}\\
-&=\frac{1}{4\pi\varepsilon_0}\left\{\frac{-q}{\sqrt{\left(z+\frac{\delta}{2}\right)^2+\rho^2}}+\frac{q}{\sqrt{\left(z-\frac{\delta}{2}\right)^2+\rho^2}}\right\}
+\begin{equation}
+  \varphi=\varphi(\rho,z)=\frac{1}{4\pi\varepsilon_0}\left\{\frac{-q}{r_1}+\frac{q}{r_2}\right\}
+\end{equation}
+$r_1$ è la distanza tra il punto $P$ di coordinate $(x,y,z)$ e il punto $A$ di coordinate $(0,0,\delta/2)$, quindi: 
+\[
+r_2 = \norm{P-A} = \sqrt{x^2+y^2+(z-\delta/2)^2}=\sqrt{\rho^2+(z-\delta/2)^2}
+\]
+e allora:
+\begin{equation}
+ \frac{1}{4\pi\varepsilon_0}\left\{\frac{-q}{\sqrt{\left(z+\frac{\delta}{2}\right)^2+\rho^2}}+\frac{q}{\sqrt{\left(z-\frac{\delta}{2}\right)^2+\rho^2}}\right\}
 \label{dipolo01}
-\end{align}
+\end{equation}
 I due denominatori della \eqref{dipolo01} li possiamo sviluppare:
 \[\left(z^2+\rho^2+\delta z+\frac{\delta^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1+\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}\]
 \[\left(z^2+\rho^2-\delta z+\frac{\delta ^2}{4}\right)^{-\frac{1}{2}}=\left(z^2+\rho^2\right)^{-\frac{1}{2}}\left(1-\frac{\delta z}{\rho^2+z^2}+\frac{\delta^2}{4\left(\rho^2+z^2\right)}\right)^{-\frac{1}{2}}\]
@@ -777,14 +784,14 @@ oppure come:
 \begin{equation}
 \varphi(\ve r)=-\ve p\cdot\ve\nabla\Phi_0
 \end{equation}
-con $\Phi_0$ il potenziale sulla carica($\frac{1}{4\pi\varepsilon_0}\frac{1}{r}$). Usando le coordinate cartesiane, $\ve r=x\ver \imath+y\ver \jmath+z\ver k$, $\ve p=p\ver \jmath$:
+con $\Phi_0$ il potenziale sulla carica($\frac{1}{4\pi\varepsilon_0}\frac{1}{r}$). Usando le coordinate cartesiane, $\ve r=x\ver \imath+y\ver \jmath+z\ver k$, $\ve p=p\ver k$:
 \begin{equation}
-\varphi(x,y,z)=\frac{1}{4\pi\varepsilon_0}\frac{py}{\left(x^2+y^2+z^2\right)^\frac{3}{2}}
+\varphi(x,y,z)=\frac{1}{4\pi\varepsilon_0}\frac{pz}{\left(x^2+y^2+z^2\right)^\frac{3}{2}}
 \end{equation}\index{potenziale!elettrostatico!del dipolo}
 \subsubsection{Altra dimostrazione}
 Immaginiamo una carica $q$ nell'origine, allora il suo potenziale è $\varphi_0\left(\ve r\right)=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}$
 spostiamo di $\Delta\ve r=\frac{\ve\delta}{2}$ la carica, allora:
-\[\varphi_+\left(\ve r\right)=\varphi_0(\ve r-\Delta \ve r)=\simeq\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
+\[\varphi_+\left(\ve r\right)=\varphi_0(\ve r-\Delta \ve r)\simeq\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
 La stessa cosa la possiamo fare con una carica $-q$ e spostarla dall'altra parte $-\Delta\ve r$:
 \[\varphi_-\left(\ve r\right)=\varphi_0(\ve r+\Delta \ve r)\simeq-\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=-\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
 Essendo $\delta\ll r$ allora è una buona approssimazione. Il potenziale totale:
@@ -794,22 +801,21 @@ Essendo $\delta\ll r$ allora è una buona approssimazione. Il potenziale totale:
 \subsection{Campo elettrostatico\index{campo!elettrostatico!del dipolo}}
 Usando $\ve E=-\grad\varphi$:
 \begin{align*}
-E_x&=-\frac{\partial\varphi}{\partial x}=\frac{3py}{4\pi\varepsilon_0}x\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3py}{4\pi\varepsilon_0}x\frac{1}{r^5}\\
-E_y&=-\frac{\partial\varphi}{\partial y}=\frac{3py}{4\pi\varepsilon_0}y\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}-\frac{p}{4\pi\varepsilon_0}\frac{1}{\left(x^2+y^2+z^2\right)^\frac{3}{2}}\\
-&=\frac{3py}{4\pi\varepsilon_0}y\frac{1}{r^5}-\frac{p}{4\pi\varepsilon_0}\frac{1}{r^3}\\
-E_z&=-\frac{\partial\varphi}{\partial z}=\frac{3py}{4\pi\varepsilon_0}z\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3py}{4\pi\varepsilon_0}z\frac{1}{r^5}\\
+E_x&=-\frac{\partial\varphi}{\partial x}=\frac{3pz}{4\pi\varepsilon_0}\frac{x}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3pz}{4\pi\varepsilon_0}\frac{x}{r^5}=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_x\\
+E_y&=-\frac{\partial\varphi}{\partial y}=\frac{3pz}{4\pi\varepsilon_0}\frac{y}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3pz}{4\pi\varepsilon_0}\frac{y}{r^5}=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_y\\
+E_z&=-\frac{\partial\varphi}{\partial z}=\frac{p}{\giorgi}\left(\frac{3z^2}{r^5}-\frac{1}{r^3}\right)=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_z-\frac{1}{\giorgi}\left[\frac{\ve p}{r^3}\right]_z
 \end{align*}
 definiamo:
-\[E_\perp=\sqrt{E_x^2+E_z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}\sqrt{x^2+z^2}=\frac{3py}{4\pi\varepsilon_0}\frac{1}{r^{5}}\sqrt{x^2+z^2}\]
+\[E_\perp=\sqrt{E_x^2+E_y^2}=\frac{3pz}{4\pi\varepsilon_0}\frac{1}{r^{5}}\sqrt{x^2+y^2}\]
 allora:
-\[E=\sqrt{E_y^2+E_\perp^2}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{\frac{3y^2}{r^2}+1}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{3\cos^2\theta+1}\]
+\[E=\sqrt{E_z^2+E_\perp^2}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{\frac{3z^2}{r^2}+1}=\frac{1}{4\pi\varepsilon_0}\frac{p}{r^3}\sqrt{3\cos^2\theta+1}\]
 in forma vettoriale:
 \begin{equation}
 \label{eq:campo_dipolo}
 \ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation}
 Esso decresce con $r^3$.
 \subsection{Energia potenziale\index{energia!potenziale!del dipolo}}
-Mettiamo un dipolo in un campo elettrico $\ve E$. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
+Mettiamo un dipolo in un campo elettrico $\ve E$ esterno. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale esterno $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
 \[W=W_B+W_A=q(\varphi_B-\varphi_A)\]
 Calcoliamo il potenziale $\varphi_B$ sviluppando $\varphi_A$ nell'intorno di $\varphi_A$:
 \[\varphi_B\simeq\varphi_A+\ve\nabla\varphi\cdot\ve\delta\]
@@ -821,6 +827,7 @@ Si deduce che la posizione di equilibrio stabile, che corrisponde all'energia mi
 \[\ve F=-\ve\nabla W=\ve\nabla\left(\ve p\cdot\ve E\right)=\left(\ve p\cdot\ve\nabla\right)\ve E\]
 per esempio:
 \[F_x=\left(p_x\frac{\partial E_x}{\partial x}+p_y\frac{\partial E_x}{\partial y}+p_z\frac{\partial E_x}{\partial z}\right)\]
+quindi se il campo elettrico esterno è omogeneo allora non c'è forza sul dipolo.
 \subsection{Momento\index{momento!sul dipolo}}
 \begin{figure}[htbp]
 \centering
@@ -858,12 +865,12 @@ A\ar[rruuu]^{\ve r}\ar[rrrrr]^{\ve r\,'}&&&&&B\ar[llluuu]_{\ve r-\ve r\,'}
 Usando il teorema dei coseni possiamo scrivere:
 \[\norm{\ve r-\ve r\,'}=\sqrt{r^2+r'^2-2\ve r\cdot \ve r\,'}=r\sqrt{1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}}\]
 Ricordando che:
-\[(1+x)^{-\frac{1}{2}}=1-\frac{1}{2}x+\frac{3}{8}x^2+\cdots\]
+\[(1+\varepsilon)^{-\frac{1}{2}}=1-\frac{1}{2}\varepsilon+\frac{3}{8}\varepsilon^2+\cdots\]
 si ha:
 \begin{align*}
 {\norm{\ve r-\ve r\,'}}^{-1}=&\frac{1}{r}\left(1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}\right)^{-\frac{1}{2}}\\
-=&\frac{1}{r}\left\{1+\frac{\ve r\cdot\ve r\,'}{r^2}-\frac{1}{2}\frac{r'^2}{r^2}+\frac{3}{8}\left[\frac{2\ve r\cdot\ve r\,'}{r^2}-\frac{r'^2}{r^2}\right]^2+\cdots\right\}\\
-=&\left\{\frac{1}{r}+\frac{\ve r\cdot\ve r\,'}{r^3}-\frac{1}{2}\frac{r'^2}{r^3}+\frac{3}{2}\frac{\left(\ve r\cdot\ve r\,'\right)^2}{r^5}+\frac{3}{8}\frac{r'^4}{r^5}-\frac{3}{2}\frac{\left(\ve r\cdot\ve r\, ' \right)r'^2}{r^5}+\cdots\right\}\\
+=&\frac{1}{r}\left\{1+\frac{\ve r\cdot\ve r\,'}{r^2}-\frac{1}{2}\frac{r'^2}{r^2}+\frac{3}{8}\left[\frac{2\ve r\cdot\ve r\,'}{r^2}-\frac{r'^2}{r^2}\right]^2+o\left(\frac{r'}{r}\right)^2\right\}\\
+=&\frac{1}{r}\left\{\underbrace{1}_{\sim 1}+\underbrace{\frac{\ve r\cdot\ve r\,'}{r^2}}_{\sim x}-\underbrace{\frac{1}{2}\frac{r'^2}{r^2}}_{\sim x^2}+\underbrace{\frac{3}{8}\left(\frac{r'}{r}\right)^4}_{\sim x^4}-\underbrace{\frac{3}{8}\left(\frac{r'}{r}\right)^2\frac{\ve r\cdot \ve r'}{r^3}}_{\sim x^3}+\underbrace{\frac{3}{2}\frac{(\ve r\cdot \ve r')}{r^4}}_{x^2}+\underbrace{o\left(\frac{r'}{r}\right)^2}_{o(x^2)}\right\}\\
 \simeq&\frac{1}{r}+\frac{\ve r\cdot\ve r\,'}{r^3}+\frac{1}{2}\left[-\frac{r'^2}{r^3}+\frac{3\left(\ve r\cdot\ve r\,'\right)^2}{r^5}\right]\\
 \end{align*}
 Nell'ultimo passaggio abbiamo considerato che $r\gg r'$. Sostituendo l'ultimo risultato nella \eqref{multipolo_01} si ottiene:
@@ -2667,7 +2674,7 @@ Se non c'è carica sulla superficie di separazione allora le due componenti norm
 \centering
 \input{immagini/fisica2/contornoEB2}
 \end{figure}
-Calcoliamo al circuitazione su $C$, un rettangolo con lati $\ud l_1$ e $\ud l_2$ paralleli alla superficie di separazione, altezze $\ud h_1$ e $\ud h_2$, in modo tale che la sua superficie contenga la separazione tra i due mezzi. Il rettangolo è infinitesimo e quindi la superficie di separazione di qualsiasi forma è vista da $C$ come un piano. Sappiamo che la circuitazione di $\ve E$ deve essere nulla, o equivalentemente che il rotore di $\ve E$ è zero:
+Calcoliamo la circuitazione su $C$, un rettangolo con lati $\ud l_1$ e $\ud l_2$ paralleli alla superficie di separazione, altezze $\ud h_1$ e $\ud h_2$, in modo tale che la sua superficie contenga la separazione tra i due mezzi. Il rettangolo è infinitesimo e quindi la superficie di separazione di qualsiasi forma è vista da $C$ come un piano. Sappiamo che la circuitazione di $\ve E$ deve essere nulla, o equivalentemente che il rotore di $\ve E$ è zero:
 \begin{equation}
 \oint_C\ve E\cdot \ud l=0
 \end{equation}
