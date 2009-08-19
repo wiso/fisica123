@@ -2262,27 +2262,34 @@ con $A$ l'area della superficie racchiusa dalla spira, possiamo descrivere la sp
 \end{equation}
 sviluppiamo la quantità $\norm{\ve r-\ve r'}^{-1}$ che compare nella \eqref{dipolo_magnetico01}:
 \[
-\begin{split}
-\norm{\ve r-\ve r'}&=\left[\left(x-r'\sin\theta\right)^2+\left(y-r'\cos\theta\right)^2+z^2\right]^{-\frac{1}{2}}\\
-&=\frac{1}{r}\left[1-\frac{2xr'}{r^2}\sin\theta-\frac{2yr'\cos\theta}{r^2}+\frac{r'^2}{r^2}\right]^{-\frac{1}{2}}
-\end{split}
+\norm{\ve r-\ve r'}^{-1}=\left(\ve r^2+\ve r'^2-2\ve r\cdot \ve r'^2\right)^{-\frac{1}{2}}=\frac{1}{r}\left(1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot\ve r'}{r^2}\right)^{-\frac{1}{2}}
 \]
-con $\theta$ l'angolo tra $\ve r'$ e l'asse $y$. Consideriamo $r\gg r'$, consideriamo solo i termini del primo ordine dello sviluppo di potenze:
+Consideriamo $r\gg r'$, consideriamo solo i termini del primo ordine dello sviluppo di potenze:
 \begin{equation}
-\norm{\ve r-\ve r'}=\frac{1}{r}\left[1+\frac{r' y\cos\theta+r' x\sin\theta}{r^2}+\ldots\right]
+\begin{aligned}
+\norm{\ve r-\ve r'}^{-1}&=\frac{1}{r}\left(1-\frac{1}{2}\frac{r'^2}{r^2}+\frac{\ve r\cdot\ve r'}{r^2}+o\left(\frac{r'^2}{r^2}+2\frac{\ve r\cdot\ve r'}{r^2}\right)\right)\\
+&=\frac{1}{r}\left(1+\frac{\ve r\cdot \ve r'}{r^2}+o\left(\frac{r'}{r}\right)\right)\simeq\frac{1}{r}\left(1+\frac{\ve r\cdot \ve r'}{r^2}\right)
+\end{aligned}
 \end{equation}
 Tenendo conto che:
 \begin{equation}
-\ud \ve l'=-\left(r'\ud\theta\cos\theta\ver\imath+r'\ud\theta\sin\theta\ver\jmath\right)
+ \ud \ve l'=r'\ud\theta\ver u_\theta \qquad \ve r' = r'\ver u_r
 \end{equation}
 Allora la \eqref{dipolo_magnetico01} si scrive come:
-\begin{subequations}
-\begin{gather}
-A_x=\frac{\mu_0}{4\pi}I\int_0^{2\pi}-r'\ud\theta\cos\theta\left(\frac{1}{r}+\frac{r'y\cos\theta+r'x\sin\theta}{r^3}\right)=\frac{\mu_0}{4\pi}I\left(\frac{r'^2\pi y}{r^3}\right)\\
-A_y=\frac{\mu_0}{4\pi}I\int_0^{2\pi}-r'\ud\theta\sin\theta\left(\frac{1}{r}+\frac{r'y\cos\theta+r'x\sin\theta}{r^3}\right)=\frac{\mu_0}{4\pi}I\left(\frac{r'^2\pi x}{r^3}\right)\\
-A_z=0
-\end{gather}
-\end{subequations}
+\begin{equation}
+ \begin{aligned}
+  \ve A &= \frac{\mu_0}{4\pi}\frac{I}{r}\oint \ud\ve l'\cdot\left(1+\frac{\ve r'\cdot \ve r}{r^2}\right)\\
+        &= \frac{\mu_0}{4\pi}\frac{I}{r^3}\oint \ud\ve l'\cdot(\ve r'\cdot \ve r)\\
+	&= \frac{\mu_0}{4\pi}\frac{I}{r^3}r'^2\oint \ver u_\theta(\cos\theta x+\sin\theta y)\,\ud\theta
+ \end{aligned}
+\end{equation}
+ricordando che $\ver u_r = \cos\theta\ver i+\sin\theta\ver j$ e $\ver u_\theta = -\sin\theta\ver i+\cos\theta\ver j$ le componenti di $\ve A$:
+\begin{equation*}
+ \begin{aligned}
+  A_x &= \frac{\mu_0}{4\pi}\frac{I}{r^3}r'^2\int_0^{2\pi}-\sin\theta(\cos\theta x+\sin\theta y)\,\ud\theta=-\frac{\mu_0}{4\pi}\frac{I}{r^3}r'^2\pi y\\
+  A_y &= \frac{\mu_0}{4\pi}\frac{I}{r^3}r'^2\int_0^{2\pi}-\cos\theta(\cos\theta x+\sin\theta y)\,\ud\theta=\frac{\mu_0}{4\pi}\frac{I}{r^3}r'^2\pi x\\
+ \end{aligned}
+\end{equation*}
 che si riassume, tenendo conto che l'area è $A=\pi r'^2$:
 \begin{equation}
 \ve A=\frac{\mu_0}{4\pi}\frac{\ve m\times\ve r}{r^3}
