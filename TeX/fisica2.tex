@@ -913,9 +913,9 @@ quindi il campo elettrico generato dai due anelli è:
 Per ottenere un'appossimazione per $|z|\gg d,R$ possiamo fare uno sviluppo di Taylor:
 \begin{multline*}
  \frac{z-\frac{d}{2}}{\left[R^2+(z-\frac{d}{2})^2\right]^{\frac{3}{2}}}
-=\frac{1}{z^2}\frac{(1-\frac{d}{2z})}{\left[\underbrace{\left(\frac{R}{z}\right)^2}_{\simeq 0}+\left(1-\frac{d}{2z}\right)^2\right]^{3/2}}\\
-\simeq\frac{1}{z^2}\left(1-\frac{d}{2z}\right)\left(1+\frac{3d}{2z}\right)
-\simeq\frac{1}{z^2}\left(1+\frac{d}{z}\right)
+=\frac{z}{|z|^3}\frac{(1-\frac{d}{2z})}{\left[\underbrace{\left(\frac{R}{z}\right)^2}_{\simeq 0}+\left(1-\frac{d}{2z}\right)^2\right]^{3/2}}\\
+\simeq\frac{\sgn{z}}{z^2}\left(1-\frac{d}{2z}\right)\left(1+\frac{3d}{2z}\right)
+\simeq\frac{\sgn{z}}{z^2}\left(1+\frac{d}{z}\right)
 \end{multline*}
 %%%%%%%%%%
 %%%%%%%%%%
@@ -923,8 +923,8 @@ Per ottenere un'appossimazione per $|z|\gg d,R$ possiamo fare uno sviluppo di Ta
 %%%%%%%%%%
 La semplificazione $\left(\frac{R}{z}\right)^2\simeq 0$ e anche quella nell'ultimo passaggio sono giustificate dal fatto che la nostra espanzione è al primo grado. Quindi la nostra approssimazione per il campo elettrostatico:
 \[
- \ve E(0,0,z) \simeq \frac{\lambda R}{2\varepsilon_0}\frac{1}{z^2}\left\{\left(1+\frac{d}{z}\right)-\left(1-\frac{d}{z}\right)\right\}\ver e_z
- = \frac{\lambda R}{\varepsilon_0}\frac{d}{z^3}\ver e_z
+ \ve E(0,0,z) \simeq \frac{\lambda R}{2\varepsilon_0}\frac{\sgn{z}}{z^2}\left\{\left(1+\frac{d}{z}\right)-\left(1-\frac{d}{z}\right)\right\}\ver e_z
+ = \frac{\lambda R}{\varepsilon_0}\frac{d}{|z|^3}\ver e_z
 \]
 Notiamo che la dipendenza da $\frac{1}{r^3}$ è tipica dei dipoli \eqref{eq:campo_dipolo}, infatti il sistema è approssimabile con un dipolo che punta dall'anello negativo a quello positivo:
 \[
@@ -955,15 +955,22 @@ avendo usato $\ve r=z\ver e_z$ e quindi $r = |z|$.
   \[
    L_\text{ext} = -L_\text{campo} = e(\varphi(0)-\varphi(\infty))
   \]
-   Per valutare il potenziale al posto di fare la derivata del campo lo si può calcolare dalla definizione. Il potenziale generato da una spira nell'origine è:
+   Per valutare il potenziale al posto di fare la derivata del campo lo si può calcolare dalla definizione. Il potenziale generato da una spira sull'asse è:
   \[
-   \varphi_0 = \frac{1}{\giorgi}\int\frac{\ud q}{\norm{\ve r - \ve r'}} = \frac{1}{\giorgi}\int\frac{\lambda R\ud\phi}{\left[R^2+\left(z-\frac{d}{2}\right)^2\right]^{1/2}}=\frac{\lambda R}{2\varepsilon_0}\frac{1}{\sqrt{z^2+R^2}}
+   \varphi_0 = \frac{1}{\giorgi}\int\frac{\ud q}{\norm{\ve r - \ve r'}} = \frac{1}{\giorgi}\int_0^{2\pi}\frac{\lambda R\ud\phi}{\left[R^2+\left(z-\frac{d}{2}\right)^2\right]^{1/2}}=\frac{\lambda R}{2\varepsilon_0}\frac{1}{\sqrt{z^2+R^2}}
   \]
    quindi il potenziale dei due anelli:
   \[
-   \varphi = \varphi_{+\frac{d}{2}} + \varphi_{-\frac{d}{2}} = \frac{\lambda R}{2\varepsilon_0}\left\{\frac{1}{\sqrt{\left(z-\frac{d}{2}\right)^2+R^2}}-\frac{1}{\sqrt{\left(z+\frac{d}{2}\right)^2+R^2}}\right\}
+   \varphi = \varphi_{+\frac{d}{2}} - \varphi_{-\frac{d}{2}} = \frac{\lambda R}{2\varepsilon_0}\left\{\frac{1}{\sqrt{\left(z-\frac{d}{2}\right)^2+R^2}}-\frac{1}{\sqrt{\left(z+\frac{d}{2}\right)^2+R^2}}\right\}
   \]
-  poiché $\varphi(0)=0$ e $\varphi(\infty)=0$ il lavoro è nullo.
+  poiché $\varphi(0)=0$ e $\varphi(\infty)=0$ il lavoro è nullo. Alla conclusione che $\varphi(0)=0$ ci si poteva arrivare anche con ragionamenti sulla simmetria del sistema. Infatti sicuramente $\varphi_0(z) = \varphi(-z)$ quindi
+  \[
+  \begin{aligned}
+   \varphi(z=0) &= \left[\varphi_0(z+d/2)-\varphi_0(z-d/2)\right]_{z=0} \\
+		&= \varphi_0(d/2)-\varphi_0(-d/2) = \varphi_0(d/2)-\varphi_0(d/2) = 0
+  \end{aligned}
+  \]
+
 
   Il lavoro fatto per spostare il dipolo si può fare in maniera analoga, ricordando che l'energia potenziale di un dipolo che interagisce con un campo elettromagnetico è $-\ve p\cdot \ve E$.
   \begin{align*}
