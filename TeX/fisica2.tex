@@ -1847,16 +1847,18 @@ rappresenta la densità di carica magnetica sulle facce di una lamina magnetica 
 \section{Campi magnetici generati da correnti\index{campi magnetici!generati da correnti}}
 Una corrente crea un campo magnetico. Al posto di usare una carica di prova per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo crea un campo magnetico le cui linee di forza si chiudono su se stesso.
 \subsection{Legge di Biot--Savart\index{Biot}\index{Savart}\index{legge!di Biot--Savart}}
-Per quanto riguarda un filo indefinito vale la:
 \begin{legge}[Biot--Savart]
+Per un filo infinito percoso da corrente $I$ vale
 \begin{equation}
-B=k\frac{I}{r}
+ B=k\frac{I}{r}
 \end{equation}
 \end{legge}
 con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre $k=1$, in realtà si pone:
 \[k=\frac{\mu_0}{2\pi}\]
 con $\mu_0$ la permeabilità magnetica del vuoto:
-\[\mu_0=\si{4\pi E-7}{\henry\per\meter}\]
+\[
+\mu_0=\SI{4\pi\times 10^{-7}}{\henry\per\meter}
+\]
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
 \[\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\]
 con $\ver s$ è un versore orientato come il verso della corrente, mentre $\ve r$ è il vettore che individua il punto rispetto al filo, ha quindi il modulo della distanza tra il filo e il punto.
@@ -1895,50 +1897,59 @@ B\left(\ve r\right)&=\frac{\mu_0}{4\pi}I\int_{-\infty}^{+\infty}\frac{\sin\theta
 \end{align*}
 in forma vettoriale:
 \begin{equation}
-\ve B(\ve r)=\frac{\mu_0}{2\pi}\frac{I}{\norm{\ve r}}\ver{s}\times{\ver{e_r}}
+\ve B(\ve r)=\frac{\mu_0}{2\pi}\frac{I}{\norm{\ve r}}\ver{s}\times{\ver e_r}
 \end{equation}
 \begin{Es}[spira circolare\index{spira}]
 Consideriamo un circuito di forma circolare, con raggio $R$. Vogliamo il campo magnetico lungo l'asse. Per ragioni di simmetria il campo magnetico risultate è ortogonalmente al piano della spira. Usiamo le coordinate cilindriche. $P$ avrà coordinate $(0,0,w)$, individuato dal vettore $\ve r=w \ver e_w$, mentre l'elementino $\ud l$ della spira sarà individuato dal vettore $\ve r\,'=r'\ver e_r$. L'elementino $\ud\ve l=R\ud\theta\ver e_\theta$.
-\[\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^2}=\frac{\mu_0}{4\pi}\int_0^{2\pi}\frac{IR\ud\theta\ver e_\theta\times\left(w\ver w_z-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}\]
+\[\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}=\frac{\mu_0}{4\pi}\int_0^{2\pi}\frac{IR\ud\theta\ver e_\theta\times\left(w\ver w_z-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}\]
 Ricordando che:
-\[\ver e_\theta\times\ver e_w=\ver e_r\qquad \ver e_\theta\times\ver e_r=\ver e_w\qquad \int_0^{2\pi} \ud\theta\ver e_r=\int_0^{2\pi}\left(\cos\theta\ver \imath+\sin\theta\ver \jmath\right)\,\ud \theta=0\]
-\begin{align*}
-\ve B\left(w\right)&=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}\int_0^{2\pi}\left(w\ver e_r+R\ver e_w\right)\ud\theta=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}R\ver e_w 2\pi\\
+\[\ver e_\theta\times\ver e_w=\ver e_r\qquad \ver e_\theta\times\ver e_r=-\ver e_w\qquad \int_0^{2\pi} \ud\theta\ver e_r=\int_0^{2\pi}\left(\cos\theta\ver \imath+\sin\theta\ver \jmath\right)\,\ud \theta=0\]
+\begin{equation}
+ \label{eq:b_spira}
+ \begin{aligned}
+  \ve B\left(w\right)&=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}\int_0^{2\pi}\left(w\ver e_r+R\ver e_w\right)\ud\theta=\frac{\mu_0IR}{4\pi\left(R^2+w^2\right)^{\frac{3}{2}}}R\ver e_w 2\pi\\
 &=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+w^2\right)^{\frac{3}{2}}}\,\ver e_w
-\end{align*}
+ \end{aligned}
+\end{equation}
 Nel caso particolare $w=0$ si ha:
 \[\ve B=\frac{\mu_0}{2}\frac{I}{R}\,\ver e_w\]
 \end{Es}
 \begin{Es}[solenoide\index{solenoide}]
-Immaginiamo il solenoide come l'insieme di tante spire affiancate e usiamo il principio di sovrapposizione. Sia $N$ il numero di spire per unità di lunghezza, $l$ la sua lunghezza. Il campo magnetico generato da una spira che non si trovi nell'origine, ma ad una distanza $w'$ sull'asse è 
-\[\ve B_S\left(w\right)=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w\]
-Essendo $N\ud w$ il numero di spire in $\ud w$:
+Immaginiamo il solenoide come l'insieme di tante spire affiancate e usiamo il principio di sovrapposizione. Sia $N$ il numero di spire per unità di lunghezza, $l$ la sua lunghezza. Il campo magnetico generato da una spira che non si trovi nell'origine, ma ad una distanza $w'$ sull'asse è (dalla \eqref{eq:b_spira}):
+\[
+ \ve B_S(w,w')=\frac{\mu_0}{2}\frac{IR^2}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w
+\]
+Essendo $N\ud w'$ il numero di spire in $\ud w'$:
+\begin{equation*}
+\ve B(w)=\int_{-\frac{l}{2}}^{\frac{l}{2}}\ve B_S(w,w')N\,\ud w'=\frac{\mu_0INR^2}{2}\ver e_w\int_{-\frac{l}{2}}^{\frac{l}{2}}\frac{\ud w'}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}
+\end{equation*}
+Occupiamoci dell'integrale, usiamo la sostituzione $u=w-w'$ quindi $\ud u=-\ud w'$:
+\[
+ \int\frac{\ud w'}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}} = -\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}} = -\frac{1}{R^3}\int\frac{\ud u}{\left(1+\left(\frac{u}{R}\right)^2\right)^{\frac{3}{2}}}
+\]
+Sostituendo ora $\frac{u}{R}=\sinh t$, $\ud u=R\cosh t\ud t$:
+\[\int\ldots = -\frac{1}{R^3}\int\frac{R\cosh t}{\left(1+\sinh^2t\right)^{\frac{3}{2}}}\ud t=-\frac{1}{R^2}\int\frac{\ud t}{\cosh^2 t}=-\frac{1}{R^2}\tanh t\]
+Risostituiamo all'indietro:
 \begin{align*}
-\ve B(w)=&\int_{-\frac{l}{2}}^{\frac{l}{2}}B_SN\ud w\,\ver e_w=\int_{-\frac{l}{2}}^{\frac{l}{2}}\frac{\mu_0}{2}\frac{INR^2\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}\,\ver e_w\\
-=&\frac{\mu_0INR^2}{2}\ver e_w\int_{-\frac{l}{2}}^{\frac{l}{2}}\frac{\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}
-\end{align*}
-Occupiamoci dell'integrale, usiamo la sostituzione $u=w-w'$ quindi $\ud u=\ud w$:
-\[\int\frac{\ud w}{\left(R^2+\left(w-w'\right)^2\right)^{\frac{3}{2}}}=\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}\]
-\end{Es}
-Sostituendo ora $u=R\sinh t$, $\ud u=R\cosh t\ud t$:
-\[\int\frac{\ud u}{\left(R^2+u^2\right)^{\frac{3}{2}}}
-=\int\frac{R\cosh t}{R^3\left(1+\sinh^2t\right)^{\frac{3}{2}}}\ud t=\int\frac{\ud t}{R^2\cosh^2 t}=\frac{1}{R^2}\tanh t\]
-Risostituiamo:
-\begin{align*}
-\frac{1}{R^2}\tanh t&=\frac{1}{R^2}\frac{\sinh\arcsinh\frac{u}{R}}{\cosh\arcsinh\frac{u}{R}}=\frac{u}{R^3}\frac{1}{\sqrt{1+\sinh^2\arcsinh\frac{u}{R}}}\\
-&=\frac{u}{R^3}\frac{1}{\sqrt{1+\left(\frac{u}{R}\right)^2}}=\frac{1}{R^3}\frac{w-w'}{\sqrt{1+\left(\frac{w-w'}{R}\right)^2}}
+-\frac{1}{R^2}\tanh t&=-\frac{1}{R^2}\frac{\sinh\arcsinh\frac{u}{R}}{\cosh\arcsinh\frac{u}{R}}=-\frac{u}{R^3}\frac{1}{\sqrt{1+\sinh^2\arcsinh\frac{u}{R}}}\\
+&=-\frac{u}{R^3}\frac{1}{\sqrt{1+\left(\frac{u}{R}\right)^2}}=-\frac{1}{R^3}\frac{w-w'}{\sqrt{1+\left(\frac{w-w'}{R}\right)^2}}
 \end{align*}
 Allora:
 \begin{align*}
-\ve B(w)&=\frac{\mu_0NIR^2}{2}\ver e_w\left[\frac{1}{R^3}\frac{w-w'}{\sqrt{1+\left(\frac{w-w'}{R}\right)^2}}\right]_{w=-\frac{l}{2}}^\frac{l}{2}\\
-&=\dfrac{\mu_0NI}{2R}\ver e_w\left(\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}+\dfrac{\frac{l}{2}+w'}{\sqrt{1+\left(\frac{\frac{l}{2}+w'}{R}\right)^2}}\right)
+\ve B(w)&=\frac{\mu_0NIR^2}{2}\ver e_w\left[\frac{1}{R^3}\frac{w'-w}{\sqrt{1+\left(\frac{w'-w}{R}\right)^2}}\right]_{w'=-\frac{l}{2}}^\frac{l}{2}\\
+&=\dfrac{\mu_0NI}{2R}\ver e_w\left(\dfrac{w+\frac{l}{2}}{\sqrt{1+\left(\frac{w+\frac{l}{2}}{R}\right)^2}}-\dfrac{w-\frac{l}{2}}{\sqrt{1+\left(\frac{w-\frac{l}{2}}{R}\right)^2}}\right)
 \end{align*}
 che rappresenta il campo magnetico generato da un solenoide di lunghezza $l$, se $l\to\infty$:
-\[\ve B=\mu_0IN\ver e_w\]
+\begin{equation}
+ \ve B=\mu_0IN\ver e_w 
+\end{equation}
 Infatti per esempio, usando al primo passaggio H\^{o}pital:
-\begin{multline*}\lim_{l\to\infty}\dfrac{\frac{l}{2}-w'}{\sqrt{1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2}}=\lim_{l\to\infty}\frac{1}{\left[1+\left(\frac{\frac{l}{2}-w'}{R}\right)^2\right]^{\frac{l}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}\\
-=\lim_{l\to\infty}\frac{1}{\left[\left(\frac{\frac{l}{2}-2'}{R}\right)^2\left(\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}+1\right)\right]^{-\frac{1}{2}}\left(\frac{\frac{l}{2}-w'}{R}\right)}=\lim_{l\to\infty}\frac{1}{\left(1+\frac{R^2}{\left(\frac{l}{2}-w'\right)^2}\right)^{-\frac{1}{2}}}=1
+\begin{multline*}
+ \lim_{l\to\infty}\dfrac{w\pm\frac{l}{2}}{\sqrt{1+\left(\frac{w\pm\frac{l}{2}}{R}\right)^2}}=
+ \lim_{l\to\infty}\frac{\pm\frac{1}{2}}{\frac{1}{2}\left(1+\left(\frac{w\pm l/2}{R}\right)^2\right)^{-1/2} 2\left(\frac{w\pm l/2}{R}\right)\frac{\pm 1}{2 R}}\\
+ =\lim_{l\to\infty}\frac{\frac{w \pm l/2}{R}\sqrt{\left(\frac{R}{w\pm l/2}\right)^2+1}}{2\frac{w\pm l/2}{R}\frac{\pm 1}{2R}}=\lim_{l\to\infty}\frac{\sqrt{\left(\frac{R}{w\pm l/2}\right)^2+1}}{2\frac{\pm 1}{2R}}=\pm R
 \end{multline*}
+\end{Es}
 \begin{Es}[Spira rettangolare]
  Sia una spira rettangolare di lati $a$, $b$ percorsa dalla corrente $I$. Vogliamo calcolare il campo magnetico generato lungo il suo asse, al variare di $z$.
 \begin{figure}[htbp]
