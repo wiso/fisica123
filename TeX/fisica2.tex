@@ -692,6 +692,12 @@ Il potenziale è indipendente dalla carica di prova, l'energia potenziale no. \`
 Rifacendo il discorso per il potenziale: siano $A$ e $B$ due punti, l'integrale è indipendente dal percorso quindi:
 \[L_A^B=\int_A^B \ve F\cdot\ud\ve l=-q\int_A^B\ve E\cdot\ud\ve l=q\Delta \varphi=\Delta W=W_B-W_A\]
 Per il calcolo abbiamo usato la forza contro le forze del campo, non la forza del campo. Il lavoro a sinistra il lavoro contro le forze del campo, mentre l'energia potenziale a destra è relativa alle forze del campo: ecco perché non c'è il meno.
+\subsection{Unità di misura}
+Nel SI il potenziale si misura in volt\index{volt}:
+\[[\varphi]=\frac{\joule}{\coulomb}=\volt\]
+allora essendo $\ve E=-\ve\nabla\varphi$ il campo lo possiamo esprimere in:
+\[[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}\]
+\[[U]=\joule=[q\varphi]=\coulomb\volt\]
 \subsection{Energia di un sistema di cariche\index{energia!di un sistema di cariche}}
 Prendiamo una carica $q_1$, portiamola dall'infinito alla posizione $\ve r_1$: non serve compiere lavoro. Ora abbiamo un campo, con un potenziale $\varphi_1(\ve r)$. Prendiamo un'altra carica $q_2$ e portiamola dall'infinito alla posizione $\ve r_2$: dobbiamo compiere un lavoro contro le forze del campo:
 \[L_\infty^{\ve r_2}=\int_\infty^{\ve r_2}\ve F\cdot\ud \ve l=-q_2\int_\infty^{\ve r_2} \ve E\cdot\ud \ve l=q_2\varphi_1(\ve r_2)\]
@@ -705,16 +711,10 @@ W&=q_2\varphi_1(\ve r_2)+q_3\varphi_1(\ve r_3)+q_3\varphi_2(\ve r_3)\\
 \end{align*}
 Notiamo che è indifferente l'ordine in cui aggiungiamo le cariche. In generale:
 \begin{equation}
-W=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^{N}\sum_{j\neq i}^{N}\frac{q_iq_j}{\norm{\ve r_j-\ve r_i}}\cdot\frac{1}{2}=\frac{1}{4\pi\varepsilon_0}\sum_{i<j}\frac{q_iq_j}{\norm{\ve r_j-\ve r_i}}\cdot\frac{1}{2}
 \label{energia_sistema_cariche}
+W=\frac{1}{4\pi\varepsilon_0}\sum_{i=1}^{N}\sum_{j\neq i}^{N}\frac{q_iq_j}{\norm{\ve r_j-\ve r_i}}\cdot\frac{1}{2}=\frac{1}{4\pi\varepsilon_0}\sum_{i<j}\frac{q_iq_j}{\norm{\ve r_j-\ve r_i}}
 \end{equation}
 Il fattore $\frac{1}{2}$ serve perché altrimenti le coppie sarebbero contate due volte, mentre non conta l'ordine.
-\subsection{Unità di misura}
-Nel SI il potenziale si misura in volt\index{volt}:
-\[[\varphi]=\frac{\joule}{\coulomb}=\volt\]
-allora essendo $\ve E=-\ve\nabla\varphi$ il campo lo possiamo esprimere in:
-\[[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}\]
-\[[U]=\joule=[q\varphi]=\coulomb\volt\]
 \subsubsection{Coppia stesso segno}
 Se il campo è generato da una sorgente positiva, allora se muoviamo $+q$ il suo potenziale vale zero all'infinito e vale infinito a zero. Stessa cosa se la sorgente è negativa e la carica esploratrice negativa.
 \subsubsection{Coppia segno opposto}
@@ -1011,8 +1011,8 @@ consideriamo una superficie chiusa completamente compresa nel conduttore; essend
 Vogliamo calcolare il campo elettrico in prossimità della superficie del conduttore. Sappiamo già che questo è perpendicolare alla superficie. Sulla superficie si è distribuita una densità superficiale di carica $\sigma$ a causa del campo elettrico esterno, tale che $\int_S \sigma\ud a=Q$. Ipotizziamo che $Q=0$, cioè il conduttore sia inizialmente scarico.
 
 Consideriamo un cilindretto di basi infinitesime $\ud A$, una interna e l'altra esterna al conduttore, perpendicolare alla superficie del conduttore. Il flusso attraverso la superficie laterale è nullo in quanto $\ve E\perp\ve n$, e anche il flusso attraverso la superficie interna al conduttore è nullo perché qui il campo è nullo. Rimane solo la superficie all'esterno del conduttore, per Gauss:
-\[\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{Q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}\]
-ma $\ve E//\ve n$ ed è costante: $\int_{S_1}\ve E\cdot\ve n=E\Delta S_1$:
+\[\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}\]
+ma $\ve E//\ve n$ ed è costante: $\int_{S_1}\ve E\cdot\ve n=E\Delta S_1$ e $\Delta a = \Delta S_1$:
 \begin{Teo}[Coulomb]
 In prossimità di un conduttore il campo elettrico totale è \begin{equation}
 E=\frac{\sigma}{\varepsilon_0}
@@ -2735,6 +2735,7 @@ In modo analogo si può mostrare che anche la componente di $\ve D$ tangente sub
 \section{Energia del campo elettrostatico}
 Consideriamo $N$ conduttori con superfici $S_i, i=1\ldots N$. Partiamo dall'equazione \eqref{energia_sistema_cariche} che descrive l'energia per un sistema di cariche puntiformi:
 \begin{equation}
+\label{eq:en_cariche_puntiformi}
 W=\frac{1}{2}\sum_{i=1}^n\sum_{i\neq j}^n\frac{q_iq_j}{4\pi\varepsilon_0}\frac{1}{\norm{r_i-r_j}}=\frac{1}{2}\sum_{i=1}^{N}q_i\varphi
 \end{equation}
 Nel nostro caso le cariche sono date dalle distribuzioni $\sigma(\ve r)$ sulle superfici e $\rho(\ve r)$ all'esterno dei conduttori (nei conduttori la carica si distribuisce solo sulla superficie). Sia $S=\bigcup_{i=1}^n S_i$ e $V$ il volume esterno ai conduttori:
@@ -2743,17 +2744,17 @@ Nel nostro caso le cariche sono date dalle distribuzioni $\sigma(\ve r)$ sulle s
 W&=\frac{1}{2}\int_V\varphi\rho\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a=
 \frac{1}{2}\int_V\varphi\diver\ve D\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a\\
 &=\frac{1}{2}\int_V\diver(\varphi\ve D)\,\ud v-\frac{1}{2}\int_V\ve D\cdot\grad\varphi\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a\\
-&=\frac{1}{2}\int_V\diver(\varphi\ve D)\,\ud v+\frac{1}{2}\int_V\ve D\cdot\ve E+\frac{1}{2}\int_S\varphi\sigma\,\ud a\\
-&=\frac{1}{2}\int_{S_V}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E+\frac{1}{2}\int_S\varphi\sigma\,\ud a
+&=\frac{1}{2}\int_V\diver(\varphi\ve D)\,\ud v+\frac{1}{2}\int_V\ve D\cdot\ve E\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a\\
+&=\frac{1}{2}\int_{S_V}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a
 \end{split}
 \end{equation}
 dove $S_V$ è la superficie che delimita il volume $V$ (il volume esterno alle superfici $S_i$, in quanto all'interno dei conduttori $\rho=0$). $S_V$ è composta da una superficie limite all'infinito $S_\infty$ e dalle superfici dei conduttori.
 \begin{equation}
-W=\frac{1}{2}\int_{S_\infty}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_{S}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E+\frac{1}{2}\int_S\varphi\sigma\,\ud a
+W=\frac{1}{2}\int_{S_\infty}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_{S}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a
 \end{equation}
 Sappiamo che $\varphi$ varia come $\frac{1}{r}$, $\ve D$ come $\frac{1}{r^2}$ e $\ud a$ come $r^2$, quindi il primo integrando va come $\frac{1}{r}$ e l'integrale si annulla.
 \begin{equation}
-W=\frac{1}{2}\int_{S}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E+\frac{1}{2}\int_S\varphi\sigma\,\ud a
+W=\frac{1}{2}\int_{S}\varphi\ve D\cdot\ve n\,\ud a+\frac{1}{2}\int_V\ve D\cdot\ve E\,\ud v+\frac{1}{2}\int_S\varphi\sigma\,\ud a
 \end{equation}
 ma $\ve D\cdot\ve n=-\sigma$ in quanto le normali sono dirette verso l'interno delle superfici conduttrici:
 \begin{equation}
@@ -2761,8 +2762,70 @@ W=\frac{1}{2}\int_V\ve E\cdot\ve D\,\ud v=\frac{1}{2}\varepsilon\int_V E^2\,\ud 
 \end{equation}
 e la densità di energia $w$:
 \begin{equation}
+\label{eq:en_campo_el}
 w=\frac{1}{2}\ve E\cdot\ve D=\frac{1}{2}\varepsilon E^2
 \end{equation}
+
+\subsection{Self-energy}
+Come si nota dalla \eqref{eq:en_campo_el} la densità di energia del campo elettrostatico è definita positiva, quindi anche il suo integrale, cioè l'energia totale è sempre positiva. Questa è una contraddizione con l'equazione \eqref{eq:en_cariche_puntiformi}, per esempio se consideriamo due cariche, una positiva e l'altra negativa:
+\[
+ W = \frac{1}{\giorgi} \frac{q_1 q_2}{\norm{\ve r_1-\ve r_2}}
+\]
+Il problema è che l'equazione \eqref{eq:en_campo_el} contiene termini di autointerazione, mentre la \eqref{eq:en_cariche_puntiformi} no. Infatti proviamo a calcolare la densità di energia per il sistema formato dalle due cariche. Il campo elettrostatico:
+\[
+ \ve E(\ve r) = \frac{1}{\giorgi} \left(\frac{q_1(\ve r-\ve r_1)}{\norm{\ve r-\ve r_1}^3}+\frac{q_2(\ve r-\ve r_2)}{\norm{\ve r-\ve r_2}^3}\right)
+\]
+e quindi la densità di energia:
+\[
+ w = \frac{1}{2}\varepsilon_0 E^2 = \frac{\varepsilon_0}{2(\giorgi)^2}\left(\frac{q_1^2}{\norm{\ve r-\ve r_1}^4}+\frac{q_2^2}{\norm{\ve r-\ve r_2}^4}+2\frac{q_1q_2(\ve r-\ve r_1)\cdot(\ve r-\ve r_2)}{\norm{\ve r-\ve r_1}^3\norm{\ve r-\ve r_2}^3}\right)
+\]
+I primi due termini rappresentano i termini di autointerazione. Tralasciando questi e cosiderando solo il rimanente calcoliamo l'energia totale integrando sul volume:
+\[
+ W = \frac{q_1q_2}{16\pi^2\varepsilon_0} \int_V \frac{(\ve r-\ve r_1)\cdot(\ve r-\ve r_2)}{\norm{\ve r-\ve r_1}^3\norm{\ve r-\ve r_2}^3}\,\ud v
+\]
+usiamo la sostituzione $\ve x = \frac{\ve r-\ve r_1}{\norm{\ve r_1-\ve r_2}}$, da cui $\ve r=\norm{\ve r_1-\ve r_2}\ve x+\ve r_1$ e $\ud v=\ud^3 \ve r = \norm{\ve r_1-r_2}^3\,\ud^3\ve x$:
+\begin{equation*}
+\begin{aligned}
+ W &= \frac{q_1q_2}{16\pi^2\varepsilon_0} \int_V \frac{\ve x\norm{\ve r_1-\ve r_2}}{\norm{\ve r_1-\ve r_2}^3\norm{\ve x}^3}\frac{\norm{\ve r_1-\ve r_2}(\ve x+\ve n)}{\norm{\ve r_1-\ve r_2}^3\norm{\ve x+\ve n}^3} \norm{\ve r_1-\ve r_2}^3\,\ud^3\ve x\\
+   &= \frac{q_1q_2}{16\pi^2\varepsilon_0}\frac{1}{\norm{\ve r_1-\ve r_2}} \int_V \frac{\ve x\cdot (\ve x+\ve n)}{x^3\norm{\ve x+\ve n}^3}\,\ud^3\ve x
+ \end{aligned}
+\end{equation*}
+con $\ve n=\frac{\ve r_1-\ve r_2}{\norm{\ve r_1-\ve r_2}}$. Occupiamoci dell'integrale, in coordinate polari diventa:
+\begin{equation*}
+\begin{aligned}
+  & 2\pi\int \frac{x^2+x\cos\theta}{x^3(x^2+1+2x\cos\theta)^{3/2}} \sin\theta x^2\,\ud x\ud\theta\\
+ =& -2\pi\int\ud x\int_{1}^{-1} \frac{x+y}{(x^2+1+2xy)^{3/2}} \,\ud y\\
+ =& 2\pi\int\ud x\left\{ \left[-\frac{1}{x\sqrt{x^2+1+2 xy}}(x+y)\right]_{-1}^1+\int_{-1}^{1}\frac{1}{x\sqrt{x^2+1+2xy}}\,\ud y\right\}\\
+ =& 2\pi\int\ud x\left[ -\frac{1}{x\sqrt{x^2+1+2 xy}}(x+y)+\frac{1}{x^2}\sqrt{x^2+1+2x y}\right]_{-1}^1\\
+ =& 2\pi\int\ud x\left[\frac{1+xy}{x^2\sqrt{2xy+x^2+1}}\right]_{y=-1}^1\\
+\end{aligned}
+\end{equation*}
+avendo usato l'integrazione per parti e la sostituzione $z=x^2+1+2xy$. Valutando gli estremi:
+\begin{equation*}
+\begin{aligned}
+  & 2\pi\int\ud x\left[\frac{1+x}{x^2\sqrt{2x+x^2+1}}-\frac{1-x}{x^2\sqrt{-2x+x^2+1}}\right]\\
+ =& 2\pi\int\ud x\left[\frac{1+x}{x^2|1+x|}-\frac{1-x}{x^2|1-x|}\right]\\
+ =& 2\pi\int\ud x\frac{\sgn(x+1)+\sgn(x-1)}{x^2}
+\end{aligned}
+\end{equation*}
+L'integrale è facile perché la somma delle due funzioni segno fa:
+\begin{equation*}
+\sgn(x+1)+\sgn(x-1)=
+ \begin{cases}
+  -2 & x<1\\
+  +2 & x>1\\
+  0  & \text{altrimenti}
+ \end{cases}
+\end{equation*}
+quindi l'integrale in $x$:
+\[
+   2\pi\int_1^\infty\frac{2}{x^2}\ud x = 2\left[-\frac{1}{x}\right]_1^\infty=4\pi
+\]
+allora l'energia totale:
+\[
+ W= \frac{q_1q_2}{16\pi^2\varepsilon_0}\frac{1}{\norm{\ve r_1-\ve r_2}} \int_V \frac{\ve x\cdot (\ve x+\ve n)}{x^3\norm{\ve x+\ve n}^3}\,\ud^3\ve x =  \frac{q_1q_2}{\giorgi}\frac{1}{\norm{\ve r_1-\ve r_2}}
+\]
+come voluto.
 
 
 
