@@ -1860,7 +1860,7 @@ con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre 
 \[k=\frac{\mu_0}{2\pi}\]
 con $\mu_0$ la permeabilità magnetica del vuoto:
 \[
-\mu_0=\SI{4\pi\times 10^{-7}}{\henry\per\meter}
+\mu_0=\SI[numaddn=\pi]{4\pi e-7}{\henry\per\meter}
 \]
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
 \[\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\]
@@ -2931,11 +2931,11 @@ L'espressione \eqref{99} ci dice che se la magnetizzazione di un materiale è un
 Supponiamo un cilindro con asse lungo $z$, quindi $\ve M=M_z\ver \imath$. Dalla \eqref{99}:
 \begin{equation}
 \left\{
-\begin{split}
+\begin{aligned}
 J_{mx}&=\left(\frac{\partial M_z}{\partial y}-\frac{\partial M_y}{\partial x}\right)=\frac{\partial M}{\partial y}\\
 J_{my}&=\left(\frac{\partial M_x}{\partial z}-\frac{\partial M_z}{\partial x}\right)=-\frac{\partial M}{\partial x}\\
 J_{mz}&=\left(\frac{\partial M_y}{\partial x}-\frac{\partial M_x}{\partial y}\right)=0
-\end{split}
+\end{aligned}
 \right.
 \end{equation}
 All'interno del cilindro $M$ è costante, mentre sulla superficie passa del valore $M$ al valore $0$.
