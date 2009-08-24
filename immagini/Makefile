@@ -1,7 +1,9 @@
 FIGS = $(wildcard *.fig) $(wildcard */*.fig)
 SVGS = $(wildcard *.svg) $(wildcard */*.svg)
-PDFS = $(FIGS:.fig=.pdf) $(SVGS:.svg=.pdf)
-EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps)
+MATHEMATICAS = $(wildcard *.mathematica) $(wildcard */*.mathematica)
+PDFS = $(FIGS:.fig=.pdf) $(SVGS:.svg=.pdf) $(MATHEMATICAS:.mathematica=.pdf)
+EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps) $(MATHEMATICAS:.mathematica=.eps)
+
 
 images: pdf_images eps_images
 
@@ -21,8 +23,14 @@ eps_images: $(EPSS)
 %.pdf: %.svg
 	inkscape --export-pdf=$@ $<
 
+%.pdf: %.mathematica
+	math -noprompt -run "<<$<"
+
 %.eps: %.fig
 	fig2dev -L eps $< $@
 
 %.eps: %.svg
 	inkscape --export-eps=$@ $<
+
+%.eps: %.mathematica
+	math -noprompt -run "<<$<"

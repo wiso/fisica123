@@ -671,7 +671,7 @@ il lavoro che devo fare per portare la carica unitaria dall'infinito al punto co
 \]
 \end{Es}
 \subsection{Potenziale di qualsiasi distribuzione}
-L'espressione del potenziale può essere ricavata notando che $\ve\nabla\frac{1}{r}=\frac{\ve r}{r^3}$:
+L'espressione del potenziale può essere ricavata notando che $\ve\nabla\frac{1}{r}=-\frac{\ve r}{r^3}$:
 \begin{equation}
 \begin{split}
  \ve E &= \frac{1}{\giorgi}\int_V \rho(\ve r')\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}\,\ud V'\\
@@ -1014,8 +1014,10 @@ Consideriamo un cilindretto di basi infinitesime $\ud A$, una interna e l'altra 
 \[\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}\]
 ma $\ve E//\ve n$ ed è costante: $\int_{S_1}\ve E\cdot\ve n=E\Delta S_1$ e $\Delta a = \Delta S_1$:
 \begin{Teo}[Coulomb]
-In prossimità di un conduttore il campo elettrico totale è \begin{equation}
-E=\frac{\sigma}{\varepsilon_0}
+In prossimità di un conduttore il campo elettrico totale è 
+\begin{equation}
+ \label{eq:teo_coulomb}
+ E=\frac{\sigma}{\varepsilon_0}
 \end{equation}
 \end{Teo}
 
@@ -1286,7 +1288,7 @@ Allora:
 \[\varphi(x)=\frac{\varphi_2-\varphi_1}{d}x+\varphi_2\]
 Il campo:
 \[\ve E_E=-\ve\nabla\varphi=\frac{\varphi_1-\varphi_2}{d}\ver \imath\]
-Usando il teorema di Coulomb:
+Usando il teorema di Coulomb \eqref{eq:teo_coulomb}:
 \[\sigma=\varepsilon_0E=\frac{\varphi_1-\varphi_2}{d}\varepsilon_0\]
 \end{Es}
 \begin{Es}[sfera in condensatore]
@@ -1307,6 +1309,78 @@ Il conduttore è una superficie equipotenziale e quindi $\varphi_T$ deve essere 
 e mho?
 \end{Es}
 
+\section{Metodo delle cariche immagine}
+Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè con superfici di tenute ad un potenziale fisso e conosciuto, nei quali siano presenti anche cariche libere. A volte è possibile simulare l'effetto delle superfici con delle cariche opportune posizionate all'esterno del volume di interesse, chiamate cariche immagine.
+\begin{Es}[carica e piano infinito]
+ Sia una carica $q$ posizionata sull'asse $x_+$ e sia il piano $y-z$ tenuto a terra. La stessa situzione si realizza con la carica $q$ e una carica immagine $-q$ posizionata simmetricamente rispetto alla carica reale. Infatti il potenziale delle due cariche:
+ \[
+  \varphi(x,y,z)=\frac{1}{\giorgi}\left(\frac{q}{\sqrt{(x-x_+)^2+y^2+z^2}}+\frac{-q}{\sqrt{(x-x_-)^2+y^2+z^2}}\right)
+ \]
+e sul piano ($x=0$):
+ \[
+  \varphi(0,y,z)=\frac{1}{\giorgi}\left(\frac{q}{\sqrt{x_+^2+y^2+z^2}}+\frac{-q}{\sqrt{x_-^2+y^2+z^2}}\right)=0
+ \]
+in quanto $x_+ = -x_-$. Questa è la soluzione per il semispazio di destra ($x>0$). Nel semispazio in cui c'è la carica di prova invece il potenziale è costante, e in questo caso nullo, in quanto il semispazio di sinistra si può considerare come uno spazio interno al conduttore piano infinito. Per determinare la densità di carica sul piano serve la componente normale del campo elettrostatico:
+\[
+ E_x(0,y,z) = -\frac{\partial\varphi}{\partial x}(0,y,z) = -\frac{q}{2\pi\varepsilon_0}\frac{x_+}{(x_+^2+y^2+z^2)^{3/2}}
+\]
+quindi usando il teorema di Coulomb \eqref{eq:teo_coulomb}:
+\[
+ \sigma = \varepsilon_0 E_x = -\frac{qd}{2\pi(d^2+y^2+z^2)^{3/2}}
+\]
+Integrando su tutto il piano si ottiene:
+\begin{equation*}
+ \begin{aligned}
+  Q &= \int_\text{piano} \sigma\,\ud a = \int -\frac{qd}{2\pi(d^2+y^2+z^2)^{3/2}}\,\ud y\,\ud z\\
+    &= -\int \frac{qd}{2\pi(d^2+\rho^2)^{3/2}} \rho\,\ud\rho\sin\theta\,\ud\theta\\
+    &= -\frac{2\pi qd}{2\pi}\int_0^\infty \frac{\rho\ud\rho}{(d^2+\rho^2)^{3/2}}\\
+    &= -qd\int_{d^2}^\infty \frac{\ud t}{2t^{3/2}} = -q
+ \end{aligned}
+\end{equation*}
+avendo usato la sostituzione $t=\rho^2+d^2$ e il fatto che l'integrando non dipende da $\theta$. Il risultato significa che la carica indotta sulla superficie del conduttore piano è uguale ed opposta alla carica reale, infatti si tratta di induzione completa.
+\end{Es}
+\begin{Es}[carica e sfera]
+ Consideriamo una sfera centrata nell'origine di raggio $a$ a potenziale nullo. Consideriamo una carica puntiforme $q$ a distanza $d$ dall'origine. Supponendo che sia sufficiente una sola carica immagine sicuramente la sua posizione per simmetria sarà sulla congiungente del centro della sfera e la carica reale. In generale il potenziale generato dalle due cariche:
+ \begin{equation*}
+ \begin{aligned}
+  \varphi(\ve x) &= \frac{1}{\giorgi}\left(\frac{q}{\norm{\ve x -\ve d}}+\frac{q'}{\norm{\ve x-\ve d'}}\right)\\
+		 &= \frac{1}{\giorgi}\left(\frac{q}{\norm{x\ver n -d\ver n'}}+\frac{q'}{\norm{x\ver n-d'\ver n'}}\right)
+ \end{aligned}
+ \end{equation*}
+ dove $\ver n$ è il versore di $\ve x$ e $\ver n'$ è il versore di $\ve d$ e anche di $\ve d'$. Sulla sfera:
+ \begin{equation*}
+ \begin{aligned}
+  \varphi(x=a) &= \frac{1}{\giorgi}\left(\frac{q}{\norm{a\ver n -d\ver n'}}+\frac{q'}{\norm{a\ver n-d'\ver n'}}\right)\\
+	       &= \frac{1}{\giorgi}\left(\frac{q}{a\norm{\ver n -\frac{d}{a}\ver n'}}+\frac{q'}{a\norm{\ver n-\frac{d'}{a}\ver n'}}\right)=0
+ \end{aligned}
+ \end{equation*}
+quindi deve essere $d=d'$ e $q=-q'$ ma non va bene, anche perché $q'$ è all'esterno della sfera. Quindi raccogliendo in modo diverso:
+\begin{equation*}
+ \begin{aligned}
+  \varphi(x=a) &= \frac{1}{\giorgi}\left(\frac{q}{a\norm{\ver n-\frac{d}{a}\ver n'}}+\frac{q'}{d'\norm{\ver n'-\frac{a}{d'}\ver n}}\right)\\
+  &= \frac{1}{\giorgi}\left(\frac{q}{a\left(1+\frac{d^2}{a^2}-2\frac{d}{a}\ver n\cdot\ver n'\right)^{1/2}}+\frac{q'}{d'\left(1+\frac{a^2}{d'^2}-2\frac{a}{d'}\ver n\cdot\ver n'\right)^{1/2}}\right)
+  \end{aligned}
+\end{equation*}
+e deve essere:
+\[
+ \frac{q}{a}=-\frac{q'}{d'}\qquad \frac{d}{a}=\frac{a}{d'}
+\]
+in modo che il potenziale si annulli sulla sfera per ogni possibile valore di $\ver n\cdot\ver n'$. Quindi per la carica immagine:
+\[
+ q'=\frac{-a}{d}q\qquad d'=\frac{a^2}{d}
+\]
+Quindi il potenziale:
+\[
+ \varphi(\ve x) = \frac{1}{\giorgi}\left(\frac{q}{\norm{x\ver n -d\ver n'}}+\frac{-\frac{a}{d}q}{\norm{x\ver n-\frac{a^2}{d}\ver n'}}\right)
+\]
+\begin{figure}[htbp]
+ \centering
+ \includegraphics{immagini/fisica2/sfera_neutra}
+ \caption{Linee equipotenziali e linee di campo. Le linee rosse indicano le regioni dove non è stato calcolato il potenziale. La sfera ha raggio $2$, mentre la carica unitaria positiva è in $(0,8)$.}
+\end{figure}
+
+
+\end{Es}
 
 
 
