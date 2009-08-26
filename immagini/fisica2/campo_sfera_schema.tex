@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1]
+\coordinate (O) at (0,0);
+\coordinate (q) at (0.5,0);
+\coordinate (-q) at (-0.5,0);
+\coordinate (p) at (xyz polar cs:angle=25, radius=3.5);
+\draw[->] (-6,0) -- (6,0) node[above] {$z$};
+\draw[->] (0,-2) -- (0,2);
+\draw (O) circle (1.5cm);
+\draw[<->] (O) -- (xyz polar cs:angle=250, radius=1.5) node[near end,sloped,above]{$a$};
+\filldraw[black] (4.5,0) circle(2pt) node[below right]{$-Q$};
+\draw[->,shorten >=2pt] (O) -- (4.5,0) node[near end,above]{$\ve R_-$};
+\filldraw[black] (-4.5,0) circle(2pt) node[below left]{$+Q$};
+\draw[->,shorten >=2pt] (O) -- (-4.5,0) node[near end,above]{$\ve R_+$};
+\filldraw[black] (-q) circle(2pt) node[below left]{$-q$};
+\filldraw[black] (q) circle(2pt) node[below right]{$+q$};
+\draw (2,0) arc (0:25:2.0cm) node[below right]{$\theta$};
+\draw[->,shorten >=2pt] (O) -- (p) node[midway, above]{$\ve r$};
+\filldraw[black] (p) circle(2pt) node[above
+  right]{$P$};
+\draw[dotted] (-q) -- (-0.5,0.8);
+\draw[<->] (-0.5,0.8) -- (0,0.8) node[midway,above]{$d'$};
+\end{tikzpicture}%
