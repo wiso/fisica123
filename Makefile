@@ -36,9 +36,9 @@ $(OUTDVI):	$(MAIN_SOURCE) $(IND) $(TEXS)
 	$(LATEX) $(MAIN_SOURCE)
 
 $(IND):	
-	echo ************************
-	echo     creazione indice
-	echo ************************
+	@echo ************************
+	@echo     creazione indice
+	@echo ************************
 	$(PDFLATEX) $(MAIN_SOURCE)
 	$(MAKEINDEX) $(IDX)
 #TODO: PDFLATEX / LATEX
