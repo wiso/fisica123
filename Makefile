@@ -1,4 +1,4 @@
-# sperimentale
+# ancora sperimentale
 
 NAME	= fisica_linux
 MAIN_SOURCE	= $(NAME).tex
