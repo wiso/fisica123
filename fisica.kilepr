@@ -87,19 +87,19 @@ order=2
 
 [item:TeX/fisica2.tex]
 archive=true
-column=188
+column=187
 encoding=UTF-8
 highlight=LaTeX
-line=1360
+line=1440
 open=true
 order=4
 
 [item:TeX/fisica3.tex]
 archive=true
-column=0
+column=33
 encoding=UTF-8
 highlight=LaTeX
-line=380
+line=2061
 open=true
 order=16
 
@@ -2941,6 +2941,15 @@ order=-1
 [item:immagini/fisica2/anello.pdf]
 archive=true
 column=32557
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:immagini/fisica2/campo_con_sfera.pdf]
+archive=true
+column=6029423
 encoding=
 highlight=
 line=0
