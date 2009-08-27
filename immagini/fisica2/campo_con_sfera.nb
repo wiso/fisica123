@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     20584,        555]
-NotebookOptionsPosition[     19440,        513]
-NotebookOutlinePosition[     19797,        529]
-CellTagsIndexPosition[     19754,        526]
+NotebookDataLength[     19695,        537]
+NotebookOptionsPosition[     18551,        495]
+NotebookOutlinePosition[     18908,        511]
+CellTagsIndexPosition[     18865,        508]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -438,33 +438,31 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"ContourPlot3D", "[", 
+  RowBox[{"ContourPlot3D", "[", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"zz", " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"-", "1"}], "+", 
-       FractionBox["1", 
-        SuperscriptBox[
+       RowBox[{"1", "/", 
+        RowBox[{
          RowBox[{"(", 
           RowBox[{
-           SuperscriptBox["xx", "2"], "+", 
-           SuperscriptBox["yy", "2"], "+", 
-           SuperscriptBox["zz", "2"]}], ")"}], 
-         RowBox[{"3", "/", "2"}]]]}], ")"}]}], ",", 
+           RowBox[{"xx", "^", "2"}], "+", 
+           RowBox[{"y", "^", "2"}], "+", 
+           RowBox[{"zz", "^", "2"}]}], ")"}], "^", 
+         RowBox[{"(", 
+          RowBox[{"3", "/", "2"}], ")"}]}]}]}], ")"}]}], ",", 
     RowBox[{"{", 
      RowBox[{"xx", ",", 
       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
     RowBox[{"{", 
-     RowBox[{"yy", ",", 
+     RowBox[{"y", ",", 
       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
     RowBox[{"{", 
      RowBox[{"zz", ",", 
-      RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"Mesh", "\[Rule]", "Automatic"}], ","}], "*)"}], 
-    "\[IndentingNewLine]", 
+      RowBox[{"-", "1.5"}], ",", "1.5"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Mesh", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
     RowBox[{"BoundaryStyle", "\[Rule]", "Red"}], ",", "\[IndentingNewLine]", 
     RowBox[{"RegionFunction", "\[Rule]", 
      RowBox[{"Function", "[", 
@@ -477,39 +475,23 @@ Cell[BoxData[
          RowBox[{"y", "^", "2"}], "+", 
          RowBox[{"z", "^", "2"}]}], "\[GreaterEqual]", "1"}]}], "]"}]}], ",", 
     "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"ContourStyle", "\[Rule]", 
-       RowBox[{"Directive", "[", 
-        RowBox[{
-         RowBox[{"Opacity", "[", "0.2", "]"}], ",", "Red"}], "]"}]}], ","}], 
-     "*)"}], "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{"Contours", "\[Rule]", "20"}], ","}], "*)"}], 
+    RowBox[{"ContourStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Opacity", "[", "0.3", "]"}], ",", "Red"}], "]"}]}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
     "\[IndentingNewLine]", 
+    RowBox[{"BoxRatios", "\[Rule]", "Automatic"}], ",", "\[IndentingNewLine]", 
     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", 
     "\[IndentingNewLine]", 
-    RowBox[{"BoxRatios", "\[Rule]", "Automatic"}]}], "\[IndentingNewLine]", 
-   "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.460127240717038*^9, 3.460127258027151*^9}, {
-   3.46012731396868*^9, 3.460127317112468*^9}, {3.460141939061078*^9, 
-   3.46014195347479*^9}, {3.460142001059062*^9, 3.460142006041236*^9}, {
-   3.4601420642620792`*^9, 3.460142064565503*^9}, {3.460142116129312*^9, 
-   3.460142123356271*^9}, {3.46014216036889*^9, 3.460142165308421*^9}, {
-   3.4601422144248943`*^9, 3.460142220126027*^9}, {3.46014227447163*^9, 
-   3.4601422791859283`*^9}, {3.460142317485388*^9, 3.46014232224304*^9}, {
-   3.460142404022427*^9, 3.4601424083466673`*^9}, {3.460142470055942*^9, 
-   3.460142534032258*^9}, {3.460142629453783*^9, 3.460142629841517*^9}, {
-   3.4601426619618807`*^9, 3.460142801003948*^9}, {3.4601428377398376`*^9, 
-   3.460142863177899*^9}, {3.460143589742817*^9, 3.460143596553739*^9}, {
-   3.460144754117835*^9, 3.460144755447132*^9}, {3.460210013114471*^9, 
-   3.46021010731782*^9}, {3.460210171053726*^9, 3.4602101919387302`*^9}, {
-   3.4602102302218733`*^9, 3.4602102640374804`*^9}, {3.460211270163612*^9, 
-   3.460211308701713*^9}, {3.4602113581193943`*^9, 3.460211427632753*^9}, {
-   3.460211722659453*^9, 3.460211754385983*^9}, 3.4602119244682817`*^9}]
+    RowBox[{"MaxRecursion", "\[Rule]", "2"}], ",", 
+    RowBox[{"PlotPoints", "\[Rule]", "10"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Contours", "\[Rule]", "7"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.460400929090316*^9, 3.460400967922526*^9}, {
+   3.4604011866389914`*^9, 3.460401205700255*^9}, {3.4604012736686773`*^9, 
+   3.460401276253385*^9}, {3.4604014211183662`*^9, 3.460401439841292*^9}, {
+   3.460401612204124*^9, 3.4604016138570127`*^9}, 3.460402054825083*^9}]
 },
 WindowSize->{1024, 746},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -556,7 +538,7 @@ Cell[11800, 341, 3048, 56, 172, "Input"],
 Cell[14851, 399, 521, 11, 31, "Input"],
 Cell[15375, 412, 510, 11, 72, "Input"],
 Cell[15888, 425, 374, 11, 31, "Input"],
-Cell[16265, 438, 3171, 73, 252, "Input"]
+Cell[16265, 438, 2282, 55, 232, "Input"]
 }
 ]
 *)
