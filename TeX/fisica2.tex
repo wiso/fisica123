@@ -1672,8 +1672,10 @@ Sommando si ottiene che il reciproco del resistore equivalente è la somma dei r
 \end{figure}
 Consideriamo il corpo in figura \eqref{res_trapezio}. Vogliamo calcolare la resistenza tra i capi $A$ e $B$. Scomponiamo la geometria in tanti elementini di altezza $\ud z$, essi risultano in parallelo. La loro resistenza:
 \[\ud R=\rho\frac{l}{A}=\rho\frac{y}{h\ud z}\]
-con $y$ che varia tra $a$ e $b$. Troviamo $\delta$:
-\[c\tan\beta=b-a\qquad (c-z)\tan\beta=\delta\qquad \delta=(c-z)\frac{b-a}{c}\]
+con $y=a+\delta$ che varia tra $a$ e $b$. Troviamo $\delta$:
+\[
+(c-z)\tan\beta=\delta\qquad c\tan\beta=b-a\qquad \delta=(c-z)\frac{b-a}{c}
+\]
 Allora $y$:
 \[y=a+\delta=a+\frac{(c-z)(b-a)}{c}=b+\frac{z}{c}(a-b)\qquad\ud y=\frac{a-b}{c}\ud z\]
 \[\frac{1}{R}=\int_0^c\frac{1}{\ud R}=\int_0^c\frac{h\ud z}{\rho y}=\frac{hc}{\rho(a-b)}\int_b^a\frac{\ud y}{y}=\frac{hc}{\rho(a-b)}\log\frac{a}{b}\]
@@ -1709,6 +1711,19 @@ Il campo impresso nasce quando si è in presenza di una disomogeneità  come ad 
 \includegraphics[scale=2]{immagini/fisica2/generatore}
 \caption{simbolo della pila}
 \end{figure}
+
+Calcoliamo il lavoro fatto dai due campi su una carica unitaria all'interno di un circuito chiuso:
+\begin{equation}
+  L = \oint (\ve E+\ve E_i)\cdot\ud\ve l = \oint \ve E_i\cdot\ud\ve l = \int_{\text{pila}}\!\!\!\! \ve E_i\cdot\ud\ve l + \int_{\text{circuito}} \underbrace{\ve E_i}_{=0}\cdot\ud\ve l = \int_{\text{pila}}\!\!\!\!\ve E_i\cdot\ud\ve l
+ \end{equation}
+avendo notato che la circuitazione del campo elettrostatico è nulla, mentre il campo impresso è nullo all'esterno della pila.
+\begin{Def}[fem]
+ La forza elettromotrice\index{forza!elettromotrice} è il lavoro fatto dal campo totale $\ve E+\ve E_i$ su una carica positiva unitaria che percorra una linea chiusa che passi per gli elettrodi della pila:
+ \begin{equation}
+  \text{fem} = \int_{\text{pila}} \ve E_i\cdot\ud\ve l
+ \end{equation}
+
+\end{Def}
 
 \subsection{Resistenza interna}
 Ogni generatore reale è caratterizzato da una resistenza interna $r$ e da una forza elettromotrice $\varepsilon$. Se gli colleghiamo un resistore con resistenza $R$ la circuitazione del campo elettrostatico deve essere nulla e quindi anche la variazione di potenziale. Allora se ai capi del generatore ideale c'è una differenza di potenziale $\varepsilon$ la caduta di tensione attraverso $R$ e $r$ deve essere uguale e contraria a $\varepsilon$. La differenza di tensione del generatore reale è minore di quella del generatore ideale e in particolare:
@@ -2122,7 +2137,7 @@ scriviamo tutto in funzione dell'angolo $\theta$, variabile sulla quale integrer
  \frac{1}{r'^2} = \frac{\sin^2\theta}{R^2}\qquad l = -R\cot\theta\qquad\ud l = \frac{R}{\sin^2\theta}\ud\theta
 \]
 \[
- \ud B = \frac{\mu_0}{4\pi}\frac{\sin\theta}{R}\,\ud\theta
+ \ud B = \frac{\mu_0}{4\pi}I\frac{\sin\theta}{R}\,\ud\theta
 \]
 Il campo totale\footnote{Si poteva anche integrale in $\ud l$ tra $\pm\frac{L}{2}$ usando $r'=\sqrt{R^2+l^2}$ e $\sin\theta=\frac{R}{\sqrt{R^2+l^2}}$:
 \[
@@ -2546,8 +2561,9 @@ Se non c'è un campo elettrico esterno allora $\ve P=0$ anche se $\ve p_m\neq 0$
 Anche nei conduttori avviene l'effetto di polarizzazione, ma è trascurabile.
 
 \section{Campo elettrico generato da un dielettrico\index{campo!elettrico!di un dielettrico}}
+\label{section:Campo_elettrico_generato_da_un_dielettrico}
 \subsection{Esterno}
-Consideriamo un dielettrico polarizzato, vogliamo calcolare il campo elettrico da esso generato all'esterno del dielettrico conoscendo il vettore $\ve P(\ve r)$. Consideriamo un elementino $\ud v'$ individuato dal vettore $\ve r\,'$. Esso presenta un momento di dipolo $\ve p=\ve P(\ve r\,')\ud v'$ per la \eqref{vettore_polarizzazione_elettrica}. Segue dall'espressione del potenziale del dipolo \eqref{dipolo_scentrato} che l'elementino $\ud v'$ genera un potenziale:
+Consideriamo un dielettrico polarizzato, vogliamo calcolare il campo elettrico da esso generato all'esterno del dielettrico conoscendo il vettore $\ve P(\ve r)$. Consideriamo un elementino $\ud v'$ individuato dal vettore $\ve r\,'$. Esso presenta un momento di dipolo $\ud\ve p=\ve P(\ve r\,')\ud v'$ per la \eqref{vettore_polarizzazione_elettrica}. Segue dall'espressione del potenziale del dipolo \eqref{dipolo_scentrato} che l'elementino $\ud v'$ genera un potenziale:
 \begin{equation}
 \ud\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\frac{\ve P(\ve r\,')\cdot\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\ud v'
 \end{equation}
@@ -2688,31 +2704,32 @@ oppure in forma differenziale:
 \centering
 \includegraphics[scale=0.35]{immagini/fisica2/gauss_dielettrici}
 \end{figure}
-Consideriamo a proposito un dielettrico con una carica libera $q$ su un conduttore di volume $V'$ e superficie $S'$. Consideriamo una superficie immaginaria $S_0$ racchiudente un volume $V_0$ di dielettrico e la carica libera. Il teorema di Gauss \eqref{teo_Gauss_d1}, quanto quello della circuitazione nel paragrafo precedente, deve valere anche ora considerando tutto le cariche, consideriamo cioè il dielettrico e la carica di polarizzazione come tante cariche nel vuoto:
+Consideriamo a proposito un dielettrico all'interno del quale sia posta una carica libera $q$ su un conduttore di volume $V'$ e superficie $S'$. Consideriamo una superficie immaginaria $S_0$ racchiudente un volume $V_0$ di dielettrico e il conduttore. Il teorema di Gauss \eqref{teo_Gauss_d1}, quanto quello della circuitazione nel paragrafo precedente, deve valere anche ora considerando tutto le cariche, consideriamo cioè il dielettrico e la carica di polarizzazione come tante cariche nel vuoto:
 \begin{equation}
 \int_{S_0}\ve E\cdot\ve n\,\ud a=\frac{1}{\varepsilon_0}\left(q+q_p\right)
 \label{gauss_dielettrici_3}
 \end{equation}
 con $q_p$ le cariche di polarizzazione. Vogliamo passare in forma differenziale. D'istinto diremmo $\diver\ve E=\frac{1}{\varepsilon_0}(\rho+\rho_p)$. Ma le $\sigma_p$ che fine fanno? Le cariche di polarizzazione $q_p$ sono:
 \begin{equation}
-\begin{split}
-q_p=&\oint_{S'}\sigma_p\,\ud a+\int_{V_0-V'}\rho_p\,\ud v=\oint_{S'}\ve P\cdot\ve n\,\ud a+\oint_{V_0-V'}\!\!\!\!\!-\diver\ve P\,\ud v\\
-=&\oint_{S'}\ve P\cdot\ve n\,\ud a-\oint_{S_0+S'}\ve P\cdot\ve n\,\ud a=-\oint_{S_0}\ve P\cdot\ve n\,\ud a
-\end{split}
+\begin{aligned}
+q_p=&\int_{S'}\sigma_p\,\ud a+\int_{V_0-V'}\rho_p\,\ud v=\int_{S'}\ve P\cdot\ve n\,\ud a+\int_{V_0-V'}\!\!\!\!\!-\diver\ve P\,\ud v\\
+=&\int_{S'}\ve P\cdot\ve n\,\ud a-\int_{S_0+S'}\ve P\cdot\ve n\,\ud a=-\int_{S_0}\ve P\cdot\ve n\,\ud a
+\end{aligned}
 \label{qp04}
 \end{equation}
-Nel primo passaggio abbiamo usato $\rho_p=-\diver\ve P$ e $\sigma_p=\ve P\cdot\ve n$, nel secondo il teorema della divergenza.
+Nel primo passaggio abbiamo usato $\rho_p=-\diver\ve P$ e $\sigma_p=\ve P\cdot\ve n$, nel secondo il teorema della divergenza. Nel calcolo non abbiamo considerato la superficie $S_0$ perché non è una superficie fisica del dielettrico\footnote{La questione è delicata. Il risultato della sezione \ref{section:Campo_elettrico_generato_da_un_dielettrico} è valido sia che il volume (la superficie) considerato sia quello del dielettrico o sia un volume (superficie) immaginaria interna al dielettrico. Quindi non è chiaro perché nell'equazione \eqref{qp04} non venga considerato l'integrale su $S_0$. Possiamo fare questo ragionamento: considerando il volume $V_0$ e usando il ragionamento del paragrafo \ref{section:Campo_elettrico_generato_da_un_dielettrico} troviamo una densità di carica superficiale su $S_0$, ma questa non è l'unica carica presente su questa superficie, infatti se consideriamo il volume dato dal volume totale del dielettrico meno $V$ allora troveremo che sulla superficie $S_0$ c'è un'altra carica superficiale che annulla quella precedente. Quindi in generale sulle superfici immaginarie interne ai dielettrici non ci sono cariche superficiali di polarizzazione.}. È come se ci fossero della cariche sulla superficie (immaginaria) $S_0$\footnote{Questo non è in contraddizione con la nota precedente. Infatti se rifacessimo il conto dell'equazione \eqref{qp04} considerando anche la superficie $S_0$ e le cariche indotte su di esso allora sarebbe $q_p=0$, ma poiché non le abbiamo considerate il risultato è proprio quello che manca col segno invertito, cioè $-\int_{S_0}\ve P\cdot\ver n\,\ud  a$. Inoltre possiamo fare quel'altro ragionamento. Consideriamo il dielettrico come formato da due dielettrici separati dalla superficie $S_0$. Il dielettrico interno avrà una carica totale nulla. Quello esterno avrà una carica di polarizzazione sulla superifice $S_0$ con una normale uscente se consideriamo il dielettrico esterno, ma entrante se consideriamo il dielettrico interno. Esso $S_0$ una superficie in comune questa carica superficiale risulta come carica di polarizzazione per il volume immaginario $V_0$.}. Sostituendo la carica di polarizzazione nel teorema di gauss:
 \begin{equation}
 \varepsilon_0\oint_{S_0}\ve E\cdot\ve n\,\ud a=q-\oint_{S_0}\ve P\cdot\ve n\,\ud a
 \end{equation}
 usando il teorema della divergenza:
 \begin{equation}
-\varepsilon_0\int_{V_0}\diver\ve E\,\ud v=\int_{V_0}\rho\,\ud v-\int_V\diver\ve P\,\ud v=\int_{V_0}(\rho+\rho_p)\,\ud v
+\varepsilon_0\int_{V_0}\diver\ve E\,\ud v=\int_{V_0}\rho\,\ud v-\int_{V_0}\diver\ve P\,\ud v=\int_{V_0}(\rho+\rho_p)\,\ud v
 \end{equation}
 quindi:
 \begin{equation}
-\diver\ve E=\frac{1}{\epsilon_0}\left(\rho+\rho_p\right)
+\diver\ve E=\frac{1}{\varepsilon_0}\left(\rho+\rho_p\right)
 \end{equation}
+e siamo praticamente tornati al teorema di Gauss per i dielettrici \eqref{gauss_dielettrici_3}.
 \subsubsection{Vettore induzione elettrica}
 Se sostituiamo l'espressione di $q_p$ data dalla \eqref{qp04} nel teorema di Gauss informa integrale per i dielettrici \eqref{gauss_dielettrici_3} si ottiene:
 \begin{equation}
@@ -2736,7 +2753,7 @@ con $q$ cariche libere. In forma differenziale, usando il teorema della divergen
 \end{equation}
 con $\rho$ densità di volumetrica di cariche libere.
 \[
-[D]=\coulomb\per\per\meter\squared
+[D]=\coulomb\per\meter^2
 \]
 \section{Suscettività e permittività}
 Per chiudere il problema, cioè determinare il campo elettrico serve una nuova equazione, in quanto il campo elettrico è funzione delle cariche di polarizzazione, le quali sono funzione del vettore polarizzazione elettrica il quale è funzione del campo elettrico. Leghiamo direttamente il vettore polarizzazione elettrica con il campo esterno:
@@ -2769,12 +2786,12 @@ usando questa definizione la \eqref{induzione_elettrica16} diventa:
 \varepsilon_r=\frac{\varepsilon}{\varepsilon_0}=\left(1+\frac{\chi_e}{\varepsilon_0}\right)
 \end{equation}
 \end{Def}
-chiamata anche permittività dielettrica relativa del mezzo rispetto al vuoto. \`E uno scalare adimensionale e per il vuoto $\varepsilon_r=1$, per i materiali è maggiore di $1$. Si ha allora:
+chiamata anche permittività dielettrica relativa del mezzo rispetto al vuoto. \`E uno scalare adimensionale e per il vuoto $\varepsilon_r=1$, per i dielettrici è maggiore di $1$. Si ha allora:
 \begin{equation}
 \varepsilon=\varepsilon_0\varepsilon_r
 \end{equation}
 \begin{equation}
-\ve D=\varepsilon\ve E=\frac{\varepsilon}{\chi_e}\ve P
+\ve D=\varepsilon\ve E=\varepsilon_0\varepsilon_r\ve E=\frac{\varepsilon}{\chi_e}\ve P
 \end{equation}
 Se il mezzo è isotropo i tre vettori $\ve D$, $\ve E$, $\ve P$ sono paralleli.
 
@@ -2832,7 +2849,7 @@ D_{1n}\ud A_1-D_{2n}\ud A_2=\sigma\ud A
 D_{1n}-D_{2n}=\sigma
 \label{D_normale02}
 \end{equation}
-Se non c'è carica sulla superficie di separazione allora le due componenti normali sono uguali e $D_n$ varia con continuità.
+Se non c'è carica sulla superficie di separazione allora le due componenti normali sono uguali e $D_n$ varia con continuità. In generale se ogni volta che usciamo da una superficie (cioè ci muoviamo nella direzione della sua normale) la componente normale uscente di $D$ aumenta.
 \subsection{\texorpdfstring{$\vec E$}{E} tangente}
 \begin{figure}[htbp]
 \centering
