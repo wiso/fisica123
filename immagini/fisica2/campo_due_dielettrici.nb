@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     37921,       1062]
-NotebookOptionsPosition[     36847,       1025]
-NotebookOutlinePosition[     37183,       1040]
-CellTagsIndexPosition[     37140,       1037]
+NotebookDataLength[     38553,       1071]
+NotebookOptionsPosition[     37478,       1034]
+NotebookOutlinePosition[     37814,       1049]
+CellTagsIndexPosition[     37771,       1046]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -946,39 +946,37 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"finale2", "=", 
    RowBox[{"GraphicsRow", "[", 
-    RowBox[{"{", 
-     RowBox[{"plotEz3D", ",", "plotEz2D"}], "}"}], "]"}]}], 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"plotEz3D", ",", "plotEz2D"}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "1600"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"finale3", "=", 
    RowBox[{"GraphicsRow", "[", 
-    RowBox[{"{", 
-     RowBox[{"plotEx3D", ",", "plotEx2D"}], "}"}], "]"}]}], ";"}]}], "Input",
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"plotEx3D", ",", "plotEx2D"}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "1600"}]}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.460466323329321*^9, 3.460466378686386*^9}, {
   3.4605319385827703`*^9, 3.460531958369364*^9}, {3.46053200267531*^9, 
-  3.4605320095345297`*^9}}],
+  3.4605320095345297`*^9}, {3.460542090543899*^9, 3.460542128395258*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{
     RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici2.pdf\>\"", ",", "finale2"}], "]"}], 
+     RowBox[{"\"\<campo_due_dielettrici2.png\>\"", ",", "finale2"}], "]"}], 
     ";", "\[IndentingNewLine]", 
     RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici2.eps\>\"", ",", "finale2"}], "]"}], 
-    ";"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici3.pdf\>\"", ",", "finale3"}], "]"}], 
-    ";", "\[IndentingNewLine]", 
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici3.eps\>\"", ",", "finale3"}], "]"}], 
-    ";"}], "*)"}]}]], "Input",
+     RowBox[{"\"\<campo_due_dielettrici3.png\>\"", ",", "finale3"}], "]"}], 
+    ";"}], "*)"}], "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.460466426554652*^9, 3.460466428526536*^9}, {
   3.4605319537037*^9, 3.460531971380184*^9}, {3.460532001872706*^9, 
-  3.460532012174326*^9}}],
+  3.460532012174326*^9}, {3.460541983847013*^9, 3.4605420053369083`*^9}, {
+  3.4605421886185703`*^9, 3.4605421912167*^9}, {3.4605436006824703`*^9, 
+  3.460543603167582*^9}, {3.460543645875609*^9, 3.460543648550872*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -988,7 +986,13 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"z", ",", 
        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "plotrange"}]}], "]"}]}], ";"}], "\n", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<\>\""}], "}"}]}], ",", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", "None"}], "}"}]}]}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"finale5", "=", 
    RowBox[{"Plot", "[", 
@@ -996,32 +1000,37 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"z", ",", 
        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "plotrange"}]}], "]"}]}], 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<\>\""}], "}"}]}], ",", 
+     RowBox[{"Ticks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", "None"}], "}"}]}]}], "]"}]}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.4604648780461473`*^9, 3.460464898034512*^9}, {
   3.460465290137678*^9, 3.460465291246896*^9}, {3.4604655428520393`*^9, 
   3.460465577809648*^9}, {3.460530303497429*^9, 3.460530306963793*^9}, {
-  3.460531975714471*^9, 3.460531993129078*^9}}],
+  3.460531975714471*^9, 3.460531993129078*^9}, {3.460544195274832*^9, 
+  3.460544196002305*^9}, {3.460544236633954*^9, 3.460544322416017*^9}}],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici4.pdf\>\"", ",", "finale4"}], "]"}], 
-    ";", "\[IndentingNewLine]", 
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici4.eps\>\"", ",", "finale4"}], "]"}], 
-    ";"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici5.pdf\>\"", ",", "finale5"}], "]"}], 
-    ";", "\[IndentingNewLine]", 
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<Campo_due_dielettrici5.eps\>\"", ",", "finale5"}], "]"}], 
-    ";"}], "*)"}]}]], "Input",
- CellChangeTimes->{{3.4605320194476643`*^9, 3.460532030427256*^9}}]
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<campo_due_dielettrici4.pdf\>\"", ",", "finale4"}], "]"}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<campo_due_dielettrici4.eps\>\"", ",", "finale4"}], "]"}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<campo_due_dielettrici5.pdf\>\"", ",", "finale5"}], "]"}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<campo_due_dielettrici5.eps\>\"", ",", "finale5"}], "]"}], 
+   ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.4605320194476643`*^9, 3.460532030427256*^9}, {
+  3.460544328253244*^9, 3.460544361209618*^9}}]
 },
 WindowSize->{1024, 746},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -1053,10 +1062,10 @@ Cell[21942, 617, 1634, 37, 62, "Input"],
 Cell[23579, 656, 477, 10, 31, "Input"],
 Cell[24059, 668, 372, 9, 52, "Input"],
 Cell[24434, 679, 9540, 263, 432, "Input"],
-Cell[33977, 944, 527, 14, 52, "Input"],
-Cell[34507, 960, 803, 20, 92, "Input"],
-Cell[35313, 982, 818, 21, 52, "Input"],
-Cell[36134, 1005, 709, 18, 92, "Input"]
+Cell[33977, 944, 713, 18, 52, "Input"],
+Cell[34693, 964, 705, 14, 72, "Input"],
+Cell[35401, 980, 1377, 34, 52, "Input"],
+Cell[36781, 1016, 693, 16, 92, "Input"]
 }
 ]
 *)
