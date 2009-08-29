@@ -1,0 +1,1063 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     37921,       1062]
+NotebookOptionsPosition[     36847,       1025]
+NotebookOutlinePosition[     37183,       1040]
+CellTagsIndexPosition[     37140,       1037]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"distanza", " ", "=", " ", "2"}], ";"}]], "Input",
+ CellChangeTimes->{{3.460462451570285*^9, 3.46046245334437*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"q1", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"e1", "-", "e2"}], ")"}], " ", 
+    RowBox[{"q", "/", 
+     RowBox[{"(", 
+      RowBox[{"e1", "+", "e2"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q2", "=", 
+   RowBox[{"2", " ", "e2", " ", 
+    RowBox[{"q", "/", 
+     RowBox[{"(", 
+      RowBox[{"e1", "+", "e2"}], ")"}]}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.460455356149506*^9, 3.4604553677587337`*^9}, 
+   3.460456179327344*^9, {3.4605321122418823`*^9, 3.460532142667194*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"V", "[", 
+   RowBox[{"rho_", ",", "z_"}], "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"z", "\[GreaterEqual]", "0"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"1", "/", "e1"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"q", "/", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{
+          RowBox[{"rho", "^", "2"}], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "-", "d"}], ")"}], "2"]}], "]"}]}], "+", 
+       RowBox[{"q1", "/", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{
+          RowBox[{"rho", "^", "2"}], "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"z", "+", "d"}], ")"}], "2"]}], "]"}]}]}], ")"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"q2", "/", "e2"}], " ", 
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{"rho", "^", "2"}], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"z", "-", "d"}], ")"}], "2"]}], "]"}]}]}]}], 
+   "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"V", "[", 
+   RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], ":=", 
+  RowBox[{"V", "[", 
+   RowBox[{
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"y", "^", "2"}]}], "]"}], ",", "z"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Campo", "[", 
+    RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"V", "[", 
+          RowBox[{"a", ",", "b", ",", "c"}], "]"}], ",", "a"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"V", "[", 
+          RowBox[{"a", ",", "b", ",", "c"}], "]"}], ",", "b"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"V", "[", 
+          RowBox[{"a", ",", "b", ",", "c"}], "]"}], ",", "c"}], "]"}]}], 
+      "}"}]}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", "\[Rule]", "x"}], ",", 
+      RowBox[{"b", "\[Rule]", "y"}], ",", 
+      RowBox[{"c", "\[Rule]", "z"}]}], "}"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.4604553768339643`*^9, 3.460455410822866*^9}, {
+   3.460455600308947*^9, 3.460455613361505*^9}, {3.460456070120699*^9, 
+   3.460456158193551*^9}, {3.4604568117935047`*^9, 3.460456829119047*^9}, 
+   3.460456869227084*^9, 3.460458077483592*^9, 3.460459107118577*^9, 
+   3.4604723678636093`*^9, {3.460532060722866*^9, 3.460532076588387*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"carica", "[", 
+   RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"e1", "-", "1"}], ")"}], " ", 
+    RowBox[{
+     RowBox[{"Limit", "[", 
+      RowBox[{
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+       RowBox[{"z", "\[Rule]", "0"}], ",", 
+       RowBox[{"Direction", "\[Rule]", 
+        RowBox[{"-", "1"}]}]}], "]"}], "[", 
+     RowBox[{"[", "3", "]"}], "]"}]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"e2", "-", "1"}], ")"}], " ", 
+    RowBox[{
+     RowBox[{"Limit", "[", 
+      RowBox[{
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+       RowBox[{"z", "\[Rule]", "0"}], ",", 
+       RowBox[{"Direction", "\[Rule]", "1"}]}], "]"}], "[", 
+     RowBox[{"[", "3", "]"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.460467222730485*^9, 3.460467238004862*^9}, {
+   3.460467345522861*^9, 3.460467345727414*^9}, {3.460467428240612*^9, 
+   3.46046746539327*^9}, {3.460467497544425*^9, 3.4604675672601223`*^9}, {
+   3.4604676096784887`*^9, 3.460467633821157*^9}, {3.4604676999180803`*^9, 
+   3.460467700811063*^9}, {3.460467985262719*^9, 3.460467989759343*^9}, 
+   3.460468052359249*^9, {3.460468102470792*^9, 3.460468103828434*^9}, {
+   3.460468333819559*^9, 3.460468381731022*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"caricaP", "[", "x_", "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"carica", "[", 
+     RowBox[{"x", ",", "0"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}]}], "}"}]}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.460467761366356*^9, 3.460467799336177*^9}, {
+  3.460467927282014*^9, 3.460467973468882*^9}, {3.46046806411412*^9, 
+  3.460468087319356*^9}, {3.460468292421784*^9, 3.460468292550048*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"min", "=", 
+   RowBox[{"First", "[", 
+    RowBox[{"Minimize", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"caricaP", "[", "x", "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "5"}], "<=", "x", "\[LessEqual]", 
+          RowBox[{"-", "1"}]}], " ", "||", " ", 
+         RowBox[{"1", "\[LessEqual]", "x", "\[LessEqual]", "5"}]}]}], "}"}], 
+      ",", "x"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"max", "=", 
+   RowBox[{"First", "[", 
+    RowBox[{"Maximize", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"caricaP", "[", "x", "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "5"}], "<=", "x", "\[LessEqual]", 
+          RowBox[{"-", "1"}]}], " ", "||", " ", 
+         RowBox[{"1", "\[LessEqual]", "x", "\[LessEqual]", "5"}]}]}], "}"}], 
+      ",", "x"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.4604691917028437`*^9, 3.460469242007155*^9}, {
+  3.460469300135249*^9, 3.460469362832121*^9}, {3.460469457414804*^9, 
+  3.460469507335598*^9}, {3.4605272510827427`*^9, 3.460527294767518*^9}, {
+  3.460530743392228*^9, 3.460530744581744*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"caricaPlot", "=", 
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "x"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "u"}], "}"}], ",", 
+        RowBox[{"Blend", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"White", ",", "Black"}], "}"}], ",", 
+          RowBox[{"Rescale", "[", 
+           RowBox[{
+            RowBox[{"caricaP", "[", "u", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"min", ",", "max"}], "}"}]}], "]"}]}], "]"}]}], "]"}]}], 
+     ",", 
+     RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQvUnwQkPgiZeO3bUnG0F0FkddB4gWPratB0Rv+1S6
+DURL71m1A0SrSNvtBdFHFv7eD6LXfXt/FES/uJt9DEQ/C8i/CaLtPjPcAdGz
+P314AKKdw9KfgGgNwRcqQUD6QZuTBohe18gWDKI5/9aGgmiljRbJIPrI6WAw
+PUH7w10Q7bim9zmInlF5/CeItng+hSUYSNv/m9UEoi/8UWoD0c+UC7tB9Ops
+hYkg2uVV9VQQHbw4YgaIZjOfeRBEf/m7FEy3aH0+AaIlONpPg2g1zezLIJpb
+oxdMX7j47x6InrNy0X0Q3dNc+hhEr7A++gREixhfegOiPzhfB9P6nEWuBUDa
+oeIrmAYAbgnGfQ==
+  "]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"xxx", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3", ",", "4"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VPlotP", " ", "=", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"V", "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VPlotM", " ", "=", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"V", "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoPlotP", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"Campo", "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoPlotM", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"Campo", "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoDPlotP", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"e1", " ", 
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}]}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoDPlotM", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{"e2", " ", 
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}]}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampiPlotXP", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Simplify", "[", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Campo", "[", 
+          RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", 
+        RowBox[{"Assumptions", "\[Rule]", 
+         RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"q", "\[Rule]", "1"}], ",", 
+        RowBox[{"e1", "\[Rule]", "1"}], ",", 
+        RowBox[{"e2", "\[Rule]", "5"}], ",", 
+        RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+        RowBox[{"y", "\[Rule]", "0"}], ",", 
+        RowBox[{"x", "\[Rule]", "xx"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"xx", ",", "xxx"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CampiPlotXM", "=", 
+    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Simplify", "[", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Campo", "[", 
+           RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"Assumptions", "\[Rule]", 
+          RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"q", "\[Rule]", "1"}], ",", 
+         RowBox[{"e1", "\[Rule]", "1"}], ",", 
+         RowBox[{"e2", "\[Rule]", "5"}], ",", 
+         RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+         RowBox[{"y", "\[Rule]", "0"}], ",", 
+         RowBox[{"x", "\[Rule]", "xx"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"xx", ",", "xxx"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampiPlotZP", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Simplify", "[", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Campo", "[", 
+          RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+         RowBox[{"[", "3", "]"}], "]"}], ",", 
+        RowBox[{"Assumptions", "\[Rule]", 
+         RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"q", "\[Rule]", "1"}], ",", 
+        RowBox[{"e1", "\[Rule]", "1"}], ",", 
+        RowBox[{"e2", "\[Rule]", "5"}], ",", 
+        RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+        RowBox[{"y", "\[Rule]", "0"}], ",", 
+        RowBox[{"x", "\[Rule]", "xx"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"xx", ",", "xxx"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CampiPlotZM", "=", 
+    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Simplify", "[", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Campo", "[", 
+           RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+          RowBox[{"[", "3", "]"}], "]"}], ",", 
+         RowBox[{"Assumptions", "\[Rule]", 
+          RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"q", "\[Rule]", "1"}], ",", 
+         RowBox[{"e1", "\[Rule]", "1"}], ",", 
+         RowBox[{"e2", "\[Rule]", "5"}], ",", 
+         RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+         RowBox[{"y", "\[Rule]", "0"}], ",", 
+         RowBox[{"x", "\[Rule]", "xx"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"xx", ",", "xxx"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoPlotZP1", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", ">", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}], ",", 
+      RowBox[{"x", "\[Rule]", "1"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoPlotZM1", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Simplify", "[", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Campo", "[", 
+        RowBox[{"x", ",", "y", ",", "z"}], "]"}], "[", 
+       RowBox[{"[", "3", "]"}], "]"}], ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"z", "<", "0"}]}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"q", "\[Rule]", "1"}], ",", 
+      RowBox[{"e1", "\[Rule]", "1"}], ",", 
+      RowBox[{"e2", "\[Rule]", "5"}], ",", 
+      RowBox[{"d", "\[Rule]", "distanza"}], ",", 
+      RowBox[{"y", "\[Rule]", "0"}], ",", 
+      RowBox[{"x", "\[Rule]", "1"}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdyk0ogwEAxvHZkstobTmwqc22kFk+tuazZsS02TS0qJmtppUareagjCbJ
+RVa0i3ppo+ZiF6UV5SJN5KNJUdrKMsKWj6U1vM97ePr11F9gnTDY6DQajUcO
+Et6yFu1Jsj3VFlZRGoxxWHm9/ASPmvbeoOVy+wNaOcY/KC1fpJzZ3K3rJY2Y
+C2SwWkR0ws9AlRpeJQg9TBT5DHBdqxmHB+5LJ6SXxFZh/492jfoVeQScFdo3
+oCcqeNeR5tivKbjiEab0pGPKUBo6ZXOMPlLxgpQJlxw7xfAmxuDC41RWBM8I
+uRgaeLkaeBEONsA0S90Iu13mVnjeTB+AKjtrEFpKt4ZhvklhgmwNx0b1XrYd
+KpXxR5jjBBOwPvLwDCWFXS+Qb9IpTaSh70wHVDBrjfD+KzME9/2OEfgb9VL2
+hN2uCdLb08MpKM9y5+Gdn08pGQ1wJ0mnfUnKf0ys68g=
+  "]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"VPlot", " ", "=", " ", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"z", ">", "0"}], ",", "VPlotP", ",", "VPlotM"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoPlot", " ", "=", " ", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"z", ">", "0"}], ",", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"Delete", "[", 
+       RowBox[{"CampoPlotP", ",", "2"}], "]"}], "]"}], ",", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"Delete", "[", 
+       RowBox[{"CampoPlotM", ",", "2"}], "]"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampoDPlot", "=", " ", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"z", ">", "0"}], ",", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"Delete", "[", 
+       RowBox[{"CampoDPlotP", ",", "2"}], "]"}], "]"}], ",", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"Delete", "[", 
+       RowBox[{"CampoDPlotM", ",", "2"}], "]"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampiXPlot", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"z", ">", "0"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], "/@", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"CampiPlotXP", ",", "CampiPlotXM"}], "}"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CampiZPlot", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"z", ">", "0"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], "/@", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"CampiPlotZP", ",", "CampiPlotZM"}], "}"}], "]"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.460458495949657*^9, 3.460458509792266*^9}, 
+   3.460458904856254*^9, {3.4604594234623117`*^9, 3.460459501838841*^9}, {
+   3.460459668218096*^9, 3.460459697018344*^9}, {3.4604645286485777`*^9, 
+   3.460464570950584*^9}, {3.460464641940856*^9, 3.460464642968316*^9}, {
+   3.460464720128042*^9, 3.4604647238255444`*^9}, {3.460464864866296*^9, 
+   3.46046487086709*^9}, {3.4604651546358128`*^9, 3.4604652381270723`*^9}, {
+   3.460465493585702*^9, 3.460465507326847*^9}, {3.460491831914895*^9, 
+   3.460491840765946*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"contourP", "=", 
+   RowBox[{"ContourPlot", "[", 
+    RowBox[{"VPlot", ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Contours", "\[Rule]", "10"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", "Red"}], ",", 
+     RowBox[{"RegionFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "z"}], "}"}], ",", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"x", "-", "2"}], ")"}], "2"], "+", 
+          SuperscriptBox["z", "2"]}], ">", "2"}]}], "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.460457953157134*^9, 3.460457975432301*^9}, {
+   3.4604582241562757`*^9, 3.460458238770721*^9}, {3.460458294858642*^9, 
+   3.4604582959526176`*^9}, {3.460458407345707*^9, 3.46045841578069*^9}, {
+   3.460458514200495*^9, 3.460458520029129*^9}, {3.4604589916206636`*^9, 
+   3.460459029344851*^9}, {3.460459699504118*^9, 3.460459699662881*^9}, {
+   3.460459730008515*^9, 3.460459734439776*^9}, {3.460460078368384*^9, 
+   3.460460090684886*^9}, {3.460466178464072*^9, 3.4604662513393393`*^9}, {
+   3.460473080044285*^9, 3.460473110145626*^9}, {3.460474162439952*^9, 
+   3.460474162566008*^9}, 3.460530604041102*^9, {3.460530703411726*^9, 
+   3.4605307068270893`*^9}, {3.460531712971581*^9, 3.460531772535*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"streamP", "=", 
+   RowBox[{"StreamPlot", "[", 
+    RowBox[{"CampoPlot", ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"StreamStyle", "\[Rule]", 
+      RowBox[{"GrayLevel", "[", ".2", "]"}]}], ",", 
+     RowBox[{"StreamPoints", "\[Rule]", "Fine"}], ",", 
+     RowBox[{"RegionFunction", "\[Rule]", 
+      RowBox[{"Function", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "z"}], "}"}], ",", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"x", "-", "2"}], ")"}], "2"], "+", 
+          SuperscriptBox["z", "2"]}], ">", "2"}]}], "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.460459523734335*^9, 3.4604595397724657`*^9}, {
+   3.4604595870101147`*^9, 3.460459589437052*^9}, {3.4604597092057743`*^9, 
+   3.460459709297967*^9}, {3.460460277503744*^9, 3.460460279453298*^9}, {
+   3.4604727814817142`*^9, 3.460472787986166*^9}, {3.4604728696049643`*^9, 
+   3.4604728724385023`*^9}, {3.460472978196865*^9, 3.4604730565860567`*^9}, {
+   3.4604732959059143`*^9, 3.460473359597056*^9}, {3.460473402322633*^9, 
+   3.460473439164225*^9}, {3.460473585656356*^9, 3.46047358846177*^9}, {
+   3.460473619711341*^9, 3.46047366446702*^9}, {3.460473775418462*^9, 
+   3.460474014088809*^9}, 3.4605306115945168`*^9, 3.4605307160308237`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finale", "=", 
+   RowBox[{"Show", "[", 
+    RowBox[{"{", 
+     RowBox[{"contourP", ",", "streamP", ",", "caricaPlot"}], "}"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.460459743297368*^9, 3.4604597499041033`*^9}, {
+   3.4604666721832037`*^9, 3.460466673159444*^9}, {3.46047265123633*^9, 
+   3.460472653193108*^9}, {3.460530632760902*^9, 3.460530694865946*^9}, {
+   3.460531668248794*^9, 3.460531669537662*^9}, 3.460531915262866*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<Campo_due_dielettrici1.pdf\>\"", ",", "finale"}], "]"}], ";",
+    "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<Campo_due_dielettrici1.eps\>\"", ",", "finale"}], "]"}], 
+   ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.4605318241226883`*^9, 3.460531910730535*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"plotrange", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.07"}], ",", "0.07"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotEz3D", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{"CampoPlot", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}], ",", 
+     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "3"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", "Black"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MeshFunctions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"#2", "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Length", "[", "xxx", "]"}], "}"}]}], "]"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"#3", "&"}], "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"#1", "&"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "#", "}"}], "&"}], "/@", "xxx"}], ")"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", "6", "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", "0.", "}"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Dashed", ",", "#"}], "}"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"ColorData", "[", 
+            RowBox[{"1", ",", "\"\<ColorList\>\""}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ";;", 
+             RowBox[{"Length", "[", "xxx", "]"}]}], "]"}], "]"}], ")"}]}], 
+        ")"}], "~", "Join", "~", 
+       RowBox[{"{", "Thick", "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Red"}], "}"}], "}"}]}]}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"plotEz2D", "=", 
+   RowBox[{"DensityPlot", "[", 
+    RowBox[{
+     RowBox[{"CampoPlot", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}], ",", 
+     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "3"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", "Black"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MeshFunctions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"#2", "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Length", "[", "xxx", "]"}], "}"}]}], "]"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"#1", "&"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "#", "}"}], "&"}], "/@", "xxx"}], ")"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"{", "0.", "}"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Dashed", ",", "#"}], "}"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"ColorData", "[", 
+            RowBox[{"1", ",", "\"\<ColorList\>\""}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ";;", 
+             RowBox[{"Length", "[", "xxx", "]"}]}], "]"}], "]"}], ")"}]}], 
+        ")"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Red"}], "}"}], "}"}]}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotEx3D", "=", 
+   RowBox[{"Plot3D", "[", 
+    RowBox[{
+     RowBox[{"CampoPlot", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}], ",", 
+     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "3"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", "Black"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MeshFunctions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"#2", "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Length", "[", "xxx", "]"}], "}"}]}], "]"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"#3", "&"}], "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"#1", "&"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "#", "}"}], "&"}], "/@", "xxx"}], ")"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", "6", "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", "0.", "}"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Dashed", ",", "#"}], "}"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"ColorData", "[", 
+            RowBox[{"1", ",", "\"\<ColorList\>\""}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ";;", 
+             RowBox[{"Length", "[", "xxx", "]"}]}], "]"}], "]"}], ")"}]}], 
+        ")"}], "~", "Join", "~", 
+       RowBox[{"{", "Thick", "}"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Red"}], "}"}], "}"}]}]}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"plotEx2D", "=", 
+   RowBox[{"DensityPlot", "[", 
+    RowBox[{
+     RowBox[{"CampoPlot", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<z\>\"", ",", "\"\<x\>\""}], "}"}]}], ",", 
+     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "3"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<Temperature\>\""}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", "Black"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MeshFunctions", "\[Rule]", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"#2", "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Length", "[", "xxx", "]"}], "}"}]}], "]"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"#1", "&"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Mesh", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "#", "}"}], "&"}], "/@", "xxx"}], ")"}], "~", "Join", 
+       "~", 
+       RowBox[{"{", 
+        RowBox[{"{", "0.", "}"}], "}"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MeshStyle", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Dashed", ",", "#"}], "}"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"ColorData", "[", 
+            RowBox[{"1", ",", "\"\<ColorList\>\""}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ";;", 
+             RowBox[{"Length", "[", "xxx", "]"}]}], "]"}], "]"}], ")"}]}], 
+        ")"}], "~", "Join", "~", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Red"}], "}"}], "}"}]}]}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQB2IQve3p+xe+J146eu7+/hlEH7mh8QtEN53K/QOiX02O
+YfAD0sVWCSwgOnDfKQ4QzTNFlgtEn9haswREGy7XWgai81hiVoPoyQ1Ja0B0
+iGzUdhDdYtm8C0R/V7zyBEQfbbgGpvXW8zP7A2n2g8osIPrBtTkqIPpA+hRV
+EK2wOl4TRB+r7DYA0eV7vd1BdIHCQw8QLZ/G2AOiPRy5wXSRdMaFACD97IT9
+RRDNVrb1Boj+8PznXRA9QcFsfQiQ/qQcuwlEzzsg6RoKpN0XmINpmR3/w/OB
+9CGhFVEg2ufT3lQQrWaqmQ6i06r1p4DoV4d+rQTRX7bX7gfRWc0vD4Do+042
+nAVA2qY6mQdEm/2snQmi/1S/BtMAVAPHVg==
+  "]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"finale2", "=", 
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", 
+     RowBox[{"plotEz3D", ",", "plotEz2D"}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finale3", "=", 
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", 
+     RowBox[{"plotEx3D", ",", "plotEx2D"}], "}"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.460466323329321*^9, 3.460466378686386*^9}, {
+  3.4605319385827703`*^9, 3.460531958369364*^9}, {3.46053200267531*^9, 
+  3.4605320095345297`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici2.pdf\>\"", ",", "finale2"}], "]"}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici2.eps\>\"", ",", "finale2"}], "]"}], 
+    ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici3.pdf\>\"", ",", "finale3"}], "]"}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici3.eps\>\"", ",", "finale3"}], "]"}], 
+    ";"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.460466426554652*^9, 3.460466428526536*^9}, {
+  3.4605319537037*^9, 3.460531971380184*^9}, {3.460532001872706*^9, 
+  3.460532012174326*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"finale4", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{"CampiXPlot", ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"finale5", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{"CampiZPlot", ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "plotrange"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.4604648780461473`*^9, 3.460464898034512*^9}, {
+  3.460465290137678*^9, 3.460465291246896*^9}, {3.4604655428520393`*^9, 
+  3.460465577809648*^9}, {3.460530303497429*^9, 3.460530306963793*^9}, {
+  3.460531975714471*^9, 3.460531993129078*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici4.pdf\>\"", ",", "finale4"}], "]"}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici4.eps\>\"", ",", "finale4"}], "]"}], 
+    ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici5.pdf\>\"", ",", "finale5"}], "]"}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<Campo_due_dielettrici5.eps\>\"", ",", "finale5"}], "]"}], 
+    ";"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.4605320194476643`*^9, 3.460532030427256*^9}}]
+},
+WindowSize->{1024, 746},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (December 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 149, 3, 31, "Input"],
+Cell[552, 18, 553, 16, 52, "Input"],
+Cell[1108, 36, 2604, 78, 168, "Input"],
+Cell[3715, 116, 1353, 34, 31, "Input"],
+Cell[5071, 152, 642, 16, 52, "Input"],
+Cell[5716, 170, 1235, 32, 72, "Input"],
+Cell[6954, 204, 1475, 39, 72, "Input"],
+Cell[8432, 245, 9231, 259, 492, "Input"],
+Cell[17666, 506, 2472, 68, 112, "Input"],
+Cell[20141, 576, 1798, 39, 83, "Input"],
+Cell[21942, 617, 1634, 37, 62, "Input"],
+Cell[23579, 656, 477, 10, 31, "Input"],
+Cell[24059, 668, 372, 9, 52, "Input"],
+Cell[24434, 679, 9540, 263, 432, "Input"],
+Cell[33977, 944, 527, 14, 52, "Input"],
+Cell[34507, 960, 803, 20, 92, "Input"],
+Cell[35313, 982, 818, 21, 52, "Input"],
+Cell[36134, 1005, 709, 18, 92, "Input"]
+}
+]
+*)
+

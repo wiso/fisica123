@@ -1313,6 +1313,7 @@ e mho?
 \section{Metodo delle cariche immagine}
 Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè con superfici di tenute ad un potenziale fisso e conosciuto, nei quali siano presenti anche cariche libere. A volte è possibile simulare l'effetto delle superfici con delle cariche opportune posizionate all'esterno del volume di interesse, chiamate cariche immagine.
 \begin{Es}[carica e piano infinito]
+ \label{es:carica_e_piano_infinito}
  Sia una carica $q$ posizionata sull'asse $x_+$ e sia il piano $y-z$ tenuto a terra. La stessa situzione si realizza con la carica $q$ e una carica immagine $-q$ posizionata simmetricamente rispetto alla carica reale. Infatti il potenziale delle due cariche:
  \[
   \varphi(x,y,z)=\frac{1}{\giorgi}\left(\frac{q}{\sqrt{(x-x_+)^2+y^2+z^2}}+\frac{-q}{\sqrt{(x-x_-)^2+y^2+z^2}}\right)
@@ -2823,6 +2824,36 @@ In forma differenziale:
 \ve\nabla\times\ve E=0
 \end{gather}
 Le equazioni sono 7 (tre dalla \eqref{numero_eq01}, tre dalla \eqref{numero_eq02}, una dalla \eqref{numero_eq03}), le incognite 7($\rho$,$\ve E$,$\ve D$).
+\begin{Es}[carica puntiforme]
+ Consideriamo una carica puntiforme $q$ in un dielettrico infinatemente esteso, omogeneo, isotropo e isotropo. Vogliamo calcolare il campo elettrico. Dal teorema di Gauss per i dielettrici $\int_s\ve D\cdot\ver n\,\ud a=q$ si ha che:
+ \[
+  \ve D = \frac{q}{4\pi}\frac{\ve r}{r^3}
+ \]
+ quindi da $\ve D=\varepsilon\ve E$ dove $\varepsilon=\varepsilon_0\varepsilon_r$:
+ \[
+  \ve E = \frac{q}{\giorgi\varepsilon_r}\frac{\ve r}{r^3}
+ \]
+ come si vede il campo è minore a causa del dielettrico che si è polarizzato. È interessante notare che questo campo elettrico è uguale al campo elettrico nel vuoto di una carica elettrica ridotta pari a $\frac{q}{\varepsilon_r}$. Questo effetto è dato dalla polarizzazione del dielettrico che induce delle cariche di polarizzazione che schermano la carica libera. Calcoliamole; ci serve il vettore di polarizzazione:
+ \[
+  \ve P(\ve r)=\chi_e\ve E(\ve r) = \frac{q\chi_e}{\giorgi}\frac{\ve r}{r^3}=\frac{q(\varepsilon_r-1)}{4\pi\varepsilon_r}\frac{\ve r}{r^3}
+ \]
+ spesso si preferisce lavorare in termini di $\varepsilon_r$ piuttosto che di $\chi_e$. Nonostante la polarizzazione non sia uniforme le cariche di polarizzazione volumetriche sono nulle in quanto $\diver \frac{\ve r}{r^3}=0$. Le densità di cariche di polarizzazione saranno sulla superficie del dielettrico. Una superficie è all'infinito, ma non è l'unica infatti anche la carica puntiforme costituisce una superficie. Consideriamo al posto di una carica puntiforme una sfera di raggio $a$. Su questa superficie:
+ \[
+  \sigma_p = -\frac{q(\varepsilon_r-1)}{4\pi\varepsilon_r}\frac{1}{a^2}
+ \]
+ avendo usato $\ve r\cdot\ve n=-r$. La carica totale di polarizzazione sulla sfera è
+ \[
+  q_p = -q\frac{\varepsilon_r-1}{\varepsilon_r}
+ \]
+ quindi le sorgenti del campo elettrico saranno tutte le cariche, sia quelle libere che quelle di polarizzazione:
+ \[
+  q + q_p = \frac{q}{\varepsilon_r}
+ \]
+ e allora abbiamo dimostrato che è come se ci fosse una carica ridotta di un fattore $\varepsilon_r$ nel vuoto.
+ 
+ Il dielettrico complessivamente rimane neutro grazie alle cariche di polarizzazione all'infinito.
+\end{Es}
+
 \section{Condizioni al contorno per \texorpdfstring{$\vec E$}{E} e \texorpdfstring{$\vec D$}{D}}
 \subsection{\texorpdfstring{$\vec D$}{D} ortogonale}
 \begin{figure}[htbp]
@@ -2892,6 +2923,75 @@ In modo analogo si può mostrare che anche la componente di $\ve D$ tangente sub
 \begin{equation}
 \frac{D_{1\tan}}{D_{2\tan}}=\frac{\varepsilon_{r2}}{\varepsilon_{r1}}
 \end{equation}
+\begin{Es}[piano di separazione]
+ Riproponiamo l'esempio \ref{es:carica_e_piano_infinito} a pagina \pageref{es:carica_e_piano_infinito} ma al posto del conduttore mettiamo un dielettrico. In particolare consideriamo due dielettrici caratterizzate da $\varepsilon_1$ e $\varepsilon_2$ separati da un piano $z=0$ e una carica puntiforme nel primo dielettrico, distante $d$ dal piano. Le equazioni differenziali del problema sono:
+ \begin{gather*}
+  \ve\nabla\cdot\ve D = \varepsilon_0\varepsilon_r(z)\ve\nabla\cdot\ve E = \rho \\
+  \ve\nabla\times\ve E = 0
+ \end{gather*}
+ dove $\varepsilon_r(z)$ è uguale a $\varepsilon_1$ per $z$ positivi e $\varepsilon_2$ altrimenti. Le condizioni al bordo sono:
+ \begin{gather*}
+  \varepsilon_0\varepsilon_2 E_z(x,y,0^-) = D_z(x,y,0^-) = D_z(x,y,0^+) = \varepsilon_0\varepsilon_1 E_z(x,y,0^+) \\
+  E_x(x,y,0-) = E_x(x,y,0+) \\
+  E_y(x,y,0-) = E_y(x,y,0+)
+ \end{gather*}
+ cioè abbiamo imposto la continuità sulla componente normale di $\ve D$ (non essendoci cariche libere sulla superficie di separazione) e la continuità sulle componenti tangenti di $\ve E$. Risolviamo il problema per la regione dove è presente la carica puntiforme. Per simulare le condizioni al bordo aggiungiamo una carica immagine puntiforme all'esterno della regione in considerazione. Per ragioni di simmetria la carica immagine sarà in posizione simmetrica rispetto alla carica reale. Poiché $\rot\ve E =0$ possiamo sempre considerare un potenziale. Considerando le due cariche:
+ \[
+  \varphi(\ve r) = \frac{1}{\giorgi\varepsilon_1}\left(\frac{q}{\norm{\ve r-\ve r_q}}+\frac{q'}{\norm{\ve r-\ve r_q'}}\right)
+ \]
+ questa è la soluzione per $z>0$. Nell'altro semispazio non ci sono cariche; l'unica carica che consideriamo è una carica immagine per simulare le condizioni al contorno. Questa carica sarà all'esterno della regione, quindi sarà in $z>0$ e scegliamo che sia nella posizione della carica vera:
+ \[
+  \varphi(\ve r) = \frac{1}{\giorgi\varepsilon_2}\frac{q''}{\norm{\ve r-\ve r_q''}}
+ \]
+ Per trovare $q'$ e $q''$ basta imporre le condizioni al contorno. Calcoliamo $E_z(x,y,0^\pm)$:
+ \begin{equation*}
+ \begin{aligned}
+  E_z(x,y,0^-) &= -\frac{\partial}{\partial z}\varphi(x,y,0^-) = \frac{q''}{\giorgi\varepsilon_2}\left(\frac{(z-z_q'')}{\norm{\ve r-\ve r_q''}^3}\right)_{z=0}\\
+  &=\frac{q''}{\giorgi\varepsilon_2}\left(\frac{-d}{\left(x^2+y^2+d^2\right)^{3/2}}\right)
+  =-\frac{q''}{\giorgi\varepsilon_2}\left(\frac{d}{\left(\rho^2+d^2\right)^{3/2}}\right)\\
+  E_z(x,y,0^+) &= -\frac{\partial}{\partial z}\varphi(x,y,0^+) = \frac{1}{\giorgi\varepsilon_1}\left(q\frac{(z-z_q)}{\norm{\ve r-\ve r_q}^3}+q'\frac{(z-z_q')}{\norm{\ve r-\ve r_q'}^3}\right)_{z=0}\\
+  &=\frac{q'-q}{\giorgi\varepsilon_1}\left(\frac{d}{\left(\rho^2+d^2\right)^{3/2}}\right)  
+ \end{aligned} 
+ \end{equation*}
+ ricordando che $z_q=z_q''=-z_q' = d$, $x_q=x_q'=x_q''=y_q=y_q'=y_q''=0$ e $\rho = \sqrt{x^2+y^2}$. Uguagliano $\varepsilon_2E_z(x,y,0^-)=\varepsilon_1E_z(x,y,0^+)$ si ottiene:
+ \[
+  q''=q-q'
+ \]
+ Per le componenti tangenziali calcoliamo la componente $x$:
+ \begin{equation*}
+ \begin{aligned}
+  E_x(x,y,0-) &= -\frac{\partial}{\partial x}\varphi(x,y,0^-) = \frac{q''}{\giorgi\varepsilon_2}\frac{x}{(\rho^2+d^2)^{3/2}}\\
+  E_x(x,y,0+) &= -\frac{\partial}{\partial x}\varphi(x,y,0^+) = \frac{1}{\giorgi\varepsilon_1}\left(\frac{qx}{(\rho^2+d^2)^{3/2}}+\frac{q'x}{(\rho^2+d^2)^{3/2}}\right)
+ \end{aligned}
+ \end{equation*}
+ uguagliandole:
+ \[
+  \frac{q''}{\varepsilon_2}=\frac{q+q'}{\varepsilon_1}
+ \]
+ usando la componente $y$ non si ottiene nulla in più, infatti il problema ha simmetria cilindrica e quindi è simmetrico rispetto allo scambio $x\leftrightarrow y$\footnote{Questo non vuol dire che la componente $y$ è inutile. Infatti abbiamo usato la simmetria per decidere che le cariche immagini sono sull'asse $z$. Se non l'avessimo fatto allora avremmo avuto bisogno anche di questa equazione.}. Usando le due equazioni trovate, risolvendo il sistema:
+ \[
+  q' = \frac{\varepsilon_1-\varepsilon_2}{\varepsilon_1+\varepsilon_2}q\qquad q'' = \frac{2\varepsilon_2}{\varepsilon_1+\varepsilon_2}q
+ \]
+
+ Per calcolare la carica di polarizzazione serve il vettore di polarizzazione: $\ve P = \chi_e\ve E=\varepsilon_0(\varepsilon_r-1)\ve E$. La divergenza di $\ve P$ è nulla in quanto dal teorema di Gauss la divergenza di $\ve E$ è nulla, tranne che nelle cariche puntiformi. Quindi la densità volumetriche di polarizzazione sono nulle. Le cariche superficiali sono invece sulla superficie di separazione:
+ \[
+  \sigma_\text{pol} = \ve P_1\cdot\ve n+\ve P_2\cdot\ve n = -\varepsilon_0(\varepsilon_1-1)\ve E_z(x,y,0^+)-\varepsilon_0(\varepsilon_2-1)\ve E_z(x,y,0^-)
+ \]
+ Il campo elettrico sul piano l'abbiamo già calcolato, quindi sostituendo, dopo varie semplificazioni:
+ \[
+  \sigma_\text{pol} = \frac{1}{2\pi}\frac{\varepsilon_1-\varepsilon_2}{\varepsilon_1(\varepsilon_1+\varepsilon_2)}\frac{d}{(\rho^2+d^2)^{3/2}}
+ \]
+ Riassumiamo con dei grafici quanto trovato. In figura \ref{fig:campo_piano_dielettrico} è rappresentato il potenziale elettrico, con le linee di forza del campo elettrico.
+ \begin{figure}[htbp]
+  \centering
+  \includegraphics{immagini/fisica2/Campo_due_dielettrici1}
+  \caption{Potenziale e campo elettrico per una carica con due regioni con costante dielettrica diversa. In particolare $\varepsilon_2 \text{(sinistra)}>\varepsilon_1\text{(destra)}$. Il colore del piano è proporzionale alla carica di polarizzazione. Il bordo rosso indica il limite della regione del grafico.}
+  \label{fig:campo_piano_dielettrico}
+ \end{figure}
+ Si noti che questo esempio è un caso generale dell'esempio \ref{es:carica_e_piano_infinito} in cui al posto dei dielettrici c'era il vuoto e un piano conduttore. L'esempio particolare si ottiene con $\varepsilon_1=1$ e $\varepsilon_2=\infty$. Infatti in questo caso: $q'=-q$ e $q''=0$. 
+\end{Es}
+
+
 \section{Energia del campo elettrostatico}
 Consideriamo $N$ conduttori con superfici $S_i, i=1\ldots N$. Partiamo dall'equazione \eqref{energia_sistema_cariche} che descrive l'energia per un sistema di cariche puntiformi:
 \begin{equation}
