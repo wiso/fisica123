@@ -7,7 +7,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
 kileversion=2.1
-lastDocument=TeX/fisica2.tex
+lastDocument=TeX/fisica1_1modulo.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -87,10 +87,10 @@ order=2
 
 [item:TeX/fisica2.tex]
 archive=true
-column=10
+column=518
 encoding=UTF-8
 highlight=LaTeX
-line=2957
+line=2983
 open=true
 order=4
 

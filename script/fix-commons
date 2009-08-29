@@ -6,5 +6,5 @@ then
     exit -1
 fi
 
-sed -i -r "s/\\\caption\{(.*?[^\.])\}/\\\caption{\1.}/gp" $1
+sed -i -r "s/\\\caption\{(.*?[^\.])\}/\\\caption{\1.}/g" $1
 
