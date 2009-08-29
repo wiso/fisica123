@@ -48,8 +48,8 @@ Print ["Plotting first graph"]
 finale=Show[{contourP,streamP,caricaPlot}];
 
 Print ["Saving first graph"]
-Export["campo_due_dielettrici1.pdf",finale];
-Export["campo_due_dielettrici1.eps",finale];
+Export["fisica2/campo_due_dielettrici1.pdf",finale];
+Export["fisica2/campo_due_dielettrici1.eps",finale];
 
 
 
@@ -68,8 +68,8 @@ finale3=GraphicsRow[{plotEx3D,plotEx2D},ImageSize->1600];
 
 
 Print["Saving 2nd, 3th plot (png)"]
-Export["campo_due_dielettrici2.png",finale2];
-Export["campo_due_dielettrici3.png",finale3];
+Export["fisica2/campo_due_dielettrici2.png",finale2];
+Export["fisica2/campo_due_dielettrici3.png",finale3];
 
 
 Print["Plotting final 4th, 5th plot"]  
@@ -77,9 +77,9 @@ finale4 = Plot[CampiXPlot, {z, -5, 5}, PlotRange -> plotrange, AxesLabel -> {"z"
 finale5 =   Plot[CampiZPlot, {z, -5, 5}, PlotRange -> plotrange, AxesLabel -> {"z", ""}, Ticks -> {Automatic, None}];
 
 Print["Saving final"]  
-Export["campo_due_dielettrici4.pdf",finale4];
-Export["campo_due_dielettrici4.eps",finale4];
-Export["campo_due_dielettrici5.pdf",finale5];
-Export["campo_due_dielettrici5.eps",finale5];
+Export["fisica2/campo_due_dielettrici4.pdf",finale4];
+Export["fisica2/campo_due_dielettrici4.eps",finale4];
+Export["fisica2/campo_due_dielettrici5.pdf",finale5];
+Export["fisica2/campo_due_dielettrici5.eps",finale5];
 
 Exit[]
