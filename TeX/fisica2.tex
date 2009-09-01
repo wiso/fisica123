@@ -1164,26 +1164,22 @@ L'energia è sotto forma di campo elettrostatico.
 Sia un condensatore a facce piane e parallele di superficie $S$, con carica $Q$ a distanza $d_0$. Considerando il caso a carica e potenziale costante (isolato o collegato ad un generatore) vogliamo conoscere il lavoro per spostare le armature a distanza $d_F$, la variazione di energia e il potenziale finale.
 
 Consideriamo il caso isolato. $Q=\const$.
-\[
-\left.
-\begin{array}{lcl}
-\text{inizio}&C_0=\varepsilon_0\dfrac{S}{d_0}&Q=C_0\Delta V_0=\varepsilon_0\dfrac{S}{d_0}\Delta V_0\\
+\begin{equation*}
+\begin{aligned}
+\text{inizio}&\qquad&C_0=\varepsilon_0\dfrac{S}{d_0}&W_0 = \frac{1}{2}\frac{Q^2}{C_0}
 \\
-\text{fine}&C_F=\varepsilon_0\dfrac{S}{d_F}&Q=C_F\Delta V_F=\varepsilon_0\dfrac{S}{d_F}\Delta V_F
-\end{array}\right\}
-\Rightarrow
-\Delta V_F=\frac{d_F}{d_0}\Delta V_0
-\]
+\text{fine}&\qquad&C_F=\varepsilon_0\dfrac{S}{d_F}&W_F = \frac{1}{2}\frac{Q^2}{C_F}
+\end{aligned}
+\end{equation*}
 Il lavoro lo possiamo calcolare come variazione di energia potenziale $L_C=-\Delta W$; ma noi vogliamo il lavoro fatto contro le forze del campo: $L=-L_C$:
-\begin{align*}
-L&=W_F-W_0=\frac{1}{2}C_F\Delta V_F^2-\frac{1}{2}C_0\Delta V_0^2=\frac{1}{2}\varepsilon_0\frac{S}{d_F}\frac{d_F^2}{d_0^2}\Delta V_0^2-\frac{1}{2}\varepsilon_0\frac{S}{d_0}\Delta V_0^2\\
-&=\frac{1}{2}\varepsilon_0\left(\frac{d_F}{d_0^2}-\frac{1}{d_0^2}\right)\Delta V_0^2 S
-\end{align*}
+\[
+L=W_F-W_0=\frac{1}{2}Q^2\left(\frac{1}{C_F}-\frac{1}{C_0}\right) = \frac{1}{2}\frac{Q^2}{\varepsilon_0 S}\left(d_F-d_0\right)
+\]
 Oppure lo possiamo calcolare dalla forza:
 \[\delta L=\ve F\cdot\ud \ve x=QE\ud x=Q\frac{\sigma}{2\varepsilon_0}\ud x=Q\frac{Q}{2S\varepsilon_0}\ud x=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}\ud x\]
 La forza la si poteva anche ricavare da $\delta F=\ud W$. La forza risulta costante, grazie al fatto che nell'approssimazione il campo campo è costante e parallela allo spostamento.
 \[L=\int_{d_0}^{d_F}\delta L=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}(d_F-d_0)\]
-che, anche se non sembra, è uguale all'espressione trovata in precedenza. La variazione di energia potenziale è uguale al lavoro.
+La variazione di energia potenziale del sistema è uguale al lavoro fatto dall'esterno.
 
 Consideriamo ora il caso di potenziale $\Delta V=\const$.
 \[\delta L=\ve F\cdot\ud \ve x=QE\ud x=\frac{Q^2}{2\varepsilon_0S}\ud x=\frac{C^2\Delta V^2}{2\varepsilon_0S}\ud x=\frac{\varepsilon_0^2S^2\Delta V^2}{2\varepsilon_0Sx^2}\ud x=\frac{\varepsilon_0S\Delta V^2}{2x^2}\ud x\]
