@@ -217,7 +217,23 @@ u_3=u_3(x,y,z)\\
 \end{array}\right.
 \]
 \subsubsection{Versori}
-Conoscendo la trasformazione delle coordinate, il versore $i$--esimo delle nuove coordinate si scrive:
+Conoscendo la trasformazione delle coordinate possiamo trovare nuovi versori sfruttando il fatto che la distanza deve rimanere invariante. Consideriamo la distanza infinitesima:
+\begin{equation}
+ \ud s = \ud x\ver i + \ud y\ver j + \ud z\ver k
+\end{equation}
+nelle coordinate generiche $u_i$ questo si scrive come:
+\begin{equation}
+ \ud s = \ud u_1\ver e_1 + \ud u_2\ver e_2 + \ud u_3\ver e_3
+\end{equation}
+differenziando la prima, considerando $x,y,z$ come funzione delle nuove coordinate si trova:
+\begin{equation}
+\begin{aligned}
+ \ud u_1\ver e_1 + \ud u_2\ver e_2 + \ud u_3\ver e_3 =& \left(\frac{\partial x}{\partial u_1}\ud u_1 + \frac{\partial x}{\partial u_2}\ud u_2 +  \frac{\partial x}{\partial u_3}\ud u_3\right)\ver i\\
+ + & \left(\frac{\partial y}{\partial u_1}\ud u_1 + \frac{\partial y}{\partial u_2}\ud u_2 +  \frac{\partial y}{\partial u_3}\ud u_3\right)\ver j\\
+ + & \left(\frac{\partial z}{\partial u_1}\ud u_1 + \frac{\partial z}{\partial u_2}\ud u_2 +  \frac{\partial z}{\partial u_3}\ud u_3\right)\ver k
+\end{aligned}
+\end{equation}
+uguagliando i termini che moltiplicano $\ud u_i$, il versore $i$--esimo delle nuove coordinate si scrive:
 \[\ver e_i=\dfrac{\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right) }{D_i}\]
 $D_i$ è il fattore di normalizzazione:
 \[D_i=\sqrt{\left(\frac{\partial x}{\partial u_i}\right)^2+\left(\frac{\partial y}{\partial u_i}\right)^2+\left(\frac{\partial z}{\partial u_i}\right)^2}\]
@@ -3212,7 +3228,7 @@ Usando lo stesso procedimento per le altre componenti si arriva a:
 \subsection{Superfici di separazione}
 L'espressione \eqref{99} ci dice che se la magnetizzazione di un materiale è uniforme non troveremo correnti al suo interno, ma solo sulla superficie dove è presente una discontinuità
 
-Supponiamo un cilindro con asse lungo $z$, quindi $\ve M=M_z\ver \imath$. Dalla \eqref{99}:
+Supponiamo un cilindro uniformemente magnetizzato con asse lungo $z$, quindi $\ve M=M_z\ver k$. Dalla \eqref{99}:
 \begin{equation}
 \left\{
 \begin{aligned}
@@ -3240,8 +3256,9 @@ J_{sm}=M_t
 \ve J_{sm}=\ve M\times \ve n
 \label{correnti_superficiali}
 \end{equation}
-\section{Correnti di magnetizzazione}
-Il vettore potenziale magnetico di una spira è 
+
+\section{Correnti di magnetizzazione in generale}
+Segue una trattazione generale molto simile alla trattazione per i dielettrici (vedi \ref{section:Campo_elettrico_generato_da_un_dielettrico}). Il vettore potenziale magnetico di una spira è 
 \begin{equation}
 \ve A(\ve r)=\frac{\mu_0}{4\pi}\frac{\ve m\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r'}^3}
 \end{equation}
@@ -3257,7 +3274,7 @@ Sommando tutti i contributi il potenziale vettore totale:
 \begin{equation}
 \ve A(\ve r)=\int_V\ud\ve A(\ve r)=\frac{\mu_0}{4\pi}\int_V\frac{\ve M(\ve r')\times(\ve r-\ve r')}{\norm{\ve r-\ve r}^3}\,\ud v'
 \end{equation}
-ricordando che $\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}$:
+ricordando che $\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}=\grad'\frac{1}{\norm{\ve r-\ve r'}}$:
 \begin{equation}
 \ve A(\ve r)=\frac{\mu_0}{4\pi}\int_V\ve M(\ve r')\times\grad'\frac{1}{\norm{\ve r-\ve r'}}\,\ud v'
 \end{equation}
@@ -3319,8 +3336,40 @@ mentre se vogliamo usare $\ve B$ con i materiali magnetizzati:
 \rot\ve B=\mu_0\left(\ve J+\ve {J_m}\right)
 \end{gather}
 
+\section{Condizioni al bordo}
+Come fatto per i dielettrici analizziamo le condizioni al contorno per $\ve B$ e $\ve H$. Vale sempre che la divergenza di $\ve B$ è nulla, mentre l'equazione del rotore nei mezzi materiali va sostituita con $\rot\ve H=\ve J$. Oltre a queste due equazioni per risolvere i problemi serve una relazione costitutiva che lega $\ve B$ a $\ve H$.
 
+Consideriamo due mezzi separati da una superficie $\Sigma$ e un cilindro elementare di superficie $S$ che si interseca normalmente con $\Sigma$:
+\begin{equation}
+ \int_V \div \ve B\,\ud v = \int_S\ve B\cdot\ve n = 0
+\end{equation}
+Se l'altezza del cilindro tende a zero il flusso è dato solo dal flusso sulle basi e si ottiene:
+\begin{equation}
+ B_{1n}=B_{2n}
+\end{equation}
+cioè la componente normale di $\ve B$ varia con continuità.
 
+Consideriamo invece un circuito che interseca la superficie $\Sigma$ e calcoliamo il flusso:
+\begin{equation}
+ \int_S\rot\ve H\cdot\ve n\,\ud a=\int_S\ve J\cdot\ve n\,\ud a
+\end{equation}
+usando il teorema di Stokes:
+\begin{equation}
+ \oint_C\ve H\cdot\ud\ve l=\int_S\ve J\cdot n\,\ud a
+\end{equation}
+Facendo tendere a zero l'altezza del circuito:
+\begin{equation}
+ H_{1t}-H_{2t}=J_s
+\end{equation}
+dove $J_s$ è una densità di corrente di conduzione superficiale.
+
+\section{Suscettività e permeabilità magnetica}
+\begin{equation}
+ \ve M = \chi_m\ve H
+\end{equation}
+\begin{equation}
+ \ve B = \mu\ve H
+\end{equation}
 
 
 
@@ -3416,15 +3465,15 @@ L=\frac{\ud\Phi(\ve B)}{\ud I}
 \end{Def}
 che è una caratteristica della geometria circuito, infatti:
 \[
-\ve B(\ve r)=\frac{\mu_0}{4\pi}\int_C I\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}}
+\ve B(\ve r)=\frac{\mu_0}{4\pi}\int_C I\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \]
 in generale; il flusso:
 \[
-\Phi(\ve B)=\frac{\mu_0}{4\pi}\int_S I\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}}\cdot \ve n\,\ud a
+\Phi(\ve B)=\frac{\mu_0}{4\pi}\int_S I\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\cdot \ve n\,\ud a
 \]
 e la derivata nella corrente $\frac{\ud}{\ud I}$:
 \[
-\frac{\ud\Phi(\ve B)}{\ud I}=\frac{\mu_0}{4\pi}\int_S\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}}\cdot \ve n\,\ud a
+\frac{\ud\Phi(\ve B)}{\ud I}=\frac{\mu_0}{4\pi}\int_S\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\cdot \ve n\,\ud a
 \]
 che dipende solo dalla geometria. La legge di Faraday--Neumann--Lenz in questo caso si scrive:
 \begin{equation}
@@ -3468,7 +3517,7 @@ all'esterno del cavo invece la corrente concatenata totale è zero, $B(r>b)=0$. 
 \begin{equation}
 \Phi_S(\ve B)=\int_S \ve B\cdot\ve n\,\ud a
 \end{equation}
-ma $\ve B=B\ver e_r$ quindi è ortogonale a $\ve n$:
+ma $\ve B=B\ver e_\theta$ quindi è ortogonale a $\ve n$:
 \begin{equation}
 \Phi_S(\ve B)=\int_{a}^{b}\int_{\Delta l} B\,\ud r\ud z=\Delta l\int_a^b\frac{\mu_0I}{2\pi R}\,\ud r=\frac{\mu_0I\Delta l}{2\pi}\log\frac{b}{a}
 \end{equation}
@@ -3718,6 +3767,16 @@ l'ampiezza delle oscillazioni sinusoidali è smorzata dal termine $e^{-\gamma t}
 \tau=\frac{1}{\gamma}=\frac{2L}{R}
 \end{equation}
 \end{itemize}
+Riassumendo:
+\begin{equation}
+I(t) = 
+\begin{cases}
+ \gamma > \omega_0 & \frac{q_0\omega_0^2}{\beta}e^{-t/\tau}\sinh(\beta t) \\
+ \gamma = \omega_0 & q_0\omega_0^2te^{-t/\tau}\\
+ \gamma < \omega_0 & \frac{q_0\omega_0^2}{\omega}e^{-t/\tau}\sin(\omega t)
+\end{cases}
+\end{equation}
+con $\tau = \frac{1}{\gamma}$ e $\beta=j\omega$.
 \subsection{Carica}
 Per quanto riguarda la carica dalla legge delle maglie:
 \begin{equation}
@@ -3750,7 +3809,7 @@ V(t)=V_0\cos\left(\omega t\right)=\Re(V_0 e^{j\omega t})
 \subsection{Soluzione stazionaria}
 Calcoliamo la soluzione stazionaria, per esempio per $t\to\infty$. Calcoliamo l'impedenza del circuito:
 \begin{equation}
-Z=Z_R+Z_L+Z_C=R-j\frac{1}{\omega C}+j\omega L=R+j X
+Z=Z_R+Z_C+Z_L=R-j\frac{1}{\omega C}+j\omega L=R+j X
 \end{equation}
 il cui modulo è 
 \begin{equation}
@@ -3810,7 +3869,7 @@ I_0=\frac{V_0}{\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}}
 Vogliamo trovare qual è quella frequenza $\nu_0$ che rende massima la corrente:
 \[
 \left.\frac{\ud}{\ud \omega}I_0\right|_{\omega=\omega_0}\!\!\!\!\!\!\!\!=0\qquad
-\left(R^2+\left(\omega L-\frac{1}{\omega C}\right)^2\right)^{-\frac{3}{2}}\left(\omega L-\frac{1}{\omega C}\right)\left(L+\frac{1}{\omega ^2 C}\right)=0
+\left(R^2+\left(\omega_0 L-\frac{1}{\omega_0 C}\right)^2\right)^{-\frac{3}{2}}\left(\omega_0 L-\frac{1}{\omega_0 C}\right)\left(L+\frac{1}{\omega_0 ^2 C}\right)=0
 \]
 \begin{equation}
 \omega_0=\frac{1}{\sqrt{LC}}\qquad \nu_0=\frac{1}{2\pi\sqrt{LC}}
@@ -4333,7 +4392,13 @@ scopriamo che il campo $\ve E-\frac{\partial \ve A}{\partial t}$ è irrotazional
 \ve E-\frac{\partial \ve A}{\partial t}=\grad\psi=-\grad\varphi
 \label{ppp01}
 \end{equation}
-$\varphi$ lo chiamimo potenziale scalare o potenziale elettrico\index{potenziale!scalare}\index{potenziale!elettrico}. In questo modo i potenziali $\ve A$ e $\varphi$ non sono completamente determinati. \`E utile introdurre la condizione di Lorentz\index{condizione!di Lorentz}\index{Lorentz}
+$\varphi$ lo chiamiamo potenziale scalare o potenziale elettrico\index{potenziale!scalare}\index{potenziale!elettrico}. Conoscendo i potenziali i campi sono:
+\begin{eqimp}{gather}
+ \ve E = -\grad\varphi+\frac{\partial\ve A}{\partial t}\\
+ \ve B = \rot\ve A
+\end{eqimp}
+
+I potenziali $\ve A$ e $\varphi$ non sono univocamente determinati. \`E utile introdurre la condizione di Lorentz\index{condizione!di Lorentz}\index{Lorentz}
 \begin{equation}
 \diver\ve A+\varepsilon\mu\frac{\partial\varphi}{\partial t}=0
 \label{Lo10}
@@ -4381,6 +4446,7 @@ Le soluzioni di queste equazioni sono:
 \end{gather}
 con $v=\frac{1}{\sqrt{\varepsilon\mu}}$ e $[\;\;]_{t-\frac{r}{v}}$ indica il valore della funzione tra parentesi al tempo $t-\frac{r}{v}$. Questo sta a significare che una perturbazione elettromagnetica si propaga nello spazio a velocità finita $v$. Gli effetti dei potenziali si fanno sentire con un certo ritardo, e $\varphi$ e $\ve A$ si dicono potenziali ritardati\index{potenziali!ritardati}\index{equazioni!dei potenziali ritardati}.
 \section{Equazione generale delle onde}
+Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$).
 Consideriamo l'equazione di Maxwell:
 \[
 \rot\ve H=\ve J+\frac{\partial\ve D}{\partial t}
@@ -4402,28 +4468,34 @@ Usando $\rot\rot\ve H=\grad\diver\ve H-\nabla^2\ve H$:
 \grad\diver\ve H-\nabla^2\ve H=-\sigma\mu\frac{\partial\ve H}{\partial t}-\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}
 \end{equation}
 Consideriamo un mezzo omogeneo, quindi $\diver\ve H=\frac{1}{\mu}\diver\ve B=0$ allora:
-\begin{equation}
+\begin{eqimp}{equation}
 \nabla^2\ve H-\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}-\sigma\mu\frac{\partial\ve H}{\partial t}=0
-\end{equation}
+\end{eqimp}
 Se applichiamo lo stesso procedimento al campo $\ve E$ e supponiamo che $\rho=0$ allora:
-\begin{equation}
+\begin{eqimp}{equation}
 \nabla^2\ve E-\varepsilon\mu\frac{\partial^2\ve E}{\partial t^2}-\sigma\mu\frac{\partial\ve E}{\partial t}=0
-\end{equation}
-Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche in propagazione libera $\rho=0$ in un mezzo omogeneo conduttore. Se supponiamo che il mezzo non sia conduttore, cioè $\sigma=0$ le ultime due equazioni si scrivono come:
+\end{eqimp}
+Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche in propagazione libera ($\rho=0$) in un mezzo omogeneo conduttore. Se supponiamo che il mezzo non sia conduttore, cioè $\sigma=0$ le ultime due equazioni si scrivono come:
 \begin{gather}
 \nabla^2\ve H-\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}=0\\
 \nabla^2\ve E-\varepsilon\mu\frac{\partial^2\ve E}{\partial t^2}=0
 \end{gather}
 oppure:
-\begin{gather}
-\square\;\ve H=0\\
-\square\;\ve E=0\\
-\end{gather}
-
+\begin{eqimp}{gather}
+\square\ve H=0\\
+\square\ve E=0
+\end{eqimp}
+Le soluzioni delle equazioni ricavate non sono necessariamente soluzioni delle equazioni di Maxwell da cui sono state ricavate\footnote{Si pensi all'elevamento al quadrato: $x-1=0$, manipolando l'equazione posso arrivare a $(x-1)^2=0$ che ha come soluzione $x=\pm 1$. Per accertarci quale delle due soluzioni sia anche soluzione della prima equazione dobbiamo sostituirle al suo interno.}. Occurre quindi sostituire le soluzioni delle equazioni delle onde nelle equazioni di Maxwell e vedere quali condizioni bisogna imporre affinché siano effettivamente soddisfatte.
 
 \chapter{Ottica}
 \minitoc
 \section{Riflessione e rifrazione}
+\begin{figure}[htbp]
+ \centering
+ \input{immagini/fisica2/snell}
+ \caption{Onda incidente, riflessa e trasmessa}
+\end{figure}
+
 Usiamo le condizioni al contorno per ricavare l'espressione delle onde riflesse e trasmesse tra due dielettrici. Il piano di separazione sia il piano $xy$. Sia $\ve {E^{(i)}}$ il vettore campo elettrico associato all'onda incidente. Sia la direzione di propagazione individuata dal vettore $\ve k=\frac{\omega}{v_1}\ver u$. Sia $\theta$ l'angolo di incidenza, cioè quello tra la normale e il vettore $\ve k$. Sia $yz$ il piano di incidenza\index{piano!di incidenza}, cioè il piano contenente la normale e la direzione di propagazione. I coseni direttori di $\ver u$ sono:
 \begin{subequations}
 \begin{gather}
@@ -4443,14 +4515,14 @@ E^{(i)}_y=E^{(i)}_{0_y}e^{j\left(\omega t-k\left(y\sin\theta-z\cos\theta\right)\
 E^{(i)}_z=E^{(i)}_{0_z}e^{j\left(\omega t-k\left(y\sin\theta-z\cos\theta\right)\right)}
 \end{gather}
 \end{subequations}
-Dell'onda riflessa $\ve {E^{(r)}}$ non conosco nulla, so solamente che è un onda monocromatica e che viaggia nel mezzo dell'onda incidente. Analogo discorso per l'onda trasmessa $\ve {E^{(t)}}$:
+Dell'onda riflessa $\ve {E^{(r)}}$ non sappiamo nulla, sappiamo solamente che viaggia nel mezzo dell'onda incidente. Analogo discorso per l'onda trasmessa $\ve {E^{(t)}}$. Supponiamo che siano onde piane monocromatiche:
 \begin{subequations}
 \begin{gather}
 \ve {E^{(r)}}=\ve{E^{(r)}_0}e^{j\left(\omega^{(r)} t-k^{(r)}\left(x\alpha^{(r)}_x+y\alpha^{(r)}_y+z\alpha^{(r)}_z\right)\right)}\\
 \ve {E^{(t)}}=\ve{E^{(t)}_0}e^{j\left(\omega^{(r)} t-k^{(r)}\left(x\alpha^{(t)}_x+y\alpha^{(t)}_y+z\alpha^{(t)}_z\right)\right)}
 \end{gather}
 \end{subequations}
-La condizione al contorno per il campo elettrico è 
+La condizione al contorno per il campo elettrico è:
 \begin{equation}
 E_{1_{tg}}=E_{2_{tg}}
 \end{equation}
@@ -4479,18 +4551,18 @@ k\alpha_x=k^{(r)}\alpha_x^{(r)}=k^{(t)}\alpha_x^{(t)}=0\\
 k\alpha_y=k^{(r)}\alpha_y^{(r)}=k^{(t)}\alpha_y^{(t)}
 \end{gather}
 \end{subequations}
-L'equazione \eqref{ottica_frequenze01} dice che le frequenze delle onde non cambiano, la \eqref{ottica_normali01} che i raggi giacciono tutti nello stesso piano (cioè che $\alpha_x=\alpha_x^{(r)}=\alpha_x^{(t)}=0$). Usando l'ultima equazione, l'onda riflessa:
+L'equazione \eqref{ottica_frequenze01} dice che le frequenze delle onde non cambiano, la \eqref{ottica_normali01} che i raggi giacciono tutti nello stesso piano (cioè che $\alpha_x=\alpha_x^{(r)}=\alpha_x^{(t)}=0$). Usando l'ultima equazione, con il fatto che $\omega$ è lo stesso per tutte le onde, l'onda riflessa:
 \[
-k=\frac{\omega}{v_1}=k^{(r)}\frac{\omega}{v_1}
+ k=\frac{\omega}{v_1}=k^{(r)}
 \]
 quindi $k=k^{(r)}$ e allora:
 \[
 \alpha_y = \alpha_y^{(r)}
 \]
-che, unita al fatto che i raggi giacciono nello stesso piano, è la legge di Snell:
-\begin{equation}
+che, unita al fatto che i raggi giacciono nello stesso piano, è la legge di Snell per la riflessione:
+\begin{eqimp}{equation}
 \theta=\theta^{(r)}
-\end{equation}
+\end{eqimp}
 Per l'onda rifratta:
 \[
 \frac{\omega}{v_1}\alpha_y=\frac{\omega}{v_2}\alpha_y^{(t)}
@@ -4498,11 +4570,10 @@ Per l'onda rifratta:
 \frac{1}{v_1}\sin\theta=\frac{1}{v_2}\sin\theta^{(t)}
 \]
 usando $v=\frac{c}{n}$ troviamo la legge di Snell (chiamiamo l'onda trasmessa onda $2$):
-\begin{equation}
+\begin{eqimp}{equation}
 \frac{\sin\theta_1}{\sin\theta_2}=\frac{v_1}{v_2}=\frac{n_2}{n_1}=n_{12}
-\end{equation}
+\end{eqimp}
 rimarrebbe solo da determinare le ampiezze delle onde.
-
 
 
 \section{Ottica geometrica}
