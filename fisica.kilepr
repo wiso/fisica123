@@ -87,10 +87,10 @@ order=2
 
 [item:TeX/fisica2.tex]
 archive=true
-column=47
+column=44
 encoding=UTF-8
 highlight=LaTeX
-line=4495
+line=3065
 open=true
 order=1
 

@@ -817,11 +817,12 @@ Essendo $\delta\ll r$ allora è una buona approssimazione. Il potenziale totale:
 
 \subsection{Campo elettrostatico\index{campo!elettrostatico!del dipolo}}
 Usando $\ve E=-\grad\varphi$:
-\begin{align*}
+\begin{align}
+\label{eq:E_dipolo}
 E_x&=-\frac{\partial\varphi}{\partial x}=\frac{3pz}{4\pi\varepsilon_0}\frac{x}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3pz}{4\pi\varepsilon_0}\frac{x}{r^5}=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_x\\
 E_y&=-\frac{\partial\varphi}{\partial y}=\frac{3pz}{4\pi\varepsilon_0}\frac{y}{\left(x^2+y^2+z^2\right)^\frac{5}{2}}=\frac{3pz}{4\pi\varepsilon_0}\frac{y}{r^5}=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_y\\
 E_z&=-\frac{\partial\varphi}{\partial z}=\frac{p}{\giorgi}\left(\frac{3z^2}{r^5}-\frac{1}{r^3}\right)=\frac{3(\ve p\cdot \ve r)}{\giorgi}\left[\frac{\ve r}{r^5}\right]_z-\frac{1}{\giorgi}\left[\frac{\ve p}{r^3}\right]_z
-\end{align*}
+\end{align}
 definiamo:
 \[E_\perp=\sqrt{E_x^2+E_y^2}=\frac{3pz}{4\pi\varepsilon_0}\frac{1}{r^{5}}\sqrt{x^2+y^2}\]
 allora:
@@ -3029,6 +3030,43 @@ In modo analogo si può mostrare che anche la componente di $\ve D$ tangente sub
  \end{figure}
  
  Si noti che questo esempio è un caso generale dell'esempio \ref{es:carica_e_piano_infinito} in cui al posto dei dielettrici c'era il vuoto e un piano conduttore. L'esempio particolare si ottiene con $\varepsilon_1=1$ e $\varepsilon_2=\infty$. Infatti in questo caso: $q'=-q$ e $q''=0$. 
+\end{Es}
+
+\begin{Es}[Sfera dielettrico polarizzata]
+ Immaginiamo un dielettrico sferico uniformemente polarizzato con il vettore di polarizzazione $\ve P$ rivolto come l'asse $z$. Il potenziale da esso generato sarà:
+ \[
+  \varphi = \frac{1}{\giorgi}\int_{\text{sfera}} \frac{\ve P\cdot (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}
+ \]
+ questo conto è complicato e quindi cerchiamo un trucco. Si tratta di schematizzare la sfera polarizzata come un dipolo. Per ragioni di simmetria le due cariche del dipolo giacciono sull'asse $z$. Si può immaginare che l'effetto della polarizzazione sia di separare le cariche positive e negative di $\delta$ nella direzione di $\ve P$. Il nostro sistema allora è equivalente a un sistema di due sfere cariche uniformemente con segno opposto e separate di $\delta$. A grande distanza le due sfere diventano due punti di carica $\pm Q$ e quindi il momento di dipolo $\ve p=Q\delta$ e il vettore di polarizzazioen $\ve P=\rho\delta$.
+ 
+ Il campo generato all'interno della sfera sarà quello della somma dei campi generati dalle due sfere. Il campo generato da una sfera carica uniformente si può trovare con il teorema di gauss:
+ \[
+  4\pi r^2 E = \frac{4}{3}\pi r^3\rho
+ \]
+ cioè:
+ \[
+  E_{\pm}(\ve r) = \frac{\rho}{3\varepsilon_0}\ve r
+ \]
+ se $\ve r_+$ e $\ve r_-$ sono le distanze dei centri delle sfere da un punto generico allora in questo punto il campo totale sarà:
+ \[
+  E(\ve r) = \frac{\rho}{3\varepsilon_0}(\ve r-\ve r')
+ \]
+ ma $(\ve r-\ve r') = -\delta$ quindi all'interno della sfera polarizzata:
+ \[
+  \ve E = -\frac{\rho}{3\varepsilon_0}\ve\delta=-\frac{P}{3\varepsilon_0}
+ \]
+ 
+ All'esterno invece usiamo l'appossimazione di dipolo con momento di dipolo $\ve p=\frac{4}{3}\pi R^3\rho\ve\delta=\frac{4}{3}\pi R^3\ve P$. Poichè $\ve P$ è diretto lungo l'asse $z$ usando l'espressione \eqref{eq:E_dipolo}:
+ \[
+  \ve E(\ve r) = \frac{1}{\giorgi}\left\{3(\ve p\cdot\ve r)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\} = \frac{R^3}{\varepsilon_0}\left\{Pz \frac{\ve r}{r^5}-\frac{\ve P}{3r^3}\right\}
+ \]
+ 
+ La carica di polarizzazione sarà
+ \[
+  \sigma_p = \ve P\cdot \ver n = P\cos\theta
+ \]
+
+
 \end{Es}
 
 
