@@ -337,7 +337,7 @@ v_x=\left(\frac{\nu}{\nu_0}-1\right)c\qquad \ud v_x=c\frac{\ud \nu}{\nu_0}
 \end{equation}
 sostituendo nella \eqref{doppler_termico02}:
 \begin{equation}
-\ud N=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{-\frac{m\left(\frac{\nu}{\nu_0}-1\right)c^2}{2kT}}c\frac{\ud \nu}{\nu_0}=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{\frac{-mc^2\left(\nu-\nu_0\right)^2}{2kT\nu_0^2}}\frac{c}{\nu_0}\,\ud\nu
+\ud N=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{-\frac{m\left(\frac{\nu}{\nu_0}-1\right)^2 c^2}{2kT}}c\frac{\ud \nu}{\nu_0}=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{\frac{-mc^2\left(\nu-\nu_0\right)^2}{2kT\nu_0^2}}\frac{c}{\nu_0}\,\ud\nu
 \end{equation}
 essendo l'intensità proporzionale a $n$ analizzando lo spettro di emissione di un gas non si ottengono delle righe infinitamente sottili, ma delle gaussiane:
 \begin{equation}
@@ -546,15 +546,7 @@ e naturalmente:
 \begin{equation}
 \media{x}=\media{y}=\media{z}=0
 \end{equation}
-In coordinate polari:
-\begin{equation}
-\ve L=\left(
-\begin{array}{l}
-L\\\theta_L\\\varphi_L\\
-\end{array}\right)\qquad
-\media{L}=l\qquad\media{\theta_L}=\pi\qquad \media{\varphi_L}=\frac{\pi}{2}
-\end{equation}
-Se la particelle parte dall'origine, al primo scontro la sua posizione sarà $l_1=\ve L + \ve 0$. Naturalmente $\media{l_1^2}=\media{L^2}=l^2$. Al secondo urto la sua posizione sarà:
+Se la particella parte dall'origine, al primo scontro la sua posizione sarà $l_1=\ve L + \ve 0$. Naturalmente $\media{l_1^2}=\media{L^2}=l^2$. Al secondo urto la sua posizione sarà:
 \begin{equation}
 \begin{split}
 \media{l_2^2}&=\media{\left(\ve l_1+\ve L\right)^2}=\media{\norm{\ve l_1}^2+\norm{\ve L}^2+2\norm{\ve L}\norm{\ve l_1}\cos\theta}\\
@@ -812,7 +804,7 @@ Se applichiamo un campo elettrico uniforme tra le armature i raggi catodici desc
 \end{figure}
 Applicando solo il campo elettrico:
 \begin{equation}
-\ve r=\frac{qE}{2m}t^2+\ve v_0 t
+\ve r=\frac{q\ve E}{2m}t^2+\ve v_0 t
 \end{equation}
 essendo
 \[\ve E=-E\ver \jmath\qquad \ve v_0=v_0\ver \imath\]
@@ -1130,6 +1122,24 @@ Ad una data temperatura
 con $W_b$ l'emittanza del corpo nero.
 \end{legge}
 Quindi il rapporto tra l'emittanza e il coefficiente di assorbimento è pari all'emittanza del corpo nero.
+\subsection{Legge Stefan--Boltzmann}
+La potenza per unità di area emessa dal corpo nero $W_b$ è data dall'integrale della curva $R(\lambda)$ su $\field{R}^+$. Stefen trovò empiricamente:
+\begin{legge}[Stefan--Boltzmann]
+\begin{equation}
+W_b=\sigma T^4
+\end{equation}
+\end{legge}
+con $\sigma$ costante di Stefan--Boltzmann. La legge empirica di Stefan era stata derivata teoricamente da Boltzmann. Per un corpo generico possiamo dire:
+\begin{equation}
+W=aW_b=a\sigma T^4
+\end{equation}
+\subsection{Legge di Wien}
+Cambiando temperatura la funzione $R(\lambda)$ cambia e in particolare cambia il massimo. Si nota che rimane costante:
+\begin{legge}[legge di Wien]
+\begin{equation}
+\lambda_\text{max}T = \const
+\end{equation}
+\end{legge}
 \subsection{Cavità}
 Dimostriamo che una cavità con un piccolo foro si comporta come un corpo nero, ciò vorrà dire che è solo la geometria che importa. Consideriamo due pareti, una di fronte all'altra, contenute in un contenitore che le isola dall'esterno. Su una delle due pareti sia praticato un foro molto piccolo rispetto all'area della parete. Consideriamo un intervallo di tempo $\Delta t$. La parete $A$ emette una certa energia per unità di area pari a $W_A\Delta t$ (anche in assenza della seconda parete), questa arriva sulla seconda parete, ed è riflessa parzialmente, esattamente $r_BW_A\Delta t=(1-a_B)W_A\Delta t$, quest'energia arriva sulla parete indietro che riflette $(1-a_A)(1-a_B)W_A\Delta t$, eccetera. Lo stesso discorso si può fare per l'energia che parte dalla parete $B$. Riassumiamo:
 \begin{equation}
@@ -1183,31 +1193,19 @@ n+1&x=1
 \end{split}
 \end{equation}
 Nel nostro caso $x=(1-a_A)(1-a_B)$ $0<x<1$
-}. Abbiamo allora dimostrato che la radianza che esce dalla fenditura nella cavità è proprio quella del corpo nero.
-\section{Legge Stefan--Boltzmann}
-La potenza per unità di area emessa dal corpo nero $W_b$ è data dall'integrale della curva $R(\lambda)$ su $\field{R}^+$. Stefen trovò empiricamente:
-\begin{legge}[Stefan--Boltzmann]
-\begin{equation}
-W_b=\sigma T^4
-\end{equation}
-\end{legge}
-con $\sigma$ costante di Stefan--Boltzmann. La legge empirica di Stefan era stata derivata teoricamente da Boltzmann. Per un corpo generico possiamo dire:
-\begin{equation}
-W=aW_b=a\sigma T^4
-\end{equation}
-\section{Legge di Wien}
-Cambiando temperatura la funzione $R(\lambda)$ cambia e in particolare cambia il massimo. Si nota che rimane costante:
-\begin{legge}[legge di Wien]
-\begin{equation}
-\lambda_\text{max}T = \const
-\end{equation}
-\end{legge}
-\section{Wien}
+}. Abbiamo allora dimostrato che la radianza che esce dalla fenditura nella cavità è proprio quella del corpo nero. Questo è di fondamenta importanza, oltre a permetterci di costruire un corpo nero come cavità, questa affermazione dice che per studiare la radiazione di corpo nero possiamo studiare la radiazione all'interno di una cavità.
+\subsection{Wien}
 Wien notò la somiglianza della curva $R(\lambda)$ che descrive la potenza per unità di area per una lunghezza d'onda compresa tra $(\lambda,\lambda+\ud\lambda)$ con la distribuzione di Maxwell per le velocità. Usando questo tipo di funzione e cercando i coefficienti che interpolassero i dati ottenne:
 \begin{equation}
 R(\lambda)=\frac{c_1\lambda^{-5}}{e^{\frac{c_2}{\lambda T}}}
 \end{equation}
 $c_1$ e $c_2$ sono chiamati prima e seconda costante di radiazione.
+\section{Radiazione della cavità}
+Come abbiamo detto la radiazione di un corpo nero è uguale alla radiazione emessa da un corpo nero. Studiamo quindi lo spettro della densità di energia della radiazione all'interno di una cavità $\rho$. Questa quantità non è altro che l'energia per unità di volume all'interno della cavità nell'intervallo di frequenze (o lunghezze d'onda corrispondenti) $\nu$-$\nu+\ud\nu$. È evidente che:
+\begin{equation}
+ \rho \propto R 
+\end{equation}
+
 \section{Rayleigh--Jeans}
 Un modo rigoroso è quello intrapreso da Lord Rayleigh. Egli suppone che nella cavità le onde stazionarie abbiano l'energia $kT$ somma dell'energia cinetica su un grado di libertà e di quella potenziale. Ogni onda stazionaria ha un certo numero di modi di oscillare, ognuno dei quali ha energia $kT$.
 \subsection{Modi di oscillare}
@@ -1555,17 +1553,17 @@ P(E)=P(0)e^{-\beta E}
 \section{Distribuzione Maxwell--Boltzmann}
 Consideriamo un sistema con vari livelli energetici $E_1, E_2, \ldots$ cioè con energia quantizzata. Consideriamo $N$ particelle identiche ma inizialmente distinguibili. Una partizione è una configurazione del sistema, cioè ogni partizione avrà un certo numero di particelle $n_1$ nel livello $E_1$, $n_2$ nel livello $n_2$ \ldots in modo che $\sum n_i=N$. Consideriamo che i livelli energetici siano equalmente accessibili, cioè che tutti gli stati energetici hanno la stessa probabilità di essere occupati. Prendiamo una particolare partizione, quindi fissiamo $n_1, n_2, \ldots$. Vogliamo sapere qual è la probabilità della partizione. Riempiamo il primo livello. Posso scegliere tra $N$ particelle. Ne scelgo una. Per la scelta della successiva ho $N-1$ particelle e così via. Quindi ho:
 \begin{equation}
-N(N-1)(N-2)\cdots(N-n_1+1)=\frac{N!}{\left(N-n1\right)!}
+N(N-1)(N-2)\cdots(N-n_1+1)=\frac{N!}{\left(N-n_1\right)!}
 \end{equation}
 possibilità\footnote{\[
 N!=N(N-1)(N-2)\cdots(N-n_1+1)\cdot(N-n_1)!
 \]
-}. In reatà ci sono $n_1!$ ordini possibili per riempire il livello, ma l'ordine nel nostro caso non conta, quindi dobbiamo dividere per $n_1!$ per far diminuire il numero di scelte:
+}\footnote{è una $n_1$-disposizione di $N$ oggetti o disposizione di $N$ oggetti in $n_1$ posti.}. In realtà ci sono $n_1!$ ordini possibili per riempire il livello, ma l'ordine nel nostro caso non conta, quindi dobbiamo dividere per $n_1!$ per far diminuire il numero di scelte\footnote{è una $k$-combinazione di $n$ oggetti o combinazione di $n$ oggetti in $k$ posti}:
 \begin{equation}
 \frac{N!}{n_1!(N-n_1)!}
 \label{stat_boltz01}
 \end{equation}
-conoscendo il calcolo combinatorio quello che si sta cercando è il numero di combinazioni di $N$ oggetti in $n_1$ posti che sono $\binom{N}{n_1}$, che è esattamente la \eqref{stat_boltz01}. Quando passo a riempire il secondo livello con energia $E_2$ partiamo con un numero di particelle ridotto, cioè $N-n1$. Il numero di combinazioni per riempire $E_2$ è:
+conoscendo il calcolo combinatorio quello che si sta cercando è il numero di combinazioni di $N$ oggetti in $n_1$ posti che sono $\binom{N}{n_1}$, che è esattamente la \eqref{stat_boltz01}. Quando passo a riempire il secondo livello con energia $E_2$ partiamo con un numero di particelle ridotto, cioè $N-n_1$. Il numero di combinazioni per riempire $E_2$ è:
 \begin{equation}
 \frac{(N-n_1)!}{n_2!(N-n_1-n_2)!}
 \end{equation}
@@ -1573,7 +1571,7 @@ Se moltiplichiamo il numero di modi per riempire il primo livello con il numero 
 \begin{equation}
 \frac{N!}{n_1!(N-n_1)!}\frac{(N-n_1)!}{n_2!(N-n_1-n_2)!}=\frac{N!}{n_1!n_2!(N-n_1-n_2)!}
 \end{equation}
-se continuassimo così per tutti i livelli il numero di modi per riempire tutta la partizione sarebbe:
+se continuassimo così per tutti i livelli il numero di modi per riempire tutta la partizione sarebbe\footnote{è una $(n_1,n_2,\ldots)$-multicombinazione di $n$ oggetti distinti}:
 \begin{equation}
 P=\frac{N!}{n_1!n_2!n_3!\cdots}
 \label{stat_001}
@@ -1586,7 +1584,7 @@ P=\frac{N!g_1^{n_1}g_2^{n_2}g_3^{n_3}\cdots}{n_1!n_2!n_3!\cdots}
 \subsubsection{indistinguibilità}
 Rimoviamo l'ipotesi che le particelle siano distinguibili (in contrasto con l'ipotesi che le particelle siano identiche). Ci sono $N!$ permutazioni di particelle che danno la stessa partizione\footnote{Per esempio posso spostare la particella 1 con la particella 2, o con la tre, \ldots, o con la $N$--esima. Quindi ho $N-1$ possibilità. Poi posso scambiare la secondo particella in $N-2$ modi, così via. Il procedimento non necessariamente doveva iniziare scambiando la particella 1, ma poteva iniziare con $N$ modi diversi.}. Allora la probabilità:
 \begin{equation}
-P=\frac{g_1^{n_1}g_2^{n_2}g_3^{n_3}\cdots}{n_1!n_2!n_3!\cdots}=\prod_{i=1}^N\frac{g_i^{n_i}}{n_i!}
+P=\frac{g_1^{n_1}g_2^{n_2}g_3^{n_3}\cdots}{n_1!n_2!n_3!\cdots}=\prod_{i=1}\frac{g_i^{n_i}}{n_i!}
 \label{MB01}
 \end{equation}
 La \eqref{MB01} esprime la probabilità di una distribuzione Maxwell--Boltzmann\index{distribuzione!Maxwell--Boltzmann}.
@@ -1800,7 +1798,7 @@ All'equilibrio termico ogni sistema raggiunge la stessa configurazione che avreb
 \chapter{Calore specifico dei gas}
 \minitoc
 \index{calore specifico!dei gas|(}
-Per un gas monoatomico l'energia interna è $E=\frac{3}{2}NkT$, quindi il suo calore specifico $c_v=\frac{1}{n}\frac{\partial}{\partial T} E=\frac{3}{2}R$. Per i gas poliatomici bisogna considerare anche l'energia dovuta alle rotazioni e alle vibrazioni. Il problema è che questi gradi di libertà in più si attivano al variare della temperatura.
+Per un gas monoatomico l'energia interna è $E=\frac{3}{2}NkT$, quindi il suo calore specifico molare è $c_v=\frac{1}{n}\frac{\partial}{\partial T} E=\frac{3}{2}R$. Per i gas poliatomici bisogna considerare anche l'energia dovuta alle rotazioni e alle vibrazioni. Il problema è che questi gradi di libertà in più si attivano al variare della temperatura.
 
 Ignoriamo l'enenergia legata agli elettroni. Questi per essere eccitati hanno bisogno di energie dell'ordine di $\SI{1}{\electronvolt}$, cioè di una temperatura di circa $\SI{1E4}{\kelvin}$. A questa temperatura il gas ha subito dei cambiamenti tali che il nostro modello non è più valido. Dopo il grado di libertà traslazionale, che è sempre attivo, si attiva il grado rotazionale. L'energia rotazionale è dell'ordine di $\SI{1E-4}{\electronvolt}$. L'energia vibrazionale invece è maggiore, dell'ordine di $\SIrange{1E-3}{1E-1}{\eV}$ e quindi necessitano una temperatura maggiore per essere attivati. A temperature molto alte tutti i gradi di libertà sono attivati, quindi per una molecola biatomica sono 7 (3 traslazionali, 2 rotazionali e 2 vibrazionali, considerando l'energia potenziale come grado di libertà)\footnote{problema a due corpi: 6 gradi di libertà più uno potenziale}. Quindi l'energia totale in accordo con il principio di equipartizione:
 \begin{equation}
