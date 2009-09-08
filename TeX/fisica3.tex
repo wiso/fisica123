@@ -375,7 +375,8 @@ L=\frac{1}{n\pi d^2}=\frac{1}{n\sigma}
 \end{equation}
 con $n$ il numero di molecole per volume, $d$ il diametro molecolare, $\sigma=\pi d^2$ la sezione d'urto. Se le altre molecole si muovono dobbiamo considerare la velocità relativa. Rifacendo tutto il ragionamento: la molecola spazza in un tempo infinitesimo $\ud t$ un cilindro di lunghezza $v\ud t$ e quindi volume $\pi d^2 v\ud t$. Il numero di urti sarà uguale al numero di particelle all'interno del cilindro. Se consideriamo la velocità relativa è più corretto:
 \begin{equation}
-L=\frac{1}{\sqrt{2}n\sigma}
+ \label{eq:libero_cammino_medio_rif}
+ L=\frac{1}{\sqrt{2}n\sigma}
 \end{equation}
 \subsection{Calcolo della velocità relativa media}
 \label{calcolo_vel_rel_med}
@@ -625,28 +626,47 @@ S_A=g\rho V=gm\frac{\rho}{\rho_p}
 n=n_0 e^{-\frac{N_Amg(\rho_p-\rho)h}{\rho_pRT}}
 \end{equation}
 \section{Viscosità\index{viscosità}}
+Vogliamo ricavare la viscosità di un fluido a partire da argomentazioni cinematiche.
+
 Immaginiamo un gas compreso tra due lastre di area $A$, quella superiore mantenuta alla velocità $\ve u=u\ver \imath$ e quella inferiore ferma. Servirà un forza $\ve F=-F\ver \imath$ per mantenere la lastra superiore a velocità costante. Possiamo studiare la viscosità di un gas schematizzandolo come formato da diversi strati paralleli che si muovono a velocità nette diverse. Lo strato superiore si muoverà con la lastra superiore a velocità $u$ e quello inferiore a velocità dello strato inferiore, cioè zero. La forza risulta\footnote{vedi \ref{viscosita fisica1} a pag.\@\pageref{viscosita fisica1}}:
 \begin{equation}
-F=\eta A \frac{\ud u}{\ud z}
+\label{eq:viscosita_cinetica}
+F=\eta A \frac{\ud u}{\ud y}
 \end{equation}
 in direzione opposta a movimento. Se consideriamo i nostri strati paralleli allora l'incremento di velocità è costante e la derivata diventa il rapporto.
 
 Le molecole di ogni strato sono caratterizzate dal moto caotico dovuto alla temperatura a cui si sovrappone il moto di trascinamento. Questo significa che le molecole possono passare da uno strato all'altro. Alcune molecole dello strato più veloce andranno a finire nello strato più lento, portando un contributo addizionale alla quantità di moto nella direzione del flusso aumentando così la velocità. Allo stesso modo alcune molecole dello strato più lento raggiungeranno lo strato più veloce e tenderanno a farlo rallentare. In generale si osserva un'attenuazione delle differenze nella velocità di flusso.
-Consideriamo due strati adiacenti di area $A$ la cui distanza sia pari al libero cammino medio. Questo significa che in media una molecola che lascia uno strato arriverà nello strato adiacente senza subire urti e solo qui urterà delle altre molecole trasferendo quantità di moto. La velocità dello strato più in alto sia $u_1$ quella di quello più in basso $u_2$ nella direzione $x$. Quindi la velocità di ogni molecola sarà la velocità di agitazione termica più questa velocità che contribuirà solo nella componente nella direzione del movimento netto; la componente verticale delle velocità medie delle molecole risulta uguale, quindi il numero di molecole che passa dallo strato inferiore a quello superiore è uguale al numero di molecole che fa il percorso opposto. Quindi ci sarà un trasferimento netto di quantità di moto dallo strato più veloce a quello più lento, cioè dall'alto verso il basso. La variazione di quantità di moto sarà uguale alla forza di viscosità:
+Consideriamo due strati adiacenti separati da un piano di area $A$. Concentriamoci sullo strato superiore, quello più veloce e calcoliamo la forza su questo fatto dallo strato inferiore. Alcune molecole passeranno dallo strato superiore a quello inferiore e quindi la quantità di moto dello strato superiore diminuirà. Altre molecole passeranno dallo strato inferiore a quello superiore e la quindi la quantità di moto dello strato superiore aumenterà. Vogliamo calcolare il numero di queste molecole. La velocità lungo $y$ delle molecole sarà $\frac{1}{3} v$. Il numero di molecole che passano da uno strato all'altro nel tempo $\ud t$ è il numero di molecole contenute nel volume di area $A$ e di altezza $v\ud t$. Solo metà di queste molecole avrà la direzione lungo $y$ giusta (metà vanno in basso, metà in alto). Quindi:
 \begin{equation}
-\frac{\ud m\media{v}}{\ud t}=\eta A\frac{\ud u}{\ud z}
+ N = \frac{1}{2}n A\media{v}\,\ud t
 \end{equation}
+Poiché $\ud t$ è piccolo (più piccolo del tempo di rilassamento) la velocità che ogni molecola ha è uguale alla velocità che aveva quando ha subito l'urto precedente. Per le molecole attraversano il piano verso l'alto l'ultimo urto è avvenuto a $y-l$, per quelle che vanno verso il basso in $y+l$. La variazione della quantità di moto dello strato superiore allora sarà:
 \begin{equation}
-\eta=\frac{1}{2}Nm\media{v}L=\frac{m\media{v}}{2\sqrt{2}\pi d^2}
+\begin{aligned}
+ \ud P =& P(\uparrow) - P(\downarrow) = Nmv_z(y-l) - Nmv_z(y+l) \\
+       =& \frac{1}{3}Nm ( v(y-l) - v(y+l) )\\
+       =& \frac{1}{3}Nm\left(v(y) -\frac{\partial v}{\partial y} l -v(y) - \frac{\partial v}{\partial y}l\right)\\
+       =& -\frac{2}{3}Nm\frac{\partial v}{\partial y}l\\
+       =& -\frac{1}{3}n A\media{v} m\frac{\partial v}{\partial y}l\,\ud t
+\end{aligned}
 \end{equation}
-con $d$ il diametro della particella, $m$ la massa di una molecola.
-\section{Conducibilità termica}
+La velocità delle molecole $v$ può essere identificata a livello macroscopico con $u$, quindi se calcoliamo la forza esercitata sullo strato superiore più veloce fatta dallo strato inferiore più lento:
 \begin{equation}
-\frac{\Delta Q}{A\Delta t}=K\frac{\ud T}{\ud z}
+ F =  -\frac{1}{3}n A\media{v} m\frac{\ud u}{\ud y}l
 \end{equation}
+Confrontando con l'equazione \eqref{eq:viscosita_cinetica}:
 \begin{equation}
-K=\frac{1}{3}\frac{n\media{v}lc_v}{n_A}
+ \eta = \frac{1}{3}n\media{v} ml
 \end{equation}
+Una derivazione più rigorosa che tiene conto della distribuzione delle velocità porta a:
+\begin{equation}
+ \eta = \frac{1}{2}n\media{v} ml
+\end{equation}
+usando l'equazione \eqref{eq:libero_cammino_medio_rif} possiamo anche scrivere:
+\begin{equation}
+ \eta = \frac{\media{v}m}{2\sqrt{2}\sigma}
+\end{equation}
+dove $\sigma$ è la sezione d'urto della collisione. In particolare la viscosità non dipende dalla densità.
 
 \section{Suono}
 \subsection{Velocità del suono nei gas}
