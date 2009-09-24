@@ -737,7 +737,6 @@ Le trasformazioni le possiamo dividere in due gruppi:
 \end{description}
 
 \subsection{Calcolo del lavoro\index{lavoro!su un gas}}
-\subsubsection{Caso generale}
 Considerando una trasformazione reversibile e un gas perfetto:
 \[\delta L=-F\ud x=-pA\ud x=-p\,\ud V\]
 \begin{equation}
@@ -749,6 +748,13 @@ Il modulo del lavoro è dunque, considerando il significato geometrico dell'inte
 L<0 \Leftrightarrow \text{espansione}\\
 L>0 \Leftrightarrow \text{compressione}\\
 \end{array}\]
+
+In generale la forza di pressione non è una forza conservativa. Calcoliamo il lavoro svolto tra due condizioni termodinamiche, corrispondenti a due punti nel piano $pV$ attraverso due percorsi diversi (vedi figura~\ref{fig:forza_pressione}). Passiamo da $A$ a $D$ prima attraverso una isocora che faccia aumentare la pressione, da $A$ a $B$ e poi attraverso una isobara che faccia aumentare il volume, da $B$ a $D$. Il lavoro totale sarà la somma del lavoro lungo l'isocora $AB$ e dell'isobara $BD$. Il primo è nullo essendo la variazione di volume nulla. Il secondo è $\int_{V_i}^{V_f} p\ud V=p_f \Delta V$. Questo è anche il lavoro totale. Proviamo invece a calcolare il lavoro facendo prima una isobara e poi un'isocora. Il lavoro totale sarà: $p_i\Delta V$ diverso dal risultato precedente. Quindi la forza non è conservativa.
+\begin{figure}[htbp]
+ \centering
+ \input{immagini/fisica1/forza_pressione}
+ \label{fig:forza_pressione}
+\end{figure}
 
 \subsubsection{Isobara $p=\const$}
 \begin{equation}
