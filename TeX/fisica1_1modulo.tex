@@ -30,7 +30,8 @@ Le grandezze hanno una dimensione data dall'unità di misura. Esistono grandezze
 %\begin{small}
 %\begin{tabular}{p{3.1cm}lcp{5.4cm}}
   %\hline Grandezza & Nome & Simbolo & Definizione\\ \hline
-%\index{lunghezza}lunghezza & \index{metro}metro &\metre& ``\ldots la lunghezza è la distanza percorsa dalla %luce nel vuoto in 1/299792458 di secondo''\\
+%\index{lunghezza}lunghezza & \index{metro}metro &\metre& ``\ldots la lunghezza è la distanza percorsa dalla %luce nel vuoto in 1/299792458 di secondo''\\\begin{s}
+L'
   %\index{massa}massa & \index{kilogrammo}kilogrammo &\kilogram&``\ldots questo prototipo (un particolare %cilindro di pla\-ti\-no--i\-ri\-dio) potrà d'ora in poi essere considerato l'unità di massa''\\
   %\index{tempo}tempo & \index{secondo}secondo &\second &``\ldots la durata di $9192631.770$ periodi della %radiazione corrispondente alla transizione tra i due livelli iperfini dello stato fondamentale dell'atomo di %cesio 133''\\
   %\index{corrente!elettrica}corrente elettrica & \index{ampere}ampere &\ampere&``\ldots quella corrente %costante che, passando in due conduttori paralleli rettilinei infinitamente lunghi, di sezione circolare %trascurabile, posti a \SI{1}{\meter} di distanza nel vuoto produce tra i due conduttori una forza di %$\SI{2E-7}{\newton}$ per metro di lunghezza''\\
@@ -488,6 +489,20 @@ t=t'&\text{ipotesi del tempo assoluto}\\
 \end{array}\right.\]
 Esse valgono nell'ipotesi che se $t=0=t'$ allora $\ve r\,'=\ve r$.
 Non esiste un sistema di riferimento assoluto.
+\begin{Es}[lancio del sasso]
+ Consideriamo due sistemi inerziali $O$ e $O'$. $O$ veda $O'$ muoversi lungo l'asse $x$ con velocità $\ve w$. Siano gli assi $y$ e $z$ uguali nei due sistemi. $O$ lancia un sasso verso l'alto, le equazioni del moto per il sasso visto da $O$ sono:
+ \begin{gather*}
+  x(t) = x_0\\
+  y(t) = -\frac{1}{2}gt^2 + v_0 t
+ \end{gather*}
+ la traiettoria in questo caso è un segmento verticale con gli estremi in $(x_0,0)$ e $(x_0,\frac{v_0^2}{2g})$. Nel sistema $O'$ invece questo moto diventa:
+ \begin{gather*}
+  x'(t) = x(t) - w t = x_0 - wt\\
+  y(t) = -\frac{1}{2}gt^2 + v_0 t
+ \end{gather*}
+ si noti che $v_0$ è sempre lo stesso nei due sistemi. Eliminando il tempo: $t = (x_0-x') /w$ si ottiene l'equazione di una parabola il cui vertice è ad una altezza uguale a quella nel sistema di $O$.
+\end{Es}
+
 \subsection{Invarianza e covarianza\index{invarianza}\index{covarianza}}
 Una grandezza si dice invariante se è numericamente uguale alla sua trasformata, cioè $x=T(x)=x'$. Nelle trasformazioni di Galileo l'accelerazione è invariante rispetto alla trasformazione che trasforma le coordinate di $O$ in quelle di $O'$. Nella relatività galileiana la lunghezza è invariante, nella relatività ristretta no.
 
@@ -770,7 +785,7 @@ La relazione che li lega è:
 \[
  \ve{v}=\frac{\ud}{\ud t}\ve{x}=\frac{\ud}{\ud t}\ve{x_0}+\frac{\ud}{\ud t}\ve{x'}=\ve{v_0}+\sum_{i=1}^3\left(\underbrace{\frac{\ud x'_i}{\ud t}\ve{e}'_i}_{\ve{v'}}+x'_i\frac{\ud \ve{e}'}{\ud t}\right)
 \]
-A causa della rotazione il versore del sistema primato ruota, ma il suo modulo non cambia. Dopo un tempo $\ud t$ avrà fatto un angolo $\ud\alpha=\omega\ud t$, quindi per la definizione di angolo $\ud\alpha=\norm{\ud\ve{e'_i}}$, ma allora $\norm{\frac{\ud \ve{e'}_i}{\ud t}} = \omega$. In generale vale:
+A causa della rotazione il versore del sistema primato ruota, ma il suo modulo non cambia. Dopo un tempo $\ud t$ avrà fatto un angolo $\ud\alpha=\omega\ud t$, quindi per la definizione di angolo $\ud\alpha=\norm{\ud\ve{e'_i}}$. In generale vale:
 \[
  \frac{\ud\ve{e'_i}}{\ud t}=\ve\omega\times\ve{e'_i}
 \]
@@ -778,23 +793,50 @@ quindi:
 \[
  \ve{v}=\ve{v'}+\ve{v_0}+\ve{\omega}\times\ve{x'}
 \]
-derivando ancora una volta
+si noti come $\ve v'\neq \ve{\dot x'}$, infatti:
+\[
+ \frac{\ud\ve x'}{\ud t} = \ve v-\frac{\ud}{\ud t} \ve x_0 = \ve v'+\ve\omega\times\ve x'
+\]
+si definisce velocità di trascinamento la velocità misurata da $O$ di un punto fermo rispetto ad $O'$, cioè per cui $\ve v'=0$:
+\[
+ \ve v_T = \ve{v_0}+\ve{\omega}\times\ve{x'}
+\]
+la velocità di trascinamento \index{velocità!di trascinamento}è uguale alla differenza di velocità misurate dai due osservatori: $\ve v_T = \ve{v} - \ve{v'}$.
+
+Derivando la velocità\footnote{tralasciamo i simboli di sommatoria come nella notazione di Einstein}:
 \begin{align*}
- \ve{a}&=\frac{\ud}{\ud t}\ve{v}=\frac{\ud}{\ud t}\left(\frac{\ud x'_i}{\ud t}\ve{e'_i}\right)+\frac{\ud\ve{v_0}}{\ud t}+\ve\omega\times\frac{\ud\ve{x'}}{\ud t}\\
-&=\frac{\ud^2 x'_i}{\ud t^2}\ve{e'_i}+\frac{\ud x'_i}{\ud t}\frac{\ud\ve{e'_i}}{\ud t}+\ve{a_0}+\ve\omega\times\left(\ve{v'}+x'_i\frac{\ud\ve{e'_i}}{\ud t}\right)\\
-&=\ve{a'}+\ve\omega\times\ve{v'}+\ve{a_0}+\ve\omega\times\ve{v'}+\ve\omega\times\left(\ve\omega\times\ve{x'}\right)\\
-&=\ve{a'}+\ve{a_0}+2\ve\omega\times\ve{v'}+\ve{\omega}(\ve\omega\cdot\ve{x'})-\ve{x'}(\ve\omega\cdot\ve\omega)\\
-&=\ve{a'}+\ve{a_0}+2\ve\omega\times\ve{v'}-\omega^2\ve{x'}
+ \ve{a}&=\frac{\ud}{\ud t}\ve{v}=\frac{\ud}{\ud t}\left(\frac{\ud x'_i}{\ud t}\ve{e'_i}\right)+\frac{\ud\ve{v_0}}{\ud t}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+\ve\omega\times\frac{\ud\ve{x'}}{\ud t}\\
+&=\frac{\ud^2 x'_i}{\ud t^2}\ve{e'_i}+\frac{\ud x'_i}{\ud t}\frac{\ud\ve{e'_i}}{\ud t}+\ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+\ve\omega\times\left(\ve{v'}+x'_i\frac{\ud\ve{e'_i}}{\ud t}\right)\\
+&=\ve{a'}+\ve\omega\times\ve{v'}+\ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+\ve\omega\times\ve{v'}+\ve\omega\times\left(\ve\omega\times\ve{x'}\right)\\
+&=\ve{a'}+\ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+2\ve\omega\times\ve{v'}+\ve{\omega}(\ve\omega\cdot\ve{x'})-\ve{x'}(\ve\omega\cdot\ve\omega)\\
+&=\ve{a'}+\ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+2\ve\omega\times\ve{v'}-\omega^2\ve{x'}
 \end{align*}
 dove nel penultimo passaggio si è usato $\ve A\times(\ve B\times \ve C)=\ve{B}(\ve{A}\cdot\ve{C})-\ve{C}(\ve{A}\cdot\ve{B})$. Moltiplicando per $m$ si ottiene:
 \begin{equation}
- m\ve{a'}=\ve F-m\ve{a_0}+m\omega^2\ve x'-2m\ve\omega\times\ve{v'}
+ \label{eq:newton_non_inerziale}
+ m\ve{a'}=\ve F-m\ve{a_0}-m\frac{\ud\ve\omega}{\ud t}\times\ve x'+m\omega^2\ve x'-2m\ve\omega\times\ve{v'}
 \end{equation}
-
-
-
-
-
+L'accelerazione di trascinamento è quella di un punto solidale con $O'$ misurata da $O$, quindi per questo punto $\ve v'=0$ e $\ve a'=0$:
+\[
+ \ve a_T = \ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'-\omega^2\ve{x'}
+\]
+e quindi:
+\[
+ \ve a = \ve a'+\ve a_T + \underbrace{2\ve\omega\times\ve v'}_{\ve a_c}
+\]
+dove $\ve a_C$ è l'\index{accelerazione!di Coriolis}accelerazione di Coriolis.
+\subsection{Casi particolari}
+\subsubsection{Moto uniformemente accelerato}
+Se $O'$ si muove di moto uniformemente accelerato allora in questo sistema di riferimento la legge di Newton si scrive come l'equazione \eqref{eq:newton_non_inerziale} considerando $\omega = 0$:
+\begin{equation}
+ \ve F = m\ve a'-m\ve a_0
+\end{equation}
+\subsubsection{Moto circolare uniforme}
+Per questo caso $\ve a_0=0$ e $\omega$ è costante:
+\begin{equation}
+ \ve F = m\ve a' + m\omega^2\ve x' - 2m\ve \omega \times\ve v'
+\end{equation}
+dove il primo termine addizionale è la \index{forza!centrifuga}forza centrifuga, mentre il secondo è la \index{forza!di Coriolis}forza di Coriolis.
 
 \section{\index{quantità di moto}Quantità di moto}
 \begin{Def}[quantità di moto di un punto materiale]

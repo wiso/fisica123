@@ -223,20 +223,56 @@ Conoscendo la trasformazione delle coordinate possiamo trovare nuovi versori sfr
 \end{equation}
 nelle coordinate generiche $u_i$ questo si scrive come:
 \begin{equation}
- \ud s = \ud u_1\ver e_1 + \ud u_2\ver e_2 + \ud u_3\ver e_3
+ \ud s = \ud u_1\ve e_1 + \ud u_2\ve e_2 + \ud u_3\ve e_3
 \end{equation}
 differenziando la prima, considerando $x,y,z$ come funzione delle nuove coordinate si trova:
 \begin{equation}
 \begin{aligned}
- \ud u_1\ver e_1 + \ud u_2\ver e_2 + \ud u_3\ver e_3 =& \left(\frac{\partial x}{\partial u_1}\ud u_1 + \frac{\partial x}{\partial u_2}\ud u_2 +  \frac{\partial x}{\partial u_3}\ud u_3\right)\ver i\\
+ \ud u_1\ve e_1 + \ud u_2\ve e_2 + \ud u_3\ve e_3 =& \left(\frac{\partial x}{\partial u_1}\ud u_1 + \frac{\partial x}{\partial u_2}\ud u_2 +  \frac{\partial x}{\partial u_3}\ud u_3\right)\ver i\\
  + & \left(\frac{\partial y}{\partial u_1}\ud u_1 + \frac{\partial y}{\partial u_2}\ud u_2 +  \frac{\partial y}{\partial u_3}\ud u_3\right)\ver j\\
  + & \left(\frac{\partial z}{\partial u_1}\ud u_1 + \frac{\partial z}{\partial u_2}\ud u_2 +  \frac{\partial z}{\partial u_3}\ud u_3\right)\ver k
 \end{aligned}
 \end{equation}
 uguagliando i termini che moltiplicano $\ud u_i$, il versore $i$--esimo delle nuove coordinate si scrive:
-\[\ver e_i=\dfrac{\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right) }{D_i}\]
-$D_i$ è il fattore di normalizzazione:
+\[\ve e_i=\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right)\]
+Gli $\ve e_i$ non sono normalizzati, introduciamo i fattori di normalizzazione:
 \[D_i=\sqrt{\left(\frac{\partial x}{\partial u_i}\right)^2+\left(\frac{\partial y}{\partial u_i}\right)^2+\left(\frac{\partial z}{\partial u_i}\right)^2}\]
+detti \index{fattore!di scala} fattori di scala. Quindi i versori $\ver e_i$:
+\begin{equation}
+ \ver e_i = \frac{\ve e_i}{D_i} = \dfrac{\left(\dfrac{\partial x}{\partial u_i}\ver \imath+\dfrac{\partial y}{\partial u_i}\ver \jmath+\dfrac{\partial z}{\partial u_i}\ver k\right)}{D_i}
+\end{equation}
+\subsubsection{Spostamento infinetisimo}
+\begin{equation}
+ \ud s = \ud u_1 D_1 \ver e_1 + \ud D_2 u_2\ver e_2 + \ud u_3 D_3 \ver e_3
+\end{equation}
+\subsubsection{Volume elementare}
+\begin{equation}
+ \ud V = D_1D_2D_3 \ud u_1\ud u_2\ud u_3
+\end{equation}
+\subsubsection{Gradiente}
+\begin{equation}
+ \ve\nabla\phi = \frac{1}{D_1}\frac{\partial\phi}{\partial u_1} + \frac{1}{D_2}\frac{\partial\phi}{\partial u_2} + \frac{1}{D_3}\frac{\partial\phi}{\partial u_3}
+\end{equation}
+\subsubsection{Divergenza}
+\begin{equation}
+ \ve\nabla\cdot\ve A = \frac{1}{D_1D_2D_3}\left[\frac{\partial}{\partial u_1}(D_2D_3 A_1) + \frac{\partial}{\partial u_2}(D_3D_1 A_2) + \frac{\partial}{\partial u_3}(D_1D_2 A_3)\right]
+\end{equation}
+ \subsubsection{Rotore}
+ \begin{equation}
+  \ve\nabla\times\ve A = \frac{1}{D_1D_2D_3}\det\begin{pmatrix}
+  D_1\ver e_1 & D_2\ver e_2 & D_3\ver e_3 \\
+  \dfrac{\partial}{\partial u_1} & \dfrac{\partial}{\partial u_2} & \dfrac{\partial}{\partial u_3}\\
+  D_1\ve A_1 & D_2\ve A_2 & D_3\ve A_3\end{pmatrix}
+ \end{equation}
+\subsubsection{Laplaciano}
+\begin{equation}
+ \nabla^2 \phi = \frac{1}{D_1D_2D_3}\left[ 
+   \frac{\partial}{\partial u_1}\left(\frac{D_2D_3}{D_1}\frac{\partial\phi}{\partial u_1}\right)
+ + \frac{\partial}{\partial u_2}\left(\frac{D_3D_1}{D_2}\frac{\partial\phi}{\partial u_2}\right)
+ + \frac{\partial}{\partial u_3}\left(\frac{D_1D_2}{D_3}\frac{\partial\phi}{\partial u_3}\right)
+ \right]
+\end{equation}
+
 \subsection{Coordinate cartesiane\index{coordinate!cartesiane}}
 \subsubsection{Superfici coordinate}
 Per definizione una superficie coordinata è 
@@ -831,7 +867,7 @@ in forma vettoriale:
 \begin{equation}
 \label{eq:campo_dipolo}
 \ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation}
-Esso decresce con $r^3$.
+Esso decresce con $r^3$ ed è solenoidale, cioè le linee del campo si chiudono. Da questa discende che il flusso su una superficie che racchiude il dipolo è nullo.
 \subsection{Energia potenziale\index{energia!potenziale!del dipolo}}
 Mettiamo un dipolo in un campo elettrico $\ve E$ esterno. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale esterno $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
 \[W=W_B+W_A=q(\varphi_B-\varphi_A)\]
@@ -863,6 +899,16 @@ che fa ruotare il dipolo fino alla posizione di equilibrio. Questa relazione pu�
  \ve M = \ve r_+\times \ve F_+ + \ve r_-\times\ve F_- = q(\ve r_+-\ve r_-)\times \ve E=\ve p\times\ve E
 \]
 
+\subsection{Interazione dipolo-dipolo}
+Consideriamo due dipoli $\ve p_1$ e $\ve p_2$. Vogliamo sapere come interagiscono. Calcoliamo prima l'energia potenziale del sistema. Il campo generato del primo dipolo è:
+\[
+ \ve E_1 = \frac{1}{\giorgi}\left(3(\ve p_1\cdot \ve r)\frac{\ve r}{r^5}-\frac{\ve p_1}{r^3}\right)
+\]
+quindi l'energia di interazione è:
+\[
+ U = -\ve E_1\cdot \ve p_2 = \frac{1}{\giorgi}\left(3\frac{(\ve p_1\cdot \ve r)(\ve p_2\cdot \ve r)}{r^5}-\frac{\ve p_1\cdot\ve p_2}{r^3}\right)
+\]
+che varia come $\frac{1}{r^3}$. Quest'interazione è quella che si verifica tra molecole neutre ma polari, che presentano un momendo di dipolo, come l'acqua.
 \index{dipolo|)}
 \section{Sviluppo in multipoli\index{multipoli|(}\index{sviluppo!in multipoli|(}}
 Il multipolo è un sistema formato da diverse cariche. Ci interessa sapere come si comporta $\varphi$ a grande distanza. Una distribuzione di cariche può essere approssimata a grande distanza da sovrapposizione di multipoli.
@@ -1457,13 +1503,15 @@ Quindi il potenziale:
 \end{figure}
  Si può ricavare la densità di carica dal teorema di Coulomb:
  \[
-  \sigma = \frac{\ve E\cdot \ver n}{\varepsilon_0} = -\frac{1}{\varepsilon_0}\left.\frac{\partial\varphi}{\partial r}\right|_{r=a}=\frac{3 E_0}{\varepsilon_0}\cos\theta
+  \sigma = \varepsilon_0\ve E\cdot \ver n = -\varepsilon_0\left.\frac{\partial\varphi}{\partial r}\right|_{r=a}=3\varepsilon_0 E_0\cos\theta
  \]
  Quindi la carica totale indotta sulla sfera:
  \[
-  Q = \int \sigma\,\ud a = \int_0^\pi \frac{3E_0}{\varepsilon_0}\cos\theta 2\pi a\sin\theta a\,\ud\theta = \frac{3E_0}{\varepsilon_0}2\pi a^2\int_0^\pi\sin\theta\cos\theta = 0
+  Q = \int \sigma\,\ud a = \int_0^\pi 3\varepsilon_0 E_0\cos\theta 2\pi a\sin\theta a\,\ud\theta = 3\varepsilon_0E_02\pi a^2\int_0^\pi\sin\theta\cos\theta = 0
  \]
  quindi si può concludere che in questo caso non c'è differenza tra una sfera a terra e una sfera isolata.
+ 
+ All'interno il campo è nullo, quindi il campo generato dalla carica indotta sulla sfera deve essere uguale ed opposto al campo esterno. Abbiamo quindi anche dimostrato che una sfera carica con una densità di carica che varia come $\cos\theta$ genera un campo interno uniforme e un campo esterno di dipolo. Dal segno della densità di carica si deduce la discontinuità che deve avere il campo elettrico e quindi che il campo elettrico interno costante è diretto dall'emisfero dove $\cos\theta>0$ all'emisfero dove $\cos\theta<0$.
 \end{Es}
 
 
@@ -2769,8 +2817,9 @@ con $\rho$ densità di volumetrica di cariche libere.
 \[
 [D]=\coulomb\per\meter^2
 \]
+Si sottolinea che il campo elettrico $\ve E$ che compare è il campo elettrico totale, cioè quello creato dalle cariche libere più quelle di polarizzazione.
 \section{Suscettività e permittività}
-Per chiudere il problema, cioè determinare il campo elettrico serve una nuova equazione, in quanto il campo elettrico è funzione delle cariche di polarizzazione, le quali sono funzione del vettore polarizzazione elettrica il quale è funzione del campo elettrico. Leghiamo direttamente il vettore polarizzazione elettrica con il campo esterno:
+Per chiudere il problema, cioè determinare il campo elettrico serve una nuova equazione, in quanto il campo elettrico è funzione delle cariche di polarizzazione, le quali sono funzione del vettore polarizzazione elettrica il quale è funzione del campo elettrico. Leghiamo direttamente il vettore polarizzazione elettrica con il campo totale:
 \begin{equation}
 \ve P(\ve r)=\chi_e\ve E(\ve r)
 \end{equation}
@@ -2810,6 +2859,11 @@ chiamata anche permittività dielettrica relativa del mezzo rispetto al vuoto. \
 Se il mezzo è isotropo i tre vettori $\ve D$, $\ve E$, $\ve P$ sono paralleli.
 
 La relazione che lega $\ve P$ a $\ve E$ oppure equivalentemente $\ve D$ a $\ve E$ è la relazione costitutiva dei materiali per quanto riguarda il comportamento dielettrico.
+
+Per ricordarsi i legami tra $\chi_e$ e $\varepsilon_r$ è utile notare che:
+\begin{eqimp}{equation}
+ \varepsilon_0 + \chi_e = \varepsilon_0\varepsilon_r
+\end{eqimp}
 \subsubsection{Altre convenzioni}
 In passato $\chi_e$ era definito come
 \begin{equation}

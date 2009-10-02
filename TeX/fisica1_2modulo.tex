@@ -508,8 +508,13 @@ P=\frac{1}{3}\rho\media{v^2}
 Questo risultato è stato ottenuto trascurando gli urti tra le molecole, ma risulta comunque valido. In caso di urto infatti le velocità di due molecole si scambiano e quindi ci il moto delle due molecole è semplicemente scambiato. Si noti che l'espressione precedente lega una grandezza microscopica (la velocità) ad una macroscopica (la pressione).
 Usando invece l'energia cinetica del gas $K=\frac{1}{2}Nm\media{v^2}$ la \eqref{eq_gas_01} diventa:
 \begin{equation}
-PV=\frac{2}{3}K
+pV=\frac{2}{3}K
 \end{equation}
+Introducendo la legge dei gas perfetti $pV=nRT$ si ricava:
+\begin{equation}
+ K = \frac{3}{2}nRT
+\end{equation}
+che lega la temperatura del gas alla sua energia interna.
 \begin{Def}[velocità quadratica media]
 \begin{equation}
 v_{qm}=\sqrt{\media{v^2}}
@@ -526,6 +531,23 @@ v_{qm}=\sqrt{\frac{3P}{\rho}}
  \]
 questo non vuol dire che per fare un metro in linea retta una molecola ci mette $\Delta t \simeq \frac{\Delta s}{v_{qm}}=\frac{\SI{1}{\meter}}{\SI{500}{\meter\per\second}}=\SI{2}{\milli\second}$ in quanto il suo percorso non è lineare, ma continua a variare direzione ad ogni urto.
 \end{Es}
+\subsubsection{Legge di Dalton}
+In presenza di più gas diversi possiamo usare il fatto che il volume occupato dalle molecole è trascurabile rispetto al volume totale del gas. Quindi le loro pressioni si calcolano separatamente (\index{pressione!parziale} pressioni parziali):
+\index{legge!di Dalton}
+\begin{legge}[Dalton]
+\begin{equation}
+ p = \sum_i p_i = \frac{RT}{V}\sum_i{n_i}
+\end{equation}
+\end{legge}
+La pressione parziale $i$--esima:
+\begin{equation}
+ p_i = \frac{RT}{V}n_i = \frac{nRT}{nV}n_i = p\frac{n_i}{\sum_i n_i} = pr_i
+\end{equation}
+dove $r_i$ è la frazione molare:
+\begin{equation}
+ r_i = \frac{n_i}{\sum_i n_i}
+\end{equation}
+
 
 \subsection{Libero cammino medio\index{libero cammino medio}}
 \label{libero cammino medio fisica1}
@@ -890,10 +912,11 @@ quindi possiamo ridefinire i calori specifici molari come:
 
 
 \section{Trasformazioni cicliche\index{trasformazioni!cicliche}}
+Una trasformazione ciclica è una trasformazione in cui gli stati iniziali e finali coincidono, quindi:
 \begin{equation}
 \Delta E=Q+L=0
 \end{equation}
-La macchine termiche trasformano il calore in lavoro. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda.
+La macchine termiche trasformano il calore in lavoro e il loro ciclo è chiamo \index{ciclo!termico}ciclo termico. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda e il loro ciclo è chiamato \index{ciclo!frigorifero}ciclo frigorifero.
 \subsection{Ciclo di Carnot per un gas perfetto\index{Carnot}\index{ciclo!di Carnot}\index{macchina!di Carnot}}
 \begin{figure}[htbp]
 \centering
