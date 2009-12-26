@@ -404,15 +404,15 @@ componenti:
 \end{figure}
 Il moto armonico è un moto con equazione differenziale:
 \begin{eqimp}{equation}
-\ddot x=-k x
+\ddot x=-\omega^2 x
 \end{eqimp}
 la cui soluzione è:
 \[x=A\sin(\omega t+\varphi)\]
+derivando si ottiene
 \[v=\frac{\ud x}{\ud t}=A\omega\cos(\omega t+\varphi)\]
-\[a=\frac{\ud v}{\ud t}=-A\omega^2\sin(\omega t+\varphi)=-\omega^2 x=\ddot x\]
-\[k=\frac{1}{\omega^2}\qquad x=-\frac{1}{\omega^2}\ddot x\]
- Per esempi (pendoli, molle) vedi sezione \ref{armonico} a
-pagina \pageref{armonico}
+\[a=\frac{\ud v}{\ud t}=-A\omega^2\sin(\omega t+\varphi)\]
+ovviamente risulta che: $a = -\omega^2 x=\ddot x$.
+Per esempi (pendoli, molle) vedi sezione \ref{armonico} a pagina \pageref{armonico}.
 \subsection{Moto armonico smorzato\index{moto!armonico!smorzato}}
 \begin{figure}
  \centering
@@ -562,7 +562,7 @@ F_c=\mu_cN
 $\mu_c=$ coefficiente di attrito dinamico. $\mu_c<\mu_s$
 
 \section{\index{principi della dinamica}Leggi di Newton}
-Le leggi di Newton sono i principi della dinamica, legano due mondi distinti, quello del mondo esterno e quello della cinematica attraverso le forze. In quanto principi non hanno nessuna giustificazione, se non la verifica sperimentale.
+Le leggi di Newton sono i principi della dinamica, legano due mondi distinti, quello del mondo esterno e quello della cinematica attraverso le forze. In quanto principi non hanno nessuna giustificazione, se non la verifica sperimentale. I principi valgono nei sistemi inerziali. L'esistenza e la definizione dei sistemi inerziali è data dal primo principio:
 \begin{Pri}[Primo principio della dinamica]
 Quando un corpo è sottoposto ad una forza risultante nulla è
 possibile individuare una classe di riferimenti rispetto ai quali
@@ -966,14 +966,24 @@ superficie del semicerchio è $\frac{\pi r^2}{2}$, quindi
 \end{Es}
 
 \section{\index{impulso di una forza}Impulso di una forza}
+\begin{Def}[Impulso di una forza]
+L'impulso di una forza $\ve F$ tra il tempo $t_1$ e $t_2$ è definito come:
+\begin{equation}
+ \ve{J}(t_1,t_2)=\int_{t_1}^{t_2} \ve{F}\, \ud t
+\end{equation}
+\end{Def}
+poiché
 \begin{align*}
-\ve{J}(t_1,t_2)&=\int_{t_1}^{t_2} \ve{F}\, \ud t=\int_{t_1}^{t_2}m\ve a\, \ud t=m\int_{t_1}^{t_2}\frac{d\ve{v}}{\ud t}\,\ud t=m\int_{t_1}^{t_2}\ud \ve{v}\\
+\int_{t_1}^{t_2} \ve{F}\, \ud t &= \int_{t_1}^{t_2}m\ve a\, \ud t=m\int_{\ve v(t_1)}^{\ve v(t_2)}\frac{d\ve{v}}{\ud t}\,\ud t=m\int_{t_1}^{t_2}\ud \ve{v}\\
 &=m\left[\ve v(t_2)-\ve v(t_1)\right]=\ve p_2 - \ve p_1=\Delta \ve p
 \end{align*}
+allora:
+\begin{Teo}[inpulso]
 \[
 \ve J=\int_{t_1}^{t_2}\ve F \ud t=\Delta \ve p
 \]
-Se il sistema è isolato con due corpi si ha:
+\end{Teo}
+In particolare se il sistema è isolato con due corpi si ha:
 
 \[
 \Delta \ve p_1=\int_{t_1}^{t_2} \ve F_{1,2}\, \ud t\qquad \Delta \ve p_2=\int_{t_1}^{t_2} \ve F_{2,1}\, \ud t

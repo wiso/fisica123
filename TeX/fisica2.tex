@@ -560,19 +560,19 @@ Se sono molto vicino al disco:
 \begin{Es}[filo finito]
  Consideriamo un filo di lunghezza finita sull'asse $z$ con densità di carica uniforme $\lambda$. Vogliamo trovare il campo elettrostatico lungo l'asse $x$. Un elementino infinitesimo avrà carica $\ud q'=\lambda\ud z'$. e genererà un campo:
 \[
- \ud\ve E(x,0,0) = \frac{\ud q'}{4\pi\varepsilon_0}\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^{3/2}}
+ \ud\ve E(x,0,0) = \frac{\ud q'}{4\pi\varepsilon_0}\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}
 \]
 con $\ve r=x\ver i$, $\ve r'=z\ver k$, $\ve r-\ve r'=x\ver i-z \ver k$
 \[
  \ve E(x,0,0)=\int\ud \ve E=\frac{\lambda}{4\pi\varepsilon_0}\int\frac{x\ver i-z\ver k}{(x^2+z'^2)^{3/2}}\ud z'
 \]
-per risolvere l'integrale è utile la sostituzione $\tan\frac{z'}{x}$:
+per risolvere l'integrale è utile la sostituzione $\tan\gamma=\frac{z'}{x}$:
 \begin{align*}
  \ve E(x,0,0)&=\frac{\lambda}{4\pi\varepsilon_0}\int\frac{x(1+\tan^2\gamma)\ud\gamma}{x^3\left(1+\tan^2\gamma\right)^{3/2}}\left(x\ver i-x\tan\gamma\ver k\right)\\
 &=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\int\frac{\ver i-\tan\gamma\ver k}{\left(1+\tan^2\gamma\right)^{1/2}}\\
 &=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\int\left(\cos\gamma\ver i-\sin\gamma\ver k\right)
 \end{align*}
-se $z$ varia tra $(z_\text{min},z_\text{max})$, $\gamma$ varia tra $(\gamma_\text{min},\gamma_\text{max})=(\arctan\left(\frac{z_\text{max}}{x},\frac{z_\text{min}}{x}\right)$:
+se $z$ varia tra $(z_\text{min},z_\text{max})$, $\gamma$ varia tra $(\gamma_\text{min},\gamma_\text{max})=\arctan\left(\frac{z_\text{max}}{x},\frac{z_\text{min}}{x}\right)$:
 \begin{align*}
  \ve E(x,0,0)&=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\int_{\gamma_{\text{min}}}^{\gamma_{\text{max}}}\ud\gamma\left(\cos\gamma\ver i-\sin\gamma\ver k\right)\\
 &=\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{x}\left[\left(\sin\gamma_\text{max}-\sin\gamma_\text{min}\right)\ver i+\left(\cos\gamma_\text{max}-\cos\gamma_\text{min}\right)\ver k\right]
@@ -846,7 +846,7 @@ Immaginiamo una carica $q$ nell'origine, allora il suo potenziale è $\varphi_0\
 spostiamo di $\Delta\ve r=\frac{\ve\delta}{2}$ la carica, allora:
 \[\varphi_+\left(\ve r\right)=\varphi_0(\ve r-\Delta \ve r)\simeq\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
 La stessa cosa la possiamo fare con una carica $-q$ e spostarla dall'altra parte $-\Delta\ve r$:
-\[\varphi_-\left(\ve r\right)=\varphi_0(\ve r+\Delta \ve r)\simeq-\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=-\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
+\[\varphi_-\left(\ve r\right)=-\varphi_0(\ve r+\Delta \ve r)\simeq-\varphi_0-\ve\nabla\varphi_0\cdot\Delta\ve r=-\frac{1}{4\pi\varepsilon_0}\frac{q}{r}-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\frac{\ve\delta}{2}\]
 Essendo $\delta\ll r$ allora è una buona approssimazione. Il potenziale totale:
 \[\varphi\left(\ve r\right)=\varphi_++\varphi_-=-\frac{1}{4\pi\varepsilon_0}q\ve\nabla\left(\frac{1}{r}\right)\cdot\ve\delta=-\frac{1}{4\pi\varepsilon_0}\ve p\cdot\ve\nabla\left(\frac{1}{r}\right)\]
 
@@ -1011,9 +1011,9 @@ avendo usato $\ve r=z\ver e_z$ e quindi $r = |z|$.
 \begin{Es}[Doppio anello 2]
   Calcolare il lavoro che deve essere fatto dall'esterno per portare una carica $e$ da un punto infinitamente lontano all'origine. Calcolare il lavoro che dev'essere fatto per portare un dipolo $\ve p$ con il verso lungo l'asse $z$ da un punto infinitamente lontano all'origine.
 
-  Il lavoro fatto dal campo si può calcolare come variazione dell'energia potenziale. Quindi il lavoro fatto dall'esterno sarà l'opposto del lavoro fatto dal campo:
+  Il lavoro fatto dall'esterno può calcolare come variazione dell'energia potenziale:
   \[
-   L_\text{ext} = -L_\text{campo} = e(\varphi(0)-\varphi(\infty))
+   L_\text{ext} = e(\varphi(0)-\varphi(\infty))
   \]
    Per valutare il potenziale al posto di fare la derivata del campo lo si può calcolare dalla definizione. Il potenziale generato da una spira sull'asse è:
   \[
@@ -1968,6 +1968,53 @@ non sono deviate dai campi e quindi riescono a uscire dal separatore di velocit�
 \[m=\frac{qB'B}{E}r_L\]
 \end{Es}
 
+\begin{Es}[Ciclotrone]
+ Il ciclotrone \index{ciclotrone} è un acceleratore inventato negli anni 30. È formato da due conduttori cavi semicilindrici a forma di D, che uniti formano un ciclindro. Tra le due cavità è applicata una differenza di potenziale varibile in modo alternato $V=V_0\sin\omega_{RF}t$ dove $RF$ sta per radiofrequenza. Inoltre è applicato un campo magnetico ortogonale alle cavità.
+ 
+ Il processo inizia iniettando uno ione di massa $m$ e carica $q$ da una sorgente al centro del sistema. Esso viene accelerato dalla differenza di potenziale tra le due D a una velocità finale $v_1$ che si può ricavare dalla conservazione dell'energia:
+ \[
+  \frac{1}{2}mv_1^2 = qV
+ \]
+ quindi $v_1^2 = \frac{2qV}{m}$. Lo ione entra in $D_1$ dove il campo elettrico è nullo, e viene deviato dalla forza di Lorentz su una traiettoria circolare di raggio $r_1=\frac{m v_1}{qB}$. Il tempo che ci impiegherà ad uscire da $D_1$ sarà:
+ \[
+  t_1 = \frac{\pi r_1}{v_1}=\frac{\pi m}{qB}
+ \]
+ come si nota questo tempo non dipende dalla velocità della particella. Nello stesso tempo la tensione (la radiofrequenza) ha cambiato segno e quindi lo ione viene accelerato passando da $D_1$ a $D_2$. Ad ogni semigiro lo ione acquista un'energia cinetica $qV$. Dentro a $D_2$ lo ione compie una semicirconferenza con raggio maggiore rispetto a prima: $r_2={m v_2}{qB}$ e ci impiega:
+ \[
+  t_2 = \frac{\pi r_2}{v_2}=\frac{\pi m}{qB} = t_1 = \Delta t
+ \]
+ infatti come già sottolineato il tempo di percorrenza di un'orbita circolare in un campo magnetico non dipende dalla velocità della particella. Il grande vantaggio del ciclotrone è che la particella ci mette sempre lo stesso tempo a percorrere metà circonferenza. La velocità angolare della particella è:
+ \[
+  \omega = \frac{2\pi}{T} = \frac{2\pi}{2\Delta t} = \frac{\pi}{\Delta t} = \frac{qB}{m}
+ \]
+
+ quindi si può ottenere un'accelerazione se il tempo impiegato dalla particella a fare una semicirconferenza è pari al semiperiodo di $V$:
+ \[
+  \Delta t = \frac{T_{RF}}{2} = \frac{\pi}{\omega_{RF}}
+ \]
+ questo vuol dire $\omega_{RF}=\omega$, cioè la pulsazione della radiofrequenza, detta pulsazione di ciclotrone, deve essere pari alla velocità angolare dello ione.
+ 
+ Il processo continua fino a quando lo ione non arriva alla circonferenza massima di raggio $R$, quindi:
+ \[
+  v_{\max} = \frac{qBR}{m}
+ \]
+ cioè un'energia cinetica massima di:
+ \[
+  E_{\max} = \frac{1}{2}mv_{\max}^2 = \frac{q^2 B^2 R^2}{2m}
+ \]
+ Ad ogni giro lo ione guadagna un'energia pari a $2qV$, quindi il numero di giri necessari è:
+ \[
+  N = \frac{E_{\max}}{2qV} = \frac{qB^2R^2}{4mV}
+ \]
+ e quindi un tempo:
+ \[
+  t_{\max} = 2\Delta tN = \frac{\pi R^2 B}{2V}
+ \]
+ 
+ Il limite a questo acceleratore è dato dalla relatività, infatti $\omega$ non è costante, ma pari a $\frac{qB}{\gamma m}$. Poiché $\gamma$ cresce con la velocità allora $\omega$ decresce e non è più in fase con $\omega_{RF}$. Si riesce quindi ad accelerare una particella solo fino a qualche decina di $\MeV$. Il sincrociclotrone risolve questo problema modificando $\omega_{RF}$ in base alla velocità della particella e si possono raggiungere centinaia di $\MeV$.
+\end{Es}
+
+
 \section{Forza magnetica su una corrente\index{forza!magnetica!su corrente}}
 Sperimentalmente si trova che su un filo di lunghezza $l$, sezione $S$ percorso dalla corrente stazionaria $I$, immerso in un campo magnetico uniforme $\ve B$ agisce una forza:
 \begin{equation}
@@ -2099,7 +2146,7 @@ Per un circuito generico possiamo usare il principio di sovrapposizione con tutt
 \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\oint_C I\frac{\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \label{campo_spira_laplace}
 \end{equation}
-Essendo $I\ud \ve l=\ve J\ud v$:
+Se il conduttore non è filiforme, essendo $I\ud \ve l=\ve J\ud v$:
 \begin{equation}
 \ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int\frac{\ve J\left(\ve r\,'\right)\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\,\ud v'
 \end{equation}
@@ -2265,6 +2312,25 @@ se introduciamo il momento magnetico della spira $\ve m=Iab\ver u_z$:
  \caption{Potenziale di una spira quadrata di lato $a=2$ esatto e in approssimazione di dipolo. La scala delle ordinate è logaritmica e le unità sono arbitrarie.}
 \end{figure}
 \end{Es}
+
+\subsubsection{Campo magnetico di una carica in moto}
+Sia $\ve j$ la densità di corrente in un conduttore, quindi il campo magnetico da un volume infinitesimo:
+\[
+ \ud\ve B = \frac{\mu_0}{4\pi} \frac{\ve J\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v = \frac{\mu_0}{4\pi} \frac{nq\ve v\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v
+\]
+ma $n\ud v$ è il numero di carich nel volume infinitesimo, considerando una sola carica si ha:
+\begin{equation}
+ \ve B = \frac{\mu_0}{4\pi} \frac{q\ve v\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}
+\end{equation}
+dove $\ve r'$ individua la posizione della carica in moto. Il campo elettrostatico della carica è:
+\[
+ \ve E = \frac{q}{\giorgi}\frac{\ve r-\ve r'}{\norm{\ve r- \ve r'}^3}
+\]
+questo non è del tutto corretto perché la carica è in moto. Confrontando con l'espressione precedente:
+\begin{equation}
+ \ve B = \mu_0\varepsilon_0\ve v\times \ve E = \frac{1}{c^2}\ve v\times \ve E
+\end{equation}
+tutto ciò è vero nei limiti $v\ll c$.
 
 \subsection{Forze tra due circuiti\index{forza!tra circuiti}}
 Prendiamo due circuiti generici $C_1$ e $C_2$ percorsi da correnti stazionarie $I_1$ e $I_2$. Usando la prima formula di Laplace possiamo dire che la forza che l'elementino $\ud\ve l_2$ del secondo circuito risente del campo magnetico del primo è 
