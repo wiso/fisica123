@@ -75,7 +75,7 @@ fattore&prefisso&simbolo\\
 \hline
 \end{tabular}
 \end{center}
-Il femtometro ($\femto\meter$) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@$\femto\meter$|see{Fermi}}, unità usata in fisica nucleare.
+Il femtometro (\SI{}{\femto\meter}) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@\SI{}{\femto\meter}|see{Fermi}}, unità usata in fisica nucleare.
 \chapter{\index{vettore}Vettori}
 \minitoc
 Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
@@ -247,7 +247,10 @@ U}{\partial z}\ve k\right)
 \chapter{Cinematica}
 \minitoc
 \section{\index{posizione}Vettore posizione}
-Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi sempre si parlerà del piano piuttosto che dello spazio, ma i risultati sono del tutto analoghi} $Oxy$ il vettore che congiunge l'origine con un punto $P$ è il vettore posizione $\ve r$ che individua $P$ in quel sistema di riferimento. Poiché il punto può spostarsi nel tempo $\ve r$ sarà funzione del tempo $\ve r=\ve r(t)$ e descriverà al variare del tempo tutte le posizioni occupate da $P$ cioè la sua traiettoria.
+\begin{Def}[vettore posizione]
+Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi sempre si parlerà del piano piuttosto che dello spazio, ma i risultati sono del tutto analoghi} $Oxy$ il vettore che congiunge l'origine con un punto $P$ è il \index{vettore!posizione}vettore posizione $\ve r$ che individua $P$ in quel sistema di riferimento.
+\end{Def}
+Poiché il punto può spostarsi nel tempo $\ve r$ sarà funzione del tempo $\ve r=\ve r(t)$ e descriverà al variare del tempo tutte le posizioni occupate da $P$ cioè la sua traiettoria\index{traiettoria}.
 
 \begin{figure}[htbp]
 \centering
@@ -255,13 +258,14 @@ Fissato un sistema di riferimento cartesiano\footnote{per semplicità quasi semp
 \caption{vettore posizione e spostamento.}
 \end{figure}
 \subsection{Vettore spostamento}
-\parbox[c]{\textwidth}{
+\begin{Def}[vettore spostamento]
+Il \index{vettore!spostemento} vettore spostamento è la variazione (differenza) del vettore posizione tra due istanti diversi:
 \begin{align*}
 \ve s\left(t,t+\Delta t\right)&=\Delta \ve r(t,t+\Delta t)\\
 &=\ve r\left(t+\Delta t\right)-\ve r\left(t\right)=x\left(t+\Delta t\right)\ve i+y\left(t+\Delta t\right)\ve j-x\left(t\right)\ve i-y\left(t\right)\ve j\\
 &=\left[x(t+\Delta t)-x(\Delta t)\right]\ve i+[y(t+\Delta t)-y(t)]\ve j=\Delta x\ve i+\Delta y \ve j
 \end{align*}
-}
+\end{Def}
 \section{\index{velocità}Vettore velocità}
 \begin{Def}[\index{velocità!media}Velocità Media]
 \[\ve v_m(t,t+\Delta t)=\frac{\Delta\ve r(t,t+\Delta t)}{\Delta
@@ -272,31 +276,38 @@ j\]
 \begin{Def}[\index{velocità!istantanea}Velocità Istantanea]
 \[\ve v(t)=\lim_{\Delta t\rightarrow 0}\ve v_m(t,t+\Delta t)=\lim_{\Delta t\rightarrow 0} \frac{\Delta\ve r}{\Delta t}(t)={\left.\frac{\ud \ve r}{\ud t}\right|_t}=\left.\frac{\ud x}{\ud t}\right|_t\ve i+\left.\frac{\ud y}{\ud t}\right|_t\ve j\]
 \end{Def}
+Si noti che la norma della derivata non è la derivata della norma:
 \[\norm{\ve v}=\norm{\frac{\ud\ve r}{\ud t}}\neq\frac{\ud}{\ud t}\norm{\ve r}\]
 \begin{Def}[\index{velocità!scalare}Velocità Scalare]
 \[v_s=\frac{\text{spazio totale percorso}}{\Delta t}\]
 \end{Def}
 \section{\index{accelerazione}Vettore accelerazione}
 \begin{Def}[accelerazione istantanea]
-\[\ve a(t)=\frac{\ud \ve v}{\ud t}(t)={\frac{\ud^2 \ve r}{\ud t^2}}(t)\]
+\[\ve a=\frac{\ud \ve v}{\ud t}={\frac{\ud^2 \ve r}{\ud t^2}}\]
 \end{Def}
 \section[Moto rettilineo uniforme]{\index{moto!rettilineo uniforme}Moto rettilineo uniforme\protect\footnote{usiamo sempre condizioni iniziali implicite, del tipo $t_0=0$, $\ve r(0)=\ve r_0$, $\ve v(0)=\ve v_0$}}
-\[\frac{\ud\ve r}{\ud t}=\ve v=\overrightarrow\const\]
-\[\ud\ve r=\ve v\,\ud t\qquad\int_{\ve r_0}^{\ve r}\ud\ve r=\int_0^t\ve v\,\ud t\]
-\[\ve r-\ve r_0=\ve v t\qquad\ve r=\ve v t+\ve r_0\]
+\begin{Def}[moto rettilineo uniforme]
+\[\ve v=\overrightarrow\const\]
+\end{Def}
+\[\ud\ve r=\ve v\,\ud t\qquad\int_{\ve r_0}^{\ve r}\ud\ve r=\int_0^t\ve v\,\ud t \qquad \ve r-\ve r_0=\ve v t\]
+\begin{eqimp}{equation}
+\ve r=\ve v t+\ve r_0
+\end{eqimp}
 \section{\index{moto!uniformemente accelerato}Moto uniformemente accelerato}
-\[\frac{\ud \ve v}{\ud t}=\ve a=\overrightarrow{\const}\]
+\begin{Def}[moto uniformemente accelerato]
+\[\ve a=\overrightarrow{\const}\]
+\end{Def}
 \[\ve a\,\ud t=\ud \ve v\qquad\int_0^t\ve a\,\ud t=\int_{\ve v_0}^{\ve v}\ud \ve v\qquad\ve a t=\ve v-\ve v_0\]
-\begin{equation}
+\begin{eqimp}{equation}
 \ve v=\ve a t+\ve v_0
 \label{vt_01}
-\end{equation}
+\end{eqimp}
 \[\ve v=\ve a t+\ve v_0=\frac{\ud \ve r}{\ud t}\]
 \[\ud \ve r=\left(\ve a t+\ve v_0\right)\ud t\qquad\int_{\ve r_0}^{\ve r}\ud \ve r=\int_0^t\left(\ve a t+\ve v_0\right)\ud t\qquad\ve r-\ve r_0=\frac{1}{2}\ve a t^2+\ve v_0 t\]
-\begin{equation}
+\begin{eqimp}{equation}
 \ve r=\frac{1}{2}\ve a t^2+\ve v_0 t+\ve r_0
 \label{vt_02}
-\end{equation}
+\end{eqimp}
 \subsection{Velocità in funzione dello spazio}
 In certi casi può risultare molto comoda la formula relativa al
 moto uniformemente accelerato scritta in questo modo:
@@ -313,9 +324,9 @@ eliminiamo il tempo per trovare $v(r)$: ricaviamo $t$ dalla prima e sostituiamol
 Per moto circolare uniforme si intende quel moto su traiettoria
 circolare in cui il modulo del vettore velocità rimane costante
 nel tempo (mentre la sua direzione varia ed è sempre tangente
-alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\index{omega@$\omega$|see{velocità angolare}}: $\omega=\frac{\ud\theta}{\ud t}$ e l'accelerazione angolare\index{accelerazione!angolare}\index{alpha@$\alpha$|see{accelerazione angolare}} $\alpha=\frac{\ud \omega}{\ud t}$; in realtà sono dei vettori.
-\[\left|\ve v\right|=\const\]
-\[\text{scegliamo $\ve r_0$}:\left\{
+alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\index{omega@$\omega$|see{velocità angolare}}: $\omega=\frac{\ud\theta}{\ud t}$ e l'accelerazione angolare\index{accelerazione!angolare}\index{alpha@$\alpha$|see{accelerazione angolare}} $\alpha=\frac{\ud \omega}{\ud t}$; in realtà possono essere definiti come vettori.
+\[\norm{\ve v}=\const\]
+\[\text{scegliamo $\ve r(t=0)=\ve r_0$}:\left\{
 \begin{array}{l}
 x=R\\
 y=0\\
@@ -589,7 +600,7 @@ In generale la forza è una funzione del tipo:
 \ve F=\ve F(\ve r,\ve v,t)
 \label{f_din}
 \end{equation}
-La risoluzione dell'equazione differenziale \eqref{sec_din} con la forza data dalla \eqref{f_din} è compito della meccanica. Il caso più semplice è quello in cui $\ve F$ è una costante, vediamo degli esempi in cui non lo è.
+La risoluzione dell'equazione differenziale \eqref{sec_din} con la forza data dalla \eqref{f_din} è compito della meccanica. Il caso più semplice è quello in cui $\ve F$ è una costante (cioè il moto uniformemente accelerato), vediamo degli esempi in cui non lo è.
 
 \subsection{\index{forza!variabile!nel tempo}Forze variabili nel tempo}
 \begin{Es}
@@ -849,7 +860,7 @@ sinonimi di quantità di moto sono: quantità di modo lineare, momento, momento 
 \[\text{Newton disse: }\ve F=\frac{\ud \ve p}{\ud t}\]
 \subsection{Sistema di \texorpdfstring{$N$}{N} punti}
 \begin{Def}[quantità di moto di un sistema di $N$ punti]
-La quantità di moto totale di un sistema di $N$ punti è la somma delle quantità di moto.
+La quantità di moto totale di un sistema di $N$ punti è la somma delle quantità di moto dei singoli punti.
 \begin{equation}
  \ve p=\sum_{I=1}^N\ve p_i=\sum_{i=1}^Nm_i\ve v_i
 \end{equation}
@@ -859,7 +870,7 @@ La quantità di moto totale di un sistema di $N$ punti è la somma delle quantit
 \begin{align*}\frac{\ud \ve p}{\ud t}&=\frac{\ud }{\ud t}\sum^N_{i=1}m_i\ve v_i=\sum_{i=1}^{N}\frac{\ud \left(m\ve v_i\right)}{\ud t}=\sum_{i=1}^{N}m_i\frac{\ud \ve v_i}{\ud t}=\sum_{i=1}^{N}m_i\ve a_i=\\
 &=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}+\sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}\end{align*}
 Nell'ultimo passaggio abbiamo usato il terzo principio della dinamica. Si conclude che in un sistema isolato, cioè con
-$\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}$ vale la legge di
+$\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}=0$ vale la legge di
 conservazione della quantità di moto: $\ve
 p=\overrightarrow\const$.
 \end{Teo}
