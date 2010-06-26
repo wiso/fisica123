@@ -1886,6 +1886,17 @@ e il calore specifico:
 c_v=\frac{1}{n}\frac{\partial U}{\partial T}=\frac{5}{2}R
 \end{equation}
 come vuole la teoria classica.
+\subsubsection{approssimazione $T\ll\Theta_r$}
+In questo caso l'esponenziale della funzione di partizione decresce molto rapidamente, quindi nella sommatoria dominano solo i primi termini:
+\begin{equation}
+ Z_\text{rot} = \sum_l(2l+1)e^{-l(l+1)\frac{\Theta_r}{T}}\simeq 1+3e^{-2\frac{\Theta_r}{T}}
+\end{equation}
+poiché $\frac{\Theta_r}{T}\gg 1$ allora $\log(Z_\text{rot})\simeq 3e^{-2\frac{\Theta_r}{T}}$
+e quindi l'energia:
+\begin{equation}
+ U_\text{rot}=kNT^2\frac{\ud}{\ud T}(\log Z_\text{rot}) = kNT^2 3e^{-2\frac{\Theta_r}{T}} 2\frac{\Theta_r}{T^2} = 6kN e^{-2\frac{\Theta_r}{T}} \Theta_r
+\end{equation}
+in questo modo se $I\to 0$ ovvero se la distanza tra i due atomi diventa nulla allora il contributo rotazionale sparisce. Questo non succede nel limite classico, cioè quello ad alta energia.
 \subsection{Vibrazioni}
 L'energia delle vibrazioni è quantizzata come quella di un oscillatore armonico:
 \begin{equation}
