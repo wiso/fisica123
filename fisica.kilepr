@@ -114,7 +114,7 @@ order=5
 
 [item:TeX/includes.tex]
 archive=true
-column=0
+column=1
 encoding=UTF-8
 highlight=LaTeX
 line=7
@@ -198,7 +198,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=124
+line=131
 open=true
 order=0
 
@@ -4557,3 +4557,10 @@ highlight=
 line=0
 open=false
 order=-1
+
+[view-settings,view=0,item:TeX/includes.tex]
+CursorColumn=1
+CursorLine=7
+
+[view-settings,view=0,item:fisica_linux.tex]
+CursorLine=131

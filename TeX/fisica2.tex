@@ -327,10 +327,13 @@ y=\rho\sin\theta\\
 z=w\\
 \end{array}\right.
 \]
-\subsubsection{Superfici Coordinate}
+
+\subsubsection{Superfici coordinate}
 Se fissiamo $\rho=\const$ e facciamo variare le altre due coordinate otteniamo un cilindro; se fissiamo $\theta$ un semipiano perpendicolare al piano individuato dagli assi cartesiani $xy$, che ha origine sulla retta $x=y=0$; se fissiamo $w$ otteniamo un piano come in coordinate cartesiane.
-\subsubsection{Linee Coordinate}
+
+\subsubsection{Linee coordinate}
 Se facciamo variare solo $\rho$ otteniamo una semiretta uscente dall'origine; se facciamo variare solo $\theta$ una circonferenza che giace in un piano parallelo al piano $xy$; se facciamo variare solo $w$ otteniamo una retta parallela all'asse $z$.
+
 \subsubsection{Versori}
 \[D_\rho=\sqrt{\left(\frac{\partial x}{\partial\rho}\right)^2+\left(\frac{\partial y}{\partial \rho}\right)^2+\left(\frac{\partial z}{\partial \rho}\right)^2}=\sqrt{\cos^2\theta+\sin^2\theta}=1\]
 \[D_\theta=\sqrt{\left(\frac{\partial x}{\partial\theta}\right)^2+\left(\frac{\partial y}{\partial \theta}\right)^2+\left(\frac{\partial z}{\partial \theta}\right)^2}=\sqrt{\left(-\rho\sin\theta\right)^2+\left(\rho\cos\theta\right)^2}=\rho\]
@@ -339,6 +342,7 @@ Se facciamo variare solo $\rho$ otteniamo una semiretta uscente dall'origine; se
 \[\ver e_\theta=\frac{\frac{\partial x}{\partial\theta}\ve i+\frac{\partial y}{\partial\theta}\ve j+\frac{\partial z}{\partial\theta}\ve k}{D_\theta}=-\sin\theta\ve i+\cos\theta\ve j\]
 \[\ver e_w=\ve k\]
 Notare che $\ver e_\theta$ e $\ver e_\rho$ sono ortogonali e che ogni vettore si scrive come $\ve r=r\ver e_\rho$.
+
 \subsection{Coordinate sferiche\index{coordinate!sferiche}}
 La trasformazione dalla coordinate cartesiane e quella inversa sono:
 \[\left\{\begin{array}{l}
@@ -354,6 +358,7 @@ z=\rho\cos\theta\\
 \end{array}\right.
 \]
 con $\rho\in(0,+\infty)$, $\theta\in[0,\pi]$, $\varphi\in[0,2\pi)$.
+
 \subsubsection{Superfici Coordinate}
 Fissando solo $\rho$ si ottiene una sfera; fissando solo $\theta$ un cono; fissando solo $\varphi$ si ottiene un semipiano.
 \subsubsection{Linee Coordinate}
@@ -364,6 +369,7 @@ Variando solo $\rho$ si ottiene una semiretta; variando solo $\theta$ una circon
 \[\ver e_\theta=\cos\theta\cos\varphi\ver \imath+\cos\theta\sin\varphi\ver \jmath-\sin\theta\ver k\]
 \[\ver e_\varphi=-\sin\varphi\ver \imath+\cos\varphi\ver \jmath\]
 \index{coordinate|)}
+
 \chapter{Elettrostatica\index{elettrostatica}}
 \minitoc
 Tutta l'elettrodinamica nel vuoto può essere descritta con le quattro equazioni di Maxwell\index{Maxwell}
@@ -376,6 +382,7 @@ Tutta l'elettrodinamica nel vuoto può essere descritta con le quattro equazioni
 c^2\ve\nabla\times \ve B=\frac{\partial \ve E}{\partial t}+\frac{\ve J}{\varepsilon_0}
 \end{gather}
 \end{subequations}
+
 oppure nel sistema CGS:
 \begin{subequations}
  \begin{gather}
@@ -395,7 +402,7 @@ In elettrostatica si studia il campo elettrico $\ve E$ in condizioni stazionarie
 \end{subequations}
 si parla allora di campo elettrostatico.
 \section{Carica\index{carica elettrica}}
-La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa. La più piccola è quella dell'elettrone, $-e\simeq\SI{-1.6E-19}{\coulomb}$, tutte le altre sono multipli interi di essa.
+La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa. La più piccola è quella dell'elettrone, $-e\simeq\si{-1.6E-19}{\coulomb}$, tutte le altre sono multipli interi di essa.
 \section{Forza di Coulomb\index{forza!di Coulomb}}
 Partiamo da una legge sperimentale che riguarda la forza che una carica $q_1$ ferma esercita su una carica $q_2$ ferma nel vuoto:
 \begin{equation}
@@ -425,7 +432,7 @@ Naturalmente per la terza legge della dinamica:
 \subsection{Unità di misura}
 Un'idea è quella di porre $K_e=1$ e di definire la carica unitaria quella carica che posta alla distanza unitaria da una carica unitaria produce una forza unitaria. Questo è quello che si fa nel sistema CGS Elettrostatico\index{CGS elettrostatico}. Non si definisce a priori la carica, che prende il nome di u.e.s.\@ unità elettrostatica semplice\index{unità elettrostatica semplice}, chiamata anche stat--coulomb\index{stat--coulomb}.
 
-Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Sistema Internazionale. Si definisce coulomb\index{coulomb} quella carica che attraversando un voltametro al nitrato d'argento ($\mathrm{AgNO_3}$) deposita sul catodo una quantità di Ag di \SI{0.00111800}{\gram}. \`E una definizione provvisoria. Si ricava quindi $K_e\simeq \SI{8.8974E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI si è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nella quale $K_e=\frac{1}{4\pi\varepsilon_0}$, $\varepsilon_0\simeq \SI{8.8E-12}{\coulomb\squared\per\newton\metre\squared}$.
+Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Sistema Internazionale. Si definisce coulomb\index{coulomb} quella carica che attraversando un voltametro al nitrato d'argento ($\mathrm{AgNO_3}$) deposita sul catodo una quantità di Ag di \si{0.00111800}{\gram}. \`E una definizione provvisoria. Si ricava quindi $K_e\simeq \si{8.8974E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI si è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nella quale $K_e=\frac{1}{4\pi\varepsilon_0}$, $\varepsilon_0\simeq \si{8.8E-12}{\coulomb\squared\per\newton\metre\squared}$.
 
 Il coulomb e lo stat-coulomb nonostante siano unità della stessa grandezza hanno dimensioni diverse.
 \begin{Es}[pendolo magnetico]
@@ -1152,7 +1159,7 @@ Calcoliamo la capacità di una sfera conduttrice di raggio $R$. Sapendo che la c
 \[\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma\]
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\oint_S\frac{\sigma(\ve r\,')\,\ud a'}{R}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{4\pi R^2 R}4\pi R^2=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}\]
 \[C=\frac{Q}{\varphi}=4\pi\varepsilon_0R\]
-Se $R=\SI{1}{\metre}$ allora $C=\SI{1E-10}{\farad}$. Il farad è un'unità generalmente grande.
+Se $R=\si{1}{\metre}$ allora $C=\si{1E-10}{\farad}$. Il farad è un'unità generalmente grande.
 \end{Es}
 \subsection{Condensatore}
 Mettere troppa carica su un conduttore è difficile perché questa tende a dissiparsi nell'aria. \`E invece più pratico aumentare la capacità 
@@ -1533,8 +1540,8 @@ essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine d
 Ipotizziamo che gli elettroni liberi si muovano come gli atomi di un gas classico, quindi con urti casuali, ecc\ldots
 In assenza di campo elettrico gli elettroni saranno in agitazione termica con una velocità $v_T$ di agitazione termica:
 \[K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT\]
-con $f=3$ gradi di libertà  $k$ costante di Boltzmann. Alla temperatura di $\SI{300}{\kelvin}$:
-\[v_T=\sqrt{\frac{3kT}{m}}\simeq \SI{1E5}{\metre\per\second}\]
+con $f=3$ gradi di libertà  $k$ costante di Boltzmann. Alla temperatura di $\si{300}{\kelvin}$:
+\[v_T=\sqrt{\frac{3kT}{m}}\simeq \si{1E5}{\metre\per\second}\]
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
 \[l = \tau v_T\]
 Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva\index{velocità!di deriva}, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
@@ -1615,7 +1622,7 @@ La resistività $\rho$ è l'inverso della conducibilità
 \end{Def}
 Più la resistività è alta più la risposta al campo elettrico del conduttore sarà bassa.
 \subsection{Unità di misura}
-\[[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\SI{}{\per\ohm\per\metre}\]
+\[[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\si{}{\per\ohm\per\metre}\]
 \[[\rho]=\ohm\meter\]
 con:
 \[\ohm=\frac{\volt}{\ampere}=\text{ohm}\]
@@ -1885,7 +1892,7 @@ Moltiplichiamole scalarmente per $v_1$:
 \[c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\]
 \[\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1\]
 \subsection{Unità di misura}
-\[[B]=[mlq^{-1}t^{-1}]=\frac{\newton\second}{\coulomb\meter}=\frac{\volt\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\SI{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
+\[[B]=[mlq^{-1}t^{-1}]=\frac{\newton\second}{\coulomb\meter}=\frac{\volt\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\si{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
 Dove $\weber=\text{weber}={\volt\second}$, $\tesla=\text{tesla}=\frac{\weber}{\meter\squared}$.\index{weber}
 \begin{Es}[elettrone in campo magnetico]
 \label{es_Larmor}
@@ -2127,7 +2134,7 @@ con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre 
 \[k=\frac{\mu_0}{2\pi}\]
 con $\mu_0$ la permeabilità magnetica del vuoto:
 \[
-\mu_0=\SI[numaddn=\pi]{4\pi e-7}{\henry\per\meter}
+\mu_0=\si[numaddn=\pi]{4\pi e-7}{\henry\per\meter}
 \]
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
 \[\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\]
@@ -2379,7 +2386,7 @@ Dalla \eqref{pre_ampere} possiamo dire:
 \end{equation}
 e definire l'ampere usando solo quantità meccaniche come la forza e la distanza:
 \begin{Def}[ampere]
-l'ampere è quella corrente che passando tra due fili distanti $\SI{1}{\meter}$ produce una forza per unità di lunghezza pari a \SI{2E-7}{\newton\per\meter}.
+l'ampere è quella corrente che passando tra due fili distanti $\si{1}{\meter}$ produce una forza per unità di lunghezza pari a \si{2E-7}{\newton\per\meter}.
 \end{Def}
 
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
@@ -2657,7 +2664,7 @@ Consideriamo le nostre molecole polarizzate come dei dipoli, e il dielettrico co
 \includegraphics[scale=0.3]{immagini/fisica2/distr_dipoli}
 \end{figure}
 \subsection{Momento atomico\index{momento!atomico}}
-Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distanza $a\simeq \SI{0.5}{\angstrom}$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
+Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distanza $a\simeq \si{0.5}{\angstrom}$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
 
 Se consideriamo la meccanica quantistica attorno al nucleo l'elettrone assomiglia a una distribuzione negativa di raggio $a$. Essendo la distribuzione a simmetria sferica, tutti gli atomi non sottoposti a campi elettrici non hanno momento di dipolo essendo i centri di cariche positive e negative coincidenti.
 \subsection{Molecole polari\index{molecole!polari}\index{molecole!polari}}
@@ -2891,7 +2898,7 @@ Per chiudere il problema, cioè determinare il campo elettrico serve una nuova e
 \end{equation}
 Dove $\chi_e$ è la suscettività del dielettrico\index{suscettività dielettrica}.
 \[
-[\chi_e] = \SI{}{\farad\per\meter}
+[\chi_e] = \si{}{\farad\per\meter}
 \]
 Per dielettrici anisotropi è un tensore del second'ordine e quindi $\ve P$ e $\ve E$ non hanno la stessa direzione. Per dielettrici non lineari (quasi sempre con alti campi elettrici) è una funzione di $\ve E$. Per dielettrici omogenei è uno scalare, per i disomogenei una funzione del punto. $\chi_e$ è sempre maggiore di zero, nel vuoto è nullo.
 
@@ -4640,8 +4647,8 @@ Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche 
 \end{gather}
 oppure:
 \begin{eqimp}{gather}
-\square\ve H=0\\
-\square\ve E=0
+\Box\ve H=0\\
+\Box\ve E=0
 \end{eqimp}
 Le soluzioni delle equazioni ricavate non sono necessariamente soluzioni delle equazioni di Maxwell da cui sono state ricavate\footnote{Si pensi all'elevamento al quadrato: $x-1=0$, manipolando l'equazione posso arrivare a $(x-1)^2=0$ che ha come soluzione $x=\pm 1$. Per accertarci quale delle due soluzioni sia anche soluzione della prima equazione dobbiamo sostituirle al suo interno.}. Occurre quindi sostituire le soluzioni delle equazioni delle onde nelle equazioni di Maxwell e vedere quali condizioni bisogna imporre affinché siano effettivamente soddisfatte.
 

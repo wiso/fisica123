@@ -9,13 +9,13 @@ La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}
 p=\frac{\ud\ve F\cdot \ve n}{\ud A}
 \end{equation}
 \end{Def}
-La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che però è usualmente piccola, comuni sono anche: $\SI{}{\bbar}=\SI{1E5}{\pascal}$, $\SI{}{\atmosphere}=\SI{1.013E5}{\pascal}$, $\SI{}{\torr}=\SI{}{\mmHg}=\SI{1/760}{\atmosphere}$.
+La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che però è usualmente piccola, comuni sono anche: $\si{}{\bbar}=\si{1E5}{\pascal}$, $\si{}{\atmosphere}=\si{1.013E5}{\pascal}$, $\si{}{\torr}=\si{}{\mmHg}=\si{1/760}{\atmosphere}$.
 \begin{Def}[densità locale]
 \begin{equation}
 \rho(\ve r)=\frac{\ud m}{\ud V}
 \end{equation}
 \end{Def}
-si misura in \SI{}{\kilogram/\metre^3}.
+si misura in $\si{}{\kilogram/\metre^3}$.
 
 \subsection{\index{legge!di Stevino}Legge di Stevino}
 \label{stevino11}
@@ -54,7 +54,7 @@ Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e
 \[\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\]
 in particolare se $\rho_1=\rho_2$ allora $h_1=h_2$.
 \subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli}
-L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \SI{0.76}{\meter}.
+L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \si{0.76}{\meter}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.7]{immagini/fisica1/Torricelli}
@@ -63,7 +63,7 @@ L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo u
 \end{figure}
 
 Il punto A e il punto B sono allo stesso livello, quindi: $p_A=p_B$
-\[p_A=p_0\qquad p_B=\rho_{\mathrm{Hg}}gh\qquad p_0=\rho_\mathrm{Hg}gh=\SI{1}{\atmosphere} \]
+\[p_A=p_0\qquad p_B=\rho_{\mathrm{Hg}}gh\qquad p_0=\rho_\mathrm{Hg}gh=\si{1}{\atmosphere} \]
 Si misura in questo modo la pressione atmosferica, in $\mmHg$.\index{pressione! atmosferica}
 
 L'esperimento di Torricelli suscitò clamore perché Torricelli suppose che nella zona superiore del tubo ci ``fosse'' del vuoto.\index{vuoto}
@@ -81,7 +81,7 @@ Consideriamo la strisciolina $\ud m$
 \[\ud F_x=p_0 2\pi \ud A\cos\theta\]
 \[\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\]
 \[\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\]
-\[\text{se } R=\SI{1}{\metre} \quad F_x\simeq\SI{3E5}{\newton} \]
+\[\text{se } R=\si{1}{\metre} \quad F_x\simeq\si{3E5}{\newton} \]
 
 \subsection{Principio di Pascal\index{principio!di Pascal}}
 \begin{Pri}[Pascal]
@@ -394,7 +394,7 @@ Due sistemi hanno la stessa temperatura se sono in equilibrio termico. Due siste
 \begin{equation}
 T(X)=273.16\frac{X}{X_\text{triplo}}
 \end{equation}
-$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\SI{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\SI{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
+$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\si{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\si{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
 
 \subsection{Termometro a gas perfetto a volume costante\index{termometro!a gas perfetto}}
 Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costate da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costate e si legge il valore di pressione. La pressione per mantenere il volume costate è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
@@ -525,11 +525,11 @@ Dalla \eqref{gas_pressione04} si ricava:
 v_{qm}=\sqrt{\frac{3P}{\rho}}
 \end{equation}
 \begin{Es}[velocità delle molecole d'aria]
- Se la pressione atmosferica è \SI{101000}{\pascal} e la densità dell'aria \SI{1.2}{\kilo\gram\per\cubic\meter} la velocità quadratica media è:
+ Se la pressione atmosferica è \si{101000}{\pascal} e la densità dell'aria \si{1.2}{\kilo\gram\per\cubic\meter} la velocità quadratica media è:
  \[
-  v_{qm}=\sqrt{\frac{3P}{\rho}}\simeq\SI{500}{\meter\per\second}
+  v_{qm}=\sqrt{\frac{3P}{\rho}}\simeq\si{500}{\meter\per\second}
  \]
-questo non vuol dire che per fare un metro in linea retta una molecola ci mette $\Delta t \simeq \frac{\Delta s}{v_{qm}}=\frac{\SI{1}{\meter}}{\SI{500}{\meter\per\second}}=\SI{2}{\milli\second}$ in quanto il suo percorso non è lineare, ma continua a variare direzione ad ogni urto.
+questo non vuol dire che per fare un metro in linea retta una molecola ci mette $\Delta t \simeq \frac{\Delta s}{v_{qm}}=\frac{\si{1}{\meter}}{\si{500}{\meter\per\second}}=\si{2}{\milli\second}$ in quanto il suo percorso non è lineare, ma continua a variare direzione ad ogni urto.
 \end{Es}
 \subsubsection{Legge di Dalton}
 In presenza di più gas diversi possiamo usare il fatto che il volume occupato dalle molecole è trascurabile rispetto al volume totale del gas. Quindi le loro pressioni si calcolano separatamente (\index{pressione!parziale} pressioni parziali):
@@ -705,7 +705,7 @@ c^{\text{mol}}=\frac{Q}{\Delta T n}=\frac{Q}{\Delta T}\frac{M}{m}=cM
 con $M=\frac{m}{n}$ massa molare\index{massa!molare}, $n$ numero di moli. Spesso $c^{\text{mol}}$ è indicato semplicemente con $c$.
 \end{Def}
 
-\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
+\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi è circa $\si{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
 
 
 \section{Energia interna\index{energia!interna}}
@@ -727,7 +727,7 @@ Gli atomi dei solidi sono disposti secondo strutture reticolari e possono vibrar
 \[E=3nRT\]
 Se forniamo $Q$ calore al solido esso si trasformerà tutto in energia interna non compiendo il solido alcun lavoro:
 \[Q=\Delta E=3nR\Delta T=nc\Delta T\]
-\[c=\frac{3nR\Delta T}{n\Delta T}=3R\simeq \SI{25}{\joule\per\mole\per\kelvin} \]
+\[c=\frac{3nR\Delta T}{n\Delta T}=3R\simeq \si{25}{\joule\per\mole\per\kelvin} \]
 come previsto da Doulong\index{Doulong} e Petit\index{Petit}.
 \subsection{Calore specifico dei gas\index{calore specifico!dei gas}\index{capacità!termica!dei gas}}
 Come dimostrato più avanti in una trasformazione isocora tutto il calore si trasforma in variazione di energia interna in quanto non si compie lavoro.
@@ -1208,7 +1208,7 @@ Stearling: $\log n!\sim n\log n-n$
 la formula è identica a quella trovata a livello macroscopico considerando la variazione di entropia dell'espansione libera come la variazione dell'entropia di una isoterma.
 
 \begin{Es}[Esempio ghiaccio]
-Ghiaccio a $T_G=\SI{273.15}{\kelvin}$ di massa $m$ in acqua a $T_A=\unit{(273.15+\varepsilon)}\kelvin$
+Ghiaccio a $T_G=\si{273.15}{\kelvin}$ di massa $m$ in acqua a $T_A=\unit{(273.15+\varepsilon)}\kelvin$
 \begin{align*}
 \Delta S_\text{acqua}=&S_\text{acqua}-S_\text{ghiaccio e acqua}\\
 =&\int_\text{ghiaccio}^\text{acqua}\frac{\delta Q}{T}=\frac{1}{T_0}\int_\text{ghiaccio}^\text{acqua}\delta Q=\frac{Q}{T_0}=\frac{\lambda m}{T_0}>0
@@ -1236,7 +1236,7 @@ Immaginiamo una macchina infernale che scambia calore con più sorgenti, con tem
 
 
 \section{Scala termodinamica o assoluta\index{scala termodinamica}\index{scala assoluta}}
-La scala di temperatura definita come quella del termometro a gas risulta limitata per temperature molto basse, al di sotto della quale ($\SI{1}{\kelvin}$) non esiste materia allo stato gassoso. Per questo motivo viene definita la scala termodinamica. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
+La scala di temperatura definita come quella del termometro a gas risulta limitata per temperature molto basse, al di sotto della quale ($\si{1}{\kelvin}$) non esiste materia allo stato gassoso. Per questo motivo viene definita la scala termodinamica. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
 \[\eta_\text{rev}=\eta_C=1-\frac{T_2}{T_1}=1-\frac{|Q_2|}{Q_1}\]
 \[\frac{\theta_2}{\theta_1}=\frac{|Q_2|}{Q_1}=\frac{T_2}{T_1}\]
 
@@ -1301,7 +1301,7 @@ Si dovrebbe osservare una figura di interferenza diversa:
 =&\frac{2}{c}(l_1+l_2)\left\{1+\left(\frac{v}{c}\right)^2+\ldots-\left(1+\frac{1}{2}\left(\frac{v}{c}\right)^2\right)\right\}\\
 \simeq&\frac{2}{c}(l_1+l_2)\frac{1}{2}\left(\frac{v}{c}\right)^2=\frac{l_1+l_2}{c}\left(\frac{v}{c}\right)^2\end{align*}
 }
-Con più riflessioni si riesce ad avere $l_1+l_2=\SI{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\SI{30}{\kilo\meter\per\second}$ e $\lambda=\SI{500E-9}{\metre}$.
+Con più riflessioni si riesce ad avere $l_1+l_2=\si{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\si{30}{\kilo\meter\per\second}$ e $\lambda=\si{500E-9}{\metre}$.
 Il numero di frange che scorrono dovrebbe essere:
 \[\Delta N=\frac{\Delta}{T}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\]
 La sensibilità dello strumento era $\Delta N=0.01$. Se ci fosse stato l'etere con quella velocità sarebbe stato osservato. La ricerca dell'etere ripetuta in più mesi dell'anno, di giorno e di notte, usando luce solare, stellare ed artificiale, con dispositivi diversi, usando bracci diversi, telescopi o osservando fenomeni elettrici diede risultato negativo. Nel 1907 Nobel per Michelson.
@@ -1461,10 +1461,10 @@ Un protone colpisce un altro protone fermo:
 Il mesone decade:
 \[\pi^+ \rightarrow \mu ^+ + \nu\]
 
-Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media $\tau'=\SI{1.88E-8}{\second}$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
-\[\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\SI{1.3E-7}{\second} \]
+Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media $\tau'=\si{1.88E-8}{\second}$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
+\[\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\si{1.3E-7}{\second} \]
 La distanza percorsa dal mesone, prima di decadere, osservata dal laboratorio è quindi:
-\[d=\tau u=\tau \beta c\simeq \SI{39}{\metre} \]
+\[d=\tau u=\tau \beta c\simeq \si{39}{\metre} \]
 \end{Es}
 
 \section{Composizione delle velocità\index{composizione delle velocità!relativistiche}}
@@ -1598,16 +1598,16 @@ p=\dfrac{m_0}{\sqrt{1-\beta^2}}\beta c\\
 \end{figure}
 
 \section{Elettronvolt\index{elettronvolt}}
-La carica dell'elettrone vale circa $\SI{1.6E-19}{\coulomb}$. $\SI{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\SI{1}{\volt}$
+La carica dell'elettrone vale circa $\si{1.6E-19}{\coulomb}$. $\si{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\si{1}{\volt}$
 \[
-E=qV\qquad \electronvolt=q_e(\SI{1}{\volt})=\SI{1.6E-19}{\joule}
+E=qV\qquad \electronvolt=q_e(\si{1}{\volt})=\si{1.6E-19}{\joule}
 \]
 Molto usati sono i multipli: \kilo\electronvolt (chev), \mega\electronvolt (mev), \giga\electronvolt (gev), \tera\electronvolt (tev), \peta\electronvolt (pev).
 
 Anche le masse e le quantità di moto si possono esprimere in \electronvolt, combinando opportunamente con $c$.
 \[E=mc^2\]
-\[\SI{1}{\kilo\gram},c^2=\SI{1}{\kilo\gram}(\si{3E8}{\metre\per\second})=\SI{9E16}{\joule}=\SI{5.62E35}{\electronvolt} \]
-\[\SI{1}{\electronvolt}/c^2=\SI{1.78E-36}{\kilogram} \]
+\[\si{1}{\kilo\gram},c^2=\si{1}{\kilo\gram}(\si{3E8}{\metre\per\second})=\si{9E16}{\joule}=\si{5.62E35}{\electronvolt} \]
+\[\si{1}{\electronvolt}/c^2=\si{1.78E-36}{\kilogram} \]
 \begin{Es}[decadimento particella strana]
 Si vuole determinare il momento finale dei prodotti del decadimento della $K_0$:
 \begin{figure}[htbp]
@@ -1617,8 +1617,8 @@ Si vuole determinare il momento finale dei prodotti del decadimento della $K_0$:
    \label{}
 \end{figure}
 \[K_0\rightarrow \pi^+\,\pi^-\]
-\[m_0^{K_0}=\SI[per=slash,eVcorrb=0.4ex]{500}{\mega\eVperc\squared} \qquad m_0^{\pi^+}=\SI{140}{\mega\eVperc\squared}\]
-\[\tau_{K_0}=\SI{0.9E-10}{\second} \]
+\[m_0^{K_0}=\si[per=slash,eVcorrb=0.4ex]{500}{\mega\eVperc\squared} \qquad m_0^{\pi^+}=\si{140}{\mega\eVperc\squared}\]
+\[\tau_{K_0}=\si{0.9E-10}{\second} \]
 Nel sistema di $K_0$ l'impulso dei mesoni è:
 \begin{figure}[htbp]
    \centering
@@ -1656,9 +1656,9 @@ Campo magnetico ortogonale alla velocità\footnote{per una trattazione più comp
 \[F=qvB=m_\bot\frac{v^2}{r}\]
 \[r=\frac{m_\bot v}{qB}=\frac{p}{qB}\]
 \[\ve F\bot \ve v\Rightarrow L=0\Rightarrow v=\const\Rightarrow p=\const\Rightarrow r=\const\]
-\[B=\SI{2}{\weber\per\meter\squared} \qquad K=\SI{10}{\mega\electronvolt} \]
-\[r=\SI{1.8}{\centi\meter} \quad\text{Relativistico}\]
-\[r=\SI{0.5}{\centi\meter} \quad\text{Classico}\]
+\[B=\si{2}{\weber\per\meter\squared} \qquad K=\si{10}{\mega\electronvolt} \]
+\[r=\si{1.8}{\centi\meter} \quad\text{Relativistico}\]
+\[r=\si{0.5}{\centi\meter} \quad\text{Classico}\]
 \end{Es}
 
 
@@ -1883,15 +1883,15 @@ B=\frac{-\Delta p}{\Delta V/V}
 \end{equation}
 Se approssimiamo il comportamento dell'aria ad un gas adiabatico, supponendo quindi che il suono si propaghi più veloce del calore si ha:
 \[PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\]
-\[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\SI{330}{\metre\per\second} \]
+\[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\si{330}{\metre\per\second} \]
 \section{Grandezze caratteristiche}
 \begin{description}
 \item[intensità\index{intensità!del suono} del suono] $I=\text{Energia}/\text{tempo superficie}$\\
-\item[soglia\index{soglia!di udibilità} di udibilità] $I_0=\SI{1E-12}{\watt\per\meter\squared}$\\
+\item[soglia\index{soglia!di udibilità} di udibilità] $I_0=\si{1E-12}{\watt\per\meter\squared}$\\
 \item[altezza\index{altezza!del suono} del suono]la frequenza\\
 \item[timbro \index{timbro}del suono] è la forma d'onda, cioè la composizione in armoniche dello sviluppo di Fourier\\
-\item[sensazione\index{sensazione sonora} sonora] non è lineare $10\log_{10} I/I_0$ e si misura in decibel \SI{}{\deci\bel}\\
-\item[soglia del \index{soglia!del dolore}dolore] $\SI{120}{\deci\bel}$\\
+\item[sensazione\index{sensazione sonora} sonora] non è lineare $10\log_{10} I/I_0$ e si misura in decibel \si{}{\deci\bel}\\
+\item[soglia del \index{soglia!del dolore}dolore] $\si{120}{\deci\bel}$\\
 \end{description}
 
 
