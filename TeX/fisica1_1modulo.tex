@@ -1325,7 +1325,7 @@ per il quale $\sum\stackrel{\text{Est}}{\ve F}=0$&$\ve P=\sum
 \minitoc
 \section{\index{lavoro}Lavoro definizione}
 \begin{Def}[lavoro]
-Definiamo lavoro $L$ fatto dalla $\ve F$ sul punto $P$ lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\ve F\cdot\ud\ve s$:
+Definiamo lavoro $L$ fatto dalla forza $\ve F$ sul punto $P$ di applicazione della forza lungo il percorso $\Gamma$ l'integrale su $\Gamma$ della forma differenziale $\delta L = \ve F\cdot\ud\ve s$:
 \begin{equation}
 L=\int_\Gamma\ve F\cdot\ud \ve s
 \end{equation}
@@ -1333,19 +1333,24 @@ Il lavoro è una grandezza scalare. Nel SI si misura in joule ($\joule$)\index{J
 \end{Def}
 Distinguiamo i seguenti casi particolari:
 \begin{description}
+\item[Forza parallela]
+\[\ve F \parallel \ud\ve s\Rightarrow L=\int_\Gamma F(\ve r)\,\ud s\]
+\item[Forza costante]
+\[\ve F = \overrightarrow\const\Rightarrow L=\ve F \cdot \ve s = Fs\cos\alpha\]
 \item[Forza costante e parallela allo spostamento]
-\[L=Fs\]
-\item[Forza costante non parallela allo spostamento]
-\[L=Fs\cos\alpha=\ve F \cdot \ve s\]
-\item[Forza parallela ma variabile]
-\[L=\int_A^B F(x)\,\ud x\]
-\item[Forza variabile, traiettoria qualsiasi (caso generale)]
-\[\delta L=\ve F\cdot\ud \ve s\]
-\[{L=\int_A^B\delta L \quad \text{curvilineo}}\]
+\[\ve F = \overrightarrow\const, \ve F \parallel \ud\ve s\Rightarrow L=Fs\]
 \end{description}
-\begin{Es}[attrito costante su traiettoria semicircolare]
+\begin{Es}[Forza peso e piano inclinato]
+ In questo caso la forza peso sul punto di applicazione è costante $\ve F=m\ve g$, lo spostamento $s$ però non è parallelo, ma forma con la forza peso $\pi/2 -\alpha$ dove $\alpha$ è l'angolo del piano inclinato.
+\[
+ L = m\ve g \cdot \ve s = mgs\cos(\pi/2 - \alpha) = mgs\sin\alpha = mgh
+\]
+dove $s$ è la lunghezza del piano inclinato e h la sua altezza.
+\end{Es}
+
+\begin{Es}[attrito costante su traiettoria semicircolare orizzontale]
 \[F_A=\mu N=\mu mg\quad \delta L=\ve F_A\cdot\ud \ve s=-\mu mg\ud s\]
-\[L=\int_A^B \delta L=\int_A^B -\mu mg\ud s=-\mu mg\int_A^B\ud
+\[L=\int_\Gamma \delta L=\int_\Gamma -\mu mg\,\ud s=-\mu mg\int_\Gamma\ud
 s=-\mu mg\pi R\]
 \end{Es}
 \subsection{Lavoro nei moti rotatori}
@@ -1362,14 +1367,21 @@ lavoro svolto da questo momento torcente è:
 \[L=\tau_z\theta\]
 \section{\index{potenza}Potenza}
 \begin{Def}[potenza]
- \[P=\frac{\ud L}{\ud t}\]
+\begin{equation}
+ P=\frac{\ud L}{\ud t}
+\end{equation}
 \end{Def}
 La potenza si misura nel SI in $\joule\per\second$ cioè \watt(watt\index{watt}).
-\[P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
-t}=\ve F\cdot \ve v\]
+\begin{equation}
+P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
+t}=\ve F\cdot \ve v
+\end{equation}
+
 \subsection{Potenza nei moti rotatori}
-\[P=\frac{\ud L}{\ud t}=\frac{\tau_z\ud\theta}{\ud
-t}=\tau_z\omega\]
+\begin{equation}
+P=\frac{\ud L}{\ud t}=\frac{\tau_z\ud\theta}{\ud
+t}=\tau_z\omega
+\end{equation}
 
 \section[Energia Cinetica]{\index{energia!cinetica}Energia Cinetica}
 \begin{Def}[energia cinetica]
