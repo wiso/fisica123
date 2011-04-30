@@ -538,9 +538,11 @@ Molte forze sono descritte con leggi che approssimano il loro comportamento, con
 
 \subsection{\index{forza!elastica}Forza elastica}
 \begin{legge}[Hook]
-\[
+\begin{eqimp}{equation}
 \ve F=-k\Delta\ve x
-\]
+\end{eqimp}
+
+
  con $\Delta\ve x$ l'allungamento. Questa legge è valida per i corpi elastici e per allungamenti limitati, dopo di che il corpo non si comporta più in modo elastico e rimane deformato.
 \end{legge}
 
@@ -549,28 +551,31 @@ La resistenza del mezzo è quella forza che il fluido in cui è
 immerso un corpo in movimento esercita sul corpo. La forza è
 proporzionale alla velocità, ma può essere anche proporzionale al
 quadrato della velocità.
-\[
+\begin{eqimp}{equation}
 \ve F=-k\mu \ve v
-\]
+\end{eqimp}
 oppure:
-\[
+\begin{eqimp}{equation}
 \ve F=-k\mu v\ve v
-\]
+\end{eqimp}
 dove $\mu$ dipende dalla geometria del corpo,
 $k$ dalla natura del mezzo.
 \subsection{\index{attrito!statico}Attrito statico}
 Le leggi sull'attrito vengono chiamate leggi di Leonardo\index{leggi!di Leonardo}\index{Leonardo}.
 \begin{legge}[Prima legge di Leonardo]
-$f_s\leq\mu_s N$ con $\mu_s$coefficiente di attrito statico
+\begin{eqimp}{equation}
+f_s\leq\mu_s N
+\end{eqimp}
+con $\mu_s$coefficiente di attrito statico. La direzione e il verso sono quelli che si oppongono al moto.
 \end{legge}
 \begin{legge}[Seconda legge di Leonardo]
 La forza di attrito è indipendente dalla superficie d'appoggio
 \end{legge}
 \subsection{\index{attrito!dinamico}Attrito dinamico}
-\[
+\begin{eqimp}{equation}
 F_c=\mu_cN
-\]
-$\mu_c=$ coefficiente di attrito dinamico. $\mu_c<\mu_s$
+\end{eqimp}
+$\mu_c=$ coefficiente di attrito dinamico. $\mu_c<\mu_s$. La direzione e il verso sono contrari al moto.
 
 \section{\index{principi della dinamica}Leggi di Newton}
 Le leggi di Newton sono i principi della dinamica, legano due mondi distinti, quello del mondo esterno e quello della cinematica attraverso le forze. In quanto principi non hanno nessuna giustificazione, se non la verifica sperimentale. I principi valgono nei sistemi inerziali. L'esistenza e la definizione dei sistemi inerziali è data dal primo principio:
@@ -1592,8 +1597,7 @@ I quadrati dei tempi impiegati dai pianeti a descrivere le proprie orbite sono p
 \section{\index{teorema!di Gauss!per la gravità}Teorema di Gauss (per la gravità)}
 Con il teorema di Gauss si può supporre che gli effetti della
 gravità di un corpo su un altro, al suo esterno, siano uguali a
-quelli che si avrebbero se le masse fossero concentrate nel centro
-di massa.
+quelli che si avrebbero se le masse fossero concentrate nei rispettivi centri di massa.
 
 
 
@@ -1611,16 +1615,15 @@ R^2}=\frac{R\sin\theta\ud\theta}{2R}=\frac{\sin\theta\ud\theta}{2}\]
 \[\ud m=\frac{M\sin\theta\ud\theta}{2}\]
 \[U=-\frac{Gmm'}{r}\qquad\ud U=-\frac{G\ud m m'}{x}\]
 \[x^2=R^2+r^2-2rR\cos\theta\]
-Derivando a sinistra in $x$ e a destra in $\theta$ si ha:
-\[2x\,\ud x=2rR\sin\theta\ud\theta\sin\theta\ud\theta\]
-\[\sin\theta\ud\theta=\frac{x\ud x}{rR}\]
+Differenziando si ha:
+\[2x\,\ud x=2rR\sin\theta\ud\theta\sin\theta\ud\theta \qquad \sin\theta\ud\theta=\frac{x\ud x}{rR}\]
 \begin{align*}
-U&=-\int_{\text{palla}}\frac{Gm'}{x}\,\ud
-m=-\int_{\text{palla}}\frac{Gm'}{x}\frac{M\sin\theta\ud\theta}{2}=-\frac{Gm'
-m}{2}\int_{\text{palla}}\frac{\sin\theta}{x}\ud\theta\\
+U&=-\int_{\text{crosta}}\frac{Gm'}{x}\,\ud
+m=-\int_{\text{crosta}}\frac{Gm'}{x}\frac{M\sin\theta\ud\theta}{2}=-\frac{Gm'
+m}{2}\int_{\text{crosta}}\frac{\sin\theta}{x}\ud\theta\\
 &=-\frac{Gmm'}{2rR}\int\frac{x}{x}\ud
 x=-\frac{Gmm'}{2rR}\int_{r-R}^{r+R}\ud
-x=-\frac{Gmm'}{2rR}[r+R-r+r]\\
+x=-\frac{Gmm'}{2rR}[r+R-r+R]\\
 &=-\frac{Gmm'}{2rR}2R=-\frac{Gmm'}{r}
 \end{align*}
 Possiamo quindi concentrare tutta la massa nel centro della palla (se $P$ sta fuori).
@@ -1636,7 +1639,7 @@ U(P)&=-\frac{Gmm'}{2rR}\int_{R-r}^{r+R}\ud x=-\frac{Gmm'}{2rR}[r+R-R+r]\\
 \[\ve F=-\frac{\ud U}{\ud \ve r}=0\]
 
 Quindi un punto all'interno del guscio non risente di alcuna
-forza, questo lo si può dimostrare ragionando con in coni, in
+forza, questo lo si può dimostrare ragionando con i coni, in
 quanto per ogni cono le forze sono uguali.
 \subsection{Caso sfera piena}
 All'esterno:
@@ -1690,7 +1693,10 @@ T^2=\frac{4\pi^2}{GM_S}R^3\]
 \[\frac{T^2}{R^3}=\frac{4\pi^2}{GM_S}=\const\]
 
 \section{\index{accelerazione!di gravità}Accelerazione di gravità}
-\[\ve g=\frac{\ve F}{m}\]
+\begin{Def}{Accelerazione di gravità}
+ \[\ve g=\frac{\ve F}{m}\]
+dove $m$ è la massa del corpo su cui viene esercitata la forza.
+\end{Def}
 Sulla Terra: \[g = \frac{G\frac{M_Tm}{R_T^2}}{m}=\frac{GM_T}{R_T^2}\simeq \SI{9.836}{\meter\per\second\squared} \]
 In realtà questo valore è variabile, dall'equatore ai poli, cioè
 circa tra $9.78\div9.86$, a causa della forza centrifuga e dallo
