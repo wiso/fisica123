@@ -1,8 +1,8 @@
 FIGS = $(wildcard *.fig) $(wildcard */*.fig)
 SVGS = $(wildcard *.svg) $(wildcard */*.svg)
 MATHEMATICAS = $(wildcard *.mathematica) $(wildcard */*.mathematica)
-PDFS = $(FIGS:.fig=.pdf) $(SVGS:.svg=.pdf) $(MATHEMATICAS:.mathematica=.pdf)
-EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps) $(MATHEMATICAS:.mathematica=.eps)
+PDFS = $(FIGS:.fig=.pdf) $(SVGS:.svg=.pdf) #$(MATHEMATICAS:.mathematica=.pdf)
+EPSS = $(FIGS:.fig=.eps) $(SVGS:.svg=.eps) #$(MATHEMATICAS:.mathematica=.eps)
 
 
 images: pdf_images eps_images
