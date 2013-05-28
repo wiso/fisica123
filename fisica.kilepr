@@ -6,8 +6,8 @@ extensions=.eps .pdf .dvi .ps .fig .log .aux .gif .jpg .png .fig
 img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif .dvi .svg .gp
 kileprversion=2
-kileversion=2.1.0
-lastDocument=TeX/fisica1_1modulo.tex
+kileversion=2.1.3
+lastDocument=TeX/fisica2.tex
 masterDocument=fisica_linux.tex
 name=fisica
 pkg_extIsRegExp=false
@@ -25,6 +25,8 @@ QuickBuild=
 [document-settings,item:TeX/astro.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -33,6 +35,8 @@ ReadWrite=true
 [document-settings,item:TeX/fisica1_1modulo.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -41,6 +45,8 @@ ReadWrite=true
 [document-settings,item:TeX/fisica1_2modulo.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -49,6 +55,8 @@ ReadWrite=true
 [document-settings,item:TeX/fisica2.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -65,6 +73,8 @@ ReadWrite=true
 [document-settings,item:TeX/includes.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -73,6 +83,8 @@ ReadWrite=true
 [document-settings,item:TeX/intro.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -81,6 +93,8 @@ ReadWrite=true
 [document-settings,item:TeX/packages.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -89,6 +103,8 @@ ReadWrite=true
 [document-settings,item:TeX/unita.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -97,6 +113,8 @@ ReadWrite=true
 [document-settings,item:fisica_linux.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -105,6 +123,8 @@ ReadWrite=true
 [document-settings,item:immagini/fisica1/somma_vettori.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -113,6 +133,8 @@ ReadWrite=true
 [document-settings,item:immagini/fisica1/vettore.tex]
 Bookmarks=
 Encoding=UTF-8
+FoldedColumns=
+FoldedLines=
 Highlighting=LaTeX
 Indentation Mode=
 Mode=LaTeX
@@ -180,7 +202,7 @@ order=6
 
 [item:TeX/fisica1_2modulo.tex]
 archive=true
-column=54
+column=52
 encoding=UTF-8
 highlight=LaTeX
 line=1548
@@ -190,10 +212,10 @@ order=2
 
 [item:TeX/fisica2.tex]
 archive=true
-column=2
+column=36
 encoding=UTF-8
 highlight=LaTeX
-line=4650
+line=1543
 mode=LaTeX
 open=true
 order=3
@@ -223,7 +245,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3
+line=6
 mode=LaTeX
 open=true
 order=0
@@ -5161,18 +5183,26 @@ order=-1
 [view-settings,view=0,item:TeX/astro.tex]
 CursorColumn=35
 CursorLine=19
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/fisica1_1modulo.tex]
 CursorColumn=74
 CursorLine=1539
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/fisica1_2modulo.tex]
-CursorColumn=54
+CursorColumn=52
 CursorLine=1548
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/fisica2.tex]
-CursorColumn=2
-CursorLine=4650
+CursorColumn=36
+CursorLine=1543
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/fisica3.tex]
 CursorColumn=35
@@ -5180,28 +5210,42 @@ CursorLine=25
 
 [view-settings,view=0,item:TeX/includes.tex]
 CursorColumn=0
-CursorLine=3
+CursorLine=6
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/intro.tex]
 CursorColumn=0
 CursorLine=0
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/packages.tex]
 CursorColumn=46
 CursorLine=23
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:TeX/unita.tex]
 CursorColumn=0
 CursorLine=126
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:fisica_linux.tex]
 CursorColumn=0
 CursorLine=113
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:immagini/fisica1/somma_vettori.tex]
 CursorColumn=0
 CursorLine=0
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:immagini/fisica1/vettore.tex]
 CursorColumn=26
 CursorLine=6
+JumpList=
+ViMarks=

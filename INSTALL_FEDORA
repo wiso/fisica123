@@ -1,3 +1,3 @@
 #!/bin/bash
-yum install 'tex(quotchap.sty)' 'tex(wrapfig.sty)' 'tex(nag.sty)' 'tex(siunitx.sty)' 'tex(xy.sty)' 'tex(xmpincl.sty)' 'tex(xmpincl.sty)' 'tex(mhchem.sty)' texlive-minitoc
-yum install tetex-fonts
+yum install -y 'tex(quotchap.sty)' 'tex(wrapfig.sty)' 'tex(nag.sty)' 'tex(subfigure.sty)' 'tex(xy.sty)' 'tex(xmpincl.sty)' 'tex(svn.sty)' 'tex(mhchem.sty)' tetex-fonts texlive-minitoc.noarch
+
