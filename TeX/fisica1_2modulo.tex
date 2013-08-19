@@ -1079,6 +1079,18 @@ Combino la macchina $M$ con la macchina di Carnot fatta funzionare al contrario,
 Se la macchina è reversibile $\eta_M=\eta_C$. Per assurdo $\eta_M<\eta_C$, $M^{-1}+C=\bar{C},$ assurdo $\Rightarrow \eta_M\geq\eta_C\Rightarrow \eta_M=\eta_C$
 \end{Cor}
 
+Questo significa che tutte le macchine reversibili che lavorano tra due sorgenti $T_2 > T_1$: $\eta = 1-\frac{T_1}{T_2} = 1 - \frac{|Q_1|}{Q_2}$. Allora:
+\begin{equation}
+ \frac{Q_1}{T_2} + \frac{Q_2}{T_2} = 0
+\end{equation}
+il lavoro sarà:
+\begin{equation}
+ L = Q_2\eta = Q_2 \left(1 - \frac{T_1}{T_2}\right)
+\end{equation}
+
+
+
+
 \section{Entropia\index{entropia}}
 Consideriamo una trasformazione reversibile per un gas perfetto:
 \[\delta Q+\delta L=\ud E\qquad \delta Q-p\ud V=nc_V\ud T\]
@@ -1092,7 +1104,7 @@ Per verificarlo integriamo la quantità e vediamo se si può esprime come differ
 \end{align*}
 \[S=nc_V\log T+nR\log V+\const=\text{entropia}\]
 \[\int_i^f\frac{\delta Q}{T}=\Delta S\qquad \oint\frac{\delta Q}{T}=0\]
-L'entropia è una funzione di stato.
+L'entropia è una funzione di stato. La definizione data vale solo per trasformazioni reversibili. Per una trasformazione irreversibile si può calcolare $\Delta S$ usando una trasformazione reversibile che colleghi gli stessi stati iniziali e finali (vedi esempio espansione libera).
 \subsubsection{Isocora}
 \[\Delta S=nc_V\log\frac{T_f}{T_i}+nR\log\frac{V_f}{V_0}=nc_V\log\frac{T_f}{T_i}\]
 \subsubsection{Isobara}
@@ -1111,20 +1123,35 @@ L'espansione libera è una adiabatica irreversibile, quindi non si può conclude
 \[\Delta S=nR\log\frac{V_f}{V_i}=nR\log 2\]
 
 \subsection{Entropia nei cicli\index{entropia!nei cicli}}
-Consideriamo una macchina $M$ generica, assorbe da $N$ sorgenti di calore a temperature diverse $T_i$ calore $Q_i>0$. La sorgente $0$ a temperatura $T_0$ non ha nulla a che fare con la macchina $M$.
+Il teorema di Clausis estende il risultato a due sorgenti dal teorema di Carnot con macchine reversibili: $\frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0$.
+\begin{Teo}[Clausius]
+ Consideriamo macchina generica $M$ con $n$ sorgenti di calore a temperature diverse $T_i$ dalle quali assorbe calore $Q_i$. Allora vale:
+  \begin{equation}
+   \sum_i \frac{Q_i}{T_i} \leq 0
+  \end{equation}
+l'uguaglianza vale solo se la macchina è reversibile.
+\end{Teo}
 
-Costruiamo delle macchine di Carnot $C_i$ che lavorano ciascuna tra le temperature $T_i\div T_0$
+Per dimostrare il teorema introduciamo $n$ macchine reversibili $C_i$, ognuna che opera tra due sorgenti, $T_i$ e $T_0$. La macchina $M$ non scambia calore con $T_0$. Le macchine reversibili $C_i$ sono tali da scambiare lo stesso calore $Q_i$ dalla sorgente a temperatura $T_i$ come la macchina $M$, ma con segno opposto. Quindi se la macchina $M$ assorbe calore $|Q_i|$ alla sorgente a temperatura $T_i$ allora $C_i$ cede $|Q_i|$ e viceversa.
+
+Usando la relazione generica $\frac{Q_A}{T_A} + \frac{Q_B}{T_B} = 0$ si ottiene alla macchina $C_i$:
+\[
+ Q_{i,0} = \frac{T_0}{T_i} Q_i
+\]
+
+Consideriamo ora la $H=\text{macchina infernale}=M+\sum_{i=1}^{n}C_i$ come in figura \ref{fig:hell_machine}. Poiché i calori della macchina $M$ e $C_i$ si compensano per ogni sorgente a temperatura $T_i$ il risultato netto è che $H$ scambia calore netto solo con la sorgente a $T_0$. Per il postulato di Kelvin questa macchina non può compiere lavoro, cioè $L_H \leq 0$ e quindi per il primo principio $Q_H = Q_0 \leq 0$, dove $Q_0 = \sum_{i=1}^n Q_{i,0}$ è il calore scambiato da $H$ con la sorgente a temperatura $T_0$. Allora:
+\[
+ Q_0 = \sum Q_{i,0} = T_0\sum_{i=1}^{n} \frac{Q_i}{T_i}\leq 0
+\]
+e quindi $\sum_{i=1}^n{Q_i}{T_i}\leq 0$.
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/hell_machine}
+\caption{macchina infernale}
+\label{fig:hell_machine}
 \end{figure}
 
-\[\frac{Q_i}{Q_{i,0}}=-\frac{T_i}{T_0}\qquad Q_{i,0}=-\frac{T_0Q_i}{T_i}\]
-\[H=\text{macchina infernale}=M+\sum_{i=1}^{N}C_i^{-1}\]
-$Q_{H,0}=0$. $H$ usa solo la sorgente a $T_0$, quindi non può produrre lavoro:
-\[L_H\geq0\qquad Q_H=-L_H\leq 0\qquad Q_{i,0}:=-Q_{i,0}=\frac{T_0Q_i}{T_i}\quad\text{perché $C^{-1}$}\]
-\[Q_0^{C^{-1}}=\sum Q_{i,0}^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\]
-\[Q_H=Q_0^{C^{-1}}=T_0\sum\frac{Q_i}{T_i}\leq 0\qquad \sum\frac{Q_i}{T_i}\leq 0\]
 passando a variabili continue:
 \begin{equation}
 \oint\frac{\delta Q}{T}\leq 0\quad\text{diseguaglianza di Clausius}
@@ -1142,13 +1169,13 @@ Infatti considerando trasformazioni reversibili $\Delta S$ è una funzione di st
 \[\int_i^f\frac{\delta Q}{T}=S(f)-S(i)\qquad\oint\frac{\delta Q}{T}=\int_A^A\frac{\delta Q}{T}=S(A)-S(A)=0\]
 
 \subsection{Entropia per qualsiasi trasformazione\index{entropia! per qualsiasi trasformazione}}
-Considerando un ciclo con trasformazioni irreversibili:
+Considerando un ciclo con trasformazioni irreversibili come in figura~\ref{fig:ciclo_misto}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.5]{immagini/fisica1/ciclo_misto}
+\label{fig:ciclo_misto}
 \end{figure}
-
-\[\oint\frac{\delta Q}{T}\leq 0\]
+dalla diseguaglianza di Clausis $\oint\frac{\delta Q}{T}\leq 0$:
 \[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}-\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}\leq 0\]
 \[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}\leq\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}=\Delta S\]
 Per una trasformazione qualsiasi (anche irreversibile):
@@ -1158,8 +1185,10 @@ Nel caso sia reversibile vale l'uguaglianza.
 \subsection{Entropia e secondo principio}
 \[\Delta S\geq\int_i^f\frac{\delta Q}{T}\]
 se consideriamo un sistema isolato $\delta Q=0$ quindi
-\[\Delta S\geq 0\]
-Se avvengono solo trasformazioni reversibili $\Delta S=0$ quindi l'entropia dell'universo non può diminuire. Le trasformazioni reversibili si dice che non lasciano traccia entropica. L'aumento dell'entropia è equivalente al secondo principio (enunciato di Kelvin o di Clausius):
+\begin{equation}
+\Delta S\geq 0 
+\end{equation}
+Questa equazione è equivalente al secondo principio. Se avvengono solo trasformazioni reversibili $\Delta S=0$ quindi l'entropia dell'universo non può diminuire. Le trasformazioni reversibili si dice che non lasciano traccia entropica. L'aumento dell'entropia è equivalente al secondo principio (enunciato di Kelvin o di Clausius):
 \subsubsection{Macchina perfetta\index{macchina!perfetta}}
 
 \[\Delta S_\text{sistema}=0 \qquad\text{perché ciclo}\]
