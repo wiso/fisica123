@@ -835,6 +835,30 @@ usando $PV=nRT$ e quindi $T=\const PV$:
 PV^\gamma=\const\quad\text{Relazione di Poisson}
 \end{equation}
 
+\begin{Es}[Gradiente termico atmosferico]
+L'aria è un cattivo conduttore termico, quindi quando delle masse d'aria a temperatura diversa si spostano si può considerare la trasformazione come adiabatica. La pressione atmosferica descresce con la quota, vedi \eqref{legge_atmosfera}. Per la legge di Archimede l'aria calda più leggera sale si espande a causa delle minore temperatura. Essendo la trasformazione adiabatica non c'è scambio di calore. Essendoci un'espansione la massa d'aria compie lavoro a scapito dell'energia interna, e quindi la temperatura diminuisce.
+
+Per la legge di Stevino:
+\[
+ \ud P = -\rho g \ud h = -\frac{M}{V} g \ud h = -\frac{MP}{nRT} g \ud h
+\]
+dove abbiamo usato la legge dei gas perfetti ($PV=nRT$). Per le trasformazioni adiabatiche $TV^{\gamma-1}=\const$, allora $T^\gamma P^{1-\gamma} = \const$ e quindi possiamo collegare le variazioni di pressione alle variazioni di temperatura:
+\[ T^{\gamma} P^{1-\gamma} = \const\]
+\[ T = \const P^{\frac{\gamma - 1}{\gamma}}\]
+\[ \log T = \frac{\gamma - 1}{\gamma} \log P + \const\]
+\[\frac{1}{T}\frac{\ud T}{\ud P} = \frac{\gamma - 1}{\gamma} \frac{1}{P} \]
+\[\frac{\ud T}{T} = \frac{\gamma - 1}{\gamma} \frac{\ud P}{P} \]
+sostituendo:
+\[
+ \frac{\ud T}{\ud h} = -\frac{\gamma -1}{\gamma} \frac{Mg}{nR}
+\]
+Assumendo $\gamma = \frac{c_v+R}{c_v} = \frac{7}{5}$ (gas biatomico, $c_v = \frac{5}{2}R$) e la massa molare $\frac{M}{n} = \SI{28.88}{\gram\per\mol}$ si ottiene un gradiente costante:
+\[
+ \frac{\ud T}{\ud h} \simeq -\SI{9.74}{\kelvin\per\kilo\meter}
+\]
+questo gradiente è abbastanza più grande del grandiente osservato in quando si è trascurato la presenza di vapore acqueo che condensandosi al diminuire della temperatura sottrae calore sotto forma di calore latente.
+\end{Es}
+
 
 \subsection{Trasformazioni politropiche\index{trasformazioni!politropiche}}
 Nelle trasformazioni politropiche $c$ è ritenuto costante.
