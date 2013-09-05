@@ -30,9 +30,9 @@ Il fluido è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è l
 \[\ud m=\rho \ud V=\rho A\ud y\qquad -\rho A\ud y g-\ud p A=0\]
 \[\ud p=-\rho g \ud y\]
 \[p_0=\text{pressione atmosferica}\]
-\[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^h \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
-\[p=p_0-\rho g h\]
-che è la legge di Stevino\footnote{notare che $h$ in figura è sempre negativo, quindi se invertiamo l'asse la legge diventa $p=p_0+\rho gh$}, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+\[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^y \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
+\[p=p_0-\rho g y = p_0+\rho g h\]
+che è la legge di Stevino e $h$ è la profondita, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
 \[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
@@ -78,10 +78,10 @@ In due semisfere attaccate in modo da creare una sfera unica viene diminuita la 
 Consideriamo la strisciolina $\ud m$
 \[F=\int\ud F\]
 \[\ud A=2\pi R\sin\theta R\ud\theta=2\pi R^2\sin\theta\ud\theta\]
-\[\ud F_x=p_0 2\pi \ud A\cos\theta\]
+\[\ud F_x=p_0 \ud A\cos\theta\]
 \[\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\]
 \[\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\]
-\[\text{se } R=\si{1}{\metre} \quad F_x\simeq\si{3E5}{\newton} \]
+\[\text{se } R=\SI{1}{\metre} \quad F_x\simeq\SI{3E5}{\newton} \]
 
 \subsection{Principio di Pascal\index{principio!di Pascal}}
 \begin{Pri}[Pascal]
