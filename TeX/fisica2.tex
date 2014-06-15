@@ -1284,27 +1284,31 @@ Allora il condensatore equivalente ha capacità
 
 \chapter{Problema generale dell'elettrostatica}
 \minitoc
-Abbiamo detto che l'elettrostatica è descritta da due leggi:
+Abbiamo detto che l'elettrostatica è descritta completamente solo da due leggi:
+\begin{subequations}
+ 
+
+
 \begin{gather}
 \ve\nabla\cdot\ve E=\frac{\rho}{\varepsilon_0}
-\label{div_E}\\
+\label{eq:div_E}\\
 \ve\nabla\times\ve E=0
-\label{rot_E}
+\label{eq:rot_E}
 \end{gather}
-Dalla \eqref{rot_E} sappiamo che deve esistere una funzione che è il potenziale di $\ve E$. Aggiungendo un segno meno diciamo che esiste $\varphi$ tale che:
+\end{subequations}
+Dalla \eqref{eq:rot_E} che ci dice che $\ve E$ è irrotazionale, sappiamo che deve esistere una funzione scalare che è il potenziale di $\ve E$:
 \begin{equation}
 \ve E=-\ve\nabla\varphi
+\label{eq:poisson_pot}
 \end{equation}
-Sostituendola nella \eqref{div_E} otteniamo:
+Sostituendola nella \eqref{eq:div_E}, che non abbiamo ancora usato, otteniamo una singola equazione:
 \begin{equation}
 \nabla^2\varphi=-\frac{\rho}{\varepsilon_0}
-\label{Poisson01}
+\label{eq:Poisson01}
 \end{equation}
 Si può anche scrivere:
 \[\nabla^2\varphi=\ve\nabla\cdot\ve\nabla\varphi=\diver\grad\varphi={\frac{\partial^2 \varphi}{\partial x^2}+\frac{\partial^2 \varphi}{\partial y^2}+\frac{\partial^2 \varphi}{\partial z^2}}=-\frac{\rho}{\varepsilon_0}\]
-L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conoscenza di $\varphi$: $\ve E=-\ve\nabla\varphi$.
-
-Se la sorgente del campo è data esclusivamente da cariche elettriche in un volume allora l'unica soluzione è 
+L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differenziale alle derivate parziali \eqref{eq:Poisson01} è l'equazione di Poisson\index{equazione!di Poisson}\index{Poisson}. Risolvere l'equazione di Poisson significa trovare $\varphi(\ve r)$ in funzioni delle condizioni del problema. Dalla conoscenza di $\varphi$: $\ve E=-\ve\nabla\varphi$. L'elettrostatica può essere quindi descritta, oltre che dalle equazioni~\eqref{eq:div_E} e \eqref{eq:rot_E}, dalle equazioni \eqref{eq:Poisson01} e \eqref{eq:poisson_pot}. Il problema così forumulato è ora più semplice, in quanto l'equazione \eqref{eq:poisson_pot} è semplicemente il calcolo di un gradiente, mentre l'equazione \eqref{eq:Poisson01} pur essendo di un ordine superiore all'originale, riguarda una funzione scalare e può essere facilmente generalizzato, per esempio se la sorgente del campo è data esclusivamente da cariche elettriche in un volume allora l'unica soluzione è 
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'\]
 Il problema diventa più complesso quando si inseriscono dei conduttori che subiscono l'induzione elettrostatica.
 \section{Funzioni armoniche}
@@ -1315,7 +1319,7 @@ Se non ci sono cariche, cioè $\rho=0$, allora l'equazione di Poisson diventa:
 \end{equation}
 detta equazione di Laplace\index{equazione!di Laplace}\index{Laplace}. Una funzione che rispetta la \eqref{eq_laplace} e che abbia derivate prime continue è detta armonica\index{funzione!armonica}. Quindi se non ci sono cariche $\varphi$ è armonica. La zona di armonicità di una funzione è l'insieme dei punti dove la funzione è armonica.
 \subsection{Teoremi}
-Tipicamente i problemi di elettrostatica vengono formulati attraverso le condizioni di Dirichlet o di Neumann. Le prime impogono che la funzione $\phi$ assuma certi valori su una superficie, le seconde invece impongono condizioni sulle derivate normali (derivata direzionale rispetto alla normale della superficie).
+Tipicamente i problemi di elettrostatica vengono formulati attraverso le condizioni di Dirichlet o di Neumann. Le prime impogono che la funzione $\varphi$ assuma certi valori su una superficie, le seconde invece impongono condizioni sulle derivate normali (derivata direzionale rispetto alla normale della superficie).
 \begin{Teo}[unicità  problema di Dirichlet]
 Data una superficie chiusa $S$ la funzione armonica che su $S$ assume il valore $\varphi_S$ è unica.
 \end{Teo}
@@ -1342,7 +1346,7 @@ Tentiamo di risolvere l'equazione di Laplace, cioè quando non ci sono cariche l
 \varphi(r,\theta,\phi)=\sum_{l,m}\left(E_lr^l+F_lr^{-(l+1)}\right)\left(C_lP_l^m+D_lQ_l^m\right)\left(A\sin m\phi+B\cos m\phi\right)
 \end{equation}
 \section{Caso monodimensionale}
-Supponiamo che il potenziale $\varphi$ dipenda solo dalla coordinata $x$, allora $\frac{\partial\varphi}{\partial x}=\frac{\partial\varphi}{\partial y}=0$ e l'equazione di Laplace diventa:
+Supponiamo che il potenziale $\varphi$ dipenda solo dalla coordinata $x$, allora $\frac{\partial\varphi}{\partial y}=\frac{\partial\varphi}{\partial z}=0$ e l'equazione di Laplace diventa:
 \[\frac{\ud^2\varphi}{\ud x^2}=0\]
 Allora:
 \[\frac{\ud \varphi}{\ud x}=a\qquad \varphi=ax+b\]
@@ -1388,7 +1392,7 @@ e sul piano ($x=0$):
  \[
   \varphi(0,y,z)=\frac{1}{\giorgi}\left(\frac{q}{\sqrt{x_+^2+y^2+z^2}}+\frac{-q}{\sqrt{x_-^2+y^2+z^2}}\right)=0
  \]
-in quanto $x_+ = -x_-$. Questa è la soluzione per il semispazio di destra ($x>0$). Nel semispazio in cui c'è la carica di prova invece il potenziale è costante, e in questo caso nullo, in quanto il semispazio di sinistra si può considerare come uno spazio interno al conduttore piano infinito. Per determinare la densità di carica sul piano serve la componente normale del campo elettrostatico:
+in quanto $x_+ = -x_-$. La somma del potenziali delle due cariche è la soluzione per il semispazio di destra ($x>0$). Nel semispazio in cui c'è la carica di prova invece il potenziale è costante, e in questo caso nullo, in quanto il semispazio di sinistra si può considerare come uno spazio interno al conduttore piano infinito. Per determinare la densità di carica sul piano serve la componente normale del campo elettrostatico:
 \[
  E_x(0,y,z) = -\frac{\partial\varphi}{\partial x}(0,y,z) = -\frac{q}{2\pi\varepsilon_0}\frac{x_+}{(x_+^2+y^2+z^2)^{3/2}}
 \]
@@ -1422,7 +1426,7 @@ avendo usato la sostituzione $t=\rho^2+d^2$ e il fatto che l'integrando non dipe
 	       &= \frac{1}{\giorgi}\left(\frac{q}{a\norm{\ver n -\frac{d}{a}\ver n'}}+\frac{q'}{a\norm{\ver n-\frac{d'}{a}\ver n'}}\right)=0
  \end{aligned}
  \end{equation*}
-quindi deve essere $d=d'$ e $q=-q'$ ma non va bene, anche perché $q'$ è all'esterno della sfera. Quindi raccogliendo in modo diverso:
+quindi una soluzione è $d=d'$ e $q=-q'$ ma non va bene, perché $q'$ è all'esterno della sfera. Quindi raccogliendo in modo diverso:
 \begin{equation*}
  \begin{aligned}
   \varphi(x=a) &= \frac{1}{\giorgi}\left(\frac{q}{a\norm{\ver n-\frac{d}{a}\ver n'}}+\frac{q'}{d'\norm{\ver n'-\frac{a}{d'}\ver n}}\right)\\
@@ -1433,11 +1437,11 @@ e deve essere:
 \[
  \frac{q}{a}=-\frac{q'}{d'}\qquad \frac{d}{a}=\frac{a}{d'}
 \]
-in modo che il potenziale si annulli sulla sfera per ogni possibile valore di $\ver n\cdot\ver n'$. Quindi per la carica immagine:
+in modo che il potenziale si annulli sulla sfera per ogni possibile valore di $\ver n\cdot\ver n'$.  Quindi per la carica immagine:
 \[
  q'=\frac{-a}{d}q\qquad d'=\frac{a^2}{d}
 \]
-Quindi il potenziale:
+In questo caso la carica immagine è all'interno della sfera, in quando $a < d\Rightarrow d'<a$. Quindi il potenziale:
 \[
  \varphi(\ve x) = \frac{1}{\giorgi}\left(\frac{q}{\norm{x\ver n -d\ver n'}}+\frac{-\frac{a}{d}q}{\norm{x\ver n-\frac{a^2}{d}\ver n'}}\right)
 \]
