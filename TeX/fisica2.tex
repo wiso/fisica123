@@ -1451,6 +1451,7 @@ In questo caso la carica immagine è all'interno della sfera, in quando $a < d\R
  \caption{Linee equipotenziali e linee di campo nel piano $y=0$. Le linee rosse indicano le regioni dove non è stato calcolato il potenziale. La sfera ha raggio $2$, mentre la carica unitaria positiva è in $(0,8)$. Il punto indica la posizione della carica immagine.}
 \end{figure}
 \end{Es}
+
 \begin{Es}[sfera in campo uniforme]
 \begin{figure}[htbp]
  \centering
@@ -1530,22 +1531,23 @@ In questo caso la carica immagine è all'interno della sfera, in quando $a < d\R
 \minitoc
 Per definizione la corrente è un flusso ordinato di cariche elettriche, la grandezza che la caratterizza è l'intensità di corrente:
 \begin{Def}[intensità di corrente\index{intensità di corrente}]
+L'intensità di corrente che attraversa la sezione di un conduttore è pari alla carica che la attraversa nel tempo:
 \begin{equation}
 I=\frac{\ud q}{\ud t}
 \label{corrente_def}
 \end{equation}
 \end{Def}
-\`E una grandezza scalare, anche se la corrente ha un verso, quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def}:
+\`E una grandezza scalare, anche se la corrente ha un verso, per convenzione quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def} la quantità di carica che attraversa una sezione è:
 \begin{equation}
 Q=\int_0^t I(t')\ud t'
 \end{equation}
-essendo però la corrente stazionaria $Q=It$. Il moto delle cariche ha origine da una differenza di energia potenziale e quindi da una differenza di potenziale. Tutte le particelle cariche che con il loro moto generato una corrente si chiamano portatori di cariche. Muovendo un corpo carico, per esempio traslandolo, si crea una corrente, in quanto si stanno muovendo delle cariche; per differenziare queste correnti non del tutto proprie, chiameremo correnti di conduzione il moto di portatori di carica all'interno del corpo, senza movimento del corpo.
-\section{Modello del gas di elettroni liberi\index{modello del gas di elettroni liberi}}
+nel caso di corrente stazionaria $Q=It$. Il moto delle cariche ha origine da una differenza di energia potenziale e quindi da una differenza di potenziale. Tutte le particelle cariche che con il loro moto generato una corrente si chiamano portatori di cariche. Muovendo un corpo carico, per esempio traslandolo, si crea una corrente, in quanto si stanno muovendo delle cariche; per differenziare queste correnti non del tutto proprie, chiameremo correnti di conduzione il moto di portatori di carica all'interno del corpo, senza movimento del corpo.
+\section{Modello del gas di elettroni liberi\index{modello! del gas di elettroni liberi}}
 Ipotizziamo che gli elettroni liberi si muovano come gli atomi di un gas classico, quindi con urti casuali, ecc\ldots
 In assenza di campo elettrico gli elettroni saranno in agitazione termica con una velocità $v_T$ di agitazione termica:
 \[K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT\]
-con $f=3$ gradi di libertà  $k$ costante di Boltzmann. Alla temperatura di $\si{300}{\kelvin}$:
-\[v_T=\sqrt{\frac{3kT}{m}}\simeq \SI{1E5}{\metre\per\second}\]
+con $f=3$ gradi di libertà, $k$ costante di Boltzmann. Alla temperatura di $\si{300}{\kelvin}$:
+\[v_T=\sqrt{\frac{3kT}{m}}\simeq \SI{E5}{\metre\per\second}\]
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
 \[l = \tau v_T\]
 Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva\index{velocità!di deriva}, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
@@ -1558,7 +1560,7 @@ Consideriamo un conduttore con $N$ portatori di carica per unità di volume, tut
 \begin{Def}[densità di corrente\index{densità di corrente}]
 Si definisce $\ve J$ densità di corrente:
 \begin{equation}
-\ve J=qN\ve v_D
+\ve J=qN\ve v_D = \rho \ve v_D
 \end{equation}
 \end{Def}
 Allora la \eqref{densita_corrente01} si scrive come:
@@ -1593,8 +1595,10 @@ per l'arbitrarietà di $V$:
 \end{legge}
 la legge \eqref{conservazione della carica} è detta anche principio di continuità \index{principio! di continuità}. Le sorgenti del campo $\ve J$ sono le variazioni di densità di carica. In condizioni stazionarie $\frac{\partial\rho}{\partial t}=0$ e dunque:
 \[\diver \ve J=0\]
-e dunque $\ve J$ è un campo solenoidale, non ha sorgenti.
+e dunque $\ve J$ è un campo solenoidale, non ha sorgenti, le sue linee di campo sono chiuse.
 \section{Conducibilità elettrica\index{conducibilità elettrica}}
+Vogliamo trovare una relazione tra la corrente elettrica e il campo elettrico applicato.
+
 Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni, ovviamente $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N_0(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
 \[N(t+\ud t)=N(t)-N(t)\frac{\ud t}{\tau}\]
 Facendo il primo sviluppo di Taylor:
@@ -1612,11 +1616,13 @@ Il numero di elettroni che non hanno subito una collisione decresce molto rapida
 Vogliamo ora sapere quanto tempo ci vuole ad avere un urto qualsiasi dopo il tempo $t$:
 \[\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau\]
 Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il successivo, sempre di quella particella, ma è anche il tempo medio che al tempo $t$ bisogna attendere per avere il primo urto tra due particelle qualsiasi. Naturalmente essendo indipendente dal tempo $\tau$ è anche il tempo medio dall'ultimo urto. Possiamo calcolare la velocità di deriva, considerando l'accelerazione data dal campo elettrico durante il tempo dall'ultimo urto:
-\[\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}=\frac{-e}{m_\mathrm{e}}{\ve E}\tau\]
-Usando la densità di corrente:
+\[\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}\tau=\frac{-e}{m_\mathrm{e}}{\ve E}\tau\]
+dove abbiamo ignorato i contributi a $\ve v_D$ che provengono prima dell'urto. Usando la densità di corrente:
 \[\ve J=-Ne\ve v_D=\frac{e^2\tau N}{m_\mathrm{e}}\ve E=\sigma\ve E\]
 $\sigma$ è la conducibilità elettrica:
 \[\sigma=\frac{e^2\tau N}{m_\mathrm{e}}=\frac{e^2Nl}{m_\mathrm{e}v_D}\]
+Questo risultato è il modello di Drude\index{modello!di Drude}, e può essere esteso anche alle correnti alternate.
+
 La conducibilità elettrica ci dice come il conduttore risponde al campo elettrico, l'ostacolo che gli elettroni incontrano nel loro moto; alta conducibilità significa alta disposizione da parte del conduttore di mettere in moto i suoi elettroni. Se supponiamo che $\sigma$ non dipenda dallo spazio, cioè il conduttore sia omogeneo, che $\sigma$ non dipenda da $E$, cioè che il conduttore sia lineare e che non dipenda dalla direzione di $\ve E$ cioè sia isotropo e quindi $\ve J$ abbia la direzione di $\ve E$ allora $\sigma$ è uno scalare, altrimenti è un tensore $3\times 3$ del second'ordine:
 \[\ve J=\ten{\sigma}\ve E\]
 \subsection{Resistività \index{resistività}}
@@ -1647,7 +1653,7 @@ dove $\ver n$ è la normale alla superficie. Se integriamo sulla superficie:
 \end{equation}
 poiché la superficie su cui stiamo integrando è equipotenziale $\ud V$ è costante su tutta la superficie e può uscire dall'integrale:
 \begin{equation}
- \ud V\int\ud\Sigma = \ud V\Sigma=\frac{\left[\int\ve J\cdot\ud\ve \Sigma\right]\ud l}{\sigma}
+ \ud V\int\ud\Sigma = \ud V\Sigma=\frac{\left[\int\ve J\cdot\ud\ve \Sigma\right]\ud l}{\sigma} = \frac{I}{\sigma}\ud l
 \end{equation}
 e si è supposto che $\sigma$ sia anch'essa costante su tutta la superficie. Integrando su tutta la lunghezza del conduttore:
 \begin{equation}
@@ -1659,6 +1665,7 @@ Essendo gli elementini in serie la corrente è la stessa per tutti, mentre la se
 \end{equation}
 \begin{Def}[resistenza elettrica\index{resistenza!elettrica}]
  \begin{equation}R=\int_A^B \frac{\rho}{\Sigma}\,\ud l\end{equation}
+dove l'integrale di cammino è fatto su un percoso normale alle superfici equipotenziali, ovvero parallelo al campo elettrico.
 \end{Def}
 \begin{legge}[Ohm]
  \begin{equation}
@@ -1683,7 +1690,7 @@ che in realtà è stata introdotta come legge sperimentale. I materiali che risp
  \includegraphics[scale=0.35]{immagini/fisica2/conduttore_cilindrico}
  % conduttore_cilindrico.pdf: 317x458 pixel, 72dpi, 11.18x16.16 cm, bb=0 0 317 458
 \end{figure}
- Consideriamo due superfici cilindriche concentriche, e tra queste inseriamo un materiale con resistività $\rho$ uniforme. Appichiamo una $\Delta V$ sulle due superfici, vogliamo sapere quanto è la corrente che scorre.
+ Consideriamo due superfici cilindriche concentriche, e tra queste inseriamo un materiale con resistività $\rho$ uniforme. Applichiamo una $\Delta V$ sulle due superfici, vogliamo sapere quanto è la corrente che scorre.
 \[
  R = \frac{\Delta V}{I} = \rho\int\frac{\ud l}{\Sigma(l)}
 \]
