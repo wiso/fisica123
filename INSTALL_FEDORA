@@ -1,2 +1,2 @@
 #!/bin/bash
-yum install -y 'tex(quotchap.sty)' 'tex(wrapfig.sty)' 'tex(nag.sty)' 'tex(subfigure.sty)' 'tex(xy.sty)' 'tex(xmpincl.sty)' 'tex(svn.sty)' 'tex(mhchem.sty)' tetex-fonts texlive-minitoc.noarch transfig texlive-babel-latin 'tex(siunitx.sty)'
+yum install -y 'tex(quotchap.sty)' 'tex(wrapfig.sty)' 'tex(nag.sty)' 'tex(subfigure.sty)' 'tex(xy.sty)' 'tex(xmpincl.sty)' 'tex(svn.sty)' 'tex(mhchem.sty)' tetex-fonts texlive-minitoc.noarch transfig texlive-babel-latin 'tex(siunitx.sty)' texlive-gitinfo
