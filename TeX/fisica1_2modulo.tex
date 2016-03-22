@@ -18,21 +18,30 @@ La pressione si misura in: $\newton\per\meter\squared=\pascal$ (pascal), che per
 si misura in $\si{}{\kilogram/\metre^3}$.
 
 \subsection{\index{legge!di Stevino}Legge di Stevino}
+\begin{legge}[Stevino]
+ La pressione all'interno di un fluido statico a densità uniforme a profondità $h$ rispetto alla pressione esterna in presenza di forza peso è:
+\begin{equation}
+ p = p_0 + \rho g h
+\end{equation}
+dove $p_0$ è la pressione estena, $\rho$ la densità del fluido.
+\end{legge}
+
 \label{stevino11}
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.4]{immagini/fisica1/legge_di_stevino1}
 \end{figure}
 
-
-Il fluido è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è la forza dovuta alla pressione della parte superiore del fluido, $\ve F_2$ a quella inferiore.
+Consideriamo un elemento infinitesimo di massa $\ud m$. L'elemento è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è la forza dovuta alla pressione della parte superiore del fluido, $\ve F_2$ a quella inferiore.
 \[-\ud mg-(p+\ud p)A+pA=0\qquad -\ud mg-dpA=0\]
 \[\ud m=\rho \ud V=\rho A\ud y\qquad -\rho A\ud y g-\ud p A=0\]
 \[\ud p=-\rho g \ud y\]
 \[p_0=\text{pressione atmosferica}\]
 \[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^y \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
 \[p=p_0-\rho g y = p_0+\rho g h\]
-che è la legge di Stevino e $h$ è la profondita, valida se consideriamo la densità costante, come per esempio in un liquido, per un gas ciò non è più possibile quindi ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+che è la legge di Stevino e $h$ è la profondita, valida se consideriamo la densità costante, come per esempio in un liquido.
+
+Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
 \[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
@@ -235,7 +244,10 @@ Vengono usate le semplificazioni:
 \end{description}
 
 \subsection{Equazione di continuità\index{equazione!di continuità}}
-La portata volumica è la quantità di volume che passa nel tempo: $Q=\frac{\ud V}{\ud t}$, ma essendo in regime stazionario la velocità non varia, quindi $Q=\frac{\Delta V}{\Delta t}$, la portata di massa è la quantità di massa nel tempo.
+\begin{Def}[Portata]
+La portata volumica è la quantità di volume che passa nel tempo: \[Q=\frac{\ud V}{\ud t}\]
+Essendo in regime stazionario la velocità non varia, quindi $Q=\frac{\Delta V}{\Delta t}$, la portata di massa è la quantità di massa nel tempo: $\frac{\ud m}{\ud t}$.
+\end{Def}
 
 \begin{figure}[htbp]
 \centering
@@ -243,8 +255,8 @@ La portata volumica è la quantità di volume che passa nel tempo: $Q=\frac{\ud 
 \end{figure}
 Fissiamo $\Delta t$ tale che $h=v_1\Delta t$
 \begin{enumerate}
-\item fluido che entra in $\Delta t\quad \rho\Delta V=\rho A_1v_1\Delta t$
-\item fluido che esce in $\Delta t\quad \rho\Delta V=\rho A_2v_2\Delta t$
+\item massa che entra in $\Delta t\quad \rho\Delta V=\rho A_1v_1\Delta t$
+\item massa che esce in $\Delta t\quad \rho\Delta V=\rho A_2v_2\Delta t$
 \end{enumerate}
 Naturalmente le masse entranti e uscenti sono uguali, quindi (legge di Leonardo\index{legge!di Leonardo}\index{Leonardo}):
 \[A_1v_1=A_2v_2\]
