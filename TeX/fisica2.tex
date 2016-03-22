@@ -33,7 +33,7 @@ Dato un campo scalare possiamo definire superficie di livello \index{superficie!
 (A\times B)_x=A_yB_z-A_zB_y\quad(A\times B)_y=A_zB_x-A_xB_z\quad(A\times B)_z=A_xB_y-A_yB_x
 \]
 \[A\cdot(A\times B)=0\]
-\[A\cdot(B\times C)=(A\times B)\cdot C=(C\times A)\cdot B\]
+\[A\cdot(B\times C)=C\cdot(A\times B)=B\cdot(C\times A)\]
 \[(A\times B)\times C=B(A\cdot C)-A(B\cdot C)\]
 \[A\times(B\times C)=B(A\cdot C)-C(A\cdot B)\]
 \section{Operatori differenziali}
@@ -2336,7 +2336,7 @@ Sia $\ve j$ la densità di corrente in un conduttore, quindi il campo magnetico 
 \[
  \ud\ve B = \frac{\mu_0}{4\pi} \frac{\ve J\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v = \frac{\mu_0}{4\pi} \frac{nq\ve v\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v
 \]
-ma $n\ud v$ è il numero di carich nel volume infinitesimo, considerando una sola carica si ha:
+ma $n\ud v$ è il numero di cariche nel volume infinitesimo, considerando una sola carica si ha:
 \begin{equation}
  \ve B = \frac{\mu_0}{4\pi} \frac{q\ve v\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}
 \end{equation}
@@ -3360,7 +3360,7 @@ Consideriamo il caso generale di un materiale non uniformemente magnetizzato. Co
 \begin{equation}
 \ve M(x,y+\ud y,z)=\ve M+\frac{\partial\ve M}{\partial y}\ud y
 \end{equation}
-consideriamo la componente $x$. Dalla \eqref{intensita_magnetizzazione} possiamo dire che la componente $x$ del momento magnetico sia:
+consideriamo la componente $x$. Dalla \eqref{intensita_magnetizzazione} la componente $x$ del momento magnetico:
 \begin{equation}
 \ud m_x=M_x\ud V=\ud m_x\ud x\ud y\ud z
 \end{equation}
@@ -3450,7 +3450,7 @@ Sommando tutti i contributi il potenziale vettore totale:
 \begin{equation}
 \ve A(\ve r)=\int_V\ud\ve A(\ve r)=\frac{\mu_0}{4\pi}\int_V\frac{\ve M(\ve r')\times(\ve r-\ve r')}{\norm{\ve r-\ve r}^3}\,\ud v'
 \end{equation}
-ricordando che $\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}=\grad'\frac{1}{\norm{\ve r-\ve r'}}$:
+ricordando che $\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}=\nabla'\frac{1}{\norm{\ve r-\ve r'}}$:
 \begin{equation}
 \ve A(\ve r)=\frac{\mu_0}{4\pi}\int_V\ve M(\ve r')\times\grad'\frac{1}{\norm{\ve r-\ve r'}}\,\ud v'
 \end{equation}
@@ -3517,7 +3517,7 @@ Come fatto per i dielettrici analizziamo le condizioni al contorno per $\ve B$ e
 
 Consideriamo due mezzi separati da una superficie $\Sigma$ e un cilindro elementare di superficie $S$ che si interseca normalmente con $\Sigma$:
 \begin{equation}
- \int_V \div \ve B\,\ud v = \int_S\ve B\cdot\ve n = 0
+ \int_V \diver \ve B\,\ud v = \int_S\ve B\cdot\ve n = 0
 \end{equation}
 Se l'altezza del cilindro tende a zero il flusso è dato solo dal flusso sulle basi e si ottiene:
 \begin{equation}
@@ -3554,7 +3554,7 @@ dove $J_s$ è una densità di corrente di conduzione superficiale.
 \minitoc
 Sappiamo come una corrente possa indurre campi magnetici. Vale anche l'opposto, cioè una variazione di flusso del campo magnetico induce una corrente.
 
-Per esempio se avviciniamo un magnete ad una spira ferma nella spira si genera una corrente indotta fig.\@\ref{magnete_spira}.
+Per esempio se avviciniamo un magnete ad una spira ferma nella spira si genera una corrente indotta fig.~\ref{magnete_spira}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.25]{immagini/fisica2/ind_spira01}
