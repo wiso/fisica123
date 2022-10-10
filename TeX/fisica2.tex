@@ -382,7 +382,6 @@ Tutta l'elettrodinamica nel vuoto può essere descritta con le quattro equazioni
 c^2\ve\nabla\times \ve B=\frac{\partial \ve E}{\partial t}+\frac{\ve J}{\varepsilon_0}
 \end{gather}
 \end{subequations}
-
 oppure nel sistema CGS:
 \begin{subequations}
  \begin{gather}
@@ -402,7 +401,7 @@ In elettrostatica si studia il campo elettrico $\ve E$ in condizioni stazionarie
 \end{subequations}
 si parla allora di campo elettrostatico.
 \section{Carica\index{carica elettrica}}
-La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa. La più piccola è quella dell'elettrone, $-e\simeq\si{-1.6E-19}{\coulomb}$, tutte le altre sono multipli interi di essa.
+La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa. La più piccola è quella dell'elettrone, $-e\simeq\SI{-1.6E-19}{\coulomb}$, tutte le altre sono multipli interi di essa.
 \section{Forza di Coulomb\index{forza!di Coulomb}}
 Partiamo da una legge sperimentale che riguarda la forza che una carica $q_1$ ferma esercita su una carica $q_2$ ferma nel vuoto:
 \begin{equation}
@@ -432,7 +431,7 @@ Naturalmente per la terza legge della dinamica:
 \subsection{Unità di misura}
 Un'idea è quella di porre $K_e=1$ e di definire la carica unitaria quella carica che posta alla distanza unitaria da una carica unitaria produce una forza unitaria. Questo è quello che si fa nel sistema CGS Elettrostatico\index{CGS elettrostatico}. Non si definisce a priori la carica, che prende il nome di u.e.s.\@ unità elettrostatica semplice\index{unità elettrostatica semplice}, chiamata anche stat--coulomb\index{stat--coulomb}.
 
-Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Sistema Internazionale. Si definisce coulomb\index{coulomb} quella carica che attraversando un voltametro al nitrato d'argento ($\mathrm{AgNO_3}$) deposita sul catodo una quantità di Ag di \si{0.00111800}{\gram}. \`E una definizione provvisoria. Si ricava quindi $K_e\simeq \si{8.8974E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI si è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nella quale $K_e=\frac{1}{4\pi\varepsilon_0}$, $\varepsilon_0\simeq \si{8.8E-12}{\coulomb\squared\per\newton\metre\squared}$.
+Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Sistema Internazionale. Si definisce coulomb\index{coulomb} quella carica che attraversando un voltametro al nitrato d'argento ($\mathrm{AgNO_3}$) deposita sul catodo una quantità di Ag di \SI{0.00111800}{\gram}. \`E una definizione provvisoria. Si ricava quindi $K_e\simeq \SI{8.8974E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI si è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nella quale $K_e=\frac{1}{4\pi\varepsilon_0}$, $\varepsilon_0\simeq \SI{8.8E-12}{\coulomb\squared\per\newton\metre\squared}$.
 
 Il coulomb e lo stat-coulomb nonostante siano unità della stessa grandezza hanno dimensioni diverse.
 \begin{Es}[pendolo magnetico]
@@ -462,16 +461,19 @@ l'equazione del moto diventa:
 
 
 \section{Densità di carica\index{densità di carica}}
-Al posto di immaginare la materia come un discreto con cariche puntiformi possiamo immaginarla, a livello macroscopico, come un continuo, definendo una densità di carica volumetrica. Sia $V$ un volume, e $\Delta V$ una porzione di essa. All'interno di $\Delta V$ è contenuta la carica $\Delta q$. Definiamo densità volumetrica di carica la funzione\index{densità di carica!volumetrica}:
+Al posto di immaginare la materia come un discreto con cariche puntiformi possiamo immaginarla, a livello macroscopico, come un continuo, definendo una densità di carica volumetrica. Sia $V$ un volume, e $\Delta V$ una porzione di essa. All'interno di $\Delta V$ è contenuta la carica $\Delta q$.
+\begin{Def}[Densità carica\index{densità di carica!volumetrica}]
 \[\rho\left({\ve r}\right)=\lim_{\Delta V\to 0}\frac{\Delta q}{\Delta V}=\frac{\ud q}{\ud V}\]
+\end{Def}
 La carica totale è allora:
 \[Q=\int_V\rho(\ve r)\,\ud V\]
 Allo stesso modo possiamo definire una densità superficiale di carica \index{densità di carica!superficiale}$\sigma(\ve r)$, o lineare \index{densità di carica!lineare}$\lambda(\ve r)$.
 \subsection{Forza}
-La forza dell'elementino $\ud V$ sulla carica puntiforme esterna $q$ è 
-\[\ud\ve F=\frac{1}{4\pi\varepsilon_0}\frac{q\,\ud q}{\norm{\ve r-{\ve r}\,^\prime}^3}\left(\ve r-{\ve r}\,^\prime\right)\]
+Usado la densità di carica possiamo riscivere la forma di Coulumb. La forza dell'elementino $\ud V'$ (posto nelle cordinate $\ve r'$) sulla carica puntiforme esterna $q$ è 
+\[\ud\ve F=\frac{1}{4\pi\varepsilon_0}\frac{q\,\ud q'}{\norm{\ve r-{\ve r}\,^\prime}^3}\left(\ve r-{\ve r}\,^\prime\right)\]
+Quindi la forza totale del volume $V$ sulla carica esterna $q$:
 \[\ve F=\int_V \ud \ve F=\frac{q}{4\pi\varepsilon_0}\int_V\frac{\
-\rho(\ve r\,^\prime)\left(\ve r-{\ve r}\,^\prime\right)}{\norm{\ve r-{\ve r}\,^\prime}^3}\,\ud V\]
+\rho(\ve r\,^\prime)\left(\ve r-{\ve r}\,^\prime\right)}{\norm{\ve r-{\ve r}\,^\prime}^3}\,\ud V'\]
 \section{Campo elettrico\index{campo!elettrico}\index{campo!elettrostatico}}
 Fino ad ora abbiamo usato il concetto di azione a distanza\index{azione a distanza},
 %\[{\oint\limits_0^1}_{\Gamma}\]
@@ -1159,7 +1161,7 @@ Calcoliamo la capacità di una sfera conduttrice di raggio $R$. Sapendo che la c
 \[\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma\]
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\oint_S\frac{\sigma(\ve r\,')\,\ud a'}{R}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{4\pi R^2 R}4\pi R^2=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}\]
 \[C=\frac{Q}{\varphi}=4\pi\varepsilon_0R\]
-Se $R=\si{1}{\metre}$ allora $C=\si{1E-10}{\farad}$. Il farad è un'unità generalmente grande.
+Se $R=\SI{1}{\metre}$ allora $C=\SI{1E-10}{\farad}$. Il farad è un'unità generalmente grande.
 \end{Es}
 \subsection{Condensatore}
 Mettere troppa carica su un conduttore è difficile perché questa tende a dissiparsi nell'aria. \`E invece più pratico aumentare la capacità 
@@ -1546,7 +1548,7 @@ nel caso di corrente stazionaria $Q=It$. Il moto delle cariche ha origine da una
 Ipotizziamo che gli elettroni liberi si muovano come gli atomi di un gas classico, quindi con urti casuali, ecc\ldots
 In assenza di campo elettrico gli elettroni saranno in agitazione termica con una velocità $v_T$ di agitazione termica:
 \[K=\frac{1}{2}m_{\mathrm{e}}v_T^2=\frac{f}{2}kT\]
-con $f=3$ gradi di libertà, $k$ costante di Boltzmann. Alla temperatura di $\si{300}{\kelvin}$:
+con $f=3$ gradi di libertà, $k$ costante di Boltzmann. Alla temperatura di $\SI{300}{\kelvin}$:
 \[v_T=\sqrt{\frac{3kT}{m}}\simeq \SI{E5}{\metre\per\second}\]
 Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino medio, cioè lo spazio medio che un elettrone percorre senza urti:
 \[l = \tau v_T\]
@@ -1632,7 +1634,7 @@ La resistività $\rho$ è l'inverso della conducibilità
 \end{Def}
 Più la resistività è alta più la risposta al campo elettrico del conduttore sarà bassa.
 \subsection{Unità di misura}
-\[[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\si{}{\per\ohm\per\metre}\]
+\[[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\SI{}{\per\ohm\per\metre}\]
 \[[\rho]=\ohm\meter\]
 con:
 \[\ohm=\frac{\volt}{\ampere}=\text{ohm}\]
@@ -1903,7 +1905,7 @@ Moltiplichiamole scalarmente per $v_1$:
 \[c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\]
 \[\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1\]
 \subsection{Unità di misura}
-\[[B]=[mlq^{-1}t^{-1}]=\frac{\newton\second}{\coulomb\meter}=\frac{\volt\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\si{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
+\[[B]=[mlq^{-1}t^{-1}]=\frac{\newton\second}{\coulomb\meter}=\frac{\volt\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\SI{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
 Dove $\weber=\text{weber}={\volt\second}$, $\tesla=\text{tesla}=\frac{\weber}{\meter\squared}$.\index{weber}
 \begin{Es}[elettrone in campo magnetico]
 \label{es_Larmor}
@@ -2397,7 +2399,7 @@ Dalla \eqref{pre_ampere} possiamo dire:
 \end{equation}
 e definire l'ampere usando solo quantità meccaniche come la forza e la distanza:
 \begin{Def}[ampere]
-l'ampere è quella corrente che passando tra due fili distanti $\si{1}{\meter}$ produce una forza per unità di lunghezza pari a \si{2E-7}{\newton\per\meter}.
+l'ampere è quella corrente che passando tra due fili distanti $\SI{1}{\meter}$ produce una forza per unità di lunghezza pari a \SI{2E-7}{\newton\per\meter}.
 \end{Def}
 
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
@@ -2675,7 +2677,7 @@ Consideriamo le nostre molecole polarizzate come dei dipoli, e il dielettrico co
 \includegraphics[scale=0.3]{immagini/fisica2/distr_dipoli}
 \end{figure}
 \subsection{Momento atomico\index{momento!atomico}}
-Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distanza $a\simeq \si{0.5}{\angstrom}$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
+Il modello atomico più semplice è quello di Bohr\index{Bohr}\index{modello!di Bohr}. Consideriamo l'atomo di idrogeno. Al centro troviamo un nucleo positivo e un elettrone negativo che gira attorno a distanza $a\simeq \SI{0.5}{\angstrom}$. L'atomo è un momento di dipolo $\ve p=e\ve a$ che ruota. Mediamente esso è nullo.
 
 Se consideriamo la meccanica quantistica attorno al nucleo l'elettrone assomiglia a una distribuzione negativa di raggio $a$. Essendo la distribuzione a simmetria sferica, tutti gli atomi non sottoposti a campi elettrici non hanno momento di dipolo essendo i centri di cariche positive e negative coincidenti.
 \subsection{Molecole polari\index{molecole!polari}\index{molecole!polari}}
@@ -2909,7 +2911,7 @@ Per chiudere il problema, cioè determinare il campo elettrico serve una nuova e
 \end{equation}
 Dove $\chi_e$ è la suscettività del dielettrico\index{suscettività dielettrica}.
 \[
-[\chi_e] = \si{}{\farad\per\meter}
+[\chi_e] = \SI{}{\farad\per\meter}
 \]
 Per dielettrici anisotropi è un tensore del second'ordine e quindi $\ve P$ e $\ve E$ non hanno la stessa direzione. Per dielettrici non lineari (quasi sempre con alti campi elettrici) è una funzione di $\ve E$. Per dielettrici omogenei è uno scalare, per i disomogenei una funzione del punto. $\chi_e$ è sempre maggiore di zero, nel vuoto è nullo.
 
