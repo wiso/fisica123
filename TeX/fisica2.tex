@@ -4504,15 +4504,15 @@ Consideriamo un volume $V$ in cui agiscono i campi $\ve B$ e $\ve E$ su una dist
 \ve f=\rho\left(\ve E+\ve v\times\ve B\right)
 \label{q_em01}
 \end{equation}
-vogliamo calcolare la forza totale:
+vogliamo calcolare la forza totale del campo sulle particelle cariche:
 \begin{equation}
 \ve F=\int \ve f\,\ud v
 \end{equation}
 usando:
 \begin{gather}
-\rot\ve H=\ve J+\frac{\partial \ve D}{\partial t}\\
-\ve J=Nq\ve v=\rho\ve v=\rho\ve H-\frac{\partial\ve D}{\partial t}\\
 \diver\ve D=\rho
+\rot\ve H=\ve J+\frac{\partial \ve D}{\partial t}\\
+\ve J=Nq\ve v=\rho\ve v=\rot\ve H-\frac{\partial\ve D}{\partial t}\\
 \end{gather}
 l'equazione \eqref{q_em01} diventa:
 \begin{equation}
@@ -4529,7 +4529,7 @@ se indichiamo con $\ve\Sigma=\ve E\diver\ve D+\ve H\diver\ve B+\rot\ve H\times\v
 \begin{equation}
 \ve F=-\frac{\partial}{\partial t}\int\left(\ve D\times\ve B\right)\,\ud v+\int_V\ve\Sigma\,\ud v
 \end{equation}
-si può dimostrare che il secondo integrale si annulla:
+si può dimostrare che il secondo integrale si annulla e quindi:
 \begin{equation}
 \ve F=-\frac{\partial}{\partial t}\int_V\left(\ve D\times\ve B\right)\,\ud v
 \end{equation}
@@ -4537,17 +4537,22 @@ Dato che vale:
 \begin{equation}
 \ve F=\frac{\partial\ve {G^M}}{\partial t}
 \end{equation}
+Combinando le ultime due equazioni:
+\begin{equation}
+  \frac{\partial}{\partial t}\left(\ve{G^M}+\int_V\left(\ve D\times\ve B\right)\,\ud v \right)=0
+\end{equation}
+E quindi definiamo l'argomento della derivata come constante del moto
 \begin{equation}
 \ve{G^M}+\int_V\left(\ve D\times\ve B\right)\,\ud v=\ve{\const}
 \end{equation}
-che è dunque constante del moto. Definiamo:
+Definiamo:
 \begin{Def}[quantità di moto elettromagnetica]
 \begin{equation}
 \ve {G^{em}}=\int_V\left(\ve D\times\ve B\right)\,\ud v
 \end{equation}
 detta anche impulso elettromagnetico.
 \end{Def}
-possiamo definire anche una densità di quantità di moto elettromagnetica:
+Possiamo definire anche una densità di quantità di moto elettromagnetica:
 \begin{equation}
 \ve g=\left(\ve D\times\ve B\right)=\varepsilon\mu\left(\ve E\times\ve H\right)=\varepsilon\mu\ve S=\frac{1}{c^2}\ve S
 \end{equation}
@@ -4581,48 +4586,56 @@ I potenziali $\ve A$ e $\varphi$ non sono univocamente determinati. \`E utile in
 \diver\ve A+\varepsilon\mu\frac{\partial\varphi}{\partial t}=0
 \label{Lo10}
 \end{equation}
-\subsection{Equazioni per \texorpdfstring{$\vec A$}{A} e \texorpdfstring{$\varphi$}{phi}}
+\subsection{Equazioni inomogenee per \texorpdfstring{$\vec A$}{A} e \texorpdfstring{$\varphi$}{phi}}
 Usando la \eqref{ppp01} nel teorema di Gauss:
+\[
+\rho=\diver\ve D=\varepsilon\diver\ve E=\varepsilon\left(\diver\left(\frac{\partial\ve A}{\partial t}\right)-\diver\grad\varphi\right)=-\varepsilon\left(\diver\left(\frac{\partial\ve A}{\partial t}\right)-\nabla^2\varphi\right)
+\]
+Cioè:
 \begin{equation}
-\rho=\diver\ve D=\varepsilon\diver\ve E=\varepsilon\left(\diver\left(\frac{\partial\ve A}{\partial t}\right)-\diver\grad\varphi\right)
-\end{equation}
-\begin{equation}
--\diver\left(\frac{\partial\ve A}{\partial t}\right)-\nabla^2\varphi=-\frac{\partial}{\partial t}\diver\ve A-\nabla^2\varphi=\frac{\rho}{\varepsilon}
-\end{equation}
-usando la condizione di Lorentz \eqref{Lo10} ($\diver \ve A=-\varepsilon\mu\frac{\partial\varphi}{\partial t}$):
-\begin{equation}
-\nabla^2\varphi-\varepsilon\mu\frac{\partial^2\varphi}{\partial t^2}=-\frac{\rho}{\varepsilon}
+-\frac{\partial}{\partial t}\diver\ve A-\nabla^2\varphi=\frac{\rho}{\varepsilon}
+\label{eq:inomphi}
 \end{equation}
 Si può dimostrare una cosa analoga anche per $\ve A$ partendo dal rotore di $\ve H$:
 \begin{equation}
-\rot\ve H=\frac{1}{\mu}\rot\rot\ve A=\frac{\partial D}{\partial t}+\ve J=\varepsilon\frac{\partial}{\partial t}\left(-\frac{\partial \ve A}{\partial t}-\grad\varphi\right)+\ve J
+\rot\ve H=\frac{\partial \ve D}{\partial t}+\ve J=\varepsilon\frac{\partial}{\partial t}\ve E+\ve J=\varepsilon\frac{\partial}{\partial t}\left(-\frac{\partial \ve A}{\partial t}-\grad\varphi\right)+\ve J
 \end{equation}
-avendo usato le \eqref{ppp01} e \eqref{ppp02}. Poiché
+avendo usato la \eqref{ppp01}. Usando \eqref{ppp02}
+\begin{equation}
+  \rot\ve H=\frac{1}{\mu}\rot\rot\ve A
+\end{equation}
+e considerando
 \begin{equation}
 \ve\nabla\times\left(\ve\nabla\times\ve u\right)=\ve\nabla\left(\ve\nabla\cdot\ve u\right)-\left(\ve\nabla\cdot\ve\nabla\right)\ve u
 \end{equation}
 si ottiene:
+\[
+  \varepsilon\frac{\partial}{\partial t}\left(-\frac{\partial \ve A}{\partial t}-\grad\varphi\right)+\ve J = \frac{1}{\mu}\left(\grad\diver\ve A - \nabla^2\ve A\right)
+\]
+Riordinando:
 \begin{equation}
-\grad\left(\diver\ve A+\varepsilon\mu\frac{\partial\varphi}{\partial t}\right)=\nabla^2\ve A-\varepsilon\mu\frac{\partial^2\ve A}{\partial t^2}+\mu\ve J
+\grad\left(\diver\ve A+\varepsilon\mu\frac{\partial\varphi}{\partial t}\right)-\nabla^2\ve A+\varepsilon\mu\frac{\partial^2\ve A}{\partial t^2}=\mu\ve J\label{eq:inomA}
 \end{equation}
-e usando la condizione di Lorentz \eqref{Lo10}:
-\begin{equation}
+Le equazioni \eqref{eq:inomphi} e \eqref{eq:inomA} sono le equazioni di Maxwell inomogenee per i potenziali $\varphi$ e $\ve A$. Possono essere semplificate usando la condizione di Lorentz \eqref{Lo10} ($\diver \ve A=-\varepsilon\mu\frac{\partial\varphi}{\partial t}$):
+\begin{eqimp}{gather}
+  \nabla^2\varphi-\varepsilon\mu\frac{\partial^2\varphi}{\partial t^2}=-\frac{\rho}{\varepsilon} \\
 \nabla^2\ve A-\varepsilon\mu\frac{\partial^2\ve A}{\partial t^2}=-\mu\ve J
-\end{equation}
-Le due equazioni trovate si possono scrivere usando l'operatore dalembertiano\index{dalembertiano}\index{operatore!dalembertiano} $\square$:
+\end{eqimp}
+Si noti che le due equazioni sono separate per i due potenziali. Usando l'operatore dalembertiano\index{dalembertiano}\index{operatore!dalembertiano} $\square$:
 \begin{equation}
 \square=\nabla^2-\varepsilon\mu\frac{\partial^2}{\partial t^2}
 \end{equation}
+si ottiene
 \begin{gather}
 \square\;\varphi=-\dfrac{\rho}{\varepsilon}\\
 \square\;\ve A=-\mu\ve J
 \end{gather}
 Le soluzioni di queste equazioni sono:
 \begin{gather}
-\varphi(r,t)=\frac{1}{4\pi\varepsilon}\int_V\frac{[\rho]_{t-\frac{r}{v}}}{r}\,\ud v\\
-\ve A(r,t)=\frac{\mu}{4\pi}\int_V\frac{[\ve J]_{t-\frac{r}{v}}}{r}\,\ud v\\
+\varphi(\ve r,t)=\frac{1}{4\pi\varepsilon}\int_V\frac{\rho\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r-\ve r'|}\,\ud v'\\
+\ve A(\ve r,t)=\frac{\mu}{4\pi}\int_V\frac{\ve J\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r - \ve r'|}\,\ud v'
 \end{gather}
-con $v=\frac{1}{\sqrt{\varepsilon\mu}}$ e $[\;\;]_{t-\frac{r}{v}}$ indica il valore della funzione tra parentesi al tempo $t-\frac{r}{v}$. Questo sta a significare che una perturbazione elettromagnetica si propaga nello spazio a velocità finita $v$. Gli effetti dei potenziali si fanno sentire con un certo ritardo, e $\varphi$ e $\ve A$ si dicono potenziali ritardati\index{potenziali!ritardati}\index{equazioni!dei potenziali ritardati}.
+con $v=\frac{1}{\sqrt{\varepsilon\mu}}$. Si noti che le densità di carica e corrente sono valuate ad un tempo ritardato $t-\frac{|\ve r-\ve r'|}{v}$. Questo sta a significare che una perturbazione elettromagnetica si propaga nello spazio a velocità finita $v$. Gli effetti dei potenziali si fanno sentire con un certo ritardo, e $\varphi$ e $\ve A$ si dicono potenziali ritardati\index{potenziali!ritardati}\index{equazioni!dei potenziali ritardati}.
 \section{Equazione generale delle onde}
 Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$).
 Consideriamo l'equazione di Maxwell:
@@ -4633,11 +4646,7 @@ applichiamo il rotore:
 \[
 \rot\rot \ve H=\rot \ve J+\rot\frac{\partial\ve D}{\partial t}=\sigma\rot\ve E+\varepsilon\frac{\partial}{\partial t}\rot\ve E
 \]
-avendo sostituito $\ve D=\varepsilon\ve E$ e $\ve J=\sigma E$. Sostituendo il rotore di $\ve E$:
-\[
-\rot\ve E=-\frac{\partial\ve B}{\partial t}=-\mu\frac{\partial\ve H}{\partial t}
-\]
-avendo usato l'equazione di Maxwell e la relazione $\ve B=\mu\ve H$.
+avendo sostituito $\ve D=\varepsilon\ve E$ e $\ve J=\sigma \ve E$. Sostituendo il rotore di $\ve E=-\frac{\partial\ve B}{\partial t}=-\mu\frac{\partial\ve H}{\partial t}$:
 \[
 \rot\rot \ve H=-\sigma\mu\frac{\partial\ve H}{\partial t}+\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}
 \]
@@ -4653,7 +4662,7 @@ Se applichiamo lo stesso procedimento al campo $\ve E$ e supponiamo che $\rho=0$
 \begin{eqimp}{equation}
 \nabla^2\ve E-\varepsilon\mu\frac{\partial^2\ve E}{\partial t^2}-\sigma\mu\frac{\partial\ve E}{\partial t}=0
 \end{eqimp}
-Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche in propagazione libera ($\rho=0$) in un mezzo omogeneo conduttore. Se supponiamo che il mezzo non sia conduttore, cioè $\sigma=0$ le ultime due equazioni si scrivono come:
+Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche in propagazione libera ($\rho=0$) in un mezzo omogeneo conduttore. Se supponiamo che il mezzo non sia conduttore (come il vuoto), cioè $\sigma=0$ le ultime due equazioni si scrivono come:
 \begin{gather}
 \nabla^2\ve H-\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}=0\\
 \nabla^2\ve E-\varepsilon\mu\frac{\partial^2\ve E}{\partial t^2}=0
