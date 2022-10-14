@@ -4444,37 +4444,39 @@ L'equazione di continuità è già contenuta nelle equazioni di Maxwell:
 \diver\ve J+\frac{\partial}{\partial t}\diver\ve D=\diver\ve J+\frac{\partial\rho}{\partial t}=0
 \end{equation}
 \section{Conservazione dell'energia elettromagnetica}
-Consideriamo un volume $V$ contenuto nella superficie $S$ all'interno del quale ci sia un campo elettrico $\ve E(\ve r,t)$ e un campo magnetico $\ve B(\ve r,t)$ variabili nel tempo. Sia $N$ il numero di cariche $q$ per unità di volume con velocità $v$, la forza nell'unità di volume sulle cariche è 
+Consideriamo un volume $V$ contenuto nella superficie $S$ all'interno del quale ci sia un campo elettrico $\ve E(\ve r,t)$ e un campo magnetico $\ve B(\ve r,t)$ variabili nel tempo. Sia $n$ il numero di cariche $q$ per unità di volume con velocità $\ve v$, la forza nell'unità di volume sulle cariche è 
 \begin{equation}
-\ve f=\frac{\ud\ve F}{\ud V}=Nq\left(\ve E+\ve v\times\ve B\right)
+\ve f=\frac{\ud\ve F}{\ud V}=nq\left(\ve E+\ve v\times\ve B\right)
 \end{equation}
-La potenza nel volume:
+La potenza del campo sulle cariche per unità di volume:
 \begin{equation}
 \begin{split}
-\ve f\cdot\ve v&=\frac{\ud P_J}{\ud V}=Nq\left(\ve E+\ve v\times\ve B\right)\cdot\ve v=Nq\ve E\cdot\ve v+Nq\ve v\cdot\left(\ve v\times\ve B\right)\\
-&=Nq\ve v\cdot\ve E=\ve J\cdot\ve E
+\ve f\cdot\ve v&=\frac{\ud P_J}{\ud V}=nq\left(\ve E+\ve v\times\ve B\right)\cdot\ve v=nq\ve E\cdot\ve v+nq\ve v\cdot\left(\ve v\times\ve B\right)\\
+&=nq\ve v\cdot\ve E=\ve J\cdot\ve E
 \end{split}
 \end{equation}
-Come doveva essere il campo magnetico non compie lavoro. La potenza dissipata per effetto Joule la ricaviamo integrando:
+Come doveva essere il campo magnetico non compie lavoro. Questa potenza rappresenta l'energia persa del campo e trasformata in calore (effetto Joule) o energia meccanica. Integrando nel volume, la potenza totale:
 \begin{equation}
 P_J=\int_V\ve J\cdot\ve E\,\ud v
 \end{equation}
-Essendo $\ve J=\rot\ve H-\frac{\partial\ve D}{\partial t}$ e usando:
+Usiamo le equazion di Maxwell per eliminare la densità di corrente $\ve J=\rot\ve H-\frac{\partial\ve D}{\partial t}$ e usando:
 \[
   \diver\left(\ve E\times\ve H\right)=\ve H\cdot\rot\ve E-\ve E\cdot\rot\ve H
 \]
 \begin{equation}
 \begin{split}
-P_J&=\int_V\ve J\cdot\ve E\,\ud v=\int_V\left(\ve E\rot\ve H-\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
-&=-\int_V\diver\left(\ve E\times\ve H\right)\,\ud v+\int_V\ve H\rot\ve E\,\ud v-\int_V\ve E\cdot\frac{\partial\ve D}{\partial t}\,\ud v\\
+P_J&=\int_V\ve J\cdot\ve E\,\ud v=\int_V\left(\ve E\cdot\rot\ve H-\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
+&=-\int_V\diver\left(\ve E\times\ve H\right)\,\ud v+\int_V\ve H\cdot\rot\ve E\,\ud v-\int_V\ve E\cdot\frac{\partial\ve D}{\partial t}\,\ud v\\
 &=-\int_S\left(\ve E\times\ve H\right)\cdot\ve n\,\ud a-\int_V\left(\ve H\cdot\frac{\partial\ve B}{\partial t}+\ve E\cdot\frac{\partial\ve D}{\partial t}\right)\,\ud v\\
 &=-\int_S \ve S\cdot\ve n\,\ud a-\int_V\left(\frac{\partial}{\partial t}\left(\frac{1}{2}\left(\ve H\cdot\ve B\right)+\frac{1}{2}\left(\ve E\cdot\ve D\right)\right)\right)\ud v
 \end{split}
 \end{equation}
-Avendo usato il teorema della divergenza, definito il vettore di Poynting\index{Poynting}\index{vettore!di Poyning}:
-\begin{equation}
-\ve S=\ve E\times\ve H
-\end{equation}
+Avendo usato il teorema della divergenza, definito:
+\begin{Def}[vettore di Poynting\index{Poynting}\index{vettore!di Poyning}]
+  \begin{equation}
+    \ve S=\ve E\times\ve H
+  \end{equation} 
+\end{Def}
 che si misura in \watt\per\meter\squared. Nell'ultimo passaggio abbiamo usato:
 \begin{equation}
 \frac{1}{2}\frac{\partial}{\partial t}\left(\ve E\cdot\ve D\right)=\frac{1}{2}\frac{\partial}{\partial t}\left(\varepsilon E^2\right)=\ve E\cdot\frac{\partial\ve D}{\partial t}
@@ -4492,7 +4494,7 @@ con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica. Si ottiene infine:
 \frac{\partial W_{em}}{\partial t}=P_J+\int_S\ve S\cdot\ve n\,\ud a
 \end{equation}
 dove $W_{em}$ è l'energia elettromagnetica. Si deduce che la potenza è dissipata per due fattori: l'effetto Joule $P_J$ e l'irraggiamento attraverso la superficie.
-\section{Quantità di moto elettromagnetica}
+\section{Conservazione della quantità di moto elettromagnetica}
 In un sistema meccanico isolato la quantità di moto $\ve{G^M}$ è una costante del moto e vale:
 \begin{equation}
 \ve F=\frac{\ud \ve{G^M}}{\ud t}
