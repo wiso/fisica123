@@ -11,7 +11,7 @@ BBL	= $(NAME).bbl
 TEXS	= $(wildcard TeX/*.tex)
 
 LATEX	= latex
-PDFLATEX = pdflatex
+PDFLATEX = pdflatex -shell-escape
 BIBTEX	= bibtex
 MAKEINDEX = makeindex
 
