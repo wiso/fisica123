@@ -1278,7 +1278,7 @@ Vogliamo sapere quanti modi di oscillare con pulsazione minore di $\omega$. Per 
 \begin{equation}
 	2\frac{1}{8}\frac{4}{3}\pi\left(\frac{\omega L}{\pi c}\right)^3=\frac{\omega^3 V}{3\pi^2 c^3}=\frac{8\pi V}{3\lambda^3}
 \end{equation}
-Il $2$ deriva dal fatto che per ogni scelta di $\ve n$ ci sono 2 polarizzazioni, mentre l'ottavo deriva dal fatto che le componenti di $\ve n$ possono essere solo positive. Differenziando come prima possiamo sapere quanti modi di oscillare ci sono per lunghezze d'onda comprese tra $(\lambda,\lambda+\ud\lambda)$:
+Il $2$ deriva dal fatto che per ogni scelta di $\ve n$ ci sono 2 polarizzazioni, mentre l'ottavo deriva dal fatto che le componenti di $\ve n$ possono essere solo positive ($\frac{1}{2^3}$). Differenziando come prima possiamo sapere quanti modi di oscillare ci sono per lunghezze d'onda comprese tra $(\lambda,\lambda+\ud\lambda)$:
 \begin{equation}
 	\ud N=\frac{8\pi V}{\lambda^4}\,\ud\lambda
 	\label{numero modi di oscillare 3d}
@@ -1310,19 +1310,19 @@ essendo una serie geometrica di ragione $0<e^{-\frac{\epsilon}{kT}}<1$. L'energi
 } allora:
 \begin{equation}
 	\begin{split}
-		\media{E}&=\sum_{m=0}^\infty \frac{E_{m\epsilon}}{N}=\sum_{m=0}^\infty\frac{m\epsilon n_0e^{-\frac{m\epsilon}{kT}}}{n_0\frac{1}{1-e^{-\frac{\epsilon}{kT}}}}=\epsilon\sum_{m=1}^\infty\frac{m \left(e^{-\frac{\epsilon}{kT}}\right)^m}{\frac{1}{1-e^{-\frac{\epsilon}{kT}}}}\\
-		&=\epsilon e^{-\frac{\epsilon}{kT}}\frac{\sum_{m=1}^\infty m \left(e^{-\frac{\epsilon}{kT}}\right)^{m-1}}{\left(1-e^{-\frac{\epsilon}{kT}}\right)^{-1}}
-		=\epsilon e^{\frac{-\epsilon}{kT}}\dfrac{\left(1-e^{\frac{-\epsilon}{kT}}\right)^{-2}}{\left(1-e^{-\frac{\epsilon}{kT}}\right)^{-1}}=\epsilon e^{\frac{-\epsilon}{kT}}\frac{1}{1-e^{-\frac{\epsilon}{kT}}}=\frac{\epsilon}{e^{\frac{\epsilon}{kT}}-1}
+		\media{E}&=\frac{1}{N}\sum_{m=0}^\infty E_{m\epsilon}=\frac{1}{N}\sum_{m=0}^\infty m\epsilon n_0e^{-\frac{m\epsilon}{kT}}=\frac{\epsilon n_0}{N} \sum_{m=1}^\infty m \left(e^{-\frac{\epsilon}{kT}}\right)^m\\
+		&=\frac{\epsilon n_0}{N} e^{-\frac{\epsilon}{kT}}\sum_{m=1}^\infty m \left(e^{-\frac{\epsilon}{kT}}\right)^{m-1}
+		=\epsilon e^{-\frac{\epsilon}{kT}}\dfrac{\left(1-e^{-\frac{\epsilon}{kT}}\right)^{-2}}{\left(1-e^{-\frac{\epsilon}{kT}}\right)^{-1}}=\frac{\epsilon}{e^{\frac{\epsilon}{kT}}-1}
 	\end{split}
 	\label{energia Planck modi01}
-\end{equation}
-La densità di modi di oscillare è data dalla \eqref{numero modi di oscillare 3d} divisa per il volume, quindi la potenza per unità di area totale, associando ad ogni modi di oscillare la \eqref{energia Planck modi01}, è:
-\begin{equation}
-	R(\lambda)=\frac{8\pi}{\lambda^4}\frac{\epsilon}{e^\frac{\epsilon}{kT}-1}
 \end{equation}
 per tornare al caso classico dobbiamo ammettere che l'energia non sia quantizzata, cioè $\epsilon\to 0$
 \begin{equation}
 	\media{E_\text{classico}}=\lim_{\epsilon\to 0} \media{E}=\lim_{\epsilon\to 0}\frac{\epsilon}{e^{\frac{\epsilon}{kT}}-1}=\lim_{\epsilon\to 0}\frac{\epsilon}{\frac{\epsilon}{kT}}=kT
+\end{equation}
+La densità di modi di oscillare è data dalla \eqref{numero modi di oscillare 3d} divisa per il volume, quindi la potenza per unità di area totale, associando ad ogni modi di oscillare la \eqref{energia Planck modi01}, è:
+\begin{equation}
+	R(\lambda)=\frac{8\pi}{\lambda^4}\frac{\epsilon}{e^\frac{\epsilon}{kT}-1}
 \end{equation}
 l'energia $\epsilon$ non è costante ma varia con la frequenza:
 \begin{equation}
@@ -1334,9 +1334,35 @@ con $h$ costante di Planck\index{costante!di Planck}. La distribuzione della rad
 \end{equation}
 questa distribuzione si adegua bene ai dati sperimentali, evitando la catastrofe ultravioletta ad alte frequenze, infatti ad alte frequenze $\epsilon$ è molto grande e la probabilità che un modo di oscillare con quella frequenza esista è molto bassa.
 
+Si può esprimere in funzione della frequenza usando $\lambda=c/\nu$ e quindi $\ud\lambda = c/\nu^2\ud\nu$:
+\begin{equation}
+	R(\nu)=\frac{8\pi}{c^3}\frac{h\nu ^3}{e^\frac{h\nu}{kT}-1}
+\end{equation}
+Da qui si può calcolare la densità di energia totale, integrando nella frequenza:
+\begin{equation}
+	\begin{split}
+		\frac{U}{V} &= \int_0^\infty R(\nu)\,\ud\nu = \frac{8\pi h}{c^3} \int_0^\infty \frac{\nu ^3}{e^\frac{h\nu}{kT}-1}\,\ud\nu \\
+		&= \frac{8\pi h}{c^3}\frac{kT}{h}\left(\frac{kT}{h}\right)^3 \int_0^\infty \frac{x^3}{e^x-1}\,\ud x \\
+		&= \frac{8\pi^5}{15 (hc)^3}(kT)^4
+	\end{split}
+\end{equation}
+Avendo usando la sostituzione $x=\frac{h\nu}{kT}$ and $\ud \nu = \frac{kT}{h}\ud x$ e $\int_0^\infty\frac{x^3}{e^x-1}\,\ud x = \frac{\pi^4}{15}$.
 Il fatto che l'energia è quantizzata significa anche che l'emissione di energia da parte del corpo nero è quantizzata, cioè sotto forma di quanti\index{quanti} o fotoni\index{fotoni}, ognuno dei quali trasporta energia $h\nu$.
 
-
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[xlabel = \(\lambda\) (\si{\meter}),
+			ylabel = {\(R(\lambda)\)(\si{\joule\meter^{-4}})},]
+			\addplot[domain=0.:0.00002,samples=400,color=blue] { 4.99 *10^24 / x^5 * 1 / (exp(0.01438/(x * 500)) - 1)};
+			\addlegendentry{\(T=\SI{500}{\kelvin}\)}
+			\addplot[domain=0.:0.00002,samples=400,color=orange] { 4.99 *10^24 / x^5 * 1 / (exp(0.01438/(x * 700)) - 1)};
+			\addlegendentry{\(T=\SI{700}{\kelvin}\)}
+			\addplot[domain=0.:0.00002,samples=400,color=red] { 4.99 *10^24 / x^5 * 1 / (exp(0.01438/(x * 1000)) - 1)};
+			\addlegendentry{\(T=\SI{1000}{\kelvin}\)}
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
 
 
 
