@@ -612,11 +612,11 @@ Perrin nel 1908 trovò sperimentalmente $N_A$ dalla sedimentazione di particelle
 \end{equation}
 possiamo passare a quantità microscopiche:
 \[
-	p=nKT\qquad p_0=n_0KT\qquad \rho_0=n_0m
+	p=nkT\qquad p_0=n_0kT\qquad \rho_0=n_0m
 \]
 con $n=\frac{N}{V}$ numero di particelle nell'unità di volume e $m$ massa di una particella di soluto. Allora:
 \begin{equation}
-	n=n_0e^{-\frac{mgy}{KT}}=n_0e^{-\frac{N_Amgy}{RT}}
+	n=n_0e^{-\frac{mgy}{kT}}=n_0e^{-\frac{N_Amgy}{RT}}
 \end{equation}
 Notiamo come al numeratore dell'esponenziale ci sia l'energia totale. In questo modo possiamo trovare $N_A$ conoscendo $R$ dalla teoria dei gas. Se ora al posto delle molecole di soluto sostituiamo delle particelle di densità $\rho_p$ il loro peso sarà diminuito della spinta di Archimede:
 \[
@@ -1353,7 +1353,7 @@ Il fatto che l'energia è quantizzata significa anche che l'emissione di energia
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[xlabel = \(\lambda\) (\si{\meter}),
-			ylabel = {\(R(\lambda)\)(\si{\joule\meter^{-4}})},]
+				ylabel = {\(R(\lambda)\)(\si{\joule\meter^{-4}})},]
 			\addplot[domain=0.:0.00002,samples=400,color=blue] { 4.99 *10^24 / x^5 * 1 / (exp(0.01438/(x * 500)) - 1)};
 			\addlegendentry{\(T=\SI{500}{\kelvin}\)}
 			\addplot[domain=0.:0.00002,samples=400,color=orange] { 4.99 *10^24 / x^5 * 1 / (exp(0.01438/(x * 700)) - 1)};
@@ -1384,7 +1384,8 @@ il calore in relazione al calore specifico molare, in questo caso a volume costa
 \end{equation}
 ma per la \eqref{volume_costante11}:
 \begin{equation}
-	c_v=\frac{1}{n}\frac{\ud U}{\ud T}
+	c_V=\frac{1}{n}\frac{\ud U}{\ud T}
+	\label{eq:def_cv}
 \end{equation}
 spesso lavoreremo considerando un solo atomo o una sola mole.
 \section{Doulong--Petit}
@@ -1392,12 +1393,12 @@ Se la temperatura di un gas è una misura diretta dell'energia cinetica traslazi
 \begin{equation}
 	V=\frac{1}{2}\beta x^2
 \end{equation}
-dato che l'equazione del moto armonico, considerando come condizioni iniziale $x=0$ e velocità massima:
+Considerando come condizioni iniziale $x=0$ e velocità massima:
 \begin{gather}
 	x(t)=A\sin\left(\sqrt{\frac{\beta}{m}}t\right)\\
 	\dot x(t)=A\sqrt{\frac{\beta}{m}}\cos\left(\sqrt{\frac{\beta}{m}}t\right)
 \end{gather}
-possiamo ricavare come variano $E_C$ e $U$:
+possiamo ricavare come variano l'energia cinetica $E_C$ e l'energia potenziale $U$:
 \begin{gather}
 	E_C(t)=\frac{1}{2}mv^2=\frac{1}{2}{A^2\beta}\cos^2\left(\sqrt{\frac{\beta}{m}}t\right)\\
 	U(t)=\frac{1}{2}\beta x^2=\frac{1}{2}A^2 \beta\sin^2\left(\sqrt{\frac{\beta}{m}}t\right)
@@ -1407,20 +1408,21 @@ calcoliamo i valori medi:
 	\media{E_C}=\frac{1}{\pi\sqrt{\frac{m}{\beta}}}\int_0^{\pi\sqrt{\frac{m}{\beta}}} E_c(t)\ud t=\frac{A^2\beta}{4}\\
 	\media{U}=\frac{1}{\pi\sqrt{\frac{m}{\beta}}}\int_0^{\pi\sqrt{\frac{m}{\beta}}} U(t)\ud t=\frac{A^2\beta}{4}
 \end{gather}
-il calcolo non era necessario in quanto $U(t)$ e $E_C(t)$ sono due funzioni uguali, ma sfasate, quindi in un periodo l'area sottesa sottesa deve essere uguale. Concludiamo che l'energia cinetica media per atomo e l'energia potenziale cinetica per atomo sono uguali.
+il calcolo non era necessario in quanto $U(t)$ e $E_C(t)$ sono due funzioni uguali, ma sfasate, quindi in un periodo l'area sottesa sottesa deve essere uguale. Concludiamo che l'energia cinetica media per atomo e l'energia potenziale media per atomo sono uguali.
 Sommando l'energia cinetica ($\frac{3}{2}kT$) e quella potenziale l'energia media per atomo diventa:
 \begin{equation}
 	E_\text{atomo}=3kT
 \end{equation}
-e per una mole:
+e per $n$ moli:
 \begin{equation}
-	E=3kN_AT=3RT
+	U=3nkN_AT=3nRT
 \end{equation}
-Allora possiamo calcolare il calore specifico a volume costante:
-\begin{equation}
-	c_v=\frac{\ud E}{\ud T}=3R\simeq \SI{24.94}{\joule\per\mole\per\kelvin}
-\end{equation}
-che è la legge di Doulon--Petit\index{Doulong}\index{Petit}\index{legge!Doulong--Petit}. Nella semplice derivazione non abbiamo tenuto conto dei possibili cambiamenti della struttura cristallina e dell'energia associata agli elettroni liberi (nei metalli). I dati sperimentali mostrano che la legge di Doulong--Petit funziona solo per temperature molto alte e vale per tutti i materiali solidi. Il teorema di equipartizione dell'energia fallisce.
+Allora possiamo calcolare il calore specifico a volume costante usando la definizione \eqref{eq:def_cv} $c_V=\frac{1}{n}\frac{\ud U}{\ud T}$
+\begin{legge}{Doulon--Petit\index{Doulong}\index{Petit}\index{legge!Doulong--Petit}}
+	\begin{equation}
+		c_V=3R\simeq \SI{24.94}{\joule\per\mole\per\kelvin}
+	\end{equation}
+\end{legge}Nella semplice derivazione non abbiamo tenuto conto dei possibili cambiamenti della struttura cristallina e dell'energia associata agli elettroni liberi (nei metalli). I dati sperimentali mostrano che la legge di Doulong--Petit funziona solo per temperature molto alte e vale per tutti i materiali solidi. Il teorema di equipartizione dell'energia fallisce.
 \section{Einstein\index{Einstein}}
 Nel 1906 Einstein derivò il calore specifico dei solidi assumendo ipotesi simili a quelle di Planck per la radiazione di corpo nero. Assumiamo che il nostro solido contenga $N$ atomi, e possa essere rappresentato come $3N$ oscillatori. Il modello di Eintein si caratterizza per associare ad ogni oscillatore la stessa frequenza $\nu$ uguale per tutti. In accordo con Planck l'energia di un oscillatore può essere\footnote{in realtà sarebbe più corretto\[\epsilon_n=\left(n+\frac{1}{2}\right)h\nu\]}:
 \begin{equation}
@@ -1430,7 +1432,7 @@ L'energia media risulta allora:
 \begin{equation}
 	\media{\epsilon}=\dfrac{\sum_{n=0}^{\infty}\epsilon e^{-\frac{\epsilon}{kT}}}{\sum_{n=0}^\infty e^{-\frac{\epsilon}{kT}}}=\dfrac{\sum_{n=0}^{\infty}nh\nu e^{-\frac{nh\nu}{kT}}}{\sum_{n=0}^\infty e^{-\frac{nh\nu}{kT}}}
 \end{equation}
-per valutare questa serie possiamo usare lo stesso procedimento che abbiamo usato per Planck, nell'equazione \eqref{energia Planck modi01}. Infatti il denominatore è una serie geometrica di ragione $e^{-\frac{h\nu}{kT}}$; il numeratore invece dopo gli opportuni raccogliamenti è lo sviluppo in serie di $\frac{1}{(1-e^{-\frac{h\nu}{kT}})^2}$:
+per valutare questa serie possiamo usare lo stesso procedimento che abbiamo usato per Planck, nell'equazione \eqref{energia Planck modi01}. Infatti il denominatore è una serie geometrica di ragione $e^{-\frac{h\nu}{kT}}$; il numeratore invece dopo gli opportuni raccogliamenti è lo sviluppo in serie di $\left(1-e^{-\frac{h\nu}{kT}}\right)^{-2}$:
 \begin{equation}
 	\media{\epsilon}=\dfrac{h\nu}{e^{\frac{h\nu}{kT}}-1}
 \end{equation}
@@ -1440,12 +1442,12 @@ che contempla il risultato classico, per alte temperature:
 \end{equation}
 L'energia di tutto il solido:
 \begin{equation}
-	E=3N\media{\epsilon}=3N\dfrac{h\nu}{e^{\frac{h\nu}{kT}}-1}
+	U=3N\media{\epsilon}=3N\dfrac{h\nu}{e^{\frac{h\nu}{kT}}-1}
 \end{equation}
 e il calore specifico:
 \begin{equation}
 	\begin{split}
-		c_V=&\frac{1}{n}\frac{\partial}{\partial T}E=\frac{1}{n}\frac{\partial}{\partial T}3N\dfrac{h\nu}{e^{\frac{h\nu}{kT}}-1}=
+		c_V=&\frac{1}{n}\frac{\partial}{\partial T}U=\frac{1}{n}\frac{\partial}{\partial T}3N\dfrac{h\nu}{e^{\frac{h\nu}{kT}}-1}=
 		\frac{3N}{n}\frac{(h\nu)^2}{kT^2}\frac{e^{\frac{h\nu}{kT}}}{\left(e^{\frac{h\nu}{kT}}-1\right)^2}\\=&3R\left(\frac{h\nu}{kT}\right)^2\dfrac{e^{\frac{h\nu}{kT}}}{\left(e^{\frac{h\nu}{kT}}-1\right)^2}
 	\end{split}
 	\label{cv_einstein01}
@@ -1489,7 +1491,7 @@ con $L^3=V$. In realtà l'equazione va corretta perché nel nostro mezzo si prop
 	\label{udn09}
 \end{equation}
 \subsection{Approssimazione di Debye}
-La lunghezza d'onda è grande rispetto alle distanze tra gli atomi, quindi l'onda vede il cristallo come un continuo. Se gli atomi sono $N$ il numero massimo di modi di vibrare sono $3N$ che corrisponde ad una frequenza $\nu_D$. Il numero di modi di oscillare con frequenza compresa tra $0$ e $\nu_D$ è:
+La lunghezza d'onda è grande rispetto alle distanze tra gli atomi, quindi l'onda vede il cristallo come un continuo. Se gli atomi sono $N$, il numero massimo di modi di vibrare sono $3N$ che corrisponde ad una frequenza $\nu_D$. Il numero di modi di oscillare con frequenza compresa tra $0$ e $\nu_D$ è:
 \begin{equation}
 	\int_0^{\nu_D}\ud N=\int_0^{\nu_D}4\pi V\left(\frac{2}{c_T^3}+\frac{1}{c_L^3}\right)\nu^2\ud \nu=\frac{4}{3}\pi V\left(\frac{2}{c_T^3}+\frac{1}{c_L^3}\right)\nu_D^3=3N
 \end{equation}
