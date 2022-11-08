@@ -1386,7 +1386,7 @@ Allora:
 Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè con superfici di tenute ad un potenziale fisso e conosciuto, nei quali siano presenti anche cariche libere. A volte è possibile simulare l'effetto delle superfici con delle cariche opportune posizionate all'esterno del volume di interesse, chiamate cariche immagine.
 \begin{Es}[carica e piano infinito]
   \label{es:carica_e_piano_infinito}
-  Sia una carica $q$ posizionata sull'asse $x_+$ e sia il piano $y-z$ tenuto a terra. La stessa situzione si realizza con la carica $q$ e una carica immagine $-q$ posizionata simmetricamente rispetto alla carica reale. Infatti il potenziale delle due cariche:
+  Sia una carica $q$ posizionata sull'asse $x_+$ e sia il piano $y-z$ tenuto a terra. La stessa situazione si realizza con la carica $q$ e una carica immagine $-q$ posizionata simmetricamente rispetto alla carica reale. Infatti il potenziale delle due cariche:
   \[
     \varphi(x,y,z)=\frac{1}{\giorgi}\left(\frac{q}{\sqrt{(x-x_+)^2+y^2+z^2}}+\frac{-q}{\sqrt{(x-x_-)^2+y^2+z^2}}\right)
   \]
@@ -1539,7 +1539,7 @@ Per definizione la corrente è un flusso ordinato di cariche elettriche, la gran
     \label{corrente_def}
   \end{equation}
 \end{Def}
-\`E una grandezza scalare, anche se la corrente ha un verso, per convenzione quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere (\ampere): \coulomb\per\second \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi oltre per definizione di ampere}. Dall'equazione \eqref{corrente_def} la quantità di carica che attraversa una sezione è:
+\`E una grandezza scalare, anche se la corrente ha un verso, per convenzione quello del moto delle cariche positive e una direzione, quella del campo elettrico. Per corrente stazionaria si intende una corrente che è costante nel tempo. La corrente non ha bisogno della presenza di un conduttore. Si misura in ampere ($\si{\ampere} = \si{\coulomb\per\second}$ \footnote{in realtà è il Coulomb che dovrebbe essere definito come Ampere secondo, vedi \ref{def:ampere} per la definizione di ampere}). Dall'equazione \eqref{corrente_def} la quantità di carica che attraversa una sezione nel tempo $t$ è:
 \begin{equation}
   Q=\int_0^t I(t')\ud t'
 \end{equation}
@@ -1554,13 +1554,13 @@ Definiamo $\tau$ il tempo medio tra due urti consecutivi e $l$ il libero cammino
 \[l = \tau v_T\]
 Se ora applichiamo un campo elettrico $\ve E$ costante, provocheremo un altro moto dovuto alla forza elettrica con velocità $v_D$, velocità di deriva\index{velocità!di deriva}, che bisogna sovrapporre a quello di agitazione termica. A temperature usuali $v_D\ll v_T$ e quindi $\tau$ e $l$ rimangono pressoché invariati.
 \section{Densità di corrente}
-Consideriamo un conduttore con $N$ portatori di carica per unità di volume, tutti uguali, con carica $q$ e velocità di deriva $v_D$. Nel tempo $\ud t$ attraverso una sezione $\ud A$ passa una quantità di carica:
+Consideriamo un conduttore con $N$ portatori di carica per unità di volume, tutti uguali, con carica $q$ e velocità di deriva $v_D$. Nel tempo $\ud t$ attraverso una sezione $\ud a$ passa una quantità di carica:
 \begin{equation}
   \frac{\ud Q}{\ud t}=\ud I=qN\left(\ve v_D\cdot \ve n\right)\ud a
   \label{densita_corrente01}
 \end{equation}
 \begin{Def}[densità di corrente\index{densità di corrente}]
-  Si definisce $\ve J$ densità di corrente:
+  Si definisce densità di corrente:
   \begin{equation}
     \ve J=qN\ve v_D = \rho \ve v_D
   \end{equation}
@@ -1576,7 +1576,7 @@ che è l'espressione di un flusso, precisamente il flusso di $\ve J$:
   I=\Phi_S\left(\ve J\right)
 \end{equation}
 \subsection{Conservazione della carica\index{conservazione!della carica}}
-Applicando il teorema della divergenza:
+Applicando il teorema della divergenza ad una superficie chiusa $S$:
 \begin{equation}
   I=\int_S \ve J\cdot\ve n\,\ud a=-\int_V\ve\nabla\cdot\ve J\,\ud V
   \label{densita_corrente02}
@@ -1599,16 +1599,16 @@ la legge \eqref{conservazione della carica} è detta anche principio di continui
 \[\diver \ve J=0\]
 e dunque $\ve J$ è un campo solenoidale, non ha sorgenti, le sue linee di campo sono chiuse.
 \section{Conducibilità elettrica\index{conducibilità elettrica}}
-Vogliamo trovare una relazione tra la corrente elettrica e il campo elettrico applicato.
+Vogliamo trovare una relazione tra la corrente elettrica e il campo elettrico applicato ad un conduttore.
 
-Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni, ovviamente $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N_0(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
+Indichiamo con $N(t)$ il numero di elettroni che al tempo $t$ non hanno subito nessuna collisione. Sia $N_0$ il numero totale di elettroni, ovviamente $N(0)=N_0$. La probabilità media che un elettrone subisca un urto nel tempo $\ud t$ è $\frac{\ud t}{\tau}$. Quindi in media il numero di elettroni che subiscono un urto nel tempo $\ud t$ è $N(t)\frac{\ud t}{\tau}$. Il numero di elettroni che subiscono il primo urto $N(t)\frac{\ud t}{\tau}$. Allora:
 \[N(t+\ud t)=N(t)-N(t)\frac{\ud t}{\tau}\]
 Facendo il primo sviluppo di Taylor:
 \[N(t+\ud t)=N(t)+\frac{\ud N}{\ud t}\ud t\]
 Confrontando:
 \[\ud N(t)=-N(t)\frac{\ud t}{\tau}\]
-che rappresenta il numero di elettroni che hanno subito un urto nell'intervallo $\ud t$ dopo il tempo $t$.
-\[\frac{\ud N}{N}=-\frac{\ud t}{\tau}\ud t\]
+che rappresenta il numero di elettroni che hanno subito un urto nell'intervallo $\ud t$ dopo il tempo $t$. Si ottiene l'equazione differenziale:
+\[\frac{\ud N}{\ud t}=-\frac{N}{\tau}\]
 Risolvendo:
 \[\log N(t)=-\frac{t}{\tau}+c \qquad N(t)=e^{-\frac{t}{\tau}+c}=Ae^{-\frac{t}{\tau}}\]
 Imponendo che $N(0)=N_0$:
@@ -1616,7 +1616,7 @@ Imponendo che $N(0)=N_0$:
 Il numero di elettroni che non hanno subito una collisione decresce molto rapidamente. La probabilità che al tempo $t$ un elettrone non abbia subito collisioni è
 \[P(t)=\frac{N(t)}{N_0}=e^{\frac{-t}{\tau}}\]
 Vogliamo ora sapere quanto tempo ci vuole ad avere un urto qualsiasi dopo il tempo $t$:
-\[\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}}=\tau\]
+\[\overline{t}=\frac{1}{N_0}\int_0^\infty t\frac{N(t)}{\tau}\,\ud t=\frac{1}{N_0}\int_0^\infty\frac{tN_0 e^{-\frac{t}{\tau}}}{\tau}\ud t=\frac{1}{\tau}\int_0^\infty te^{-\frac{t}{\tau}} \ud t=\tau\]
 Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il successivo, sempre di quella particella, ma è anche il tempo medio che al tempo $t$ bisogna attendere per avere il primo urto tra due particelle qualsiasi. Naturalmente essendo indipendente dal tempo $\tau$ è anche il tempo medio dall'ultimo urto. Possiamo calcolare la velocità di deriva, considerando l'accelerazione data dal campo elettrico durante il tempo dall'ultimo urto:
 \[\ve v_D=\ve a\tau=\frac{\ve F}{m_\mathrm{e}}\tau=\frac{-e}{m_\mathrm{e}}{\ve E}\tau\]
 dove abbiamo ignorato i contributi a $\ve v_D$ che provengono prima dell'urto. Usando la densità di corrente:
@@ -1633,9 +1633,11 @@ La conducibilità elettrica ci dice come il conduttore risponde al campo elettri
   \[\rho=\frac{1}{\sigma}\]
 \end{Def}
 Più la resistività è alta più la risposta al campo elettrico del conduttore sarà bassa.
-\subsection{Unità di misura}
-\[[\sigma]=\frac{[J]}{[E]}=\frac{\ampere}{\metre\squared}\frac{\metre}{\volt}=\SI{}{\per\ohm\per\metre}\]
-\[[\rho]=\ohm\meter\]
+
+La conducibilità si misura in:
+\[[\sigma]=\frac{[J]}{[E]}=(\si{\ampere\per\metre\squared})(\si{\meter\per\volt})=\si{\per\ohm\per\metre}\]
+mentre la resistività in
+\[[\rho]=\si{\ohm\meter}\]
 con:
 \[\ohm=\frac{\volt}{\ampere}=\text{ohm}\]
 \[\text{ohm}^{-1}=\text{mho}=\mho=\siemens=\text{siemens}\]
@@ -1655,11 +1657,11 @@ dove $\ver n$ è la normale alla superficie. Se integriamo sulla superficie:
 \end{equation}
 poiché la superficie su cui stiamo integrando è equipotenziale $\ud V$ è costante su tutta la superficie e può uscire dall'integrale:
 \begin{equation}
-  \ud V\int\ud\Sigma = \ud V\Sigma=\frac{\left[\int\ve J\cdot\ud\ve \Sigma\right]\ud l}{\sigma} = \frac{I}{\sigma}\ud l
+  \ud V\int\ud\Sigma = \ud V\Sigma=\frac{\left[\int_\Sigma\ve J\cdot\ver n\, \ud \Sigma\right]\ud l}{\sigma} = \frac{I}{\sigma}\ud l
 \end{equation}
 e si è supposto che $\sigma$ sia anch'essa costante su tutta la superficie. Integrando su tutta la lunghezza del conduttore:
 \begin{equation}
-  \Delta V = \int\ud V=\int\frac{I\ud l}{\Sigma\sigma}
+  \Delta V = \int\ud V=\int\frac{I}{\Sigma\sigma}\,\ud l
 \end{equation}
 Essendo gli elementini in serie la corrente è la stessa per tutti, mentre la sezione e la conducibilità potrebbero dipendere dalla posizione: $\sigma=\sigma(l)$, $\Sigma=\Sigma(l)$:
 \begin{equation}
@@ -1696,7 +1698,7 @@ che in realtà è stata introdotta come legge sperimentale. I materiali che risp
   \[
     R = \frac{\Delta V}{I} = \rho\int\frac{\ud l}{\Sigma(l)}
   \]
-  dove $l$ è la distanza tra un conduttore e l'altro, quindi il raggio. Per la geometria dei conduttori
+  dove $l$ è nella direzione radiale. Per la geometria dei conduttori
   \[
     \Sigma(r) = 2\pi rh
   \]
@@ -1743,9 +1745,15 @@ Sommando tutte le espressioni si ottiene che la caduta di tensione ai capi della
 Quindi la resistenza equivalente, la resistenza di quel resistore che produce gli stessi effetti dei resistori in serie, è la somma delle resistenze.
 \paragraph{Parallelo\index{resistori!in parallelo}}
 I resistori si dicono collegai in parallelo quando ai capi di ogni resistore è applicata la stessa differenza di potenziale. Applicando ancora la legge di Ohm:
-\[\frac{V_1-V_2}{R_1}\qquad\cdots\qquad\frac{V_1-V_2}{R_n}=I_n\]
+\[\frac{V_1-V_2}{R_1}=I_1\qquad\cdots\qquad\frac{V_1-V_2}{R_n}=I_n\]
 Sommando si ottiene che il reciproco del resistore equivalente è la somma dei reciproci dei resistori in parallelo.
-\begin{Es}[resistenza corpo esteso]
+\[
+  V_1(1/R_1+1/R_2+\cdots)-V_2(1/R_1+1/R_2+\cdots) = (V_1 - V_2) \sum 1/R_i  = I
+  \]
+  \[
+    V_1 - V_2 = I \left( \sum 1/R_i \right)^{-1}
+    \]
+  \begin{Es}[resistenza corpo esteso]
   \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/res_trapezio}
@@ -2399,6 +2407,7 @@ Dalla \eqref{pre_ampere} possiamo dire:
 \end{equation}
 e definire l'ampere usando solo quantità meccaniche come la forza e la distanza:
 \begin{Def}[ampere]
+  \label{def:ampere}
   l'ampere è quella corrente che passando tra due fili distanti $\SI{1}{\meter}$ produce una forza per unità di lunghezza pari a \SI{2E-7}{\newton\per\meter}.
 \end{Def}
 
