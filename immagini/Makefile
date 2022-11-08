@@ -21,7 +21,7 @@ eps_images: $(EPSS)
 	fig2dev -L pdf $< $@ 
 
 %.pdf: %.svg
-	inkscape --export-pdf=$@ $<
+	inkscape --export-type="pdf" $<
 
 %.pdf: %.mathematica
 	math -noprompt -run "<<$<"
@@ -30,7 +30,7 @@ eps_images: $(EPSS)
 	fig2dev -L eps $< $@
 
 %.eps: %.svg
-	inkscape --export-eps=$@ $<
+	inkscape --export-type="eps" $<
 
 %.eps: %.mathematica
 	math -noprompt -run "<<$<"
