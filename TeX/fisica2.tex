@@ -1749,11 +1749,11 @@ I resistori si dicono collegai in parallelo quando ai capi di ogni resistore è 
 Sommando si ottiene che il reciproco del resistore equivalente è la somma dei reciproci dei resistori in parallelo.
 \[
   V_1(1/R_1+1/R_2+\cdots)-V_2(1/R_1+1/R_2+\cdots) = (V_1 - V_2) \sum 1/R_i  = I
-  \]
-  \[
-    V_1 - V_2 = I \left( \sum 1/R_i \right)^{-1}
-    \]
-  \begin{Es}[resistenza corpo esteso]
+\]
+\[
+  V_1 - V_2 = I \left( \sum 1/R_i \right)^{-1}
+\]
+\begin{Es}[resistenza corpo esteso]
   \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/res_trapezio}
@@ -1895,14 +1895,15 @@ Se consideriamo un filo conduttore di lunghezza $l$ e sezione $S$ con una differ
 Ogni punto dello spazio è caratterizzato oltre che da un campo $\ve E$ anche da un vettore di induzione magnetica $\ve B$. Su una carica $q$ con velocità $\ve v$ immersa in un campo magnetico $\ve B$ viene esercitata una forza:
 \begin{equation}
   \ve F=q\ve v\times\ve B
-  \label{magneto01}
+  \label{eq:magneto01}
 \end{equation}
 chiamata forza di Lorentz\index{Lorentz}\index{forza!di Lorentz}. Essa è diretta perpendicolarmente alla velocità e quindi allo spostamento, ne deriva che non compie lavoro; è massima quando la velocità è perpendicolare a $\ve B$ e nulla quando gli è parallela. Considerando anche un campo elettrostatico la forza totale risulta:
 \begin{equation}
   \ve F=q\left(\ve E+\ve v\times \ve B\right)
+  \label{eq:forza_lorentz2}
 \end{equation}
 \subsection{Definizione operativa}
-Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
+Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{eq:magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
 \[\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v\]
 Allora\footnote{??!!}:
 \[\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v\]
@@ -2049,7 +2050,7 @@ Sperimentalmente si trova che su un filo di lunghezza $l$, sezione $S$ percorso 
   \ve F=I\ve l\times \ve B
   \label{forza_filo}
 \end{equation}
-$\ve l$ è il vettore con modulo $l$ e verso e direzione quello della corrente positiva. La cosa può essere dimostrata partendo dalla \eqref{magneto01}. Su ogni elettrone agisce una forza di Lorentz:
+$\ve l$ è il vettore con modulo $l$ e verso e direzione quello della corrente positiva. La cosa può essere dimostrata partendo dalla \eqref{eq:magneto01}. Su ogni elettrone agisce una forza di Lorentz:
 \begin{equation}
   \ve F_e=-e\ve v_D\times\ve B
   \label{forza_lorentz_e}
@@ -2122,7 +2123,10 @@ Dunque la forza è massima quando la spira è perpendicolare al campo magnetico.
 \[\ud\ve M=\ud\ve m\times\ve B\]
 \[\ve M=\iint_S\ud\ve m\times \ve B=\iint I\ud a\ve n\times B=I\ve n\left(\iint_S\ud a\right)\times \ve B=IS\ve n\times \ve B\]
 Definiamo il momento di dipolo magnetico\index{momento!di dipolo magnetico}:
-\[\ve m=IS\ve n\]
+\begin{equation}
+\ve m=IS\ve n
+\label{eq:dipolo_magnetico}
+\end{equation}
 allora:
 \[\ve M=\ve m\times \ve B\]
 che ricorda l'analoga espressione per il dipolo elettrico: $\ve M=\ve p\times\ve E$.
@@ -3586,26 +3590,99 @@ Riassumendo la forza elettromotrice indotta:
     \mathrm{fem}=-\frac{\ud\Phi(\ve B)}{\ud t}
   \end{equation}
 \end{legge}
-dove il meno tiene conto della legge di Lenz, cioè la corrente indotta $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale.
+dove il meno tiene conto della legge di Lenz, cioè la corrente indotta $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale. Si ricorda che la $\mathrm{fem}$ è uguale alla circuitazione del campo elettrico su un percorso chiuso $\oint_C\ve E\cdot\ud\ve l$
 
 Notare che la $\mathrm{fem}$ esiste anche indipendentemente dalla presenza del circuito, o di un conduttore.
 \subsection{Forma differenziale}
-Sappiamo che:
+Partendo dalla legge Faraday--Neumann--Lenz
 \begin{equation}
-  \mathrm{fem}=\oint_C\ve E\cdot\ud\ve l
-\end{equation}
-Allora:
-\begin{equation}
-  \mathrm{fem}=-\frac{\ud}{\ud t}\Phi(\ve B)=-\frac{\ud}{\ud t}\int_S\ve B\cdot\ve n\,\ud a=\oint_C\ve E\cdot\ud \ve l
+  \oint_C\ve E\cdot\ud \ve l = -\frac{\ud}{\ud t}\int_S\ve B\cdot\ve n\,\ud a
 \end{equation}
 Se il circuito è indeformabile possiamo portare la deriva sotto il segno di integrale e usando il teorema di Stokes:
 \begin{equation}
-  -\int_S\frac{\partial\ve B}{\partial t}\cdot\ve n\,\ud a=\int_S\ve\nabla\times\ve E\cdot\ve n\,\ud a
+  \int_S(\ve\nabla\times\ve E)\cdot\ve n\,\ud a = -\int_S\frac{\partial\ve B}{\partial t}\cdot\ve n\,\ud a
 \end{equation}
 \begin{equation}
   \ve\nabla\times\ve E=-\frac{\partial\ve B}{\partial t}
 \end{equation}
 Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che $\ve E$ non è più conservativo.
+
+\begin{Es}[Lavoro nell'esperimento di Stern-Gerlach~\cite{PhysRevE.77.036609}]
+  È noto che il campo magnetico non può fare lavoro su una carica in moto, in quanto nell'espressione della forza di Lorentz \eqref{eq:magneto01} la forza è perpendicolare alla velocità.
+
+  Consideriamo un anello circolare non conduttivo caricato con carica elettrica $q$, raggio $r$, massa $m$. L'anello è in rotazione con velocità angolare $\omega$ attorno all'asse di rotazione, orientato come l'asse $z$. L'anello è immerso in un campo magnetico esterno orientato come l'asse $z$, con un gradiente verso l'asse $z$ positivo. L'anello ha un momento magnetico dalla \eqref{eq:dipolo_magnetico}:
+  \begin{equation}
+    \mu = iA = \frac{q\omega}{2\pi} \pi r^2 = \frac{q\omega r^2}{2}
+  \end{equation}
+  dove $A=\pi r^2$ è la superficie delimitata dalla spira. La forza del campo magnetico sul momento magnetico lungo l'asse $z$ è:
+  \begin{equation}
+    F = \mu\frac{\partial B}{\partial z}
+  \end{equation}
+  Per cui la forza farà accelerare la spira lungo l'asse $z$ e l'equazione per la velocità:
+  \begin{equation}
+    m\frac{\ud v}{\ud t} = \mu\frac{\partial B}{\partial z} = \frac{q\omega r^2}{2}\frac{\partial B}{\partial z}
+    \label{eq:sg1}
+  \end{equation}
+  A causa del movimento il flusso del campo magnetico concatenato con la spira cambierà nel tempo, e per la legge di Farady questa indurrà una forza elettromotrice all'iterno della spira:
+  \begin{equation}
+    \oint \ve E\cdot \ud\ve l = 2\pi r E = -\frac{\ud (B A)}{\ud t} = -(\pi r^2)\frac{\partial B}{\partial z}\frac{\partial z}{\partial t}
+  \end{equation}
+  semplificando, il campo elettrico indotto all'interno della spira:
+  \begin{equation}
+    E = -\frac{r}{2}\frac{\partial B}{\partial z}\frac{\partial z}{\partial t}-=\frac{r}{2}\frac{\partial B}{\partial z}v
+  \end{equation}
+  diretto tangenzialmente alla spira. Essendo l'anello carico il campo elettrico esercita una forza, anch'essa tangenziale, e quindi un momento di una forza sulla spira:
+  \begin{equation}
+    \tau = q E r
+  \end{equation}
+  Ricordando che il momento d'inerzia $I$ di una spira è $mr^2$ possiamo scrivere $\tau=I\frac{\ud\omega}{\ud t}$
+  \begin{equation}
+    qEr = (m r^2)\frac{\ud\omega}{\ud t}
+  \end{equation}
+  l'equazione per $\omega$ diventa
+  \begin{equation}
+    m\frac{\ud\omega}{\ud t} = \frac{qE}{r} = -\frac{qv}{2}\frac{\partial B}{\partial z}
+    \label{eq:sg2}
+  \end{equation}
+  L'energia cinetica totale della spira è $\frac{1}{2}mv^2+\frac{1}{2}mr^2\omega^2$ e la sua derivata:
+  \begin{equation}
+    \frac{\ud}{\ud t}\left(\frac{1}{2}mv^2+\frac{1}{2}mr^2\omega^2\right) = mv\frac{\ud v}{\ud t} + mr^2\omega\frac{\ud\omega}{\ud t} = v \frac{q\omega r^2}{2}\frac{\partial B}{\partial z} - r^2\omega \frac{qv}{2}\frac{\partial B}{\partial z} = 0
+  \end{equation}
+  dove si sono usate le equationi per $v$ e $\omega$, \eqref{eq:sg1}, \eqref{eq:sg2}. Quindi l'energia cinetica totale è una costante del moto, questo significa che il campo magnetico non compie lavoro. Derivando nel tempo \eqref{eq:sg1} ed eliminando $\omega$ usando la \eqref{eq:sg2} si ottiene
+  \begin{equation}
+    \frac{\ud^2 v}{\ud t^2} = -\left(\frac{q r \eta}{2m}\right)^2 v
+  \end{equation}
+  dove $\eta=\frac{\ud B}{\ud z}$. Quindi la spira si muove di moto armonico lungo $z$ con frequenza angolare
+  \begin{equation}
+    \omega_s = \frac{|q\eta| r}{2m}
+  \end{equation}
+
+  Le equazioni \eqref{eq:sg1}, \eqref{eq:sg2} si possono derivare anche senza considerare il momento magnetico, ma semplicemente considerando un elemento infinitesimo della spira con carica $\ud q$ e usando solo la forza di Lorentz. Decomponiamo il moto di $\ud q$ nella componente lungo $z$ e nella componente radiale. La forza di Lorenz dovuta allo spostamento lungo $z$ sarà tangenziale:
+  \begin{equation}
+    \ud F_\theta = \ud q v B_r
+  \end{equation}
+  La forza di Lorentz dovuta alla rotazione avrà una componente lungo $z$:
+  \begin{equation}
+    \ud F_z = -\ud q \omega r B_r
+  \end{equation}
+  e una forza radiale
+  \begin{equation}
+    \ud F_r = \ud q \omega r B_z
+  \end{equation}
+  che però integrata su tutta la spira, dà una forza radiale totale sulla spira nulla. Integrando le altre due equazioni si ottiene
+  \begin{equation}
+    \tau = q rv B_r \qquad F_z = -q r \omega B_r
+  \end{equation}
+  e quindi:
+  \begin{equation}
+  mr^2\frac{\ud\omega}{\ud t} = q rv B_r\qquad m\frac{\ud v}{\ud t} = -q r \omega B_r
+  \end{equation}
+  quindi si può calcolare ancora la variazione dell'energia cinetica totale:
+  \begin{equation}
+    \frac{\ud}{\ud t}\left(\frac{1}{2}mv^2+\frac{1}{2}mr^2\omega^2\right) = mv\frac{\ud v}{\ud t} + mr^2\omega\frac{\ud\omega}{\ud t} = -q rv \omega B_r+q rv\omega B_r = 0
+  \end{equation}
+\end{Es}
+
 \section{Flusso tagliato e flusso concatenato}
 La legge di Faraday--Neumann--Lenz è una legge sperimentale, non deducibile da altre leggi, tranne in un caso, il flusso tagliato, ovvero quando c'è un moto relativo tra un circuito e una sorgente di campo magnetico.
 
