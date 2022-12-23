@@ -52,30 +52,30 @@ Spesso si usano i seguenti prefissi:
     \hline
     fattore     & prefisso & simbolo \\
     \hline
-    \num{1E24}  & yotta    & \yotta  \\
-    \num{1E21}  & zetta    & \zetta  \\
-    \num{1E18}  & exa      & \exa    \\
-    \num{1E15}  & peta     & \peta   \\
-    \num{1E12}  & tera     & \tera   \\
-    \num{1E9}   & giga     & \giga   \\
-    \num{1E6}   & mega     & \mega   \\
-    \num{1E3}   & kilo     & \kilo   \\
-    \num{1E2}   & etto     & \hecto  \\
-    \num{1E1}   & deca     & \deka   \\
-    \num{1E-1}  & deci     & \deci   \\
-    \num{1E-2}  & centi    & \centi  \\
-    \num{1E-3}  & milli    & \milli  \\
-    \num{1E-6}  & micro    & \micro  \\
-    \num{1E-9}  & nano     & \nano   \\
-    \num{1E-12} & pico     & \pico   \\
-    \num{1E-15} & femto    & \femto  \\
-    \num{1E-18} & atto     & \atto   \\
-    \num{1E-21} & zepto    & \zepto  \\
-    \num{1E-24} & yocto    & \yocto  \\
+    \num{1E24}  & yotta    & \si{\yotta\noop}  \\
+    \num{1E21}  & zetta    & \si{\zetta\noop}  \\
+    \num{1E18}  & exa      & \si{\exa\noop}    \\
+    \num{1E15}  & peta     & \si{\peta\noop}   \\
+    \num{1E12}  & tera     & \si{\tera\noop}   \\
+    \num{1E9}   & giga     & \si{\giga\noop}   \\
+    \num{1E6}   & mega     & \si{\mega\noop}   \\
+    \num{1E3}   & kilo     & \si{\kilo\noop}   \\
+    \num{1E2}   & etto     & \si{\hecto\noop}  \\
+    \num{1E1}   & deca     & \si{\deka\noop}   \\
+    \num{1E-1}  & deci     & \si{\deci\noop}   \\
+    \num{1E-2}  & centi    & \si{\centi\noop}  \\
+    \num{1E-3}  & milli    & \si{\milli\noop}  \\
+    \num{1E-6}  & micro    & \si{\micro\noop}  \\
+    \num{1E-9}  & nano     & \si{\nano\noop}   \\
+    \num{1E-12} & pico     & \si{\pico\noop}   \\
+    \num{1E-15} & femto    & \si{\femto\noop}  \\
+    \num{1E-18} & atto     & \si{\atto\noop}   \\
+    \num{1E-21} & zepto    & \si{\zepto\noop}  \\
+    \num{1E-24} & yocto    & \si{\yocto\noop}  \\
     \hline
   \end{tabular}
 \end{center}
-Il femtometro (\si{}{\femto\meter}) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@\si{}{\femto\meter}|see{Fermi}}, unità usata in fisica nucleare.
+Il femtometro (\si{\femto\meter}) per un puro caso ha lo stesso simbolo e valore del fermi\index{Fermi}\index{fm@\si{\femto\meter}|see{Fermi}}, unità usata in fisica nucleare.
 \chapter{\index{vettore}Vettori}
 \minitoc
 Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
@@ -1334,7 +1334,7 @@ se $O'=CM$ allora $M\ve V_{CM}=\ve p\Rightarrow\ve
   \begin{equation}
     L=\int_\Gamma\ve F\cdot\ud \ve s
   \end{equation}
-  Il lavoro è una grandezza scalare. Nel SI si misura in joule ($\joule$)\index{Joule}.
+  Il lavoro è una grandezza scalare. Nel SI si misura in joule (\si{\joule})\index{Joule}.
 \end{Def}
 Distinguiamo i seguenti casi particolari:
 \begin{description}
@@ -1376,7 +1376,7 @@ lavoro svolto da questo momento torcente è:
     P=\frac{\ud L}{\ud t}
   \end{equation}
 \end{Def}
-La potenza si misura nel SI in $\joule\per\second$ cioè \watt(watt\index{watt}).
+La potenza si misura nel SI in \si{\joule\per\second} cioè \si{\watt}(watt\index{watt}).
 \begin{equation}
   P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
     t}=\ve F\cdot \ve v
@@ -1722,7 +1722,7 @@ questa è nulla ai poli e massima all'equatore quindi:
     F = G\frac{Mm}{R^2} = m\frac{v^2}{R}\quad\Rightarrow v=\sqrt{\frac{GM}{R}}
   \]
   \[
-    T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = \SI{1}{\dday}
+    T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = \SI{1}{\day}
   \]
   \[
     R = \sqrt[3]{\frac{GMT^2}{4\pi^2}}\simeq \SI{42E3}{\kilo\meter}
