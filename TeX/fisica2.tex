@@ -3590,15 +3590,30 @@ Riassumendo la forza elettromotrice indotta:
     \mathrm{fem}=-\frac{\ud\Phi(\ve B)}{\ud t}
   \end{equation}
 \end{legge}
-dove il meno tiene conto della legge di Lenz, cioè la corrente indotta $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale. Si ricorda che la $\mathrm{fem}$ è uguale alla circuitazione del campo elettrico su un percorso chiuso $\oint_C\ve E\cdot\ud\ve l$
+dove il meno tiene conto della legge di Lenz, cioè la corrente indotta $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale. Si ricorda che la $\mathrm{fem}$ è uguale alla circuitazione del campo elettrico su un percorso chiuso $\oint_C\ve E\cdot\ud\ve l$, quindi la legged di Faraday--Neumann--Lenz può essere scritta come:
+\begin{equation}
+  \oint_C\ve E\cdot\ud \ve l = -\frac{\ud}{\ud t}\int_S\ve B\cdot\ve n\,\ud a
+\end{equation}
+si noti come il flusso del campo magnetico può variare per tre ragioni: $\ve B$ non è costante nel tempo, $\ve n$ non è costante nel tempo (per esempio il circuito ruota), il circuito viene deformato. La $\mathrm{fem}$ indotta esiste anche indipendentemente dalla presenza del circuito, o di un conduttore. È importante notare che nella definizione di $\mathrm{fem}$ la definizione di $\ve E$ è quello nel sistema di riferimento in cui gli elementi $\ud\ve l$ sono a riposo.
 
-Notare che la $\mathrm{fem}$ esiste anche indipendentemente dalla presenza del circuito, o di un conduttore.
+Per un circuito indeformabile che si muove con velocità $\ve v$ in un campo magnetico si può scrivere:
+\begin{equation}
+  \frac{\ud}{\ud t}\int_S \ve B\cdot \ve n\,\ud a = \int_S\frac{\partial \ve B}{\partial t}\cdot\ve n\,\ud a + \oint_C \left(\ve B\times\ve v\right)\cdot\ud\ve l
+\end{equation}
+e quindi la legge di Faraday--Neumann--Lenz si può scrivere come
+\[
+  \oint_C\ve E\cdot\ud \ve l = \frac{\ud}{\ud t}\int_S \ve B\cdot \ve n\,\ud a = \int_S\frac{\partial \ve B}{\partial t}\cdot\ve n\,\ud a + \oint_C \left(\ve B\times\ve v\right)\cdot\ud\ve l
+\]
+o meglio:
+\begin{equation}
+  \oint_C \left[\ve E - \ve B\times\ve v \right]\cdot\ud \ve l = \int_S\frac{\partial \ve B}{\partial t}\cdot\ve n\,\ud a
+\end{equation}
 \subsection{Forma differenziale}
 Partendo dalla legge Faraday--Neumann--Lenz
 \begin{equation}
   \oint_C\ve E\cdot\ud \ve l = -\frac{\ud}{\ud t}\int_S\ve B\cdot\ve n\,\ud a
 \end{equation}
-Se il circuito è indeformabile possiamo portare la deriva sotto il segno di integrale e usando il teorema di Stokes:
+assumiamo che il percorso $C$, che potrebbe corrispondere ad un circuito, sia indeformabile e fermo nel tempo. Questo significa che stiamo esprimento $\ve E$ e $\ve B$ nello stesso sistema di riferimento. Con questa assunzione possiamo portare la deriva sotto il segno di integrale e usando il teorema di Stokes:
 \begin{equation}
   \int_S(\ve\nabla\times\ve E)\cdot\ve n\,\ud a = -\int_S\frac{\partial\ve B}{\partial t}\cdot\ve n\,\ud a
 \end{equation}
@@ -3684,7 +3699,7 @@ Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che
 \end{Es}
 
 \section{Flusso tagliato e flusso concatenato}
-La legge di Faraday--Neumann--Lenz è una legge sperimentale, non deducibile da altre leggi, tranne in un caso, il flusso tagliato, ovvero quando c'è un moto relativo tra un circuito e una sorgente di campo magnetico.
+Abbiamo visto che la fem indotto può essere dovuta al movimento del circuito o alla sua orientazione e alla variazione nel tempo del campo magnetico. La legge di Faraday--Neumann--Lenz è una legge sperimentale, non deducibile da altre leggi, tranne in un caso, il flusso tagliato, ovvero quando c'è un moto relativo tra un circuito e una sorgente di campo magnetico costante. Il caso invece delle fem indotta da un campo magnetico variabile è un fenomeno completamente nuovo.
 
 Consideriamo un circuito rettangolare, in cui un lato sia mobile, in cui ci sia un generatore di corrente continua. Ci sia un campo magnetico perpendicolare alla superficie del circuito. Sulla sbarra mobile agisce una forza di Lorentz:
 \begin{equation}
@@ -3710,15 +3725,8 @@ che è la legge di Faraday--Neumann--Lenz.
 
 Nel caso di flusso concatenato invece sia il circuito in cui si induce la corrente sia il circuito sorgente del campo magnetico sono fissi e la variazione del flusso è dovuto a variazioni di corrente nel tempo. Questo caso non è descrivibile con la forza di Lorentz, ma è un caso nuovo.
 \section{Autoinduttanza}\index{autoinduttanza|(}
-In un circuito isolato il campo magnetico generato dal circuito è funzione della corrente:
-\begin{equation}
-  \ve B=\ve B(I)
-\end{equation}
-quindi il flusso del campo magnetico:
-\begin{equation}
-  \Phi(\ve B)=\Phi(\ve B(I))
-\end{equation}
-cioè anch'esso è funzione della corrente la quale è funzione del tempo: $I=I(t)$, allora in questo caso, cioè se la variazione del flusso è data esclusivamente da variazioni di corrente (per esempio il circuito è indeformabile), la legge dell'induzione la possiamo scrivere:
+In un circuito isolato attraversato dalla corrente $I$ il campo magnetico generato dal circuito stesso è funzione della corrente e quindi anche il flusso del campo magnetico: $\Phi(\ve B)=\Phi(\ve B(I))$
+Allora in questo caso, cioè se la variazione del flusso è data esclusivamente da variazioni di corrente (per esempio il circuito è indeformabile), possiamo scrivere la legge dell'induzione come:
 \begin{equation}
   \text{fem}=-\frac{\ud\Phi(\ve B)}{\ud t}=-\frac{\ud\Phi(\ve B)}{\ud I}\frac{\ud I}{\ud t}
 \end{equation}
@@ -3731,9 +3739,9 @@ che è una caratteristica della geometria circuito, infatti:
 \[
   \ve B(\ve r)=\frac{\mu_0}{4\pi}\int_C I\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}
 \]
-in generale; il flusso:
+e il flusso
 \[
-  \Phi(\ve B)=\frac{\mu_0}{4\pi}\int_S I\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\cdot \ve n\,\ud a
+  \Phi(\ve B)=\int_C \ve B\cdot\ve n\,\ud a = \frac{\mu_0}{4\pi}\int_S I\int_C\frac{\ud \ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}\cdot \ve n\,\ud a
 \]
 e la derivata nella corrente $\frac{\ud}{\ud I}$:
 \[
