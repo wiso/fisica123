@@ -13,10 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+#    - name: setup_images
+#      run: sudo apt install fig2dev transfig inkscape
+#    - name: images
+#      run: make images
     - name: compile latex
       uses: xu-cheng/latex-action@v2
       with:
         root_file: fisica_linux.tex
+        latexmk_shell_escape: true
+
 #    - name: test1
 #      run: sudo apt install apt-file
 
