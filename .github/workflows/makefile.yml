@@ -23,8 +23,8 @@ jobs:
 #        sudo apt-file find "minitoc.sty"
 
     - name: Install Latex
-      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev transfig
+      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev transfig inkscape
 
-    - name: Install dependencies
+    - name: Make
       run: make
 
