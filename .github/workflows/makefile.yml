@@ -21,8 +21,9 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: fisica_linux.tex
-        args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape
+        args: -pdf -file-line-error  -interaction=nonstopmode -shell-escape
         latexmk_shell_escape: true
+        continue_on_error: true
 
 #    - name: test1
 #      run: sudo apt install apt-file
