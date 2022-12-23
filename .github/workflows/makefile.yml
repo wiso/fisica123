@@ -26,7 +26,7 @@ jobs:
       with:
         root_file: fisica_linux.tex
         latexmk_shell_escape: true
-        continue_on_error: true
+#        continue_on_error: true
     - name: Upload PDF file
       uses: actions/upload-artifact@v3
       with:
