@@ -14,16 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: test1
-      run: sudo apt install apt-file
+#    - name: test1
+#      run: sudo apt install apt-file
 
-    - name: test2
-      run: |
-        sudo apt-file update 
-        sudo apt-file find "minitoc.sty"
+#    - name: test2
+#      run: |
+#        sudo apt-file update 
+#        sudo apt-file find "minitoc.sty"
 
     - name: Install Latex
-      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev texlive-minitoc.noarch transfig
+      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev transfig
 
     - name: Install dependencies
       run: make
