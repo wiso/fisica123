@@ -3,6 +3,8 @@ name: BuildLatex
 on:
   push:
     branches: [ "master" ]
+    tags:
+      - "v*.*.*"
   pull_request:
     branches: [ "master" ]
 
@@ -34,6 +36,8 @@ jobs:
       with:
         name: PDF
         path: fisica_linux.pdf
+    - name: Release
+      uses: softprops/action-gh-release@v1
 
 #    - name: test1
 #      run: sudo apt install apt-file
