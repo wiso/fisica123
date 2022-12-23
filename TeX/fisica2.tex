@@ -756,10 +756,10 @@ Rifacendo il discorso per il potenziale: siano $A$ e $B$ due punti, l'integrale 
 Per il calcolo abbiamo usato la forza contro le forze del campo, non la forza del campo. Il lavoro a sinistra il lavoro contro le forze del campo, mentre l'energia potenziale a destra è relativa alle forze del campo: ecco perché non c'è il meno.
 \subsection{Unità di misura}
 Nel SI il potenziale si misura in volt\index{volt}:
-\[[\varphi]=\frac{\joule}{\coulomb}=\volt\]
+\[[\varphi]=\frac{\si{\joule}}{\si{\coulomb}}=\si{\volt}\]
 allora essendo $\ve E=-\ve\nabla\varphi$ il campo lo possiamo esprimere in:
-\[[\ve E]=[-\ve\nabla\varphi]=\frac{\volt}{\metre}\]
-\[[U]=\joule=[q\varphi]=\coulomb\volt\]
+\[[\ve E]=[-\ve\nabla\varphi]=\frac{\si{\volt}}{\si{\metre}}\]
+\[[U]=\si{\joule}=[q\varphi]=\si{\coulomb\volt}\]
 \subsection{Energia di un sistema di cariche\index{energia!di un sistema di cariche}}
 Prendiamo una carica $q_1$, portiamola dall'infinito alla posizione $\ve r_1$: non serve compiere lavoro. Ora abbiamo un campo, con un potenziale $\varphi_1(\ve r)$. Prendiamo un'altra carica $q_2$ e portiamola dall'infinito alla posizione $\ve r_2$: dobbiamo compiere un lavoro contro le forze del campo:
 \[L_\infty^{\ve r_2}=\int_\infty^{\ve r_2}\ve F\cdot\ud \ve l=-q_2\int_\infty^{\ve r_2} \ve E\cdot\ud \ve l=q_2\varphi_1(\ve r_2)\]
@@ -1155,7 +1155,7 @@ Se aggiungiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si def
     C=\frac{q}{V}
   \end{equation}
 \end{Def}
-Esso è costante, dipende solo dalla geometria del conduttore. Si misura in $\text{farad}=\farad=\frac{\text{coulomb}}{\text{volt}}$.
+Esso è costante, dipende solo dalla geometria del conduttore. Si misura in $\text{farad}=\si{\farad}=\frac{\text{coulomb}}{\text{volt}}$.
 \begin{Es}[sfera]
   Calcoliamo la capacità di una sfera conduttrice di raggio $R$. Sapendo che la carica si distribuisce uniformemente per simmetria:
   \[\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma\]
@@ -1192,7 +1192,7 @@ Essa dipende solo dalla geometria del condensatore.
   \[\ve E=\frac{\sigma}{\varepsilon_0}\ver \imath\]
   \[\Delta V=V_B-V_A=-\int_A^B\ve E\cdot\ud l=-\ve E\int_A^B\ud l=-\frac{\sigma}{\varepsilon_0}d\]
   \[C=\frac{Q}{\Delta V}=\frac{\sigma S}{\sigma d}\varepsilon_0=\frac{S}{d}\varepsilon_0\]
-  Da questo esempio si deduce che $\varepsilon_0$ si può esprimere in $\farad\per\meter$.
+  Da questo esempio si deduce che $\varepsilon_0$ si può esprimere in \si{\farad\per\meter}.
 \end{Es}
 \begin{Es}[sferico]
   Consideriamo due sfere con raggi $a<b$ concentriche. Sia $q$ la carica del condensatore. Il campo all'interno può essere calcolato con Gauss. Pensiamo una superficie gaussiana sferica con raggio $r:a<r<b$ concentrica al condensatore. Allora:
@@ -1639,8 +1639,8 @@ La conducibilità si misura in:
 mentre la resistività in
 \[[\rho]=\si{\ohm\meter}\]
 con:
-\[\ohm=\frac{\volt}{\ampere}=\text{ohm}\]
-\[\text{ohm}^{-1}=\text{mho}=\mho=\siemens=\text{siemens}\]
+\[\si{\ohm}=\frac{\si{\volt}}{\si{\ampere}}=\text{ohm}\]
+\[\text{ohm}^{-1}=\text{mho}=\si{\mho}=\si{\siemens}=\text{siemens}\]
 \index{ohm}\index{mho}\index{siemens}
 \section{Legge di Ohm\index{legge!di Ohm}}
 \begin{figure}[htbp]
@@ -1914,8 +1914,8 @@ Moltiplichiamole scalarmente per $v_1$:
 \[c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\]
 \[\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1\]
 \subsection{Unità di misura}
-\[[B]=[mlq^{-1}t^{-1}]=\frac{\newton\second}{\coulomb\meter}=\frac{\volt\second}{\meter\squared}=\frac{\weber}{\metre\squared}=T=\SI{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
-Dove $\weber=\text{weber}={\volt\second}$, $\tesla=\text{tesla}=\frac{\weber}{\meter\squared}$.\index{weber}
+\[[B]=[mlq^{-1}t^{-1}]=\frac{\si{\newton\second}}{\si{\coulomb\meter}}=\frac{\si{\volt\second}}{\si{\meter\squared}}=\frac{\si{\weber}}{\si{\metre\squared}}=T=\SI{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
+Dove $\si{\weber}=\text{weber}=\si{\volt\second}$, $\si{\tesla}=\text{tesla}=\frac{\si{\weber}}{\si{\meter\squared}}$.\index{weber}
 \begin{Es}[elettrone in campo magnetico]
   \label{es_Larmor}
   Spariamo un elettrone in un campo magnetico $\ve B$ con velocità $\ve v_0=\ve v(0)$. Per semplicità scegliamo un sistema di riferimento in modo che $\ve B=B\ver k$ e che $\ve r(0)=0$. Ad ogni istante sull'elettrone agisce la forza di Lorentz:
@@ -2040,7 +2040,7 @@ Dove $\weber=\text{weber}={\volt\second}$, $\tesla=\text{tesla}=\frac{\weber}{\m
     t_{\max} = 2\Delta tN = \frac{\pi R^2 B}{2V}
   \]
 
-  Il limite a questo acceleratore è dato dalla relatività, infatti $\omega$ non è costante, ma pari a $\frac{qB}{\gamma m}$. Poiché $\gamma$ cresce con la velocità allora $\omega$ decresce e non è più in fase con $\omega_{RF}$. Si riesce quindi ad accelerare una particella solo fino a qualche decina di $\MeV$. Il sincrociclotrone risolve questo problema modificando $\omega_{RF}$ in base alla velocità della particella e si possono raggiungere centinaia di $\MeV$.
+  Il limite a questo acceleratore è dato dalla relatività, infatti $\omega$ non è costante, ma pari a $\frac{qB}{\gamma m}$. Poiché $\gamma$ cresce con la velocità allora $\omega$ decresce e non è più in fase con $\omega_{RF}$. Si riesce quindi ad accelerare una particella solo fino a qualche decina di $\si{\MeV}$. Il sincrociclotrone risolve questo problema modificando $\omega_{RF}$ in base alla velocità della particella e si possono raggiungere centinaia di \si{\MeV}.
 \end{Es}
 
 
@@ -2159,15 +2159,15 @@ con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre 
 \[k=\frac{\mu_0}{2\pi}\]
 con $\mu_0$ la permeabilità magnetica del vuoto:
 \[
-  \mu_0=\si[numaddn=\pi]{4\pi e-7}{\henry\per\meter}
+  \mu_0=\SI{4\pi e-7}{\henry\per\meter}
 \]
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
 \[\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\]
 con $\ver s$ è un versore orientato come il verso della corrente, mentre $\ve r$ è il vettore che individua il punto rispetto al filo, ha quindi il modulo della distanza tra il filo e il punto.
 \subsubsection{unità di misura\index{weber}}
-\[\left[\mu_0\right]=\frac{\text{weber}}{\text{metro}\cdot\text{ampere}}=\frac{\volt\second}{\meter\ampere}=\frac{\ohm\second}{\meter}=\frac{\henry}{\meter}\]
+\[\left[\mu_0\right]=\frac{\text{weber}}{\text{metro}\cdot\text{ampere}}=\frac{\si{\volt\second}}{\si{\meter\ampere}}=\frac{\si{\ohm\second}}{\si{\meter}}=\frac{\si{\henry}}{\si{\meter}}\]
 con:
-\[\henry=\text{ohm}\cdot\text{secondo}=\text{henry}\]
+\[\si{\henry}=\text{ohm}\cdot\text{secondo}=\text{henry}\]
 \subsection{Prima formula di Laplace\index{prima formula di Laplace}\index{Laplace}}
 La prima legge di Laplace stabilisce che un elemento $\ud \ve l$ di circuito percorso da una corrente $I$ produce in un punto $P$ distate $\ve r$ da esso un vettore di induzione magnetica:
 \begin{equation}
@@ -2914,7 +2914,7 @@ con $q$ cariche libere. In forma differenziale, usando il teorema della divergen
 \end{equation}
 con $\rho$ densità di volumetrica di cariche libere.
 \[
-  [D]=\coulomb\per\meter^2
+  [D]=\si{\coulomb\per\meter^2}
 \]
 Si sottolinea che il campo elettrico $\ve E$ che compare è il campo elettrico totale, cioè quello creato dalle cariche libere più quelle di polarizzazione.
 \section{Suscettività e permittività}
@@ -3345,11 +3345,11 @@ Se non applichiamo un campo magnetico esterno mediamente $\ve M$ è nullo in qua
 I materiali paramagnetici aumentano il campo magnetico in quanto i dipoli magnetici si orientano come il campo esterno. Nei materiali diamagnetici invece $\ve M$ è opposto a $\ve B$ e quindi il campo magnetico diminuisce.
 \subsubsection{unità}
 \[
-  \left[m\right]=\ampere\meter\squared
+  \left[m\right]=\si{\ampere\meter\squared}
   \qquad
-  \left[q_m\right]=\ampere\meter
+  \left[q_m\right]=\si{\ampere\meter}
   \qquad
-  \left[M\right]=\ampere\per\meter
+  \left[M\right]=\si{\ampere\per\meter}
 \]
 \section{Approccio teorico}
 Un materiale magnetizzato può essere studiato facendo ricorso alle correnti di magnetizzazione oppure usando i dipoli magnetici. Usando il secondo approccio non si fa altro che rifare quello che è stato fatto per i dielettrici, cioè trovare delle densità di carica fittizie che interpretino i fenomeni. Usando i dipoli si userà il potenziale scalare magnetico, mentre usando le correnti di magnetizzazione il potenziale scalare magnetico.
@@ -3512,7 +3512,7 @@ portando tutto in un unico rotore (il rotore è un operatore lineare):
     \ve H=\left(\frac{\ve B}{\mu_0}-\ve M\right)
   \end{equation}
 \end{Def}
-si misura in $\ampere\per\meter$. Usando questa nuova definizione, sostituendo nella \eqref{rotB99}:
+si misura in $\si{\ampere\per\meter}$. Usando questa nuova definizione, sostituendo nella \eqref{rotB99}:
 \begin{equation}
   \rot\ve H=\ve J
 \end{equation}
@@ -3753,7 +3753,7 @@ che dipende solo dalla geometria. La legge di Faraday--Neumann--Lenz in questo c
 \end{equation}
 L'autoinduttanza si misura in henry\index{henry}:
 \[
-  \henry=\frac{\weber}{\ampere}=\frac{\volt\second}{\ampere}=\ohm\second
+  \si{\henry}=\frac{\si{\weber}}{\si{\ampere}}=\frac{\si{\volt\second}}{\si{\ampere}}=\si{\ohm\second}
 \]
 \begin{Es}[autoinduttanza di un solenoide\index{autoinduttanza!di un solenoide}]
   Vogliamo calcolare l'autoinduttanza di un solenoide di lunghezza $l$, raggio $R$ e con $N$ spire per unità di lunghezza. Il campo magnetico, nell'approssimazione di solenoide infinito sarà
@@ -4571,7 +4571,7 @@ Avendo usato il teorema della divergenza, definito:
     \ve S=\ve E\times\ve H
   \end{equation}
 \end{Def}
-che si misura in \watt\per\meter\squared. Nell'ultimo passaggio abbiamo usato:
+che si misura in \si{\watt\per\meter\squared}. Nell'ultimo passaggio abbiamo usato:
 \begin{equation}
   \frac{1}{2}\frac{\partial}{\partial t}\left(\ve E\cdot\ve D\right)=\frac{1}{2}\frac{\partial}{\partial t}\left(\varepsilon E^2\right)=\ve E\cdot\frac{\partial\ve D}{\partial t}
 \end{equation}
