@@ -14,8 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: test
+      run: sudo apt-file find "minitoc.sty"
+
+
     - name: Install Latex
-      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev tetex-fonts texlive-minitoc.noarch transfig texlive-babel-latin 'tex(siunitx.sty)' texlive-gitinfo texlive-ccicons
+      run: sudo apt install texlive-latex-extra texlive-fonts-extra fig2dev texlive-minitoc.noarch transfig
 
     - name: Install dependencies
       run: make
