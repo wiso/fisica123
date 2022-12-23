@@ -23,7 +23,7 @@ jobs:
 #        sudo apt-file find "minitoc.sty"
 
     - name: Install Latex
-      run: sudo apt install texlive-latex-extra texlive-fonts-extra texlive-lang-italian fig2dev transfig inkscape
+      run: sudo apt install texlive-latex-extra texlive-fonts-extra texlive-lang-italian texlive-science fig2dev transfig inkscape
 
     - name: Make
       run: make
