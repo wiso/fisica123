@@ -7,13 +7,16 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  build_latex:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-
+    - name: compile latex
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: fisica_linux.tex
 #    - name: test1
 #      run: sudo apt install apt-file
 
@@ -22,9 +25,9 @@ jobs:
 #        sudo apt-file update 
 #        sudo apt-file find "minitoc.sty"
 
-    - name: Install Latex
-      run: sudo apt install texlive-latex-extra texlive-fonts-extra texlive-lang-italian texlive-science fig2dev transfig inkscape
+    #- name: Install Latex
+    #  run: sudo apt install texlive-latex-extra texlive-fonts-extra texlive-lang-italian texlive-science fig2dev transfig inkscape
 
-    - name: Make
-      run: make
+    #- name: Make
+    #  run: make
 
