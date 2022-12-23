@@ -17,10 +17,10 @@ jobs:
     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
     - name: Set up Git repository
       uses: actions/checkout@v3
-#    - name: setup_images
-#      run: sudo apt install fig2dev transfig inkscape
-#    - name: images
-#      run: make images
+    - name: setup_images
+      run: sudo apt install fig2dev transfig inkscape
+    - name: images
+      run: make images
     - name: compile latex
       uses: xu-cheng/latex-action@v2
       with:
