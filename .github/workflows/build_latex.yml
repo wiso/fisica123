@@ -18,7 +18,9 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v3
     - name: setup_images
-      run: sudo apt install fig2dev transfig inkscape
+      run: |
+          sudo apt-get update
+          sudo apt install fig2dev transfig inkscape
     - name: images
       run: make images
     - name: compile latex
