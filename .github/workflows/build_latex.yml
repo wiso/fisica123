@@ -39,6 +39,8 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
+      with:
+          files: fisica_linux.pdf
 
 #    - name: test1
 #      run: sudo apt install apt-file
