@@ -1,4 +1,4 @@
-![example workflow](https://github.com/wiso/fisica123/actions/workflows/makefile.yaml/badge.svg)
+![example workflow](https://github.com/wiso/fisica123/actions/workflows/makefile.yml/badge.svg)
 
 
 
