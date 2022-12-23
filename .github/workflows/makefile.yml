@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Install Latex
+      run: sudo apt install texlive-latex-extra
+
     - name: Install dependencies
       run: make
 
