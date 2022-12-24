@@ -2,4 +2,4 @@
 
 
 
-Latest release: https://github.com/wiso/fisica123/releases/latest
+Latest release: https://github.com/wiso/fisica123/releases/latest/download/fisica_linux.pdf
