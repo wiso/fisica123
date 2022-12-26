@@ -15,9 +15,9 @@
 \begin{table}[ht]
   \centering
   \begin{tabular}{llc}
-    \hline
+    \toprule
     grandezza                 & nome       & simbolo        \\
-    \hline
+    \midrule
     lunghezza                 & metro      & \si{\meter}    \\
     massa                     & kilogrammo & \si{\kilogram} \\
     tempo                     & secondo    & \si{\second}   \\
@@ -25,7 +25,7 @@
     temperatura termodinamica & kelvin     & \si{\kelvin}   \\
     quantità di materia       & mole       & \si{\mole}     \\
     intensità luminosa        & candela    & \si{\candela}  \\
-    \hline
+    \bottomrule
   \end{tabular}
   \caption{Unità SI fondamentali}
 \end{table}
@@ -56,9 +56,9 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
 \begin{table}[ht]
   \centering
   \begin{tabular}{llll}
-    \hline
+    \toprule
     nome        & unità SI                                                           & simbolo         & unità equivalenti                       \\
-    \hline
+    \midrule
     radiante    & \si{\meter\per\meter}\,=1                                          & \si{\radian}    & \si{\meter\per\meter}                   \\
     steradiante & \si{\meter\squared\per\meter\squared}\,=1                          & \si{\steradian} & \si{\meter\per\meter\squared}           \\
     hertz       & \si{\per\second}                                                   & \si{\hertz}     & \si{\per\second}                        \\
@@ -77,7 +77,7 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
     celsius     & \si{\kelvin}                                                       & \si{\celsius}   & \si{\kelvin}                            \\
     lumen       & \si{\candela\meter\squared\per\meter\squared}                      & \si{\lumen}     & \si{\candela\steradian}                 \\
     lux         & \si{\candela\meter\squared\meter^{-4}}                             & \si{\lux}       & \si{\lumen\per\meter\squared}           \\
-    \hline
+    \bottomrule
   \end{tabular}
   \caption{Unità SI derivate con nomi e simboli speciali}
 \end{table}
@@ -85,20 +85,20 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
 \begin{table}[ht]
   \centering
   \begin{tabular}{lll}
-    \hline
-    nome                   & simbolo                 & valore in unità SI                                                                \\
-    \hline
-    minuto (tempo)         & \si{\minute}            & $\SI{1}{\minute} = \SI{60}{\second}$                                              \\
-    ora                    & \si{\hour}              & $\SI{1}{\hour}=\SI{60}{\minute}=\SI{3600}{\second}$                               \\
-    giorno                 & \si{\day}               & $\SI{1}{\day}=\SI{24}{\hour}=\SI{86400}{\second}$                                 \\
-    grado                  & \si{\degree}            & $\SI{1}{\degree}=\pi/180\si{\radian}$                                             \\
-    minuto (angolo piano)  & \si{\arcminute}         & $\SI{1}{\arcminute}=\SI[parse-numbers = false]{1/60}{\degree}=\pi/10800\si{\radian}$                     \\
-    secondo (angolo piano) & \si{\arcsecond}         & $\SI{1}{\arcsecond}=\SI[parse-numbers = false]{1/60}{\arcminute}=\pi/648000\si{\radian}$                 \\
-    litro                  & \si{\litre},\si{\liter} & $\SI{1}{\litre}=\SI{1}{\liter}=\SI{1}{\deci\meter\cubed}=\SI{1E-3}{\meter\cubed}$ \\
-    tonnellata             & \si{\tonne}             & $\SI{1}{\tonne}=\SI{1E3}{\kilogram}$                                              \\
-    neper                  & \si{\neper}             & $\SI{1}{\neper}=1$                                                                \\
-    bel                    & \si{\bel}               & $\SI{1}{\bel}=(1/2)\log_{10}(\si{\neper})$                                        \\
-    \hline
+    \toprule
+    nome                   & simbolo                 & valore in unità SI                                                                       \\
+    \midrule
+    minuto (tempo)         & \si{\minute}            & $\SI{1}{\minute} = \SI{60}{\second}$                                                     \\
+    ora                    & \si{\hour}              & $\SI{1}{\hour}=\SI{60}{\minute}=\SI{3600}{\second}$                                      \\
+    giorno                 & \si{\day}               & $\SI{1}{\day}=\SI{24}{\hour}=\SI{86400}{\second}$                                        \\
+    grado                  & \si{\degree}            & $\SI{1}{\degree}=\pi/180\si{\radian}$                                                    \\
+    minuto (angolo piano)  & \si{\arcminute}         & $\SI{1}{\arcminute}=\SI[parse-numbers = false]{1/60}{\degree}=\pi/10800\si{\radian}$     \\
+    secondo (angolo piano) & \si{\arcsecond}         & $\SI{1}{\arcsecond}=\SI[parse-numbers = false]{1/60}{\arcminute}=\pi/648000\si{\radian}$ \\
+    litro                  & \si{\litre},\si{\liter} & $\SI{1}{\litre}=\SI{1}{\liter}=\SI{1}{\deci\meter\cubed}=\SI{1E-3}{\meter\cubed}$        \\
+    tonnellata             & \si{\tonne}             & $\SI{1}{\tonne}=\SI{1E3}{\kilogram}$                                                     \\
+    neper                  & \si{\neper}             & $\SI{1}{\neper}=1$                                                                       \\
+    bel                    & \si{\bel}               & $\SI{1}{\bel}=(1/2)\log_{10}(\si{\neper})$                                               \\
+    \bottomrule
   \end{tabular}
   \caption{Unità accettate per l'uso con l'SI}
 \end{table}
@@ -114,13 +114,13 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
   \tnote[b]{l'unità di massa atomica è equivalente a $1/12$ della massa di un atomo di $^{12}\mathrm{C}$; $\SI{1}{\atomicmassunit}=1.660\,540\,2\pm 0.000\,001\,0 \times 10^{-27}\si{\kilogram}$}
   \tnote[c]{l'unità astronomica è tale che quando è usata per descrivere il moto dei pianeti nel sistema solare la costanze gravitazionale eliocentrica vale $(0.017\,202\,098\,95)^2\si{\astronomicalunit\cubed\per\day\squared}$}
 }
-{\hline
+{\toprule
   nome&simbolo&definizione\\
-  \hline
+  \midrule
   elettronvolt&\si{\electronvolt}&\tmark[a]\\
   unità di massa atomica&\si{\atomicmassunit}&\tmark[b]\\
   unità astronomica&\si{\astronomicalunit}&\tmark[c]\\
-  \hline
+  \bottomrule
 }
 
 
@@ -130,13 +130,13 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
 \begin{table}[ht]
   \centering
   \begin{tabular}{lll}
-    \hline
+    \toprule
     nome       & simbolo        & valore in unità SI                                                       \\
-    \hline
+    \midrule
     angstr\"om & \si{\angstrom} & $\SI{1}{\angstrom}=\SI{0.1}{\nano\meter}=\SI{1E-10}{\meter}$             \\
     ettaro     & \si{\hectare}  & $\SI{1}{\hectare}=\SI{1}{\hecto\meter\squared}=\SI{1E4}{\meter\squared}$ \\
     bar        & \si{\bar}      & $\SI{1}{\bar}=\SI{1E5}{\pascal}$                                         \\
-    \hline
+    \bottomrule
   \end{tabular}
   \caption{unità in uso temporaneo nell'SI}
 \end{table}
@@ -144,16 +144,17 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
 \begin{table}[ht]
   \centering
   \begin{tabular}{llcl}
-    \hline
+    \toprule
     Grandezza         & Nome                      & Unità                          & Unità equivalenti \\
-    \hline superficie & metro quadrato            & \si{\meter\squared}                                \\
+    \midrule
+    superficie        & metro quadrato            & \si{\meter\squared}                                \\
     volume            & metro cubo                & \si{\cubic\meter}                                  \\
     frequenza         & hertz                     & \si{\hertz}                    & \si{\per\second}  \\
     densità           & kilogammo al metro cubo   & \si{\kilogram\per\cubic\meter}                     \\
     velocità          & metro al secondo          & \si{\metre\per\second}                             \\
     velocità angolare & radiante al secondo       & \si{\radian\per\second}        & \si{\per\second}  \\
     accelerazione     & metro al secondo quadrato & \si{\meter\per\second\squared} &                   \\
-    \hline
+    \bottomrule
   \end{tabular}
 \end{table}
 
@@ -161,13 +162,13 @@ In questo modo $\mu_0=4\SI[parse-numbers = false]{\pi e-7}{\henry\per\meter}$ es
 \begin{table}[ht]
   \centering
   \begin{tabular}{llcl}
-    \hline
+    \toprule
     Grandezza                      & Nome    & Unità                           & Unità equivalenti                                        \\
-    \hline
+    \midrule
     Carica                         & coulomb & \si{\coulomb}                   & \si{\ampere\second}                                      \\
     Densità di carica superficiale &         & \si{\coulomb\per\meter\squared} & \si{\ampere\second\per\meter\squared}                    \\
     Densità di carica volumetrica  &         & \si{\coulomb\per\meter\cubed}   & \si{\ampere\second\per\meter\cubed}                      \\
     Potenziale elettrostatico      & volt    & \si{\volt}                      & \si{\meter\squared\kilogram\per\second\cubed\per\ampere} \\
-    \hline
+    \bottomrule
   \end{tabular}
 \end{table}
