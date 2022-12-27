@@ -193,7 +193,7 @@ Matematicamente il prodotto vettoriale non è facile da definire. Esso restituis
           & =(a_yb_z-a_zb_y)\ve i+(a_zb_x-a_xb_z)\ve j+(a_xb_y-a_yb_x)\ve k
 \end{align*}
 
-Il prodotto scalare può essere calcolato come determinante di una matrice $3\times 3$:
+Il prodotto vettoriale può essere calcolato come determinante di una matrice $3\times 3$:
 \[\ve p_v=
   \left| \begin{array}{ccc} \ve i & \ve j & \ve k \\
              a_x         & a_y   & a_z   \\
@@ -205,11 +205,15 @@ Il prodotto vettoriale è antisimmetrico cioè $\ve a \wedge \ve
 vettoriale è l'area del parallelogramma avente come lati i due
 vettori.
 
-Il prodotto vettoriale è dipendente dalla scelta del sistema di riferimento. In particolare il verso del prodotto vettoriale segue la regola della mano destra se il sistema di riferimento è destrogiro, altrimenti il verso risulta opposto. Per questo il prodotto vettoriale è chiamato pseudovettore. In natura le grandezze osservabili non devono dipendere dalla scelta dell'orientazione (chiralità) degli assi cartesiani. Per convenzione si sceglie un sistema di riferimento destrogiro.
+Il prodotto vettoriale è dipendente dalla scelta del sistema di riferimento. 
+In Figura~\ref{fig:sistema_destrogiro} sono illustrati il sistemata destrogiro e sinistrogiro, che seguono la regola della mano destra o della mano sinistra. 
+In particolare il verso del prodotto vettoriale segue la regola della mano destra se il sistema di riferimento è destrogiro, altrimenti il verso risulta opposto. Per questo il prodotto vettoriale è chiamato pseudovettore. In natura le grandezze osservabili non devono dipendere dalla scelta dell'orientazione (chiralità) degli assi cartesiani. Per convenzione si sceglie un sistema di riferimento destrogiro.
 \begin{figure}[htbp]
   \centering
   \subfigure[destrogiro]{\input{immagini/fisica1/sistema_destrogiro}}
   \subfigure[sinistrogiro]{\input{immagini/fisica1/sistema_sinistrogiro}}
+  \caption{Coordinate destrogire e sinistrogire}
+  \label{fig:sistema_destrogiro}
 \end{figure}
 
 \subsubsection{\index{prodotto!misto}Prodotto Misto}
@@ -727,16 +731,24 @@ se $\beta\rightarrow 0$ allora $v\rightarrow gt+v_0$
 \end{figure}
 
 \section{\index{forza!apparente}Forze apparenti}
-Le forze apparenti non sono delle vere forze, sono degli strumenti che consentono di usare la seconda legge delle dinamica anche in sistemi non inerziali. In particolare le forze apparenti non rispettano il terzo principio della dinamica. Siano $O$ e $O'$ due sistemi di riferimento; $O'$ si muova verso destra con accelerazione $\ve a_{O'}$ rispetto ad $O$. $\ve r_{O'}$ il vettore che individua $O'$ rispetto \mbox{ad $O$.}
-\begin{figure}[htbp]
+Le forze apparenti non sono delle vere forze, sono degli strumenti che consentono di usare la seconda legge delle dinamica anche in sistemi non inerziali. In particolare le forze apparenti non rispettano il terzo principio della dinamica.
+
+\subsection{Sistema in moto lineare accelerato}
+Con riferimento alla Figura~\ref{fig:forze_apparenti}, siano $O$ e $O'$ due sistemi di riferimento; sia $O$ un sistema inerziale e $O'$ si muova verso destra con accelerazione $\ve a_{O'}$ rispetto ad $O$. $\ve r_{O'}$ il vettore che individua $O'$ rispetto ad $O$. Possiamo scrivere le quantità cinematiche di un punto $P$ nel sistema di coordinate di $O$ rispetto a quelle di $O'$:
+\[\ve r={\ve r}\,^\prime+\ve r_{O'}\qquad\ve v=\ve v\,'+\ve v_{O'}\qquad\ve a=\ve a\,'+\ve a_{O'}\]
+\begin{figure}[tbp]
   \centering
   \includegraphics[scale=0.5]{immagini/fisica1/apparenti}
+  \caption{Sistemi di riferimento in moto relativo}
+  \label{fig:forze_apparenti}
 \end{figure}
-\[\ve r={\ve r}\,^\prime+\ve r_{O'}\qquad\ve v=\ve v\,'+\ve v_{O'}\qquad\ve a=\ve a\,'+\ve a_{O'}\]
+Se scriviamo il secondo principio della dinamica, che deve valere in generale solo nel sistema inerziale $O$:
 \[m\ve a=m\ve a'+m\ve a_{O'}=\ve F\]
+vediamo che questo non vale nel sistema $O'$ quando $a_O'\neq 0$:
 \[m\ve a'=\ve F-m\ve a_{O'}=\ve F+\ve F_\text{app}\]
+Possiamo però ritenere il secondo principio della dinamica valido in $O'$ se supponiamo che a causa dell'accelerazione del sistema, ci sia una forza apparente che agisca sui corpi:
 \[\ve F_\text{app}=-m\ve a_{O'}\]
-\subsection{Terra}
+\subsection{Sistema in moto circolare uniforme (Terra)}
 La Terra non è un sistema inerziale\index{sistema!inerziale}, infatti ruota intorno al Sole e ruota attorno al proprio asse. Consideriamo quest'ultimo moto:
 \begin{figure}[htbp]
   \centering
