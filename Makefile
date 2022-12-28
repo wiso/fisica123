@@ -1,6 +1,6 @@
 # ancora sperimentale
 
-NAME	= fisica_linux
+NAME	= fisica
 MAIN_SOURCE	= $(NAME).tex
 OUTDVI  = $(NAME).dvi
 OUTPDF	= $(NAME).pdf
@@ -48,11 +48,11 @@ $(BBL): $(TEXSRC) $(BIBSRC)
 	$(BIBTEX) $(TARGET)
 
 clean:
-	rm -f *.aux fisica_linux.ilg fisica_linux.ind fisica_linux.lof fisica_linux.log fisica_linux.lot fisica_linux.toc *.tex~ TeX/*.tex~ TeX/*.aux TeX/*.backup TeX/*.bak fisica_linux.out fisica_linux.blg fisica_linux.idx
-	cat fisica_linux.maf|xargs rm -f
-	rm -f fisica_linux.maf
+	rm -f *.aux fisica.ilg fisica.ind fisica.lof fisica.log fisica.lot fisica.toc *.tex~ TeX/*.tex~ TeX/*.aux TeX/*.backup TeX/*.bak fisica.out fisica.blg fisica.idx
+	cat fisica.maf|xargs rm -f
+	rm -f fisica.maf
 	rm -f *.backup
 
 tar:	
 	clean
-	tar cfv fisica_linux.tar fisica; mv fisica_linux.tar fisica; gzip fisica_linux.tar
+	tar cfv fisica.tar fisica; mv fisica.tar fisica; gzip fisica.tar

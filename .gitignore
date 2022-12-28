@@ -22,7 +22,7 @@
 *.out
 *.synctex.gz
 *.gin
-fisica_linux.mtc*
-fisica_linux.pdf
-fisica_linux.ptc*
-fisica_linux.fdb_latexmk
+fisica.mtc*
+fisica.pdf
+fisica.ptc*
+fisica.fdb_latexmk

@@ -28,19 +28,19 @@ jobs:
     - name: compile latex
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: fisica_linux.tex
+        root_file: fisica.tex
         latexmk_shell_escape: true
 #        continue_on_error: true
     - name: Upload PDF file
       uses: actions/upload-artifact@v3
       with:
         name: PDF
-        path: fisica_linux.pdf
+        path: fisica.pdf
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-          files: fisica_linux.pdf
+          files: fisica.pdf
 
 #    - name: test1
 #      run: sudo apt install apt-file
