@@ -915,34 +915,39 @@ dove il primo termine addizionale è la \index{forza!centrifuga}forza centrifuga
   \end{equation}
   sinonimi di quantità di moto sono: quantità di modo lineare, momento, momento lineare.
 \end{Def}
-\[\frac{\ud \ve p}{\ud t}=\frac{\ud\left(m\ve v\right)}{\ud t}=m\ve a=\ve F\]
-\[\text{Newton disse: }\ve F=\frac{\ud \ve p}{\ud t}\]
+La derivata della quantità di moto è la forza, ed è in questo modo che Newton introdusse il secondo principio:
+\begin{equation}
+\frac{\ud \ve p}{\ud t}=\frac{\ud\left(m\ve v\right)}{\ud t}=m\ve a=\ve F
+\end{equation}
 \subsection{Sistema di \texorpdfstring{$N$}{N} punti}
 \begin{Def}[quantità di moto di un sistema di $N$ punti]
   La quantità di moto totale di un sistema di $N$ punti è la somma delle quantità di moto dei singoli punti.
   \begin{equation}
-    \ve p=\sum_{I=1}^N\ve p_i=\sum_{i=1}^Nm_i\ve v_i
+    \ve p=\sum_{I=1}^N\ve p_i
   \end{equation}
 \end{Def}
 \begin{Teo}
-  La variazione della quantità di moto è uguale alle forze esterne
-  \begin{align*}\frac{\ud \ve p}{\ud t} & =\frac{\ud }{\ud t}\sum^N_{i=1}m_i\ve v_i=\sum_{i=1}^{N}\frac{\ud \left(m\ve v_i\right)}{\ud t}=\sum_{i=1}^{N}m_i\frac{\ud \ve v_i}{\ud t}=\sum_{i=1}^{N}m_i\ve a_i= \\
-                                      & =\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}+\sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}\end{align*}
-  Nell'ultimo passaggio abbiamo usato il terzo principio della dinamica. Si conclude che in un sistema isolato, cioè con
+  La variazione della quantità di moto di un sistema è uguale alle forze esterne:
+  \begin{equation}
+    \frac{\ud \ve p}{\ud t}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}
+  \end{equation}
+ Si conclude che in un sistema isolato, cioè con
   $\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}=0$ vale la legge di
-  conservazione della quantità di moto: $\ve
-    p=\overrightarrow\const$.
+  conservazione della quantità di moto del sistema.
 \end{Teo}
-\begin{Es}[carrellini]
-  Due carrellini di massa $m$ e $M$ si urtano frontalmente con
-  velocità iniziali $v$ e $V$.
-  \[ P_i= P_f=0\qquad P_f=M V+m v=0\]
-  \[M V=m v\qquad\frac{V}{v}=\frac{m}{M}\]
-\end{Es}
+Consideriamo che su ogni punto agiscono sia forze esterne, che forze interne, cioè derivanti dall'interazione con altri punti del sistema:
+\[
+  \frac{\ud \ve p}{\ud t}  =\frac{\ud }{\ud t}\sum^N_{i=1}m_i\ve v_i=\sum_{i=1}^{N}m_i\ve a_i=
+  =\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}+\sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}\]
+Nell'ultimo passaggio abbiamo usato il terzo principio della dinamica $\stackrel{\text{Int}}{\ve{F_{ij}}} = -\stackrel{\text{Int}}{\ve{F_{ji}}}$:
+\[
+  \sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i} = \sum_{i\neq j}\stackrel{\text{Int}}{\ve F_{ij}} = \frac{1}{2}\sum_{i\neq j}\left(\stackrel{\text{Int}}{\ve F_{ij}} + \stackrel{\text{Int}}{\ve{F_{ij}}}\right) = \frac{1}{2}\sum_{i\neq j}\stackrel{\text{Int}}{\ve{F_{ij}}} + \sum_{i\neq j}\stackrel{\text{Int}}{-\ve{F_{ji}}} = 0
+  \]
 
 \begin{Es}[decadimento]
   L'uranio decade in questo modo:
   \[\ce{^{238}_{92}U -> ^{234}_{90}Th + ^{4}_{2}\alpha}\]
+  Consideriamo il sistema di riferimento in cui l'uranio è a riposo, quindi $\ve p_0=0$:
   \[\ve p_f=m_{\ce{Th}}\ve v_{\ce{Th}}+m_\alpha \ve v_\alpha=\ve p_0=0\]
   \[
     m_{\ce{Th}}v_{\ce{Th}}=m_\alpha v_\alpha\qquad v_\alpha=\SI{2E7}{\metre\per\second}
