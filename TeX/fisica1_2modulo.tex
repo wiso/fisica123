@@ -1797,25 +1797,32 @@ Einstein si interrogava di come le forze potessero propagarsi, in particolare qu
 \index{relatività!speciale|)}
 \chapter{Onde\index{onde}}
 \minitoc
-Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinale sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Di solito quando si parla di onde si parla di treno d'onde\index{treno d'onde} periodico, il caso più semplice è l'onda armonica\index{onda!armonica} in cui tutte le particelle subiscono un moto armonico semplice. Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
+Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinale sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
 
 Se mandiamo due impulsi in un mezzo elastico:
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/Onda1}
 \end{figure}
-\[f(x)=f(x')=f(x-vt)\]
+\begin{equation}
+f(x)=f(x')=f(x-vt)
+\label{eq:onda_progressiva}
+\end{equation}
 questo perché la forma d'onda non cambia. Questa è un'onda progressiva\index{onda!progressiva}, cioè un'onda che si propaga nel verso positivo delle $x$, se fosse al contrario sarebbe un'onda regressiva\index{onda!regressiva} e sarebbe
-\[f(x)=f(x+vt)\]
+\begin{equation}
+f(x)=f(x+vt)
+\label{eq:onda_regressiva}
+\end{equation}
+
 \section{Onde sinusoidali}
 Caso onda progressiva: $y(x,t)=f(x-vt)$
 al tempo zero:
-\[y(x,0)=f(x)=y_m\sin\left(\frac{2\pi}{\lambda} x\right)\]
-\[\lambda=vT\]
-\[y(x,t)=f(x-vt)=y_m\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)\right]=y_m\sin\left(kx-\omega t\right)\]
+\[y(x,0)=f(x)=y_m\sin\left(\frac{2\pi}{\lambda} x + \varphi\right)\]
+dove $\lambda$ è la lunghezza d'onda, ed è legata al perido $T$ e alla velocità di propagazione $v$: \(\lambda=vT\). $\varphi$ è la fase.
+\[y(x,t)=f(x-vt)=y_m\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)+\varphi\right]=y_m\sin\left(kx-\omega t+\varphi\right)\]
+Dove nell'ultima passaggio sono stati introdotti il numero d'onda $k$ e la pulsazione $\omega$
 \[k=\frac{2\pi}{\lambda}\qquad \omega=\frac{2\pi}{T}=2\pi\nu\]
-$k$ numero d'onda, $\omega$ pulsazione. Considerando anche la fase $\varphi$:
-\[y(x,t)=y_m\sin\left(kx-\omega t+\varphi\right)\]
+
 \section{Corda Tesa\index{onda!su corda tesa}\index{corda tesa}}
 \begin{figure}[htbp]
    \centering
@@ -1845,7 +1852,7 @@ Chiamiamo $\rho$ la densità lineare:
 
 \parbox[]{\textwidth}{
    \section{Equazione differenziale di un'onda\index{equazione!differenziale di un'onda}}
-   Nel caso progressivo:
+   Dimostriamo che le onde \eqref{eq:onda_progressiva} e \eqref{eq:onda_regressiva} soddisfano una equazione differenziale, che è l'equazione dell'onda. Nel caso progressivo:
    \[y=f(x-vt)\qquad z=x-vt\]
    \[\frac{\partial y}{\partial z}=\frac{\partial y}{\partial t}\frac{\partial t}{\partial z}=\frac{\partial y}{\partial t}\frac{1}{\frac{\partial z}{\partial t}}=-\frac{1}{v}\frac{\partial y}{\partial t}\]
    \[\frac{\partial y}{\partial z}=\frac{\partial y}{\partial x}\frac{\partial x}{\partial z}=\frac{\partial y}{\partial x}\frac{1}{\frac{\partial z}{\partial x}}=\frac{\partial y}{\partial x}\]
@@ -1861,9 +1868,6 @@ Chiamiamo $\rho$ la densità lineare:
 Nel caso della corda tesa $v=\sqrt{\frac{T}{\rho}}$. Nella velocità ci sono sempre due termini, uno di elasticità del mezzo (in questo caso $T$) e uno di inerzia (in questo caso $\rho$).
 
 Nel caso di onda regressiva l'equazione differenziale è uguale, anche nei segni.
-\section{Velocità e accelerazione trasversale}
-\[u_y(x,t)=\frac{\partial y}{\partial t}=\frac{\partial}{\partial t}\left[y_m\sin\left(kx-\omega t\right)\right]=-y_m\omega\cos\left(kx-\omega t\right)\]
-\[a_y(x,t)=\frac{\partial u_y}{\partial t}=-y_m\omega^2\sin\left(kx-\omega t\right)=-\omega^2 y\]
 \section{Principio di sovrapposizione\index{principio!di sovrapposizione}}
 \begin{Pri}[sovrapposizione]
    In un mezzo in cui due onde si sovrappongono, la perturbazione è la somma delle due onde.
@@ -1874,10 +1878,10 @@ Nel caso di onda regressiva l'equazione differenziale è uguale, anche nei segni
    \includegraphics[scale=0.5]{immagini/fisica1/interferenza_distruttiva}
    \caption{Interferenza distruttiva\index{interferenza!distruttiva}.}
 \end{figure}
-L'interferenza è la sovrapposizione di due onde sinusoidali. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, ma con diversa fase. La differenza di fase è la costante di fase.
+L'interferenza è la sovrapposizione di due onde. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, ma con diversa fase. La differenza di fase $\phi$ è chiamata costante di fase.
 \[y_1=y_m\sin(kx-\omega t)\qquad y_2=y_m\sin(kx-\omega t+\varphi)\]
 \begin{align*}
-   y_1+y_2 & =y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\phi\right)\right]       \\
+   y_1+y_2 & =y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\varphi\right)\right]       \\
            & =y_m\left[2\cos\frac{\varphi}{2}\sin\left(kx-\omega t+\frac{\varphi}{2}\right)\right] \\
            & =\left(2y_m\cos\frac{\varphi}{2}\right)\sin\left(kx-\omega t+\frac{\varphi}{2}\right)
 \end{align*}
