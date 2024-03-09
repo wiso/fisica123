@@ -1469,8 +1469,57 @@ Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
 \[\lambda_{44}^2=\frac{c^2+\lambda^2u^2}{c^2}=\frac{1}{1-\beta^2}\]
 \[\lambda_{44}=\pm\frac{1}{\sqrt{1-\beta^2}}\]
 Diamo segno positivo a $\lambda_{44}$ e negativo a $\lambda_{41}$, in quanto se consideriamo un istante molto prossimo al momento della partenza allora $x\rightarrow 0$, $t'$ deve essere positivo (il tempo scorre nello stesso verso) e quindi $\lambda_{44}>0$.
+
+Riassumendo, le trasformate di Lorentz permettono di trasformare le coordinate $(t, x, y, z)$ tra due sistemi inerziali\footnote{I sistemi inerziali sono quelli dove vale la prima legge della dinamica.}. Le trasformazioni più interessanti sono i boost, ovvero tra due sistemi inerziali che si muovono di moto rettilineo uniforme per esempio lungo l'asse $x$ e con coordinate sincronizzate in ($0,0,0,0$), con gli assi orientati nella stessa direzione e verso\footnote{considerando anche il tempo come asse, in particolare il verso del tempo è uguale nei due sistemi (ortocroni)}:
+\begin{equation}
+   \begin{split}
+      t' &= \gamma_b \left(t - \frac{v_b x}{c^2}\right) \\
+      x' &= \gamma_b \left(x - v_b t\right) \\
+      y' &= y \qquad z'=z
+   \end{split}
+   \label{eq:boost}
+\end{equation}
+dove le coordinate primate sono quelle del sistema $O'$ che si muove rispetto al sistema $O$ con velocità $v_b$ (velocità del boost o velocità di trascinamento) lungo l'asse $x$. I coefficienti relativistici $\beta_b$ e $\gamma_b$ sono definiti da:
+\begin{equation}
+   \gamma_b = \frac{1}{\sqrt{1 - \beta_b^2}} \qquad \beta_b = v_b / c
+\end{equation}
+
+
+Dalla \eqref{eq:boost} si può trovare la relazione inversa:
+\begin{equation}
+   \begin{split}
+      t &= \gamma_b \left(t' + \frac{v_b x}{c^2}\right) \\
+      x &= \gamma_b \left(x' + v_b t\right) \\
+      y &= y' \qquad z=z'
+   \end{split}
+   \label{eq:boostinv}
+\end{equation}
+
+Considerando come coordinate $(ct, x, y, z)$, e ignorando $y$ e $z$ che non cambiano, l'equazione \eqref{eq:boost} diventa più simmetrica:
+
+\begin{equation}
+   \begin{split}
+      ct' &= \gamma_b (ct - \beta_b x) \\
+      x' &= \gamma_b (x - \beta_b ct) \\
+   \end{split}
+\end{equation}
+in forma matriciale le prime due componenti (dove si sono tolti i pedici $b$):
+
+\begin{equation}
+   \begin{pmatrix} ct' \\ x'\end{pmatrix} = \begin{pmatrix}\gamma & -\gamma\beta\\ -\gamma\beta & \gamma\end{pmatrix}\begin{pmatrix}ct\\ x\end{pmatrix}
+\end{equation}
+e l'inversa:
+
+\begin{equation}
+   \begin{pmatrix} ct \\ x\end{pmatrix} = \begin{pmatrix}\gamma & \gamma\beta\\ \gamma\beta & \gamma\end{pmatrix}\begin{pmatrix}ct'\\ x'\end{pmatrix}
+\end{equation}
+
+
+
+
 \subsection{Trasformate di Lorentz e Galileo}
-Se $u\ll c$, cioè se $\beta\rightarrow 0$ $\Rightarrow$ Lorentz $\rightarrow$ ``buon'' Galileo e il tempo assoluto.
+
+Per velocità piccole rispetto alla velocità della luce si ha: $\gamma_b = 1 + \beta_b^2 / 2 + O(\beta_b^3)$ e quindi si ottengono le trasformate di Galileo:
 \[\left\{
    \begin{array}{l}
       x^\prime=\dfrac{x-ut}{\sqrt{1-\beta^2}} \\
@@ -1533,6 +1582,32 @@ Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$ cioè $O$ vede l'evento più l
    La distanza percorsa dal mesone, prima di decadere, osservata dal laboratorio è quindi:
    \[d=\tau u=\tau \beta c\simeq \SI{39}{\metre} \]
 \end{Es}
+
+\begin{Es}[Paradosso della scala]
+   Come esempio di un paradosso che si ottiene non considerando il fatto che la simultaneità è un concetto relativo consideriamo il seguente esempio classico. Una scala di lunghezza $l_0$ a riposo non entra in un box, in quando la sua lunghezza di quest'ultimo a riposo $l$ è inferiore. Il box è dotato di due porte dalla quale la scala può entrare ed uscire. Per risolvere il problema della dimensione si potrebbe mettere in moto la scala orizzontalmente, in modo tale che questa venga osservata come contratta dal sistema di riferimento del box e quindi dovrebbe entrarci. Allo stesso modo però se considero la stessa situazione ma vista dal sistema solidale con la scala questa volta è il box ad essere contratto e quindi la scala non entra nel box. Il problema che il concetto di ``essere dentro'' è anch'esso relativo, poiché questo significa che entrambi gli estremi della scala sono simultaneamente all'interno del box, ma come abbiamo visto il concetto di simultaneità è relativo.
+\end{Es}
+
+\subsection{Effetto Doppler}
+Immaginiamo una sorgente ferma rispetto ad $O'$ posizionata nell'origine. $O'$ sia in moto rispetto a $O$ con velocità $v$ verso l'asse $x$. Conosciamo la frequenza della sorgene a riposo, in $O'$: $\nu'$, vogliamo calcolare quella vista da $O$. Per semplicità supponiamo che il segnale sia di tipo digitale e che $O'$ osservi un ``bip'' con periodo $T'=1/\nu'$. Il primo bip (che assumiamo avvenire al tempo $0$) e il secondo bip sono due eventi a cui corrispondono le coordinate rispetto ad $O'$: $(t_1', x_1') = (0, 0)$ e $(t_2', x_2') = (0, T')$. Usando le trasformate di Lorentz \eqref{eq:boostinv} otteniamo:
+\[
+   \begin{pmatrix}t_1\\ x_1\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}\qquad \begin{pmatrix}t_2\\ x_2\end{pmatrix} = \begin{pmatrix}\gamma/\nu'\\ \frac{\gamma v}{\nu'}\end{pmatrix}
+\]
+Il periodo osservato da $O$ non è $t_2-t_1$ perchè questi sono eventi che avvengono in due punti diversi. La parte mancante non è un effetto relativistico, ma è semplicemente dovuto al fatto che la sorgente si è spostata e quindi il fronte d'onda (il bip) ci metterà di più (nel caso la sorgente si allontani) ad arrivare, esattamente come nel caso classico. Se immaginiamo che l'onda sia un'onda luminosa la sua velocità è sempre $c$ in entrambi i sistemi, quindi considerando il tempo che ci mette a propagare da $x_2$ a $O$:
+\[
+   T = t_2 - t_1 + \frac{x_2}{c} = \frac{\gamma}{\nu'} - 0 + \frac{\gamma v}{\nu' c} = \frac{\gamma}{\nu}\left(1 + \frac{v}{c}\right)
+\]
+e la frequenza:
+\[
+   \nu = \frac{\nu'}{\gamma}\frac{c}{c + v} = \nu'\frac{\sqrt{1 - v^2/c^2}}{1+v/c}=\nu'\sqrt\frac{1-\beta}{1+\beta} = \nu'\gamma(1-\beta)
+\]
+si noti che il fattore Doppler $\sqrt\frac{1-\beta}{1+\beta}$ è minore di 1 per $\beta$ positivi, quindi se la sorgente si allontana la sua frequenza è percepita come inferiore (redshift). In generale si può trovare l'espressione:
+\begin{equation}
+   \nu = \nu'\gamma\left(1 - v/u'\right)
+\end{equation}
+dove $u'$ è la velocità dell'onda nel sistema della sorgente a riposo $O'$.
+
+È interessante notare che se consideriamo un fotone di energia $E'$ emesso dalla sorgente a riposo rispetto ad $O'$ usando \eqref{eq:boostinv} si ottiene $E = \gamma(1-\beta)E'$, che è uguale alla relazione tra $\nu'$ e $\nu$, infatti sappiamo che vale $E=h\nu$.
+
 
 \section{Composizione delle velocità\index{composizione delle velocità!relativistiche}}
 La velocità rimane sempre la derivata del vettore posizione: $v_x=\frac{\ud x}{\ud t}$.
@@ -1664,11 +1739,14 @@ L'energia potenziale ha sempre la stessa definizione, il lavoro è definito come
    \includegraphics[scale=0.4]{immagini/fisica1/Trg_rel}
 \end{figure}
 
-\section{Elettronvolt\index{elettronvolt}}
-La carica dell'elettrone vale circa $\SI{1.6E-19}{\coulomb}$. $\SI{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\SI{1}{\volt}$
-\[
-   E=qV\qquad \si{\electronvolt}=q_e(\SI{1}{\volt})=\SI{1.6E-19}{\joule}
-\]
+\begin{Def}[Elettronvolt\index{elettronvolt}]
+   La carica dell'elettrone vale circa $\SI{1.6E-19}{\coulomb}$. $\SI{1}{\electronvolt}$ è quell'energia che acquista un elettrone accelerato da una ddp di $\SI{1}{\volt}$
+   \[
+      E=qV\qquad \si{\electronvolt}=q_e(\SI{1}{\volt})=\SI{1.6E-19}{\joule}
+   \]
+
+\end{Def}
+
 Molto usati sono i multipli: \si{\kilo\electronvolt} (chev), \si{\mega\electronvolt} (mev), \si{\giga\electronvolt} (gev), \si{\tera\electronvolt} (tev).
 
 Anche le masse e le quantità di moto si possono esprimere in \si{\electronvolt}, combinando opportunamente con $c$.
@@ -1805,13 +1883,13 @@ Se mandiamo due impulsi in un mezzo elastico:
    \includegraphics[scale=0.5]{immagini/fisica1/Onda1}
 \end{figure}
 \begin{equation}
-f(x)=f(x')=f(x-vt)
-\label{eq:onda_progressiva}
+   f(x)=f(x')=f(x-vt)
+   \label{eq:onda_progressiva}
 \end{equation}
 questo perché la forma d'onda non cambia. Questa è un'onda progressiva\index{onda!progressiva}, cioè un'onda che si propaga nel verso positivo delle $x$, se fosse al contrario sarebbe un'onda regressiva\index{onda!regressiva} e sarebbe
 \begin{equation}
-f(x)=f(x+vt)
-\label{eq:onda_regressiva}
+   f(x)=f(x+vt)
+   \label{eq:onda_regressiva}
 \end{equation}
 
 \section{Onde sinusoidali}
@@ -1881,7 +1959,7 @@ Nel caso di onda regressiva l'equazione differenziale è uguale, anche nei segni
 L'interferenza è la sovrapposizione di due onde. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, ma con diversa fase. La differenza di fase $\phi$ è chiamata costante di fase.
 \[y_1=y_m\sin(kx-\omega t)\qquad y_2=y_m\sin(kx-\omega t+\varphi)\]
 \begin{align*}
-   y_1+y_2 & =y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\varphi\right)\right]       \\
+   y_1+y_2 & =y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\varphi\right)\right]    \\
            & =y_m\left[2\cos\frac{\varphi}{2}\sin\left(kx-\omega t+\frac{\varphi}{2}\right)\right] \\
            & =\left(2y_m\cos\frac{\varphi}{2}\right)\sin\left(kx-\omega t+\frac{\varphi}{2}\right)
 \end{align*}
