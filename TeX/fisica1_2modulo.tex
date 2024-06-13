@@ -142,16 +142,16 @@ la soluzione è $V_\text{immerso}=\frac{\rho}{\rho_\text{fluido}}V$ e poiché è
    \centering
    \includegraphics[scale=0.4]{immagini/fisica1/equilibrio}
 \end{figure}
-Forze di volume: proporzionali al volume
+Consideriamo le forze di volume come quelle proporzionali al volume del fluido su cui la forza è applicata. Definiamo
 \[\ve f=\frac{\ve F}{m}\]
 notare che $\ve f$ è un'accelerazione.
 
-
-Forze di superficie: dovute al liquido che lo circonda, proporzionali alla superficie
+Consideriamo invece le forze di superficie come quelle forze applicate sul fluido che sono proporzionali alla superficie del fluido. Queste forze sono dovute al fluido che lo circonda.
 \[F=pA\]
-Lungo l'asse $x$:
 
-\[f_x\ud m+p(x)\ud z\ud y-p(x+\ud x)\ud y\ud z=0\]
+Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse $x$:
+
+\[f_x\ud m+p(x)\ud y\ud z-p(x+\ud x)\ud y\ud z=0\]
 \[f_x\rho\ud x\ud y\ud z+p(x)\ud y\ud z-(p(x)+\frac{\partial p}{\partial x}\ud x)\ud y\ud z=0\]
 \[f_x\rho\ud x\ud y\ud z-\frac{\partial p}{\partial {x}}\ud x\ud y\ud z=0\]
 \[f_x\rho=\frac{\partial p}{\partial x}\quad f_y\rho=\frac{\partial p}{\partial y}\quad f_z\rho=\frac{\partial p}{\partial z}\]
@@ -162,7 +162,7 @@ Lungo l'asse $x$:
    \[
       f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p \quad p=p_0+\rho gz
    \]
-   In generale:
+   In generale introducendo l'energia potenziale associata alla forza $\ve f$, $U_m$:
    \[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
    \[\rho U_m=-p+\const\]
    Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
@@ -276,7 +276,7 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 \end{center}
 Consideriamo un tempo $\Delta t$ piccolo e una porzione di massa $\Delta m$. L'effetto netto tra la situazione iniziale e quella finale è di spostare l'elementino da un'estremità all'altro.
 
-Il lavoro è svolto dalla forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$ poiché non c'è variazione di energia potenziale.
+Il lavoro è svolto dalla forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$. L'equazione di continuità:
 \[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
 \[
    \left\{
