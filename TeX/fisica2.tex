@@ -2124,8 +2124,8 @@ Dunque la forza è massima quando la spira è perpendicolare al campo magnetico.
 \[\ve M=\iint_S\ud\ve m\times \ve B=\iint I\ud a\ve n\times B=I\ve n\left(\iint_S\ud a\right)\times \ve B=IS\ve n\times \ve B\]
 Definiamo il momento di dipolo magnetico\index{momento!di dipolo magnetico}:
 \begin{equation}
-\ve m=IS\ve n
-\label{eq:dipolo_magnetico}
+  \ve m=IS\ve n
+  \label{eq:dipolo_magnetico}
 \end{equation}
 allora:
 \[\ve M=\ve m\times \ve B\]
@@ -3690,7 +3690,7 @@ Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che
   \end{equation}
   e quindi:
   \begin{equation}
-  mr^2\frac{\ud\omega}{\ud t} = q rv B_r\qquad m\frac{\ud v}{\ud t} = -q r \omega B_r
+    mr^2\frac{\ud\omega}{\ud t} = q rv B_r\qquad m\frac{\ud v}{\ud t} = -q r \omega B_r
   \end{equation}
   quindi si può calcolare ancora la variazione dell'energia cinetica totale:
   \begin{equation}
@@ -4537,8 +4537,12 @@ L'equazione di continuità è già contenuta nelle equazioni di Maxwell:
   \diver\rot\ve H=\diver\left(\ve J+\frac{\partial\ve D}{\partial t}\right)=
   \diver\ve J+\frac{\partial}{\partial t}\diver\ve D=\diver\ve J+\frac{\partial\rho}{\partial t}=0
 \end{equation}
-\section{Conservazione dell'energia elettromagnetica}
-Consideriamo un volume $V$ contenuto nella superficie $S$ all'interno del quale ci sia un campo elettrico $\ve E(\ve r,t)$ e un campo magnetico $\ve B(\ve r,t)$ variabili nel tempo. Sia $n$ il numero di cariche $q$ per unità di volume con velocità $\ve v$, la forza nell'unità di volume sulle cariche è
+
+\section{Conservazione dell'energia del campo elettromagnetico}
+
+Dall'equazione \eqref{eq:en_campo_el} sappiamo che la densità di energia del campo elettrostatico è $\frac{1}{2}\ve E\cdot\ve D$ e analogamente l'energia del campo magnetostatico è \(\frac{1}{2}\ve H\cdot\ve B\).
+
+Consideriamo un volume $V$ contenuto nella superficie $S$ all'interno del quale ci sia un campo elettrico $\ve E(\ve r,t)$ e un campo magnetico $\ve B(\ve r,t)$ variabili nel tempo. Sia $n$ il numero di cariche $q$ per unità di volume con velocità $\ve v$, la forza esercitata dai campi sulle cariche, nell'unità di volume è:
 \begin{equation}
   \ve f=\frac{\ud\ve F}{\ud V}=nq\left(\ve E+\ve v\times\ve B\right)
 \end{equation}
@@ -4549,11 +4553,11 @@ La potenza del campo sulle cariche per unità di volume:
     &=nq\ve v\cdot\ve E=\ve J\cdot\ve E
   \end{split}
 \end{equation}
-Come doveva essere il campo magnetico non compie lavoro. Questa potenza rappresenta l'energia persa del campo e trasformata in calore (effetto Joule) o energia meccanica. Integrando nel volume, la potenza totale:
+Come doveva essere il campo magnetico non compie lavoro. Questa potenza rappresenta l'energia persa dal campo e trasformata in calore (effetto Joule) o energia meccanica (es. accerelerazione di cariche). Integrando nel volume, la potenza totale:
 \begin{equation}
   P_J=\int_V\ve J\cdot\ve E\,\ud v
 \end{equation}
-Usiamo le equazion di Maxwell per eliminare la densità di corrente $\ve J=\rot\ve H-\frac{\partial\ve D}{\partial t}$ e usando:
+Vorremmo un'espressione unicamente in funzione dei campi, quindi usiamo le equazion di Maxwell per eliminare la densità di corrente $\ve J=\rot\ve H-\frac{\partial\ve D}{\partial t}$ e usando:
 \[
   \diver\left(\ve E\times\ve H\right)=\ve H\cdot\rot\ve E-\ve E\cdot\rot\ve H
 \]
@@ -4568,7 +4572,7 @@ Usiamo le equazion di Maxwell per eliminare la densità di corrente $\ve J=\rot\
 Avendo usato il teorema della divergenza, definito:
 \begin{Def}[vettore di Poynting\index{Poynting}\index{vettore!di Poyning}]
   \begin{equation}
-    \ve S=\ve E\times\ve H
+    \ve S=\ve E\times\ve H = \frac{1}{\mu_0}\ve E\times\ve B
   \end{equation}
 \end{Def}
 che si misura in \si{\watt\per\meter\squared}. Nell'ultimo passaggio abbiamo usato:
@@ -4579,15 +4583,56 @@ e analogamente:
 \begin{equation}
   \frac{1}{2}\frac{\partial}{\partial t}\left(\ve H\cdot\ve B\right)=\ve H\cdot\frac{\partial\ve B}{\partial t}
 \end{equation}
-Essendo $w_e=\ve E\cdot\ve D$ l'energia elettrica e $w_h=\ve H\cdot\ve B$ quella magnetica si ha:
+Assumendo che sommando $w_e=\frac{1}{2}\ve E\cdot\ve D$ (l'energia elettrica) e $w_h=\frac{1}{2}\ve H\cdot\ve B$ (l'energia magnetica) si ottenga l'energia del campo elettromagnetico, anche nel caso di campi variabili nel tempo, si ha:
 \begin{equation}
-  P_J=-\int_S\ve S\cdot\ve n\,\ud a-\int_V\frac{\partial}{\partial t}{w_{em}}\,\ud v=-\int_S\ve S\cdot\ve n\,\ud a-\frac{\partial}{\partial t}{W_{em}}\,\ud v
+  P_J=-\int_S\ve S\cdot\ve n\,\ud a-\int_V\frac{\partial}{\partial t}{w_{em}}\,\ud v=-\int_S\ve S\cdot\ve n\,\ud a-\frac{\ud}{\ud t}{W_{em}}
 \end{equation}
-con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica. Si ottiene infine:
+con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica e $W_{em}$ è l'energia elettromagnetica:
 \begin{equation}
-  \frac{\partial W_{em}}{\partial t}=P_J+\int_S\ve S\cdot\ve n\,\ud a
+W_{em} = \int_V w_{em}\,\ud v = \int_V \frac{1}{2}\left(\ve E\cdot\ve D+\ve H\cdot\ve B\right)\,\ud v
 \end{equation}
-dove $W_{em}$ è l'energia elettromagnetica. Si deduce che la potenza è dissipata per due fattori: l'effetto Joule $P_J$ e l'irraggiamento attraverso la superficie.
+Riordinando:
+\begin{Teo}{Teorema di Pointing}
+  \begin{equation}
+    -\frac{\ud}{\ud t}\int_V w_{em}\,\ud v = \int_V \ve J \cdot \ve E\,\ud v+\int_S\ve S\cdot\ve n\,\ud a
+  \end{equation}
+\end{Teo}
+ Si deduce che l'energia del campo elettromagnetico è dissipata per due fattori: l'energia ceduda alla materia $P_J=\int_V \ve J\cdot\ve E\,\ud v$ e l'irraggiamento attraverso la superficie. Il teorema di Pointing è una legge sulla conservazione dell'energia in cui il campo elettromagnetico interagisce con la materia, analogo al teorema lavoro-energia. Si noti che separatamente l'energia del campo elettromagnetico oppure l'energia delle cariche non sono conservate.
+
+In forma differenziale
+\begin{equation}
+  -\frac{\partial w_{em}}{\partial t}=\ve J\cdot \ve E + \ve\nabla \cdot \ve S
+\end{equation}
+Poiché nel teorema entra solo lo divergenza di $\ve S$, allora la sua definizione è aritraria a meno di un rotore.
+
+ Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continutà della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
+
+ \begin{Es}{Energia dissipata in un cavo condutore}
+  In un cavo conduttore, di lunghezza $L$ e raggio $R$, a cui si applica una differenza tensione $V$ ai capi si genera un campo elettrico, la cui componente longitudinale all'interno del cavo è
+  \[
+  E = \frac{V}{L}
+  \]
+  e un campo magnetico, che vale, a distanza $r\leq R$ dall'asse
+  \[
+  B = \frac{\mu_0}{2\pi}I\frac{r}{R^2}
+  \]
+
+  I due vettori sono ortogonali e quindi il vettore di Poynting risulta
+  \[
+  S = EH = E \frac{B}{\mu_0} = \frac{V}{L}\frac{1}{2\pi}I\frac{r}{R^2}
+  \]
+  calcolato sulla superficie è
+\[
+S = EH = E \frac{B}{\mu_0} = \frac{V}{L} \frac{I}{2\pi R}
+\]
+e punta radialmente verso l'interno. Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromatico per unità di tempo nel cavo:
+\[
+\int_S \ve S \cdot \ve n\,\ud a = \frac{V}{L} \frac{I}{2\pi R} 2\pi R L = V I
+\]
+che è la solita espressione ben nota. 
+\end{Es}
+
+
 \section{Conservazione della quantità di moto elettromagnetica}
 In un sistema meccanico isolato la quantità di moto $\ve{G^M}$ è una costante del moto e vale:
 \begin{equation}
