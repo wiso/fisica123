@@ -4589,7 +4589,7 @@ Assumendo che sommando $w_e=\frac{1}{2}\ve E\cdot\ve D$ (l'energia elettrica) e 
 \end{equation}
 con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica e $W_{em}$ è l'energia elettromagnetica:
 \begin{equation}
-W_{em} = \int_V w_{em}\,\ud v = \int_V \frac{1}{2}\left(\ve E\cdot\ve D+\ve H\cdot\ve B\right)\,\ud v
+  W_{em} = \int_V w_{em}\,\ud v = \int_V \frac{1}{2}\left(\ve E\cdot\ve D+\ve H\cdot\ve B\right)\,\ud v
 \end{equation}
 Riordinando:
 \begin{Teo}{Teorema di Pointing}
@@ -4597,7 +4597,7 @@ Riordinando:
     -\frac{\ud}{\ud t}\int_V w_{em}\,\ud v = \int_V \ve J \cdot \ve E\,\ud v+\int_S\ve S\cdot\ve n\,\ud a
   \end{equation}
 \end{Teo}
- Si deduce che l'energia del campo elettromagnetico è dissipata per due fattori: l'energia ceduda alla materia $P_J=\int_V \ve J\cdot\ve E\,\ud v$ e l'irraggiamento attraverso la superficie. Il teorema di Pointing è una legge sulla conservazione dell'energia in cui il campo elettromagnetico interagisce con la materia, analogo al teorema lavoro-energia. Si noti che separatamente l'energia del campo elettromagnetico oppure l'energia delle cariche non sono conservate.
+Si deduce che l'energia del campo elettromagnetico è dissipata per due fattori: l'energia ceduda alla materia $P_J=\int_V \ve J\cdot\ve E\,\ud v$ e l'irraggiamento attraverso la superficie. Il teorema di Pointing è una legge sulla conservazione dell'energia in cui il campo elettromagnetico interagisce con la materia, analogo al teorema lavoro-energia. Si noti che separatamente l'energia del campo elettromagnetico oppure l'energia delle cariche non sono conservate.
 
 In forma differenziale
 \begin{equation}
@@ -4605,42 +4605,43 @@ In forma differenziale
 \end{equation}
 Poiché nel teorema entra solo lo divergenza di $\ve S$, allora la sua definizione è aritraria a meno di un rotore.
 
- Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continutà della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
+Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continutà della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
 
- \begin{Es}{Energia dissipata in un cavo condutore}
+\begin{Es}{Energia dissipata in un cavo condutore}
   In un cavo conduttore, di lunghezza $L$ e raggio $R$, a cui si applica una differenza tensione $V$ ai capi si genera un campo elettrico, la cui componente longitudinale all'interno del cavo è
   \[
-  E = \frac{V}{L}
+    E = \frac{V}{L}
   \]
   e un campo magnetico, che vale, a distanza $r\leq R$ dall'asse
   \[
-  B = \frac{\mu_0}{2\pi}I\frac{r}{R^2}
+    B = \frac{\mu_0}{2\pi}I\frac{r}{R^2}
   \]
-
   I due vettori sono ortogonali e quindi il vettore di Poynting risulta
   \[
-  S = EH = E \frac{B}{\mu_0} = \frac{V}{L}\frac{1}{2\pi}I\frac{r}{R^2}
+    S = EH = E \frac{B}{\mu_0} = \frac{V}{L}\frac{1}{2\pi}I\frac{r}{R^2}
   \]
-  calcolato sulla superficie è
-\[
-S = EH = E \frac{B}{\mu_0} = \frac{V}{L} \frac{I}{2\pi R}
-\]
-e punta radialmente verso l'interno. Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromatico per unità di tempo nel cavo:
-\[
-\int_S \ve S \cdot \ve n\,\ud a = \frac{V}{L} \frac{I}{2\pi R} 2\pi R L = V I
-\]
-che è la solita espressione ben nota. 
+  e punta radialmente verso l'interno. Calcolato sulla superficie è
+  \[
+    S = EH = E \frac{B}{\mu_0} = \frac{V}{L} \frac{I}{2\pi R}
+  \]
+  . Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromatico per unità di tempo nel cavo:
+  \[
+    \int_S \ve S \cdot \ve n\,\ud a = \frac{V}{L} \frac{I}{2\pi R} 2\pi R L = V I
+  \]
+  che è la solita espressione ben nota.
+
+  Può suorare un po' strano il fatto che l'energia dissipata per effetto Joule arrivi al cavo dall'esterno, con un flusso perpendicolare alla superficie.
 \end{Es}
 
 
 \section{Conservazione della quantità di moto elettromagnetica}
 In un sistema meccanico isolato la quantità di moto $\ve{G^M}$ è una costante del moto e vale:
 \begin{equation}
-  \ve F=\frac{\ud \ve{G^M}}{\ud t}
+  \ve F=\frac{\ud \ve{G^M}}{\ud t}=0
 \end{equation}
-in un sistema elettromagnetico la quantità di moto delle particelle cariche non è una costante del moto.
+dove $\ve F$ è la forza esercita sul sistema. Essendo isolato essa è nulla. In un sistema elettromagnetico la quantità di moto delle particelle cariche non è una costante del moto.
 
-Consideriamo un volume $V$ in cui agiscono i campi $\ve B$ e $\ve E$ su una distribuzione di carica $\rho(\ve r)$. La densità di forza:
+Consideriamo un volume $V$ in cui agiscono i campi $\ve B$ e $\ve E$ su una distribuzione di carica $\rho(\ve r)$. La densità di forza del campo sulle cariche è:
 \begin{equation}
   \ve f=\rho\left(\ve E+\ve v\times\ve B\right)
   \label{q_em01}
@@ -4649,12 +4650,15 @@ vogliamo calcolare la forza totale del campo sulle particelle cariche:
 \begin{equation}
   \ve F=\int \ve f\,\ud v
 \end{equation}
-usando:
+Come fatto per l'energia vogliamo un'espressione esclusivamente in funzione dei campi. Usando le equazioni di Maxwell:
 \begin{gather}
-  \diver\ve D=\rho
-  \rot\ve H=\ve J+\frac{\partial \ve D}{\partial t}\\
-  \ve J=Nq\ve v=\rho\ve v=\rot\ve H-\frac{\partial\ve D}{\partial t}\\
+  \diver\ve D=\rho \\
+  \rot\ve H=\ve J+\frac{\partial \ve D}{\partial t}
 \end{gather}
+e ricavando $\ve J=\rho\ve v$:
+\[
+  \ve J=Nq\ve v=\rho\ve v=\rot\ve H-\frac{\partial\ve D}{\partial t}
+\]
 l'equazione \eqref{q_em01} diventa:
 \begin{equation}
   \ve f=\ve E\diver\ve D+\rot\ve H\times\ve B-\frac{\partial\ve D}{\partial t}\times\ve B
@@ -4672,7 +4676,7 @@ se indichiamo con $\ve\Sigma=\ve E\diver\ve D+\ve H\diver\ve B+\rot\ve H\times\v
 \end{equation}
 si può dimostrare che il secondo integrale si annulla e quindi:
 \begin{equation}
-  \ve F=-\frac{\partial}{\partial t}\int_V\left(\ve D\times\ve B\right)\,\ud v
+  \ve F=-\frac{\partial}{\partial t}\int_V\left(\ve D\times\ve B\right)\,\ud v = -\frac{\ud}{\ud t}\int_V\frac{1}{c^2} \ve S\,\ud v
 \end{equation}
 Dato che vale:
 \begin{equation}
@@ -4697,6 +4701,16 @@ Possiamo definire anche una densità di quantità di moto elettromagnetica:
 \begin{equation}
   \ve g=\left(\ve D\times\ve B\right)=\varepsilon\mu\left(\ve E\times\ve H\right)=\varepsilon\mu\ve S=\frac{1}{c^2}\ve S
 \end{equation}
+
+Una delle conseguenze del teorema di Poynting e della conservazione del sistema solo quando si considera anche il campo elettromagnetico è che i campi non sono solo un construtto matematico, ma hanno una valenza fisica. Le interazioni non avvengo tra le cariche o le correnti, ma attraverso il campo elettromagnetico.
+
+\subsection{Momento angolare}
+Come abbiamo associato al campo elettrico e magnetico una densità di energia e una densità di quantità di moto, possiamo associare anche una densità di momento angolare. 
+
+\begin{equation}
+\ve \ell = \ve r \times \ve g = \ve r \times \left(\ve D \times \ve B\right) = \frac{1}{c^2}\ve r \times S
+\end{equation}
+
 \section{Potenziali del campo elettromagnetico}
 Poiché la divergenza di $\ve B$ è nulla esiste un vettore $\ve A$ detto potenziale magnetico tale che:
 \begin{equation}
@@ -4778,7 +4792,22 @@ Le soluzioni di queste equazioni sono:
 \end{gather}
 con $v=\frac{1}{\sqrt{\varepsilon\mu}}$. Si noti che le densità di carica e corrente sono valuate ad un tempo ritardato $t-\frac{|\ve r-\ve r'|}{v}$. Questo sta a significare che una perturbazione elettromagnetica si propaga nello spazio a velocità finita $v$. Gli effetti dei potenziali si fanno sentire con un certo ritardo, e $\varphi$ e $\ve A$ si dicono potenziali ritardati\index{potenziali!ritardati}\index{equazioni!dei potenziali ritardati}.
 \section{Equazione generale delle onde}
-Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$).
+Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$). In pratica vogliamo trovare le equazioni delle onde elettromagnetiche in un conduttore. Assumiamo il conduttore lineare e isotropo.
+
+Prima di derivare l'equazione delle onde consideriamo il caso in cui ci siano delle cariche nel conduttore con densità $\rho$. L'equazione di continuità per la carica
+\[
+\diver \ve J = -\frac{\partial \rho}{\partial t}
+\]
+combinata con la legge di Ohm $\ve J = \sigma \ve E$ e usando Gauss $\diver \ve E = \frac{\rho}{\varepsilon}$ si ottiene:
+\[
+\frac{\partial \rho}{\partial t} = -\sigma \diver\ve E = -\frac{\sigma}{\varepsilon}\rho
+\]
+la cui soluzione è:
+\[
+\rho(t) = \rho(0)e^{-\frac{\sigma}{\varepsilon}t}
+\]
+Quindi la carica si dissipa con un tempo caratterisico $\tau = \frac{\varepsilon}{\sigma}$, che per un conduttore è un tempo brevissimo. Possiamo quindi considerare il conduttore come privo di cariche libere.
+
 Consideriamo l'equazione di Maxwell:
 \[
   \rot\ve H=\ve J+\frac{\partial\ve D}{\partial t}
@@ -4805,14 +4834,18 @@ Se applichiamo lo stesso procedimento al campo $\ve E$ e supponiamo che $\rho=0$
 \end{eqimp}
 Le ultime due equazioni rappresentano le equazioni delle onde elettromagnetiche in propagazione libera ($\rho=0$) in un mezzo omogeneo conduttore. Se supponiamo che il mezzo non sia conduttore (come il vuoto), cioè $\sigma=0$ le ultime due equazioni si scrivono come:
 \begin{gather}
-  \nabla^2\ve H-\varepsilon\mu\frac{\partial^2\ve H}{\partial t^2}=0\\
-  \nabla^2\ve E-\varepsilon\mu\frac{\partial^2\ve E}{\partial t^2}=0
+  \nabla^2\ve H-\varepsilon_0\mu_0\frac{\partial^2\ve H}{\partial t^2}=0\\
+  \nabla^2\ve E-\varepsilon_0\mu_0\frac{\partial^2\ve E}{\partial t^2}=0
 \end{gather}
-oppure:
+Che sono equazioni delle onde che si propagano a velocità $v=\frac{1}{\sqrt{\varepsilon_0\mu_0}}=c$.
+Si può anche scrivere
 \begin{eqimp}{gather}
   \Box\ve H=0\\
   \Box\ve E=0
 \end{eqimp}
+
+
+
 Le soluzioni delle equazioni ricavate non sono necessariamente soluzioni delle equazioni di Maxwell da cui sono state ricavate\footnote{Si pensi all'elevamento al quadrato: $x-1=0$, manipolando l'equazione posso arrivare a $(x-1)^2=0$ che ha come soluzione $x=\pm 1$. Per accertarci quale delle due soluzioni sia anche soluzione della prima equazione dobbiamo sostituirle al suo interno.}. Occurre quindi sostituire le soluzioni delle equazioni delle onde nelle equazioni di Maxwell e vedere quali condizioni bisogna imporre affinché siano effettivamente soddisfatte.
 
 \chapter{Ottica}
