@@ -1070,14 +1070,22 @@ I materiali si caratterizzano per tre costanti:
 \end{itemize}
 
 \section{Carica nei conduttori}
-Se carichiamo un conduttore gli elettroni dopo una frazione di tempo trovano una condizione di equilibrio e quindi il campo elettrostatico all'interno del conduttore deve essere nullo. Essendo il campo il gradiente del potenziale allora se il campo è nullo il potenziale è costante e quindi il conduttore è un corpo equipotenziale e in particolare la sua superficie è equipotenziale. Usando il teorema di Gauss, con superfici gaussiane che tendono al bordo scopriamo che all'interno non ci possono essere cariche, allora per la conservazione della carica esse sono sul bordo. Il campo elettrostatico all'esterno è ortogonale alla superficie essendo essa una superficie equipotenziale, inoltre se esso avesse una componente tangenziale le cariche al suo interno si muoverebbero.
+Se carichiamo un conduttore gli elettroni dopo una frazione di tempo trovano una condizione di equilibrio, in cui non agisce nessuna forza netta,  e quindi il campo elettrostatico all'interno del conduttore deve essere nullo. In realtà questa non è una grande dimostrazione, un'altra soluzione potrebbe essere che in presenza di conduttori le cariche non stanno mai ferme.
+
+Se viene applicato un campo elettrico esterno al conduttore, allora le cariche al suo interno si muoveranno creando un campo elettrico indotto che si oppone a quello esterno. Il movimento delle cariche continuerà finché il campo elettrico indotto non sarà uguale e contrario a quello esterno. In questo modo la somma del campo elettrico esterno e di quello indotto è nullo. Questo processo è praticamente istantaneo. Ovviamente il campo elettrico esterno può essere non nullo.
+
+Essendo il campo il gradiente del potenziale allora se il campo è nullo il potenziale è costante e quindi il conduttore è un corpo equipotenziale e in particolare la sua superficie è equipotenziale.
+
+Il campo elettrostatico all'esterno è ortogonale alla superficie essendo essa una superficie equipotenziale, inoltre se esso avesse una componente tangenziale le cariche al suo interno si muoverebbero.
+
+Usando il teorema di Gauss, con superfici gaussiane che tendono al bordo scopriamo che all'interno non ci possono essere cariche, allora per la conservazione della carica esse sono sul bordo. Con la versione differenziale $\diver\ve E=\rho$ si ottiene la stessa conclusione più rapidamente. La carica netta deve essere sulla superficie.
 \section{Induzione elettrostatica}
 \begin{Def}[Induzione elettrostatica\index{induzione elettrostatica}]
   L'induzione elettrostatica è quel fenomeno per cui in presenza di un campo elettrico esterno le cariche libere in un conduttore si ridistribuiscono.
 \end{Def}
 Se mettiamo un conduttore in uno spazio in cui è presente un campo elettrico $\ve E_\text{ext}$ gli elettroni al suo interno si muovono in senso opposto ad $\ve E_\text{ext}$. In questo modo creano un accumulo di cariche che a sua volta crea un campo elettrico indotto dalla carica migrata $\ve E_i$. In pochissimo tempo gli elettroni arrivano ad un a posizione di equilibrio in cui:
 \[\ve E=\ve E_i+\ve E_\text{ext}=0\]
-Possiamo allora affermare che (a parte il brevissimo istante in cui le cariche creano raggiungono l'equilibrio) il campo elettrico totale all'interno di un conduttore ideale è nullo. Anche il campo esterno risulta deformato dalla nuova distribuzione di cariche e a grande distanza torna ad essere quello in assenza di distribuzione di cariche. Se il campo elettrico all'interno è nullo le cariche devono essersi accumulate sul bordo del conduttore, infatti:
+Possiamo allora affermare che (a parte il brevissimo istante in cui le cariche creano raggiungono l'equilibrio) il campo elettrico totale all'interno di un conduttore ideale è nullo. A causa della migrazione della carica all'interno del conduttore questo si attrarrà con la carica. Anche il campo esterno risulta deformato dalla nuova distribuzione di cariche e a grande distanza torna ad essere quello in assenza di distribuzione di cariche. Se il campo elettrico all'interno è nullo le cariche devono essersi accumulate sul bordo del conduttore, infatti:
 consideriamo una superficie chiusa completamente compresa nel conduttore; essendo il campo interno nullo, per il teorema di Gauss, anche la carica deve essere nulla. Facciamo tendere questa superficie alla superficie del conduttore, la carica è sempre nulla. Per la conservazione della carica questa può essere solo sul bordo del conduttore.
 
 \section{Teorema di Coulomb\index{Coulomb}\index{teorema!di Coulomb}}
@@ -1314,14 +1322,17 @@ L'operatore $\nabla^2$ è il laplaciano\index{laplaciano} e l'equazione differen
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\ve r\,')}{\norm{\ve r-\ve r\,'}}\,\ud v'\]
 Il problema diventa più complesso quando si inseriscono dei conduttori che subiscono l'induzione elettrostatica.
 \section{Funzioni armoniche}
-Se non ci sono cariche, cioè $\rho=0$, allora l'equazione di Poisson diventa:
+In assenza di carice, cioè $\rho=0$, l'equazione di Poisson si riduce a:
 \begin{equation}
   \nabla^2\varphi=0
   \label{eq_laplace}
 \end{equation}
-detta equazione di Laplace\index{equazione!di Laplace}\index{Laplace}. Una funzione che rispetta la \eqref{eq_laplace} e che abbia derivate prime continue è detta armonica\index{funzione!armonica}. Quindi se non ci sono cariche $\varphi$ è armonica. La zona di armonicità di una funzione è l'insieme dei punti dove la funzione è armonica.
+conosciuta come equazione di Laplace\index{equazione!di Laplace}\index{Laplace}.
+\begin{Def}[Funzione armonica] Una funzione che soddisfa la \eqref{eq_laplace} e che abbia derivate prime continue è detta armonica\index{funzione!armonica}.
+\end{Def}
+Quindi in assenza di cariche $\varphi$ è armonica. La zona di armonicità di una funzione è l'insieme dei punti dove la funzione è armonica.
 \subsection{Teoremi}
-Tipicamente i problemi di elettrostatica vengono formulati attraverso le condizioni di Dirichlet o di Neumann. Le prime impogono che la funzione $\varphi$ assuma certi valori su una superficie, le seconde invece impongono condizioni sulle derivate normali (derivata direzionale rispetto alla normale della superficie).
+I problemi di elettrostatica vengono formulati attraverso le condizioni di Dirichlet o di Neumann. Le prime impogono che la funzione $\varphi$ assuma determinati valori su una superficie, le seconde invece impongono condizioni sulle derivate normali (derivata direzionale rispetto alla normale della superficie).
 \begin{Teo}[unicità  problema di Dirichlet]
   Data una superficie chiusa $S$ la funzione armonica che su $S$ assume il valore $\varphi_S$ è unica.
 \end{Teo}
@@ -1331,7 +1342,16 @@ $\varphi_S$ non deve essere necessariamente una costante.
 \end{Teo}
 \begin{Teo}[media]
   Sia $S$ una sfera contenuta in una zona di armonicità di $\varphi$. Allora il valor medio che $\varphi$ assume sulla superficie di $S$ è uguale al valore che $\varphi$ assume nel centro della sfera.
+  \begin{equation}
+    \varphi(\ve r)=\frac{1}{4\pi R^2}\int_S\varphi(\ve r\,')\,\ud a'
+  \end{equation}
 \end{Teo}
+
+Come conseguenza $\varphi$ non ha minimi o massimi locali (oppure se $\varphi$ ha un minimo o un massimo locale allora è costante). Infatti se $\varphi$ avesse un minimo locale allora il valore in quel punto sarebbe minore della media e quindi la media sarebbe minore del valore in quel punto. I valori estremi di $\varphi$ sono sul bordo del dominio.
+\begin{Teo}[Earnshaw]
+  Non esistono soluzioni stazionarie dell'equazione di Laplace che abbiano un minimo locale. Questo significa che una carica elettrica non può essere in equilibrio stabile in un campo esclusivamente elettrostatico.
+\end{Teo}
+
 \section{Soluzione dell'equazione di Laplace}
 Tentiamo di risolvere l'equazione di Laplace, cioè quando non ci sono cariche libere, in casi particolari.
 \subsection{Soluzione generale}
@@ -1903,7 +1923,7 @@ chiamata forza di Lorentz\index{Lorentz}\index{forza!di Lorentz}. Essa è dirett
   \label{eq:forza_lorentz2}
 \end{equation}
 \subsection{Definizione operativa}
-Per misurare il campo elettrico è sufficiente effettuare una misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{eq:magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
+Per misurare il campo elettrico è sufficiente effettuare una singola misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{eq:magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
 \[\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v\]
 Allora\footnote{??!!}:
 \[\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v\]
@@ -1914,8 +1934,8 @@ Moltiplichiamole scalarmente per $v_1$:
 \[c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\]
 \[\ve B=\frac{\ve F_1\times\ve v_1}{qv_1^2}+\frac{\left(\ve F_2\times\ve v_2\right)\ve v_1}{qv_1^2v_2^2}\ve v_1\]
 \subsection{Unità di misura}
-\[[B]=[mlq^{-1}t^{-1}]=\frac{\si{\newton\second}}{\si{\coulomb\meter}}=\frac{\si{\volt\second}}{\si{\meter\squared}}=\frac{\si{\weber}}{\si{\metre\squared}}=T=\SI{1E4}{\gauss}=10^4\,\text{gauss}\]\index{gauss}
-Dove $\si{\weber}=\text{weber}=\si{\volt\second}$, $\si{\tesla}=\text{tesla}=\frac{\si{\weber}}{\si{\meter\squared}}$.\index{weber}
+\[[B]=[mlq^{-1}t^{-1}]=\frac{\si{\newton\second}}{\si{\coulomb\meter}}=\frac{\si{\volt\second}}{\si{\meter\squared}}=\frac{\si{\weber}}{\si{\metre\squared}}=T=\SI{1E4}{\gauss}\]\index{gauss}
+Dove $\si{\weber}=\text{weber}=\si{\volt\second}$, $\si{\tesla}=\text{tesla}=\frac{\si{\weber}}{\si{\meter\squared}}$, $\si{\gauss}=\text{gauss}$.\index{weber}
 \begin{Es}[elettrone in campo magnetico]
   \label{es_Larmor}
   Spariamo un elettrone in un campo magnetico $\ve B$ con velocità $\ve v_0=\ve v(0)$. Per semplicità scegliamo un sistema di riferimento in modo che $\ve B=B\ver k$ e che $\ve r(0)=0$. Ad ogni istante sull'elettrone agisce la forza di Lorentz:
@@ -2016,7 +2036,6 @@ Dove $\si{\weber}=\text{weber}=\si{\volt\second}$, $\si{\tesla}=\text{tesla}=\fr
   \[
     \omega = \frac{2\pi}{T} = \frac{2\pi}{2\Delta t} = \frac{\pi}{\Delta t} = \frac{qB}{m}
   \]
-
   quindi si può ottenere un'accelerazione se il tempo impiegato dalla particella a fare una semicirconferenza è pari al semiperiodo di $V$:
   \[
     \Delta t = \frac{T_{RF}}{2} = \frac{\pi}{\omega_{RF}}
