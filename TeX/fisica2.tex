@@ -3620,7 +3620,7 @@ dove $J_s$ è una densità di corrente di conduzione superficiale.
 \minitoc
 Sappiamo come una corrente possa indurre campi magnetici. Vale anche l'opposto, cioè una variazione di flusso del campo magnetico induce una corrente.
 
-Per esempio se avviciniamo un magnete ad una spira ferma nella spira si genera una corrente indotta fig.~\ref{magnete_spira}.
+In fig.~\ref{magnete_spira} è rappresentato un magnete che si avvicina ad una spira. Il campo magnetico del magnete attraversa la spira e quindi il flusso del campo magnetico attraverso la spira varia. Questa variazione del flusso del campo magnetico induce una corrente nella spira.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.25]{immagini/fisica2/ind_spira01}
@@ -3635,17 +3635,22 @@ Avvicinando una spira percorsa da corrente ad una ferma si genera in quest'ultim
 \begin{legge}[Lenz]
   In un sistema magnetico ogni variazione produce un'azione che tende ad opporsi alla variazione stessa
 \end{legge}
-Riassumendo la forza elettromotrice indotta:
+
+In termini moderni possiamo scrivere:
 \begin{legge}[Faraday--Neumann--Lenz]
+  La forza elettromotrice attorno a un percorso chiuso è uguale al negativo della variazione temporale del flusso magnetico racchiuso dal percorso.
+
   \begin{equation}
     \mathrm{fem}=-\frac{\ud\Phi(\ve B)}{\ud t}
   \end{equation}
 \end{legge}
-dove il meno tiene conto della legge di Lenz, cioè la corrente indotta $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale. Si ricorda che la $\mathrm{fem}$ è uguale alla circuitazione del campo elettrico su un percorso chiuso $\oint_C\ve E\cdot\ud\ve l$, quindi la legged di Faraday--Neumann--Lenz può essere scritta come:
-\begin{equation}
+dove il meno tiene conto della legge di Lenz, cioè la corrente $I=\frac{\mathrm{fem}}{R}$ è tale da generare un campo magnetico che annulla la variazione del flusso magnetico totale. Si ricorda che la $\mathrm{fem}$ è uguale alla circuitazione del campo elettrico su un percorso chiuso $\oint_C\ve E\cdot\ud\ve l$, quindi la legged di Faraday--Neumann--Lenz può essere scritta come:
+\begin{eqimp}{equation}
   \oint_C\ve E\cdot\ud \ve l = -\frac{\ud}{\ud t}\int_S\ve B\cdot\ve n\,\ud a
-\end{equation}
-si noti come il flusso del campo magnetico può variare per tre ragioni: $\ve B$ non è costante nel tempo, $\ve n$ non è costante nel tempo (per esempio il circuito ruota), il circuito viene deformato. La $\mathrm{fem}$ indotta esiste anche indipendentemente dalla presenza del circuito, o di un conduttore. È importante notare che nella definizione di $\mathrm{fem}$ la definizione di $\ve E$ è quello nel sistema di riferimento in cui gli elementi $\ud\ve l$ sono a riposo.
+\end{eqimp}
+In questa formulazione non abbiamo parlato di fem indotta, per non fare intendere che è la variazione di flusso a creare una fem e quindi una corrente. Il campo elettrico, come quello magnetico, è esclusivamente conseguenza delle sorgenti.
+
+Si noti come il flusso del campo magnetico può variare per tre ragioni: $\ve B$ non è costante nel tempo, $\ve n$ non è costante nel tempo (per esempio il circuito ruota), il circuito viene deformato. La $\mathrm{fem}$ indotta esiste anche indipendentemente dalla presenza del circuito, o di un conduttore. È importante notare che nella definizione di $\mathrm{fem}$ la definizione di $\ve E$ è quello nel sistema di riferimento in cui gli elementi $\ud\ve l$ sono a riposo.
 
 Per un circuito indeformabile che si muove con velocità $\ve v$ in un campo magnetico si può scrivere:
 \begin{equation}
