@@ -656,7 +656,7 @@ Essendo la divergenza del vettore $\ve B$ nulla, cioè essendo $\ve B$ un campo 
   \exists\ve A:\ve B=\rot\ve A
   \label{vet_magnetico00}
 \end{equation}
-in questo caso $\ve A$ è detto potenziale vettore magnetico, e non è univocamente determinato, per esempio se scegliamo un certo $\ve A$ potenziale vettore allora anche $\ve A+\grad\psi$ soddisfa la condizione \eqref{vet_magnetico00}:
+detto potenziale vettore magnetico. $\ve A$ non è univocamente determinato, per esempio se scegliamo un certo $\ve A$ potenziale vettore allora anche $\ve A'=\ve A+\grad\psi$ soddisfa la condizione \eqref{vet_magnetico00}:
 \[
   \rot\left(\ve A+\grad\psi\right)=\rot\ve A
 \]
@@ -665,7 +665,7 @@ in quando il rotore di un gradiente è sempre nullo. Tra le tante possibili scel
   \diver\ve A=0
   \label{gauge_magnetos}
 \end{equation}
-questo è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, ma allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
+Questo è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
 \begin{equation}
   \rot\ve B=\mu_0\ve J
 \end{equation}
@@ -673,7 +673,7 @@ Sostituendo la \eqref{vet_magnetico00}:
 \begin{equation}
   \rot\ve B=\rot\rot\ve A=\grad\diver\ve A-\nabla^2\ve A=\mu_0\ve J
 \end{equation}
-e per la condizione per la magnetostatica \eqref{gauge_magnetos}:
+e per la condizione per la magnetostatica scelta \eqref{gauge_magnetos}:
 \begin{equation}
   \nabla^2\ve A=-\mu_0\ve J
   \label{gauge_magnetos1}
@@ -862,7 +862,7 @@ Usando il teorema della divergenza:
 \begin{equation}
   \varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\left[\int_S\frac{\ve P(\ve r\,')\cdot \ve n}{\norm{\ve r-\ve r\,'}}\ud a'+\int_V\frac{-\ve\nabla'\cdot\ve P(\ve r\,')}{\norm{\ve r-\ve r\,'}}\ud v'\right]
 \end{equation}
-$\ve P\cdot\ve n$ ha le dimensioni di una distribuzione superficiale di carica, mentre $-\nabla'\cdot\ve P$ ha le dimensioni di una distribuzione di carica volumetrica.
+$\ve P\cdot\ve n$ ha le dimensioni di una distribuzione superficiale di carica, mentre $-\ve\nabla'\cdot\ve P$ ha le dimensioni di una distribuzione di carica volumetrica.
 \begin{subequations}
   \begin{gather}
     \sigma_p(\ve r\,')=\ve P(\ve r\,')\cdot \ve n\\
@@ -909,36 +909,36 @@ Usando:
 che è proprio il campo generato dalle distribuzioni $\sigma_p$ e $\rho_p$.
 
 \begin{Es}[Sfera uniformemente polarizzata]
-  Calcoliamo il campo elettrico di una sfera di raggio $R$ uniformemente polarizzata con $\ve P=P\ver z$. Poiché $\ve P$ è uniforme all'interno della sfera, $\rho_p=-\vec\nabla \cdot\ve P=0$. La densità superficiale della carica di polarizzazione è:
+  Calcoliamo il campo elettrico di una sfera di raggio $R$ uniformemente polarizzata con $\ve P=P\ver z$. Poiché $\ve P$ è uniforme all'interno della sfera, $\rho_p=-\ve\nabla \cdot\ve P=0$. La densità superficiale della carica di polarizzazione è:
   \[
     \sigma_p=\ve P\cdot\ve n=P \ver z\cdot\ver r=P \cos\theta
   \]
   dove $\theta$ è l'angolo con l'asse $z$.
 
   La soluzione è
-\[
- \varphi(r, \theta) = \begin{cases}
-  \frac{P}{3\varepsilon_0}r \cos\theta & r\leq R\\
-  \frac{P}{3\varepsilon_0}\frac{R^3}{r^2}\cos\theta & r\geq R
-\end{cases}
-\]
-Poiché $r\cos\theta=z$, allora il campo all'interno è costante:
-\[
-\ve E = -\ve\nabla \varphi = -\frac{1}{3\varepsilon_0}\ve P
-\]
-mentre all'esterno è quello di un dipolo:
-\[
-\varphi = \frac{1}{4\pi \varepsilon_0}\frac{\ve p\cdot \ver r}{r^2}
-\]
-con
-\[
-\ve p = \frac{4}{3}\pi R^3 \ve P
-\]
-che è il momento di dipolo di una sfera.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{immagini/fisica2/sphere_polarized.pdf}
-\end{figure}
+  \[
+    \varphi(r, \theta) = \begin{cases}
+      \frac{P}{3\varepsilon_0}r \cos\theta              & r\leq R \\
+      \frac{P}{3\varepsilon_0}\frac{R^3}{r^2}\cos\theta & r\geq R
+    \end{cases}
+  \]
+  Poiché $r\cos\theta=z$, allora il campo all'interno è costante:
+  \[
+    \ve E = -\ve\nabla \varphi = -\frac{1}{3\varepsilon_0}\ve P
+  \]
+  mentre all'esterno è quello di un dipolo:
+  \[
+    \varphi = \frac{1}{4\pi \varepsilon_0}\frac{\ve p\cdot \ver r}{r^2}
+  \]
+  con
+  \[
+    \ve p = \frac{4}{3}\pi R^3 \ve P
+  \]
+  che è il momento di dipolo di una sfera.
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{immagini/fisica2/sphere_polarized.pdf}
+  \end{figure}
 \end{Es}
 
 \subsection{Interno}
@@ -1058,14 +1058,12 @@ con $\rho$ densità di volumetrica di cariche libere.
 \]
 Si sottolinea che il campo elettrico $\ve E$ che compare è il campo elettrico totale, cioè quello creato dalle cariche libere più quelle di polarizzazione.
 \section{Suscettività e permittività}
-Per chiudere il problema, cioè determinare il campo elettrico serve una nuova equazione, in quanto il campo elettrico è funzione delle cariche di polarizzazione, le quali sono funzione del vettore polarizzazione elettrica il quale è funzione del campo elettrico. Leghiamo direttamente il vettore polarizzazione elettrica con il campo totale:
+Per chiudere il problema, cioè determinare il campo elettrico, serve una nuova equazione, in quanto il campo elettrico è funzione delle cariche di polarizzazione, le quali sono funzione del vettore polarizzazione elettrica il quale è funzione del campo elettrico. Leghiamo direttamente il vettore polarizzazione elettrica con il campo totale:
 \begin{equation}
   \ve P(\ve r)=\chi_e\ve E(\ve r)
 \end{equation}
-Dove $\chi_e$ è la suscettività del dielettrico\index{suscettività dielettrica}.
-\[
-  [\chi_e] = \SI{}{\farad\per\meter}
-\]
+Dove $\chi_e$ è la suscettività del dielettrico\index{suscettività dielettrica}, che ha dimensioni \(  [\chi_e] = \SI{}{\farad\per\meter} \).
+
 Per dielettrici anisotropi è un tensore del second'ordine e quindi $\ve P$ e $\ve E$ non hanno la stessa direzione. Per dielettrici non lineari (quasi sempre con alti campi elettrici) è una funzione di $\ve E$. Per dielettrici omogenei è uno scalare, per i disomogenei una funzione del punto. $\chi_e$ è sempre maggiore di zero, nel vuoto è nullo.
 
 Se sostituiamo nel vettore induzione elettrica \eqref{vettore_induzione_elettrica01} l'ultima espressione introdotta:
@@ -1707,7 +1705,6 @@ dove $J_s$ è una densità di corrente di conduzione superficiale.
 
 \chapter{Induzione elettromagnetica}
 \minitoc
-Sappiamo come una corrente possa indurre campi magnetici. Vale anche l'opposto, cioè una variazione di flusso del campo magnetico induce una corrente.
 
 In fig.~\ref{magnete_spira} è rappresentato un magnete che si avvicina ad una spira. Il campo magnetico del magnete attraversa la spira e quindi il flusso del campo magnetico attraverso la spira varia. Questa variazione del flusso del campo magnetico induce una corrente nella spira.
 \begin{figure}[htbp]
@@ -1762,9 +1759,9 @@ assumiamo che il percorso $C$, che potrebbe corrispondere ad un circuito, sia in
 \begin{equation}
   \int_S(\ve\nabla\times\ve E)\cdot\ve n\,\ud a = -\int_S\frac{\partial\ve B}{\partial t}\cdot\ve n\,\ud a
 \end{equation}
-\begin{equation}
+\begin{eqimp}{equation}
   \ve\nabla\times\ve E=-\frac{\partial\ve B}{\partial t}
-\end{equation}
+\end{eqimp}
 Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che $\ve E$ non è più conservativo.
 
 \begin{Es}[Lavoro nell'esperimento di Stern-Gerlach~\cite{PhysRevE.77.036609}]
@@ -1870,7 +1867,7 @@ che è la legge di Faraday--Neumann--Lenz.
 
 Nel caso di flusso concatenato invece sia il circuito in cui si induce la corrente sia il circuito sorgente del campo magnetico sono fissi e la variazione del flusso è dovuto a variazioni di corrente nel tempo. Questo caso non è descrivibile con la forza di Lorentz, ma è un caso nuovo.
 \section{Autoinduttanza}\index{autoinduttanza|(}
-In un circuito isolato attraversato dalla corrente $I$ il campo magnetico generato dal circuito stesso è funzione della corrente e quindi anche il flusso del campo magnetico: $\Phi(\ve B)=\Phi(\ve B(I))$
+In un circuito isolato attraversato dalla corrente $I$ il campo magnetico generato dal circuito stesso è funzione della corrente e quindi anche il flusso del campo magnetico che attraversa il circuito: $\Phi(\ve B)=\Phi(\ve B(I))$
 Allora in questo caso, cioè se la variazione del flusso è data esclusivamente da variazioni di corrente (per esempio il circuito è indeformabile), possiamo scrivere la legge dell'induzione come:
 \begin{equation}
   \text{fem}=-\frac{\ud\Phi(\ve B)}{\ud t}=-\frac{\ud\Phi(\ve B)}{\ud I}\frac{\ud I}{\ud t}
@@ -1917,11 +1914,11 @@ L'autoinduttanza si misura in henry\index{henry}:
   \end{equation}
   il flusso concatenato con tutto il solenoide, cioè con $Nl$ spire:
   \begin{equation}
-    \Phi=Nl\Phi_\text{spira}=\mu_0N^2\pi R^2 I
+    \Phi=Nl\Phi_\text{spira}=\mu_0N^2l\pi R^2 I=\mu_0 N^2 V I
   \end{equation}
-  usando la definizione:
+  dove il volume è $V=\pi R^2 l$. Usando la definizione di autoinduttanza:
   \begin{equation}
-    L=\frac{\ud\Phi}{\ud I}=Nl\Phi_\text{spira}=\mu_0N^2l\pi R^2=\mu_0 N^2 V
+    L=\frac{\ud\Phi}{\ud I}=\mu_0 N^2 V
   \end{equation}
   che in realtà vale anche nel caso la sezione non sia circolare essendo il campo magnetico uniforme.
 \end{Es}
@@ -2068,7 +2065,22 @@ Nel risolvere i circuiti, cioè determinare i valori delle correnti che attraver
 \end{legge}
 La prima legge esprime l'equazione di continuità la seconda la circuitazione del campo elettrostatico.
 \section{RLC serie continua}
+
 \subsection{Scarica}
+\begin{figure}
+  \begin{center}
+    \begin{circuitikz}
+      \draw
+      (0,4) to[R=$R$] (3,4)             % Resistenza
+      to[L=$L$] (6,4)             % Induttanza
+      to[C=$C$,v_>=$\Delta V$] (6,0)             % Condensatore
+      -- (0,0) -- (0,4);           % Chiusura circuito
+
+    \end{circuitikz}
+
+  \end{center}
+  \caption{Circuito RLC}
+\end{figure}
 Immaginiamo di aver caricato il condensatore con una carica $q_0$, cui corrisponde una differenza di potenziale tra le armature $\Delta V_0$ e di chiudere il circuito al tempo $t=0$. Per la legge delle maglie:
 \begin{equation}
   RI(t)+L\frac{\ud I(t)}{\ud t}=\Delta V(t)
@@ -2095,7 +2107,7 @@ Introduciamo la costante di smorzamento:
 \end{equation}
 e
 \begin{equation}
-  \beta = \sqrt{\frac{R^2}{4L^2}-\frac{1}{LC}}
+  \beta = \sqrt{\frac{R^2}{4L^2}-\frac{1}{LC}} = \sqrt{\gamma^2 - \frac{1}{LC}}
 \end{equation}
 la soluzione generale si scrive come
 \begin{equation}
@@ -2133,7 +2145,13 @@ a seconda che $\beta$ sia reale, immaginario o nullo si hanno tre casi notevoli:
   \begin{equation}
     I(t)=q_0\omega_0^2 te^{-\gamma t}
   \end{equation}
-  \item{$\beta>0$} questo avviene quando:
+  \begin{figure}
+    \centering
+    \input{immagini/fisica2/rlc_critico.tex}
+    \caption{Corrente di scarica nel circuito RLC}
+  \end{figure}
+
+  \item{$\beta^2>0$} questo avviene quando:
   \begin{equation}
     \gamma>\omega_0
   \end{equation}
@@ -2150,7 +2168,7 @@ a seconda che $\beta$ sia reale, immaginario o nullo si hanno tre casi notevoli:
   \begin{equation}
     I(t)=\frac{q_0\omega_0^2}{2\beta}e^{-\gamma t}\left(e^{\beta t}-e^{-\beta t}\right)
   \end{equation}
-  \item{$\beta\in\field{C}$} che si verifica quando:
+  \item{$\beta^2<0$} che si verifica quando:
   \begin{equation}
     \gamma<\omega_0
   \end{equation}
@@ -2195,6 +2213,19 @@ Riassumendo:
 \end{equation}
 con $\tau = \frac{1}{\gamma}$ e $\beta=j\omega$.
 \subsection{Carica}
+\begin{figure}
+  \begin{center}
+    \begin{circuitikz}
+      \draw
+      (0,0) to[battery2, v_=$V$] (0,4)         % Generatore di tensione
+      to[R=$R$] (3,4)                   % Resistenza
+      to[L=$L$] (6,4)                   % Induttanza
+      to[C=$C$] (6,0)                   % Condensatore
+      -- (0,0);                        % Chiusura circuito
+    \end{circuitikz}
+  \end{center}
+  \caption{Circuito RLC}
+\end{figure}
 Per quanto riguarda la carica dalla legge delle maglie:
 \begin{equation}
   L\dot I+RI+\frac{Q}{C}=V_0
@@ -2850,10 +2881,10 @@ Possiamo definire anche una densità di quantità di moto elettromagnetica:
 Una delle conseguenze del teorema di Poynting e della conservazione del sistema solo quando si considera anche il campo elettromagnetico è che i campi non sono solo un construtto matematico, ma hanno una valenza fisica. Le interazioni non avvengo tra le cariche o le correnti, ma attraverso il campo elettromagnetico.
 
 \subsection{Momento angolare}
-Come abbiamo associato al campo elettrico e magnetico una densità di energia e una densità di quantità di moto, possiamo associare anche una densità di momento angolare. 
+Come abbiamo associato al campo elettrico e magnetico una densità di energia e una densità di quantità di moto, possiamo associare anche una densità di momento angolare.
 
 \begin{equation}
-\ve \ell = \ve r \times \ve g = \ve r \times \left(\ve D \times \ve B\right) = \frac{1}{c^2}\ve r \times S
+  \ve \ell = \ve r \times \ve g = \ve r \times \left(\ve D \times \ve B\right) = \frac{1}{c^2}\ve r \times S
 \end{equation}
 
 \section{Potenziali del campo elettromagnetico}
@@ -2899,7 +2930,7 @@ Allo stesso modo, per il campo elettrico:
 \end{equation}
 cioè:
 \begin{equation}
-\grad\beta + \frac{\partial\ve\alpha}{\partial t} = 0
+  \grad\beta + \frac{\partial\ve\alpha}{\partial t} = 0
 \end{equation}
 sostituendo $\ve\alpha=\grad\lambda$:
 \begin{equation}
@@ -2915,8 +2946,8 @@ quindi la parentesi non dipende dallo spazio, ma potrebbe dipendere dal tempo:
 \end{equation}
 In realtà si può assorbire $k(t)$ all'interno di $\lambda$ $\int_0^t k(t)\,\ud t$, che non ne modifica il gradiente. Quindi abbiamo trovato le trasformazioni di gauge\index{trasformazioni!di gauge}:
 \begin{eqimp}{gather}
-\ve A' = \ve A + \grad\lambda \\
-\varphi' = \varphi - \frac{\partial\lambda}{\partial t}
+  \ve A' = \ve A + \grad\lambda \\
+  \varphi' = \varphi - \frac{\partial\lambda}{\partial t}
 \end{eqimp}
 I campi $\ve E$ e $\ve B$ sono gauge-invarianti.
 
@@ -2991,8 +3022,8 @@ Possono essere disaccoppiate usando la condizione di Lorentz \eqref{Lo10} ($\div
 \end{eqimp}
 Oppure semplicemente:
 \begin{eqimp}{gather}
-  \square\;\varphi=-\dfrac{\rho}{\varepsilon}\\
-  \square\;\ve A=-\mu\ve J
+  \square\;\varphi=-\dfrac{\rho}{\varepsilon}\label{eq:eq_pot_lorenz1}\\
+  \square\;\ve A=-\mu\ve J\label{eq:eq_pot_lorenz2}
 \end{eqimp}
 Queste ultime equazioni, insieme alla condizione di Lorentz e alla definizione di $\varphi$ e $\ve A$, sono le equazioni di Maxwell in forma potenziale.
 
@@ -3003,26 +3034,139 @@ Queste ultime equazioni, insieme alla condizione di Lorentz e alla definizione d
 
 
 \subsection{Potenziali ritardati}
-Le soluzioni di queste equazioni sono:
+Nel gauge di Lorenz le equazioni per i potenziali sono \eqref{eq:eq_pot_lorenz1} \eqref{eq:eq_pot_lorenz2}: $\square\phi=-\rho/\epsilon$, $\square\ve A=-\mu\ve J$. Le soluzioni di queste equazioni sono:
 \begin{gather}
-  \varphi(\ve r,t)=\frac{1}{4\pi\varepsilon}\int_V\frac{\rho\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r-\ve r'|}\,\ud v'\\
-  \ve A(\ve r,t)=\frac{\mu}{4\pi}\int_V\frac{\ve J\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r - \ve r'|}\,\ud v'
+  \varphi(\ve r,t)=\frac{1}{4\pi\varepsilon}\int_V\frac{\rho\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r-\ve r'|}\,\ud v'\label{eq:potenziali_ritardati1}\\
+  \ve A(\ve r,t)=\frac{\mu}{4\pi}\int_V\frac{\ve J\left(\ve r', t-\frac{|\ve r-\ve r'|}{v}\right)}{|\ve r - \ve r'|}\,\ud v'\label{eq:potenziali_ritardati2}
 \end{gather}
 con $v=\frac{1}{\sqrt{\varepsilon\mu}}$. Si noti che le densità di carica e corrente sono valuate ad un tempo ritardato $t-\frac{|\ve r-\ve r'|}{v}$. Questo sta a significare che una perturbazione elettromagnetica si propaga nello spazio a velocità finita $v$. Gli effetti dei potenziali si fanno sentire con un certo ritardo, e $\varphi$ e $\ve A$ si dicono potenziali ritardati\index{potenziali!ritardati}\index{equazioni!dei potenziali ritardati}.
+\begin{Es}[Accensione corrente instantanea]
+  Un filo conduttore infinitamente lungo, sull'asse $z$, è acceso al tempo $t=0$. La corrente è:
+  \[ I(t) =
+    \begin{cases}
+      I_0 & \text{per } t>0 \\
+      0   & \text{per } t<0
+    \end{cases}
+  \]
+  Calcoliamo il campo elettrico e magnetico. Il filo è elettricamente neutro, quindi il potenziale scalare è nullo. La densità di corrente è:  \(\ve J = I\delta(x)\delta(y)\ver e_z    \), quindi usando la \eqref{eq:potenziali_ritardati2}:
+  \begin{align*}
+    \ve A & = \frac{\mu_0}{4\pi}\int_V\frac{\ve J\left(\ve r', t_r\right)}{|\ve r - \ve r'|}\,\ud v'            \\
+          & = \frac{\mu_0}{4\pi}\ver e_z\int_{-\infty}^{\infty} \frac{I(t_r)}{|\ve r - (0, 0, z')|}\,\ud z'     \\
+          & = \frac{\mu_0}{4\pi}\ver e_z\int_{-\infty}^{\infty} \frac{I(t_r)}{\sqrt{\rho^2 + (z-z')^2}}\,\ud z'
+  \end{align*}
+  dove \(t_r = t - \frac{|\ve r - \ve r'|}{v}\) e sotto l'integrale diventa \(t - \frac{\sqrt{\rho^2+(z-z')^2}}{v}\). Facciamo un cambio di variabili $\Delta z = z-z'$, $\ud z' = -\ud \Delta z$. Quindi:
+  \[
+    \ve A = \frac{\mu_0}{4\pi}\ver e_z\int_{\infty}^{-\infty} \frac{I(t_r)}{\sqrt{\rho^2 + \Delta z^2}}\,(-\ud \Delta z) = \frac{\mu_0}{4\pi}\ver e_z\int_{-\infty}^{\infty} \frac{I(t_r)}{\sqrt{\rho^2 + \Delta z^2}}\,\ud \Delta z
+  \]
+  Questo cambio di variabili è equivalente ad osservare che essendo il filo infinito la soluzione non può dipendere da $z$ e quindi si poteva calcolare $\ve A$ solo in $z=0$. Il tempo ritardato è $t_r=t-\frac{\sqrt{\rho^2-\Delta z^2}}{v}$.
+
+  La corrente è nulla per \(t<0\), quindi il numeratore è nullo per \(t < \frac{\sqrt{\rho^2+\Delta z^2}}{v}\), cioè per $\Delta z^2 > (vt)^2)-\rho^2$. Quindi l'integrale è non nullo per
+  \[|\Delta z| < \sqrt{(vt)^2-\rho^2}\]
+  Si noti che per \(t<\frac{\rho}{v}\) non esiste nessuna sezione del filo che contribuisce al campo perché il campo elettromagnetico non ha fatto in tempo a propagarsi. Quindi in questo intervallo di tempo il campo è nullo. Dopo questo intervallo la corrente valutata in $t_r$ è costante:
+  \[
+    \ve A= \frac{\mu_0}{4\pi}\ver e_z I_0\int_{-\sqrt{(vt)^2-\rho^2}}^{\sqrt{(vt)^2-\rho^2}} \frac{1}{\sqrt{\rho^2 + \Delta z^2}}\,\ud \Delta z
+  \]
+  L'integrando è una funzione pari, quindi:
+  \[
+    \ve A = \frac{\mu_0}{2\pi}\ver e_z I_0\int_{0}^{\sqrt{(vt)^2-\rho^2}} \frac{1}{\sqrt{\rho^2 + \Delta z^2}}\,\ud \Delta z
+  \]
+  Concentriamoci sull'integale\footnote{di solito si usa $x = a\sinh t$}:
+  \(
+  I=\int \frac{1}{\sqrt{a^2+x^2}}\,\ud x
+  \)
+  Usiamo la sostituzione
+  \[
+    t = x + \sqrt{a^2 + x^2}
+  \]
+  Deriviamo rispetto a \(x\):
+
+  \[
+    dt = dx + \frac{x}{\sqrt{a^2 + x^2}} dx
+  \]
+  Cioè:
+  \[
+    dx = \frac{dt}{1 + \frac{x}{\sqrt{a^2 + x^2}}}
+  \]
+  Riscriviamo il denominatore:
+  \[
+    1 + \frac{x}{\sqrt{a^2 + x^2}} = \frac{\sqrt{a^2 + x^2} + x}{\sqrt{a^2 + x^2}} = \frac{t}{\sqrt{a^2 + x^2}}
+  \]
+  Dunque, la derivata diventa:
+  \[
+    \ud x = \frac{\ud t}{t} \sqrt{a^2 + x^2}
+  \]
+  Ora possiamo sostituire nell'integrale:
+  \[
+    I = \int \frac{1}{\sqrt{a^2+x^2}}\frac{\ud t}{t} \sqrt{a^2 + x^2}=\int \frac{dt}{t} = \log |t| + C.
+  \]
+  Sostituendo \( t = x + \sqrt{a^2 + x^2} \), otteniamo:
+  \[
+    I = \log |x + \sqrt{a^2 + x^2}| + C.
+  \]
+
+  Tornando al potenziale vettore:
+  \begin{align*}
+    \ve A & = \frac{\mu_0}{2\pi}\ver e_z I_0\left[ \log \left|\Delta_z + \sqrt{\rho^2 + \Delta_z^2}\right| \right]_{\Delta_z=0}^{\sqrt{(vt)^2-\rho^2}} \\
+          & = \frac{\mu_0}{2\pi}\ver e_z I_0\left[ \log \left|\sqrt{(vt)^2-\rho^2} + vt\right| - \log|\rho| \right]                                    \\
+          & = \frac{\mu_0}{2\pi}\ver e_z I_0\log \left(\frac{\sqrt{(vt)^2-\rho^2} + vt}{\rho}\right)
+  \end{align*}
+
+  Calcoliamo i campi usando le \eqref{eq:potential_E} e \eqref{eq:potential_B}:
+
+  \begin{align*}
+    \ve E = & -\grad\varphi + \frac{\partial\ve A}{\partial t} = \frac{\partial\ve A}{\partial t} \\
+    =       & \frac{\mu_0}{2\pi} I_0\frac{v}{\sqrt{(vt)^2-\rho^2}}\ver e_z
+  \end{align*}
+
+  \begin{align*}
+    \ve B = \rot\ve A = -\frac{\partial A_z}{\partial\rho}\ver e_\varphi = \frac{\mu_0}{2\pi} \frac{I_0}{\rho}\frac{vt}{\sqrt{(vt)^2-\rho^2}}\ver e_\varphi
+  \end{align*}
+  Si noti che per $t\to\infty$ si ritrova il caso stazionario: $\ve E=0$, $\ve B=\frac{\mu_0}{2\pi}\frac{I_0}{\rho}\ver e_\varphi$. Le soluzioni hanno una divergenza per $\rho\to tv$, ma questo è dovuto alla situazione non fisica del problema, in cui la derivata della corrente è infinita al tempo zero.
+\end{Es}
+
+\begin{Es}[Impulso di corrente]
+  Ripetiamo il problem precedente, ma con un impulso di corrente:
+  \[
+    I(t) = I_0\delta(t)
+  \]
+
+  \begin{align*}
+    \ve A & = \frac{\mu_0}{4\pi}\ver e_z\int_{-\infty}^{\infty} \frac{I(t_r)}{\sqrt{\rho^2 + (\Delta z')^2}}\,\ud \Delta z                                                                      \\
+          & = \frac{\mu_0}{2\pi}I_0 \ver e_z\int_{0}^{\sqrt{(vt)^2-\Delta z^2}} \frac{\delta\left(t - \frac{\sqrt{\rho^2 + \Delta z^2}}{v}\right)}{\sqrt{\rho^2 + (\Delta z')^2}}\,\ud \Delta z
+  \end{align*}
+  usando la sostituzione
+  \[u = t - \frac{\sqrt{\rho^2 + \Delta z^2}}{v}\]
+  \[ \Delta z = \sqrt{(vt - vu)^2 - \rho^2} \]
+  \[ \ud \Delta z = -\frac{v(vt - vu)}{\sqrt{(vt - vu)^2 - \rho^2}}\ud u \]
+  \[ \Delta z=0 \Rightarrow u = t - \frac{\rho}{v} \]
+  \[ \Delta z = \sqrt{(vt)^2 - \rho^2} \Rightarrow u = 0 \]
+  Si ottiene:
+  \begin{align*}
+    \ve A & = \frac{\mu_0}{2\pi}I_0 \ver e_z\int_0^{t - \rho/v}\frac{v(vt - vu)\delta(u)}{(vt-vu)\sqrt{(vt - vu)^2 - \rho^2}}\ud u \\
+          & = \frac{\mu_0}{2\pi} I_0 \ver e_r \frac{v}{\sqrt{(vt)^2 - \rho^2}}
+  \end{align*}
+  Derivando si ottengno i campi:
+  \begin{align*}
+    \ve E &= \frac{\mu_0}{2\pi}I_0\frac{v^3t}{((vt)^2 - \rho^2)^{3/2}}\ver e_z \\
+    \ve B &= -\frac{\mu_0}{2\pi}I_0\frac{v\rho}{((vt)^2 - \rho^2)^{3/2}}\ver e_\varphi
+  \end{align*}
+\end{Es}
+
+
 \section{Equazione generale delle onde}
 Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$). In pratica vogliamo trovare le equazioni delle onde elettromagnetiche in un conduttore. Assumiamo il conduttore lineare e isotropo.
 
 Prima di derivare l'equazione delle onde consideriamo il caso in cui ci siano delle cariche nel conduttore con densità $\rho$. L'equazione di continuità per la carica
 \[
-\diver \ve J = -\frac{\partial \rho}{\partial t}
+  \diver \ve J = -\frac{\partial \rho}{\partial t}
 \]
 combinata con la legge di Ohm $\ve J = \sigma \ve E$ e usando Gauss $\diver \ve E = \frac{\rho}{\varepsilon}$ si ottiene:
 \[
-\frac{\partial \rho}{\partial t} = -\sigma \diver\ve E = -\frac{\sigma}{\varepsilon}\rho
+  \frac{\partial \rho}{\partial t} = -\sigma \diver\ve E = -\frac{\sigma}{\varepsilon}\rho
 \]
 la cui soluzione è:
 \[
-\rho(t) = \rho(0)e^{-\frac{\sigma}{\varepsilon}t}
+  \rho(t) = \rho(0)e^{-\frac{\sigma}{\varepsilon}t}
 \]
 Quindi la carica si dissipa con un tempo caratterisico $\tau = \frac{\varepsilon}{\sigma}$, che per un conduttore è un tempo brevissimo. Possiamo quindi considerare il conduttore come privo di cariche libere.
 
