@@ -255,7 +255,9 @@ Suddividiamo una spira di area $S$ in infinitesime spire di area $\ud a$. Ogni s
 rappresenta la densità di carica magnetica sulle facce di una lamina magnetica con lamine a distanza $\delta$, che a grande distanza è equivalente alla spira iniziale.
 
 \section{Campi magnetici generati da correnti\index{campi magnetici!generati da correnti}}
-Una corrente crea un campo magnetico. Al posto di usare una carica di prova per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo crea un campo magnetico le cui linee di forza si chiudono su se stesso.
+Una corrente crea un campo magnetico.
+
+Per una definizione operariva, poiché non esistono cariche magnetiche, per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo attraversato da una corrente crea un campo magnetico le cui linee di forza si chiudono su se stesso.
 \subsection{Legge di Biot--Savart\index{Biot}\index{Savart}\index{legge!di Biot--Savart}}
 \begin{legge}[Biot--Savart]
   Per un filo infinito percoso da corrente $I$ vale
@@ -263,11 +265,11 @@ Una corrente crea un campo magnetico. Al posto di usare una carica di prova per 
     B=k\frac{I}{r}
   \end{equation}
 \end{legge}
-con $k$ una costante che dipende dalle unità di misura. Il primo modo è porre $k=1$, in realtà si pone:
+con $k$ una costante che dipende dalle unità di misura. Nel Sistema Internazionale si pone:
 \[k=\frac{\mu_0}{2\pi}\]
 con $\mu_0$ la permeabilità magnetica del vuoto:
 \[
-  \mu_0=\SI[parse-numbers = false]{4\pi e-7}{\henry\per\meter}
+  \mu_0=\SI[parse-numbers = false]{4\pi 10^{-7}}{\henry\per\meter}
 \]
 Quanto detto vale per il modulo, essendo il campo magnetico attorno al filo, allora:
 \[\ve B\left(\ve r\right)=\frac{\mu_0}{2\pi}\frac{\ver s\times\ve r}{r^2}I\]
@@ -309,9 +311,9 @@ in forma vettoriale:
 \begin{equation}
   \ve B(\ve r)=\frac{\mu_0}{2\pi}\frac{I}{\norm{\ve r}}\ver{s}\times{\ver e_r}
 \end{equation}
-\begin{Es}[spira circolare\index{spira}]
+\begin{Es}[spira circolare lungo l'asse\index{spira}]
   Consideriamo un circuito di forma circolare, con raggio $R$. Vogliamo il campo magnetico lungo l'asse. Per ragioni di simmetria il campo magnetico risultate è ortogonalmente al piano della spira. Usiamo le coordinate cilindriche. $P$ avrà coordinate $(0,0,w)$, individuato dal vettore $\ve r=w \ver e_w$, mentre l'elementino $\ud l$ della spira sarà individuato dal vettore $\ve r\,'=r'\ver e_r$. L'elementino $\ud\ve l=R\ud\theta\ver e_\theta$.
-  \[\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}=\frac{\mu_0}{4\pi}\int_0^{2\pi}\frac{IR\ud\theta\ver e_\theta\times\left(w\ver w_z-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}\]
+  \[\ve B\left(\ve r\right)=\frac{\mu_0}{4\pi}\int_l\frac{I\ud\ve l\times\left(\ve r-\ve r\,'\right)}{\norm{\ve r-\ve r\,'}^3}=\frac{\mu_0}{4\pi}I\int_0^{2\pi}\frac{R\ud\theta\ver e_\theta\times\left(w\ver e_w-R\ver e_r\right)}{\left(R^2+w^2\right)^{\frac{3}{2}}}\]
   Ricordando che:
   \[\ver e_\theta\times\ver e_w=\ver e_r\qquad \ver e_\theta\times\ver e_r=-\ver e_w\qquad \int_0^{2\pi} \ud\theta\ver e_r=\int_0^{2\pi}\left(\cos\theta\ver \imath+\sin\theta\ver \jmath\right)\,\ud \theta=0\]
   \begin{equation}
@@ -454,7 +456,7 @@ in forma vettoriale:
 \end{Es}
 
 \subsubsection{Campo magnetico di una carica in moto}
-Sia $\ve j$ la densità di corrente in un conduttore, quindi il campo magnetico da un volume infinitesimo:
+Sia $\ve J$ la densità di corrente in un conduttore, quindi il campo magnetico da un volume infinitesimo:
 \[
   \ud\ve B = \frac{\mu_0}{4\pi} \frac{\ve J\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v = \frac{\mu_0}{4\pi} \frac{nq\ve v\times (\ve r-\ve r')}{\norm{\ve r-\ve r'}^3}\,\ud v
 \]
@@ -526,7 +528,9 @@ e definire l'ampere usando solo quantità meccaniche come la forza e la distanza
 \section{Circuitazione\index{circuitazione!del campo magnetico}}
 Prendiamo un filo rettilineo, calcoliamo la circuitazione di $\ve B$ lungo una linea di forza:
 \[\oint\ve B\cdot\ud\ve l=\oint B\,\ud l=\oint\frac{\mu_0}{2\pi}\frac{I}{R}\,\ud l=\frac{\mu_0}{2\pi}\frac{I}{R}2\pi R=\mu_0 I\]
-Questo risultato vale per qualsiasi percorso purché concateni una corrente $I$. Consideriamo un circuito che non concatena nessuna corrente:
+Questo risultato vale per qualsiasi percorso purché concateni una corrente $I$.
+
+Consideriamo un percorso che non concatena nessuna corrente, per esempio dato dall'unione da due archi di circoferenza (2 e 4) di raggio $r_1$ e $r_2$ che sottendono lo stesso angolo $\theta$, collegati da dei segmenti radiali (1 e 3):
 \[\int_1\ve B\cdot\ud \ve l=0\qquad\int_3\ve B\cdot\ud \ve l=0\]
 \[\int_2\ve B\cdot\ud \ve l=\frac{\mu_0}{2\pi}\frac{I}{r_2}(r_2\theta)\qquad
   \int_4\ve B\cdot\ud \ve l=-\frac{\mu_0}{2\pi}\frac{I}{r_1}(r_1\theta)\]
@@ -550,7 +554,27 @@ Usando il teorema del rotore:
 Essendo $S$ qualsiasi:
 \begin{equation}
   \rot\ve B=\mu_0\ve J
+  \label{eq:teo_ampere_diff}
 \end{equation}
+
+\begin{Es}[Filo con raggio percorso da corrente]
+  Sia un filo di raggio $R$ percorso da corrente $I$. Vogliamo calcolare il campo magnetico generato a distanza $r$ dall'asse del filo. Per simmetria il campo dipende solo da $r$ ed è coassiale. Calcoliamo la densità di corrente assumendo che sia uniforme all'interno del filo: dalla definizione $I=\int_S\ve J\cdot\ve n\,\ud a$ ricaviamo che:
+  \[J=\frac{I}{\pi R^2}\] all'interno del filo, mentre all'esterno è nulla.
+
+  
+  Per il teorema di Ampere \(\oint_C \ve B\cdot\ud\ve l=\mu_0 I\), considerando un percoso $C$ circolare di raggio $r>R$ e $\ve B$ dipendende solo da $r$:
+  \[2\pi r B = \mu_0 I\]
+  e quindi
+  \[B=\frac{\mu_0}{2\pi}I\frac{1}{r}\]
+  All'interno del filo, invece, il percorso $C$ è circolare di raggio $r<R$. In questa sezione la corrente sarà $J\pi r^2=I r^2 / R^2$. Usando ancola il teorema di Ampere:
+  \[
+  2\pi r B = \mu_0\frac{I r^2}{R^2}
+  \]
+  Da cui si ricava:
+  \[B=\frac{\mu_0}{2\pi}I\frac{r}{R^2}\]  
+
+\end{Es}
+
 \begin{Es}[cilindro rotante]
   Sia un cilindro rotante lungo l'asse con periodo $T$, all'interno del quale ci sia una distribuzione di carica uniforme $\rho$. Vogliamo conoscere il campo magnetico generato. Per la simmetria il campo è coassiale. Creiamo un percorso che concatena parzialmente il cilindro.
   \begin{figure}[htbp]
@@ -565,7 +589,7 @@ Essendo $S$ qualsiasi:
 
 
 \section{Flusso\index{flusso!del campo magnetico}}
-Sappiamo che le linee del campo di $\ve B$ sono linee chiuse o infinite, non esistono sorgenti. Se prendiamo una superficie qualsiasi ci accorgiamo che tante linee di forza entrano, tante ne escono, quindi:
+Sappiamo che le linee del campo di $\ve B$ sono linee chiuse o infinite, non esistono cariche magnetiche. Se prendiamo una superficie qualsiasi ci accorgiamo che tante linee di forza entrano, tante ne escono, quindi:
 \begin{equation}
   \Phi_S\left(\ve B\right)=\int_S\ve B\cdot\ve n\,\ud a=0
 \end{equation}
@@ -588,7 +612,7 @@ Questa espressione poteva essere ricavata calcolando:
 o in forma integrale:
 \begin{gather}
   \int_S\ve B\cdot\ve n\,\ud a=0\\
-  \int_C\ve B\cdot\ud \ve l=\mu_0 I
+  \oint_C\ve B\cdot\ud \ve l=\mu_0 I
 \end{gather}
 \section{Potenziale scalare magnetico}
 Supponiamo di poter scrivere:
@@ -609,7 +633,7 @@ avendo usato la \eqref{potenziale_magnetico01}. Sostituendo l'espressione del ca
 \begin{equation}
   \ud\varphi_m=-\frac{I}{4\pi}\oint_C\frac{\ud \ve s\cdot(\ud\ve l\times\ve r)}{r^3}
 \end{equation}
-dove abbiamo battezzato $\ve r:=(\ve r-\ve r\,')$ che quindi indica il vettore che individua $P$ rispetto a $\ud\ve l$. L'ultima relazione la possiamo anche scrivere come:
+dove abbiamo introdotto $\ve r:=(\ve r-\ve r\,')$ che quindi indica il vettore che individua $P$ rispetto a $\ud\ve l$. L'ultima relazione la possiamo anche scrivere come:
 \begin{equation}
   \ud\varphi_m=-\frac{I}{4\pi}\oint_C\frac{\ve r\cdot(\ud \ve s\times\ud\ve l)}{r^3}
   \label{variazione_campo_magnetico02}
@@ -656,7 +680,13 @@ Essendo la divergenza del vettore $\ve B$ nulla, cioè essendo $\ve B$ un campo 
   \exists\ve A:\ve B=\rot\ve A
   \label{vet_magnetico00}
 \end{equation}
-detto potenziale vettore magnetico. $\ve A$ non è univocamente determinato, per esempio se scegliamo un certo $\ve A$ potenziale vettore allora anche $\ve A'=\ve A+\grad\psi$ soddisfa la condizione \eqref{vet_magnetico00}:
+detto potenziale vettore magnetico. Infatti se calcoliamo la divergenza
+\[
+\diver \ve B = \diver\rot\ve A = 0
+\]
+in quanto la divergenza del rotore è sempre nulla.
+
+$\ve A$ non è univocamente determinato, per esempio se scegliamo un certo $\ve A$ potenziale vettore allora anche $\ve A'=\ve A+\grad\psi$ soddisfa la condizione \eqref{vet_magnetico00}:
 \[
   \rot\left(\ve A+\grad\psi\right)=\rot\ve A
 \]
@@ -665,7 +695,7 @@ in quando il rotore di un gradiente è sempre nullo. Tra le tante possibili scel
   \diver\ve A=0
   \label{gauge_magnetos}
 \end{equation}
-Questo è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere che:
+Questo è sempre possibile, supponiamo che $\diver\ve A=k\neq 0$, allora scelgo $\ve A'=\ve A +\grad\psi$ tale che $\nabla^2\psi = -k$, allora $\diver \ve A'=0$. Sappiamo dalla circuitazione di Ampere \eqref{eq:teo_ampere_diff} che:
 \begin{equation}
   \rot\ve B=\mu_0\ve J
 \end{equation}
@@ -734,8 +764,34 @@ ricordando che $\ver u_r = \cos\theta\ver i+\sin\theta\ver j$ e $\ver u_\theta =
 che si riassume, tenendo conto che l'area è $A=\pi r'^2$:
 \begin{equation}
   \ve A=\frac{\mu_0}{4\pi}\frac{\ve m\times\ve r}{r^3}
+  \label{eq:potenziale_vettoriale_dipolo_magnetico}
+\end{equation}
+Ricordando $\ve A\times(\ve B\times \ve C)=\ve B(\ve A\cdot \ve C)-\ve C(\ve A\cdot \ve B)$, il campo:
+\begin{equation}
+\ve B = \ve\nabla\times\ve A = \frac{\mu_0}{4\pi}\ve\nabla\times\left(\frac{\ve m\times\ve r}{r^3}\right) = \frac{\mu_0}{4\pi} \left(\frac{ 3\ve r\left(\ve m\cdot \ve r\right)}{r^5}-\frac{\ve m}{r^3}\right)
+\label{eq:campo_magnatico_dipolo_magnetico}
 \end{equation}
 
+\begin{Es}[Orbita magnetica]
+  Assumendo che il campo magnetico della Terra sia dovuto ad un momento magnetico pari a $\mu_M=\SI{8E22}{\ampere\meter^2}$ posizionato al centro e diretto come l'asse di rotazione, valutare quale deve essere la relazione tra il momento di una protone e il raggio di un'orbita circolare equatoriale intorno alla Terra.
+
+  Partendo dall'equazione \eqref{eq:campo_magnatico_dipolo_magnetico} possiamo calcolare il campo magnetico su un piano equatoriale, nel quale $\ve m\cdot \ve r = 0$
+  \[
+    B = \frac{\mu_0}{4\pi}\frac{\mu_M}{r^3}
+  \]
+  nella direzione opposta del momento magnetico. Per un'orbita circolare dobbiamo imporre che la forza di Lorentz sia diretta verso il centro e di modulo $m\frac{v^2}{r}$. Il modulo della forza deve essere
+  \[
+  m\frac{v^2}{r} = q v B = qv \frac{\mu_0}{4\pi}\frac{\mu_M}{r^3}
+  \]
+  da cui si ricava che il momento è
+  \[
+  p = \frac{\mu_0}{4\pi}\frac{q\mu_M}{r^2}
+  \]
+si noti che questa relazione è molto diversa da quella che si trova nel caso gravitazionale $v^2  = G M  / r$
+
+ 
+
+\end{Es}
 
 \chapter{Dielettrici\index{dielettrici}}
 \minitoc
@@ -1632,7 +1688,7 @@ tornando al vettore potenziale:
 \end{equation}
 avendo usato la \eqref{correnti_superficiali} e la \eqref{99}. Da qui si potrebbe trovare $\ve B$ con la relazione $B=\rot\ve A$.
 \section{Vettore intensità magnetica \texorpdfstring{$\vec H$}{H}}
-Dal teorema di Ampere avevamo che:
+Dal teorema di Ampere \eqref{eq:teo_ampere_diff} avevamo che:
 \begin{equation}
   \rot\ve B=\mu_0\ve J
 \end{equation}
@@ -3166,7 +3222,7 @@ con $v=\frac{1}{\sqrt{\varepsilon\mu}}$. Si noti che le densità di carica e cor
 \section{Equazione generale delle onde}
 Vogliamo trovare le equazioni per i campi $\ve E$ e $\ve H$ in assenza di sorgenti, o meglio supponendo che le uniche sorgenti siano le correnti indotte dal campo elettrico ($\rho=0$, $\ve J=\sigma\ve E$). In pratica vogliamo trovare le equazioni delle onde elettromagnetiche in un conduttore. Assumiamo il conduttore lineare e isotropo.
 
-Prima di derivare l'equazione delle onde consideriamo il caso in cui ci siano delle cariche nel conduttore con densità $\rho$. L'equazione di continuità per la carica
+Prima di derivare l'equazione delle onde consideriamo dimostriamo che effettivamente possiamo ignorare le cariche libere in un conduttore. Supponiamo che inizialmente ci siano cariche elettriche con densità $\rho(0)$. Studiamo la sua evoluzione temporale. L'equazione di continuità per la carica
 \[
   \diver \ve J = -\frac{\partial \rho}{\partial t}
 \]
@@ -3178,7 +3234,7 @@ la cui soluzione è:
 \[
   \rho(t) = \rho(0)e^{-\frac{\sigma}{\varepsilon}t}
 \]
-Quindi la carica si dissipa con un tempo caratterisico $\tau = \frac{\varepsilon}{\sigma}$, che per un conduttore è un tempo brevissimo. Possiamo quindi considerare il conduttore come privo di cariche libere.
+Quindi la carica si dissipa con un tempo caratterisico $\tau = \frac{\varepsilon}{\sigma}$, che per un conduttore è un tempo brevissimo. Possiamo quindi considerare il conduttore come privo di cariche libere: $\rho=0$.
 
 Consideriamo l'equazione di Maxwell:
 \[
