@@ -504,7 +504,7 @@ Siano due fili indefiniti paralleli, a distanza $d$ percorsi dalle correnti conc
 
 Usiamo Biot--Savart, il campo generato dal primo filo a distanza $d$:
 \begin{equation}
-  \ve B(d)=\frac{\mu_0}{2\pi}I_1\frac{\ver k\times\ver \jmath}{d^2}=-\frac{\mu_0}{2\pi}\frac{I_1}{d}\ver \imath
+  \ve B(d)=\frac{\mu_0}{2\pi}I_1\frac{\ver k\times\ver \jmath}{d}=-\frac{\mu_0}{2\pi}\frac{I_1}{d}\ver \imath
 \end{equation}
 La forza sul secondo:
 \begin{equation}
@@ -3396,7 +3396,7 @@ cioè che:
 \end{equation}
 l'equazione differenziale diventa:
 \begin{equation}
-  \nabla^2 u=k_0^2n^2 u
+  \nabla^2 u+k_0^2n^2 u=0
   \label{238}
 \end{equation}
 con $u$ e $n$ funzioni del punto. Ipotizziamo che $u$ sia del tipo:
@@ -3411,19 +3411,19 @@ con $L$ il cammino ottico. Calcoliamo le derivate del laplaciano:
 \end{gather*}
 sostituendo nella \eqref{238} otteniamo:
 \begin{multline}
-  Ak_0e^{jk_0 L}\left\{j\frac{\partial^2 L}{\partial x^2}-\left(k_0\frac{\partial L}{\partial x}\right)^2+j\frac{\partial^2 L}{\partial y^2}-\left(k_0\frac{\partial L}{\partial y}\right)^2+j\frac{\partial^2 L}{\partial z^2}-\left(k_0\frac{\partial L}{\partial z}\right)^2\right\}\\=k_0^2 n^2 Ae^{jk_0 L}
+  Ak_0e^{jk_0 L}\left\{j\frac{\partial^2 L}{\partial x^2}-\left(k_0\frac{\partial L}{\partial x}\right)^2+j\frac{\partial^2 L}{\partial y^2}-\left(k_0\frac{\partial L}{\partial y}\right)^2+j\frac{\partial^2 L}{\partial z^2}-\left(k_0\frac{\partial L}{\partial z}\right)^2+k_0n^2\right\}\\=0
 \end{multline}
 semplificando:
 \begin{equation}
-  \left\{j\left(\frac{\partial^2 L}{\partial x^2}+\frac{\partial^2 L}{\partial y^2}+\frac{\partial^2 L}{\partial z^2}\right)-k_0\left[\left(\frac{\partial L}{\partial x}\right)^2+\left(\frac{\partial L}{\partial y}\right)^2+\left(\frac{\partial L}{\partial z}\right)^2\right]\right\}=k_0n^2
+  \left\{j\left(\frac{\partial^2 L}{\partial x^2}+\frac{\partial^2 L}{\partial y^2}+\frac{\partial^2 L}{\partial z^2}\right)-k_0\left[\left(\frac{\partial L}{\partial x}\right)^2+\left(\frac{\partial L}{\partial y}\right)^2+\left(\frac{\partial L}{\partial z}\right)^2\right]+k_0n^2\right\}=0
 \end{equation}
 che diventa:
 \begin{equation}
-  j\nabla^2 L-k_0\norm{\grad L}^2=k_0n^2
+  j\nabla^2 L-k_0\norm{\grad L}^2+k_0n^2=0
 \end{equation}
 se ora dividiamo ancora per $k_0$:
 \begin{equation}
-  \frac{1}{k_0}j\nabla^2 L-\norm{\grad L}^2=n^2
+  \frac{1}{k_0}j\nabla^2 L-\norm{\grad L}^2+n^2=0
 \end{equation}
 e consideriamo l'approssimazione per $\lambda_0\to 0$, equivalente a $k_0\to\infty$, cioè trascuriamo gli effetti di diffrazione, il primo termine non lo consideriamo:
 \begin{equation}
@@ -3455,7 +3455,7 @@ Il fenomeno della dispersione è dovuto alla variazione di $n$ in funzione della
 \end{equation}
 Un'altro modello, più preciso, è quello di Sir Mayer\index{Sir Mayer}:
 \begin{equation}
-  n=1+\frac{A\lambda^2}{\lambda^2-\lambda_0}
+  n=1+\frac{A\lambda^2}{\lambda^2-\lambda_0^2}
   \label{Mayerdisp}
 \end{equation}
 in cui si associa ad ogni mezzo una lunghezza d'onda propria $\lambda_0$.
@@ -3485,7 +3485,7 @@ Con Gauss:
 \end{equation}
 l'equazione differenziale diventa:
 \[
-  \ddot z=-\frac{e^2}{4\pi\varepsilon_0 a^3 m}z = \frac{k}{m}z
+  \ddot z=-\frac{e^2}{4\pi\varepsilon_0 a^3 m}z = -\frac{k}{m}z
 \]
 avendo definito:
 \begin{equation}

@@ -13,7 +13,7 @@
 \end{Def}
 Segue che una mole di $^{12}\mathrm{C}$ corrisponde a $\SI{12}{\gram}$, ma una mole di $\mathrm{C}$ corrisponde a poco più di $\SI{12}{\gram}$ perché in un campione naturale di $\mathrm{C}$ sono contenuti anche isotopi più pesanti.
 \begin{Def}[numero di Avogadro\index{numero!di Avogadro}]
-	Il numero di Avogadro è il numero di atomi in $\SI{12}{\gram}$ di $^{12}\mathrm{C}$
+	Il numero di Avogadro $N_A$, è il numero di atomi in $\SI{12}{\gram}$ di $^{12}\mathrm{C}$
 \end{Def}
 Quindi una mole di una data sostanza corrisponde a un numero di Avogadro di molecole o atomi di quella sostanza.
 \section{Unità di massa atomica\index{unità di massa atomica}}
@@ -21,9 +21,20 @@ Nel 1815 Proust\index{Proust} propose di introdurre la massa atomica relativa, r
 \begin{Def}[unità di massa atomica]
 	Una massa atomica ($\SI{1}{\atomicmassunit}$) è pari al dodicesimo della massa del $^{12}\mathrm{C}$.
 \end{Def}
-Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\SI{12}{\gram}$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\SI{12}{\gram}/N_A$, quindi il dodicesimo:
+
+
+Una mole di $^{12}\mathrm{C}$ corrisponde per definizione a $\SI{12}{\gram}$ di carbonio 12 e in essa sono contenuti $N_A$ atomi, quindi la massa di un atomo di $^{12}\mathrm{C}$ è $\SI{12}{\gram}/N_A$
+
+$$
+N_A \times m_{^{12}\mathrm{C}}=\SI{12}{\gram}
+$$
+
+$$
+m_{^{12}\mathrm{C}} = \SI{12}{\gram} / N_A
+$$
+quindi il dodicesimo:
 \[
-	\SI{1}{\atomicmassunit} = \frac{\si{\gram\per\mole}}{N_A} = \frac{\si{\gram\per\mole}}{6.022\ldots\times 10^{23}\;\si{\per\mole}}\simeq \SI{1.6605402E-27}{\kilogram}
+	\SI{1}{\atomicmassunit} = \frac{m_{^{12}\mathrm{C}}}{12} = \frac{\si{\gram}}{N_A} = \frac{\si{\gram}}{6.022\ldots\times 10^{23}\;}\simeq \SI{1.6605402E-27}{\kilogram}
 \]
 
 \chapter{Gas\index{gas}}
@@ -42,7 +53,7 @@ si scopre che:
 \begin{equation}
 	U=\frac{3}{2}nRT
 \end{equation}
-Siamo allora indotti a formulare il principio di equipartizione dell'energia, cioè ad assegnare ad ogni grado di libertà un'energia pari a $\frac{1}{2}NkT$.
+Siamo allora indotti a formulare il principio di equipartizione dell'energia, cioè ad assegnare ad ogni grado di libertà un'energia pari a $\frac{1}{2}NkT$ dove $N$ è il numero di molecole e $k$ la costante di Boltzmann.
 \subsection{Gas reali}
 Un gas reale è approssimato da un gas ideale tanto più è bassa la sua densità. In questa condizione le ipotesi sul gas ideale sono approssimativamente vere.
 \subsubsection{Sviluppo del viriale\index{sviluppo!del viriale}}
@@ -319,16 +330,12 @@ L'effetto Doppler non trasversale di una sorgente in movimento con velocità $v$
 \end{equation}
 con $\nu$ la frequenza apparente e $\nu_0$ la frequenza propria della sorgente, $\beta=\frac{v}{c}$. Se consideriamo $v\ll c$ allora:
 \begin{equation}
-	\nu\sim \nu_0(1+\beta)\left(1+\frac{1}{2}\beta^2\right)=\nu_0\left(1+\frac{1}{2}\beta^2+\beta+\frac{1}{2}\beta^3\right)
-\end{equation}
-trascurando gli infinitesimi di ordine superiore:
-\begin{equation}
-	\nu=\nu_0\left(1+\frac{v}{c}\right)
-	\label{doppler_termico01}
+	\nu\sim \nu_0(1+\beta)\left(1+\frac{1}{2}\beta^2\right)=\nu_0\left(1+\beta+\cdots\right)\simeq \nu_0\left(1 + \frac{v}{c}\right)
+		\label{doppler_termico01}
 \end{equation}
 Consideriamo ora un forno con una finestra di quarzo molto piccola dal quale esca della radiazione emessa dalle molecole all'interno con distribuzione delle velocità:
 \begin{equation}
-	\ud N=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{-\frac{mv_x^2}{2kT}}\,\ud v_x
+	\frac{\ud N}{\ud v_x}=N\left(\frac{m}{2\pi kT}\right)^{\frac{1}{2}}e^{-\frac{mv_x^2}{2kT}}
 	\label{doppler_termico02}
 \end{equation}
 ipotizzando che noi possiamo vedere solo la radiazione emessa da molecole con velocità nella direzione $x$. Passiamo dalla distribuzione delle velocità alla distribuzione in frequenza usando la relazione \eqref{doppler_termico01} con $v=v_x$:
@@ -363,11 +370,11 @@ quindi l'ampiezza della campana a metà altezza è:
 \begin{equation}
 	\Delta \nu_{1/2}=2\frac{\nu_0}{c}\sqrt{\frac{2kT\log 2}{m}}
 \end{equation}
-la risoluzione:
+la risoluzione relativa:
 \begin{equation}
 	\frac{\Delta \nu_{1/2}}{\nu_0}=\frac{2}{c}\sqrt{\frac{2kT\log 2}{m}}
 \end{equation}
-che va come $\sqrt{\frac{T}{m}}$.
+che è costante con la frequenza e va come $\sqrt{\frac{T}{m}}$.
 \section{Libero cammino medio}
 Sappiamo\footnote{vedi \ref{libero cammino medio fisica1} a pag.\@\pageref{libero cammino medio fisica1}} che se consideriamo tutte le molecole ferme e solo una in moto, il libero cammino di questa è:
 \begin{equation}
@@ -1108,11 +1115,11 @@ Un corpo emette della radiazione visibile se è caldo abbastanza. Possiamo scomp
 
 Ogni corpo emettere dell'energia per irraggiamento, cioè radiazione, questo fa si che si crei un equilibrio termico tra vari corpi anche senza un contatto. Infatti se il corpo $A$ è più caldo del corpo $B$, ci sarà un flusso netto di radiazione da $A$ a $B$ fino a quando $B$ assorbendo la radiazione di $A$ convertendola in energia interna non avrà la stessa temperatura di $A$ che contemporaneamente si è raffreddato per perdita di energia interna sotto forma di radiazione verso $B$. Aumentando la temperatura di un corpo aumenta la potenza da esso irradiata.
 
-Consideriamo un intervallo di lunghezze d'onda infinitesimo dello spettro di emissione di $n$ corpi opachi in equilibrio termico tra loro e l'ambiente. Poiché i corpi sono opachi non possono trasmettere la radiazione, parte di essa sarà assorbita e parte riflessa. Sia $E$ l'energia che arriva su un corpo. La parte di energia riflessa sarà $aE$, quella riflessa $rE$. $a$ è il coefficiente di assorbimento, $r$ di riflessione. Naturalmente essendo tutta la radiazione o riflessa o assorbita:
+Consideriamo un intervallo di lunghezze d'onda infinitesimo dello spettro di emissione di $n$ corpi opachi in equilibrio termico tra loro e l'ambiente. Poiché i corpi sono opachi non possono trasmettere la radiazione, parte di essa sarà assorbita e parte riflessa. Sia $E$ l'energia che arriva su un corpo. La parte di energia assorbita sarà $aE$, quella riflessa $rE$ dove $a$ è il coefficiente di assorbimento, $r$ di riflessione. Per conservazione dell'energia $E=aE+rE$
 \begin{equation}
-	E=aE+rE=(a+r)E\quad\Rightarrow \qquad(a+r)=1
+	(a+r)=1
 \end{equation}
-per tutti i corpi $a_1+r_1=1\ldots a_n+r_n=1$. Poiché i corpi sono in equilibrio termico tra di loro e con l'ambiente (li possiamo considerare nel vuoto) l'energia irradiata dal primo corpo in un certo $\Delta t$ deve essere uguale all'energia assorbita:
+Assumento l'equilibrio termico, l'energia emessa da un corpo deve essere uguale all'energia ricevuta. Per il corpo $1$:
 \begin{equation}
 	W_1\Delta A_1\Delta t=a_1I\Delta A_1\Delta t
 	\label{emittanza01}
@@ -1123,9 +1130,9 @@ con $W_1$ l'emittanza, $\Delta A_1$ l'area della superficie e $I$ l'intensità r
 	\label{emittanza02}
 \end{equation}
 Dividendo membro a membro la \eqref{emittanza01} e la \eqref{emittanza02}:
-\begin{equation}
+\begin{equation*}
 	\frac{W_1}{W_2}=\frac{a_1}{a_2}
-\end{equation}
+\end{equation*}
 o meglio:
 \begin{equation}
 	\frac{W_1}{a_1}=\frac{W_2}{a_2}
@@ -1221,7 +1228,7 @@ Wien notò la somiglianza della curva $R(\lambda)$ che descrive la potenza per u
 \end{equation}
 $c_1$ e $c_2$ sono chiamati prima e seconda costante di radiazione.
 \section{Radiazione della cavità}
-Come abbiamo detto la radiazione di un corpo nero è uguale alla radiazione emessa da un corpo nero. Studiamo quindi lo spettro della densità di energia della radiazione all'interno di una cavità $\rho$. Questa quantità non è altro che l'energia per unità di volume all'interno della cavità nell'intervallo di frequenze (o lunghezze d'onda corrispondenti) $\nu$-$\nu+\ud\nu$. È evidente che:
+Come abbiamo detto la radiazione di un corpo nero è uguale alla radiazione emessa da un corpo nero. Studiamo quindi lo spettro della densità di energia della radiazione all'interno di una cavità $\rho$. Questa quantità non è altro che l'energia per unità di volume all'interno della cavità nell'intervallo di frequenze (o lunghezze d'onda corrispondenti) [$\nu$, $\nu+\ud\nu$]. È evidente che:
 \begin{equation}
 	\rho \propto R
 \end{equation}
@@ -1291,19 +1298,23 @@ Dall'equazione \eqref{numero modi di oscillare 3d} divisa per $V$ otteniamo la d
 \end{equation}
 Che è la potenza monocromatica per unità di area secondo Rayleigh--Jean. Questa funzione per $\lambda\to 0$ tende a $+\infty$, che è ovviamente impossible, la cosidetta catastrofe ultravioletta. Dalla legge di Rayleigh--Jeans si deduce che la fisica classica non è capace di descrivere lo spettro del corpo nero.
 \section{Planck\index{Planck}}
-Planck postula che l'energia degli oscillatori sia discreta, multipla intera di $\epsilon$. Il numero di oscillatori aventi l'energia $m\epsilon$ con $m \in \field{N}$ è:
+Planck postula che l'energia degli oscillatori sia discreta, multipla intera di $\epsilon$. Il numero di oscillatori aventi l'energia $E_m=m\epsilon$ con $m \in \field{N}$ è:
 \begin{equation}
-	n_m=n_0e^{-\frac{E_m}{kT}}=n_0e^{-\frac{m\epsilon}{kT}}
-\end{equation}
-e la loro energia totale:
-\begin{equation}
-	E_{m\epsilon}=n_m (m\epsilon)=m\epsilon n_0e^{-\frac{m\epsilon}{kT}}
+	n_m=n_0 e^{-\frac{E_m}{kT}}=n_0 e^{-\frac{m\epsilon}{kT}}
 \end{equation}
 il numero totale di particelle:
 \begin{equation}
 	N=\sum_{m=0}^\infty n_m=\sum_{m=0}^\infty n_0e^{-\frac{m\epsilon}{kT}}=n_0\sum_{m=0}^\infty \left(e^{-\frac{\epsilon}{kT}}\right)^m=n_0\frac{1}{1-e^{-\frac{\epsilon}{kT}}}
 \end{equation}
-essendo una serie geometrica di ragione $0<e^{-\frac{\epsilon}{kT}}<1$. L'energia media sarà\footnote{ricordiamo lo sviluppo in serie di $(1-x)^{-2}$:
+essendo una serie geometrica di ragione $0<e^{-\frac{\epsilon}{kT}}<1$. Quindi $n_0=N (1 - e^{-\frac{\epsilon}{kT}})$. Possiamo riscrivere:
+\begin{equation}
+	n_m=n_0 e^{-\frac{m\epsilon}{kT}} = N (1 - e^{-\frac{\epsilon}{kT}}) e^{-\frac{m\epsilon}{kT}}
+\end{equation}
+L'energia totale delle particelle con energia $m\epsilon$
+\begin{equation}
+	E_{m\epsilon}=n_m (m\epsilon)=m\epsilon n_0e^{-\frac{m\epsilon}{kT}}
+\end{equation}
+L'energia media sarà\footnote{ricordiamo lo sviluppo in serie di $(1-x)^{-2}$:
 	\[
 		\left(1-x\right)^{-2}=\sum_{m=0}^{\infty}(m+1)x^m=\sum_{m=1}^\infty m x^{m-1}
 	\]
@@ -1341,13 +1352,19 @@ Si può esprimere in funzione della frequenza usando $\lambda=c/\nu$ e quindi $\
 Da qui si può calcolare la densità di energia totale, integrando nella frequenza:
 \begin{equation}
 	\begin{split}
-		\frac{U}{V} &= \int_0^\infty R(\nu)\,\ud\nu = \frac{8\pi h}{c^3} \int_0^\infty \frac{\nu ^3}{e^\frac{h\nu}{kT}-1}\,\ud\nu \\
+		u=\frac{U}{V} &= \int_0^\infty R(\nu)\,\ud\nu = \frac{8\pi h}{c^3} \int_0^\infty \frac{\nu ^3}{e^\frac{h\nu}{kT}-1}\,\ud\nu \\
 		&= \frac{8\pi h}{c^3}\frac{kT}{h}\left(\frac{kT}{h}\right)^3 \int_0^\infty \frac{x^3}{e^x-1}\,\ud x \\
 		&= \frac{8\pi^5}{15 (hc)^3}(kT)^4
 	\end{split}
 \end{equation}
 Avendo usando la sostituzione $x=\frac{h\nu}{kT}$ and $\ud \nu = \frac{kT}{h}\ud x$ e $\int_0^\infty\frac{x^3}{e^x-1}\,\ud x = \frac{\pi^4}{15}$.
 Il fatto che l'energia è quantizzata significa anche che l'emissione di energia da parte del corpo nero è quantizzata, cioè sotto forma di quanti\index{quanti} o fotoni\index{fotoni}, ognuno dei quali trasporta energia $h\nu$.
+
+Possiamo ricavare la legge di Stefan--Boltzmann ricordando che l'emittanza è $c/4 u$
+
+\begin{equation}
+W_b = \frac{c}{4} u = \frac{2\pi^5 k^4}{15h^3c^2}T^4
+\end{equation}
 
 \begin{figure}
 	\centering
@@ -2033,9 +2050,10 @@ L'energia meccanica è una costante del moto:
 	E=K+V=\const
 \end{equation}
 all'infinito l'energia potenziale è nulla e l'energia è tutta energia cinetica; al contrario alla distanza di minimo avvicinamento $\Delta$ l'energia è tutta potenziale:
-\begin{multline}
-	E=K(\infty)+V(\infty)=K(\infty)=\frac{1}{2}mv_0^2=\\=E=K(\Delta)+V(\Delta)=V(\Delta)=\frac{Zze^2}{\giorgi\Delta}
-\end{multline}
+\begin{align}
+	E=&K(\infty)=\frac{1}{2}mv_0^2=\\
+	 =&V(\Delta)=\frac{Zze^2}{\giorgi\Delta}
+\end{align}
 con $Z$ il numero di protoni nel nucleo, ognuno di carica $e$, $z$ il numero di protoni della particella $\alpha$ (2). Allora:
 \begin{equation}
 	\Delta=\frac{1}{\giorgi}\frac{zZe^2}{E}
@@ -2296,7 +2314,7 @@ con
 \end{equation}
 l'energia della prima orbita che corrisponde quindi all'energia che devo fornire ad un atomo per strappare l'elettrone sul livello più basso, che è l'energia di ionizzazione. Il salto energetico di un elettrone che passa da $n=n_1$ a $n=n_2$:
 \begin{equation}
-	\Delta E=E_2-E_1=-Z^2R_\infty hc\left(\frac{1}{n_2}-\frac{1}{n_1}\right)
+		\Delta E=E_2-E_1=-Z^2R_\infty hc\left(\frac{1}{n_2^2}-\frac{1}{n_1^2}\right)
 \end{equation}
 La frequenza del fotone emesso quando un elettrone passa da $E_1$ a $E_2$:
 \begin{equation}
@@ -2319,7 +2337,7 @@ con $m_\mathrm{p}$ la massa del protone. Definiamo:
 \begin{Es}[Riga $\mathrm{H}_\alpha$]
 	La riga $\mathrm{H}_\alpha$ è quella corrispondente alla transizione $n=3\to2$ nell'idrogeno. Calcoliamo il numero d'onda
 	\begin{multline*}
-		\frac{1}{\lambda}=R\left(\frac{1}{n_2}-\frac{1}{n_1}\right)=R_\infty\frac{\mu}{m_\mathrm{e}}\left(\frac{1}{2^2}-\frac{1}{3^2}\right)=\frac{5}{36}R_\infty\frac{Zm_\mathrm{p}}{Z m_\mathrm{p}+m_\mathrm{e}}\\=\frac{5}{36}R_\infty\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}\simeq \SI{1.523E6}{\per\meter}
+		\frac{1}{\lambda}=R\left(\frac{1}{n_2^2}-\frac{1}{n_1^2}\right)=R_\infty\frac{\mu}{m_\mathrm{e}}\left(\frac{1}{2^2}-\frac{1}{3^2}\right)=\frac{5}{36}R_\infty\frac{Zm_\mathrm{p}}{Z m_\mathrm{p}+m_\mathrm{e}}\\=\frac{5}{36}R_\infty\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}\simeq \SI{1.523E6}{\per\meter}
 	\end{multline*}
 	avendo usato $n_1=3$, $n_2=2$ e $Z=1$. La lunghezza d'onda:
 	\[
@@ -2327,7 +2345,7 @@ con $m_\mathrm{p}$ la massa del protone. Definiamo:
 	\]
 	Se avessimo usato $R_\infty$ al posto di $R$ sarebbe risultato: $\lambda\simeq \SI{6.561E-7}{\meter}$. Infatti la correzione per l'idrogeno della massa ridotta:
 	\[
-		\mu_\mathrm{H}=\frac{m_\mathrm{e}m_\mathrm{p}}{m_\mathrm{e}-m_\mathrm{p}}=\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}m_\mathrm{e}\simeq 1.0005 \times m_\mathrm{e}
+		\mu_\mathrm{H}=\frac{m_\mathrm{e}m_\mathrm{p}}{m_\mathrm{e}+m_\mathrm{p}}=\frac{1}{1+\frac{m_\mathrm{e}}{m_\mathrm{p}}}m_\mathrm{e}\simeq 1.0005 \times m_\mathrm{e}
 	\]
 \end{Es}
 \subsection{Correzione relativistica}
