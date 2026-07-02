@@ -13,11 +13,11 @@ chiamata forza di Lorentz\index{Lorentz}\index{forza!di Lorentz}. Essa è dirett
 \end{equation}
 \subsection{Definizione operativa}
 Per misurare il campo elettrico è sufficiente effettuare una singola misura, per quello magnetico non è sufficiente. Ricaviamo dalla \eqref{eq:magneto01} il campo magnetico, moltiplichiamo vettorialmente per $\ve v$:
-\[\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=\ve vB^2-\left(\ve v\cdot\ve B\right)\ve v\]
+\[\frac{\ve F\times\ve v}{q}=\left(\ve v\times\ve B\right)\times\ve v=v^2\ve B-\left(\ve v\cdot\ve B\right)\ve v\]
 Allora\footnote{??!!}:
 \[\ve B=\frac{\ve F\times\ve v}{qv^2}+c\ve v\]
 Facciamo due misure usando $q$ e due velocità ortogonali $\ve v_1$, $\ve v_2$:
-\[\ve B=\frac{\ve F_1\times \ve v_1}{qv_1^2}+c_1\ve v_1\qquad\ve B=\frac{\ve F_2\times\ve v_2}{qv_1^2}+c_2\ve v_2\]
+\[\ve B=\frac{\ve F_1\times \ve v_1}{qv_1^2}+c_1\ve v_1\qquad\ve B=\frac{\ve F_2\times\ve v_2}{qv_2^2}+c_2\ve v_2\]
 Moltiplichiamole scalarmente per $v_1$:
 \[\frac{\left(\ve F_1\times \ve v_1\right)\cdot\ve v_1}{qv_1^2}+c_1v_1^2=\frac{\left(\ve F_2\times\ve v_2\right)\cdot v_1}{qv_1^2}+c_2\underbrace{\left(\ve v_2\cdot \ve v_1\right)}_{0}\]
 \[c_1=\frac{\left(\ve F_2\times\ve v_2\right)v_1}{qv_1^2v_2^2}\]
@@ -1388,7 +1388,7 @@ In modo analogo si può mostrare che anche la componente di $\ve D$ tangente sub
 
   Il campo generato all'interno della sfera sarà quello della somma dei campi generati dalle due sfere. Il campo generato da una sfera carica uniformente si può trovare con il teorema di gauss:
   \[
-    4\pi r^2 E = \frac{4}{3}\pi r^3\rho
+    4\pi r^2 E = \frac{4}{3}\pi r^3\rho/\varepsilon_0
   \]
   cioè:
   \[
@@ -1617,7 +1617,7 @@ Supponiamo un cilindro uniformemente magnetizzato con asse lungo $z$, quindi $\v
 \begin{equation}
   \left\{
   \begin{aligned}
-    J_{mx} & =\left(\frac{\partial M_z}{\partial y}-\frac{\partial M_y}{\partial x}\right)=\frac{\partial M}{\partial y}  \\
+    J_{mx} & =\left(\frac{\partial M_z}{\partial y}-\frac{\partial M_y}{\partial z}\right)=\frac{\partial M}{\partial y}  \\
     J_{my} & =\left(\frac{\partial M_x}{\partial z}-\frac{\partial M_z}{\partial x}\right)=-\frac{\partial M}{\partial x} \\
     J_{mz} & =\left(\frac{\partial M_y}{\partial x}-\frac{\partial M_x}{\partial y}\right)=0
   \end{aligned}
@@ -2076,7 +2076,7 @@ usando $\ve A=\ve\nabla$:
   \begin{equation}
     \begin{split}
       \text{fem}_1&=-\frac{\ud\Phi(\ve B)}{\ud t}=-\frac{\ud\Phi(\ve B_1+\ve B_2)}{\ud t}=-\frac{\ud\left(\Phi(\ve B_1)+\Phi(\ve B_2)\right)}{\ud t}\\
-      &=-\frac{\ud\Phi(\ve B_1)}{\ud t}-\frac{\ud\Phi(\ve B_2)}{\ud t}=\frac{\ud\Phi(\ve B_1)}{\ud I_1}\frac{\ud I_1}{\ud t}-\frac{\ud\Phi(\ve B_2)}{\ud I_2}\frac{\ud I_2}{\ud t}\\
+      &=-\frac{\ud\Phi(\ve B_1)}{\ud t}-\frac{\ud\Phi(\ve B_2)}{\ud t}=-\frac{\ud\Phi(\ve B_1)}{\ud I_1}\frac{\ud I_1}{\ud t}-\frac{\ud\Phi(\ve B_2)}{\ud I_2}\frac{\ud I_2}{\ud t}\\
       &=-L_1\frac{\ud I_1}{\ud t}-M_{12}\frac{\ud I_2}{\ud t}
     \end{split}
   \end{equation}
@@ -2298,7 +2298,7 @@ la trattazione è del tutto analoga a quella per la scarica:
     \end{equation}
   \item[$\gamma<\omega_0$] sottosmorzamento:
     \begin{equation}
-      I(t)=q_0e^{-\gamma t}\left(\gamma\cos(\omega t)+\omega\sin(\omega t)\right)
+      I(t)=q_0\frac{\omega_0^2}{\omega}e^{-\gamma t}\sin(\omega t)
     \end{equation}
 \end{itemize}
 
@@ -2492,7 +2492,7 @@ Indichiamo con $\omega_1$ e $\omega_2$ i punti di potenza dimezzata, cioè quei 
 \end{equation}
 le soluzioni positive sono:
 \begin{equation}
-  \omega_{1,2}=\frac{\pm+\sqrt{\omega_0^2+4Q_0^2\omega_0^2}}{2Q_0}
+  \omega_{1,2}=\frac{\pm\omega_0+\sqrt{\omega_0^2+4Q_0^2\omega_0^2}}{2Q_0}
 \end{equation}
 quindi l'ampiezza di banda $\Delta\omega$:
 \begin{equation}
@@ -3299,16 +3299,16 @@ il campo elettrico è allora:
 le componenti:
 \begin{subequations}
   \begin{gather}
-    E^{(i)}_x=E^{(i)}_{0_x}e^{j\left(\omega t-k\left(y\sin\theta-z\cos\theta\right)\right)}\\
-    E^{(i)}_y=E^{(i)}_{0_y}e^{j\left(\omega t-k\left(y\sin\theta-z\cos\theta\right)\right)}\\
-    E^{(i)}_z=E^{(i)}_{0_z}e^{j\left(\omega t-k\left(y\sin\theta-z\cos\theta\right)\right)}
+    E^{(i)}_x=E^{(i)}_{0_x}e^{j\left(\omega t-k\left(y\sin\theta+z\cos\theta\right)\right)}\\
+    E^{(i)}_y=E^{(i)}_{0_y}e^{j\left(\omega t-k\left(y\sin\theta+z\cos\theta\right)\right)}\\
+    E^{(i)}_z=E^{(i)}_{0_z}e^{j\left(\omega t-k\left(y\sin\theta+z\cos\theta\right)\right)}
   \end{gather}
 \end{subequations}
 Dell'onda riflessa $\ve {E^{(r)}}$ non sappiamo nulla, sappiamo solamente che viaggia nel mezzo dell'onda incidente. Analogo discorso per l'onda trasmessa $\ve {E^{(t)}}$. Supponiamo che siano onde piane monocromatiche:
 \begin{subequations}
   \begin{gather}
     \ve {E^{(r)}}=\ve{E^{(r)}_0}e^{j\left(\omega^{(r)} t-k^{(r)}\left(x\alpha^{(r)}_x+y\alpha^{(r)}_y+z\alpha^{(r)}_z\right)\right)}\\
-    \ve {E^{(t)}}=\ve{E^{(t)}_0}e^{j\left(\omega^{(r)} t-k^{(r)}\left(x\alpha^{(t)}_x+y\alpha^{(t)}_y+z\alpha^{(t)}_z\right)\right)}
+    \ve {E^{(t)}}=\ve{E^{(t)}_0}e^{j\left(\omega^{(t)} t-k^{(t)}\left(x\alpha^{(t)}_x+y\alpha^{(t)}_y+z\alpha^{(t)}_z\right)\right)}
   \end{gather}
 \end{subequations}
 La condizione al contorno per il campo elettrico è:
@@ -3468,7 +3468,7 @@ Immaginiamo l'elettrone immerso in una distribuzione uniforme sferica di raggio 
   \begin{array}{l}
     m\ddot z=-eE_z \\
     \dot z(0)=0    \\
-    \dot z(0)=z_0  \\
+    z(0)=z_0       \\
   \end{array}
   \right.
 \end{equation}
@@ -3546,9 +3546,9 @@ avendo definito:
   -\omega^2z_0e^{j\omega t}=-\omega_0^2z_0e^{j\omega t}-j\omega\gamma z_0e^{j\omega t}-\frac{e}{m}E_{0_z}e^{j\omega t}
 \]
 \[
-  z_0=-\frac{e}{m}E_{0_z}\frac{1}{\left(\omega_0^2-\omega^2\right)+j\omega\gamma}=-\frac{e}{m}E_{0_z}\frac{\left(\omega_0-\omega\right)^2-j\omega\gamma}{\left(\omega_0^2-\omega^2\right)^2+\omega^2\gamma^2}
+  z_0=-\frac{e}{m}E_{0_z}\frac{1}{\left(\omega_0^2-\omega^2\right)+j\omega\gamma}=-\frac{e}{m}E_{0_z}\frac{\left(\omega_0^2-\omega^2\right)-j\omega\gamma}{\left(\omega_0^2-\omega^2\right)^2+\omega^2\gamma^2}
 \]
-la cui parte reale è
+il cui modulo è
 \[
   |z_0|=\frac{e}{m}E_{0_z}\frac{1}{\left[\left(\omega_0^2-\omega^2\right)^2+\omega^2\gamma^2\right]^{\frac{1}{2}}}
 \]

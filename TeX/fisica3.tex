@@ -313,7 +313,7 @@ sostituendo nella \eqref{moduli_Edistr} e semplificando:
 \subsubsection{Energia più probabile}
 \begin{equation}
 	\frac{\ud}{\ud E}g(E_p)=0\qquad
-	E_p=\frac{3}{2}kT
+	E_p=\frac{1}{2}kT
 \end{equation}
 \subsubsection{Energia media}
 \begin{equation}
@@ -544,11 +544,11 @@ Sappiamo che:
 	\begin{array}{l}
 			x \\y\\z\\
 		\end{array}\right)
-	\qquad\media{x^2}=\media{y^2}=\media{z^2}\qquad \media{\norm{\ve L}^2}=\media{x^2+y^2+z^2}=\sqrt{3}\media{x^2}=l
+	\qquad\media{x^2}=\media{y^2}=\media{z^2}\qquad \media{\norm{\ve L}^2}=\media{x^2+y^2+z^2}=3\media{x^2}=l^2
 \]
 quindi:
 \begin{equation}
-	\media{x^2}=\media{y^2}=\media{z^2}=\frac{l}{\sqrt{3}}
+	\media{x^2}=\media{y^2}=\media{z^2}=\frac{l^2}{3}
 \end{equation}
 e naturalmente:
 \begin{equation}
@@ -605,11 +605,11 @@ Dalla teoria cinetica possiamo dire che essendo i gradi di libertà 2 (moto pian
 \end{equation}
 Imponendo che la forza sia:
 \begin{equation}
-	\media{F}=6\pi a\media{v}
+	\media{F}=6\pi\eta a\media{v}
 \end{equation}
 con $a$ il raggio della particella. Sostituendo tutto nella \eqref{Browniano12} ricaviamo:
 \begin{equation}
-	N_A=\frac{RTt}{3\pi a\media{r^2}}
+	N_A=\frac{RTt}{3\pi\eta a\media{r^2}}
 \end{equation}
 Quello che bisogna fare è osservare con un microscopio $r$, lo spostamento dalla posizione iniziale, al variare del tempo $t$, misurare la temperatura $T$ e il raggio $a$. $R$ lo si conosce già dall'esperienze macroscopiche sui gas.
 \section{Esperimento di Perrin}
@@ -885,13 +885,13 @@ cioè:
 \end{equation}
 L'esperimento è diviso in due parti, nella prima si determina la velocità $\ve v_0$ delle particelle dei raggi catodici usando un campo elettrico $\ve E^\star$ e uno magnetico $\ve B^\star$. Nella seconda parte si applica solo un campo elettrico $\ve E$ e si misura lo spostamento verticale $y$. Sostituendo la \eqref{velocita_iniziale02} nella \eqref{thomson04} si ottiene:
 \begin{equation}
-	\frac{q}{m}=-\frac{y}{EL(L+2D)}\left(\frac{E^\star}{B^\star}\right)^2
+	\frac{q}{m}=-\frac{2y}{EL(L+2D)}\left(\frac{E^\star}{B^\star}\right)^2
 \end{equation}
 spesso si usa $E=E^\star$, quindi:
 \begin{equation}
-	\frac{q}{m}=-\frac{y}{L(L+2D)}\frac{E}{\left(B^\star\right)^2}
+	\frac{q}{m}=-\frac{2y}{L(L+2D)}\frac{E}{\left(B^\star\right)^2}
 \end{equation}
-che corrisponde a circa $-\SI{1.758}{\coulomb\per\kilogram}$.
+che corrisponde a circa $-\SI{1.758E11}{\coulomb\per\kilogram}$.
 \section{Esperimento di Millikan\index{Millikan}\index{esperimento!di Millikan}}
 L'esperimenti do Millikan dimostra che la carica è quantizzata e ne trova il valore minimo. Si consideri la caduta di una goccia d'olio supposta sferica nell'aria. Le forze agenti sono la gravità, la spinta di Archimede e la forza di Stokes:
 \begin{equation}
@@ -947,7 +947,7 @@ il termine $mg-\rho_\text{aria}Vg$ lo possiamo ricavare dalla \eqref{va11}\footn
 \end{equation}
 essendo $E$ noto, possiamo ricavare la carica della goccia d'olio:
 \begin{equation}
-	q=\frac{\beta}{E}(v_e-v_a)=-\frac{18}{\pi}\sqrt{\frac{\eta^3v_a}{2g\left(\rho_\text{olio}-\rho_\text{aria}\right)}}\left(v_a-v_e\right)
+	q=\frac{\beta}{E}(v_e-v_a)=-\frac{18\pi}{E}\sqrt{\frac{\eta^3v_a}{2g\left(\rho_\text{olio}-\rho_\text{aria}\right)}}\left(v_a-v_e\right)
 \end{equation}
 Naturalmente il tutto può essere fatto usando il campo elettrico al contrario o usando gocce di altro materiale, come mercurio\footnote{il problema principale è l'evaporazione}. Osservando le gocce con un microscopio quello che si trova è che la carica delle gocce d'olio è quantizzata e il valore tra le cariche è costante e si suppone essere quello della carica dell'elettrone. Il valore di Millikan era leggermente sbagliato perché usava una sottostima di $\eta$ per l'aria.
 

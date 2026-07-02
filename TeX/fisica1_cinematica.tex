@@ -18,7 +18,7 @@ Poiché il punto può spostarsi nel tempo $\ve r$ sarà funzione del tempo $\ve 
   \begin{align*}
     \ve s\left(t,t+\Delta t\right) & =\Delta \ve r(t,t+\Delta t)                                                                                                                             \\
                                    & =\ve r\left(t+\Delta t\right)-\ve r\left(t\right)=x\left(t+\Delta t\right)\ve i+y\left(t+\Delta t\right)\ve j-x\left(t\right)\ve i-y\left(t\right)\ve j \\
-                                   & =\left[x(t+\Delta t)-x(\Delta t)\right]\ve i+[y(t+\Delta t)-y(t)]\ve j=\Delta x\ve i+\Delta y \ve j
+                                   & =\left[x(t+\Delta t)-x(t)\right]\ve i+[y(t+\Delta t)-y(t)]\ve j=\Delta x\ve i+\Delta y \ve j
   \end{align*}
 \end{Def}
 \section{\index{velocità}Vettore velocità}
@@ -142,7 +142,7 @@ alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\i
   i+\dot\theta\cos\theta\ve j=\dot\theta\left(-\sin\theta\ve
   i+\cos\theta\ve j\right)=\dot\theta\ve u_\theta\]
 \[\frac{\ud\ve u_\theta}{\ud t}=-\dot\theta\cos\theta\ve
-  i-\dot\theta\cos\theta\ve j=-\dot\theta\left(\cos\theta\ve
+  i-\dot\theta\sin\theta\ve j=-\dot\theta\left(\cos\theta\ve
   i+\sin\theta\ve j\right)=-\dot\theta\ve u_r\]
 \[\ve v=\frac{\ud\ve r}{\ud t}=\dot r\ve u_r+r\frac{\ud\ve
     u_r}{\ud t}=\dot r\ve u_r+r\dot\theta\ve u_\theta\]
@@ -211,9 +211,9 @@ a seconda che le radici del polinomio siano reali o complesse si possono disting
   \item[attrito debole]
     \[\frac{1}{4\tau^2}-\omega_0^2<0\qquad \tau>\frac{1}{2\omega_0}\qquad\gamma<2\sqrt{km}\]
     \[s_{1/2}=\dfrac{-\dfrac{1}{\tau}\pm\sqrt{\dfrac{1}{\tau^2}-4\omega_0^2}}{2}=-\frac{1}{2\tau}\pm i\omega\]
-    \begin{align*}x(t) & =A_1e^{s_1it}+A_2e^{s_2it}=A_1e^{-\frac{t}{2\tau}-i\omega t}+A_2e^{-\frac{t}{2\tau}+i\omega t}=                    \\
+    \begin{align*}x(t) & =A_1e^{s_1t}+A_2e^{s_2t}=A_1e^{-\frac{t}{2\tau}-i\omega t}+A_2e^{-\frac{t}{2\tau}+i\omega t}=                    \\
                    & =e^{-\frac{t}{2\tau}}\left(A_1e^{-i\omega t}+A_2e^{i\omega t}\right)=A e^{-\frac{t}{2\tau}}\sin(\omega t +\varphi)\end{align*}
-    quindi è un moto armonico con frequenza $\omega=\sqrt{\omega_0-\frac{1}{4\tau^2}}$ la cui ampiezza diminuisce con un fattore frenante $e^{-\frac{t}{2\tau}}$.\footnote{Il caso critico in cui ci siano due radici coincidenti è tralasciato poiché puntiforme}
+    quindi è un moto armonico con frequenza $\omega=\sqrt{\omega_0^2-\frac{1}{4\tau^2}}$ la cui ampiezza diminuisce con un fattore frenante $e^{-\frac{t}{2\tau}}$.\footnote{Il caso critico in cui ci siano due radici coincidenti è tralasciato poiché puntiforme}
 \end{description}
 
 \section{\index{trasformazioni!di Galileo}Trasformazioni di Galileo}

@@ -364,8 +364,8 @@ Fissando solo $\rho$ si ottiene una sfera; fissando solo $\theta$ un cono; fissa
 \subsubsection{Linee Coordinate}
 Variando solo $\rho$ si ottiene una semiretta; variando solo $\theta$ una circonferenza; variando solo $\varphi$ una circonferenza.
 \subsubsection{Versori}
-\[D_\rho=1\qquad D_\theta=\rho\qquad D_\varphi=\varphi\sin\theta\]
-\[\ver e_\rho=\sin\theta\cos\varphi\ver \imath+\sin\theta\cos\varphi\ver \jmath+\cos\theta\ver k\]
+\[D_\rho=1\qquad D_\theta=\rho\qquad D_\varphi=\rho\sin\theta\]
+\[\ver e_\rho=\sin\theta\cos\varphi\ver \imath+\sin\theta\sin\varphi\ver \jmath+\cos\theta\ver k\]
 \[\ver e_\theta=\cos\theta\cos\varphi\ver \imath+\cos\theta\sin\varphi\ver \jmath-\sin\theta\ver k\]
 \[\ver e_\varphi=-\sin\varphi\ver \imath+\cos\varphi\ver \jmath\]
 \index{coordinate|)}
@@ -1510,7 +1510,7 @@ Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè c
   Ora bisogna aggiungere delle cariche immagine in modo tale che sulla supreficie della sfera il potenziale risulti nullo. Le due cariche dovranno essere all'interno della sfera. Per simmetria dovranno essere sull'asse $z$, poste in maniera simmetrica. Si può usare l'esempio precedente per ricavare il loro valore e la loro posizione. Consideriamo, grazie al principio di sovrapposizione separatamente la carica $Q$ e la carica $-Q$. Se abbiamo solo la carica $Q$ ci servirà una carica immagine di valore $-\frac{a}{R}Q$ e posta a $d'=\frac{a^2}{R}$ (vedi esercizio precedente). Discorso analogo per la carica $-Q$. Quindi il potenziale generato dalle quattro cariche risulta:
   \[
     \begin{aligned}
-      \varphi(\ve r)=\frac{Q}{\giorgi}\Biggl\{\frac{1}{(r^2+R^2+2rR\cos\theta)^{1/2}}-\frac{1}{(r^2+R-2rR\cos\theta)^{1/2}}- \\
+      \varphi(\ve r)=\frac{Q}{\giorgi}\Biggl\{\frac{1}{(r^2+R^2+2rR\cos\theta)^{1/2}}-\frac{1}{(r^2+R^2-2rR\cos\theta)^{1/2}}- \\
       -\frac{\frac{a}{R}}{(r^2+d'^2+2d' r\cos\theta)^{1/2}}+\frac{\frac{a}{R}}{(r^2+d'^2-2d' r\cos\theta)^{1/2}}\Biggr\}
     \end{aligned}
   \]
@@ -1520,7 +1520,7 @@ Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè c
   \]
   mettendo tutto insieme:
   \[
-    \varphi(\ve r) = \frac{Q}{\giorgi}\left\{\frac{2}{R^2}r\cos\theta+\frac{2a^3}{R^2r^2}\cos\theta\right\}
+    \varphi(\ve r) = \frac{Q}{\giorgi}\left\{-\frac{2}{R^2}r\cos\theta+\frac{2a^3}{R^2r^2}\cos\theta\right\}
   \]
   si noti che la coppia di cariche all'interno della sfera costituisce un dipolo $\ve p = q(2d')\ver z$, infatti con la teoria del dipolo per $R\to\infty$ ($d'\to 0$):
   \[
@@ -1642,7 +1642,7 @@ Quindi $\tau$ non è solo il tempo medio tra un urto di una particella e il succ
 dove abbiamo ignorato i contributi a $\ve v_D$ che provengono prima dell'urto. Usando la densità di corrente:
 \[\ve J=-Ne\ve v_D=\frac{e^2\tau N}{m_\mathrm{e}}\ve E=\sigma\ve E\]
 $\sigma$ è la conducibilità elettrica:
-\[\sigma=\frac{e^2\tau N}{m_\mathrm{e}}=\frac{e^2Nl}{m_\mathrm{e}v_D}\]
+\[\sigma=\frac{e^2\tau N}{m_\mathrm{e}}=\frac{e^2Nl}{m_\mathrm{e}v_T}\]
 Questo risultato è il modello di Drude\index{modello!di Drude}, e può essere esteso anche alle correnti alternate.
 
 La conducibilità elettrica ci dice come il conduttore risponde al campo elettrico, l'ostacolo che gli elettroni incontrano nel loro moto; alta conducibilità significa alta disposizione da parte del conduttore di mettere in moto i suoi elettroni. Se supponiamo che $\sigma$ non dipenda dallo spazio, cioè il conduttore sia omogeneo, che $\sigma$ non dipenda da $E$, cioè che il conduttore sia lineare e che non dipenda dalla direzione di $\ve E$ cioè sia isotropo e quindi $\ve J$ abbia la direzione di $\ve E$ allora $\sigma$ è uno scalare, altrimenti è un tensore $3\times 3$ del second'ordine:
@@ -1743,7 +1743,7 @@ Per i semiconduttori \index{semiconduttori} $\alpha<0$. Ad una certa temperatura
 Il modello basato sul gas di elettroni non riesce a spiegare questo andamento, infatti:
 \[v_T=\sqrt{3\frac{kT}{m_\mathrm{e}}}\]
 cioè $\rho\propto v_T\propto\sqrt{T}$ invece che $\rho\propto T$. Inoltre non riesce a spiegare la diversità di $\rho$ tra i diversi materiali, sia conduttori che non, infatti
-\[\rho=\frac{m_\mathrm{e}}{e^2N\tau}=\frac{m_\mathrm{e}}{eN}\frac{v_T}{l}\]
+\[\rho=\frac{m_\mathrm{e}}{e^2N\tau}=\frac{m_\mathrm{e}}{e^2N}\frac{v_T}{l}\]
 dice solo che la variazione tra i diversi materiali è data da $N$, che in realtà non varia di molto da conduttore a conduttore. Nella realtà $\rho$ è influenzato da numerosi fattori tra cui le impurezze cioè il disordine del reticolo.
 
 \subsection{Resistori}
@@ -1901,7 +1901,7 @@ Considerando tutti gli elettroni del volume $\ud v$ la potenza:
   \ud P=-\frac{N\ud v}{\tau}eEv_d\tau
 \]
 Ricordando che:
-\[v_D=-\frac{eE}{m\tau}\qquad\sigma=\frac{e^2N}{m}\tau\]
+\[v_D=-\frac{eE\tau}{m}\qquad\sigma=\frac{e^2N}{m}\tau\]
 \[\ud P=\frac{e^2NE^2}{m}\tau\ud v=\sigma E^2\ud v\]
 Se consideriamo un filo conduttore di lunghezza $l$ e sezione $S$ con una differenza di potenziale $V_A-V_B=El$.
 \[P=\int_V\ud P=\sigma E^2\int_V\ud v=\sigma E^2(Sl)=\sigma\frac{\Delta V^2}{l^2}Sl=\sigma\frac{S}{l}\Delta V^2=\frac{\Delta V^2}{R}\]

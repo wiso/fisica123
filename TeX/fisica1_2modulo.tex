@@ -373,7 +373,7 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
       Q_v=\frac{\pi\Delta p}{8\eta L}R^4
    \end{equation}
 \end{legge}
-si definisce una resisteza idraulica $\frac{8\eta L R^4}{\pi}$ in analogia con la resistenza elettrica.
+si definisce una resisteza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica.
 \index{meccanica dei fluidi|)}
 
 
@@ -992,7 +992,7 @@ Si esegue il ciclo di Carnot al contrario. Si fornisce quindi lavoro e si ha un 
 Il coefficiente di merito sarà maggiore quando è maggiore il calore trasferito e minore il lavoro necessario.
 Nota: $Q_1<0$, $Q_2>0$, $L>0$
 \[0=L+Q=L+Q_2-|Q_1|\]
-\[L=|Q_1|-Q_2\qquad\frac{Q_1}{Q_2}=\frac{T_1}{T_2}\]
+\[L=|Q_1|-Q_2\qquad\frac{|Q_1|}{Q_2}=\frac{T_1}{T_2}\]
 \[\eta=\frac{Q_2}{L}=\frac{Q_2}{|Q_1|-Q_2}=\frac{T_2}{T_1-T_2}>0\]
 Il frigorifero perfetto trasferisce calore dalla sorgente più fredda a quella più calda senza bisogno di lavoro, quindi $\eta\rightarrow\infty$
 
@@ -1010,7 +1010,7 @@ Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
 \[Q_{BC}=nc_V\Delta T=nc_V(T_C-T_B)>0\]
 \[Q_{DA}=nc_V\Delta T=nc_V(T_A-T_D)<0\]
 \[L+Q_{BC}-|Q_{DA}|=0 \qquad L=|Q_{DA}|-Q_{BC}<0\qquad |L|=Q_{BC}-|Q_{DA}|\]
-\[\eta=\frac{|L|}{Q_{BC}}=\frac{Q_{BC}-|Q_{DA}|}{Q_{BC}}=1-\frac{|Q_{DA}|}{Q_{BC}}=1-\frac{nc_V(T_D-T_A)}{nc_V(T_C-T_B)}=1-\frac{T_D-T_A}{T_C-T_C}\]
+\[\eta=\frac{|L|}{Q_{BC}}=\frac{Q_{BC}-|Q_{DA}|}{Q_{BC}}=1-\frac{|Q_{DA}|}{Q_{BC}}=1-\frac{nc_V(T_D-T_A)}{nc_V(T_C-T_B)}=1-\frac{T_D-T_A}{T_C-T_B}\]
 
 Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=\frac{V_2}{V_1}$
 \[TV^{\gamma-1}=\const\]
@@ -1025,7 +1025,7 @@ Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=
 
 \[\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\]
 
-Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta=0.55$. In realtà con questo rapporto di compressione nella macchine reali si ha $\eta=0.3$.
+Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta\simeq0.47$. In realtà con questo rapporto di compressione nella macchine reali si ha $\eta=0.3$.
 
 \subsection{Diagrammi di flusso}
 I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni cicliche. I piani orizzontali rappresentano le fonti di calore a diversa temperatura, la sezione del tubo varia a seconda dell'energia interna del sistema.
@@ -1096,7 +1096,7 @@ Combino la macchina $M$ con la macchina di Carnot fatta funzionare al contrario,
 
 Questo significa che tutte le macchine reversibili che lavorano tra due sorgenti $T_2 > T_1$: $\eta = 1-\frac{T_1}{T_2} = 1 - \frac{|Q_1|}{Q_2}$. Allora:
 \begin{equation}
-   \frac{Q_1}{T_2} + \frac{Q_2}{T_2} = 0
+   \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0
 \end{equation}
 il lavoro sarà:
 \begin{equation}
@@ -1442,7 +1442,7 @@ Si scarta la soluzione negativa, in quanto si vuole che gli assi abbiano lo stes
 A $t=0$, $O\equiv O'$, $t=t'$ scatta un'onda luminosa dalle origini, questa ha un fronte sferico con raggio $R$ e per il secondo principio di Einstein ha velocità $c$ uguale in tutti e due i sistemi. Il sistema $O'$ sta arrivando da sinistra, passa in coincidenza con $O$, si sincronizzano gli orologi e parte il fronte d'onda. I due osservatori osservano un fronte d'onda che ha centro nei propri sistemi di riferimento, anche se non sono più coincidenti:
 \[x^2+y^2+z^2=R^2=(ct)^2\]
 \[x'^2+y'^2+z'^2=R'^2=(ct')^2\]
-\[x^2+y^2+z^2-ct^2=0=x'^2+y'^2+z'^2-(ct')^2\]
+\[x^2+y^2+z^2-c^2t^2=0=x'^2+y'^2+z'^2-(ct')^2\]
 \[x^2-c^2t^2=x'^2-c^2t'^2=\lambda^2(x-ut)^2-c^2(\lambda_{41}x+\lambda_{44}t)^2=\]
 \[=\lambda^2x^2+\lambda^2 u^2t^2-2\lambda^2 xut-c^2\lambda_{41}^2x^2-c^2\lambda_{44}^2t^2-2c^2\lambda_{41} x\lambda_{44} t\]
 Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sistema di tre incognite e tre equazioni:
@@ -1460,7 +1460,7 @@ Risolvendo in $\lambda^2$, $\lambda_{41}^2$ e $\lambda_{44}^2$ si ottiene un sis
    \end{array}\right.\]
 Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
 \[\lambda^4u^2=c^4\lambda_{41}^2\lambda_{44}^2=c^4\frac{\lambda^2-1}{c^2}\frac{c^2+\lambda^2u^2}{c^2}=\]
-\[=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u+\lambda^2c^2+\lambda^4u^2\]
+\[=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u^2+\lambda^2c^2+\lambda^4u^2\]
 \[0=-c^2-\lambda^2u^2+\lambda^2c^2\]
 \[\lambda^2=\frac{c^2}{c^2-u^2}=\frac{1}{1+\frac{u^2}{c^2}}\]
 \[\lambda=\dfrac{1}{\sqrt{1-\left(\dfrac{u}{c}\right)^2}}=\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\]
@@ -1998,18 +1998,18 @@ Immaginando la sorgente che emette onde con velocità di propagazione $u$ e lung
 \[N=\nu t=\nu_0t-\frac{vt}{\lambda}\]
 \begin{subequations}
    \begin{equation}
-      \nu=\nu_0+\frac{v}{\lambda}=\nu_0-\frac{v}{u}\nu_0=\nu_0\left(1-\frac{v}{u}\right)
+      \nu=\nu_0-\frac{v}{\lambda}=\nu_0-\frac{v}{u}\nu_0=\nu_0\left(1-\frac{v}{u}\right)
    \end{equation}
    Nel caso inverso nel quale sia la sorgente a muoversi con velocità $v$ bisogna scambiare $\nu$ con $\nu_0$:
    \begin{equation}
-      \nu=\nu_0\frac{u}{u-v}
+      \nu=\nu_0\frac{u}{u+v}
    \end{equation}
 \end{subequations}
 notiamo che non c'è simmetria, cioè se consideriamo sorgente ferma e osservatore in moto con velocità $v$ non otteniamo lo stesso risultato di osservatore fermo e sorgente in moto con velocità $-v$. Questo perché esiste un sistema privilegiato che è il mezzo in cui si propaga l'onda. Questo non è vero per le onde elettromagnetiche.
 \subsection{Effetto Doppler relativistico\index{effetto!Doppler!relativistico}}
 Consideriamo l'ultimo caso trattato in funzione del periodo anziché della frequenza nel caso di onde luminose:
 \[
-   T=T_0'\left(1-\frac{v}{c}\right)
+   T=T_0'\left(1+\frac{v}{c}\right)
 \]
 $T_0'$ è il periodo proprio della sorgente misurato da un osservatore che si muove con la sorgente alla velocità $v$, quindi dall'osservatore fermo esso viene percepito come:
 \begin{subequations}
@@ -2018,7 +2018,7 @@ $T_0'$ è il periodo proprio della sorgente misurato da un osservatore che si mu
    \end{equation}
    Se consideriamo la sorgente come origine del sistema in moto allora $x'=0$:
    \begin{equation}
-      T=\frac{T_0\left(1-\beta\right)}{\sqrt{1-\beta^2}}
+      T=\frac{T_0\left(1+\beta\right)}{\sqrt{1-\beta^2}}
    \end{equation}
 \end{subequations}
 \section{Suono\index{suono}}

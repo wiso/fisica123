@@ -118,7 +118,7 @@ la soluzione generale è del tipo:
 \begin{equation}x(t)=A\sin(\omega t+\varphi)\end{equation}
 con $\omega=\sqrt{\frac{k}{m}}$, da cui si può ricavare anche:
 \[\dot x(t)=A\omega\cos(\omega t+\varphi)\]
-\[\ddot x(t)=-A\omega^2\sin(\omega t+\varphi)=\omega^2x\]
+\[\ddot x(t)=-A\omega^2\sin(\omega t+\varphi)=-\omega^2x\]
 \[x=-\frac{1}{\omega^2}\ddot x\]
 confrontando questa funzione con quella trovata prima si ha che:
 \[\frac{1}{\omega^2}=\frac{m}{k}\qquad \omega^2=\frac{k}{m}\qquad
@@ -155,8 +155,8 @@ e il periodo:
 \[\omega=\frac{v}{l}=\frac{\ud\theta}{\ud t}\]
 \[|v|=\omega l=l\frac{\ud\theta}{\ud t}\]
 \[v=-l\frac{\ud\theta}{\ud t}\]
-\[mg\sin\theta=-ml\frac{\ud^2\theta}{\ud t}\]
-\[g\sin\theta=-l\frac{\ud^2\theta}{\ud t}\]
+\[mg\sin\theta=-ml\frac{\ud^2\theta}{\ud t^2}\]
+\[g\sin\theta=-l\frac{\ud^2\theta}{\ud t^2}\]
 per piccole oscillazioni\footnote{è il primo sviluppo del polinomio di Taylor}: $\sin\theta\simeq\theta$
 \[\frac{\ud^2\theta}{\ud t^2}=-\frac{g}{l}\theta\]
 si noti che questa equazione altro non è che l'equazione di un oscillatore armonico\footnote{Questo succede sempre quando si considerano piccole oscillazioni nell'intorno di un punto di equilibrio stabile $x_0$:
@@ -636,7 +636,7 @@ rimangono attaccati.
 \begin{Es}[pendolo balistico{\index{pendolo!balistico}}]
   Un proiettile di massa $m$, velocità $v$ urta un pendolo balistico di massa $M>m$ e velocità $V=0$. Prima dell'urto la quantità di moto totale del sistema è $mv$, dopo $(M+m)V$.
   \[mv=(M+m)V\]
-  \[V=\frac{mv}{M+v}\]
+  \[V=\frac{mv}{M+m}\]
   Dopo l'urto il pendolo balistico, con il proiettile incorporato oscilla come un pendolo, l'energia meccanica si conserva, quindi $K_A=U(B)$
 
 
@@ -739,8 +739,8 @@ Per ipotesi $C$ è il $CM$ del sistema
   M=d^2M+I_{CM}+2\ve r_i\cdot \ve r\,_{CM}^{CM} M=d^2M+I_{CM}\]
 Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
 \begin{Es}
-  Il momento d'inerzia di una circonferenza rispetto al centro di massa è \mbox{$I_{CM}=\frac{1}{2}MR^2$}, per un estremo è:
-  \[I_0=I_{CM}+MR^2=\frac{1}{2}MR^2+MR^2=\frac{3}{2}MR^2>I_{CM}\]
+  Il momento d'inerzia di una circonferenza rispetto al centro di massa è \mbox{$I_{CM}=MR^2$}, per un estremo è:
+  \[I_0=I_{CM}+MR^2=MR^2+MR^2=2MR^2>I_{CM}\]
 \end{Es}
 \section{\index{momento!di una forza}Momento di una forza}
 \begin{Def}[Momento di una forza]

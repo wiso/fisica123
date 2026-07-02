@@ -51,7 +51,7 @@ $\ud A$ è l'area compresa tra le due sezioni.
 \[U=-\frac{Gmm'}{r}\qquad\ud U=-\frac{G\ud m m'}{x}\]
 \[x^2=R^2+r^2-2rR\cos\theta\]
 Differenziando si ha:
-\[2x\,\ud x=2rR\sin\theta\ud\theta\sin\theta\ud\theta \qquad \sin\theta\ud\theta=\frac{x\ud x}{rR}\]
+\[2x\,\ud x=2rR\sin\theta\ud\theta \qquad \sin\theta\ud\theta=\frac{x\ud x}{rR}\]
 \begin{align*}
   U & =-\int_{\text{crosta}}\frac{Gm'}{x}\,\ud
   m=-\int_{\text{crosta}}\frac{Gm'}{x}\frac{M\sin\theta\ud\theta}{2}=-\frac{Gm'
@@ -69,7 +69,7 @@ Se $P$ è interno vale il discorso precedente fino alla scelta degli
 estremi:
 \begin{align*}
   U(P) & =-\frac{Gmm'}{2rR}\int_{R-r}^{r+R}\ud x=-\frac{Gmm'}{2rR}[r+R-R+r] \\
-       & =-\frac{Gmm'}{2rR}2r=-\frac{Gmm^2}{R}=\const
+       & =-\frac{Gmm'}{2rR}2r=-\frac{Gmm'}{R}=\const
 \end{align*}
 \[\ve F=-\frac{\ud U}{\ud \ve r}=0\]
 
@@ -89,7 +89,7 @@ ha l'espressione di una forza elastica.
 \begin{Es}[posta pneumatica interterrestre]
   Immaginiamo di fare un buco che attraversa tutta la terra, passando per il centro. Un pacco lanciato al suo interno sarebbe sottoposto ad una forza del tipo:
   \[F=-kr\qquad k=\left(G\frac{m'M_T}{R_T^3}\right)\]
-  \[T=2\pi\sqrt{\frac{m'}{k}}=2\pi\sqrt{\frac{R_T^3}{GM_T}}=2\pi\sqrt{\frac{R_T}{g}}\simeq \SI{40}{\minute} \]
+  \[T=2\pi\sqrt{\frac{m'}{k}}=2\pi\sqrt{\frac{R_T^3}{GM_T}}=2\pi\sqrt{\frac{R_T}{g}}\simeq \SI{84}{\minute} \]
 \end{Es}
 \section{Interpretazione delle leggi di Keplero}
 \subsection{Seconda legge}
@@ -185,11 +185,11 @@ per esempio \mbox{$\ve F=m\ve a$}. Per massa gravitazionale si intende quella us
   nessun esperimento può rivelare la differenza tra un sistema di riferimento inerziale immerso in un campo gravitazionale $\ve j$ e un sistema non inerziale con accelerazione costante $\ve a=-\ve j$
 \end{Pri}
 \section{\index{energia!di un'orbita}Energia associata ad un'orbita}
-\[E=\frac{1}{2}mv^2-G\frac{Mm}{r^2}=-G\frac{Mm}{2a}\]
+\[E=\frac{1}{2}mv^2-G\frac{Mm}{r}=-G\frac{Mm}{2a}\]
 \[r(\theta)=\frac{p}{1+e\cos\theta}\]
 \[p=\frac{L^2}{m\alpha}\]
 \[\alpha=GMm\]
-\[e=\text{eccentricità}=\sqrt{1+2^{\frac{EL^2}{m\alpha}}}\]
+\[e=\text{eccentricità}=\sqrt{1+\frac{2EL^2}{m\alpha^2}}\]
 \[\begin{array}{llc}
     e>1   & E>0 & \text{iperbole}      \\
     e=1   & E=0 & \text{parabola}      \\
