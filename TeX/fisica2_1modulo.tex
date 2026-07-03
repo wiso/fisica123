@@ -435,7 +435,7 @@ Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Si
 
 Il coulomb e lo stat-coulomb nonostante siano unità della stessa grandezza hanno dimensioni diverse.
 \begin{Es}[pendolo magnetico]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/pendolo_carico}
   \end{figure}
@@ -488,7 +488,7 @@ con $\ve F$ la forza esercitata dalla carica generante il campo sulla carica esp
 \subsection{Definizione operativa\index{campo!elettrostatico}}
 Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è una definizione puramente matematica. Il problema dal punto di vista operativo è che se vogliamo misurare un campo elettrostatico con una carica di prova, questa modificherà la distribuzione di cariche generatrici del campo e quindi usando cariche di prova diverse troveremo campi leggermente diversi. Bisogna allora usare cariche di prova più piccole possibili, in teoria tendenti a zero. In realtà il campo non dipende dalla carica di prova, è una proprietà fisica dello spazio, ma per misurarlo abbiamo bisogno di una carica di prova. Si potrebbe definire il campo elettrostatico come $\ve E=\lim_{q\to 0}\frac{\ve F}{q}$.
 \begin{Es}[campo elettrico di una distribuzione lineare]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{immagini/fisica2/filo_inf}
   \end{figure}
@@ -505,7 +505,7 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
 \begin{Es}[Anello]
   \label{es:anello}
   Vogliamo calcolare il valore di $\ve E$ lungo l'asse di un anello con carica totale $q$ uniforme.
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.45]{immagini/fisica2/anello}
   \end{figure}
@@ -524,7 +524,7 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
   cioè come un punto.
 \end{Es}
 \begin{Es}[Disco]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{immagini/fisica2/disco}
   \end{figure}
@@ -555,7 +555,7 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
                  & =\frac{\sigma}{4\pi\varepsilon_0}2\pi z\ver k\left(\frac{-1}{\sqrt{R^2+z^2}}-\frac{-1}{\sqrt{z^2}}\right) \\
                  & =\frac{\sigma}{2\varepsilon_0} z\left(\frac{1}{|z|}-\frac{1}{\sqrt{R^2+z^2}}\right)\ver k
   \end{align*}
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/potenziale_disco}
     \caption{Campo elettrico del disco lungo $z$.}
@@ -657,7 +657,7 @@ con $Q$ le cariche interne ad $S$.
   confrontando:
   \[\ve E(\ve r)=\frac{\rho}{3\varepsilon_0}r\ve e_r\]
   Il massimo si ha quando $\norm{\ve r}=R$. La funzione che descrive il campo è continua (basta verificarlo per $r=R$), ma ha un punto angoloso.
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics{immagini/fisica2/campo_sfera}
     \caption{Campo di una sfera piena uniformemente carica.}
@@ -965,7 +965,7 @@ momento di dipolo della distribuzione di carica. Gli altri termini sono i potenz
 individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipoli|)}\index{multipoli|)}
 \begin{Es}[Doppio anello]
   Siano due anelli sottili di raggio $R$ nel piano $x$--$y$ ad altezza $z=\pm\frac{d}{2}$ e con il centro sull'asse $z$. Gli anelli sono uniformemente carichi con densità lineare $\pm\lambda$. Calcolare il campo elettrico totale lungo l'asse $z$, fare un'approssimazione per $|z|\gg d,R$.
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/due_anelli_schema}
     % due_anelli_schema.pdf: 436x297 pixel, 72dpi, 15.38x10.48 cm, bb=0 0 436 297
@@ -1010,7 +1010,7 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
                  & = \frac{\lambda R}{\varepsilon_0}\frac{d}{|z|^3}\ver e_z
   \end{align*}
   avendo usato $\ve r=z\ver e_z$ e quindi $r = |z|$.
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/due_anelli}
     % due_anelli.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
@@ -1467,7 +1467,7 @@ Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè c
   \[
     \varphi(\ve x) = \frac{1}{\giorgi}\left(\frac{q}{\norm{x\ver n -d\ver n'}}+\frac{-\frac{a}{d}q}{\norm{x\ver n-\frac{a^2}{d}\ver n'}}\right)
   \]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics{immagini/fisica2/sfera_neutra}
     \caption{Linee equipotenziali e linee di campo nel piano $y=0$. Le linee rosse indicano le regioni dove non è stato calcolato il potenziale. La sfera ha raggio $2$, mentre la carica unitaria positiva è in $(0,8)$. Il punto indica la posizione della carica immagine.}
@@ -1475,7 +1475,7 @@ Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè c
 \end{Es}
 
 \begin{Es}[sfera in campo uniforme]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \input{immagini/fisica2/campo_sfera_schema}
     \caption{La sfera a potenziale nullo può essere sostituita da due cariche immagine al suo interno.}
@@ -1530,7 +1530,7 @@ Il metodo delle cariche immagine è talvolta utile in problemi al bordo, cioè c
   \[
     \varphi(\ve r)=-E_0\left(r-\frac{a^3}{r^2}\right)\cos\theta
   \]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=1]{immagini/fisica2/campo_con_sfera}
     \caption{Linee equipotenziali e linee di campo per una sfera a potenziale nullo immersa in un campo elettrostatico uniforme. Il colore sul bordo della sfera indica la carica superficiale.}
@@ -1702,14 +1702,14 @@ che in realtà è stata introdotta come legge sperimentale. I materiali che risp
   \begin{equation}
     R=\int_A^B \frac{\rho}{\Sigma}\ud l=\rho\frac{L}{S}
   \end{equation}
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/filo_serpente}
     % filo_serpente.pdf: 0x0 pixel, 0dpi, nanxnan cm, bb=
   \end{figure}
 \end{Es}
 \begin{Es}[Conduttori cilindrici]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{immagini/fisica2/conduttore_cilindrico}
     % conduttore_cilindrico.pdf: 317x458 pixel, 72dpi, 11.18x16.16 cm, bb=0 0 317 458
@@ -1774,7 +1774,7 @@ Sommando si ottiene che il reciproco del resistore equivalente è la somma dei r
   V_1 - V_2 = I \left( \sum 1/R_i \right)^{-1}
 \]
 \begin{Es}[resistenza corpo esteso]
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/res_trapezio}
     \caption{resistenza di un corpo esteso.}

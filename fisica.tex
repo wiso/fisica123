@@ -66,6 +66,30 @@ costante&simbolo&valore&unità&errore rel\\ \hline}{\hline\end{tabular}}
 \newtheorem{Cor}{Corollario}[chapter]
 {\theorembodyfont{\normalfont}           \newtheorem{Def}{Definizione}[chapter] \newtheorem{Es}{Esempio}[chapter]}
 
+%*******************************BOX ESEMPI (Es)*********************************
+\mdfdefinestyle{esstyle}{%
+	linecolor=escolor,
+	linewidth=0.4pt,
+	backgroundcolor=esbgcolor,
+	frametitlebackgroundcolor=esbgcolor,
+	frametitlerule=true,
+	frametitlerulewidth=0.4pt,
+	innertopmargin=8pt, innerbottommargin=8pt,
+	innerleftmargin=10pt, innerrightmargin=10pt,
+	skipabove=10pt, skipbelow=10pt,
+	splittopskip=\topskip,
+	frametitlefont=\normalfont\bfseries\color{escolor},
+}
+
+\renewenvironment{Es}[1][]{%
+	\refstepcounter{Es}%
+	\def\Es@titletext{Esempio~\theEs\ifstrempty{#1}{}{\space(#1)}}%
+	\begin{mdframed}[style=esstyle,frametitle={\Es@titletext}]%
+	\normalfont
+}{%
+	\end{mdframed}
+}
+
 %*************************************NUOVE UNITA'*****************************
 \input{TeX/new_unit}
 
