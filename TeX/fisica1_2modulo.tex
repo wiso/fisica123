@@ -26,7 +26,7 @@ si misura in $\si{\kilogram/\metre^3}$.
    \begin{equation}
       p = p_0 + \rho g h
    \end{equation}
-   dove $p_0$ è la pressione estena, $\rho$ la densità del fluido.
+   dove $p_0$ è la pressione esterna, $\rho$ la densità del fluido.
 \end{legge}
 
 \label{stevino11}
@@ -42,7 +42,7 @@ Consideriamo un elemento infinitesimo di massa $\ud m$. L'elemento è in equilib
 \[p_0=\text{pressione atmosferica}\]
 \[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^y \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
 \[p=p_0-\rho g y = p_0+\rho g h\]
-che è la legge di Stevino e $h$ è la profondita, valida se consideriamo la densità costante, come per esempio in un liquido.
+che è la legge di Stevino e $h$ è la profondità, valida se consideriamo la densità costante, come per esempio in un liquido.
 
 Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
@@ -121,9 +121,9 @@ Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché 
 \[
    \rho V\ve g - \rho_\text{fluido}V\ve g \neq 0
 \]
-Se $P>S$ cioè $\rho>\rho_\text{fluido}$ sprofonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibri in questo caso è:
+Se $P>S$ cioè $\rho>\rho_\text{fluido}$ sprofonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibrio in questo caso è:
 \[
-   \rho V\ve g - \rho_\text{fludio}V_\text{immerso}\ve g = 0
+   \rho V\ve g - \rho_\text{fluido}V_\text{immerso}\ve g = 0
 \]
 la soluzione è $V_\text{immerso}=\frac{\rho}{\rho_\text{fluido}}V$ e poiché è sicuramente vero che $V_\text{immerso}\leq V$ allora deve essere $\rho\leq\rho_\text{fluido}$.
 
@@ -166,7 +166,7 @@ Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse 
    In generale introducendo l'energia potenziale associata alla forza $\ve f$, $U_m$:
    \[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
    \[\rho U_m=-p+\const\]
-   Segue che le superficie isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
+   Segue che le superfici isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
 \end{Es}
 \begin{Es}[Fluido in accelerazione]
    \begin{figure}[H]
@@ -234,7 +234,7 @@ Vengono usate le semplificazioni:
    \item fluidi:
          \begin{itemize}
             \item incomprimibili ($\rho=\const$)
-            \item non viscosi (primi di attrito interno)
+            \item non viscosi (privi di attrito interno)
          \end{itemize}
    \item moto:
          \begin{itemize}
@@ -244,7 +244,7 @@ Vengono usate le semplificazioni:
 \end{itemize}
 \begin{description}
    \item [Linee di flusso\index{linee!di flusso}]: linee tangenti alla $\ve v$ della particella. Ha senso se il moto è stazionario, cioè se $\ve v$ è costante nel tempo.
-   \item[Tubo di flusso] Le linee di flusso danno origine al tubo di flusso\index{tubo!di flusso}. Non è possibile che vi sia fuoriuscita di fluido latente per definizione: $\ve v$ è tangente alle linee di flusso.
+   \item[Tubo di flusso] Le linee di flusso danno origine al tubo di flusso\index{tubo!di flusso}. Non è possibile che vi sia fuoriuscita di fluido lateralmente per definizione: $\ve v$ è tangente alle linee di flusso.
 \end{description}
 
 \subsection{Equazione di continuità\index{equazione!di continuità}}
@@ -275,9 +275,9 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 \begin{center}
    \includegraphics[scale=0.4]{immagini/fisica1/Bernoulli}
 \end{center}
-Consideriamo un tempo $\Delta t$ piccolo e una porzione di massa $\Delta m$. L'effetto netto tra la situazione iniziale e quella finale è di spostare l'elementino da un'estremità all'altro.
+Consideriamo un tempo $\Delta t$ piccolo e una porzione di massa $\Delta m$. L'effetto netto tra la situazione iniziale e quella finale è di spostare l'elementino da un'estremità all'altra.
 
-Il lavoro è svolto dalla forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$. L'equazione di continuità:
+Il lavoro è svolto dalle forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$. L'equazione di continuità:
 \[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
 \[
    \left\{
@@ -305,7 +305,7 @@ Il lavoro è svolto dalla forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta 
       \rho gh+p+\frac{1}{2}\rho v^2=\const
    \end{equation}
 \end{Teo}
-Nel caso che $v=0$ l'unico termine che sopravvive è quello che è chiamato \index{pressione!statica}pressione statica: $p+\rho gh$ in quanto è presente anche quando il fluido è fermo. L'altro termine invece è presente da solo se il fluido scorre in orizzonatale, quindi $\frac{1}{2}\rho v^2$ è detta \index{pressione!dinamica}pressione dinamica. In questo caso:
+Nel caso che $v=0$ l'unico termine che sopravvive è quello che è chiamato \index{pressione!statica}pressione statica: $p+\rho gh$ in quanto è presente anche quando il fluido è fermo. L'altro termine invece è presente da solo se il fluido scorre in orizzontale, quindi $\frac{1}{2}\rho v^2$ è detta \index{pressione!dinamica}pressione dinamica. In questo caso:
 \[
    p_1+\frac{1}{2}\rho v_1^2=p_2+\frac{1}{2}\rho v_2^2=\const
 \]
@@ -318,7 +318,7 @@ L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'e
    \[p_\text{sopra}+\frac{1}{2}\rho v_\text{sopra}^2=p_\text{sotto}+\frac{1}{2}\rho v_\text{sotto}^2\]
    quindi se $v_\text{sopra}>v_\text{sotto}$ allora $p_\text{sopra}<p_\text{sotto}$ e allora c'è una forza netta verso l'alto.
 
-   Un altro contributo viene dal fatto che l'aria è fatta deviare verso il basso e il per terzo principio della dinamica ci deve essere una forza uguale e contrario applicata sulle ali. Tutto questo contribuisce alla \index{portanza}portanza.
+   Un altro contributo viene dal fatto che l'aria è fatta deviare verso il basso e per il terzo principio della dinamica ci deve essere una forza uguale e contraria applicata sulle ali. Tutto questo contribuisce alla \index{portanza}portanza.
 \end{Es}
 \section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
 \label{viscosita fisica1}
@@ -374,7 +374,7 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
       Q_v=\frac{\pi\Delta p}{8\eta L}R^4
    \end{equation}
 \end{legge}
-si definisce una resisteza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica.
+si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica.
 \index{meccanica dei fluidi|)}
 
 
@@ -382,11 +382,11 @@ si definisce una resisteza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con l
 \minitoc
 In meccanica è utile utilizzare ipotesi nelle quali ci siano pochi gradi di libertà, per esempio con i fluidi si usa l'approccio di Eulero. In termodinamica si considerano molte particelle e quindi molti gradi di libertà.
 
-La termodinamica si occupa di scambi di energia e di cambiamento di stato di sistemi macroscopici, descritti da un numero piccolo di variabili macroscopiche come temperatura, volume e pressione. Si tratta sempre di sostanza pure e omogenee (una sola fase).
+La termodinamica si occupa di scambi di energia e di cambiamento di stato di sistemi macroscopici, descritti da un numero piccolo di variabili macroscopiche come temperatura, volume e pressione. Si tratta sempre di sostanze pure e omogenee (una sola fase).
 
 Una variabile di stato è una variabile\index{variabile!di stato} stazionaria(costante nel tempo), isotropa (uguale in tutte le direzioni), omogenea (uguale nello spazio).
 
-Un sistema\index{sistema} è la porzione di materia sotto osservazione, l'ambiente \index{ambiente} tutto il resto. L'universo termodinamico\index{universo!termodinamico} è l'unione del sistema con l'ambiente. Un sistema aperto \index{sistema!aperto} scambia energia e materia con l'ambiente, un sistema chiuso \index{sistema!chiuso} scambia solo energia, un sistema isolato \index{sistema!isolato}non scambia né energia ne materia. Una parete adiabatica \index{parete!adiabatica}è una parete che non lascia passare calore, una diatermica \index{parete!diatermica}lascia passare calore.
+Un sistema\index{sistema} è la porzione di materia sotto osservazione, l'ambiente \index{ambiente} tutto il resto. L'universo termodinamico\index{universo!termodinamico} è l'unione del sistema con l'ambiente. Un sistema aperto \index{sistema!aperto} scambia energia e materia con l'ambiente, un sistema chiuso \index{sistema!chiuso} scambia solo energia, un sistema isolato \index{sistema!isolato}non scambia né energia né materia. Una parete adiabatica \index{parete!adiabatica}è una parete che non lascia passare calore, una diatermica \index{parete!diatermica}lascia passare calore.
 
 Le variabili di stato vanno considerate dopo un certo tempo di rilassamento del sistema. La termodinamica classica si occupa dei sistemi all'equilibrio, analizza i sistemi prima e dopo le trasformazioni. Le trasformazioni \index{trasformazioni!quasistatiche}vengono considerate quasi statiche, cioè trasformazioni che passano attraverso infiniti stati di equilibrio in un tempo infinitamente lungo. Queste trasformazioni sono dette anche reversibili\index{trasformazioni!reversibili}.
 
@@ -413,7 +413,7 @@ Il principio zero della termodinamica serve per definire il concetto di temperat
 $X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\SI{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\SI{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
 
 \subsection{Termometro a gas perfetto a volume costante\index{termometro!a gas perfetto}}
-Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costate da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costate e si legge il valore di pressione. La pressione per mantenere il volume costate è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
+Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costante da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costante e si legge il valore di pressione. La pressione per mantenere il volume costante è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
 
 \section{Legge dei gas perfetti\index{legge!dei gas perfetti}}
 \begin{legge}[Avogadro(1811)]
@@ -421,7 +421,7 @@ Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto,
 \end{legge}
 Il numero di Avogadro vale circa $6.022\times 10^{23}$.
 \begin{legge}[Boyle\index{Boyle}\index{legge!di Boyle}]
-   In una trasformazione a temperatura costate (isoterma):
+   In una trasformazione a temperatura costante (isoterma):
    \begin{equation}
       p\propto\frac{1}{V}
    \end{equation}
@@ -480,14 +480,14 @@ Consideriamo $N$ molecole di un gas perfetto in un cubo di spigolo $L$. Prendiam
 \begin{equation}
    \Delta t=\frac{2L}{v_x}
 \end{equation}
-quindi ogni $\Delta t$ ci sarà un urto; se durante il tragitto la molecola dovesse incontrare una parete diversa, vi rimbarzerebbe senza mutare la componente $x$ della velocità né il tempo di percorrenza. Per l'impulso
+quindi ogni $\Delta t$ ci sarà un urto; se durante il tragitto la molecola dovesse incontrare una parete diversa, vi rimbalzerebbe senza mutare la componente $x$ della velocità né il tempo di percorrenza. Per l'impulso
 \[
    F_x\frac{2L}{v_x}=F_x\Delta t=\Delta p_x=-2mv_x
 \]
 \begin{equation}
    F_x=-\frac{mv_x^2}{L}
 \end{equation}
-è la forza media (nel tempo) che la parete del recipiente applica sulla particella. Per il terzo principio della dinamica la particella sulla parere esercita una forza uguale e contraria, chiamiamola ancora $\ve F$ cambiando ora punto di vista, quello della particella:
+è la forza media (nel tempo) che la parete del recipiente applica sulla particella. Per il terzo principio della dinamica la particella sulla parete esercita una forza uguale e contraria, chiamiamola ancora $\ve F$ cambiando ora punto di vista, quello della particella:
 \begin{equation}
    F_x=\frac{mv_x^2}{L}
 \end{equation}
@@ -521,7 +521,7 @@ avendo introdotto $M=Nm$ la massa totale del gas. Introducendo la densità volum
    P=\frac{1}{3}\rho\media{v^2}
    \label{gas_pressione04}
 \end{equation}
-Questo risultato è stato ottenuto trascurando gli urti tra le molecole, ma risulta comunque valido. In caso di urto infatti le velocità di due molecole si scambiano e quindi ci il moto delle due molecole è semplicemente scambiato. Si noti che l'espressione precedente lega una grandezza microscopica (la velocità) ad una macroscopica (la pressione).
+Questo risultato è stato ottenuto trascurando gli urti tra le molecole, ma risulta comunque valido. In caso di urto infatti le velocità di due molecole si scambiano e quindi il moto delle due molecole è semplicemente scambiato. Si noti che l'espressione precedente lega una grandezza microscopica (la velocità) ad una macroscopica (la pressione).
 Usando invece l'energia cinetica del gas $K=\frac{1}{2}Nm\media{v^2}$ la \eqref{eq_gas_01} diventa:
 \begin{equation}
    pV=\frac{2}{3}K
@@ -577,7 +577,7 @@ Essendo $pV=NkT \Rightarrow V/N=kT/p$
 \[\lambda=\frac{kT}{\pi d^2 p}\]
 L'equazione è stata ricavata pensando che le molecole siano bersagli fermi. Le velocità semplificate non sono le stesse. Quella al numeratore è $\media{v}$ la velocità molecolare media misurata rispetto al recipiente che contiene il gas. Quella al denominatore rappresenta la velocità relativa media $v_\text{rel}$ rispetto alle altre molecole. Si può dimostrare (vedi \ref{calcolo_vel_rel_med}) che $v_\text{rel}=\media{v}\sqrt{2}$ e quindi:
 \[\lambda=\frac{kT}{\sqrt{2}\pi d^2p}\]
-Bisogna tenere anche conto che al di sotto di una certa pressione il libero cammino medio eccede le dimensioni del contenitore e il concetto stesso di libero cammino  medio perde di significato, in quanto è più probabile che la molecole incontri le pareti del recipiente piuttosto che altre molecole.
+Bisogna tenere anche conto che al di sotto di una certa pressione il libero cammino medio eccede le dimensioni del contenitore e il concetto stesso di libero cammino  medio perde di significato, in quanto è più probabile che le molecole incontrino le pareti del recipiente piuttosto che altre molecole.
 
 \subsection{Distribuzione delle velocità\index{distribuzione!delle velocità}}
 Distribuzione di Maxwell delle velocità:\index{Maxwell}
@@ -637,10 +637,10 @@ Usando la velocità più probabile la distribuzione di Maxwell può essere scrit
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/energia_max}
-   \caption{Famiglia di distribuzioni di energia disegnate a intervalli costati di temperatura.}
+   \caption{Famiglia di distribuzioni di energia disegnate a intervalli costanti di temperatura.}
 \end{figure}
 
-Una molecola monoatomica di una gas ha solo energia cinetica $E=\frac{1}{2}mv^2$
+Una molecola monoatomica di un gas ha solo energia cinetica $E=\frac{1}{2}mv^2$
 \[v=\sqrt{\frac{2}{m}E}\]
 Il numero di molecole che ha una certa velocità è uguale al numero di molecole che ha una certa energia:
 \[N(E)\ud E=N(v)\ud v\]
@@ -697,13 +697,13 @@ Trasporto di calore con trasporto di materia, cioè con correnti convettive in m
 
 \section{Capacità termiche\index{capacità!termica}}
 \begin{Def}[capacità termica]
-   Definiamo la capacita termica $C$ di un corpo la quantità di calore necessaria per far aumentare la sua temperatura di $\Delta T$:
+   Definiamo la capacità termica $C$ di un corpo la quantità di calore necessaria per far aumentare la sua temperatura di $\Delta T$:
    \begin{equation}
       C=\frac{Q}{\Delta T}
    \end{equation}
 \end{Def}
 \begin{Def}[capacità termica specifica]
-   Definiamo la capacità termica specifica\index{capacità!termica!specifica} di una sostanza la quantità di calore necessaria per far aumentare  temperatura di $\Delta T$ un'unità di massa:
+   Definiamo la capacità termica specifica\index{capacità!termica!specifica} di una sostanza la quantità di calore necessaria per far aumentare la temperatura di $\Delta T$ un'unità di massa:
    \begin{equation}
       c=\frac{Q}{m\Delta T}=\frac{C}{m}
    \end{equation}
@@ -721,7 +721,7 @@ conoscendo però come varia $c$ in funzione di $T$. Essendo $c$ variabile dal ti
    con $M=\frac{m}{n}$ massa molare\index{massa!molare}, $n$ numero di moli. Spesso $c^{\text{mol}}$ è indicato semplicemente con $c$.
 \end{Def}
 
-\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
+\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi ed è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
 
 
 \section{Energia interna\index{energia!interna}}
@@ -852,7 +852,7 @@ usando $PV=nRT$ e quindi $T=\const PV$:
 \end{equation}
 
 \begin{Es}[Gradiente termico atmosferico]
-   L'aria è un cattivo conduttore termico, quindi quando delle masse d'aria a temperatura diversa si spostano si può considerare la trasformazione come adiabatica. La pressione atmosferica descresce con la quota, vedi \eqref{legge_atmosfera}. Per la legge di Archimede l'aria calda più leggera sale si espande a causa delle minore temperatura. Essendo la trasformazione adiabatica non c'è scambio di calore. Essendoci un'espansione la massa d'aria compie lavoro a scapito dell'energia interna, e quindi la temperatura diminuisce.
+   L'aria è un cattivo conduttore termico, quindi quando delle masse d'aria a temperatura diversa si spostano si può considerare la trasformazione come adiabatica. La pressione atmosferica decresce con la quota, vedi \eqref{legge_atmosfera}. Per la legge di Archimede l'aria calda più leggera sale e si espande a causa della minore temperatura. Essendo la trasformazione adiabatica non c'è scambio di calore. Essendoci un'espansione la massa d'aria compie lavoro a scapito dell'energia interna, e quindi la temperatura diminuisce.
 
    Per la legge di Stevino:
    \[
@@ -872,7 +872,7 @@ usando $PV=nRT$ e quindi $T=\const PV$:
    \[
       \frac{\ud T}{\ud h} \simeq -\SI{9.74}{\kelvin\per\kilo\meter}
    \]
-   questo gradiente è abbastanza più grande del grandiente osservato in quando si è trascurato la presenza di vapore acqueo che condensandosi al diminuire della temperatura sottrae calore sotto forma di calore latente.
+   questo gradiente è abbastanza più grande del gradiente osservato in quanto si è trascurato la presenza di vapore acqueo che condensandosi al diminuire della temperatura sottrae calore sotto forma di calore latente.
 \end{Es}
 
 
@@ -956,7 +956,7 @@ Una trasformazione ciclica è una trasformazione in cui gli stati iniziali e fin
 \begin{equation}
    \Delta E=Q+L=0
 \end{equation}
-La macchine termiche trasformano il calore in lavoro e il loro ciclo è chiamo \index{ciclo!termico}ciclo termico. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda e il loro ciclo è chiamato \index{ciclo!frigorifero}ciclo frigorifero.
+Le macchine termiche trasformano il calore in lavoro e il loro ciclo è chiamato \index{ciclo!termico}ciclo termico. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda e il loro ciclo è chiamato \index{ciclo!frigorifero}ciclo frigorifero.
 \subsection{Ciclo di Carnot per un gas perfetto\index{Carnot}\index{ciclo!di Carnot}\index{macchina!di Carnot}}
 \begin{figure}[htbp]
    \centering
@@ -1026,7 +1026,7 @@ Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=
 
 \[\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\]
 
-Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta\simeq0.47$. In realtà con questo rapporto di compressione nella macchine reali si ha $\eta=0.3$.
+Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta\simeq0.47$. In realtà con questo rapporto di compressione nelle macchine reali si ha $\eta=0.3$.
 
 \subsection{Diagrammi di flusso}
 I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni cicliche. I piani orizzontali rappresentano le fonti di calore a diversa temperatura, la sezione del tubo varia a seconda dell'energia interna del sistema.
@@ -1059,7 +1059,7 @@ Una isoterma sembra violare Kelvin, in realtà trasforma tutto il calore in lavo
 
 Chiamiamo $\bar{K}$ antikelvin un ciclo che viola Kelvin e $\bar{C}$ anticlausius un ciclo che viola Clausius. Dimostriamo che $\exists\bar{K}\Rightarrow\exists\bar{C}$ Sommiamo un antikelvin con un frigorifero e otteniamo un anticlausius (Figura \ref{CK1}). Quindi l'esistenza di un antikelvin implica l'esistenza di un anticlausius. Dopodiché $\nexists\bar{C}\Rightarrow\nexists\bar{K}$.
 
-Sommando un anticlausius e una macchina termica e otteniamo un antikelvin (Figura \ref{CK2}), quindi
+Sommando un anticlausius e una macchina termica otteniamo un antikelvin (Figura \ref{CK2}), quindi
 $\exists\bar{C}\Rightarrow\exists\bar{K}$ e allora $\nexists\bar{K}\Rightarrow\nexists\bar{C}$. In definitiva abbiamo dimostrato che l'enunciato di Clausius e di Kelvin sono equivalenti.
 \begin{figure}[htbp]
    \centering
@@ -1112,7 +1112,7 @@ Consideriamo una trasformazione reversibile per un gas perfetto:
 \[\delta Q+\delta L=\ud E\qquad \delta Q-p\ud V=nc_V\ud T\]
 \[\delta Q=nc_V\ud T+p\ud V\]
 \[\frac{\delta Q}{T}\;\text{è un differenziale esatto?}\]
-Per verificarlo integriamo la quantità e vediamo se si può esprime come differenza di funzioni che dipendono solo dallo stato iniziale e finale del sistema e non dalla particolare trasformazione. L'integrale quindi sarà una funzione di stato.
+Per verificarlo integriamo la quantità e vediamo se si può esprimere come differenza di funzioni che dipendono solo dallo stato iniziale e finale del sistema e non dalla particolare trasformazione. L'integrale quindi sarà una funzione di stato.
 \begin{align*}
    \int_i^f\frac{\delta Q}{T} & =\int_i^f\frac{nc_V\ud T+p\,\ud V}{T}=\int_{T_i}^{T_f}\frac{nc_V\ud T}{T}+\int_{V_i}^{V_f}\frac{p\,\ud V}{T}                                            \\
                               & =nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+\int_{V_i}^{V_f}\frac{\frac{nRT}{V}\ud V}{T}=nc_V\int_{T_i}^{T_f}\frac{\ud T}{T}+nR\int_{V_i}^{V_f}\frac{\ud V}{V} \\
@@ -1139,9 +1139,9 @@ L'espansione libera è una adiabatica irreversibile, quindi non si può conclude
 \[\Delta S=nR\log\frac{V_f}{V_i}=nR\log 2\]
 
 \subsection{Entropia nei cicli\index{entropia!nei cicli}}
-Il teorema di Clausis estende il risultato a due sorgenti dal teorema di Carnot con macchine reversibili: $\frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0$.
+Il teorema di Clausius estende il risultato a due sorgenti dal teorema di Carnot con macchine reversibili: $\frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0$.
 \begin{Teo}[Clausius]
-   Consideriamo macchina generica $M$ con $n$ sorgenti di calore a temperature diverse $T_i$ dalle quali assorbe calore $Q_i$. Allora vale:
+   Consideriamo una macchina generica $M$ con $n$ sorgenti di calore a temperature diverse $T_i$ dalle quali assorbe calore $Q_i$. Allora vale:
    \begin{equation}
       \sum_i \frac{Q_i}{T_i} \leq 0
    \end{equation}
@@ -1175,7 +1175,7 @@ passando a variabili continue:
 \end{equation}
 la disequazione vale per qualsiasi gas, per qualsiasi trasformazione.
 
-Se $M$ reversibile costruisco $H'=M^{-1}+\sum_{i=1}^N C_i$, $Q$ è cambiato si segno, quindi la diseguaglianza diventa:
+Se $M$ reversibile costruisco $H'=M^{-1}+\sum_{i=1}^N C_i$, $Q$ è cambiato di segno, quindi la diseguaglianza diventa:
 \[\oint\frac{\delta Q}{T}\geq0\]
 Confrontando questa diseguaglianza con quella di Clausius \eqref{clausius_dis} si conclude che per una macchina reversibile:
 \begin{equation}
@@ -1191,7 +1191,7 @@ Considerando un ciclo con trasformazioni irreversibili come in figura~\ref{fig:c
    \includegraphics[scale=0.5]{immagini/fisica1/ciclo_misto}
    \label{fig:ciclo_misto}
 \end{figure}
-dalla diseguaglianza di Clausis $\oint\frac{\delta Q}{T}\leq 0$:
+dalla diseguaglianza di Clausius $\oint\frac{\delta Q}{T}\leq 0$:
 \[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}-\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}\leq 0\]
 \[\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{irreversibile}\leq\underbrace{\int_i^f\frac{\delta Q}{T}}_\text{reversibile}=\Delta S\]
 Per una trasformazione qualsiasi (anche irreversibile):
@@ -1248,7 +1248,7 @@ $S$ è una variabile termodinamica estensiva, quindi per calcolare l'entropia de
       S=k\log P
    \end{equation}
 \end{legge}
-Diciamo che due configurazioni sono equivalenti se presentano lo stesso numero di particelle a destra e lo stesso numero di particelle a destra. L'equivalenza è logica in quanto le particelle sono indistinguibili. $P=\binom{N}{n}$ per ogni classe di equivalenza, avendo $N=6$ particelle totali:
+Diciamo che due configurazioni sono equivalenti se presentano lo stesso numero di particelle a destra e lo stesso numero di particelle a sinistra. L'equivalenza è logica in quanto le particelle sono indistinguibili. $P=\binom{N}{n}$ per ogni classe di equivalenza, avendo $N=6$ particelle totali:
 \begin{center}
    \begin{tabular}{c|c|c}
       $N_S$ & $N_D$ & $P$ \\
@@ -1334,7 +1334,7 @@ Alla fine dell'800 si sviluppa l'elettromagnetismo, mentre la meccanica di Newto
 
 Bisognava far convivere le equazioni di Maxwell\index{Maxwell} con quelle di Newton.
 
-Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono invarianti per traslazioni. Variabili invarianti sono quelle che non cambiano per sistemi di riferimento inerziali, come l'accelerazione, la massa. Non si può esclusivamente con esperimenti di meccanica determinare se il sistema è fermo o in modo rettilineo uniforme, cioè non si possono distinguere i sistemi inerziali, quindi non esiste un sistema privilegiato.
+Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono invarianti per traslazioni. Variabili invarianti sono quelle che non cambiano per sistemi di riferimento inerziali, come l'accelerazione, la massa. Non si può esclusivamente con esperimenti di meccanica determinare se il sistema è fermo o in moto rettilineo uniforme, cioè non si possono distinguere i sistemi inerziali, quindi non esiste un sistema privilegiato.
 
 \section{Esperimento di Michelson--Morley\index{Michelson}\index{Morley}\index{esperimento!di Michelson--Morley|(}}
 \begin{figure}[htbp]
@@ -1344,7 +1344,7 @@ Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono inv
 \end{figure}
 Maxwell dice: ``$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$'', cioè che la velocità della luce \index{velocità!della luce nel vuoto}\index{c@$c$|see{velocità della luce nel vuoto}}nel vuoto è costante e non dipende dal sistema di riferimento, contrariamente a quanto si ricava dalle trasformate di Galileo. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si inventa l'etere, un sistema di riferimento privilegiato che permea tutto l'universo; Michelson--Morley dimostrano che questo non può esistere.\index{etere}
 
-Nell'esperimento la luce proviene da una sorgente $S$, viene parzialmente riflessa da uno specchio semiargentato $M$ e contemporaneamente trasmessa. La luce quindi segue due cammini: $\text{I}$ e $\text{II}$; si riflette sugli specchi $M_1$ e $M_2$ e si riunisce in un raggio unico, prima di arrivare ad un'analizzatore. Le lunghezze dei percorsi dopo lo specchio $M$, $l_1$ e $l_2$ sono circa uguali, ma non uguali se riferite alla lunghezza d'onda della luce, quindi nell'analizzatore si dovrebbe vedere una figura d'interferenza. Si suppone che l'etere sia il sistema di riferimento assoluto e che l'apparecchio si muova con velocità $v$ verso destra, quindi si può supporre che sia l'etere a spostarsi verso sinistra con velocità $v$, il ``vento d'etere''. Non si considera il percorso dalla sorgente allo specchio $M$ e dallo specchio $M$ al rivelatore, in quanto i raggi viaggiano insieme. Il tempo per andare da $M$ a $M_1$ e tornare è:
+Nell'esperimento la luce proviene da una sorgente $S$, viene parzialmente riflessa da uno specchio semiargentato $M$ e contemporaneamente trasmessa. La luce quindi segue due cammini: $\text{I}$ e $\text{II}$; si riflette sugli specchi $M_1$ e $M_2$ e si riunisce in un raggio unico, prima di arrivare ad un analizzatore. Le lunghezze dei percorsi dopo lo specchio $M$, $l_1$ e $l_2$ sono circa uguali, ma non uguali se riferite alla lunghezza d'onda della luce, quindi nell'analizzatore si dovrebbe vedere una figura d'interferenza. Si suppone che l'etere sia il sistema di riferimento assoluto e che l'apparecchio si muova con velocità $v$ verso destra, quindi si può supporre che sia l'etere a spostarsi verso sinistra con velocità $v$, il ``vento d'etere''. Non si considera il percorso dalla sorgente allo specchio $M$ e dallo specchio $M$ al rivelatore, in quanto i raggi viaggiano insieme. Il tempo per andare da $M$ a $M_1$ e tornare è:
 \[t_1=\frac{l_1}{c-v}+\frac{l_1}{c+v}=\frac{l_1(2c)}{c^2-v^2}=\frac{2c}{c^2}\frac{l_1}{1-\left(\frac{v}{c}\right)^2}=\frac{2l_1}{c}\frac{1}{1-\left(\frac{v}{c}\right)^2}\]
 Il percorso $\text{II}$ è ortogonale al vento d'etere, per semplicità si considera il punto di vista del vento d'etere:
 \begin{figure}[htbp]
@@ -1398,7 +1398,7 @@ I postulati di Einstein sono ampiamente verificati sperimentalmente. L'esperimen
 I due pistoleri (Fig.\@ \ref{pistoleri}) sparano quando la luce gli raggiunge. Essi sono in un sistema solidale con la luce e quindi vedono contemporaneamente la luce della lampadina. Per il capostazione ``fermo'' invece è il pistolero di sinistra ad essere investito per prima dalla luce, quindi il pistolero a destra muore, mentre quello di sinistra no. Gli eventi simultanei per $O'$ non sono tali per $O$, bisogna rivedere il concetto di tempo assoluto.
 
 \section{Trasformate di Lorentz\index{trasformate!di Lorentz|(}\index{trasformazioni!di Lorentz|(}\index{Lorentz}}
-Le trasformate i Lorentz sostituiscono le trasformate di Galileo della meccanica classica. Per velocità basse rispetto a quelle della luce le trasformate di Lorentz tendono a quelle di Galileo.
+Le trasformate di Lorentz sostituiscono le trasformate di Galileo della meccanica classica. Per velocità basse rispetto a quelle della luce le trasformate di Lorentz tendono a quelle di Galileo.
 La funzione che trasforma le coordinate di un sistema di riferimento a quelle di un altro deve essere lineare, in quanto lo spazio è omogeneo. Immaginiamo che l'applicazione non sia omogenea, e quindi non lineare, per esempio: $x'=kx^2$. Se mettiamo una sbarra tra $0$ e $1$ questa misura $\Delta x=1-0=1$, nel nuovo sistema di riferimento misura: $k\cdot 1^2-k\cdot 0^2=k$. Se ora mettiamo la sbarra tra $2$ e $1$ nel primo sistema di riferimento misurerà ancora $1$, mentre nel secondo $k(2^2-1^2)=3k$ ovvero spostando la sbarra nel secondo sistema di riferimento la sua lunghezza cambia: assurdo per l'ipotesi di omogeneità dello spazio; inoltre l'applicazione deve essere anche additiva, perché la lunghezza di due sbarre affiancate deve essere la somma dell'unica sbarra avente lunghezza uguale nel primo sistema di riferimento alla somma delle lunghezze delle due sbarre nel primo sistema di riferimento. Consideriamo il sistema di riferimento $Oxy$ fermo e $O'x'y'$ che si muove rispetto ad $O$ di moto rettilineo uniforme con velocità di trascinamento $u$ nella direzione dell'asse $x$ crescente. L'applicazione è lineare, quindi (in due dimensioni spaziali), in generale:
 \[\left\{
    \begin{array}{l}
@@ -1544,7 +1544,7 @@ Per velocità piccole rispetto alla velocità della luce si ha: $\gamma_b = 1 + 
    \caption{Variazione di $\gamma$ in funzione di $\beta$.}
 \end{figure}
 Consideriamo spazi nello stesso tempo. Posizioniamo un'asta con estremi $A$ e $B$ ferma rispetto ad $O'$, sistema di riferimento inerziale con velocità $u$ rispetto ad $O$.
-$O$ misura nello stesso istante le posizione di $A$ e di $B$, quindi $t_A\equiv t_B$:
+$O$ misura nello stesso istante le posizioni di $A$ e di $B$, quindi $t_A\equiv t_B$:
 \[\left\{
    \begin{array}{l}
       x'_A=\frac{x_A-ut_A}{\sqrt{1-\beta^2}} \\
@@ -1585,15 +1585,15 @@ Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$ cioè $O$ vede l'evento più l
 \end{Es}
 
 \begin{Es}[Paradosso della scala]
-   Come esempio di un paradosso che si ottiene non considerando il fatto che la simultaneità è un concetto relativo consideriamo il seguente esempio classico. Una scala di lunghezza $l_0$ a riposo non entra in un box, in quando la sua lunghezza di quest'ultimo a riposo $l$ è inferiore. Il box è dotato di due porte dalla quale la scala può entrare ed uscire. Per risolvere il problema della dimensione si potrebbe mettere in moto la scala orizzontalmente, in modo tale che questa venga osservata come contratta dal sistema di riferimento del box e quindi dovrebbe entrarci. Allo stesso modo però se considero la stessa situazione ma vista dal sistema solidale con la scala questa volta è il box ad essere contratto e quindi la scala non entra nel box. Il problema che il concetto di ``essere dentro'' è anch'esso relativo, poiché questo significa che entrambi gli estremi della scala sono simultaneamente all'interno del box, ma come abbiamo visto il concetto di simultaneità è relativo.
+   Come esempio di un paradosso che si ottiene non considerando il fatto che la simultaneità è un concetto relativo consideriamo il seguente esempio classico. Una scala di lunghezza $l_0$ a riposo non entra in un box, in quanto la sua lunghezza di quest'ultimo a riposo $l$ è inferiore. Il box è dotato di due porte dalle quali la scala può entrare ed uscire. Per risolvere il problema della dimensione si potrebbe mettere in moto la scala orizzontalmente, in modo tale che questa venga osservata come contratta dal sistema di riferimento del box e quindi dovrebbe entrarci. Allo stesso modo però se considero la stessa situazione ma vista dal sistema solidale con la scala questa volta è il box ad essere contratto e quindi la scala non entra nel box. Il problema che il concetto di ``essere dentro'' è anch'esso relativo, poiché questo significa che entrambi gli estremi della scala sono simultaneamente all'interno del box, ma come abbiamo visto il concetto di simultaneità è relativo.
 \end{Es}
 
 \subsection{Effetto Doppler}
-Immaginiamo una sorgente ferma rispetto ad $O'$ posizionata nell'origine. $O'$ sia in moto rispetto a $O$ con velocità $v$ verso l'asse $x$. Conosciamo la frequenza della sorgene a riposo, in $O'$: $\nu'$, vogliamo calcolare quella vista da $O$. Per semplicità supponiamo che il segnale sia di tipo digitale e che $O'$ osservi un ``bip'' con periodo $T'=1/\nu'$. Il primo bip (che assumiamo avvenire al tempo $0$) e il secondo bip sono due eventi a cui corrispondono le coordinate rispetto ad $O'$: $(t_1', x_1') = (0, 0)$ e $(t_2', x_2') = (0, T')$. Usando le trasformate di Lorentz \eqref{eq:boostinv} otteniamo:
+Immaginiamo una sorgente ferma rispetto ad $O'$ posizionata nell'origine. $O'$ sia in moto rispetto a $O$ con velocità $v$ verso l'asse $x$. Conosciamo la frequenza della sorgente a riposo, in $O'$: $\nu'$, vogliamo calcolare quella vista da $O$. Per semplicità supponiamo che il segnale sia di tipo digitale e che $O'$ osservi un ``bip'' con periodo $T'=1/\nu'$. Il primo bip (che assumiamo avvenire al tempo $0$) e il secondo bip sono due eventi a cui corrispondono le coordinate rispetto ad $O'$: $(t_1', x_1') = (0, 0)$ e $(t_2', x_2') = (0, T')$. Usando le trasformate di Lorentz \eqref{eq:boostinv} otteniamo:
 \[
    \begin{pmatrix}t_1\\ x_1\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}\qquad \begin{pmatrix}t_2\\ x_2\end{pmatrix} = \begin{pmatrix}\gamma/\nu'\\ \frac{\gamma v}{\nu'}\end{pmatrix}
 \]
-Il periodo osservato da $O$ non è $t_2-t_1$ perchè questi sono eventi che avvengono in due punti diversi. La parte mancante non è un effetto relativistico, ma è semplicemente dovuto al fatto che la sorgente si è spostata e quindi il fronte d'onda (il bip) ci metterà di più (nel caso la sorgente si allontani) ad arrivare, esattamente come nel caso classico. Se immaginiamo che l'onda sia un'onda luminosa la sua velocità è sempre $c$ in entrambi i sistemi, quindi considerando il tempo che ci mette a propagare da $x_2$ a $O$:
+Il periodo osservato da $O$ non è $t_2-t_1$ perché questi sono eventi che avvengono in due punti diversi. La parte mancante non è un effetto relativistico, ma è semplicemente dovuto al fatto che la sorgente si è spostata e quindi il fronte d'onda (il bip) ci metterà di più (nel caso la sorgente si allontani) ad arrivare, esattamente come nel caso classico. Se immaginiamo che l'onda sia un'onda luminosa la sua velocità è sempre $c$ in entrambi i sistemi, quindi considerando il tempo che ci mette a propagare da $x_2$ a $O$:
 \[
    T = t_2 - t_1 + \frac{x_2}{c} = \frac{\gamma}{\nu'} - 0 + \frac{\gamma v}{\nu' c} = \frac{\gamma}{\nu}\left(1 + \frac{v}{c}\right)
 \]
@@ -1876,7 +1876,7 @@ Einstein si interrogava di come le forze potessero propagarsi, in particolare qu
 \index{relatività!speciale|)}
 \chapter{Onde\index{onde}}
 \minitoc
-Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinale sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
+Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinali sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
 
 Se mandiamo due impulsi in un mezzo elastico:
 \begin{figure}[htbp]
@@ -1897,9 +1897,9 @@ questo perché la forma d'onda non cambia. Questa è un'onda progressiva\index{o
 Caso onda progressiva: $y(x,t)=f(x-vt)$
 al tempo zero:
 \[y(x,0)=f(x)=y_m\sin\left(\frac{2\pi}{\lambda} x + \varphi\right)\]
-dove $\lambda$ è la lunghezza d'onda, ed è legata al perido $T$ e alla velocità di propagazione $v$: \(\lambda=vT\). $\varphi$ è la fase.
+dove $\lambda$ è la lunghezza d'onda, ed è legata al periodo $T$ e alla velocità di propagazione $v$: \(\lambda=vT\). $\varphi$ è la fase.
 \[y(x,t)=f(x-vt)=y_m\sin\left[2\pi\left(\frac{x}{\lambda}-\frac{t}{T}\right)+\varphi\right]=y_m\sin\left(kx-\omega t+\varphi\right)\]
-Dove nell'ultima passaggio sono stati introdotti il numero d'onda $k$ e la pulsazione $\omega$
+Dove nell'ultimo passaggio sono stati introdotti il numero d'onda $k$ e la pulsazione $\omega$
 \[k=\frac{2\pi}{\lambda}\qquad \omega=\frac{2\pi}{T}=2\pi\nu\]
 
 \section{Corda Tesa\index{onda!su corda tesa}\index{corda tesa}}
