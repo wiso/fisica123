@@ -27,7 +27,8 @@
 \newcommand{\field}[1]{\mathbb{#1}}
 
 \newcommand*\mygraybox[1]{%
-\colorbox{lightgray}{\hspace{1em}#1\hspace{1em}}}
+{\fboxsep=6pt\fboxrule=0.8pt\fcolorbox{escolor}{esbgcolor}{\hspace{1em}#1\hspace{1em}}}%
+}
 
 \definecolor{escolor}{RGB}{120,120,120}
 \colorlet{esbgcolor}{escolor!6!white}
