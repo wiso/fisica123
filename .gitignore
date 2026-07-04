@@ -22,7 +22,10 @@
 *.out
 *.synctex.gz
 *.gin
+*.fls
+*.auxlock
 fisica.mtc*
 fisica.pdf
 fisica.ptc*
 fisica.fdb_latexmk
+fisica-figure*.*
