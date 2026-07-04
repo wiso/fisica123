@@ -117,7 +117,7 @@ Dove $\si{\weber}=\text{weber}=\si{\volt\second}$, $\si{\tesla}=\text{tesla}=\fr
   \[
     t_1 = \frac{\pi r_1}{v_1}=\frac{\pi m}{qB}
   \]
-  come si nota questo tempo non dipende dalla velocità della particella. Nello stesso tempo la tensione (la radiofrequenza) ha cambiato segno e quindi lo ione viene accelerato passando da $D_1$ a $D_2$. Ad ogni semigiro lo ione acquista un'energia cinetica $qV$. Dentro a $D_2$ lo ione compie una semicirconferenza con raggio maggiore rispetto a prima: $r_2={m v_2}{qB}$ e ci impiega:
+  come si nota questo tempo non dipende dalla velocità della particella. Nello stesso tempo la tensione (la radiofrequenza) ha cambiato segno e quindi lo ione viene accelerato passando da $D_1$ a $D_2$. Ad ogni semigiro lo ione acquista un'energia cinetica $qV$. Dentro a $D_2$ lo ione compie una semicirconferenza con raggio maggiore rispetto a prima: $r_2=\frac{m v_2}{qB}$ e ci impiega:
   \[
     t_2 = \frac{\pi r_2}{v_2}=\frac{\pi m}{qB} = t_1 = \Delta t
   \]
@@ -643,7 +643,7 @@ Tutto ciò lo possiamo ottenere mantenendo $P$ fermo e spostando la spira di $-\
   -\oint_C\frac{\ve r\cdot(\ud \ve s\times\ud\ve l)}{r^3}
 \]
 è uguale a $\ud\omega$, la variazione di $\omega$, l'angolo solido con cui $P$ vede $C$, durante lo spostamento $\ud\ve s$. $\ud \ve a\cdot\ve r=\ud a_0 r$ area perpendicolare a $\ve r$:
-\[\frac{\ve r\cdot\ud\ve a}{r^3}=\frac{r\ud a_0}{r^3}=\frac{\ud a_0}{r^2}=\ud\ud\omega\]
+\[\frac{\ve r\cdot\ud\ve a}{r^3}=\frac{r\ud a_0}{r^3}=\frac{\ud a_0}{r^2}=\ud\omega\]
 integrando si trova $\ud\omega$. Allora:
 \begin{equation}
   \ud\varphi_m=\frac{I}{4\pi}\ud\omega
@@ -1842,7 +1842,7 @@ Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che
   \end{equation}
   semplificando, il campo elettrico indotto all'interno della spira:
   \begin{equation}
-    E = -\frac{r}{2}\frac{\partial B}{\partial z}\frac{\partial z}{\partial t}-=\frac{r}{2}\frac{\partial B}{\partial z}v
+    E = -\frac{r}{2}\frac{\partial B}{\partial z}\frac{\partial z}{\partial t}=-\frac{r}{2}\frac{\partial B}{\partial z}v
   \end{equation}
   diretto tangenzialmente alla spira. Essendo l'anello carico il campo elettrico esercita una forza, anch'essa tangenziale, e quindi un momento di una forza sulla spira:
   \begin{equation}
@@ -2441,7 +2441,7 @@ Introduciamo la grandezza coefficiente di smorzamento $\gamma$:
 \end{equation}
 e il fattore di merito o di qualità $Q_0$:
 \begin{equation}
-  Q_0 = {\omega_0L}{R}=\frac{\omega_0}{2\gamma}
+  Q_0 = \frac{\omega_0L}{R}=\frac{\omega_0}{2\gamma}
 \end{equation}
 Dividiamo in tre casi notevoli:
 \begin{itemize}
@@ -2802,7 +2802,7 @@ Vorremmo un'espressione unicamente in funzione dei campi, quindi usiamo le equaz
   \end{split}
 \end{equation}
 Avendo usato il teorema della divergenza, definito:
-\begin{Def}[vettore di Poynting\index{Poynting}\index{vettore!di Poyning}]
+\begin{Def}[vettore di Poynting\index{Poynting}\index{vettore!di Poynting}]
   \begin{equation}
     \ve S=\ve E\times\ve H = \frac{1}{\mu_0}\ve E\times\ve B
   \end{equation}
@@ -2824,12 +2824,12 @@ con $w_{em}=w_e+w_h$ la densità di energia elettromagnetica e $W_{em}$ è l'ene
   W_{em} = \int_V w_{em}\,\ud v = \int_V \frac{1}{2}\left(\ve E\cdot\ve D+\ve H\cdot\ve B\right)\,\ud v
 \end{equation}
 Riordinando:
-\begin{Teo}{Teorema di Pointing}
+\begin{Teo}{Teorema di Poynting}
   \begin{equation}
     -\frac{\ud}{\ud t}\int_V w_{em}\,\ud v = \int_V \ve J \cdot \ve E\,\ud v+\int_S\ve S\cdot\ve n\,\ud a
   \end{equation}
 \end{Teo}
-Si deduce che l'energia del campo elettromagnetico è dissipata per due fattori: l'energia ceduda alla materia $P_J=\int_V \ve J\cdot\ve E\,\ud v$ e l'irraggiamento attraverso la superficie. Il teorema di Pointing è una legge sulla conservazione dell'energia in cui il campo elettromagnetico interagisce con la materia, analogo al teorema lavoro-energia. Si noti che separatamente l'energia del campo elettromagnetico oppure l'energia delle cariche non sono conservate.
+Si deduce che l'energia del campo elettromagnetico è dissipata per due fattori: l'energia ceduta alla materia $P_J=\int_V \ve J\cdot\ve E\,\ud v$ e l'irraggiamento attraverso la superficie. Il teorema di Poynting è una legge sulla conservazione dell'energia in cui il campo elettromagnetico interagisce con la materia, analogo al teorema lavoro-energia. Si noti che separatamente l'energia del campo elettromagnetico oppure l'energia delle cariche non sono conservate.
 
 In forma differenziale
 \begin{equation}
@@ -2837,9 +2837,9 @@ In forma differenziale
 \end{equation}
 Poiché nel teorema entra solo lo divergenza di $\ve S$, allora la sua definizione è aritraria a meno di un rotore.
 
-Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continutà della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
+Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continuità della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
 
-\begin{Es}{Energia dissipata in un cavo condutore}
+\begin{Es}{Energia dissipata in un cavo conduttore}
   In un cavo conduttore, di lunghezza $L$ e raggio $R$, a cui si applica una differenza tensione $V$ ai capi si genera un campo elettrico, la cui componente longitudinale all'interno del cavo è
   \[
     E = \frac{V}{L}
@@ -2856,13 +2856,13 @@ Senza la materia diventerebbe un'equazione molto più simile alle leggi di conse
   \[
     S = EH = E \frac{B}{\mu_0} = \frac{V}{L} \frac{I}{2\pi R}
   \]
-  . Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromatico per unità di tempo nel cavo:
+  . Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromagnetico per unità di tempo nel cavo:
   \[
     \int_S \ve S \cdot \ve n\,\ud a = \frac{V}{L} \frac{I}{2\pi R} 2\pi R L = V I
   \]
   che è la solita espressione ben nota.
 
-  Può suorare un po' strano il fatto che l'energia dissipata per effetto Joule arrivi al cavo dall'esterno, con un flusso perpendicolare alla superficie.
+  Può sembrare un po' strano il fatto che l'energia dissipata per effetto Joule arrivi al cavo dall'esterno, con un flusso perpendicolare alla superficie.
 \end{Es}
 
 
