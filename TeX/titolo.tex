@@ -3,6 +3,7 @@
 \addtolength{\centeroffset}{0.5\evensidemargin}
 \thispagestyle{empty}
 
+\tikzset{external/export next=false}
 \begin{tikzpicture}[remember picture,overlay]
 \fill[escolor!85!black] (current page.north west) rectangle ([yshift=-6.5cm]current page.north east);
 \draw[white, line width=0.8pt] ([yshift=-6.5cm]current page.north west) -- ([yshift=-6.5cm]current page.north east);
