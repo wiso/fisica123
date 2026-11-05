@@ -1047,8 +1047,33 @@ Il frigorifero perfetto trasferirebbe calore dalla sorgente più fredda a quella
   \]
   mentre le centrali reali arrivano al 40\% circa (60\% nelle centrali a ciclo combinato, che usano una turbina a gas a temperatura più alta). Si noti che il rendimento dipende dalle temperature \emph{assolute}: per questo si cerca di far lavorare le turbine alla temperatura più alta possibile compatibilmente con i materiali.
 \end{Es}
-\begin{Es}[pompa di calore]
-  Una pompa di calore è un frigorifero usato per scaldare: preleva calore dall'aria esterna fredda e lo cede alla casa. Il calore ceduto alla casa è $|Q_1|=L+Q_2$, quindi il coefficiente di prestazione per il riscaldamento è $|Q_1|/L=T_1/(T_1-T_2)$ nel caso ideale. Con l'esterno a \SI{0}{\celsius} e l'interno a \SI{20}{\celsius} si avrebbe $293/20\simeq15$: con \SI{1}{\kilo\watt\hour} di energia elettrica si possono portare in casa fino a \SI{15}{\kilo\watt\hour} di calore, molto più di quanto farebbe una stufa elettrica. Le pompe di calore reali hanno coefficienti tra 3 e 5.
+\begin{Es}[pompa di calore e suo rendimento]
+  \index{pompa di calore}Una pompa di calore è un frigorifero usato per scaldare: preleva il calore $Q_2$ da una sorgente fredda (l'aria esterna, il terreno o l'acqua di falda, a temperatura $T_2$) e cede il calore $|Q_1|$ all'interno della casa (a temperatura $T_1$), assorbendo il lavoro $L$ di un compressore elettrico. Per il primo principio $|Q_1|=L+Q_2$: il calore portato in casa è \emph{maggiore} dell'energia elettrica consumata, perché vi si aggiunge quello sottratto all'esterno.
+
+  Il ``rendimento'' di una pompa di calore si esprime con il coefficiente di prestazione per il riscaldamento (COP), rapporto tra l'effetto utile (il calore ceduto alla casa) e il lavoro speso:
+  \[
+    \mathrm{COP}_\text{risc}=\frac{|Q_1|}{L}=\frac{|Q_1|}{|Q_1|-Q_2}\leq\frac{T_1}{T_1-T_2}
+  \]
+  dove l'uguaglianza vale per una macchina reversibile (ciclo di Carnot inverso). Si noti che $\mathrm{COP}_\text{risc}=\mathrm{COP}_\text{frigo}+1>1$: a differenza del rendimento di una macchina termica, il COP è maggiore di 1, e lo è tanto più quanto più le due temperature sono vicine.
+
+  Il COP ideale dipende fortemente dalle temperature. La temperatura ``calda'' $T_1$ non è quella della stanza, ma quella del fluido che porta il calore ai radiatori, che deve essere un po' più alta:
+  \begin{center}
+    \begin{tabular}{lccc}
+      \hline
+      esterno $T_2$          & mandata $T_1$                & COP ideale & COP reale tipico \\
+      \hline
+      \SI{7}{\celsius}        & \SI{35}{\celsius} (pavimento radiante) & 11.0       & 4.5--5    \\
+      \SI{-7}{\celsius}       & \SI{35}{\celsius}            & 7.3        & 2.5--3     \\
+      \SI{7}{\celsius}        & \SI{55}{\celsius} (radiatori)  & 6.8        & 3          \\
+      \SI{-7}{\celsius}       & \SI{55}{\celsius}            & 5.3        & 2          \\
+      \hline
+    \end{tabular}
+  \end{center}
+  Per esempio nella prima riga $T_1=\SI{308}{\kelvin}$, $T_2=\SI{280}{\kelvin}$ e $T_1/(T_1-T_2)=308/28\simeq11$. Le macchine reali raggiungono circa il 40--50\% del COP di Carnot, a causa delle irreversibilità (differenze di temperatura finite negli scambiatori, attriti, perdite del compressore). Da qui due conseguenze pratiche: le pompe di calore rendono meglio con impianti a bassa temperatura (pavimenti radianti, ventilconvettori) e peggiorano quando fa molto freddo, proprio quando servirebbero di più; per questo le pompe di calore geotermiche, che prelevano calore dal terreno a temperatura quasi costante (circa \SI{12}{\celsius} a qualche decina di metri di profondità), hanno COP stagionali più alti di quelle ad aria.
+
+  Confronto con una caldaia: con un COP pari a 3, \SI{1}{\kilo\watt\hour} elettrico porta in casa \SI{3}{\kilo\watt\hour} di calore, mentre una stufa elettrica a resistenza (COP = 1) ne porterebbe uno solo e una caldaia a gas a condensazione circa \SI{1}{\kilo\watt\hour} di calore per \SI{1}{\kilo\watt\hour} di gas bruciato. Se però l'energia elettrica è prodotta da una centrale termoelettrica con rendimento $\eta\simeq0.45$, per ogni \si{\kilo\watt\hour} di calore in casa la pompa di calore richiede $1/(\eta\,\mathrm{COP})\simeq0.74$ \si{\kilo\watt\hour} di combustibile alla centrale, contro circa 1 della caldaia: conviene comunque, e conviene molto di più se l'elettricità viene da fonti rinnovabili.
+
+  Infine, la stessa macchina funziona d'estate al contrario come condizionatore; il ciclo usato nelle macchine reali non è quello di Carnot ma un ciclo a compressione di vapore, in cui il fluido refrigerante evapora (assorbendo calore) nello scambiatore freddo e condensa (cedendo calore) in quello caldo: gli scambi di calore avvengono così quasi a temperatura costante, come nelle isoterme del ciclo di Carnot.
 \end{Es}
 
 \subsection{Ciclo Otto\index{ciclo!Otto}}
