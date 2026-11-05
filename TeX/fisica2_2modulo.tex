@@ -1831,12 +1831,14 @@ Se il campo magnetico è variabile nel tempo allora $\rot\ve E\neq 0$, segue che
   \begin{equation}
     F = \mu\frac{\partial B}{\partial z}
   \end{equation}
-  Per cui la forza farà accelerare la spira lungo l'asse $z$ e l'equazione per la velocità:
+  Per cui la forza farà accelerare la spira lungo l'asse $z$:
   \begin{equation}
     m\frac{\ud v}{\ud t} = \mu\frac{\partial B}{\partial z} = \frac{q\omega r^2}{2}\frac{\partial B}{\partial z}
     \label{eq:sg1}
   \end{equation}
-  A causa del movimento il flusso del campo magnetico concatenato con la spira cambierà nel tempo, e per la legge di Farady questa indurrà una forza elettromotrice all'iterno della spira:
+  Apparentemente sembra che l'energia cinetica sia aumentata e che quindi ci sia del lavoro che proviene dall'esterno, ma questo non può venire dal campo magnetico.
+
+  A causa del movimento della spira il flusso del campo magnetico concatenato con la spira cambierà nel tempo, e per la legge di Farady questa indurrà una forza elettromotrice all'iterno della spira:
   \begin{equation}
     \oint \ve E\cdot \ud\ve l = 2\pi r E = -\frac{\ud (B A)}{\ud t} = -(\pi r^2)\frac{\partial B}{\partial z}\frac{\partial z}{\partial t}
   \end{equation}
@@ -2839,8 +2841,8 @@ Poiché nel teorema entra solo lo divergenza di $\ve S$, allora la sua definizio
 
 Senza la materia diventerebbe un'equazione molto più simile alle leggi di conservazione, come la legge di continuità della carica: \(  -\frac{\partial w_{em}}{\partial t} = \ve\nabla \cdot \ve S\) ed esprime la conservazione locale dell'energia elettromagnetica.
 
-\begin{Es}{Energia dissipata in un cavo conduttore}
-  In un cavo conduttore, di lunghezza $L$ e raggio $R$, a cui si applica una differenza tensione $V$ ai capi si genera un campo elettrico, la cui componente longitudinale all'interno del cavo è
+\begin{Es}[Energia dissipata in un cavo conduttore]
+  In un cavo conduttore, di lunghezza $L$ e raggio $R$ si applica una differenza tensione $V$ ai capi. Questo genera un campo elettrico, la cui componente longitudinale all'interno del cavo è
   \[
     E = \frac{V}{L}
   \]
@@ -2854,9 +2856,9 @@ Senza la materia diventerebbe un'equazione molto più simile alle leggi di conse
   \]
   e punta radialmente verso l'interno. Calcolato sulla superficie è
   \[
-    S = EH = E \frac{B}{\mu_0} = \frac{V}{L} \frac{I}{2\pi R}
+    S(r=R) = \frac{V}{L} \frac{I}{2\pi R}
   \]
-  . Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromagnetico per unità di tempo nel cavo:
+  Abbiamo calcolato il vettore di Poynting sulla superficie, perché vogliamo calcolarne il flusso, cioè l'energia dissipata dal campo elettromagnetico per unità di tempo nel cavo:
   \[
     \int_S \ve S \cdot \ve n\,\ud a = \frac{V}{L} \frac{I}{2\pi R} 2\pi R L = V I
   \]
