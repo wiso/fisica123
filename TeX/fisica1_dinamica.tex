@@ -9,24 +9,24 @@
   \item forza nucleare debole
   \item forza nucleare forte
 \end{itemize}
-Tutte le altre forze non sono altro che combinazioni di queste.
+Tutte le altre forze (elastiche, d'attrito, di contatto, \ldots) sono manifestazioni macroscopiche di queste; nella vita quotidiana quasi tutte derivano dalla forza elettromagnetica tra gli atomi. Le forze elettromagnetica e debole sono oggi descritte in un'unica teoria, detta elettrodebole.
 \section{Altre forze}
 Molte forze sono descritte con leggi che approssimano il loro comportamento, consentendo un'analisi dinamica del sistema, senza dover considerare direttamente le forze fondamentali.
 
 \subsection{\index{forza!elastica}Forza elastica}
-\begin{legge}[Hook]
+\begin{legge}[Hooke]
   \begin{eqimp}{equation}
     \ve F=-k\Delta\ve x
   \end{eqimp}
 
 
-  con $\Delta\ve x$ l'allungamento. Questa legge è valida per i corpi elastici e per allungamenti limitati, dopo di che il corpo non si comporta più in modo elastico e rimane deformato.
+  con $\Delta\ve x$ l'allungamento e $k$ la costante elastica. Questa legge è valida per i corpi elastici e per allungamenti limitati: oltre il limite di elasticità il corpo non si comporta più in modo elastico e rimane deformato.
 \end{legge}
 
 \subsection{\index{resistenza!del mezzo}Resistenza del mezzo}
-La resistenza del mezzo è quella forza che il fluido in cui è
-immerso un corpo in movimento esercita sul corpo. La forza è
-proporzionale alla velocità, ma può essere anche proporzionale al
+La resistenza del mezzo è la forza che il fluido in cui è
+immerso un corpo in movimento esercita sul corpo. A basse velocità (regime laminare) la forza è
+proporzionale alla velocità, ad alte velocità (regime turbolento) è invece proporzionale al
 quadrato della velocità.
 \begin{eqimp}{equation}
   \ve F=-k\mu \ve v
@@ -38,24 +38,24 @@ oppure:
 dove $\mu$ dipende dalla geometria del corpo,
 $k$ dalla natura del mezzo.
 \subsection{\index{attrito!statico}Attrito statico}
-Le leggi sull'attrito vengono chiamate leggi di Leonardo\index{leggi!di Leonardo}\index{Leonardo}.
+Le leggi sull'attrito vengono chiamate leggi di Leonardo\index{leggi!di Leonardo}\index{Leonardo}, che per primo le enunciò; furono poi riscoperte da Amontons (1699) e Coulomb (1785).
 \begin{legge}[Prima legge di Leonardo]
   \begin{eqimp}{equation}
     f_s\leq\mu_s N
   \end{eqimp}
-  con $\mu_s$coefficiente di attrito statico. La direzione e il verso sono quelli che si oppongono al moto.
+  con $\mu_s$ coefficiente di attrito statico e $N$ il modulo della reazione normale. La forza d'attrito statico assume il valore necessario a mantenere il corpo fermo, fino al valore massimo $\mu_sN$; ha la direzione della superficie e verso opposto a quello in cui il corpo tenderebbe a scivolare.
 \end{legge}
 \begin{legge}[Seconda legge di Leonardo]
-  La forza di attrito è indipendente dalla superficie d'appoggio
+  La forza di attrito è indipendente dall'area della superficie d'appoggio.
 \end{legge}
 \subsection{\index{attrito!dinamico}Attrito dinamico}
 \begin{eqimp}{equation}
   F_c=\mu_cN
 \end{eqimp}
-$\mu_c=$ coefficiente di attrito dinamico. $\mu_c<\mu_s$. La direzione e il verso sono contrari al moto.
+$\mu_c=$ coefficiente di attrito dinamico, in genere $\mu_c<\mu_s$. La forza ha la direzione della velocità relativa tra le superfici e verso opposto ad essa.
 
 \section{\index{principi della dinamica}Leggi di Newton}
-Le leggi di Newton sono i principi della dinamica, legano due mondi distinti, quello del mondo esterno e quello della cinematica attraverso le forze. In quanto principi non hanno nessuna giustificazione, se non la verifica sperimentale. I principi valgono nei sistemi inerziali. L'esistenza e la definizione dei sistemi inerziali è data dal primo principio:
+Le leggi di Newton sono i principi della dinamica: legano, attraverso le forze, le cause del moto (le interazioni con il mondo esterno) alla cinematica. In quanto principi non hanno altra giustificazione che la verifica sperimentale. I principi valgono nei sistemi inerziali. L'esistenza e la definizione dei sistemi inerziali è data dal primo principio:
 \begin{Pri}[Primo principio della dinamica]
   Quando un corpo è sottoposto ad una forza risultante nulla è
   possibile individuare una classe di riferimenti rispetto ai quali
@@ -72,7 +72,7 @@ In realtà Newton formulò questa espressione come $\sum \ve
 \begin{Pri}[Terzo principio della dinamica]
   Se un corpo esercita una forza su un altro corpo, il secondo corpo
   esercita una forza sul primo. Queste due forze sono uguali in
-  modulo, hanno la stessa direzione e versi opposti.
+  modulo, hanno la stessa retta d'azione e versi opposti. Le due forze agiscono su corpi diversi, quindi non si annullano a vicenda.
 \end{Pri}
 
 
@@ -90,7 +90,7 @@ La risoluzione dell'equazione differenziale \eqref{sec_din} con la forza data da
   varia nel tempo e quindi l'accelerazione impressa dai freni segue
   la legge $a=ct$ con $c=\SI{-3}{\meter\per\second^3}$. Quanto ci mette la
   macchina a fermarsi?
-  \[ v_0=\SI{100}{\kilo\meter\per\hour} \simeq \SI{27.7}{\meter\per\second} \]
+  \[ v_0=\SI{100}{\kilo\meter\per\hour} \simeq \SI{27.8}{\meter\per\second} \]
   \[ c=\SI{-3}{\meter\per\second^3} \]
   \[ a=ct \]
   \[ F=ma=mct \]
@@ -104,6 +104,7 @@ La risoluzione dell'equazione differenziale \eqref{sec_din} con la forza data da
   \[\frac{ct^3}{6}+v_0t=x\qquad x=v_0t+\frac{ct^3}{6}\]
   \[v_f=0\qquad v_f=0=\frac{ct^2}{2}+v_0\qquad
     t=\sqrt{\frac{-2v_0}{c}}\simeq \SI{4.30}{\second}\]
+  e lo spazio di frenata è $x=v_0t+ct^3/6=\frac{2}{3}v_0t\simeq\SI{80}{\meter}$.
 \end{Es}
 
 \subsection{\index{forza!variabile!nello spazio}Forze variabili nello spazio}
@@ -113,7 +114,7 @@ La risoluzione dell'equazione differenziale \eqref{sec_din} con la forza data da
 \begin{equation}F=-kx=ma\end{equation}
 \[a=\frac{\ud v}{\ud t}=\frac{\ud^2 x}{\ud t^2}\]
 \[-kx=m\frac{\ud^2 x}{\ud t^2}\qquad m\frac{\ud^2 x}{\ud
-    t}+kx=0\qquad x=-\frac{m\ddot x}{k}\]
+    t^2}+kx=0\qquad x=-\frac{m\ddot x}{k}\]
 la soluzione generale è del tipo:
 \begin{equation}x(t)=A\sin(\omega t+\varphi)\end{equation}
 con $\omega=\sqrt{\frac{k}{m}}$, da cui si può ricavare anche:
@@ -157,13 +158,13 @@ e il periodo:
 \[v=-l\frac{\ud\theta}{\ud t}\]
 \[mg\sin\theta=-ml\frac{\ud^2\theta}{\ud t^2}\]
 \[g\sin\theta=-l\frac{\ud^2\theta}{\ud t^2}\]
-per piccole oscillazioni\footnote{è il primo sviluppo del polinomio di Taylor}: $\sin\theta\simeq\theta$
+per piccole oscillazioni\footnote{è lo sviluppo di Taylor al primo ordine; l'errore relativo è inferiore all'1\% fino a circa \ang{14}}: $\sin\theta\simeq\theta$
 \[\frac{\ud^2\theta}{\ud t^2}=-\frac{g}{l}\theta\]
 si noti che questa equazione altro non è che l'equazione di un oscillatore armonico\footnote{Questo succede sempre quando si considerano piccole oscillazioni nell'intorno di un punto di equilibrio stabile $x_0$:
 \[
-  m\ddot x \simeq \underbrace{F(x_0)}_0 + \left.\frac{\ud F}{\ud x}\right|_{x_0} (x-x_0) = k (x-x_0)
+  m\ddot x \simeq \underbrace{F(x_0)}_0 + \left.\frac{\ud F}{\ud x}\right|_{x_0} (x-x_0) = -k (x-x_0)
 \]
-con $\left.\frac{\ud F}{\ud x}\right|_{x_0}=k<0$ perché è un punto di equilibrio stabile.
+con $k=-\left.\frac{\ud F}{\ud x}\right|_{x_0}>0$ perché è un punto di equilibrio stabile.
 }.
 \[g\theta=-l\ddot\theta\qquad \theta=A\sin\left(\omega
   t+\varphi\right)\]
@@ -176,9 +177,9 @@ con $\left.\frac{\ud F}{\ud x}\right|_{x_0}=k<0$ perché è un punto di equilibr
   T=2\pi\sqrt\frac{l}{g}=\frac{2\pi}{\omega}\]
 
 \subsection{\index{forza!variabile!nella velocità}Forze variabili nella velocità}
-Su un corpo in caduta agisce la forza di Stokes: $F_s=-\beta v$,
+Su un corpo che cade lentamente in un fluido viscoso agisce la forza di Stokes: $F_s=-\beta v$,
 proporzionale alla velocità. $\beta$ dipende dalla viscosità del
-mezzo e dalla geometria del corpo.
+mezzo e dalla geometria del corpo; per una sfera di raggio $R$ in un fluido di viscosità $\eta$ vale $\beta=6\pi\eta R$.
 
 \[\ve F=m\ve g+\ve F_s=m\ve a\]
 \[mg-F_s=ma\]
@@ -194,7 +195,7 @@ mezzo e dalla geometria del corpo.
 \[v=\frac{mg}{\beta}\left(1-e^{-\frac{\beta
       t}{m}}\right)+v_0e^{-\frac{\beta t}{m}}\]
 
-se $t\rightarrow +\infty$ allora $v\rightarrow\frac{mg}{\beta}$
+se $t\rightarrow +\infty$ allora $v\rightarrow\frac{mg}{\beta}$ (velocità limite\index{velocità!limite}), raggiunta in pratica dopo qualche volta il tempo caratteristico $m/\beta$
 
 se $\beta\rightarrow 0$ allora $v\rightarrow gt+v_0$
 \begin{figure}[htbp]
@@ -217,7 +218,7 @@ Con riferimento alla Figura~\ref{fig:forze_apparenti}, siano $O$ e $O'$ due sist
 \end{figure}
 Se scriviamo il secondo principio della dinamica, che deve valere in generale solo nel sistema inerziale $O$:
 \[m\ve a=m\ve a'+m\ve a_{O'}=\ve F\]
-vediamo che questo non vale nel sistema $O'$ quando $a_O'\neq 0$:
+vediamo che questo non vale nel sistema $O'$ quando $\ve a_{O'}\neq 0$:
 \[m\ve a'=\ve F-m\ve a_{O'}=\ve F+\ve F_\text{app}\]
 Possiamo però ritenere il secondo principio della dinamica valido in $O'$ se supponiamo che a causa dell'accelerazione del sistema, ci sia una forza apparente che agisca sui corpi:
 \[\ve F_\text{app}=-m\ve a_{O'}\]
@@ -259,11 +260,11 @@ La componente lungo $x$ della velocità e dell'accelerazione del punto $P$ misur
 
 \[\ve a=\ve a'-\omega^2 \ve r+2\left(\ve\omega\times\ve v'\right)\]
 \[m\ve a=m\ve a'-m\omega^2\ve r+2m\left(\ve\omega\times\ve v'\right)=\ve F\]
-\[ma'=\ve F+\underbrace{m\omega^2\ve r}_\text{forza centrifuga}-\underbrace{2m\left(\ve\omega\times\ve v'\right)}_\text{forza di Coriolis}\]\index{Coriolis}\index{forza!centrifuga}\index{forza!di Coriolis}
+\[m\ve a'=\ve F+\underbrace{m\omega^2\ve r}_\text{forza centrifuga}-\underbrace{2m\left(\ve\omega\times\ve v'\right)}_\text{forza di Coriolis}\]\index{Coriolis}\index{forza!centrifuga}\index{forza!di Coriolis}
 \[\ve F_\text{cent}=m\omega^2 \ve r\qquad \ve F_\text{Cor}=-2m\left(\ve\omega\times\ve v'\right)\]
 
-\begin{Es}[pendolo di Focault\index{Focault}\index{pendolo!di Focault}]
-  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di rotazione del pendolo ruota a causa della non inerzialità della Terra.
+\begin{Es}[pendolo di Foucault\index{Foucault}\index{pendolo!di Foucault}]
+  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di oscillazione del pendolo ruota a causa della non inerzialità della Terra: al polo compie un giro completo in un giorno siderale (circa \SI{23.9}{\hour}), visto da un sistema inerziale il piano di oscillazione resta fisso mentre la Terra gli ruota sotto. A una latitudine $\lambda$ il periodo di rotazione del piano è $T_\text{sid}/\sin\lambda$: nel celebre esperimento del 1851 al Panthéon di Parigi ($\lambda\simeq\ang{48.8}$, pendolo lungo \SI{67}{\meter}) era di circa \SI{32}{\hour}, mentre all'equatore il piano non ruota affatto. Fu la prima dimostrazione di laboratorio della rotazione terrestre.
 \end{Es}
 \subsection{Trattazione generale}
 Siano $\{\ve{e}_i\}_i^3$ e $\{\ve{e}'_i\}_i^3$ i versori dei due sistemi, $O$ e $O'$ e sia $O$ inerziale. Ogni vettore di $O$ si scrive come combinazione lineare i cui coefficienti sono le coordinate $\{x_i\}_i^3$:
@@ -282,7 +283,7 @@ La relazione che lega i vettori posizione è:
 \[
   \ve{x} = \ve{x_0}+\ve{x'}
 \]
-ricaviamo la relazione che lega le velocità misurate dai sui sistemi:
+ricaviamo la relazione che lega le velocità misurate nei due sistemi:
 \begin{equation}
   \ve{v}=\frac{\ud}{\ud t}\ve{x}=\frac{\ud}{\ud t}\ve{x_0}+\frac{\ud}{\ud t}\ve{x'}=\ve{v_0}+\sum_{i=1}^3\left(\underbrace{\frac{\ud x'_i}{\ud t}\ve{e}'_i}_{\ve{v'}}+x'_i\frac{\ud \ve{e}'_i}{\ud t}\right)
   \label{eq:forze_apperenti_gen_v}
@@ -309,7 +310,7 @@ Usando il secondo principio della dinamica $\ve F=m\ve a$ ricaviamo che nel sist
   -2m \sum_{i=1}^3 \frac{\ud x'_i}{\ud t}\frac{\ud \ve{e}'_i}{\ud t} -m \sum_{i=1}^3 x'_i\frac{\ud^2 \ve{e}'_i}{\ud t^2}
   \label{eq:fittizie_gen_f}
 \end{equation}
-dove le ultime tre componenti sono forze fittizie.
+dove gli ultimi tre termini sono forze fittizie.
 
 Si definisce velocità di trascinamento\index{velocità!di trascinamento} la velocità misurata da $O$ di un punto fermo rispetto ad $O'$, cioè per cui $\ve v'=0$. Dalla \eqref{eq:forze_apperenti_gen_v}:
 \begin{equation}
@@ -317,11 +318,12 @@ Si definisce velocità di trascinamento\index{velocità!di trascinamento} la vel
   \label{eq:fittizie_gen_vt}
 \end{equation}
 La velocità di trascinamento è uguale alla differenza di velocità misurate dai due osservatori: $\ve v_T = \ve{v} - \ve{v'}$.
-L'accelerazione di trascinamento è quella di un punto solidale con $O'$ misurata da $O$, quindi per questo punto $\ve v'=0$ e $\ve a'=0$. Dalla \eqref{eq:fittizie_gen_a}
+L'accelerazione di trascinamento è quella di un punto solidale con $O'$ misurata da $O$, quindi per questo punto le coordinate $x'_i$ sono costanti, $\ve v'=0$ e $\ve a'=0$. Dalla \eqref{eq:fittizie_gen_a}
 \begin{equation}
   \ve a_T = \ve{a_0}
-  +2\sum_{i=1}^3 \frac{\ud x'_i}{\ud t}\frac{\ud \ve{e}'_i}{\ud t} + \sum_{i=1}^3 x'_i\frac{\ud^2 \ve{e}'_i}{\ud t^2}
+  + \sum_{i=1}^3 x'_i\frac{\ud^2 \ve{e}'_i}{\ud t^2}
 \end{equation}
+Il termine rimanente della \eqref{eq:fittizie_gen_a}, $2\sum_i \frac{\ud x'_i}{\ud t}\frac{\ud \ve{e}'_i}{\ud t}$, che dipende dalla velocità relativa, è l'accelerazione di Coriolis.
 
 
 
@@ -334,7 +336,7 @@ Se $O'$ si muove di moto uniformemente accelerato allora in questo sistema di ri
 \end{equation}
 
 \subsubsection{Moto rototraslatorio}
-Consideriamo che il sistema $O'$ ruoti con velocità angolare $\omega$ e trasli con accelerazione $\ve a_0$ vista a $O$. A causa della rotazione il versore del sistema primato ruota, ma il suo modulo non cambia. Dopo un tempo $\ud t$ avrà fatto un angolo $\ud\alpha=\omega\ud t$, quindi per la definizione di angolo $\ud\alpha=\norm{\ud\ve{e'_i}}$. In generale vale:
+Consideriamo che il sistema $O'$ ruoti con velocità angolare $\ve\omega$ e trasli con accelerazione $\ve a_0$ vista da $O$. A causa della rotazione il versore del sistema primato ruota, ma il suo modulo non cambia. Dopo un tempo $\ud t$ avrà fatto un angolo $\ud\alpha=\omega\ud t$, quindi per la definizione di angolo $\ud\alpha=\norm{\ud\ve{e'_i}}$. In generale vale:
 \[
   \frac{\ud\ve{e'_i}}{\ud t}=\ve\omega\times\ve{e'_i}
 \]
@@ -356,30 +358,30 @@ L'accelerazione dalla~\eqref{eq:fittizie_gen_a}
     +2(\ve\omega\times\ve{v'})+ \frac{\ud\ve\omega}{\ud t}\times \ve{x'} + \ve\omega\times(\ve\omega\times \ve{x'}) \\
     &= \ve{a_0} + \ve a'
     +2(\ve\omega\times\ve{v'})+ \frac{\ud\ve\omega}{\ud t}\times \ve{x'} + \ve{\omega}(\ve\omega\cdot\ve{x'})-\ve{x'}(\ve\omega\cdot\ve\omega) \\
-    & =\ve{a_0}+\ve{a'}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+2\ve\omega\times\ve{v'}-\omega^2\ve{x'}
+    & =\ve{a_0}+\ve{a'}+\frac{\ud\ve\omega}{\ud t}\times\ve x'+2\ve\omega\times\ve{v'}-\omega^2\ve{x'_\perp}
   \end{split}
 \]
-dove nel penultimo passaggio si è usato $\ve A\times(\ve B\times \ve C)=\ve{B}(\ve{A}\cdot\ve{C})-\ve{C}(\ve{A}\cdot\ve{B})$. Moltiplicando per $m$ si ottiene:
+dove nel penultimo passaggio si è usato $\ve A\times(\ve B\times \ve C)=\ve{B}(\ve{A}\cdot\ve{C})-\ve{C}(\ve{A}\cdot\ve{B})$ e nell'ultimo si è indicata con $\ve x'_\perp=\ve x'-\ve\omega(\ve\omega\cdot\ve x')/\omega^2$ la componente di $\ve x'$ perpendicolare all'asse di rotazione. Moltiplicando per $m$ si ottiene:
 \begin{equation}
   \label{eq:newton_non_inerziale}
-  m\ve{a'}=\ve F-m\ve{a_0}-m\frac{\ud\ve\omega}{\ud t}\times\ve x'+m\omega^2\ve x'-2m\ve\omega\times\ve{v'}
+  m\ve{a'}=\ve F-m\ve{a_0}-m\frac{\ud\ve\omega}{\ud t}\times\ve x'+m\omega^2\ve x'_\perp-2m\ve\omega\times\ve{v'}
 \end{equation}
 Le forze fittizie che compaiono, oltre a $m\ve{a_0}$ sono la forza di Eulero\index{forza!di Eulero}, la forza centrifuga\index{forza!centrifuga} e la forza di Coriolis\index{forza!di Coriolis}.
 L'accelerazione di trascinamento:
 \[
-  \ve a_T = \ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'-\omega^2\ve{x'}
+  \ve a_T = \ve{a_0}+\frac{\ud\ve\omega}{\ud t}\times\ve x'-\omega^2\ve{x'_\perp}
 \]
 e quindi:
 \[
-  \ve a = \ve a'+\ve a_T + \underbrace{2\ve\omega\times\ve v'}_{\ve a_c}
+  \ve a = \ve a'+\ve a_T + \underbrace{2\ve\omega\times\ve v'}_{\ve a_C}
 \]
 dove $\ve a_C$ è l'\index{accelerazione!di Coriolis}accelerazione di Coriolis.
 \subsubsection{Moto circolare uniforme}
 Per questo caso $\ve a_0=0$ e $\omega$ è costante:
 \begin{equation}
-  \ve F = m\ve a' + m\omega^2\ve x' - 2m\ve \omega \times\ve v'
+  m\ve a' = \ve F + m\omega^2\ve x'_\perp - 2m\ve \omega \times\ve v'
 \end{equation}
-dove il primo termine addizionale è la \index{forza!centrifuga}forza centrifuga, mentre il secondo è la \index{forza!di Coriolis}forza di Coriolis.
+dove il primo termine addizionale è la \index{forza!centrifuga}forza centrifuga, mentre il secondo è la \index{forza!di Coriolis}forza di Coriolis. La forza di Coriolis è perpendicolare alla velocità relativa e quindi non compie lavoro.
 
 \section{\index{quantità di moto}Quantità di moto}
 \begin{Def}[quantità di moto di un punto materiale]
@@ -396,11 +398,11 @@ La derivata della quantità di moto è la forza, ed è in questo modo che Newton
 \begin{Def}[quantità di moto di un sistema di $N$ punti]
   La quantità di moto totale di un sistema di $N$ punti è la somma delle quantità di moto dei singoli punti.
   \begin{equation}
-    \ve p=\sum_{I=1}^N\ve p_i
+    \ve p=\sum_{i=1}^N\ve p_i
   \end{equation}
 \end{Def}
 \begin{Teo}
-  La variazione della quantità di moto di un sistema è uguale alle forze esterne:
+  La derivata temporale della quantità di moto di un sistema è uguale alla risultante delle forze esterne:
   \begin{equation}
     \frac{\ud \ve p}{\ud t}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}
   \end{equation}
@@ -410,24 +412,25 @@ La derivata della quantità di moto è la forza, ed è in questo modo che Newton
 \end{Teo}
 Consideriamo che su ogni punto agiscono sia forze esterne, che forze interne, cioè derivanti dall'interazione con altri punti del sistema:
 \[
-  \frac{\ud \ve p}{\ud t}  =\frac{\ud }{\ud t}\sum^N_{i=1}m_i\ve v_i=\sum_{i=1}^{N}m_i\ve a_i=
+  \frac{\ud \ve p}{\ud t}  =\frac{\ud }{\ud t}\sum^N_{i=1}m_i\ve v_i=\sum_{i=1}^{N}m_i\ve a_i
   =\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}+\sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i}=\sum^N_{i=1}\stackrel{\text{Est}}{\ve F_i}\]
-Nell'ultimo passaggio abbiamo usato il terzo principio della dinamica $\stackrel{\text{Int}}{\ve{F_{ij}}} = -\stackrel{\text{Int}}{\ve{F_{ji}}}$:
+Nell'ultimo passaggio abbiamo usato il terzo principio della dinamica $\stackrel{\text{Int}}{\ve{F_{ij}}} = -\stackrel{\text{Int}}{\ve{F_{ji}}}$ (con $\ve F_{ij}$ la forza che il punto $j$ esercita sul punto $i$); la somma si può scrivere in modo simmetrico scambiando il nome degli indici:
 \[
-  \sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i} = \sum_{i\neq j}\stackrel{\text{Int}}{\ve F_{ij}} = \frac{1}{2}\sum_{i\neq j}\left(\stackrel{\text{Int}}{\ve F_{ij}} + \stackrel{\text{Int}}{\ve{F_{ij}}}\right) = \frac{1}{2}\sum_{i\neq j}\stackrel{\text{Int}}{\ve{F_{ij}}} + \sum_{i\neq j}\stackrel{\text{Int}}{-\ve{F_{ji}}} = 0
+  \sum^N_{i=1}\stackrel{\text{Int}}{\ve F_i} = \sum_{i\neq j}\stackrel{\text{Int}}{\ve F_{ij}} = \frac{1}{2}\sum_{i\neq j}\left(\stackrel{\text{Int}}{\ve F_{ij}} + \stackrel{\text{Int}}{\ve{F_{ji}}}\right) = 0
   \]
 
 \begin{Es}[decadimento]
-  L'uranio decade in questo modo:
+  L'uranio 238 decade emettendo una particella $\alpha$ (un nucleo di elio) con energia cinetica di circa \SI{4.2}{\mega\electronvolt}:
   \[\ce{^{238}_{92}U -> ^{234}_{90}Th + ^{4}_{2}\alpha}\]
   Consideriamo il sistema di riferimento in cui l'uranio è a riposo, quindi $\ve p_0=0$:
   \[\ve p_f=m_{\ce{Th}}\ve v_{\ce{Th}}+m_\alpha \ve v_\alpha=\ve p_0=0\]
   \[
-    m_{\ce{Th}}v_{\ce{Th}}=m_\alpha v_\alpha\qquad v_\alpha=\SI{2E7}{\metre\per\second}
+    m_{\ce{Th}}v_{\ce{Th}}=m_\alpha v_\alpha\qquad v_\alpha\simeq\SI{1.4E7}{\metre\per\second}
   \]
   \[
-    v_{\ce{Th}}=\frac{m_\alpha v_\alpha}{m_{\ce{Th}}}=\SI{3.4E5}{\metre\per\second}
+    v_{\ce{Th}}=\frac{m_\alpha v_\alpha}{m_{\ce{Th}}}\simeq\frac{4}{234}v_\alpha\simeq\SI{2.4E5}{\metre\per\second}
   \]
+  Il nucleo pesante rincula con velocità molto minore e porta via solo circa il 2\% dell'energia liberata.
 \end{Es}
 
 \section{\index{centro di massa}Centro di Massa}
@@ -490,19 +493,18 @@ Se la densità è uguale in tutti i punti il centro di massa è solo un fattore 
     \caption{Esempio \ref{es:cerchio_bucato}.}
   \end{figure}
 
-  Luna è il cerchio grande meno il piccolo ($C$) di raggio
-  $\frac{r}{2} \quad y_{CM}=0$ per simmetria
-  \[M^C=\rho\pi\left(\frac{r}{2}\right)^2=\rho\pi\left(r^2-\frac{r^2}{4}\right)=\frac{3}{4}\rho\pi r^2\qquad M^{\text{luna}}=\rho\left(\pi r^2-\pi\left(\frac{r}{2}\right)^2\right)\]
-  \[x_{CM}^{\text{pieno}}=0=\frac{x_{CM}^{\text{luna}}+x_{CM}^CM^C}{M^C+M^{\text{luna}}}\]
-  \[0=x_{CM}^{\text{luna}}x_{CM}^C\frac{M^C}{M^{\text{luna}}}=x_{CM}^{\text{luna}}x_{CM}^C\frac{4M^C}{3\rho \pi r^2}=x_{CM}^{\text{luna}}x_{CM}^C\frac{4\rho\pi r^2}{4\cdot 3\rho\pi r^2}=\frac{x_{CM}^{\text{luna}}x_{CM}^C}{3}\]
-  \[x_{CM}^{\text{luna}}=3x_{CM}^C=\frac{R}{6}\]
+  Un disco omogeneo di raggio $r$, centrato nell'origine, ha un foro circolare ($C$) di raggio
+  $\frac{r}{2}$ centrato in $x_{CM}^C=\frac{r}{2}$. La figura rimanente (``luna'') ha $y_{CM}=0$ per simmetria. Il disco pieno è l'unione della luna e del cerchio $C$:
+  \[M^C=\rho\pi\left(\frac{r}{2}\right)^2=\frac{1}{4}\rho\pi r^2\qquad M^{\text{luna}}=\rho\left(\pi r^2-\pi\left(\frac{r}{2}\right)^2\right)=\frac{3}{4}\rho\pi r^2\]
+  \[x_{CM}^{\text{pieno}}=0=\frac{x_{CM}^{\text{luna}}M^{\text{luna}}+x_{CM}^CM^C}{M^C+M^{\text{luna}}}\]
+  \[x_{CM}^{\text{luna}}=-x_{CM}^C\frac{M^C}{M^{\text{luna}}}=-\frac{x_{CM}^C}{3}=-\frac{r}{6}\]
+  cioè il centro di massa si sposta di $r/6$ dalla parte opposta rispetto al foro.
 \end{Es}
 
 \subsection{\index{teorema!di Pappo--Guldino}Teorema di Pappo--Guldino}
 \begin{Teo}[Pappo--Guldino]
-  Il volume generato dalla rotazione di una superficie è uguale
-  all'area della superficie per la distanza percorsa dal centro di
-  massa durante la rotazione.
+  Il volume generato dalla rotazione di una superficie piana attorno a un asse complanare che non la attraversa è uguale
+  all'area della superficie per la distanza percorsa dal suo baricentro (il centro di massa di una lamina omogenea) durante la rotazione.
 \end{Teo}
 \begin{Es}[Semicerchio]
   Il volume generato dalla rotazione del semicerchio è il volume della
@@ -522,11 +524,11 @@ Se la densità è uguale in tutti i punti il centro di massa è solo un fattore 
 \end{Def}
 poiché
 \begin{align*}
-  \int_{t_1}^{t_2} \ve{F}\, \ud t & = \int_{t_1}^{t_2}m\ve a\, \ud t=m\int_{\ve v(t_1)}^{\ve v(t_2)}\frac{d\ve{v}}{\ud t}\,\ud t=m\int_{t_1}^{t_2}\ud \ve{v} \\
+  \int_{t_1}^{t_2} \ve{F}\, \ud t & = \int_{t_1}^{t_2}m\ve a\, \ud t=m\int_{t_1}^{t_2}\frac{\ud\ve{v}}{\ud t}\,\ud t=m\int_{\ve v(t_1)}^{\ve v(t_2)}\ud \ve{v} \\
                                   & =m\left[\ve v(t_2)-\ve v(t_1)\right]=\ve p_2 - \ve p_1=\Delta \ve p
 \end{align*}
 allora:
-\begin{Teo}[inpulso]
+\begin{Teo}[dell'impulso]
   \[
     \ve J=\int_{t_1}^{t_2}\ve F \ud t=\Delta \ve p
   \]
@@ -545,7 +547,7 @@ In particolare se il sistema è isolato con due corpi si ha:
 dove si è usato il terzo principio della dinamica. La conservazione della quantità di moto vale in tutti i sistemi isolati.
 
 \section{\index{urti}Urti}
-Gli urti si classificano in elastici ed anelastici. Gli urti reali sono una via intermedia. Negli urti elastici si conserva tutta l'energia cinetica, agiscono solo forze conservative; durante l'urto l'energia cinetica si trasforma in energia potenziale, per poi tornare completamente energia cinetica. La quantità di moto si conserva sempre in quanto non agiscono forze esterne.
+Gli urti si classificano in elastici ed anelastici; gli urti reali sono una via di mezzo. Negli urti elastici si conserva tutta l'energia cinetica e agiscono solo forze conservative: durante l'urto l'energia cinetica si trasforma in energia potenziale (di deformazione), per poi tornare completamente energia cinetica. La quantità di moto si conserva in ogni tipo di urto, perché durante l'urto, che dura un tempo molto breve, le forze interne sono molto più intense delle eventuali forze esterne, il cui impulso è trascurabile.
 
 \subsection{\index{urti!elastici}Urti elastici}
 
@@ -598,7 +600,7 @@ Due corpi di massa $m_1$, $m_2$, prima dell'urto velocità $\ve v_{i,2}=0$, $\ve
 
 \[\left\{
   \begin{array}{l}
-    m_1v_{i,1}=m_iv_{f,1}\cos\varphi_1+m_2v_{f,2}\cos\varphi_2 \\
+    m_1v_{i,1}=m_1v_{f,1}\cos\varphi_1+m_2v_{f,2}\cos\varphi_2 \\
     0=m_1v_{f,1}\sin\varphi_1-m_2v_{f,2}\sin\varphi_2          \\
     \frac{1}{2}m_1 v_{i,1}^2=\frac{1}{2}m_1 v_{f,1}^2+\frac{1}{2}m_2
     v_{f,2}^2
@@ -624,39 +626,39 @@ Nel caso particolare di $m_1=m_2$ si ha:
   \end{array}
   \right.\]
 
-quindi $\cos \alpha=0\quad\Rightarrow\quad\alpha=\SI{90}{\degree}$, oppure $v_{1,f}=0$ e $v_{2,f}=v_{1,i}$
+dove $\alpha$ è l'angolo tra le velocità finali. Quindi $\cos \alpha=0\quad\Rightarrow\quad\alpha=\SI{90}{\degree}$ (le due palle escono ad angolo retto, come si vede bene sul tavolo da biliardo), oppure $v_{1,f}=0$ e $v_{2,f}=v_{1,i}$ (urto centrale).
 
 \subsection{\index{urti!anelastici}Urti completamente anelastici}
 
-Negli urti anelastici il sistema perde la massima energia cinetica possibile, che non è tutta
-in quanto se il sistema perdesse tutta l'energia cinetica violerebbe la conservazione
-della quantità di moto. Si dimostra che questo caso è quello in cui dopo l'urto i due corpi
-rimangono attaccati.
+Negli urti completamente anelastici il sistema perde la massima energia cinetica possibile, che in generale non è tutta:
+se il sistema perdesse tutta l'energia cinetica violerebbe la conservazione
+della quantità di moto (a meno che questa non sia nulla). Si dimostra che questo caso è quello in cui dopo l'urto i due corpi
+rimangono attaccati. L'energia cinetica che si può perdere è esattamente quella misurata nel sistema del centro di massa.
 
 \begin{Es}[pendolo balistico{\index{pendolo!balistico}}]
   Un proiettile di massa $m$, velocità $v$ urta un pendolo balistico di massa $M>m$ e velocità $V=0$. Prima dell'urto la quantità di moto totale del sistema è $mv$, dopo $(M+m)V$.
   \[mv=(M+m)V\]
   \[V=\frac{mv}{M+m}\]
-  Dopo l'urto il pendolo balistico, con il proiettile incorporato oscilla come un pendolo, l'energia meccanica si conserva, quindi $K_A=U(B)$
+  Dopo l'urto il pendolo balistico, con il proiettile incorporato oscilla come un pendolo, l'energia meccanica si conserva, quindi l'energia cinetica subito dopo l'urto è uguale all'energia potenziale nel punto più alto, a quota $h$:
 
 
   \[\frac{1}{2}(m+M)V^2=(m+M)gh\]
-  \[\frac{1}{2}\left(\frac{mv}{M+m}\right)^2=(m+M)gh\]
-  \[\frac{1}{2}\frac{m^2v^2}{M+m}=(m+M)gh\]
-  \[v^2=\frac{(m+M)gh\cdot 2(m+M)}{m^2}=\frac{2(m+M)^2gh}{m^2}\]
+  \[V=\sqrt{2gh}\qquad\frac{mv}{M+m}=\sqrt{2gh}\]
   \[v=\frac{m+M}{m}\sqrt{2gh}\]
-  Consideriamo un sistema di riferimento $\ast$ inerziale rispetto
-  al CM con la stessa velocità del CM.
+  Il pendolo balistico, inventato da Benjamin Robins nel 1742, è stato per oltre un secolo il metodo standard per misurare la velocità dei proiettili. Si noti che l'energia meccanica non si conserva nell'urto: la frazione di energia cinetica rimasta è $\frac{(M+m)V^2}{mv^2}=\frac{m}{M+m}$, molto piccola se $M\gg m$.
+
+  Consideriamo ora il sistema di riferimento del centro di massa ($\ast$), inerziale perché
+  si muove con la velocità costante del CM.
 
   \[\ve P^\ast_{\text{prima}}=(m+M)\ve V_{\text{CM}}^\ast=0\]
   \[\ve P^\ast_{\text{dopo}}=0\quad\text{sono attaccati}\quad \ve
-    v=0\] Quindi tutta l'energia cinetica è persa.
+    v=0\] Quindi nel sistema del centro di massa tutta l'energia cinetica è persa.
 \end{Es}
 \section{\index{momento!d'inerzia}Momento d'inerzia}
-Corpo rigido(CR): presi due punti qualsiasi la loro distanza
-rimane inalterata. Servono tre punti, quindi 9 coordinate, ma le
-distanze rimangono fisse nel tempo, quindi il corpo ha 6 gradi di
-libertà. Per descrivere il moto di un corpo bisogna dare 6
+Corpo rigido (CR): presi due punti qualsiasi la loro distanza
+rimane inalterata. Per individuarne la posizione servono tre punti non allineati, quindi 9 coordinate, ma le
+tre distanze tra di essi rimangono fisse nel tempo, quindi il corpo ha $9-3=6$ gradi di
+libertà (3 di traslazione e 3 di rotazione). Per descrivere il moto di un corpo bisogna dare 6
 coordinate in funzione del tempo. Se fissiamo un asse di rotazione
 si ha un solo grado di libertà. In questo caso si ha una rotazione
 intorno ad un asse fisso. Ogni punto del CR descrive una
@@ -668,7 +670,7 @@ $\alpha$
 \[K=\sum_i\frac{1}{2}m_i\omega^2r_i^2=\frac{1}{2}\omega^2\left(\sum_im_ir_i^2\right)=\frac{1}{2}I\omega^2\]
 \[I=\text{momento d'inerzia}=\sum_{i=1}^N m_ir_i^2\]
 \[\text{Nel caso di corpo continuo} \sum_{i=1}^\infty \ud m_ir_i^2=\int_V  r^2\,\ud m\]
-Essendo $\ve r$ relativo a un punto $O$ allora anche $I$ sarà relativo ad $O$. Bisogna sempre specificare rispetto a quale punto si calcola $I$.
+dove $r_i$ è la distanza del punto $i$-esimo dall'asse di rotazione. Il momento d'inerzia dipende quindi dall'asse: bisogna sempre specificare rispetto a quale asse si calcola $I$.
 
 \subsection{Calcolo Momenti di Inerzia}
 
@@ -697,7 +699,7 @@ Essendo $\ve r$ relativo a un punto $O$ allora anche $I$ sarà relativo ad $O$. 
 
 \[\frac{\ud m}{M}=\frac{2\pi r\ud r}{\pi R^2}\]
 \[\ud m=M\frac{2\ud r}{R^2}r\]
-\[I_O=\int_O^R\frac{M}{R^2}2\ud r r^3=\frac{2M}{R^2}\int_O^R r^3
+\[I_O=\int_0^R\frac{M}{R^2}2\ud r r^3=\frac{2M}{R^2}\int_0^R r^3
   \ud r=\frac{2M}{R^2}\cdot\frac{R^4}{4}=\frac{1}{2}MR^2\]
 
 \subsubsection{Sfera omogenea}
@@ -717,7 +719,7 @@ Essendo $\ve r$ relativo a un punto $O$ allora anche $I$ sarà relativo ad $O$. 
 \[I_\text{sfera}=2\int_0^\frac{\pi}{2}\ud I=\frac{3}{4}mR^2\int_0^\frac{\pi}{2}\cos^5\theta\ud\theta=\frac{2}{5}mR^2\]
 
 \subsection{\index{teorema!di Steiner}\index{teorema!degli assi paralleli}Teorema di Steiner o degli assi paralleli}
-\begin{Teo}[Steiner o degli assi paralleli]Sia $d$ la distanza da un asse di rotazione $I_0$ parallelo all'asse $I_{CM}$ passante per il centro di massa. Allora:
+\begin{Teo}[Steiner o degli assi paralleli]Siano $I_{CM}$ il momento d'inerzia rispetto a un asse passante per il centro di massa e $I_0$ quello rispetto a un asse parallelo al primo, a distanza $d$ da esso. Allora:
   \[I_0=d^2M+I_{CM}\]
 \end{Teo}
 \begin{figure}[htbp]
@@ -735,11 +737,11 @@ Essendo $\ve r$ relativo a un punto $O$ allora anche $I$ sarà relativo ad $O$. 
   r_C\cdot\sum m_i\ve r_i\,'=d^2M+I_{C}+2\ve r_C\cdot\sum m_i\cdot
   \ve r_i\,'\end{align*}
 Per ipotesi $C$ è il $CM$ del sistema
-\[I_0=d^2 M+I_{CM}+2\ve r_i\frac{\sum m_i\ve r_i\,'}{M}\cdot
-  M=d^2M+I_{CM}+2\ve r_i\cdot \ve r\,_{CM}^{CM} M=d^2M+I_{CM}\]
-Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
+\[I_0=d^2 M+I_{CM}+2\ve r_C\cdot\frac{\sum m_i\ve r_i\,'}{M}
+  M=d^2M+I_{CM}+2\ve r_C\cdot \ve r\,_{CM}^{CM} M=d^2M+I_{CM}\]
+perché la posizione del centro di massa rispetto a sé stesso è $\ve r\,_{CM}^{CM}=0$ (qui i vettori sono le proiezioni sul piano perpendicolare all'asse). Ma $Md^2>0$ quindi, tra tutti gli assi paralleli, $I_{CM}$ è il momento minimo possibile.
 \begin{Es}
-  Il momento d'inerzia di una circonferenza rispetto al centro di massa è \mbox{$I_{CM}=MR^2$}, per un estremo è:
+  Il momento d'inerzia di un anello sottile rispetto all'asse perpendicolare al suo piano e passante per il centro è \mbox{$I_{CM}=MR^2$}; rispetto a un asse parallelo passante per un punto dell'anello è:
   \[I_0=I_{CM}+MR^2=MR^2+MR^2=2MR^2>I_{CM}\]
 \end{Es}
 \section{\index{momento!di una forza}Momento di una forza}
@@ -758,10 +760,11 @@ Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
     t}\]
 \[Fr\omega\cos\phi=I\omega\alpha\]
 \[Fr\cos\phi=I\alpha\]
-\[Fr\sin\beta=I\alpha\]
-\[\ve\tau=I\ve\alpha\qquad\text{analoga a $\ve F=m\ve a$}\]
+dove $\phi$ è l'angolo tra la forza e lo spostamento (tangente alla circonferenza); indicando con $\beta=\pi/2-\phi$ l'angolo tra la forza e $\ve r$:
+\[Fr\sin\beta=\tau_z=I\alpha\]
+\[\tau_z=I\alpha\qquad\text{analoga a $\ve F=m\ve a$, valida per la rotazione attorno a un asse fisso}\]
 \section[\index{momento!angolare}\index{momento!della quantità di moto}Momento angolare o della quantità di moto]{Momento angolare\\ o momento della quantità di moto}
-\[\ve l_0=\ve r\times m\ve v\qquad\text{rispetto al polo $0$ fisso.}\]
+\[\ve l_0=\ve r\times m\ve v\qquad\text{rispetto al polo $O$ fisso.}\]
 \begin{align*}
   \frac{\ud \ve l_0}{\ud t} & =\frac{\ud}{\ud t}\left(\ve r\times m\ve v\right)= \frac{\ud\ve r}{\ud t}\times m\ve v+\ve r\times\frac{\ud m\ve v}{\ud t} \\
                             & =\ve v\times m\ve v+\ve r \times m\ve a=\ve r\times m\ve a=\ve r\times\ve F=\ve \tau_0
@@ -771,7 +774,7 @@ Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
 \subsection{Sistema di N punti}
 \[\ve L_0=\sum_{i=1}^N \ve l_{0_i}\]
 \begin{align*}\frac{\ud \ve L_0}{\ud t} & =\sum_{i=1}^{N}\frac{\ud \ve l_{0_i}}{\ud
-                t}=\sum_{i=1}^{N}\frac{\ud}{\ud t}\left(\ve r_i \times \ve
+                t}=\sum_{i=1}^{N}\frac{\ud}{\ud t}\left(\ve r_i \times m_i\ve
               v_i\right)=\sum_{i=1}^{N}\ve v_i\times m_i \ve v_i+\ve
               r_i\times m_i\ve a_i                                                  \\
                                         & =\sum_{i=1}^{N}\ve r_i\times m_i\ve
@@ -783,46 +786,49 @@ Ma $Md^2>0$ quindi $I_{CM}$ è il momento minimo possibile.
                 F_i}=\sum_{i=1}^{N}\stackrel{\text{Est}}{\ve \tau_0}\end{align*}
 \subsubsection{Dimostrazione $\stackrel{\text{Int}}{\ve\tau_0}=0$}
 \[\ve F_{1,2}=-\ve F_{2,1}\]
-\[\ve r_1\times \ve F_{1,2}+\ve r_2\times\ve F_{2,1}=\ve r_1\times \ve F_{1,2}-\ve r_2\times\ve F_{1,2}=\left(\ve r_i-\ve r_2\right)\times\ve F_{1,2}=0\]
-perché $\left(\ve r_1-\ve r_2\right)\parallel \ve F_{1,2}$
+\[\ve r_1\times \ve F_{1,2}+\ve r_2\times\ve F_{2,1}=\ve r_1\times \ve F_{1,2}-\ve r_2\times\ve F_{1,2}=\left(\ve r_1-\ve r_2\right)\times\ve F_{1,2}=0\]
+perché $\left(\ve r_1-\ve r_2\right)\parallel \ve F_{1,2}$, cioè le forze interne sono dirette lungo la congiungente dei due punti (terzo principio in forma forte).
 \subsection{Conservazione del momento angolare}
 Se il sistema è isolato si ha: $\stackrel{\text{Est}}{\ve
     F}=0\Rightarrow \stackrel{\text{Est}}{\ve \tau}=0$
 \[\frac{\ud \ve L_0}{\ud t}=\ve \tau_0=0\qquad \ve
   L_0=\overrightarrow{\const}\]
-e quindi
-$I\omega={\const}$. Tutto ciò per la simmetria per
-rotazioni.
+e, per un corpo che ruota attorno a un asse fisso di simmetria,
+$I\omega={\const}$: se $I$ diminuisce $\omega$ aumenta, come fa una pattinatrice che chiude le braccia per girare più velocemente. La conservazione del momento angolare è conseguenza dell'invarianza delle leggi fisiche per
+rotazioni (teorema di Noether).
 \subsection{Rotazione intorno a \texorpdfstring{$O'$}{O'} mobile}
 \[\ve r_i=\ve r_{O'}+\ve r_i\,'\qquad \ve r_i\,'=\ve r_i-\ve r_{O'}\]
-\[L_{O'}=\sum\ve r_i\,'\times m\ve v_i=\sum(\ve r_i-\ve
-  r_{O'})\times m\ve v_i\]
+\[\ve L_{O'}=\sum\ve r_i\,'\times m_i\ve v_i=\sum(\ve r_i-\ve
+  r_{O'})\times m_i\ve v_i\]
 \begin{align*}
-  \frac{\ud L_{O'}}{\ud t} & =\sum(v_i-v_{O'})\times m\ve v_i+r_i\,' m\ve a_i=-\sum\ve v_{O'}\times m_i\ve v_i+\sum\ve r_i\,'\times\ve F_i \\
-                           & =\ve v_{O'}\times\sum m_i\ve v_i+\ve \tau_{O'}=-\ve
-  v_{O'}\times\ve P+\stackrel{\text{Est}}{\tau_{O'}}
+  \frac{\ud \ve L_{O'}}{\ud t} & =\sum(\ve v_i-\ve v_{O'})\times m_i\ve v_i+\sum\ve r_i\,'\times m_i\ve a_i=-\sum\ve v_{O'}\times m_i\ve v_i+\sum\ve r_i\,'\times\ve F_i \\
+                           & =-\ve v_{O'}\times\sum m_i\ve v_i+\ve \tau_{O'}=-\ve
+  v_{O'}\times\ve P+\stackrel{\text{Est}}{\ve\tau_{O'}}
 \end{align*}
-\[\frac{\ud L_O}{\ud t}=-\ve v_{O'}\times\ve P+\stackrel{\text{Est}}{\tau_{O'}}\]
+\[\frac{\ud \ve L_{O'}}{\ud t}=-\ve v_{O'}\times\ve P+\stackrel{\text{Est}}{\ve\tau_{O'}}\]
 
-se $v_{O'}=0$ allora $-v_{O'}\times\ve P=0$
+se $\ve v_{O'}=0$ allora $-\ve v_{O'}\times\ve P=0$
 
-se $O'=CM$ allora $M\ve V_{CM}=\ve p\Rightarrow\ve
-  v_{CM}\parallel\ve P\Rightarrow -\ve v_O\times\ve P=0$
+se $O'=CM$ allora $M\ve v_{CM}=\ve P\Rightarrow\ve
+  v_{CM}\parallel\ve P\Rightarrow -\ve v_{CM}\times\ve P=0$
+
+quindi la relazione $\ud\ve L/\ud t=\stackrel{\text{Est}}{\ve\tau}$ vale anche rispetto al centro di massa, qualunque sia il suo moto.
 
 \subsection{Rotazione intorno ad un asse}
 \[\ve l_i=\ve r_i\times m_i\ve v_i\]
 \[l_{i_z}=|\ve l_i|\sin\theta_i\]
 \[|\ve l_i|=r_im_iv_i\qquad l_{i_z}=r_im_iv_i\sin\theta_i\qquad
   \omega d_i=v_i\]
-\[l_{i_z}=m_id_i\omega d_i=md_i^2\omega\]
-\[l_{i_z}=m_i\omega R_i^2\]
+\[l_{i_z}=m_id_i\omega d_i=m_id_i^2\omega\]
 \[L_z=\sum l_{i_z}=\sum(m_id_i^2)\omega=I\omega\]
 \[L_z=I\omega\]
-\[\frac{\ud l_{i_z}}{\ud t}=I\frac{\ud \omega}{\ud
+\[\frac{\ud L_{z}}{\ud t}=I\frac{\ud \omega}{\ud
     t}=I\alpha\qquad \stackrel{\text{Est}}{\tau_{z}}=I\alpha\]
 \subsection{Corpo simmetrico rispetto all'asse di rotazione}
-\[\ve l_i+\ve l_{i'}=\alpha\ve k\]
-\[L=I\omega=L_z\]
+Se il corpo è simmetrico rispetto all'asse, per ogni punto $i$ esiste un punto $i'$ simmetrico, e le componenti dei loro momenti angolari perpendicolari all'asse si annullano:
+\[\ve l_i+\ve l_{i'}\parallel\ve k\]
+\[\ve L=I\ve\omega\qquad L=L_z\]
+Se il corpo non è simmetrico, $\ve L$ in generale non è parallelo a $\ve\omega$ e per mantenere costante l'asse di rotazione serve un momento esterno (è il motivo per cui le ruote delle automobili vanno equilibrate).
 
 
 \section{Analogia tra grandezze lineari e \mbox{rotazionali}}
@@ -831,13 +837,13 @@ se $O'=CM$ allora $M\ve V_{CM}=\ve p\Rightarrow\ve
     \hline
     Grandezze lineari                                 &                                                                                                                     & Grandezze rotazionali                                 &                              \\
     \hline
-    velocità                                          & $\ve v=\ud \ve r/\ud t$                                                                                             & velocità angolare                                     & $\ve\omega=\ud \phi/\ud t$   \\
+    velocità                                          & $\ve v=\ud \ve r/\ud t$                                                                                             & velocità angolare                                     & $\omega=\ud \phi/\ud t$   \\
     Accelerazione                                     & $\ve a=\ud \ve v/\ud t$                                                                                             & Accelerazione
     angolare                                          & $\ve\alpha=\ud \ve\omega/\ud t$                                                                                                                                                                            \\
     Massa                                             & $m$                                                                                                                 & Momento d'inerzia                                     & $I=\sum mr^2$                \\
     Forza                                             & $\ve F$                                                                                                             & Momento di una forza                                  & $\ve \tau=\ve r\times \ve F$ \\
     Seconda legge di Newton                           & $\sum \stackrel{\text{Est}}{\ve F}=m\ve
-    a$                                                & Seconda legge di Newton per moto rotatori con asse
+    a$                                                & Seconda legge di Newton per moti rotatori con asse
     fisso                                             & $\sum\stackrel{\text{Est}}{\ve \tau_z}=I\alpha_z$                                                                                                                                                          \\
     Condizione di equilibrio                          & $\sum\stackrel{\text{Est}}{\ve
     F}=0$                                             & Condizione di equilibrio                                                                                            & $\sum\stackrel{\text{Est}}{\ve
@@ -845,8 +851,8 @@ se $O'=CM$ allora $M\ve V_{CM}=\ve p\Rightarrow\ve
     quantità di moto di una particella                & $\ve p=m\ve v$                                                                                                      & Momento
     angolare di una particella                        & $\ve l=\ve r\times \ve p$                                                                                                                                                                                  \\
     quantità di moto di un sistema di particelle      & $\ve P=M\ve
-    v_{CM}$                                           & Momento angolare di un sistema di particelle                                                                        & $\ve
-    L=I\omega$                                                                                                                                                                                                                                                     \\
+    v_{CM}$                                           & Momento angolare di un corpo rigido attorno a un asse fisso                                                                        & $
+    L_z=I\omega$                                                                                                                                                                                                                                                     \\
     Forma generale della seconda legge di
     Newton                                            & $\sum\stackrel{\text{Est}}{\ve F}=\ud \ve P/\ud t$                                                                  & Forma
     generale della seconda legge di Newton per i moti
