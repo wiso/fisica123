@@ -2,37 +2,35 @@
 \chapter{\index{gravitazione}Gravitazione}
 \minitoc
 \section{Cenni storici}
-I sistemi gravitazionali storici più celebri sono stati:
+I modelli storici più celebri del sistema solare sono stati:
 \begin{itemize}
   \item[--]\index{sistema!tolemaico}sistema tolemaico. \`E un sistema geocentrico del II
-  sec.\ d.C.\@ Per ovviare ad alcuni errori, senza uscire dal dogma
+  sec.\ d.C.\@ Per spiegare il moto apparente dei pianeti (in particolare il moto retrogrado), senza uscire dal dogma
   delle orbite circolari, Tolomeo suppose che i pianeti
-  descrivessero degli epicicli
-  \item[--]\index{sistema!copernicano}sistema copernicano. \`E un sistema eliocentrico del 1500
-  d.C.
-  \item[--]\index{sistema!ticonico}sistema ticonico di T.Brahe. \`E un sistema misto tra il sistema
-  eliocentrico e geocentrico
+  descrivessero degli epicicli, cioè circonferenze il cui centro percorre a sua volta una circonferenza (deferente) attorno alla Terra
+  \item[--]\index{sistema!copernicano}sistema copernicano. \`E un sistema eliocentrico, pubblicato da Copernico nel 1543 nel \emph{De revolutionibus orbium coelestium}. Usa ancora orbite circolari ed epicicli.
+  \item[--]\index{sistema!ticonico}sistema ticonico di Tycho Brahe (1588). \`E un sistema misto tra il sistema
+  eliocentrico e geocentrico: il Sole e la Luna ruotano attorno alla Terra, gli altri pianeti attorno al Sole. Le osservazioni di Tycho, le più precise dell'epoca prima del telescopio, permisero a Keplero di formulare le sue leggi
 \end{itemize}
 
-Newton verso il 1665 teorizzò che le leggi celesti sono uguali a quelle terrestri: è una delle prime unificazioni di forze ritenute inizialmente diverse in un'unica forza.
+Newton verso il 1665 intuì che le leggi celesti sono uguali a quelle terrestri, e pubblicò la teoria della gravitazione universale nei \emph{Principia} (1687): la forza che fa cadere una mela è la stessa che tiene la Luna in orbita. \`E la prima unificazione di forze ritenute inizialmente diverse in un'unica forza.
 
 \subsection{\index{leggi!di Keplero}\index{Keplero}Leggi di Keplero}
-Le leggi di Keplero sono leggi empiriche, formulate prima delle
+Le leggi di Keplero sono leggi empiriche, ricavate dalle osservazioni di Tycho Brahe e pubblicate tra il 1609 e il 1619, prima delle
 teorie di Newton:
 \begin{legge}[Prima legge di Keplero]
   I pianeti descrivono intorno al Sole orbite ellittiche di cui il Sole occupa uno dei due fuochi. \end{legge}
 \begin{legge}[Seconda legge di Keplero]
-  Le aree descritte dal raggio vettore tracciato dal Sole ai pianeti sono proporzionali al periodo.
+  Il raggio vettore tracciato dal Sole a un pianeta descrive aree uguali in tempi uguali, cioè la velocità areolare è costante. Di conseguenza un pianeta è più veloce al perielio che all'afelio.
 \end{legge}
 \begin{legge}[Terza legge di Keplero]
-  I quadrati dei tempi impiegati dai pianeti a descrivere le proprie orbite sono proporzionali ai cubi dei semiassi maggiori delle ellissi.
+  I quadrati dei periodi di rivoluzione dei pianeti sono proporzionali ai cubi dei semiassi maggiori delle loro orbite ellittiche.
 \end{legge}
 
 
 \section{\index{teorema!di Gauss!per la gravità}Teorema di Gauss (per la gravità)}
-Con il teorema di Gauss si può supporre che gli effetti della
-gravità di un corpo su un altro, al suo esterno, siano uguali a
-quelli che si avrebbero se le masse fossero concentrate nei rispettivi centri di massa.
+Se la distribuzione di massa di un corpo ha simmetria sferica, i suoi effetti gravitazionali su un altro corpo, al suo esterno, sono uguali a
+quelli che si avrebbero se tutta la massa fosse concentrata nel centro. Per corpi non sferici (per esempio la Terra, leggermente schiacciata ai poli) questo vale solo in prima approssimazione. Il risultato si ottiene facilmente con il teorema di Gauss (si veda la parte di elettromagnetismo); qui lo dimostriamo direttamente, come fece Newton, calcolando l'energia potenziale di un guscio sferico (``crosta'') di massa $M$ e raggio $R$ e di una massa $m'$ a distanza $r$ dal centro.
 
 
 
@@ -42,54 +40,55 @@ $\ud A$ è l'area compresa tra le due sezioni.
   \centering
   \includegraphics[scale=0.3]{immagini/fisica1/crosta}
 \end{figure}
-\[F=G\frac{Mm}{r^2}\]
+\[F=G\frac{Mm'}{r^2}\]
 \[r'=R\sin\theta\qquad \ud A=2\pi r'R\ud\theta\]
 \[\frac{\ud m}{M}=\frac{\ud
     A}{4\pi R^2}=\frac{2\pi r'R\ud\theta}{4\pi
     R^2}=\frac{R\sin\theta\ud\theta}{2R}=\frac{\sin\theta\ud\theta}{2}\]
 \[\ud m=\frac{M\sin\theta\ud\theta}{2}\]
-\[U=-\frac{Gmm'}{r}\qquad\ud U=-\frac{G\ud m m'}{x}\]
+\[\ud U=-\frac{G\ud m\, m'}{x}\]
 \[x^2=R^2+r^2-2rR\cos\theta\]
 Differenziando si ha:
 \[2x\,\ud x=2rR\sin\theta\ud\theta \qquad \sin\theta\ud\theta=\frac{x\ud x}{rR}\]
 \begin{align*}
   U & =-\int_{\text{crosta}}\frac{Gm'}{x}\,\ud
   m=-\int_{\text{crosta}}\frac{Gm'}{x}\frac{M\sin\theta\ud\theta}{2}=-\frac{Gm'
-  m}{2}\int_{\text{crosta}}\frac{\sin\theta}{x}\ud\theta \\
-    & =-\frac{Gmm'}{2rR}\int\frac{x}{x}\ud
-  x=-\frac{Gmm'}{2rR}\int_{r-R}^{r+R}\ud
-  x=-\frac{Gmm'}{2rR}[r+R-r+R]                           \\
-    & =-\frac{Gmm'}{2rR}2R=-\frac{Gmm'}{r}
+  M}{2}\int_{\text{crosta}}\frac{\sin\theta}{x}\ud\theta \\
+    & =-\frac{GMm'}{2rR}\int\frac{x}{x}\ud
+  x=-\frac{GMm'}{2rR}\int_{r-R}^{r+R}\ud
+  x=-\frac{GMm'}{2rR}[r+R-r+R]                           \\
+    & =-\frac{GMm'}{2rR}2R=-\frac{GMm'}{r}
 \end{align*}
-Possiamo quindi concentrare tutta la massa nel centro della palla (se $P$ sta fuori).
-Se $P$ è esterno:
-\[U=-\frac{Gmm'}{r}\qquad F=-\frac{\ud U}{\ud
-    r}=\frac{Gmm'}{r^2}\]
+Possiamo quindi concentrare tutta la massa nel centro del guscio, se il punto $P$ in cui si trova $m'$ è esterno:
+\[U=-\frac{GMm'}{r}\qquad F_r=-\frac{\ud U}{\ud
+    r}=-\frac{GMm'}{r^2}\]
+dove il segno meno indica che la forza è attrattiva (diretta verso il centro).
 Se $P$ è interno vale il discorso precedente fino alla scelta degli
 estremi:
 \begin{align*}
-  U(P) & =-\frac{Gmm'}{2rR}\int_{R-r}^{r+R}\ud x=-\frac{Gmm'}{2rR}[r+R-R+r] \\
-       & =-\frac{Gmm'}{2rR}2r=-\frac{Gmm'}{R}=\const
+  U(P) & =-\frac{GMm'}{2rR}\int_{R-r}^{r+R}\ud x=-\frac{GMm'}{2rR}[r+R-R+r] \\
+       & =-\frac{GMm'}{2rR}2r=-\frac{GMm'}{R}=\const
 \end{align*}
 \[\ve F=-\frac{\ud U}{\ud \ve r}=0\]
 
 Quindi un punto all'interno del guscio non risente di alcuna
-forza, questo lo si può dimostrare ragionando con i coni, in
-quanto per ogni cono le forze sono uguali.
+forza. Lo si può dimostrare anche ragionando con i coni: un cono di piccola apertura con vertice in $P$ interseca il guscio in due calotte opposte, le cui masse sono proporzionali al quadrato della distanza da $P$, mentre la forza è inversamente proporzionale al quadrato della distanza; i due contributi sono quindi uguali e opposti.
 \subsection{Caso sfera piena}
 All'esterno:
 \[F=-G\frac{Mm'}{r^2}\]
 Dentro:
 \[F=-G\frac{M^{\text{int}}m'}{r^2}\]
-\[\frac{M^{\text{int}}}{M^{\text{tot}}}=\frac{V^{\text{int}}}{V^{\text{tot}}}=\frac{\frac{4}{3}\pi r^2\rho}{\frac{4}{3}\pi R^3\rho}\]
+\[\frac{M^{\text{int}}}{M^{\text{tot}}}=\frac{V^{\text{int}}}{V^{\text{tot}}}=\frac{\frac{4}{3}\pi r^3\rho}{\frac{4}{3}\pi R^3\rho}\]
 \[M^{\text{int}}=\frac{r^3}{R^3}M^{\text{tot}}\]
-\[F=-\frac{Gr^3M^{\text{tot}}m'}{r^2R^3}=-\frac{Gmm'r}{R^3}=-kr\]
-ha l'espressione di una forza elastica.
+\[F=-\frac{Gr^3M^{\text{tot}}m'}{r^2R^3}=-\frac{GM^{\text{tot}}m'}{R^3}r=-kr\]
+ha l'espressione di una forza elastica (nell'ipotesi di densità uniforme; la Terra reale ha un nucleo molto più denso del mantello).
 
 \begin{Es}[posta pneumatica interterrestre]
   Immaginiamo di fare un buco che attraversa tutta la terra, passando per il centro. Un pacco lanciato al suo interno sarebbe sottoposto ad una forza del tipo:
   \[F=-kr\qquad k=\left(G\frac{m'M_T}{R_T^3}\right)\]
-  \[T=2\pi\sqrt{\frac{m'}{k}}=2\pi\sqrt{\frac{R_T^3}{GM_T}}=2\pi\sqrt{\frac{R_T}{g}}\simeq \SI{84}{\minute} \]
+  \[
+    T=2\pi\sqrt{\frac{m'}{k}}=2\pi\sqrt{\frac{R_T^3}{GM_T}}=2\pi\sqrt{\frac{R_T}{g}}\simeq \SI{84}{\minute} \]
+  il pacco arriva agli antipodi dopo mezzo periodo, cioè circa \SI{42}{\minute}, indipendentemente dalla sua massa. Curiosamente il periodo coincide con quello di un satellite in orbita circolare radente alla superficie terrestre (si veda la terza legge di Keplero più avanti con $R=R_T$).
 \end{Es}
 \section{Interpretazione delle leggi di Keplero}
 \subsection{Seconda legge}
@@ -97,7 +96,7 @@ ha l'espressione di una forza elastica.
 L'unica ipotesi che utilizziamo è che la forza sia centrale,
 quindi il risultato è estendibile a tutte le forze centrali. Una
 forza si dice centrale quando è diretta come la congiungente dei
-due punti che interagiscono.
+due punti che interagiscono. In particolare la seconda legge di Keplero è equivalente alla conservazione del momento angolare del pianeta rispetto al Sole.
 
 \begin{figure}[htbp]
   \centering
@@ -121,71 +120,76 @@ due punti che interagiscono.
 \[L_S=\frac{\ud A}{\ud t}2m\qquad\frac{\ud A}{\ud
     t}=\frac{L_S}{2m}=\const\]
 \subsection{Terza legge}
+Per semplicità consideriamo un'orbita circolare di raggio $R$; il risultato vale anche per le ellissi sostituendo a $R$ il semiasse maggiore $a$.
 \[F=\frac{GM_Sm}{R^2}=ma=\frac{mv^2}{R}=\omega^2Rm\]
 \[\frac{GM_S}{R^2}=\omega^2R\qquad \omega=\frac{2\pi}{T}\]
 \[\frac{GM_S}{R^2}=\frac{4\pi^2}{T^2}R\qquad
   T^2=\frac{4\pi^2}{GM_S}R^3\]
 \[\frac{T^2}{R^3}=\frac{4\pi^2}{GM_S}=\const\]
+La costante dipende solo dalla massa del corpo centrale: misurando periodo e raggio di un'orbita si può quindi misurare la massa del Sole, di un pianeta che ha dei satelliti o anche del buco nero al centro della Via Lattea (circa 4 milioni di masse solari, misurata dalle orbite delle stelle vicine, premio Nobel 2020).
 
 \section{\index{accelerazione!di gravità}Accelerazione di gravità}
-\begin{Def}{Accelerazione di gravità}
+\begin{Def}[Accelerazione di gravità]
   \[\ve g=\frac{\ve F}{m}\]
   dove $m$ è la massa del corpo su cui viene esercitata la forza.
 \end{Def}
-Sulla Terra: \[g = \frac{G\frac{M_Tm}{R_T^2}}{m}=\frac{GM_T}{R_T^2}\simeq \SI{9.836}{\meter\per\second\squared} \]
-In realtà questo valore è variabile, dall'equatore ai poli, cioè
-circa tra $9.78\div9.86$, a causa della forza centrifuga e dello
-schiacciamento dei poli. Per quanto riguarda la forza centrifuga
+Sulla Terra: \[g = \frac{G\frac{M_Tm}{R_T^2}}{m}=\frac{GM_T}{R_T^2}\simeq \SI{9.82}{\meter\per\second\squared} \]
+In realtà il valore misurato al livello del mare varia dall'equatore ai poli, circa tra \SI{9.780}{\meter\per\second\squared} e \SI{9.832}{\meter\per\second\squared}, a causa della forza centrifuga e dello
+schiacciamento dei poli. Il valore convenzionale (standard) è $g_n=\SI{9.80665}{\meter\per\second\squared}$. Per quanto riguarda la forza centrifuga
 questa è nulla ai poli e massima all'equatore quindi:
 \[F_C=m\omega^2R\qquad F_N=mg_{\text{polo}}\]
-\[\frac{F_C}{F_N}=\frac{\omega^2R}{g_{\text{polo}}}=\frac{(2\pi)^2}{T^2}\frac{R}{g_{\text{polo}}}\]
+\[\frac{F_C}{F_N}=\frac{\omega^2R}{g_{\text{polo}}}=\frac{(2\pi)^2}{T^2}\frac{R}{g_{\text{polo}}}\simeq\frac{1}{290}\]
+cioè all'equatore la forza centrifuga riduce il peso di circa lo \SI{0.3}{\percent}. Se la Terra ruotasse circa 17 volte più velocemente (giorno di circa \SI{1.4}{\hour}) gli oggetti all'equatore non avrebbero più peso.
 \begin{Es}[Satelliti geostazionari]
-  I satelliti geostazionari sono satelliti che per il sistema di riferimento della Terra, sono fermi. Questo vuol dire che hanno lo stesso periodo della Terra:
+  I satelliti geostazionari sono satelliti che, nel sistema di riferimento della Terra, sono fermi. Questo vuol dire che hanno un'orbita circolare nel piano equatoriale e lo stesso periodo di rotazione della Terra, cioè un giorno siderale ($T\simeq\SI{23}{\hour}\,\SI{56}{\minute}$, non \SI{24}{\hour}):
   \[
     F = G\frac{Mm}{R^2} = m\frac{v^2}{R}\quad\Rightarrow v=\sqrt{\frac{GM}{R}}
   \]
   \[
-    T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = \SI{1}{\day}
+    T = \frac{2 \pi}{\omega} = \frac{2\pi R}{v} = 2\pi R\sqrt{\frac{R}{GM}} = T_\text{sid}
   \]
   \[
     R = \sqrt[3]{\frac{GMT^2}{4\pi^2}}\simeq \SI{42E3}{\kilo\meter}
   \]
-  quindi l'altitudine sarà $d = R - R_\oplus\simeq \SI{36E3}{\kilo\meter}$.
+  quindi l'altitudine sarà $d = R - R_\oplus\simeq \SI{36E3}{\kilo\meter}$. L'idea di usare questa orbita per le telecomunicazioni fu proposta dallo scrittore Arthur C.\ Clarke nel 1945.
 \end{Es}
 
 \section{\index{bilancia!di torsione}Misurazione della costante di gra\-vi\-ta\-zio\-ne u\-ni\-ver\-sa\-le}
-Cavendish con l'articolo ``Misura della massa terrestre'' nel
-1798 è il primo a misurare la costante di gravitazione universale
-o costante di Cavendish. Cavendish si proponeva di misurare la
-massa terrestre e quindi indirettamente $G$.
+Henry Cavendish, con l'articolo \emph{Experiments to determine the density of the Earth} del
+1798, fu il primo a misurare in laboratorio l'attrazione gravitazionale tra due corpi. Cavendish si proponeva di misurare la
+densità media della Terra (``pesare la Terra''), e ottenne $\rho_T\simeq\SI{5.45}{\gram\per\centi\meter\cubed}$, solo l'1\% circa in meno del valore moderno (\SI{5.51}{\gram\per\centi\meter\cubed}); dal suo risultato si ricava $G$, anche se la costante fu introdotta esplicitamente solo nell'Ottocento. Lo strumento, la bilancia di torsione, era stato progettato da John Michell, morto prima di poterlo usare.
 
-La bilancia di torsione viene fatta oscillare, il momento è
+La bilancia di torsione è un'asta di lunghezza $2D$ con due masse $m$ agli estremi, appesa al centro a un filo sottile. La bilancia viene fatta oscillare: il momento di richiamo del filo è
 proporzionale all'angolo di scostamento dalla posizione di
-equilibrio, si genera un moto armonico.
+equilibrio e si genera un moto armonico.
 
 \[\tau=-k\theta=I\alpha\qquad\alpha=\frac{\ud^2\theta}{\ud t^2}\]
 \[-k\theta=I\ddot\theta\qquad T=2\pi\sqrt\frac{I}{k}\qquad I=2mD^2\]
 
 
-Da qui sperimentalmente si trova $k$. Avvicinando delle masse più
-grosse si genera un momento dovuto alla forza gravitazionale. Si
+Da qui, misurando il periodo, si trova $k$. Avvicinando a distanza $d$ da ciascuna massa $m$ una massa più
+grossa $M$ si genera un momento dovuto alla forza gravitazionale. Si
 impone che il momento gravitazionale sia uguale al momento dovuto
 alla forza elastica di richiamo.
 
 \[\tau_\text{Newton}=2\frac{GMm}{d^2}D=\tau_\text{torsione}=k\theta\]
 \[G=\frac{k\theta d^2}{2MmD}\]
+Nell'esperimento originale le sfere grandi erano di piombo da circa \SI{158}{\kilo\gram}, le piccole da circa \SI{0.73}{\kilo\gram}, e le forze in gioco dell'ordine di \SI{1E-7}{\newton}; l'angolo di deflessione era di pochi millesimi di radiante e il periodo di oscillazione di circa \SI{7}{\minute}. Ancora oggi $G=\SI{6.67430(15)E-11}{\newton\meter\squared\per\kilo\gram\squared}$ è la costante fondamentale conosciuta con minore precisione (incertezza relativa circa $2\times10^{-5}$).
 \section{Massa gravitazionale e massa inerziale}
 Per massa inerziale si intende quella grandezza usata in dinamica
-per esempio \mbox{$\ve F=m\ve a$}. Per massa gravitazionale si intende quella usata nella gravitazione per esempio $F=G\frac{Mm}{r^2}$. Anche se la questione è aperta $m_i$ è proporzionale a $m_g$ infatti se $B$ e $C$ sono attratti da $A$ si ha:
-\[\frac{F_{BA}}{F_{CA}}=\frac{Gm_{Bg}m_{ag}}{Gm_{Cg}m_{ag}}=\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}a_b}{m_{ci}a_c}\]
+per esempio \mbox{$\ve F=m\ve a$}. Per massa gravitazionale si intende quella usata nella gravitazione per esempio $F=G\frac{Mm}{r^2}$. A priori non c'è motivo per cui queste due grandezze debbano coincidere, ma sperimentalmente $m_i$ è proporzionale a $m_g$: infatti se $B$ e $C$ sono attratti da $A$ si ha:
+\[\frac{F_{BA}}{F_{CA}}=\frac{Gm_{Bg}m_{Ag}}{Gm_{Cg}m_{Ag}}=\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}a_B}{m_{Ci}a_C}\]
 \[\text{se }a_C=a_B\Rightarrow\frac{m_{Bg}}{m_{Cg}}=\frac{m_{Bi}}{m_{Ci}}\Rightarrow
   m_{Bg}=\frac{m_{Cg}}{m_{Ci}}\cdot m_{Bi}\]
+e poiché sperimentalmente tutti i corpi cadono con la stessa accelerazione ($a_B=a_C$, universalità della caduta libera), il rapporto $m_g/m_i$ è lo stesso per tutti i corpi e, scegliendo opportunamente le unità (cioè il valore di $G$), si può porre $m_g=m_i$.
 \section{\index{principio!di equivalenza}Principio di equivalenza}
 \begin{Pri}[equivalenza di Einstein]
-  nessun esperimento può rivelare la differenza tra un sistema di riferimento inerziale immerso in un campo gravitazionale $\ve j$ e un sistema non inerziale con accelerazione costante $\ve a=-\ve j$
+  nessun esperimento locale può rivelare la differenza tra un sistema di riferimento in quiete in un campo gravitazionale uniforme $\ve g$ e un sistema di riferimento in assenza di gravità che si muove con accelerazione costante $\ve a=-\ve g$. Equivalentemente, un sistema in caduta libera in un campo gravitazionale è localmente un sistema inerziale
 \end{Pri}
 \section{\index{energia!di un'orbita}Energia associata ad un'orbita}
+Per un'orbita ellittica di semiasse maggiore $a$ l'energia meccanica (costante) vale:
 \[E=\frac{1}{2}mv^2-G\frac{Mm}{r}=-G\frac{Mm}{2a}\]
+La traiettoria, scritta in coordinate polari centrate nel fuoco, è una conica di parametro $p$ ed eccentricità $e$:
 \[r(\theta)=\frac{p}{1+e\cos\theta}\]
 \[p=\frac{L^2}{m\alpha}\]
 \[\alpha=GMm\]

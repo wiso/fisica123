@@ -22,7 +22,7 @@ Distinguiamo i seguenti casi particolari:
   \[
     L = m\ve g \cdot \ve s = mgs\cos(\pi/2 - \alpha) = mgs\sin\alpha = mgh
   \]
-  dove $s$ è la lunghezza del piano inclinato e h la sua altezza.
+  dove $s$ è la lunghezza del piano inclinato e $h$ la sua altezza: il lavoro della forza peso non dipende dall'inclinazione del piano, ma solo dal dislivello.
 \end{Es}
 
 \begin{Es}[attrito costante su traiettoria semicircolare orizzontale]
@@ -31,9 +31,9 @@ Distinguiamo i seguenti casi particolari:
     s=-\mu mg\pi R\]
 \end{Es}
 \subsection{Lavoro nei moti rotatori}
-Consideriamo un corpo rigido ruotante attorno ad un asse. Sia $\ud s$ lo spostamento
-infinitesimo corrispondente a $\ud \theta$, $\phi$ l'angolo
-compreso tra la forza e il vettore $\ve r$:
+Consideriamo un corpo rigido che ruota attorno a un asse fisso. Sia $\ud s$ lo spostamento
+infinitesimo del punto di applicazione corrispondente a $\ud \theta$ e $\phi$ l'angolo
+compreso tra la forza e il vettore $\ve r$ (perpendicolare all'asse):
 \[
   \delta L=\ve F\cdot\ud\ve s=(F\sin \phi)\ud s=(F \sin \phi)(r
   \ud\theta)=(rF\sin\phi)\ud \theta=\tau_z\ud\theta
@@ -48,7 +48,7 @@ lavoro svolto da questo momento torcente è:
     P=\frac{\ud L}{\ud t}
   \end{equation}
 \end{Def}
-La potenza si misura nel SI in \si{\joule\per\second} cioè \si{\watt}(watt\index{watt}).
+La potenza si misura nel SI in \si{\joule\per\second} cioè \si{\watt} (watt\index{watt}).
 \begin{equation}
   P=\frac{\ud L}{\ud t}=\frac{\ve F\cdot\ud \ve s}{\ud t}=\ve F\cdot\frac{\ud \ve s}{\ud
     t}=\ve F\cdot \ve v
@@ -73,22 +73,22 @@ A volte indicata con $T$.
   \end{equation}
 
 \end{Teo}
-\[\delta L=\ve F\cdot\ud \ve s=\ve F\cdot\frac{\ud \ve s}{\ud t}\ud t=\ve F\cdot\ve v\ud t=m\ve a\cdot\ve v\ud t=m\frac{\ud \ve v}{\ud t}\cdot\ve v\ud t=m\ve v\ud \ve v=mv\ud v\]
+\[\delta L=\ve F\cdot\ud \ve s=\ve F\cdot\frac{\ud \ve s}{\ud t}\ud t=\ve F\cdot\ve v\ud t=m\ve a\cdot\ve v\ud t=m\frac{\ud \ve v}{\ud t}\cdot\ve v\ud t=m\ve v\cdot\ud \ve v=mv\ud v\]
 \[L = \int_A^B \delta L = \int_A^B mv\ud v = \left[\frac{1}{2}m v^2\right]_A^B = K_B - K_A = \Delta K\]
 
-Si noti che in questo caso il sistema considerato è costituito solo dal corpo in questione, mentre le forze che compiono lavoro sono esterne.
+Si noti che in questo caso il sistema considerato è costituito solo dal corpo in questione (un punto materiale) e $L$ è il lavoro della risultante di tutte le forze che agiscono su di esso, conservative e non.
 
 \section{Complementi -- Funzioni in due variabili}
 
 \[z=f(x,y)\]
 \index{derivata!parziale}derivata parziale:
-\[\frac{\partial z}{\partial x}=\frac{\partial f}{\partial x}=\frac{\ud f}{\ud x}\ \text{considerando $y$ costante}\]
+\[\frac{\partial z}{\partial x}=\frac{\partial f}{\partial x}\ \text{(derivata rispetto a $x$ considerando $y$ costante)}\]
 derivate seconde parziali:
 \[
   \frac{\partial^2 z}{\partial x^2}\qquad \frac{\partial^2
     z}{\partial y^2}\qquad \frac{\partial^2 z}{\partial x\partial
     y}\qquad\frac{\partial^2 z}{\partial y\partial x}\]
-\begin{Teo}[Shwartz]
+\begin{Teo}[Schwarz]
   Sotto opportune ipotesi\footnote{Sia $\Omega\subseteq\field{R}^n$ aperto e sia $f:\Omega\to\mathbb{R}$. Supponiamo che le derivate parziali miste $\frac{\partial^2 f}{\partial x_k\partial x_j}$, $\frac{\partial^2 f}{\partial x_j\partial x_k}$ esistano in un intorno di $a\in\Omega$ e siano continue in $a$. Allora esse sono uguali in $a$} le derivate seconde parziali incrociate sono uguali:
   \[\frac{\partial^2 z}{\partial x\partial y}=\frac{\partial^2 z}{\partial y\partial x}\]
 \end{Teo}
@@ -100,14 +100,15 @@ derivate seconde parziali:
 \end{Def}
 è una forma differenziale lineare.
 \begin{Teo}
-  Una forma differenziale lineare è un differenziale esatto se e
+  Una forma differenziale lineare con coefficienti di classe $C^1$ definita su un dominio semplicemente connesso (cioè senza ``buchi'') è un differenziale esatto se e
   solo se:
   \[\frac{\partial H}{\partial y}=\frac{\partial K}{\partial x}\]
 \end{Teo}
+La condizione è sempre necessaria, ma è sufficiente solo se il dominio è semplicemente connesso. Per esempio la forma $\delta G=\frac{-y\,\ud x+x\,\ud y}{x^2+y^2}$, definita sul piano privato dell'origine, soddisfa la condizione, ma il suo integrale su una circonferenza centrata nell'origine vale $2\pi$ e non zero: non è esatta. (È la forma del campo magnetico di un filo rettilineo, che infatti non è conservativo.)
 Il lavoro elementare è una forma differenziale lineare:
 \[\delta L=\ve F\cdot \ud \ve s=F_x\ud x+F_y\ud y=F_x(x,y)\ud x+F_y(x,y)\ud y\]
 \[L_A^B=\int_A^B\delta L=\int_A^B F_x(x,y)\ud x+F_y(x,y)\ud y\]
-\[\text{se } \frac{\partial F_x}{\partial y}=\frac{\partial F_y}{\partial x} \Rightarrow \delta L= \text{differenziale totale}\]
+\[\text{se } \frac{\partial F_x}{\partial y}=\frac{\partial F_y}{\partial x} \text{ (su un dominio semplicemente connesso)}\Rightarrow \delta L= \text{differenziale totale}\]
 \[\delta L=\ud L=\ud V\]
 Allora si avrà, qualunque sia il cammino percorso:
 \[L_A^B=\int_A^B \ud V=V(B)-V(A)\]
@@ -122,6 +123,7 @@ gradiente vedi sezione \ref{gradiente} a pagina
 \subsection{\index{circuitazione!di una forza}Circuitazione di una forza}
 \`E il lavoro calcolato su una traiettoria chiusa
 \[\oint \ve F\cdot\ud \ve s=0 \quad \text{se la forza è conservativa}\]
+Vale anche il viceversa: se la circuitazione è nulla lungo ogni percorso chiuso la forza è conservativa. L'attrito, per esempio, non è conservativo: il suo lavoro lungo un percorso chiuso è sempre negativo.
 
 \section{\index{energia!potenziale}Energia Potenziale}
 \[U=-V\]
@@ -136,7 +138,7 @@ Considerando l'energia potenziale in $0$ nulla si ha\footnote{c'è molta confusi
   L'energia meccanica di un sistema è la somma di energia cinetica e energia potenziale.
 \end{Def}
 \begin{Def}[\index{sistema! isolato}Sistema isolato]
-  Un sistema isolato è un sistema sul quale le forze esterne non compiono lavoro.
+  In questo contesto chiamiamo isolato un sistema sul quale le forze esterne non compiono lavoro.
 \end{Def}
 
 \begin{Teo}[Conservazione energia meccanica]
@@ -152,7 +154,7 @@ Considerando l'energia potenziale in $0$ nulla si ha\footnote{c'è molta confusi
         \[\frac {\partial F_x}{\partial y}=\frac {\partial
             F_y}{\partial x}
         \]
-        se sì allora è conservativa, se no non lo è
+        se no non è conservativa; se sì (e il dominio è semplicemente connesso) lo è
 
         \item\[U(0)=0 \qquad L_0^P=U(0)-U(P)=-U(P)\]
         \[U(P)=-\int_0^P \ve F\cdot\ud \ve s\]
@@ -204,11 +206,11 @@ Considerando l'energia potenziale in $0$ nulla si ha\footnote{c'è molta confusi
 
 conservazione dell'energia: $E_0=E_\infty$
 \[\frac{1}{2}mv_0^2+\left(\frac{-GMm}{r}\right)=\frac{1}{2}mv_\infty^2+0\geq0\]
-La velocità di fuga è quella velocità iniziale che corrisponde al caso limite in cui all'$\infty$ arriva fermo $v_\infty=0$
+La velocità di fuga è la velocità iniziale minima per allontanarsi indefinitamente: corrisponde al caso limite in cui il corpo arriva all'$\infty$ con $v_\infty=0$. Non dipende né dalla massa del corpo né dalla direzione del lancio (trascurando l'atmosfera e la rotazione terrestre).
 \[\frac{1}{2}mv_0^2-\frac{GMm}{r}=0\]
 Per esempio dalla Terra
 \begin{align*}
-  v_0=\sqrt{\frac{2GM}{R}}=\sqrt{2Rg} & \simeq \SI{11E3}{\meter\per\second}    \\
+  v_0=\sqrt{\frac{2GM}{R}}=\sqrt{2Rg} & \simeq \SI{11.2E3}{\meter\per\second}    \\
                                       & \simeq \SI{40E3}{\kilo\meter\per\hour}
 \end{align*}
 
@@ -219,13 +221,14 @@ Per esempio dalla Terra
   \centering
   \includegraphics[scale=0.4]{immagini/fisica1/Pendolo_energia}
 \end{figure}
-Angoli non piccoli, $\ve T\bot \ve v \qquad \ve T\bot \ud\ve s$
+Anche per angoli non piccoli la tensione del filo è perpendicolare alla velocità: $\ve T\bot \ve v \qquad \ve T\bot \ud\ve s$
 \[\delta L=\ve T \cdotp \ud\ve s=0\]
 \[U=mgh \qquad K=\frac{1}{2}mv^2\]
 \[mgh+\frac{1}{2}mv^2=E=\const\]
 A $\theta_0$ si trova nella posizione $A\quad K_A=0$
 \[E_A=0+mgh\]
 In $B$ $K_B\neq 0\quad E_B=K+mgh_B$
+dove l'altezza è misurata a partire dal punto più basso:
 \[h=l-l\cos\theta\]
 \[E_A=mg\left(l-l\cos\theta_0\right)\]
 \[E_B=\frac{1}{2}mv^2+mg\left(l-l\cos\theta\right)\]
