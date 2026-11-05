@@ -76,6 +76,63 @@ che vale solo nel caso unidimensionale\footnote{nel caso unidimensionale le \eqr
     v(t)=at+v_0\qquad r(t)=\frac{1}{2}at^2+v_0t+r_0
   \end{equation}
   eliminiamo il tempo per trovare $v(r)$: ricaviamo $t$ dalla prima e sostituiamolo nella seconda, semplifichiamo e otteniamo la \eqref{vt_03}}.
+\section[Caduta libera e moto del proiettile]{\index{caduta libera}Caduta libera e \index{moto!del proiettile}moto del proiettile}
+Il caso più importante di moto uniformemente accelerato è quello di un corpo che si muove vicino alla superficie terrestre, trascurando la resistenza dell'aria: l'accelerazione è $\ve a=\ve g$, diretta verso il basso, con $g\simeq\SI{9.8}{\meter\per\second\squared}$, e \emph{non dipende dalla massa del corpo}.
+
+\begin{Es}[Galileo e il piano inclinato]
+  \index{Galileo}Secondo Aristotele i corpi pesanti cadono più velocemente di quelli leggeri. Galileo Galilei mostrò che non è così; poiché la caduta libera è troppo rapida per essere misurata con gli orologi dell'epoca, la ``diluì'' facendo rotolare delle sfere lungo un piano poco inclinato e misurando i tempi con un orologio ad acqua. Trovò che gli spazi percorsi a partire da fermo crescono come i quadrati dei tempi, $s\propto t^2$, cioè che nelle unità di tempo successive gli spazi percorsi stanno tra loro come i numeri dispari $1:3:5:7\ldots$ (\emph{Discorsi e dimostrazioni matematiche intorno a due nuove scienze}, 1638~\cite{galileo1638}). Infatti dalla \eqref{vt_02}:
+  \[
+    s(n)-s(n-1)=\frac{1}{2}a\left[n^2-(n-1)^2\right]=\frac{1}{2}a\,(2n-1)
+  \]
+  L'esperimento della torre di Pisa, invece, è probabilmente una leggenda raccontata dal suo allievo Viviani.
+
+  Una spettacolare verifica fu fatta nel 1971 dall'astronauta David Scott della missione Apollo~15: sulla Luna, dove non c'è aria, lasciò cadere contemporaneamente un martello e una piuma, che toccarono il suolo nello stesso istante~\cite{apollo15}.
+\end{Es}
+
+\begin{Es}[tempo di caduta]
+  Un sasso viene lasciato cadere da fermo da un ponte alto $h=\SI{20}{\meter}$. Da $h=\frac{1}{2}gt^2$ si ricava il tempo di caduta e dalla \eqref{vt_03} la velocità di arrivo:
+  \[
+    t=\sqrt{\frac{2h}{g}}\simeq\SI{2.0}{\second}\qquad v=\sqrt{2gh}\simeq\SI{20}{\meter\per\second}\simeq\SI{71}{\kilo\meter\per\hour}
+  \]
+  Viceversa, misurando il tempo di caduta si può stimare l'altezza del ponte, purché la resistenza dell'aria sia trascurabile e il tempo impiegato dal suono a risalire sia piccolo.
+\end{Es}
+
+\subsection{Moto del proiettile}
+Un corpo viene lanciato dall'origine con velocità iniziale $v_0$ che forma un angolo $\theta$ con l'orizzontale. Scegliendo l'asse $y$ verso l'alto, $\ve a=-g\ve j$ e la \eqref{vt_02} diventa:
+\[
+  \left\{
+  \begin{array}{l}
+    x(t)=v_0\cos\theta\, t \\
+    y(t)=v_0\sin\theta\, t-\frac{1}{2}gt^2
+  \end{array}
+  \right.
+\]
+Il moto orizzontale è uniforme, quello verticale uniformemente accelerato: i due moti sono indipendenti (principio di indipendenza dei moti, già enunciato da Galileo). Eliminando il tempo si ottiene la traiettoria, una parabola:
+\[
+  y=x\tan\theta-\frac{g}{2v_0^2\cos^2\theta}x^2
+\]
+Ponendo $y=0$ si trovano il tempo di volo e la gittata, cioè la distanza a cui il proiettile ricade alla quota di partenza; ponendo $v_y=0$ si trova l'altezza massima:
+\begin{eqimp}{equation}
+  t_\text{volo}=\frac{2v_0\sin\theta}{g}\qquad
+  G=\frac{v_0^2\sin 2\theta}{g}\qquad
+  h_\text{max}=\frac{v_0^2\sin^2\theta}{2g}
+\end{eqimp}
+Casi particolari:
+\begin{itemize}
+  \item la gittata è massima per $\theta=\ang{45}$ e vale $G_\text{max}=v_0^2/g$;
+  \item angoli complementari ($\theta$ e $\ang{90}-\theta$) danno la stessa gittata, ma con tempi di volo e altezze diversi (tiro teso e tiro a parabola);
+  \item per $\theta=\ang{90}$ il moto è verticale: $G=0$ e $h_\text{max}=v_0^2/2g$;
+  \item per $\theta=0$ (lancio orizzontale da un'altezza $h$) il corpo cade nello stesso tempo $\sqrt{2h/g}$ che impiegherebbe cadendo da fermo: un proiettile sparato orizzontalmente e uno lasciato cadere dalla stessa altezza toccano terra insieme.
+\end{itemize}
+
+\begin{Es}[lancio di un pallone]
+  Un pallone viene calciato con $v_0=\SI{20}{\meter\per\second}$ a \ang{45}. Senza resistenza dell'aria la gittata sarebbe $G=v_0^2/g\simeq\SI{41}{\meter}$, l'altezza massima $\simeq\SI{10}{\meter}$ e il tempo di volo $\simeq\SI{2.9}{\second}$. Nella realtà la resistenza dell'aria riduce la gittata e rende la traiettoria asimmetrica (la discesa è più ripida della salita); per i proiettili veloci l'angolo ottimale è minore di \ang{45}.
+\end{Es}
+
+\begin{Es}[la scimmia e il cacciatore]
+  \index{scimmia e cacciatore}Un classico esperimento dimostrativo: un cacciatore punta il fucile direttamente verso una scimmia appesa a un ramo; la scimmia, vedendo il lampo dello sparo, si lascia cadere nello stesso istante. Il proiettile la colpisce comunque (purché la gittata sia sufficiente). Infatti, rispetto al moto rettilineo che avrebbero in assenza di gravità, sia il proiettile sia la scimmia cadono della stessa quantità $\frac{1}{2}gt^2$: nel sistema di riferimento in caduta libera insieme a loro la gravità ``scompare'' e il proiettile viaggia in linea retta verso la scimmia. È un'anticipazione del principio di equivalenza.
+\end{Es}
+
 \section{\index{moto!circolare!uniforme}Moto circolare uniforme}
 Per moto circolare uniforme si intende quel moto su traiettoria
 circolare di raggio $R$ in cui il modulo del vettore velocità rimane costante
@@ -110,6 +167,14 @@ alla circonferenza). Il periodo è $T=2\pi R/v=2\pi/\omega$. Definiamo la veloci
   t)=R^2\omega^4\]
 \[a=\omega^2R=\omega v=\frac{v^2}{R}\]
 L'accelerazione è quindi diretta verso il centro (accelerazione centripeta\index{accelerazione!centripeta}): anche se il modulo della velocità è costante il moto è accelerato, perché cambia la direzione della velocità.
+\begin{Es}[alcune accelerazioni centripete]
+  \begin{itemize}
+    \item Un punto sull'equatore terrestre ($R\simeq\SI{6.38E6}{\meter}$, $T\simeq\SI{86164}{\second}$) ha $v=2\pi R/T\simeq\SI{465}{\meter\per\second}$ e $a=v^2/R\simeq\SI{0.034}{\meter\per\second\squared}$, circa lo 0.3\% di $g$.
+    \item La Luna ($R\simeq\SI{3.84E8}{\meter}$, $T\simeq\SI{27.3}{\day}$) ha $a\simeq\SI{2.7E-3}{\meter\per\second\squared}\simeq g/3600$: è il confronto che Newton usò per verificare che la gravità decresce come $1/r^2$~\cite{newton1687} (la Luna è a circa 60 raggi terrestri, e $60^2=3600$).
+    \item Una centrifuga da laboratorio con $R=\SI{10}{\centi\meter}$ che gira a \num{10000} giri al minuto ha $a=\omega^2R\simeq\SI{1.1E5}{\meter\per\second\squared}$, cioè circa \num{11000} volte $g$.
+    \item Un'automobile che percorre una curva di raggio \SI{50}{\meter} a \SI{50}{\kilo\meter\per\hour} ha $a\simeq\SI{3.9}{\meter\per\second\squared}$, circa $0.4g$.
+  \end{itemize}
+\end{Es}
 \section{\index{moto!circolare}Moto circolare}
 \begin{figure}[htbp]
   \centering
