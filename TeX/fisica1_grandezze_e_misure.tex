@@ -97,7 +97,7 @@ Ogni grandezza meccanica ha una \emph{dimensione} che si esprime in funzione del
 Una relazione fisica deve essere \emph{dimensionalmente omogenea}: si possono sommare, sottrarre o uguagliare solo grandezze con la stessa dimensione, e gli argomenti di funzioni come $\sin$, $\exp$ o $\log$ devono essere adimensionali. Questo fornisce un controllo immediato: se in un calcolo si ottiene $x=v t^2$ c'è certamente un errore, perché a destra si ha $[L][T]$ e non $[L]$. L'analisi dimensionale non dice però nulla sui fattori numerici adimensionali, come il $\frac12$ in $x=\frac12 at^2$.
 
 \begin{Es}[periodo del pendolo]
-  Il periodo $T$ di un pendolo semplice può dipendere solo dalla lunghezza $\ell$ del filo, dalla massa $m$ e dall'accelerazione di gravità $g$. Cerchiamo $T=C\,\ell^\alpha m^\beta g^\gamma$, con $C$ adimensionale:
+  Nel limite delle piccole oscillazioni e trascurando gli attriti, il periodo $T$ di un pendolo semplice può dipendere solo dalla lunghezza $\ell$ del filo, dalla massa $m$ e dall'accelerazione di gravità $g$. Cerchiamo $T=C\,\ell^\alpha m^\beta g^\gamma$, con $C$ adimensionale:
   \[ [T]=[L]^\alpha[M]^\beta[L]^\gamma[T]^{-2\gamma} \]
   Uguagliando gli esponenti: $\beta=0$ (massa), $\alpha+\gamma=0$ (lunghezza), $-2\gamma=1$ (tempo). Quindi $\gamma=-\frac12$, $\alpha=\frac12$:
   \[ T=C\sqrt{\frac{\ell}{g}} \]
