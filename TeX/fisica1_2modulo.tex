@@ -1595,7 +1595,7 @@ Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$: l'intervallo di tempo tra due
 \begin{Es}[orologi atomici in volo e GPS]
   \index{Hafele--Keating}Nel 1971 Joseph Hafele e Richard Keating~\cite{hafele1972} fecero il giro del mondo su normali voli di linea, verso est e verso ovest, con quattro orologi atomici al cesio, e li confrontarono con quelli rimasti all'osservatorio navale di Washington. Gli orologi in volo verso est avevano perso circa \SI{59}{\nano\second}, quelli verso ovest ne avevano guadagnati circa 273, in accordo entro gli errori con le previsioni che combinano la dilatazione dei tempi della relatività speciale (dovuta alla velocità rispetto al centro della Terra) e l'effetto gravitazionale della relatività generale (in quota il tempo scorre più velocemente).
 
-  Gli stessi effetti sono importanti per il sistema di navigazione GPS: gli orologi dei satelliti, che orbitano a circa \SI{20000}{\kilo\meter} di quota a \SI{3.9}{\kilo\meter\per\second}, ritardano di circa \SI{7}{\micro\second} al giorno per la velocità e anticipano di circa \SI{45}{\micro\second} al giorno per il potenziale gravitazionale minore. Se non si correggesse l'anticipo netto di \SI{38}{\micro\second} al giorno, in un giorno la posizione calcolata accumulerebbe un errore di circa \SI{11}{\kilo\meter}~\cite{ashby2003}.
+  Gli stessi effetti sono importanti per il sistema di navigazione GPS: gli orologi dei satelliti, che orbitano a circa \SI{20000}{\kilo\meter} di quota a \SI{3.9}{\kilo\meter\per\second}, ritardano di circa \SI{7}{\micro\second} al giorno per la velocità e anticipano di circa \SI{45}{\micro\second} al giorno perché si trovano a un potenziale gravitazionale maggiore (meno negativo, $\Phi=-GM/r$) rispetto al suolo. Se non si correggesse l'anticipo netto di \SI{38}{\micro\second} al giorno, in un giorno la posizione calcolata accumulerebbe un errore di circa \SI{11}{\kilo\meter}~\cite{ashby2003}.
 \end{Es}
 
 \begin{Es}[Paradosso della scala]
@@ -1761,8 +1761,8 @@ L'energia potenziale ha sempre la stessa definizione, il lavoro è definito come
 
 \begin{Es}[massa ed energia]
   \begin{itemize}
-    \item Il nucleo di deuterio (un protone e un neutrone) ha una massa minore della somma delle masse dei suoi costituenti di $\Delta m\simeq\SI{2.2}{\mega\eVperc\squared}$: è l'energia di legame, che bisogna fornire per separarli. Nella fusione di quattro protoni in un nucleo di elio, che alimenta il Sole, circa lo 0.7\% della massa si trasforma in energia.
-    \item Il Sole irraggia una potenza di circa \SI{3.8E26}{\watt}: ogni secondo la sua massa diminuisce quindi di $\Delta m=P/c^2\simeq\SI{4.3E9}{\kilo\gram}$, oltre quattro milioni di tonnellate.
+    \item Il nucleo di deuterio (un protone e un neutrone) ha una massa minore della somma delle masse dei suoi costituenti di $\Delta m\simeq\SI{2.2}{\mega\eVperc\squared}$ (difetto di massa): l'energia di legame, cioè l'energia che bisogna fornire per separarli, è $\Delta m\,c^2\simeq\SI{2.2}{\mega\electronvolt}$. Nella fusione di quattro protoni in un nucleo di elio, che alimenta il Sole, circa lo 0.7\% della massa si trasforma in energia.
+    \item Il Sole irraggia una potenza di circa \SI{3.8E26}{\watt}: in un secondo ($\Delta t=\SI{1}{\second}$) la sua massa diminuisce quindi di $\Delta m=P\Delta t/c^2\simeq\SI{4.3E9}{\kilo\gram}$, oltre quattro milioni di tonnellate.
     \item Nella fissione di un nucleo di \ce{^{235}U} si liberano circa \SI{200}{\mega\electronvolt}, circa lo 0.1\% della massa; la combustione chimica libera invece qualche \si{\electronvolt} per molecola: un chilogrammo di uranio fornisce tanta energia quanto circa \num{2000} tonnellate di petrolio.
   \end{itemize}
   L'equivalenza tra massa ed energia vale per qualsiasi forma di energia, ma nelle reazioni chimiche la variazione di massa è troppo piccola (circa una parte su $10^{10}$) per essere misurata.
@@ -2013,7 +2013,7 @@ Le onde stazionarie sono il frutto dell'interferenza di un'onda progressiva e un
 La parte spaziale e quella temporale si separano. Se consideriamo con ampiezza $2y_m\sin\left(kx\right)$ allora ci sono dei punti dove il seno si annulla che non vibrano, sono i \index{nodi}nodi, mentre dove la vibrazione è massima ci sono i ventri\index{ventri}. Nodi:
 \[\sin\left(kx\right)=0\qquad kx=0,\pi,\ldots\]
 \[n\pi=kx\qquad k=\frac{2\pi}{\lambda}\qquad x=n\frac{\lambda}{2}\]
-I ventri si trovano a metà tra due nodi, in $x=(2n+1)\lambda/4$. Le onde stazionarie non trasportano energia: l'energia oscilla localmente tra forma cinetica e potenziale. Se la corda è fissata agli estremi, a distanza $L$, entrambi gli estremi devono essere nodi, quindi sono possibili solo le lunghezze d'onda $\lambda_n=2L/n$ e le frequenze $\nu_n=n\frac{v}{2L}$ (armoniche): è il principio degli strumenti a corda.
+I ventri si trovano a metà tra due nodi, in $x=(2n+1)\lambda/4$. Le onde stazionarie non trasportano energia in media: durante ogni periodo l'energia si sposta avanti e indietro tra le zone vicine ai nodi (dove la deformazione, e quindi l'energia elastica, è massima) e quelle vicine ai ventri (dove è massima la velocità, e quindi l'energia cinetica), ma il flusso di energia mediato su un periodo è nullo in ogni punto. L'energia totale della corda oscilla invece tra forma cinetica (tutta cinetica quando la corda passa per la posizione di riposo) e potenziale elastica (tutta potenziale nell'istante di massima deformazione). Se la corda è fissata agli estremi, a distanza $L$, entrambi gli estremi devono essere nodi, quindi sono possibili solo le lunghezze d'onda $\lambda_n=2L/n$ e le frequenze $\nu_n=n\frac{v}{2L}$ (armoniche): è il principio degli strumenti a corda.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/stazionarie1}
@@ -2053,7 +2053,7 @@ dove $T_0$ è il periodo con cui la sorgente emette, misurato dall'osservatore f
    in accordo con quanto trovato nel capitolo sulla relatività.
 \end{subequations}
 \section{Suono\index{suono}}
-Il suono è un'onda longitudinale di pressione che si propaga in un mezzo (gas, liquido o solido; nel vuoto non si propaga), provocando zone di compressione, con pressione e densità maggiori, e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
+Il suono è un'onda meccanica che si propaga in un mezzo materiale (nel vuoto non si propaga). Nei fluidi (gas e liquidi) è un'onda longitudinale di pressione, che provoca zone di compressione, con pressione e densità maggiori, e zone di rarefazione; nei solidi si propagano anche onde trasversali e le formule che seguono, valide per i fluidi, vanno modificate. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
 \begin{equation}
    v=\sqrt{\frac{B}{\rho}}
 \end{equation}
@@ -2064,7 +2064,7 @@ $B$ è il modulo di compressibilità (il reciproco della compressibilità) defin
 Per l'aria, trattata come un gas perfetto, le compressioni e rarefazioni sono troppo rapide perché ci sia scambio di calore tra zone vicine, quindi le trasformazioni sono adiabatiche:
 \[PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\]
 \[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\sqrt{\frac{\gamma RT}{M}}\simeq\SI{343}{\metre\per\second} \]
-a \SI{20}{\celsius} (\SI{331}{\metre\per\second} a \SI{0}{\celsius}). La velocità del suono in un gas dipende dalla temperatura ma non dalla pressione. Nell'acqua è circa \SI{1500}{\metre\per\second}, nell'acciaio circa \SI{5900}{\metre\per\second}.
+a \SI{20}{\celsius} (\SI{331}{\metre\per\second} a \SI{0}{\celsius}). La velocità del suono in un gas dipende dalla temperatura ma non dalla pressione. Nell'acqua è circa \SI{1500}{\metre\per\second}; nell'acciaio le onde longitudinali viaggiano a circa \SI{5900}{\metre\per\second} (in un solido esteso $v_L=\sqrt{(B+\frac{4}{3}G)/\rho}$, con $G$ il modulo di taglio).
 \begin{Es}[l'errore di Newton e la correzione di Laplace]
   \index{Laplace}Newton, nei \emph{Principia}, calcolò per primo~\cite{newton1687} la velocità del suono assumendo che le compressioni dell'aria avvenissero a temperatura costante, cioè usando $B=P$ (isoterma): ottenne $\sqrt{P/\rho}\simeq\SI{290}{\meter\per\second}$, circa il 15\% meno del valore misurato. Solo nel 1816 Laplace~\cite{laplace1816} capì che le compressioni sono adiabatiche e che bisogna usare $B=\gamma P$: il fattore $\sqrt{\gamma}=\sqrt{1.4}\simeq1.18$ elimina la discrepanza. Il confronto fu usato anche per misurare $\gamma$ dell'aria.
 \end{Es}
