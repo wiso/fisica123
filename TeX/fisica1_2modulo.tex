@@ -1328,13 +1328,13 @@ La scala di temperatura definita come quella del termometro a gas risulta limita
 
 \chapter{Relatività speciale\index{relatività!speciale|(}\index{relatività!ristretta|see{speciale}}}
 \minitoc
-La relatività ristretta modifica la meccanica classica. La differenza si nota soprattutto ad alte energie ovvero ad alte velocità. Come tutte le teorie che ampliano un'altra deve rispettare il principio di corrispondenza\index{principio!di corrispondenza}, cioè deve spiegare come la relatività classica possa funzionare a basse energie, cioè come possa essere interpretata come approssimazione per basse energie.
+La relatività ristretta modifica la meccanica classica. La differenza si nota soprattutto ad alte energie ovvero ad alte velocità. Come tutte le teorie che ampliano un'altra deve rispettare il principio di corrispondenza\index{principio!di corrispondenza}, cioè deve spiegare perché la meccanica classica funziona così bene a basse velocità, ritrovandola come approssimazione nel limite $v\ll c$.
 
-Alla fine dell'800 si sviluppa l'elettromagnetismo, mentre la meccanica di Newton era stata applicata a tutti i campi conosciuti con estremo successo.
+Nella seconda metà dell'Ottocento si sviluppa l'elettromagnetismo (le equazioni di Maxwell sono del 1865), mentre la meccanica di Newton era stata applicata a tutti i campi conosciuti con estremo successo.
 
 Bisognava far convivere le equazioni di Maxwell\index{Maxwell} con quelle di Newton.
 
-Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono invarianti per traslazioni. Variabili invarianti sono quelle che non cambiano per sistemi di riferimento inerziali, come l'accelerazione, la massa. Non si può esclusivamente con esperimenti di meccanica determinare se il sistema è fermo o in moto rettilineo uniforme, cioè non si possono distinguere i sistemi inerziali, quindi non esiste un sistema privilegiato.
+Le leggi della meccanica sono le stesse in tutti i sistemi di riferimento inerziali, cioè sono invarianti per trasformazioni di Galileo (principio di relatività galileiano). Grandezze invarianti sono quelle che hanno lo stesso valore in tutti i sistemi di riferimento inerziali, come l'accelerazione e la massa. Non si può esclusivamente con esperimenti di meccanica determinare se il sistema è fermo o in moto rettilineo uniforme, cioè non si possono distinguere i sistemi inerziali, quindi non esiste un sistema privilegiato.
 
 \section{Esperimento di Michelson--Morley\index{Michelson}\index{Morley}\index{esperimento!di Michelson--Morley|(}}
 \begin{figure}[htbp]
@@ -1342,7 +1342,7 @@ Le leggi della meccanica sono le stesse per traslazioni uniformi, cioè sono inv
    \includegraphics[scale=0.7]{immagini/fisica1/Morley}
    \caption{Esperimento di Michelson--Morley.}
 \end{figure}
-Maxwell dice: ``$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$'', cioè che la velocità della luce \index{velocità!della luce nel vuoto}\index{c@$c$|see{velocità della luce nel vuoto}}nel vuoto è costante e non dipende dal sistema di riferimento, contrariamente a quanto si ricava dalle trasformate di Galileo. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si inventa l'etere, un sistema di riferimento privilegiato che permea tutto l'universo; Michelson--Morley dimostrano che questo non può esistere.\index{etere}
+Dalle equazioni di Maxwell si ricava che le onde elettromagnetiche, e quindi la luce, si propagano nel vuoto con velocità \index{velocità!della luce nel vuoto}\index{c@$c$|see{velocità della luce nel vuoto}}$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}$, un valore che non fa riferimento ad alcun sistema di riferimento. Secondo le trasformate di Galileo invece la velocità della luce dovrebbe essere diversa in sistemi inerziali diversi. A meno di associare quel valore $c$ ad un sistema di riferimento privilegiato si crea una spaccatura tra l'elettromagnetismo e la meccanica di Newton. Si ipotizza allora l'esistenza dell'etere\index{etere}, un mezzo che permea tutto l'universo e nel quale la luce si propaga con velocità $c$, che fornirebbe un sistema di riferimento privilegiato. L'esperimento di Michelson e Morley (1887) cercò di misurare il moto della Terra rispetto all'etere, senza trovarlo.
 
 Nell'esperimento la luce proviene da una sorgente $S$, viene parzialmente riflessa da uno specchio semiargentato $M$ e contemporaneamente trasmessa. La luce quindi segue due cammini: $\text{I}$ e $\text{II}$; si riflette sugli specchi $M_1$ e $M_2$ e si riunisce in un raggio unico, prima di arrivare ad un analizzatore. Le lunghezze dei percorsi dopo lo specchio $M$, $l_1$ e $l_2$ sono circa uguali, ma non uguali se riferite alla lunghezza d'onda della luce, quindi nell'analizzatore si dovrebbe vedere una figura d'interferenza. Si suppone che l'etere sia il sistema di riferimento assoluto e che l'apparecchio si muova con velocità $v$ verso destra, quindi si può supporre che sia l'etere a spostarsi verso sinistra con velocità $v$, il ``vento d'etere''. Non si considera il percorso dalla sorgente allo specchio $M$ e dallo specchio $M$ al rivelatore, in quanto i raggi viaggiano insieme. Il tempo per andare da $M$ a $M_1$ e tornare è:
 \[t_1=\frac{l_1}{c-v}+\frac{l_1}{c+v}=\frac{l_1(2c)}{c^2-v^2}=\frac{2c}{c^2}\frac{l_1}{1-\left(\frac{v}{c}\right)^2}=\frac{2l_1}{c}\frac{1}{1-\left(\frac{v}{c}\right)^2}\]
@@ -1370,20 +1370,21 @@ si osserva quindi una figura di interferenza. Se l'apparecchiatura viene ruotata
       =       & \frac{2}{c}(l_1+l_2)\left\{1+\left(\frac{v}{c}\right)^2+\ldots-\left(1+\frac{1}{2}\left(\frac{v}{c}\right)^2\right)\right\}                     \\
       \simeq  & \frac{2}{c}(l_1+l_2)\frac{1}{2}\left(\frac{v}{c}\right)^2=\frac{l_1+l_2}{c}\left(\frac{v}{c}\right)^2\end{align*}
 }
-Con più riflessioni si riesce ad avere $l_1+l_2=\SI{20}{\metre}$, considerando il Sole come riferimento assoluto si ha $v=\SI{30}{\kilo\meter\per\second}$ e $\lambda=\SI{500E-9}{\metre}$.
+Nell'esperimento del 1887, facendo riflettere la luce più volte tra specchi montati su una lastra di pietra galleggiante nel mercurio (per poterla ruotare senza vibrazioni), si arrivava a $l_1+l_2\simeq\SI{22}{\metre}$; considerando il Sole fermo rispetto all'etere la velocità della Terra è $v=\SI{30}{\kilo\meter\per\second}$, e la luce usata aveva $\lambda\simeq\SI{500E-9}{\metre}$.
 Il numero di frange che scorrono dovrebbe essere:
-\[\Delta N=\frac{\Delta}{T}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\]
-La sensibilità dello strumento era $\Delta N=0.01$. Se ci fosse stato l'etere con quella velocità sarebbe stato osservato. La ricerca dell'etere ripetuta in più mesi dell'anno, di giorno e di notte, usando luce solare, stellare ed artificiale, con dispositivi diversi, usando bracci diversi, telescopi o osservando fenomeni elettrici diede risultato negativo. Nel 1907 Nobel per Michelson.
+\[\Delta N=\frac{\Delta}{T}=\frac{c\Delta}{\lambda}=\frac{l_1+l_2}{\lambda}\left(\frac{v}{c}\right)^2\simeq 0.4\]
+dove $T=\lambda/c$ è il periodo della luce.
+La sensibilità dello strumento era $\Delta N=0.01$. Se ci fosse stato l'etere con quella velocità sarebbe stato osservato. La ricerca dell'etere ripetuta in più mesi dell'anno, di giorno e di notte, usando luce solare, stellare ed artificiale, con dispositivi diversi, usando bracci diversi, telescopi o osservando fenomeni elettrici diede risultato negativo. Albert Michelson ricevette il premio Nobel nel 1907 per i suoi strumenti ottici di precisione e le misure fatte con essi. Versioni moderne dell'esperimento, con cavità risonanti laser, hanno verificato l'isotropia della velocità della luce con una precisione relativa di circa $10^{-17}$.
 \index{esperimento!di Michelson--Morley|)}
 \section{Postulati di Einstein\index{Einstein!postulati di}\index{postulato!di Einstein}}
 \begin{post}[Primo postulato della relatività ristretta]
-   Tutte le leggi fisiche sono invarianti per traslazioni uniformi
+   Le leggi della fisica sono le stesse in tutti i sistemi di riferimento inerziali
 \end{post}
 \begin{post}[Secondo postulato della relatività ristretta]
-   La velocità della luce nel vuoto è uguale in tutti i sistemi di riferimento
+   La velocità della luce nel vuoto è la stessa in tutti i sistemi di riferimento inerziali, indipendentemente dal moto della sorgente e dell'osservatore
 \end{post}
 
-I postulati di Einstein sono ampiamente verificati sperimentalmente. L'esperimento di Michelson--Morley verifica il primo postulato di Einstein. Per il secondo postulato si può considerare il seguente esperimento: il Sole ruota rispetto al suo asse, quindi la sorgente di luce si muove. Si misura la differenza di velocità dei raggi di luce provenienti da due estremi dell'equatore del sole. Le velocità misurate sono abbastanza simili da verificare il secondo postulato.
+I postulati di Einstein sono ampiamente verificati sperimentalmente. L'esperimento di Michelson--Morley mostra che la velocità della luce è la stessa in direzioni diverse, nonostante il moto della Terra, ed è quindi in accordo con entrambi i postulati. Per verificare che la velocità della luce non dipende dal moto della sorgente si può considerare il seguente esperimento: il Sole ruota attorno al suo asse, quindi i due estremi dell'equatore solare sono sorgenti di luce in moto in versi opposti. Si misura la velocità della luce proveniente dai due estremi: le velocità misurate sono uguali entro gli errori sperimentali.
 
 \subsection{Simultaneità}
 
@@ -1395,11 +1396,11 @@ I postulati di Einstein sono ampiamente verificati sperimentalmente. L'esperimen
 \end{figure}
 
 
-I due pistoleri (Fig.\@ \ref{pistoleri}) sparano quando la luce gli raggiunge. Essi sono in un sistema solidale con la luce e quindi vedono contemporaneamente la luce della lampadina. Per il capostazione ``fermo'' invece è il pistolero di sinistra ad essere investito per prima dalla luce, quindi il pistolero a destra muore, mentre quello di sinistra no. Gli eventi simultanei per $O'$ non sono tali per $O$, bisogna rivedere il concetto di tempo assoluto.
+I due pistoleri (Fig.\@ \ref{pistoleri}) sono agli estremi di un vagone, con una lampadina al centro, e sparano quando la luce li raggiunge. Essi sono fermi rispetto al vagone e alla lampadina e quindi vedono contemporaneamente la luce della lampadina: sparano nello stesso istante. Per il capostazione, fermo sulla banchina, la luce si propaga con la stessa velocità $c$ in entrambi i versi, ma il pistolero di sinistra le va incontro mentre quello di destra si allontana: è quindi il pistolero di sinistra ad essere raggiunto per primo dalla luce, quindi il pistolero a destra muore, mentre quello di sinistra no. Gli eventi simultanei per $O'$ non sono tali per $O$, bisogna rivedere il concetto di tempo assoluto.
 
 \section{Trasformate di Lorentz\index{trasformate!di Lorentz|(}\index{trasformazioni!di Lorentz|(}\index{Lorentz}}
 Le trasformate di Lorentz sostituiscono le trasformate di Galileo della meccanica classica. Per velocità basse rispetto a quelle della luce le trasformate di Lorentz tendono a quelle di Galileo.
-La funzione che trasforma le coordinate di un sistema di riferimento a quelle di un altro deve essere lineare, in quanto lo spazio è omogeneo. Immaginiamo che l'applicazione non sia omogenea, e quindi non lineare, per esempio: $x'=kx^2$. Se mettiamo una sbarra tra $0$ e $1$ questa misura $\Delta x=1-0=1$, nel nuovo sistema di riferimento misura: $k\cdot 1^2-k\cdot 0^2=k$. Se ora mettiamo la sbarra tra $2$ e $1$ nel primo sistema di riferimento misurerà ancora $1$, mentre nel secondo $k(2^2-1^2)=3k$ ovvero spostando la sbarra nel secondo sistema di riferimento la sua lunghezza cambia: assurdo per l'ipotesi di omogeneità dello spazio; inoltre l'applicazione deve essere anche additiva, perché la lunghezza di due sbarre affiancate deve essere la somma dell'unica sbarra avente lunghezza uguale nel primo sistema di riferimento alla somma delle lunghezze delle due sbarre nel primo sistema di riferimento. Consideriamo il sistema di riferimento $Oxy$ fermo e $O'x'y'$ che si muove rispetto ad $O$ di moto rettilineo uniforme con velocità di trascinamento $u$ nella direzione dell'asse $x$ crescente. L'applicazione è lineare, quindi (in due dimensioni spaziali), in generale:
+La funzione che trasforma le coordinate di un sistema di riferimento a quelle di un altro deve essere lineare, in quanto lo spazio è omogeneo. Immaginiamo che l'applicazione non sia lineare, per esempio: $x'=kx^2$. Se mettiamo una sbarra tra $0$ e $1$ questa misura $\Delta x=1-0=1$, nel nuovo sistema di riferimento misura: $k\cdot 1^2-k\cdot 0^2=k$. Se ora mettiamo la sbarra tra $1$ e $2$ nel primo sistema di riferimento misurerà ancora $1$, mentre nel secondo $k(2^2-1^2)=3k$ ovvero spostando la sbarra nel secondo sistema di riferimento la sua lunghezza cambia: assurdo per l'ipotesi di omogeneità dello spazio; inoltre l'applicazione deve essere anche additiva, perché la lunghezza di due sbarre affiancate deve essere la somma dell'unica sbarra avente lunghezza uguale nel primo sistema di riferimento alla somma delle lunghezze delle due sbarre nel primo sistema di riferimento. Consideriamo il sistema di riferimento $Oxy$ fermo e $O'x'y'$ che si muove rispetto ad $O$ di moto rettilineo uniforme con velocità di trascinamento $u$ nella direzione dell'asse $x$ crescente. L'applicazione è lineare, quindi (in due dimensioni spaziali), in generale:
 \[\left\{
    \begin{array}{l}
       x'=\lambda_{11}x+\lambda_{12}y+\lambda_{14}t \\
@@ -1463,13 +1464,13 @@ Ci ricordiamo dell'ultima espressione che $\lambda_{41}\lambda_{44}<0$
 \[\lambda^4u^2=c^4\lambda_{41}^2\lambda_{44}^2=c^4\frac{\lambda^2-1}{c^2}\frac{c^2+\lambda^2u^2}{c^2}=\]
 \[=(\lambda^2-1)(c^2+\lambda^2u^2)=-c^2-\lambda^2u^2+\lambda^2c^2+\lambda^4u^2\]
 \[0=-c^2-\lambda^2u^2+\lambda^2c^2\]
-\[\lambda^2=\frac{c^2}{c^2-u^2}=\frac{1}{1+\frac{u^2}{c^2}}\]
+\[\lambda^2=\frac{c^2}{c^2-u^2}=\frac{1}{1-\frac{u^2}{c^2}}\]
 \[\lambda=\dfrac{1}{\sqrt{1-\left(\dfrac{u}{c}\right)^2}}=\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\]
 \[\lambda_{41}^2=\frac{\lambda^2-1}{c^2}=\frac{\beta^2}{c^2(1-\beta^2)}\]
 \[\lambda_{41}=\pm\frac{\beta}{c\sqrt{1-\beta^2}}\]
 \[\lambda_{44}^2=\frac{c^2+\lambda^2u^2}{c^2}=\frac{1}{1-\beta^2}\]
 \[\lambda_{44}=\pm\frac{1}{\sqrt{1-\beta^2}}\]
-Diamo segno positivo a $\lambda_{44}$ e negativo a $\lambda_{41}$, in quanto se consideriamo un istante molto prossimo al momento della partenza allora $x\rightarrow 0$, $t'$ deve essere positivo (il tempo scorre nello stesso verso) e quindi $\lambda_{44}>0$.
+Diamo segno positivo a $\lambda_{44}$, perché per $x=0$ e $t>0$ deve essere $t'>0$ (il tempo scorre nello stesso verso nei due sistemi), e quindi negativo a $\lambda_{41}$, perché $\lambda_{41}\lambda_{44}<0$.
 
 Riassumendo, le trasformate di Lorentz permettono di trasformare le coordinate $(t, x, y, z)$ tra due sistemi inerziali\footnote{I sistemi inerziali sono quelli dove vale la prima legge della dinamica.}. Le trasformazioni più interessanti sono i boost, ovvero tra due sistemi inerziali che si muovono di moto rettilineo uniforme per esempio lungo l'asse $x$ e con coordinate sincronizzate in ($0,0,0,0$), con gli assi orientati nella stessa direzione e verso\footnote{considerando anche il tempo come asse, in particolare il verso del tempo è uguale nei due sistemi (ortocroni)}:
 \begin{equation}
@@ -1486,11 +1487,11 @@ dove le coordinate primate sono quelle del sistema $O'$ che si muove rispetto al
 \end{equation}
 
 
-Dalla \eqref{eq:boost} si può trovare la relazione inversa:
+Dalla \eqref{eq:boost} si può trovare la relazione inversa, che si ottiene semplicemente scambiando le coordinate primate con quelle non primate e $v_b$ con $-v_b$, come richiesto dal principio di relatività:
 \begin{equation}
    \begin{split}
-      t &= \gamma_b \left(t' + \frac{v_b x}{c^2}\right) \\
-      x &= \gamma_b \left(x' + v_b t\right) \\
+      t &= \gamma_b \left(t' + \frac{v_b x'}{c^2}\right) \\
+      x &= \gamma_b \left(x' + v_b t'\right) \\
       y &= y' \qquad z=z'
    \end{split}
    \label{eq:boostinv}
@@ -1520,7 +1521,7 @@ e l'inversa:
 
 \subsection{Trasformate di Lorentz e Galileo}
 
-Per velocità piccole rispetto alla velocità della luce si ha: $\gamma_b = 1 + \beta_b^2 / 2 + O(\beta_b^3)$ e quindi si ottengono le trasformate di Galileo:
+Per velocità piccole rispetto alla velocità della luce si ha: $\gamma_b = 1 + \beta_b^2 / 2 + O(\beta_b^4)$ e quindi, se anche $|x|\ll ct$ (cioè $ux/c^2\ll t$), si ottengono le trasformate di Galileo:
 \[\left\{
    \begin{array}{l}
       x^\prime=\dfrac{x-ut}{\sqrt{1-\beta^2}} \\
@@ -1543,7 +1544,7 @@ Per velocità piccole rispetto alla velocità della luce si ha: $\gamma_b = 1 + 
    \includegraphics[scale=0.5]{immagini/fisica1/beta_gamma}
    \caption{Variazione di $\gamma$ in funzione di $\beta$.}
 \end{figure}
-Consideriamo spazi nello stesso tempo. Posizioniamo un'asta con estremi $A$ e $B$ ferma rispetto ad $O'$, sistema di riferimento inerziale con velocità $u$ rispetto ad $O$.
+La lunghezza di un oggetto in moto si misura determinando la posizione dei due estremi nello stesso istante. Posizioniamo un'asta con estremi $A$ e $B$ ferma rispetto ad $O'$, sistema di riferimento inerziale con velocità $u$ rispetto ad $O$.
 $O$ misura nello stesso istante le posizioni di $A$ e di $B$, quindi $t_A\equiv t_B$:
 \[\left\{
    \begin{array}{l}
@@ -1558,7 +1559,7 @@ $O$ misura nello stesso istante le posizioni di $A$ e di $B$, quindi $t_A\equiv 
 \begin{equation}
    l=\frac{l'}{\gamma}
 \end{equation}
-Considerando che $0<\beta<1\Rightarrow\gamma>1$ si ha che $l<l'$, cioè $O$ osserva un oggetto in moto contratto.
+Considerando che $0<\beta<1\Rightarrow\gamma>1$ si ha che $l<l'$, cioè $O$ osserva un oggetto in moto contratto nella direzione del moto rispetto alla sua lunghezza a riposo $l'$ (lunghezza propria). Le dimensioni perpendicolari al moto non cambiano.
 
 \section{Dilatazione dei tempi\index{dilatazione dei tempi}}
 Consideriamo eventi osservati da $O'$ nello stesso spazio ($x'_A\equiv x'_B$) a distanza di tempo $\tau'=t'_B-t'_A$.
@@ -1570,7 +1571,7 @@ Per simmetria posso dire direttamente che:
 \begin{equation}
    \tau=t_B-t_A=\gamma\left(t'_B-t'_A+\frac{\beta}{c}\left(x'_B-x'_A\right)\right)=\gamma\left(t'_B-t'_A\right)=\gamma\tau'
 \end{equation}
-Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$ cioè $O$ vede l'evento più lentamente di $O'$.
+Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$: l'intervallo di tempo tra due eventi che avvengono nello stesso punto di $O'$ (tempo proprio $\tau'$) è misurato da $O$ più lungo, cioè per $O$ gli orologi in moto vanno più lenti.
 
 \begin{Es}[produzione e decadimento di mesoni $\pi^+$]
    Un protone colpisce un altro protone fermo:
@@ -1578,36 +1579,35 @@ Ancora, essendo $\gamma>1$ si ha che $\tau>\tau'$ cioè $O$ vede l'evento più l
    Il mesone decade:
    \[\pi^+ \rightarrow \mu ^+ + \nu\]
 
-   Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media $\tau'=\SI{1.88E-8}{\second}$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
-   \[\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\SI{1.3E-7}{\second} \]
-   La distanza percorsa dal mesone, prima di decadere, osservata dal laboratorio è quindi:
-   \[d=\tau u=\tau \beta c\simeq \SI{39}{\metre} \]
+   Un omino cavalca il mesone $\pi^+$ e osserva un tempo di vita media (proprio) $\tau'=\SI{2.6E-8}{\second}$. Il mesone ha rispetto al laboratorio $\beta=0.99$. Il laboratorio dalla distanza percorsa dal mesone calcola una vita media diversa:
+   \[\tau=\gamma\tau'=\frac{\tau'}{\sqrt{1-\beta^2}}\simeq 7.1\tau'=\SI{1.8E-7}{\second} \]
+   La distanza media percorsa dal mesone, prima di decadere, osservata dal laboratorio è quindi:
+   \[d=\tau u=\tau \beta c\simeq \SI{55}{\metre} \]
+   contro i circa \SI{8}{\metre} che si avrebbero senza dilatazione dei tempi. Il fascio di pioni può così essere trasportato per decine di metri prima di decadere, cosa che si verifica sperimentalmente.
 \end{Es}
 
 \begin{Es}[Paradosso della scala]
-   Come esempio di un paradosso che si ottiene non considerando il fatto che la simultaneità è un concetto relativo consideriamo il seguente esempio classico. Una scala di lunghezza $l_0$ a riposo non entra in un box, in quanto la sua lunghezza di quest'ultimo a riposo $l$ è inferiore. Il box è dotato di due porte dalle quali la scala può entrare ed uscire. Per risolvere il problema della dimensione si potrebbe mettere in moto la scala orizzontalmente, in modo tale che questa venga osservata come contratta dal sistema di riferimento del box e quindi dovrebbe entrarci. Allo stesso modo però se considero la stessa situazione ma vista dal sistema solidale con la scala questa volta è il box ad essere contratto e quindi la scala non entra nel box. Il problema che il concetto di ``essere dentro'' è anch'esso relativo, poiché questo significa che entrambi gli estremi della scala sono simultaneamente all'interno del box, ma come abbiamo visto il concetto di simultaneità è relativo.
+   Come esempio di un paradosso che si ottiene non considerando il fatto che la simultaneità è un concetto relativo consideriamo il seguente esempio classico. Una scala di lunghezza a riposo $l_0$ non entra in un box, perché la lunghezza a riposo $l$ di quest'ultimo è inferiore. Il box è dotato di due porte dalle quali la scala può entrare ed uscire. Per risolvere il problema della dimensione si potrebbe mettere in moto la scala orizzontalmente, in modo tale che questa venga osservata come contratta dal sistema di riferimento del box e quindi dovrebbe entrarci. Allo stesso modo però se considero la stessa situazione ma vista dal sistema solidale con la scala questa volta è il box ad essere contratto e quindi la scala non entra nel box. Il problema è che il concetto di ``essere dentro'' è anch'esso relativo, poiché questo significa che entrambi gli estremi della scala sono simultaneamente all'interno del box, ma come abbiamo visto il concetto di simultaneità è relativo.
 \end{Es}
 
 \subsection{Effetto Doppler}
-Immaginiamo una sorgente ferma rispetto ad $O'$ posizionata nell'origine. $O'$ sia in moto rispetto a $O$ con velocità $v$ verso l'asse $x$. Conosciamo la frequenza della sorgente a riposo, in $O'$: $\nu'$, vogliamo calcolare quella vista da $O$. Per semplicità supponiamo che il segnale sia di tipo digitale e che $O'$ osservi un ``bip'' con periodo $T'=1/\nu'$. Il primo bip (che assumiamo avvenire al tempo $0$) e il secondo bip sono due eventi a cui corrispondono le coordinate rispetto ad $O'$: $(t_1', x_1') = (0, 0)$ e $(t_2', x_2') = (0, T')$. Usando le trasformate di Lorentz \eqref{eq:boostinv} otteniamo:
+Immaginiamo una sorgente ferma rispetto ad $O'$ posizionata nell'origine. $O'$ sia in moto rispetto a $O$ con velocità $v$ nel verso positivo dell'asse $x$, quindi la sorgente si allontana da $O$. Conosciamo la frequenza della sorgente a riposo, in $O'$: $\nu'$, vogliamo calcolare quella vista da $O$. Per semplicità supponiamo che il segnale sia di tipo digitale e che $O'$ osservi un ``bip'' con periodo $T'=1/\nu'$. Il primo bip (che assumiamo avvenire al tempo $0$) e il secondo bip sono due eventi a cui corrispondono le coordinate rispetto ad $O'$: $(t_1', x_1') = (0, 0)$ e $(t_2', x_2') = (T', 0)$. Usando le trasformate di Lorentz \eqref{eq:boostinv} otteniamo:
 \[
    \begin{pmatrix}t_1\\ x_1\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}\qquad \begin{pmatrix}t_2\\ x_2\end{pmatrix} = \begin{pmatrix}\gamma/\nu'\\ \frac{\gamma v}{\nu'}\end{pmatrix}
 \]
 Il periodo osservato da $O$ non è $t_2-t_1$ perché questi sono eventi che avvengono in due punti diversi. La parte mancante non è un effetto relativistico, ma è semplicemente dovuto al fatto che la sorgente si è spostata e quindi il fronte d'onda (il bip) ci metterà di più (nel caso la sorgente si allontani) ad arrivare, esattamente come nel caso classico. Se immaginiamo che l'onda sia un'onda luminosa la sua velocità è sempre $c$ in entrambi i sistemi, quindi considerando il tempo che ci mette a propagare da $x_2$ a $O$:
 \[
-   T = t_2 - t_1 + \frac{x_2}{c} = \frac{\gamma}{\nu'} - 0 + \frac{\gamma v}{\nu' c} = \frac{\gamma}{\nu}\left(1 + \frac{v}{c}\right)
+   T = t_2 - t_1 + \frac{x_2}{c} = \frac{\gamma}{\nu'} - 0 + \frac{\gamma v}{\nu' c} = \frac{\gamma}{\nu'}\left(1 + \frac{v}{c}\right)
 \]
 e la frequenza:
 \[
    \nu = \frac{\nu'}{\gamma}\frac{c}{c + v} = \nu'\frac{\sqrt{1 - v^2/c^2}}{1+v/c}=\nu'\sqrt\frac{1-\beta}{1+\beta} = \nu'\gamma(1-\beta)
 \]
-si noti che il fattore Doppler $\sqrt\frac{1-\beta}{1+\beta}$ è minore di 1 per $\beta$ positivi, quindi se la sorgente si allontana la sua frequenza è percepita come inferiore (redshift). In generale si può trovare l'espressione:
-\begin{equation}
-   \nu = \nu'\gamma\left(1 - v/u'\right)
-\end{equation}
-dove $u'$ è la velocità dell'onda nel sistema della sorgente a riposo $O'$.
+si noti che il fattore Doppler $\sqrt\frac{1-\beta}{1+\beta}$ è minore di 1 per $\beta$ positivi, quindi se la sorgente si allontana la sua frequenza è percepita come inferiore (spostamento verso il rosso, \emph{redshift}). Se la sorgente si avvicina basta cambiare segno a $\beta$: $\nu=\nu'\sqrt\frac{1+\beta}{1-\beta}$ (\emph{blueshift}). A differenza del caso delle onde meccaniche, il risultato dipende solo dalla velocità relativa tra sorgente e osservatore, perché non c'è un mezzo che faccia da sistema privilegiato.
 
-È interessante notare che se consideriamo un fotone di energia $E'$ emesso dalla sorgente a riposo rispetto ad $O'$ usando \eqref{eq:boostinv} si ottiene $E = \gamma(1-\beta)E'$, che è uguale alla relazione tra $\nu'$ e $\nu$, infatti sappiamo che vale $E=h\nu$.
+Se la sorgente si muove perpendicolarmente alla linea di vista dell'osservatore non c'è il contributo dovuto al cambiamento di distanza, ma resta la dilatazione dei tempi: $\nu=\nu'/\gamma$ (effetto Doppler trasverso, senza analogo classico), verificato da Ives e Stilwell nel 1938.
+
+È interessante notare che se consideriamo un fotone di energia $E'$ emesso dalla sorgente a riposo rispetto ad $O'$ e trasformiamo energia e quantità di moto (che si trasformano come $ct$ e $x$, vedi più avanti) si ottiene $E = \gamma(1-\beta)E'$, che è uguale alla relazione tra $\nu'$ e $\nu$, infatti sappiamo che vale $E=h\nu$.
 
 
 \section{Composizione delle velocità\index{composizione delle velocità!relativistiche}}
@@ -1625,7 +1625,7 @@ cioè la composizione delle velocità secondo Galileo.
 \begin{Es}[decadimento $\pi^0$]
    $\pi^0$ decade con un decadimento elettromagnetico del tipo:
    \[\pi^0\rightarrow \gamma\gamma\]
-   Per la conservazione della quantità di moto i due fotoni devono avere velocità opposte, $c$ misurate sia dal sistema del laboratorio ($O$) sia dal sistema in moto con il $\pi^0$, $O'$. Supponiamo che i fotoni si propaghino secondo l'asse $x$ e che il mesone si muovesse alla velocità $u$ verso destra rispetto ad $O$. Per Einstein la velocità dei due fotoni vista da $O$ e da $O'$ è uguale.
+   Per la conservazione della quantità di moto i due fotoni devono avere velocità opposte, $c$ misurate sia dal sistema del laboratorio ($O$) sia dal sistema in moto con il $\pi^0$, $O'$. Supponiamo che i fotoni si propaghino lungo l'asse $x$ e che il mesone si muova con velocità $u$ verso destra rispetto ad $O$. Per Einstein la velocità dei due fotoni vista da $O$ e da $O'$ è uguale.
    Per il fotone che va a destra:
    \[v_x=\frac{v'_{x'}+u}{1+\frac{\beta}{c}v'_{x'}}=\frac{c+u}{1+\frac{u}{c^2}c}=c\]
    Per l'altro:
@@ -1642,11 +1642,12 @@ e $O'$ vede il proiettile di $O$ con:
 \[\dot y'_{O}=\sqrt{1-\frac{u^2}{c^2}}U\]
 la quantità di moto si deve conservare quindi $O$ vede:
 \[m_{O}U+m_{O'}\dot y_{O'}=0\]
-\[m_{O'}=\frac{m_OU}{\sqrt{1-\frac{u^2}{c^2}}}U=\frac{m_O}{\sqrt{1-\frac{u^2}{c^2}}}\]
+\[m_{O'}=\frac{m_OU}{\sqrt{1-\frac{u^2}{c^2}}\,U}=\frac{m_O}{\sqrt{1-\frac{u^2}{c^2}}}\]
 Considerando $O$ fermo:
 \[m_{O}=m_0=\text{massa a riposo}\]
 \[m=\frac{m_0}{\sqrt{1-\beta^2}}=\gamma m_0\]
 \[\beta\rightarrow 1\Rightarrow m\rightarrow +\infty\]
+Il concetto di massa relativistica $m=\gamma m_0$ è utile per capire perché nessun corpo dotato di massa può raggiungere la velocità della luce, ma oggi è poco usato: nella fisica moderna con ``massa'' si intende sempre la massa a riposo $m_0$, che è un invariante, e si scrive $\ve p=\gamma m_0\ve v$ ed $E=\gamma m_0c^2$.
 \section{Quantità di moto\index{quantità di moto!relativistica}}
 \[p=mv=\frac{m_0}{\sqrt{1-\beta^2}}\beta c=\gamma m_0 v\]
 $\beta$ della particella. Con questa nuova definizione di quantità di moto essa si conserva ancora, anche in contesto relativistico.
@@ -1713,7 +1714,7 @@ Se $K(0)=0$ in accordo con quella classica:
    \includegraphics[scale=0.5]{immagini/fisica1/urto_rel}
    \caption{(a) prima dell'urto; (b) dopo l'urto.}
 \end{figure}
-La massa durante l'urto può aumentare, si creano nuove particelle. Non basta avere molta energia per creare nuove particelle, ma bisogna concentrarla.
+La somma delle masse a riposo durante l'urto può aumentare: parte dell'energia cinetica si trasforma in massa e si creano nuove particelle. Non basta avere molta energia per creare nuove particelle: l'energia disponibile è quella nel sistema del centro di massa, perché l'energia necessaria a conservare la quantità di moto totale non può essere convertita. Per questo nei moderni acceleratori si fanno scontrare due fasci uno contro l'altro (collisori) invece di mandare un fascio su un bersaglio fermo.
 
 \subsection{Conservazione dell'energia}
 In meccanica classica il teorema della conservazione dell'energia diceva che l'energia totale si conservava:
@@ -1748,14 +1749,14 @@ L'energia potenziale ha sempre la stessa definizione, il lavoro è definito come
 
 \end{Def}
 
-Molto usati sono i multipli: \si{\kilo\electronvolt} (chev), \si{\mega\electronvolt} (mev), \si{\giga\electronvolt} (gev), \si{\tera\electronvolt} (tev).
+Molto usati sono i multipli: \si{\kilo\electronvolt}, \si{\mega\electronvolt}, \si{\giga\electronvolt}, \si{\tera\electronvolt}. Dal 2019 la carica elementare vale esattamente $e=\SI{1.602176634E-19}{\coulomb}$.
 
 Anche le masse e le quantità di moto si possono esprimere in \si{\electronvolt}, combinando opportunamente con $c$.
 \[E=mc^2\]
-\[\SI{1}{\kilo\gram},c^2=\SI{1}{\kilo\gram}(\SI{3E8}{\metre\per\second})=\SI{9E16}{\joule}=\SI{5.62E35}{\electronvolt} \]
+\[\SI{1}{\kilo\gram}\,c^2=\SI{1}{\kilo\gram}\,(\SI{3E8}{\metre\per\second})^2=\SI{9E16}{\joule}=\SI{5.62E35}{\electronvolt} \]
 \[\SI{1}{\electronvolt}/c^2=\SI{1.78E-36}{\kilogram} \]
 \begin{Es}[decadimento particella strana]
-   Si vuole determinare il momento finale dei prodotti del decadimento della $K_0$:
+   Si vuole determinare la quantità di moto finale dei prodotti del decadimento del mesone $K^0_S$:
    \begin{figure}[H]
       \centering
       \includegraphics[scale=0.5]{immagini/fisica1/dec_strano}
@@ -1781,15 +1782,16 @@ Anche le masse e le quantità di moto si possono esprimere in \si{\electronvolt}
    \[=2\sqrt{(m_0^\pi c^2)^2+p_{\pi}^2c^2}\]
    \[(m_0^{K_0})^2c^4=4(m_0^\pi c^2)^2+4p_{\pi}^2c^2\]
    \[p_\pi^2=\frac{(m_0^{K_0})^2c^4-4(m_0^{\pi})^2c^4}{4c^2}=\frac{(m_0^K)^2c^2}{4}-(m_0^\pi)^2c^2\]
-   \[p_\pi=c\sqrt{\frac{(m_0^K)^2}{4}-(m_0^\pi)^2}\]
+   \[p_\pi=c\sqrt{\frac{(m_0^K)^2}{4}-(m_0^\pi)^2}\simeq\SI{206}{\mega\eVperc}\]
+   usando i valori più precisi $m_0^K=\SI{497.6}{\mega\eVperc\squared}$ e $m_0^\pi=\SI{139.6}{\mega\eVperc\squared}$.
 \end{Es}
 \section{Forza e accelerazione\index{forza!relativistica}\index{accelerazione!relativistica}}
 Newton: $\ve F=m\ve a$
 \[\ud K=\ve F\cdot\ve{ \ud s}\]
 \[E=mc^2=K+m_0c^2\qquad \ud m=\frac{1}{c^2}\ud K=\frac{1}{c^2}\ve F\cdot \ud \ve s\]
 partiamo da quantità che abbiamo già ben definito in relatività: $p$ e $t$
-\[\ve F=\frac{\ud \ve p}{\ud t}=\frac{\ud}{\ud t}(m\ve v)=\frac{\ud m}{\ud t}\ve v+m\frac{\ud \ve v}{\ud t}=\frac{1}{c^2}\ve F\frac{\ud \ve s}{\ud t}\ve v+m\ve a=\frac{1}{c^2}(\ve F\ve v)\ve v+m\ve a\]
-La direzione di $\ve F$ e di $\ve a$ non è la stessa (!)
+\[\ve F=\frac{\ud \ve p}{\ud t}=\frac{\ud}{\ud t}(m\ve v)=\frac{\ud m}{\ud t}\ve v+m\frac{\ud \ve v}{\ud t}=\frac{1}{c^2}\left(\ve F\cdot\frac{\ud \ve s}{\ud t}\right)\ve v+m\ve a=\frac{1}{c^2}(\ve F\cdot\ve v)\ve v+m\ve a\]
+In generale la direzione di $\ve F$ e di $\ve a$ non è la stessa (!)
 \subsection{Casi Particolari}
 \subsubsection{$\ve F // \ve v$}
 \[F=\frac{1}{c^2}Fv^2+ma\]
@@ -1818,7 +1820,7 @@ Lo spazio di Minkowski è utile per dare un significato geometrico alla relativi
 Per comodità grafiche consideriamo solo una coordinata spaziale e una temporale. Sull'asse delle ascisse rappresentiamo $x$ e sull'asse delle ordinate il tempo moltiplicato per $c$, che lo rende uno spazio.
 La bisettrice dei quadranti è la linea di universo della luce, essa rappresenta il cammino di un raggio luminoso.
 \[\frac{\ud w}{\ud x}=\frac{\ud(ct)}{\ud x}=c\frac{1}{\frac{\ud x}{\ud t}}=\frac{c}{v}>1\]
-Quindi la traiettoria di ogni punto massivo nel piano di Minkowski deve avere tangente in ogni punto maggiore di uno, altrimenti andrebbe più veloce della luce.
+Quindi la linea di universo di ogni corpo dotato di massa nel piano di Minkowski deve avere in ogni punto pendenza maggiore di uno in valore assoluto, altrimenti il corpo andrebbe più veloce della luce.
 Creiamo un nuovo sistema di riferimento inerziale.
 \[\left\{\begin{array}{l}
       x'=\frac{x-ut}{\sqrt{1-\beta^2}}               \\
@@ -1842,12 +1844,12 @@ asse $w'$: $x'=0$, cioè
 Più $\beta$ tende a $1$ e più i due assi del nuovo sistema di riferimento tendono alla bisettrice del primo--terzo quadrante.
 
 
-\subsection{Dilatazione dei tempi\index{dilatazione dei tempi}}
+\subsection{Relatività della simultaneità\index{simultaneità}}
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.6]{immagini/fisica1/Mink3}
 \end{figure}
-$A$ e $B$ sono due eventi simultanei per $OXY$, ma non lo sono per $OX'Y'$. Analogamente si dimostra la contrazione delle lunghezze.
+$A$ e $B$ sono due eventi simultanei per $OXY$ (stanno su una retta parallela all'asse $x$), ma non lo sono per $OX'Y'$ (non stanno su una retta parallela all'asse $x'$). Con costruzioni analoghe si dimostrano la dilatazione dei tempi e la contrazione delle lunghezze.
 
 \subsection{Curve di calibrazione\index{curve! di calibrazione}}
 \begin{figure}[htbp]
@@ -1871,14 +1873,14 @@ $A$ e $B$ sono due eventi simultanei per $OXY$, ma non lo sono per $OX'Y'$. Anal
 
 
 \section{Dubbi di Einstein}
-Einstein si interrogava di come le forze potessero propagarsi, in particolare quella gravitazionale. Se il Sole scomparisse per Newton la Terra istantaneamente partirebbe per la tangente. Per Einstein ciò è impossibile, perché nulla, nemmeno la forza gravitazionale, o l'informazione ``il Sole non c'è più'', può viaggiare più veloce della luce. Con la generale si risolve il problema, la massa incurva lo spazio.
+Einstein si interrogava su come le forze potessero propagarsi, in particolare quella gravitazionale. Se il Sole scomparisse, per Newton la Terra partirebbe istantaneamente per la tangente. Per Einstein ciò è impossibile, perché nulla, nemmeno la forza gravitazionale, o l'informazione ``il Sole non c'è più'', può viaggiare più veloce della luce. Il problema si risolve con la relatività generale (1915), in cui la massa incurva lo spaziotempo e le perturbazioni di questa curvatura si propagano alla velocità della luce sotto forma di onde gravitazionali.
 
 \index{relatività!speciale|)}
 \chapter{Onde\index{onde}}
 \minitoc
-Le onde sono un moto che trasporta energia, mentre generano uno spostamento netto di materia nullo. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui la direzione di propagazione dell'onda è ortogonale al moto delle particelle. Le onde\index{onda!longitudinale} longitudinali sono quelle in cui le vibrazioni sono parallele alla velocità dell'onda. Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (sasso nell'acqua), tridimensionali\index{onda!tridimensionale} (suono). Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
+Le onde sono perturbazioni che si propagano trasportando energia e quantità di moto, senza trasporto netto di materia. Le onde\index{onda!meccanica} meccaniche sono quelle che hanno bisogno di un mezzo elastico per propagarsi, le onde elettromagnetiche\index{onda!elettromagnetica} si propagano anche nel vuoto. Le onde\index{onda!trasversale} trasversali sono quelle in cui le vibrazioni del mezzo sono ortogonali alla direzione di propagazione dell'onda (per esempio una corda). Le onde\index{onda!longitudinale} longitudinali sono quelle in cui le vibrazioni sono parallele alla direzione di propagazione (per esempio il suono nell'aria). Le onde possono essere monodimensionali\index{onda!monodimensionale} (corda ideale vibrante), bidimensionali\index{onda!bidimensionale} (onde sulla superficie dell'acqua dopo il lancio di un sasso), tridimensionali\index{onda!tridimensionale} (suono). Per le onde trasversali si parla anche di polarizzazione\index{polarizzazione}, cioè l'orientamento del piano di vibrazione, che può essere costante (onda polarizzata) o meno.
 
-Se mandiamo due impulsi in un mezzo elastico:
+Se mandiamo un impulso lungo un mezzo elastico, per esempio una corda, la sua forma si sposta con velocità $v$ senza deformarsi; se all'istante $t=0$ la forma è $f(x)$, all'istante $t$ sarà:
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/Onda1}
@@ -1887,7 +1889,7 @@ Se mandiamo due impulsi in un mezzo elastico:
    f(x)=f(x')=f(x-vt)
    \label{eq:onda_progressiva}
 \end{equation}
-questo perché la forma d'onda non cambia. Questa è un'onda progressiva\index{onda!progressiva}, cioè un'onda che si propaga nel verso positivo delle $x$, se fosse al contrario sarebbe un'onda regressiva\index{onda!regressiva} e sarebbe
+dove $x'=x-vt$ è la coordinata in un sistema di riferimento che si muove con l'impulso, nel quale la forma d'onda non cambia. Questa è un'onda progressiva\index{onda!progressiva}, cioè un'onda che si propaga nel verso positivo delle $x$, se fosse al contrario sarebbe un'onda regressiva\index{onda!regressiva} e sarebbe
 \begin{equation}
    f(x)=f(x+vt)
    \label{eq:onda_regressiva}
@@ -1925,7 +1927,7 @@ Ma la tangente è la derivata delle $y$ nelle $x$:
 \[T\left.\frac{\partial y}{\partial x}\right |_{x+\ud x}\!\!\!\!\!\!\!\!\!\!-T\left.\frac{\partial y}{\partial x}\right|_{x}=\ud m\frac{\partial^2 y}{\partial t^2}\]
 \[T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\frac{\partial^2 y}{\partial t^2}\ud m\]
 Chiamiamo $\rho$ la densità lineare:
-\[\rho=\frac{\ud m}{\ud s}\qquad \ud m=\rho s\qquad \ud s\cos\alpha=\ud x\qquad\ud m=\rho\ud x\]
+\[\rho=\frac{\ud m}{\ud s}\qquad \ud m=\rho\, \ud s\qquad \ud s\cos\alpha=\ud x\qquad\ud m\simeq\rho\ud x\]
 \[T\left.\frac{\partial^2 y}{\partial x^2}\right|_x\ud x=\rho\frac{\partial^2 y}{\partial t^2}\ud x\]
 \[\frac{\partial^2 y}{\partial x^2}=\frac{\rho}{T}\frac{\partial^2 y}{\partial t^2}\qquad\text{equazione di D'Alembert}\]
 
@@ -1957,17 +1959,17 @@ Nel caso di onda regressiva l'equazione differenziale è uguale, anche nei segni
    \includegraphics[scale=0.5]{immagini/fisica1/interferenza_distruttiva}
    \caption{Interferenza distruttiva\index{interferenza!distruttiva}.}
 \end{figure}
-L'interferenza è la sovrapposizione di due onde. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, ma con diversa fase. La differenza di fase $\phi$ è chiamata costante di fase.
+L'interferenza è la sovrapposizione di due onde. Prendiamo due onde progressive, sinusoidali, con stessa ampiezza e frequenza, che si propagano nello stesso verso, ma con una differenza di fase $\varphi$.
 \[y_1=y_m\sin(kx-\omega t)\qquad y_2=y_m\sin(kx-\omega t+\varphi)\]
 \begin{align*}
    y_1+y_2 & =y_m\left[\sin\left(kx-\omega t\right)+\sin\left(kx-\omega t+\varphi\right)\right]    \\
            & =y_m\left[2\cos\frac{\varphi}{2}\sin\left(kx-\omega t+\frac{\varphi}{2}\right)\right] \\
            & =\left(2y_m\cos\frac{\varphi}{2}\right)\sin\left(kx-\omega t+\frac{\varphi}{2}\right)
 \end{align*}
-L'ampiezza delle onde non è più costante, ma è una funzione armonica. Si distinguono due casi particolari:
+L'onda risultante è ancora un'onda sinusoidale della stessa frequenza, ma la sua ampiezza $2y_m|\cos\frac{\varphi}{2}|$ dipende dalla differenza di fase. Si distinguono due casi particolari ($n$ intero):
 \begin{align*}
-   \varphi & =0+2k\pi   & y_m & \rightarrow 2y_m & \text{Interferenza costruttiva} \\
-   \varphi & =\pi+2k\pi & y_m & \rightarrow 0    & \text{Interferenza distruttiva}
+   \varphi & =0+2n\pi   & y_m & \rightarrow 2y_m & \text{Interferenza costruttiva} \\
+   \varphi & =\pi+2n\pi & y_m & \rightarrow 0    & \text{Interferenza distruttiva}
 \end{align*}
 \section{Onde stazionarie\index{onda!stazionaria}}
 Le onde stazionarie sono il frutto dell'interferenza di un'onda progressiva e una regressiva, tipicamente di un'onda con la sua riflessa.
@@ -1984,7 +1986,7 @@ Le onde stazionarie sono il frutto dell'interferenza di un'onda progressiva e un
 La parte spaziale e quella temporale si separano. Se consideriamo con ampiezza $2y_m\sin\left(kx\right)$ allora ci sono dei punti dove il seno si annulla che non vibrano, sono i \index{nodi}nodi, mentre dove la vibrazione è massima ci sono i ventri\index{ventri}. Nodi:
 \[\sin\left(kx\right)=0\qquad kx=0,\pi,\ldots\]
 \[n\pi=kx\qquad k=\frac{2\pi}{\lambda}\qquad x=n\frac{\lambda}{2}\]
-Le onde stazionarie non trasportano energia.
+I ventri si trovano a metà tra due nodi, in $x=(2n+1)\lambda/4$. Le onde stazionarie non trasportano energia: l'energia oscilla localmente tra forma cinetica e potenziale. Se la corda è fissata agli estremi, a distanza $L$, entrambi gli estremi devono essere nodi, quindi sono possibili solo le lunghezze d'onda $\lambda_n=2L/n$ e le frequenze $\nu_n=n\frac{v}{2L}$ (armoniche): è il principio degli strumenti a corda.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/stazionarie1}
@@ -1995,52 +1997,54 @@ Le onde stazionarie non trasportano energia.
 
 \section{Effetto Doppler\index{effetto!Doppler}\index{Doppler}}
 L'effetto Doppler si sviluppa quando la sorgente delle onde e l'osservatore sono in moto relativo.
-Immaginando la sorgente che emette onde con velocità di propagazione $u$ e lunghezza d'onda $\lambda$ ferma e l'osservatore in allontanamento con velocità $v$ il numero di fronti d'onda che l'osservatore riceve nel tempo $t$ è:
+Consideriamo una sorgente ferma rispetto al mezzo, che emette onde di frequenza $\nu_0$ e lunghezza d'onda $\lambda=u/\nu_0$, dove $u$ è la velocità di propagazione nel mezzo, e un osservatore che si allontana con velocità $v$. Il numero di fronti d'onda che l'osservatore riceve nel tempo $t$ è quello che riceverebbe da fermo, meno quelli contenuti nel tratto $vt$ percorso:
 \[N=\nu t=\nu_0t-\frac{vt}{\lambda}\]
 \begin{subequations}
    \begin{equation}
       \nu=\nu_0-\frac{v}{\lambda}=\nu_0-\frac{v}{u}\nu_0=\nu_0\left(1-\frac{v}{u}\right)
    \end{equation}
-   Nel caso inverso nel quale sia la sorgente a muoversi con velocità $v$ bisogna scambiare $\nu$ con $\nu_0$:
+   Nel caso in cui sia invece la sorgente ad allontanarsi con velocità $v$ dall'osservatore fermo, la lunghezza d'onda nel mezzo aumenta, perché in un periodo la sorgente si allontana di $v/\nu_0$: $\lambda=(u+v)/\nu_0$, e quindi:
    \begin{equation}
       \nu=\nu_0\frac{u}{u+v}
    \end{equation}
 \end{subequations}
-notiamo che non c'è simmetria, cioè se consideriamo sorgente ferma e osservatore in moto con velocità $v$ non otteniamo lo stesso risultato di osservatore fermo e sorgente in moto con velocità $-v$. Questo perché esiste un sistema privilegiato che è il mezzo in cui si propaga l'onda. Questo non è vero per le onde elettromagnetiche.
+Per avvicinamento basta cambiare il segno di $v$. Notiamo che non c'è simmetria, cioè se consideriamo sorgente ferma e osservatore in moto con velocità $v$ non otteniamo lo stesso risultato di osservatore fermo e sorgente in moto con velocità $-v$. Questo perché esiste un sistema privilegiato che è il mezzo in cui si propaga l'onda. Questo non è vero per le onde elettromagnetiche.
 \subsection{Effetto Doppler relativistico\index{effetto!Doppler!relativistico}}
-Consideriamo l'ultimo caso trattato in funzione del periodo anziché della frequenza nel caso di onde luminose:
+Consideriamo l'ultimo caso trattato (sorgente che si allontana) in funzione del periodo anziché della frequenza, nel caso di onde luminose:
 \[
-   T=T_0'\left(1+\frac{v}{c}\right)
+   T=T_0\left(1+\frac{v}{c}\right)
 \]
-$T_0'$ è il periodo proprio della sorgente misurato da un osservatore che si muove con la sorgente alla velocità $v$, quindi dall'osservatore fermo esso viene percepito come:
+dove $T_0$ è il periodo con cui la sorgente emette, misurato dall'osservatore fermo. Se $T_0'$ è il periodo proprio della sorgente, misurato da un osservatore che si muove con essa, per la dilatazione dei tempi l'osservatore fermo misura:
 \begin{subequations}
    \begin{equation}
       T_0=\frac{T_0'+\frac{\beta}{c}x'}{\sqrt{1-\beta^2}}
    \end{equation}
    Se consideriamo la sorgente come origine del sistema in moto allora $x'=0$:
    \begin{equation}
-      T=\frac{T_0\left(1+\beta\right)}{\sqrt{1-\beta^2}}
+      T=\frac{T_0'\left(1+\beta\right)}{\sqrt{1-\beta^2}}=T_0'\sqrt{\frac{1+\beta}{1-\beta}}
    \end{equation}
+   in accordo con quanto trovato nel capitolo sulla relatività.
 \end{subequations}
 \section{Suono\index{suono}}
-Il suono è un'onda longitudinale che si propaga di solito nell'aria provocando zone con maggiore pressione e zone con minore pressione e quindi zone con maggior densità e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
+Il suono è un'onda longitudinale di pressione che si propaga in un mezzo (gas, liquido o solido; nel vuoto non si propaga), provocando zone di compressione, con pressione e densità maggiori, e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
 \begin{equation}
    v=\sqrt{\frac{B}{\rho}}
 \end{equation}
-$B$ è il coefficiente di comprimibilità definito come:
+$B$ è il modulo di compressibilità (il reciproco della compressibilità) definito come:
 \begin{equation}
    B=\frac{-\Delta p}{\Delta V/V}
 \end{equation}
-Se approssimiamo il comportamento dell'aria ad un gas adiabatico, supponendo quindi che il suono si propaghi più veloce del calore si ha:
+Per l'aria, trattata come un gas perfetto, le compressioni e rarefazioni sono troppo rapide perché ci sia scambio di calore tra zone vicine, quindi le trasformazioni sono adiabatiche:
 \[PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\]
-\[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\SI{330}{\metre\per\second} \]
+\[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\sqrt{\frac{\gamma RT}{M}}\simeq\SI{343}{\metre\per\second} \]
+a \SI{20}{\celsius} (\SI{331}{\metre\per\second} a \SI{0}{\celsius}). La velocità del suono in un gas dipende dalla temperatura ma non dalla pressione. Nell'acqua è circa \SI{1500}{\metre\per\second}, nell'acciaio circa \SI{5900}{\metre\per\second}.
 \section{Grandezze caratteristiche}
 \begin{description}
-   \item[intensità\index{intensità!del suono} del suono] $I=\text{Energia}/\text{tempo superficie}$\\
+   \item[intensità\index{intensità!del suono} del suono] $I=\text{energia}/(\text{tempo}\cdot\text{superficie})$, cioè la potenza per unità di superficie, in \si{\watt\per\meter\squared}\\
    \item[soglia\index{soglia!di udibilità} di udibilità] $I_0=\SI{1E-12}{\watt\per\meter\squared}$\\
       \item[altezza\index{altezza!del suono} del suono]la frequenza\\
    \item[timbro \index{timbro}del suono] è la forma d'onda, cioè la composizione in armoniche dello sviluppo di Fourier\\
-   \item[sensazione\index{sensazione sonora} sonora] non è lineare $10\log_{10} I/I_0$ e si misura in decibel \si{\deci\bel}\\
+   \item[livello\index{sensazione sonora} di intensità sonora] la sensazione sonora non è lineare nell'intensità ma circa logaritmica (legge di Weber--Fechner), per questo si usa $\beta=10\log_{10} I/I_0$, che si misura in decibel (\si{\deci\bel}): ogni \SI{10}{\deci\bel} l'intensità aumenta di un fattore 10\\
    \item[soglia del \index{soglia!del dolore}dolore] $\SI{120}{\deci\bel}$\\
 \end{description}
 
