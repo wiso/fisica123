@@ -66,7 +66,7 @@ Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e
 \[\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\]
 in particolare se $\rho_1=\rho_2$ allora $h_1=h_2$.
 \subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli}
-L'esperimento, eseguito da Evangelista Torricelli e Vincenzo Viviani nel 1644 (fig.\@\ref{estor}), consiste nel riempire fino all'orlo di mercurio un tubo di vetro lungo circa un metro e chiuso a un'estremità e nel rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio nel tubo scende fino a un'altezza di circa \SI{0.76}{\meter} sopra il livello della bacinella, indipendentemente dalla lunghezza e dall'inclinazione del tubo.
+L'esperimento, eseguito da Evangelista Torricelli e Vincenzo Viviani nel 1644 (fig.\@\ref{estor}), consiste nel riempire fino all'orlo di mercurio un tubo di vetro lungo circa un metro e chiuso a un'estremità e nel rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio nel tubo scende fino a un'altezza di circa \SI{0.76}{\meter} sopra il livello della bacinella, indipendentemente dalla lunghezza e dall'inclinazione del tubo, purché l'estremità chiusa si trovi a più di \SI{0.76}{\meter} di quota sopra il livello della bacinella (altrimenti il tubo resta pieno di mercurio).
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/Torricelli}
@@ -754,7 +754,7 @@ conoscendo però come varia $c$ in funzione di $T$. Poiché $c$ dipende dal tipo
    con $M=\frac{m}{n}$ massa molare\index{massa!molare}, $n$ numero di moli. Spesso $c^{\text{mol}}$ è indicato semplicemente con $c$.
 \end{Def}
 
-\index{Dulong}\index{Petit}Dulong e Petit osservarono nel 1819 che il calore specifico molare (o capacità termica molare) è circa lo stesso per tutti i solidi elementari a temperatura ambiente ed è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero (come $T^3$, legge di Debye), un effetto che la fisica classica non sa spiegare e che fu uno dei primi successi della meccanica quantistica (Einstein, 1907). Il diamante, per esempio, a temperatura ambiente ha un calore specifico molare di solo \SI{6}{\joule\per\mole\per\kelvin}.
+\index{Dulong}\index{Petit}Dulong e Petit osservarono nel 1819 che il calore specifico molare (o capacità termica molare) è circa lo stesso per tutti i solidi elementari a temperatura ambiente ed è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero (nei solidi isolanti come $T^3$, legge di Debye; nei metalli a temperature molto basse domina invece un contributo degli elettroni di conduzione proporzionale a $T$), un effetto che la fisica classica non sa spiegare e che fu uno dei primi successi della meccanica quantistica (Einstein, 1907). Il diamante, per esempio, a temperatura ambiente ha un calore specifico molare di solo \SI{6}{\joule\per\mole\per\kelvin}.
 
 
 \section{Energia interna\index{energia!interna}}
@@ -811,10 +811,10 @@ Il calore è quindi una forma di energia in transito, e il primo principio espri
 \end{Es}
 
 \section{Trasformazioni di un gas\index{trasformazioni!di un gas}}
-Le trasformazioni le possiamo dividere in due gruppi:
+Distinguiamo:
 \begin{description}
    \item[trasformazioni irreversibili]\index{trasformazioni!irreversibili} sono in genere veloci; gli stati intermedi non sono stati di equilibrio e non possono essere descritti dalle variabili di stato.
-   \item[trasformazioni quasistatiche]\index{trasformazioni!quasistatiche} sono lente, si dà il tempo al sistema di reagire attraversando infiniti stati di equilibrio intermedi. Una trasformazione quasi statica senza attriti idealizza una trasformazione reversibile, cioè una trasformazione che può essere percorsa al contrario riportando allo stato iniziale sia il sistema sia l'ambiente\index{trasformazioni!reversibili}.
+   \item[trasformazioni quasistatiche]\index{trasformazioni!quasistatiche} sono lente, si dà il tempo al sistema di reagire attraversando infiniti stati di equilibrio intermedi. Una trasformazione quasi statica senza alcun effetto dissipativo (attriti, scambi di calore attraverso differenze finite di temperatura, \ldots) idealizza una trasformazione reversibile, cioè una trasformazione che può essere percorsa al contrario riportando allo stato iniziale sia il sistema sia l'ambiente\index{trasformazioni!reversibili}. Una trasformazione quasi statica con dissipazioni, per esempio un lento riscaldamento a contatto con una sorgente molto più calda, è invece irreversibile.
 \end{description}
 
 \subsection{Calcolo del lavoro\index{lavoro!su un gas}}
@@ -1105,7 +1105,7 @@ Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=
 
 \[\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\]
 
-Più grande è $r$ più è grande $\eta$. Se però $r$ è troppo grande, nella compressione adiabatica la temperatura della miscela sale troppo e questa si accende spontaneamente prima della scintilla (detonazione, o ``battito in testa''). Per $r=5$ si ha $\eta\simeq0.47$; nei motori a benzina moderni $r\simeq 10$, quindi $\eta\simeq0.60$, ma il rendimento reale è circa la metà a causa di attriti, perdite di calore e del fatto che il ciclo reale non è composto da trasformazioni reversibili. Nei motori diesel l'accensione avviene proprio per compressione, con $r\simeq15$--$20$.
+Più grande è $r$ più è grande $\eta$. Se però $r$ è troppo grande, nella compressione adiabatica la temperatura della miscela sale troppo e questa può accendersi spontaneamente: prima della scintilla (preaccensione) oppure, dopo l'innesco, la parte di miscela non ancora raggiunta dal fronte di fiamma può autoaccendersi in modo esplosivo (detonazione, o ``battito in testa''). Per $r=5$ si ha $\eta\simeq0.47$; nei motori a benzina moderni $r\simeq 10$, quindi $\eta\simeq0.60$, ma il rendimento reale è circa la metà a causa di attriti, perdite di calore e del fatto che il ciclo reale non è composto da trasformazioni reversibili. Nei motori diesel l'accensione avviene proprio per compressione, con $r\simeq15$--$20$.
 
 \subsection{Diagrammi di flusso}
 I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni cicliche. I piani orizzontali rappresentano le sorgenti di calore a diversa temperatura, la sezione del tubo è proporzionale all'energia scambiata (calore o lavoro).
