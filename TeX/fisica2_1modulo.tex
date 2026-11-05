@@ -401,7 +401,7 @@ In elettrostatica si studia il campo elettrico $\ve E$ in condizioni stazionarie
 \end{subequations}
 si parla allora di campo elettrostatico.
 \section{Carica\index{carica elettrica}}
-La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa. La più piccola è quella dell'elettrone, $-e\simeq\SI{-1.6E-19}{\coulomb}$, tutte le altre sono multipli interi di essa.
+La carica è una proprietà della materia, tanto quanto la massa. La carica può essere positiva o negativa e si conserva: in un sistema isolato la carica totale è costante. La carica è quantizzata: tutte le cariche osservate sono multipli interi della carica elementare $e=\SI{1.602176634E-19}{\coulomb}$ (valore esatto dal 2019), che è la carica del protone, mentre l'elettrone ha carica $-e$. I quark hanno carica $\pm e/3$ o $\pm 2e/3$, ma non si osservano mai isolati: le particelle che formano hanno sempre carica multipla intera di $e$. La quantizzazione fu dimostrata da Millikan (vedi la parte di Fisica~3).
 \section{Forza di Coulomb\index{forza!di Coulomb}}
 Partiamo da una legge sperimentale che riguarda la forza che una carica $q_1$ ferma esercita su una carica $q_2$ ferma nel vuoto:
 \begin{equation}
@@ -429,17 +429,17 @@ Naturalmente per la terza legge della dinamica:
   \ve F_{12}=-\ve F_{21}
 \]
 \subsection{Unità di misura}
-Un'idea è quella di porre $K_e=1$ e di definire la carica unitaria quella carica che posta alla distanza unitaria da una carica unitaria produce una forza unitaria. Questo è quello che si fa nel sistema CGS Elettrostatico\index{CGS elettrostatico}. Non si definisce a priori la carica, che prende il nome di u.e.s.\@ unità elettrostatica semplice\index{unità elettrostatica semplice}, chiamata anche stat--coulomb\index{stat--coulomb}.
+Un'idea è quella di porre $K_e=1$ e di definire come carica unitaria quella carica che, posta alla distanza unitaria da una carica uguale, la respinge con una forza unitaria. Questo è quello che si fa nel sistema CGS Elettrostatico\index{CGS elettrostatico}. Non si definisce a priori la carica, che prende il nome di u.e.s.\@ unità elettrostatica semplice\index{unità elettrostatica semplice}, chiamata anche stat--coulomb\index{stat--coulomb}.
 
-Il secondo modo è di definire a priori la carica, ed è quello che si fa nel Sistema Internazionale. Si definisce coulomb\index{coulomb} quella carica che attraversando un voltametro al nitrato d'argento ($\mathrm{AgNO_3}$) deposita sul catodo una quantità di Ag di \SI{0.00111800}{\gram}. \`E una definizione provvisoria. Si ricava quindi $K_e\simeq \SI{8.8974E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI si è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nella quale $K_e=\frac{1}{4\pi\varepsilon_0}$, $\varepsilon_0\simeq \SI{8.8E-12}{\coulomb\squared\per\newton\metre\squared}$.
+Il secondo modo è di definire a priori l'unità di carica, ed è quello che si fa nel Sistema Internazionale. Storicamente il coulomb\index{coulomb} è stato definito prima attraverso l'elettrolisi (la carica che, attraversando una soluzione di nitrato d'argento, deposita sul catodo \SI{1.118}{\milli\gram} di argento), poi dal 1948 come la carica trasportata in un secondo da una corrente di un ampere, a sua volta definito dalla forza tra due fili percorsi da corrente. Dal 2019 il coulomb è definito fissando il valore esatto della carica elementare $e$. La costante risulta quindi una grandezza misurata: $K_e\simeq \SI{8.98755E9}{\newton\meter\squared\per\coulomb\squared}$. Nell'ambito del SI è comodo usare il sistema razionalizzato Giorgi\index{Giorgi}\index{sistema!razionalizzato Giorgi}, nel quale $K_e=\frac{1}{4\pi\varepsilon_0}$, con $\varepsilon_0\simeq \SI{8.854E-12}{\coulomb\squared\per\newton\per\metre\squared}$ costante dielettrica (o permittività) del vuoto.
 
 Il coulomb e lo stat-coulomb nonostante siano unità della stessa grandezza hanno dimensioni diverse.
-\begin{Es}[pendolo magnetico]
+\begin{Es}[pendoli carichi]
   \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{immagini/fisica2/pendolo_carico}
   \end{figure}
-Ci si chiede l'equilibrio del pendolo in figura. Se $q_1q_2<0$ allora l'equilibrio è $x=0$.
+Due palline di massa $m$ e cariche $q_1$, $q_2$ sono appese a due fili di lunghezza $l$ fissati nello stesso punto. Cerchiamo la posizione di equilibrio, indicando con $x$ la distanza di ciascuna pallina dalla verticale (la distanza tra le palline è $2x$). Se $q_1q_2<0$ le palline si attraggono e l'equilibrio è $x=0$ (le palline si toccano); consideriamo quindi $q_1q_2>0$.
 \[\ve F_e=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{d^2}\ver e_{q_1,q_2}=\frac{q_1q_2}{4\pi\varepsilon_0}\frac{1}{4x^2}\ver x\]
 \[\ve P=-mg\ver \jmath\]
 Scomponendo sugli assi e imponendo l'equilibrio:
@@ -469,7 +469,7 @@ La carica totale è allora:
 \[Q=\int_V\rho(\ve r)\,\ud V\]
 Allo stesso modo possiamo definire una densità superficiale di carica \index{densità di carica!superficiale}$\sigma(\ve r)$, o lineare \index{densità di carica!lineare}$\lambda(\ve r)$.
 \subsection{Forza}
-Usado la densità di carica possiamo riscivere la forma di Coulumb. La forza dell'elementino $\ud V'$ (posto nelle cordinate $\ve r'$) sulla carica puntiforme esterna $q$ è
+Usando la densità di carica possiamo riscrivere la legge di Coulomb. La forza dell'elementino $\ud V'$ (posto nelle coordinate $\ve r'$), che contiene la carica $\ud q'=\rho(\ve r')\ud V'$, sulla carica puntiforme esterna $q$ è
 \[\ud\ve F=\frac{1}{4\pi\varepsilon_0}\frac{q\,\ud q'}{\norm{\ve r-{\ve r}\,^\prime}^3}\left(\ve r-{\ve r}\,^\prime\right)\]
 Quindi la forza totale del volume $V$ sulla carica esterna $q$:
 \[\ve F=\int_V \ud \ve F=\frac{q}{4\pi\varepsilon_0}\int_V\frac{\
@@ -479,7 +479,7 @@ Fino ad ora abbiamo usato il concetto di azione a distanza\index{azione a distan
 %\[{\oint\limits_0^1}_{\Gamma}\]
 %\[\mathop{{\int\!\!\!\!\!\int}\mkern-21mu \bigcirc}\limits_{3}{{\mathop{\rm{x}}}}\]
 %\[\mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu\bigodot}\limits_{0}{{\mathop{\rm x}}}}\]
-cioè una carica produce direttamente (o attraverso le linee di forza) una forza su un'altra carica. L'altro modo di pensare è che una carica modifica il campo elettrostatico, il quale produce una forza su un'altra carica. Definiamo il campo elettrostatico:
+cioè una carica produce direttamente (o attraverso le linee di forza) una forza su un'altra carica. L'altro modo di pensare è che una carica crea nello spazio circostante un campo elettrostatico, il quale produce una forza su un'altra carica. Definiamo il campo elettrostatico:
 \[\ve E=\frac{\ve F}{q}\]
 con $\ve F$ la forza esercitata dalla carica generante il campo sulla carica esplorativa e $q$ il valore della carica esplorativa, cioè la carica su cui agisce il campo. Può essere interpretato come la forza nell'unità di carica. Per una carica puntiforme $q$ nell'origine abbiamo:
 \begin{equation}
@@ -494,13 +494,14 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
   \end{figure}
   Im\-ma\-gi\-nia\-mo un filo infinito in coincidenza dell'asse $x$ sul quale sia depositata una densità lineare $\lambda$ uniforme. Il fatto che il filo sia di lunghezza infinita semplifica notevolmente i conti per motivi di simmetria, infatti possiamo dire in qualunque punto lungo l'asse $y$ ci mettiamo di avere metà filo a destra e metà a sinistra. Sia $P$ un punto sull'asse $y$: $P=(0,R,0)$. Consideriamo un elementino del filo $\ud x$, esisterà un altro elementino simmetrico che annulla la componente $x$ del campo; questo per ogni porzione del filo si consideri, in quanto infinito. L'elementino $\ud x$ genera in $P$ un campo $\ud \ve E$. La carica su $\ud x$ è $\ud q=\ud x\lambda$, quindi:
   \[\ud\ve E=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}\ve r\]
-  \[\ud E_y=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}r\cos\theta\quad \ud E_x=\ud E_z=0\]
+  \[\ud E_y=\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^3}r\cos\theta\]
+  mentre la componente $\ud E_x$ si annulla con quella dell'elementino simmetrico e $\ud E_z=0$.
   \[x=R\tan\theta\quad\ud x=R\frac{1}{\cos^2\theta}\ud\theta\quad r=\frac{R}{\cos\theta}\]
   \begin{align*}E_y & =\int\ud E_y=\int_{-\infty}^{+\infty}\frac{1}{4\pi\varepsilon_0}\frac{\lambda\ud x}{r^2}\cos\theta=\frac{\lambda}{4\pi\varepsilon_0}\int_{-\infty}^{+\infty}\frac{\ud x}{r^2}\cos\theta \\
                   & =\frac{\lambda}{4\pi\varepsilon_0}\frac{1}{R}\int_{-\frac{\pi}{2}}^{+\frac{\pi}{2}}\cos\theta\ud\theta=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{R}
   \end{align*}
   \[\ve E=\frac{1}{4\pi\varepsilon_0}\frac{2\lambda}{R}\ver{j}\]
-  L'ipotesi del filo infinito fisicamente può essere interpretato come $R\ll l$ con $l$ la lunghezza del filo.
+  L'ipotesi del filo infinito fisicamente può essere interpretata come $R\ll l$ con $l$ la lunghezza del filo, a patto di non avvicinarsi agli estremi. Il campo decresce come $1/R$, più lentamente di quello di una carica puntiforme.
 \end{Es}
 \begin{Es}[Anello]
   \label{es:anello}
@@ -516,10 +517,10 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
     \ve E(0,0,w) & =\int_C\frac{\ud q}{4\pi\varepsilon_0d^2}\ver e                                                                                                                \\
                  & =\int_0^{2\pi}\frac{q}{2\pi}\frac{\ud\theta}{4\pi\varepsilon_0}\frac{1}{R^2+w^2}\ver e                                                                         \\
                  & =\int_0^{2\pi}\frac{q}{2\pi}\frac{\ud\theta}{4\pi\varepsilon_0}\frac{1}{R^2+w^2}\left[\frac{w}{\sqrt{R^2+w^2}}\ver e_w+\frac{R}{\sqrt{R^2+w^2}}\ver e_r\right] \\
-                 & =\frac{q}{2\pi}\frac{\ud\theta}{4\pi\varepsilon_0}\frac{1}{R^2+w^2}\left[\frac{w}{\sqrt{R^2+w^2}}\ver e_w\right]\int_0^{2\pi}\ud\theta                         \\
+                 & =\frac{q}{2\pi}\frac{1}{4\pi\varepsilon_0}\frac{1}{R^2+w^2}\left[\frac{w}{\sqrt{R^2+w^2}}\ver e_w\right]\int_0^{2\pi}\ud\theta                         \\
                  & =\frac{q}{4\pi\varepsilon_0}\frac{w}{(R^2+w^2)^{\frac{3}{2}}}\ver e_w                                                                                          \\
   \end{align*}
-  Se $w\to +\infty$ coerentemente:
+  dove si è usato il fatto che l'integrale di $\ver e_r$ su tutto l'anello è nullo (i contributi radiali si annullano a coppie). Se $w\to +\infty$ coerentemente:
   \[\ve E(0,0,w)\to\frac{q}{4\pi\varepsilon_0}\frac{\ver e_w}{w^2}\]
   cioè come un punto.
 \end{Es}
@@ -542,13 +543,13 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
     \norm{\ve r-\ve r'} = (r'^2+z^2)^{1/2}
   \end{gather*}
   \begin{align*}
-    \ve E(0,0,z) & = \frac{1}{4\pi\varepsilon_0}\int \ud q'\frac{\ve r-\ve r'}{\norm{\ve r-\ve r}^3}                          \\
+    \ve E(0,0,z) & = \frac{1}{4\pi\varepsilon_0}\int \ud q'\frac{\ve r-\ve r'}{\norm{\ve r-\ve r'}^3}                          \\
                  & =\frac{1}{4\pi\varepsilon_0}\int \sigma r'\ud r'\ud\varphi'\frac{-r'\ver e_r+z\ver k}{(r'^2+z^2)^{3/2}}    \\
                  & =\frac{\sigma}{4\pi\varepsilon_0}\int\ud r'\int\ud\varphi\frac{-r'^2\ver e_r+r' z\ver k}{(r'^2+z^2)^{3/2}} \\
                  & =\frac{\sigma}{4\pi\varepsilon_0}\int_0^R \ud r'\frac{zr'\ver k}{(r'^2+z^2)^{3/2}}\int_0^{2\pi}\ud\varphi' \\
                  & =\frac{\sigma}{4\pi\varepsilon_0}2\pi z\ver k\int_0^R\frac{r'\ud r'}{(r'^2+z^2)^{3/2}}
   \end{align*}
-  questo risultato si può trovare usando l'esempio precedente \ref{es:anello}, in cui $\ve E = \frac{\lambda 2\pi r'}{4\pi\varepsilon_0}\frac{z}{(R^2+z^2)^{3/2}}\ver k$ e $\sigma\ud r=\lambda$, in quando deve essere $\ud q = \sigma\ud a=\lambda r \ud \varphi$. Usando la sostituzione $s = r'^2+z^2$, $\ud s = 2r'\ud r$:
+  questo risultato si può trovare usando l'esempio precedente \ref{es:anello}, in cui $\ve E = \frac{\lambda 2\pi r'}{4\pi\varepsilon_0}\frac{z}{(R^2+z^2)^{3/2}}\ver k$ e $\sigma\ud r=\lambda$, in quanto deve essere $\ud q = \sigma\ud a=\lambda r \ud \varphi$. Usando la sostituzione $s = r'^2+z^2$, $\ud s = 2r'\ud r$:
   \begin{align*}
     \ve E(0,0,z) & =\frac{\sigma}{4\pi\varepsilon_0}2\pi z\ver k\int_{z^2}^{R^2+z^2}\frac{\ud s}{2s^{3/2}}                   \\
                  & =\frac{\sigma}{4\pi\varepsilon_0}2\pi z\ver k\left.\frac{-2}{2s^{1/2}}\right|_{z^2}^{R^2+z^2}             \\
@@ -565,6 +566,7 @@ Abbiamo definito il campo elettrostatico come la forza sulla carica di prova: è
   \[
     \lim_{z\to 0^\pm}\ve E(0,0,z)=\lim_{z\to 0^\pm} \frac{\sigma}{2\varepsilon_0} z\left(\frac{1}{|z|}-\frac{1}{\sqrt{R^2+z^2}}\right)\ver k=\pm\frac{\sigma}{2\varepsilon_0}\ver k
   \]
+  cioè il campo di un piano infinito (lo stesso risultato si ha per $R\to\infty$): attraversando il disco il campo ha una discontinuità pari a $\sigma/\varepsilon_0$. Lontano dal disco ($|z|\gg R$), sviluppando $\frac{1}{\sqrt{R^2+z^2}}\simeq\frac{1}{|z|}\left(1-\frac{R^2}{2z^2}\right)$, si ritrova invece il campo di una carica puntiforme $q=\sigma\pi R^2$.
 \end{Es}
 \begin{Es}[filo finito]
   Consideriamo un filo di lunghezza finita sull'asse $z$ con densità di carica uniforme $\lambda$. Vogliamo trovare il campo elettrostatico lungo l'asse $x$. Un elementino infinitesimo avrà carica $\ud q'=\lambda\ud z'$. e genererà un campo:
@@ -641,7 +643,7 @@ che esprime il teorema di Gauss in forma differenziale. Riassumendo:
 \end{equation}
 con $Q$ le cariche interne ad $S$.
 \begin{Es}[campo sfera piena]
-  Sia $B$ una sfera piena di raggio $R$ centrata nell'origine, con densità di carica $\rho$ uniforme. Vogliamo il campo elettrico. Data la simmetria usiamo coordinate sferiche. Dobbiamo dividere lo spazio in due semispazi, uno con $r<R$ e l'altro con $r>R$.
+  Sia $B$ una sfera piena di raggio $R$ centrata nell'origine, con densità di carica $\rho$ uniforme. Vogliamo il campo elettrico. Data la simmetria usiamo coordinate sferiche. Dobbiamo dividere lo spazio in due regioni, una con $r<R$ e l'altra con $r>R$.
   \[\ve E(r,\theta,\varphi)=E_r\ver e_r+E_\theta\ver e_\theta+E_\varphi \ver e_\varphi=E_r(r)\ver e_r\]
   infatti il campo è radiale e dipende solo dalla distanza dal centro per ragioni di simmetria per rotazioni.
   All'esterno, $r>R$, allora prendiamo una superficie $S$ sferica passante per $P$:
@@ -664,14 +666,14 @@ con $Q$ le cariche interne ad $S$.
   \end{figure}
 \end{Es}
 \begin{Es}[Piano]
-  Consideriamo un piano uniformemente carico con distribuzione $\sigma$. Per ragioni di simmetria il campo è perpendicolare al piano. Costruiamo una superficie gaussiana a forma di parallelepipedo, in modo che intersechi il piano. Il flusso non è nullo solo sulle facce parallele al piano. Usando Gauss:
+  Consideriamo un piano uniformemente carico con distribuzione $\sigma$. Per ragioni di simmetria il campo è perpendicolare al piano. Costruiamo una superficie gaussiana a forma di cilindro (o di parallelepipedo) con le basi di area $A$ parallele al piano, una per parte, in modo che intersechi il piano. Il flusso non è nullo solo sulle facce parallele al piano. Usando Gauss:
   \begin{align*}
     \Phi_S(\ve E)= & \Phi_{S_1}(\ve E)+\Phi_{S_2}(\ve E)=\int_{S_1}\ve E\cdot\ve n\,\ud a+\int_{S_2}\ve E\cdot\ve n\,\ud a=2EA \\
     =              & \frac{Q}{\varepsilon_0}=\frac{1}{\varepsilon_0}\int_A \sigma\,\ud a=\frac{\sigma A}{\varepsilon_0}
   \end{align*}
   Allora:
   \[E=\frac{\sigma}{2\varepsilon_0}\]
-  Notare che non dipende dalla distanza.
+  Notare che non dipende dalla distanza: le linee di campo sono parallele e non si diradano allontanandosi dal piano.
 \end{Es}
 \begin{Es}[condensatore piano\index{condensatore!piano}]
   Consideriamo due lastre molto vicine, che equivale a dire due lastre infinite, parallele con distribuzione $\pm\sigma$. Usando il risultato dell'esempio precedente e del principio di sovrapposizione, ricordando che stiamo sommando quantità vettoriali, possiamo dire che il campo all'esterno è nullo ovunque, mentre tra le due armature è doppio:
@@ -778,9 +780,9 @@ Notiamo che è indifferente l'ordine in cui aggiungiamo le cariche. In generale:
 \end{equation}
 Il fattore $\frac{1}{2}$ serve perché altrimenti le coppie sarebbero contate due volte, mentre non conta l'ordine.
 \subsubsection{Coppia stesso segno}
-Se il campo è generato da una sorgente positiva, allora se muoviamo $+q$ il suo potenziale vale zero all'infinito e vale infinito a zero. Stessa cosa se la sorgente è negativa e la carica esploratrice negativa.
+Se il campo è generato da una sorgente positiva e muoviamo una carica $+q$, l'energia potenziale vale zero all'infinito e tende a $+\infty$ avvicinandosi alla sorgente: la forza è repulsiva. Stessa cosa se la sorgente è negativa e la carica esploratrice negativa.
 \subsubsection{Coppia segno opposto}
-\`E come il caso gravitazionale, essendo in questo caso la forza attrattiva. Il potenziale è massimo e nullo all'infinito, mentre è meno infinito a zero.
+\`E come il caso gravitazionale, essendo in questo caso la forza attrattiva. L'energia potenziale è massima e nulla all'infinito, mentre tende a $-\infty$ avvicinandosi alla sorgente.
 \section{Maxwell per l'elettrostatica}
 \begin{equation}
   \ve E=-\ve \nabla\varphi
@@ -814,7 +816,7 @@ Consideriamo un dipolo, cioè un sistema di due cariche uguali, con segno oppost
 \begin{equation}
   \varphi=\varphi(\rho,z)=\frac{1}{4\pi\varepsilon_0}\left\{\frac{-q}{r_1}+\frac{q}{r_2}\right\}
 \end{equation}
-$r_1$ è la distanza tra il punto $P$ di coordinate $(x,y,z)$ e il punto $A$ di coordinate $(0,0,\delta/2)$, quindi:
+$r_2$ è la distanza tra il punto $P$ di coordinate $(x,y,z)$ e il punto $A$ di coordinate $(0,0,\delta/2)$, dove si trova la carica $+q$, mentre $r_1$ è la distanza da $(0,0,-\delta/2)$, dove si trova $-q$; quindi:
 \[
   r_2 = \norm{P-A} = \sqrt{x^2+y^2+(z-\delta/2)^2}=\sqrt{\rho^2+(z-\delta/2)^2}
 \]
@@ -846,7 +848,7 @@ oppure come:
 \begin{equation}
   \varphi(\ve r)=-\ve p\cdot\ve\nabla\Phi_0
 \end{equation}
-con $\Phi_0$ il potenziale sulla carica($\frac{1}{4\pi\varepsilon_0}\frac{1}{r}$). Usando le coordinate cartesiane, $\ve r=x\ver \imath+y\ver \jmath+z\ver k$, $\ve p=p\ver k$:
+con $\Phi_0=\frac{1}{4\pi\varepsilon_0}\frac{1}{r}$ il potenziale di una carica unitaria. Usando le coordinate cartesiane, $\ve r=x\ver \imath+y\ver \jmath+z\ver k$, $\ve p=p\ver k$:
 \begin{equation}
   \varphi(x,y,z)=\frac{1}{4\pi\varepsilon_0}\frac{pz}{\left(x^2+y^2+z^2\right)^\frac{3}{2}}
 \end{equation}\index{potenziale!elettrostatico!del dipolo}
@@ -876,11 +878,11 @@ in forma vettoriale:
 \begin{equation}
   \label{eq:campo_dipolo}
   \ve E(\ve r)=\frac{1}{4\pi\varepsilon_0}\left\{3\left(\ve p\cdot\ve r\right)\frac{\ve r}{r^5}-\frac{\ve p}{r^3}\right\}\end{equation}
-Esso decresce con $r^3$ ed è solenoidale, cioè le linee del campo si chiudono. Da questa discende che il flusso su una superficie che racchiude il dipolo è nullo.
+Esso decresce con $r^3$. Le linee di campo escono dalla carica positiva ed entrano in quella negativa; poiché la carica totale è nulla, per il teorema di Gauss il flusso attraverso una qualsiasi superficie che racchiude il dipolo è nullo. Sull'asse del dipolo ($\theta=0$) il campo vale $\frac{2p}{4\pi\varepsilon_0r^3}$, sul piano equatoriale ($\theta=\pi/2$) vale $\frac{p}{4\pi\varepsilon_0r^3}$ ed è antiparallelo a $\ve p$.
 \subsection{Energia potenziale\index{energia!potenziale!del dipolo}}
 Mettiamo un dipolo in un campo elettrico $\ve E$ esterno. Assumiamo che le due cariche non si muovano. Dove c'è la carica $-q$ ci sia un potenziale esterno $\varphi_A$, nell'altra $\varphi_B$. L'energia potenziale è la somma dell'energia potenziale delle due cariche:
 \[W=W_B+W_A=q(\varphi_B-\varphi_A)\]
-Calcoliamo il potenziale $\varphi_B$ sviluppando $\varphi_A$ nell'intorno di $\varphi_A$:
+Calcoliamo il potenziale $\varphi_B$ sviluppando il potenziale nell'intorno del punto $A$, con $\ve\delta$ il vettore che va dalla carica negativa a quella positiva:
 \[\varphi_B\simeq\varphi_A+\ve\nabla\varphi\cdot\ve\delta\]
 Allora l'energia diventa:
 \[W=q\left(\varphi_A+\ve\nabla\varphi\cdot\ve\delta-\varphi_A\right)=q\ve\delta\cdot\ve\nabla\varphi=-\ve p\cdot\ve E\]
@@ -888,9 +890,10 @@ Si deduce che la posizione di equilibrio stabile, che corrisponde all'energia mi
 \subsection{Forza\index{forza!sul dipolo}}
 \label{forza_dipolo100}
 \[\ve F=-\ve\nabla W=\ve\nabla\left(\ve p\cdot\ve E\right)=\left(\ve p\cdot\ve\nabla\right)\ve E\]
+dove l'ultima uguaglianza vale per $\ve p$ costante e perché il campo elettrostatico è irrotazionale.
 per esempio:
 \[F_x=\left(p_x\frac{\partial E_x}{\partial x}+p_y\frac{\partial E_x}{\partial y}+p_z\frac{\partial E_x}{\partial z}\right)\]
-quindi se il campo elettrico esterno è omogeneo allora non c'è forza sul dipolo.
+quindi se il campo elettrico esterno è omogeneo allora non c'è forza sul dipolo, ma solo un momento. In un campo non uniforme un dipolo allineato con il campo viene attratto verso le zone dove il campo è più intenso: è per questo che un pettine elettrizzato attira i pezzetti di carta, nei quali il campo induce un momento di dipolo.
 \subsection{Momento\index{momento!sul dipolo}}
 \begin{figure}[htbp]
   \centering
@@ -901,7 +904,7 @@ Il lavoro per far ruotare il sistema di $\ud\theta$ è
 notare che $\theta$ diminuisce, quindi la sua variazione è negativa. Essendo il sistema isolato il lavoro compiuto deve tramutarsi in variazione di energia potenziale:
 \[\ud W=\delta L=M\ud\theta\]
 Allora:
-\[M=\frac{\ud W}{\ud\theta}=\frac{-pE\cos\theta}{\ud\theta}=pE\sin\theta\]
+\[M=\frac{\ud W}{\ud\theta}=\frac{\ud(-pE\cos\theta)}{\ud\theta}=pE\sin\theta\]
 \[\ve M=\ve p\times\ve E\]
 che fa ruotare il dipolo fino alla posizione di equilibrio. Questa relazione può essere calcolata semplicemente dalla definizione di momento torcente:
 \[
@@ -915,9 +918,9 @@ Consideriamo due dipoli $\ve p_1$ e $\ve p_2$. Vogliamo sapere come interagiscon
 \]
 quindi l'energia di interazione è:
 \[
-  U = -\ve E_1\cdot \ve p_2 = \frac{1}{\giorgi}\left(3\frac{(\ve p_1\cdot \ve r)(\ve p_2\cdot \ve r)}{r^5}-\frac{\ve p_1\cdot\ve p_2}{r^3}\right)
+  U = -\ve E_1\cdot \ve p_2 = \frac{1}{\giorgi}\left(\frac{\ve p_1\cdot\ve p_2}{r^3}-3\frac{(\ve p_1\cdot \ve r)(\ve p_2\cdot \ve r)}{r^5}\right)
 \]
-che varia come $\frac{1}{r^3}$. Quest'interazione è quella che si verifica tra molecole neutre ma polari, che presentano un momendo di dipolo, come l'acqua.
+che varia come $\frac{1}{r^3}$. Per esempio due dipoli allineati sulla stessa retta e concordi ($\ve p_1\parallel\ve p_2\parallel\ve r$) hanno $U=-\frac{2p_1p_2}{4\pi\varepsilon_0r^3}<0$ e si attraggono, mentre due dipoli affiancati e concordi ($\ve p_1\parallel\ve p_2\perp\ve r$) hanno $U>0$ e si respingono. Quest'interazione è quella che si verifica tra molecole neutre ma polari, che presentano un momento di dipolo permanente, come l'acqua; mediata sulle orientazioni dovute all'agitazione termica dà luogo a una forza attrattiva che decresce come $1/r^7$ (forza di van der Waals).
 \index{dipolo|)}
 \section{Sviluppo in multipoli\index{multipoli|(}\index{sviluppo!in multipoli|(}}
 Il multipolo è un sistema formato da diverse cariche. Ci interessa sapere come si comporta $\varphi$ a grande distanza. Una distribuzione di cariche può essere approssimata a grande distanza da sovrapposizione di multipoli.
@@ -943,7 +946,7 @@ si ha:
 \begin{align*}
   {\norm{\ve r-\ve r\,'}}^{-1}= & \frac{1}{r}\left(1+\frac{r'^2}{r^2}-\frac{2\ve r\cdot \ve r\,'}{r^2}\right)^{-\frac{1}{2}}                                                                                                                                                                                                                                                                                                                                             \\
   =                             & \frac{1}{r}\left\{1+\frac{\ve r\cdot\ve r\,'}{r^2}-\frac{1}{2}\frac{r'^2}{r^2}+\frac{3}{8}\left[\frac{2\ve r\cdot\ve r\,'}{r^2}-\frac{r'^2}{r^2}\right]^2+o\left(\frac{r'}{r}\right)^2\right\}                                                                                                                                                                                                                                         \\
-  =                             & \frac{1}{r}\left\{\underbrace{1}_{\sim 1}+\underbrace{\frac{\ve r\cdot\ve r\,'}{r^2}}_{\sim x}-\underbrace{\frac{1}{2}\frac{r'^2}{r^2}}_{\sim x^2}+\underbrace{\frac{3}{8}\left(\frac{r'}{r}\right)^4}_{\sim x^4}-\underbrace{\frac{3}{8}\left(\frac{r'}{r}\right)^2\frac{\ve r\cdot \ve r'}{r^3}}_{\sim x^3}+\underbrace{\frac{3}{2}\frac{(\ve r\cdot \ve r')}{r^4}}_{x^2}+\underbrace{o\left(\frac{r'}{r}\right)^2}_{o(x^2)}\right\} \\
+  =                             & \frac{1}{r}\left\{\underbrace{1}_{\sim 1}+\underbrace{\frac{\ve r\cdot\ve r\,'}{r^2}}_{\sim x}-\underbrace{\frac{1}{2}\frac{r'^2}{r^2}}_{\sim x^2}+\underbrace{\frac{3}{8}\left(\frac{r'}{r}\right)^4}_{\sim x^4}-\underbrace{\frac{3}{2}\left(\frac{r'}{r}\right)^2\frac{\ve r\cdot \ve r'}{r^2}}_{\sim x^3}+\underbrace{\frac{3}{2}\frac{(\ve r\cdot \ve r')^2}{r^4}}_{\sim x^2}+\underbrace{o\left(\frac{r'}{r}\right)^2}_{o(x^2)}\right\} \\
   \simeq                        & \frac{1}{r}+\frac{\ve r\cdot\ve r\,'}{r^3}+\frac{1}{2}\left[-\frac{r'^2}{r^3}+\frac{3\left(\ve r\cdot\ve r\,'\right)^2}{r^5}\right]                                                                                                                                                                                                                                                                                                    \\
 \end{align*}
 Nell'ultimo passaggio abbiamo considerato che $r\gg r'$. Sostituendo l'ultimo risultato nella \eqref{multipolo_01} si ottiene:
@@ -958,11 +961,11 @@ Analizziamo i termini della \eqref{multipolo02}. Il primo:
 \[\frac{1}{4\pi\varepsilon_0}\frac{\ve r}{r^3}\cdot\int_V\rho(\ve r\,')\ve r\,'\,\ud v\]
 è il potenziale di un dipolo, infatti possiamo definire:
 \[\ve p=\int_V\rho(\ve r\,')\ve r\,'\ud v\]
-momento di dipolo della distribuzione di carica. Gli altri termini sono i potenziali di quadripolo, ottupolo, \ldots Notare che:
+momento di dipolo della distribuzione di carica. Gli altri termini sono i potenziali di quadrupolo, ottupolo, \ldots, che decrescono come potenze sempre più alte di $1/r$. Se la carica totale $Q$ non è nulla il vettore
 \begin{equation}
-  \ve\delta=\frac{\ve p}{|q|}=\frac{\int_V\rho(\ve r\,')\ve r\,'\ud v}{|q|}
+  \ve r_c=\frac{\ve p}{Q}=\frac{\int_V\rho(\ve r\,')\ve r\,'\ud v}{Q}
 \end{equation}
-individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipoli|)}\index{multipoli|)}
+individua il centro di \index{centro!di carica}carica, analogo al centro di massa: scegliendolo come origine il termine di dipolo si annulla. Se invece $Q=0$ il momento di dipolo non dipende dalla scelta dell'origine.\index{sviluppo!in multipoli|)}\index{multipoli|)}
 \begin{Es}[Doppio anello]
   Siano due anelli sottili di raggio $R$ nel piano $x$--$y$ ad altezza $z=\pm\frac{d}{2}$ e con il centro sull'asse $z$. Gli anelli sono uniformemente carichi con densità lineare $\pm\lambda$. Calcolare il campo elettrico totale lungo l'asse $z$, fare un'approssimazione per $|z|\gg d,R$.
   \begin{figure}[H]
@@ -971,7 +974,7 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
     % due_anelli_schema.pdf: 436x297 pixel, 72dpi, 15.38x10.48 cm, bb=0 0 436 297
   \end{figure}
 
-  Il campo elettrico può essere trovato con il principio di sovrappossizione, calcolando separatamente i campi generati da ciascun anello. Come calcolato nell'esempio \ref{es:anello} il campo elettrico generato da un anello nell'origine lungo il suo asse è:
+  Il campo elettrico può essere trovato con il principio di sovrapposizione, calcolando separatamente i campi generati da ciascun anello. Come calcolato nell'esempio \ref{es:anello} il campo elettrico generato da un anello nell'origine lungo il suo asse è:
   \begin{align*}
     \ve E_0(0,0,z) & =\frac{q}{4\pi\varepsilon_0}\frac{z}{(R^2+z^2)^{\frac{3}{2}}}\ver e_z      \\
                    & =\frac{\lambda R}{2\varepsilon_0}\frac{z}{(R^2+z^2)^{\frac{3}{2}}}\ver e_z
@@ -983,14 +986,14 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
     \frac{z-\frac{d}{2}}{\left[R^2+(z-\frac{d}{2})^2\right]^{\frac{3}{2}}}
     -\frac{z+\frac{d}{2}}{\left[R^2+(z+\frac{d}{2})^2\right]^{\frac{3}{2}}}\right\}\ver e_z
   \end{align*}
-  Per ottenere un'appossimazione per $|z|\gg d,R$ possiamo fare uno sviluppo di Taylor:
+  Per ottenere un'approssimazione per $|z|\gg d,R$ possiamo fare uno sviluppo di Taylor:
   \begin{multline*}
     \frac{z-\frac{d}{2}}{\left[R^2+(z-\frac{d}{2})^2\right]^{\frac{3}{2}}}
     =\frac{z}{|z|^3}\frac{(1-\frac{d}{2z})}{\left[\underbrace{\left(\frac{R}{z}\right)^2}_{\simeq 0}+\left(1-\frac{d}{2z}\right)^2\right]^{3/2}}\\
     \simeq\frac{\sgn{z}}{z^2}\left(1-\frac{d}{2z}\right)\left(1+\frac{3d}{2z}\right)
     \simeq\frac{\sgn{z}}{z^2}\left(1+\frac{d}{z}\right)
   \end{multline*}
-  La semplificazione $\left(\frac{R}{z}\right)^2\simeq 0$ e anche quella nell'ultimo passaggio sono giustificate dal fatto che la nostra espanzione è al primo grado. Quindi la nostra approssimazione per il campo elettrostatico:
+  La semplificazione $\left(\frac{R}{z}\right)^2\simeq 0$ e anche quella nell'ultimo passaggio sono giustificate dal fatto che il nostro sviluppo è al primo ordine in $d/z$ (e che $R^2/z^2$ è del secondo ordine). Quindi la nostra approssimazione per il campo elettrostatico:
   \[
     \ve E(0,0,z) \simeq \frac{\lambda R}{2\varepsilon_0}\frac{\sgn{z}}{z^2}\left\{\left(1+\frac{d}{z}\right)-\left(1-\frac{d}{z}\right)\right\}\ver e_z
     = \frac{\lambda R}{\varepsilon_0}\frac{d}{|z|^3}\ver e_z
@@ -999,7 +1002,7 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
   \[
     \ve p = \int_\Gamma \ve r\,\ud q = \int_{\Gamma_+} \left\{\frac{d}{2}\ver e_z+R\ver u_r\right\}\left(\lambda R\ud\phi\right) + \int_{\Gamma_-} \left\{-\frac{d}{2}\ver e_z+R\ver u_r\right\}\left(-\lambda R\ud\phi\right)
   \]
-  spezzando gli integrali le parti che contengono $\ver u_r$ si annullano, in quando la somma di tutti i versori radiali, al variare dell'angolo $\phi$ fa il vettore nullo.
+  spezzando gli integrali le parti che contengono $\ver u_r$ si annullano, in quanto la somma di tutti i versori radiali, al variare dell'angolo $\phi$ fa il vettore nullo.
   \[
     \ve p = 2\pi\lambda R d\ver e_z
   \]
@@ -1020,7 +1023,7 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
 \begin{Es}[Doppio anello 2]
   Calcolare il lavoro che deve essere fatto dall'esterno per portare una carica $e$ da un punto infinitamente lontano all'origine. Calcolare il lavoro che dev'essere fatto per portare un dipolo $\ve p$ con il verso lungo l'asse $z$ da un punto infinitamente lontano all'origine.
 
-  Il lavoro fatto dall'esterno può calcolare come variazione dell'energia potenziale:
+  Il lavoro fatto dall'esterno si può calcolare come variazione dell'energia potenziale:
   \[
     L_\text{ext} = e(\varphi(0)-\varphi(\infty))
   \]
@@ -1041,7 +1044,7 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
   \]
 
 
-  Il lavoro fatto per spostare il dipolo si può fare in maniera analoga, ricordando che l'energia potenziale di un dipolo che interagisce con un campo elettromagnetico è $-\ve p\cdot \ve E$.
+  Il lavoro fatto per spostare il dipolo si può fare in maniera analoga, ricordando che l'energia potenziale di un dipolo in un campo elettrico esterno è $-\ve p\cdot \ve E$.
   \begin{align*}
     W(0) & = -\ve p\cdot \frac{\lambda R}{2\varepsilon_0}\left\{
     \frac{z-\frac{d}{2}}{\left[R^2+\left(z-\frac{d}{2}\right)^2\right]^{\frac{3}{2}}}
@@ -1059,8 +1062,8 @@ individua il centro di \index{centro!di carica}carica.\index{sviluppo!in multipo
 \section{Conduttori ed isolanti\index{conduttori}\index{isolanti}}
 Dal punto di vista elettrico i materiali possono essere divisi in due categorie:
 \begin{description}
-  \item[conduttori] hanno molte cariche elettriche libere, una nuvola elettronica con densità constante in condizioni standard;
-  \item[isolanti] hanno atomi e molecole molto legati tra di loro che atomi tendono a deformarsi sotto l'effetto di un campo elettrico;
+  \item[conduttori] hanno molte cariche elettriche libere di muoversi (nei metalli gli elettroni di conduzione, circa uno per atomo, che formano una ``nuvola'' elettronica con densità costante);
+  \item[isolanti] (o dielettrici) hanno gli elettroni legati ai propri atomi o molecole, che sotto l'effetto di un campo elettrico possono solo deformarsi o orientarsi (polarizzarsi);
 \end{description}
 I materiali si caratterizzano per tre costanti:
 \begin{itemize}
@@ -1072,24 +1075,24 @@ I materiali si caratterizzano per tre costanti:
 \section{Carica nei conduttori}
 Se carichiamo un conduttore gli elettroni dopo una frazione di tempo trovano una condizione di equilibrio, in cui non agisce nessuna forza netta,  e quindi il campo elettrostatico all'interno del conduttore deve essere nullo. In realtà questa non è una grande dimostrazione, un'altra soluzione potrebbe essere che in presenza di conduttori le cariche non stanno mai ferme.
 
-Se viene applicato un campo elettrico esterno al conduttore, allora le cariche al suo interno si muoveranno creando un campo elettrico indotto che si oppone a quello esterno. Il movimento delle cariche continuerà finché il campo elettrico indotto non sarà uguale e contrario a quello esterno. In questo modo la somma del campo elettrico esterno e di quello indotto è nullo. Questo processo è praticamente istantaneo. Ovviamente il campo elettrico esterno può essere non nullo.
+Se viene applicato un campo elettrico esterno al conduttore, allora le cariche al suo interno si muoveranno creando un campo elettrico indotto che si oppone a quello esterno. Il movimento delle cariche continuerà finché il campo elettrico indotto non sarà uguale e contrario a quello esterno. In questo modo la somma del campo elettrico esterno e di quello indotto è nulla all'interno del conduttore. Questo processo è praticamente istantaneo (in un buon conduttore dura meno di \SI{1E-12}{\second}). Ovviamente il campo all'esterno del conduttore può essere non nullo.
 
 Essendo il campo il gradiente del potenziale allora se il campo è nullo il potenziale è costante e quindi il conduttore è un corpo equipotenziale e in particolare la sua superficie è equipotenziale.
 
 Il campo elettrostatico all'esterno è ortogonale alla superficie essendo essa una superficie equipotenziale, inoltre se esso avesse una componente tangenziale le cariche al suo interno si muoverebbero.
 
-Usando il teorema di Gauss, con superfici gaussiane che tendono al bordo scopriamo che all'interno non ci possono essere cariche, allora per la conservazione della carica esse sono sul bordo. Con la versione differenziale $\diver\ve E=\rho$ si ottiene la stessa conclusione più rapidamente. La carica netta deve essere sulla superficie.
+Usando il teorema di Gauss, con superfici gaussiane che tendono al bordo scopriamo che all'interno non ci possono essere cariche, allora per la conservazione della carica esse sono sul bordo. Con la versione differenziale $\diver\ve E=\rho/\varepsilon_0$ si ottiene la stessa conclusione più rapidamente: se $\ve E=0$ all'interno, anche $\rho=0$. La carica netta deve essere sulla superficie.
 \section{Induzione elettrostatica}
 \begin{Def}[Induzione elettrostatica\index{induzione elettrostatica}]
   L'induzione elettrostatica è quel fenomeno per cui in presenza di un campo elettrico esterno le cariche libere in un conduttore si ridistribuiscono.
 \end{Def}
-Se mettiamo un conduttore in uno spazio in cui è presente un campo elettrico $\ve E_\text{ext}$ gli elettroni al suo interno si muovono in senso opposto ad $\ve E_\text{ext}$. In questo modo creano un accumulo di cariche che a sua volta crea un campo elettrico indotto dalla carica migrata $\ve E_i$. In pochissimo tempo gli elettroni arrivano ad un a posizione di equilibrio in cui:
+Se mettiamo un conduttore in uno spazio in cui è presente un campo elettrico $\ve E_\text{ext}$ gli elettroni al suo interno si muovono in senso opposto ad $\ve E_\text{ext}$. In questo modo creano un accumulo di cariche che a sua volta crea un campo elettrico indotto dalla carica migrata $\ve E_i$. In pochissimo tempo gli elettroni arrivano a una posizione di equilibrio in cui:
 \[\ve E=\ve E_i+\ve E_\text{ext}=0\]
-Possiamo allora affermare che (a parte il brevissimo istante in cui le cariche creano raggiungono l'equilibrio) il campo elettrico totale all'interno di un conduttore ideale è nullo. A causa della migrazione della carica all'interno del conduttore questo si attrarrà con la carica. Anche il campo esterno risulta deformato dalla nuova distribuzione di cariche e a grande distanza torna ad essere quello in assenza di distribuzione di cariche. Se il campo elettrico all'interno è nullo le cariche devono essersi accumulate sul bordo del conduttore, infatti:
+Possiamo allora affermare che (a parte il brevissimo istante in cui le cariche raggiungono l'equilibrio) il campo elettrico totale all'interno di un conduttore ideale è nullo. A causa della separazione delle cariche, un conduttore scarico viene attratto dalla carica che genera il campo esterno, perché le cariche indotte di segno opposto si trovano più vicine a essa. Anche il campo esterno risulta deformato dalla nuova distribuzione di cariche e a grande distanza torna ad essere quello che si avrebbe in assenza del conduttore. Se il campo elettrico all'interno è nullo le cariche devono essersi accumulate sul bordo del conduttore, infatti:
 consideriamo una superficie chiusa completamente compresa nel conduttore; essendo il campo interno nullo, per il teorema di Gauss, anche la carica deve essere nulla. Facciamo tendere questa superficie alla superficie del conduttore, la carica è sempre nulla. Per la conservazione della carica questa può essere solo sul bordo del conduttore.
 
 \section{Teorema di Coulomb\index{Coulomb}\index{teorema!di Coulomb}}
-Vogliamo calcolare il campo elettrico in prossimità della superficie del conduttore. Sappiamo già che questo è perpendicolare alla superficie. Sulla superficie si è distribuita una densità superficiale di carica $\sigma$ a causa del campo elettrico esterno, tale che $\int_S \sigma\ud a=Q$. Ipotizziamo che $Q=0$, cioè il conduttore sia inizialmente scarico.
+Vogliamo calcolare il campo elettrico in prossimità della superficie del conduttore. Sappiamo già che questo è perpendicolare alla superficie. Sulla superficie si è distribuita una densità superficiale di carica $\sigma$, tale che $\int_S \sigma\ud a=Q$, con $Q$ la carica totale del conduttore (eventualmente nulla, se la carica superficiale è dovuta solo all'induzione da parte di un campo esterno).
 
 Consideriamo un cilindretto di basi infinitesime $\ud A$, una interna e l'altra esterna al conduttore, perpendicolare alla superficie del conduttore. Il flusso attraverso la superficie laterale è nullo in quanto $\ve E\perp\ve n$, e anche il flusso attraverso la superficie interna al conduttore è nullo perché qui il campo è nullo. Rimane solo la superficie all'esterno del conduttore, per Gauss:
 \[\int_{S_1}\ve E\cdot\ve n\,\ud a=\frac{q}{\varepsilon_0}=\frac{\sigma\Delta a}{\varepsilon_0}\]
@@ -1116,10 +1119,10 @@ La forza sull'unità di area è detta pressione elettrostatica:
 \begin{equation}
   P=\frac{\ud(\ve F\cdot \ve n)}{\ud a}=\frac{1}{2}\frac{\sigma^2}{\varepsilon_0}
 \end{equation}
-naturalmente con verso verso l'esterno. Le forze tendono quindi a strappare le cariche verso l'esterno. Servono campi molto intensi per far uscire le cariche dal conduttore.
+diretta verso l'esterno, qualunque sia il segno di $\sigma$. Le forze tendono quindi a strappare le cariche verso l'esterno, ma servono campi molto intensi per far uscire le cariche dal conduttore. Usando il teorema di Coulomb la pressione si può scrivere $P=\frac{1}{2}\varepsilon_0E^2$, che è anche la densità di energia del campo elettrico.
 \subsubsection{Terra\index{terra}}
 \label{potenziale_terra}
-La terra è considerato come un enorme conduttore, così grande che non riusciamo a modificarne le caratteristiche elettrostatiche. \`E l'analogo termodinamico del bagno termico. Ad essa si attribuisce il valore di potenziale zero. Allora il potenziale possiamo definirlo come il lavoro necessario per portare una carica unitaria dalla terra al punto.
+La Terra è considerata come un enorme conduttore, così grande che non riusciamo a modificarne le caratteristiche elettrostatiche. \`E l'analogo termodinamico del bagno termico. Ad essa si attribuisce il valore di potenziale zero. Allora il potenziale possiamo definirlo come il lavoro necessario per portare una carica unitaria dalla terra al punto.
 \subsection{Induzione tra conduttori}
 Se avvicino un corpo $A$ carico a un $B$ scarico, le cariche su $B$ si ridistribuiscono in modo tale che il campo totale all'interno di $B$ sia nullo. Le cariche su $B$ si dicono indotte. Ora anche $B$ produce un campo elettrico all'esterno che induce una distribuzione di carica su $A$. Il tutto fino al raggiungimento di un equilibrio. Se ora colleghiamo $B$ con la terra, il conduttore $B$ e la terra diventano un unico conduttore; allora le cariche si distribuiranno sulla superficie di questo unico conduttore. Se stacchiamo la terra, $B$ risulta carico.
 \begin{figure}[htbp]
@@ -1134,12 +1137,12 @@ Se avvicino un corpo $A$ carico a un $B$ scarico, le cariche su $B$ si ridistrib
   \caption{Induzione elettrostatica.}
 \end{figure}
 \subsection{Induzione completa\index{induzione elettrostatica!completa}}
-Consideriamo un conduttore cavo scarico. Poniamo all'interno del conduttore una carica $q$. Applichiamo il teorema di Gauss all'interno del conduttore. Il campo è zero, allora la carica totale interna al condensatore è nulla. Facendo tendere la superficie gaussiana alla superficie interna si scopre che ci deve essere una carica $-q$ sulla parete interna del conduttore che bilancia la carica $q$ interna, in modo che la carica totale interna alla superficie gaussiana sia nulla. Sulla superficie esterna invece ci deve essere una carica $q$ in modo che il corpo sia ancora complessivamente scarico. La carica indotta è uguale alla carica inducente. Questo fenomeno avviene solo quando il corpo inducente è totalmente racchiuso dal corpo indotto.
+Consideriamo un conduttore cavo scarico. Poniamo all'interno del conduttore una carica $q$. Applichiamo il teorema di Gauss all'interno del conduttore. Il campo è zero, allora la carica totale interna alla superficie gaussiana è nulla. Facendo tendere la superficie gaussiana alla superficie interna si scopre che ci deve essere una carica $-q$ sulla parete interna del conduttore che bilancia la carica $q$ interna, in modo che la carica totale interna alla superficie gaussiana sia nulla. Sulla superficie esterna invece ci deve essere una carica $q$ in modo che il corpo sia ancora complessivamente scarico. La carica indotta è uguale (in valore assoluto) alla carica inducente. Questo fenomeno avviene solo quando il corpo inducente è totalmente racchiuso dal corpo indotto. Si noti che la distribuzione della carica $q$ sulla superficie esterna dipende solo dalla forma della superficie esterna, e non dalla posizione della carica all'interno della cavità.
 \begin{Es}[schermo elettrostatico\index{schermo elettrostatico} -- lo smerdatore]
-  Im\-ma\-gi\-nia\-mo una fanciulla rinchiusa dentro un conduttore cavo. Adamo, all'esterno, ha molta voglia di sperimentare. Prova a farsi notare avvicinando una carica positiva al conduttore. Sull'esterno si accumula una carica negativa, all'interno positiva. La fanciulla non si accorge di niente essendo il campo elettrico interno invariato. La fanciulla, tutta sola, prova a farsi notare, agitando una carica positiva. Sulla parete interna si crea un accumulo di cariche positive, all'esterno negative, ma Adamo non percepisce nessuna variazione del campo elettrostatico. Il conduttore cavo funziona da schermo elettrostatico.
+  Im\-ma\-gi\-nia\-mo una fanciulla rinchiusa dentro un conduttore cavo. Adamo, all'esterno, ha molta voglia di sperimentare. Prova a farsi notare avvicinando una carica positiva al conduttore. Sulla superficie esterna le cariche si ridistribuiscono: carica negativa dalla parte di Adamo, positiva dalla parte opposta; sulla parete interna invece non compare nessuna carica. La fanciulla non si accorge di niente, essendo il campo elettrico nella cavità sempre nullo. La fanciulla, tutta sola, prova a farsi notare agitando una carica positiva $q$. Sulla parete interna si induce una carica $-q$, sulla superficie esterna una carica $+q$. Se il conduttore è isolato Adamo vede quindi un campo, ma la distribuzione di carica sulla superficie esterna non dipende dalla posizione della carica interna: per quanto la fanciulla la agiti, Adamo non percepisce nessuna variazione del campo elettrostatico. Se poi il conduttore è collegato a terra la carica $+q$ esterna fluisce a terra e il campo all'esterno è nullo. Il conduttore cavo (anche una semplice rete metallica, la gabbia di Faraday) funziona da schermo elettrostatico in entrambe le direzioni, purché, per schermare l'esterno dall'interno, sia collegato a terra.
 \end{Es}
 \section{Potere dispersivo delle punte\index{potere dissipativo delle punte}}
-In un conduttore carico la densità di carica sugli spigoli è maggiore che altrove. Consideriamo una punta carica nell'atmosfera vicino ad una candela. Si osserva che la fiamma oscilla a causa di un vento ionico. Infatti la carica sul conduttore attira ioni dell'atmosfera di segno opposto che lentamente neutralizzano la carica sul conduttore e contemporaneamente respinge gli ioni con lo stesso segno.. Si crea così un movimento di cariche, in questo caso particelle cariche dell'aria che muovono la fiamma. Per spiegare il fenomeno interpretiamo gli spigoli come zone dove il raggio di curvatura è più piccolo. Consideriamo allora due sfere cariche con raggi diversi $R>r$ collegate a grande distanza (niente induzione) da un filo. Sulla prima sfera:
+In un conduttore carico la densità di carica sugli spigoli è maggiore che altrove. Consideriamo una punta carica nell'atmosfera vicino ad una candela. Si osserva che la fiamma oscilla a causa di un vento ionico. Infatti la carica sul conduttore attira ioni dell'atmosfera di segno opposto che lentamente neutralizzano la carica sul conduttore e contemporaneamente respinge gli ioni con lo stesso segno. Si crea così un movimento di cariche, in questo caso particelle cariche dell'aria che muovono la fiamma. Per spiegare il fenomeno interpretiamo gli spigoli come zone dove il raggio di curvatura è più piccolo. Consideriamo allora due sfere cariche con raggi diversi $R>r$ collegate a grande distanza (niente induzione) da un filo. Sulla prima sfera:
 \[V_1=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{R}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_R}{R}4\pi R^2=\frac{\sigma_R R}{\varepsilon_0}=\frac{Q}{4\varepsilon_0\pi R}\]
 Sulla seconda:
 \[V_2=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_2}\frac{\sigma_r\ud a}{r}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_r}{r}4\pi r^2=\frac{\sigma_r r}{\varepsilon_0}=\frac{q}{4\varepsilon_0\pi r}\]
@@ -1155,7 +1158,7 @@ Allora il rapporto tra le densità di carica (usando la precedente e la \eqref{c
 Dunque $\sigma_R<\sigma_r$ e, per il teorema di Coulomb, in prossimità dei conduttori:
 \[E_r>E_R\]
 \section{Capacità elettrica\index{capacità elettrica}}
-Consideriamo un conduttore isolato. Carichiamolo con una carica $q$; il conduttore raggiungerà un certo pontenziale:
+Consideriamo un conduttore isolato. Carichiamolo con una carica $q$; il conduttore raggiungerà un certo potenziale:
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma(\ve r\,')\,\ud a'}{\norm{\ve r-\ve r\,'}}\]
 Se aggiungiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si definisce:
 \begin{Def}[capacità di un conduttore]
@@ -1163,16 +1166,16 @@ Se aggiungiamo ancora $q$ arrivando a $2q$ anche il potenziale raddoppia. Si def
     C=\frac{q}{V}
   \end{equation}
 \end{Def}
-Esso è costante, dipende solo dalla geometria del conduttore. Si misura in $\text{farad}=\si{\farad}=\frac{\text{coulomb}}{\text{volt}}$.
+La capacità è costante e dipende solo dalla geometria del conduttore (e dal mezzo che lo circonda). Si misura in $\text{farad}=\si{\farad}=\frac{\text{coulomb}}{\text{volt}}$.
 \begin{Es}[sfera]
   Calcoliamo la capacità di una sfera conduttrice di raggio $R$. Sapendo che la carica si distribuisce uniformemente per simmetria:
   \[\sigma(\ve r)=\frac{Q}{4\pi R^2}=\sigma\]
   \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\oint_S\frac{\sigma(\ve r\,')\,\ud a'}{R}=\frac{1}{4\pi\varepsilon_0}\frac{Q}{4\pi R^2 R}4\pi R^2=\frac{1}{4\pi\varepsilon_0}\frac{Q}{R}\]
   \[C=\frac{Q}{\varphi}=4\pi\varepsilon_0R\]
-  Se $R=\SI{1}{\metre}$ allora $C=\SI{1E-10}{\farad}$. Il farad è un'unità generalmente grande.
+  Se $R=\SI{1}{\metre}$ allora $C\simeq\SI{1.1E-10}{\farad}$. Il farad è un'unità molto grande: anche la Terra, considerata come una sfera conduttrice isolata di raggio \SI{6.4E6}{\meter}, ha una capacità di soli \SI{0.7}{\milli\farad}.
 \end{Es}
 \subsection{Condensatore}
-Mettere troppa carica su un conduttore è difficile perché questa tende a dissiparsi nell'aria. \`E invece più pratico aumentare la capacità
+Mettere troppa carica su un conduttore è difficile perché, aumentando il potenziale, questa tende a disperdersi nell'aria. \`E invece più pratico aumentare la capacità.
 
 Usiamo due conduttori, sia $A$ carico e quindi con un certo potenziale $V_0$ e $B$ scarico. $A$ induce delle cariche su $B$ e $B$ modifica la distribuzione delle cariche di $A$. Ora il potenziale di $A$ $V_A$ è minore del potenziale iniziale, a causa delle cariche di segno opposto sul lato di $B$ rivolto verso $A$. Quindi $V_A<V_0$ e allora se all'inizio $C=\frac{Q}{V_0}$ e ora $C'=\frac{Q}{V_A}$ e la carica $Q$ è costante si ha che $C'>C$. Abbiamo aumentato la capacità del condensatore.
 \begin{Def}[condensatore]
@@ -1208,6 +1211,7 @@ Essa dipende solo dalla geometria del condensatore.
   diretto radialmente, il verso è dato dal segno di $q$. Calcoliamo la differenza di potenziale tra le due sfere scegliendo un percorso $\Gamma$ radiale:
   \[\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{4\pi\varepsilon_0}\int_a^b\frac{1}{r^2}\ud r=\frac{q}{4\pi\varepsilon_0}\left(\frac{1}{a}-\frac{1}{b}\right)\]
   \[C=\frac{q}{\Delta V}=\frac{q4\pi\varepsilon_0}{q}\left(\frac{ab}{b-a}\right)=4\pi\varepsilon_0\frac{ab}{b-a}\]
+  Casi particolari: per $b\to\infty$ si ritrova la capacità della sfera isolata $4\pi\varepsilon_0a$; se invece le armature sono molto vicine, $b-a=d\ll a$, si ha $C\simeq\varepsilon_0\frac{4\pi a^2}{d}$, cioè la capacità di un condensatore piano di area $S=4\pi a^2$.
 \end{Es}
 \begin{Es}[cilindrico]
   Consideriamo un condensatore formato da due cilindri coassiali con raggi $a<b$ e altezza $h$. Sia $q$ la carica del condensatore. Per calcolare il campo serviamoci di una superficie gaussiana cilindrica coassiale di altezza $h$ con raggio $r:a<r<b$, consideriamo il condensatore infinito:
@@ -1215,6 +1219,7 @@ Essa dipende solo dalla geometria del condensatore.
   diretto perpendicolarmente ai due cilindri. La differenza di potenziale tra le due armature è
   \[\Delta V=\int_\Gamma\ve E\cdot\ud\ve s=\int_\Gamma E\ud r=\frac{q}{2\pi\varepsilon_0h}\int_a^b\frac{\ud r}{r}=\frac{q}{2\pi\varepsilon_0h}\log\frac{b}{a}\]
   \[C=\frac{q}{\Delta V}=\frac{2\pi\varepsilon_0h}{\log\frac{b}{a}}\]
+  Anche qui, se $b-a=d\ll a$, $\log\frac{b}{a}\simeq\frac{d}{a}$ e si ritrova il condensatore piano di area $2\pi ah$.
 \end{Es}
 \subsection{Energia di un condensatore}
 Tra le altre cose un condensatore serve per immagazzinare energia\footnote{per esempio nei flash delle macchine fotografiche}. Sappiamo che l'energia potenziale di un sistema di cariche è
@@ -1227,7 +1232,7 @@ Nel caso del condensatore $N=2$, $q_1=-q_2=q$:
 \[W=\frac{1}{2}\left(|q|\varphi_A-|q|\varphi_B\right)=\frac{1}{2}|q|\Delta V\]
 
 \begin{Es}[condensatore piano]
-  Calcoliamo l'energia di un condensatore piano in un altro modo. L'energia può essere intesa come il lavoro necessario per carica le due armature portando le cariche dall'armatura $B$ all'armatura $A$. Siano inizialmente scarichi. Se porto $\ud q$ da $B$ a $A$ non compio lavoro, perché non c'è campo elettrico che mi ostacola. Per portare la seconda carica $\ud q$ devo compiere un lavoro:
+  Calcoliamo l'energia di un condensatore piano in un altro modo. L'energia può essere intesa come il lavoro necessario per caricare le due armature portando le cariche dall'armatura $B$ all'armatura $A$. Siano inizialmente scarichi. Se porto la prima carica $\ud q$ da $B$ a $A$ non compio lavoro, perché non c'è campo elettrico che mi ostacola. Quando sull'armatura $A$ c'è già la carica $q$ (e su $B$ la carica $-q$), tra le armature c'è la differenza di potenziale $\Delta V=q/C$ e per portare un'altra carica $\ud q$ devo compiere un lavoro:
   \[\ud W=\ud q\Delta V\]
   Integrando:
   \[W=\int_0^Q\ud W=\int_0^Q\ud q\Delta V=\int_0^Q\frac{q}{C}\,\ud q=\frac{Q^2}{2C}=\frac{1}{2}Q\Delta V\]
@@ -1237,7 +1242,7 @@ Usando la definizione di capacità l'energia può essere scritta in modi diversi
 \begin{equation}
   W=\frac{1}{2}C\Delta V^2=\frac{1}{2}Q\Delta V=\frac{1}{2}\frac{Q^2}{C}
 \end{equation}
-L'energia è sotto forma di campo elettrostatico.
+L'energia è immagazzinata nel campo elettrostatico tra le armature: per il condensatore piano $W=\frac{1}{2}\varepsilon_0E^2\,Sd$, cioè la densità di energia $\frac{1}{2}\varepsilon_0E^2$ per il volume in cui il campo è diverso da zero.
 
 
 \begin{Es}[Lavoro per spostare una armatura]
@@ -1257,18 +1262,19 @@ L'energia è sotto forma di campo elettrostatico.
   \]
   Oppure lo possiamo calcolare dalla forza:
   \[\delta L=\ve F\cdot\ud \ve x=QE\ud x=Q\frac{\sigma}{2\varepsilon_0}\ud x=Q\frac{Q}{2S\varepsilon_0}\ud x=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}\ud x\]
-  La forza la si poteva anche ricavare da $\delta F=\ud W$. La forza risulta costante, grazie al fatto che nell'approssimazione il campo campo è costante e parallela allo spostamento.
+  La forza la si poteva anche ricavare da $F=\ud W/\ud x$. Si noti che il campo che agisce su un'armatura è quello generato dall'altra, $\sigma/2\varepsilon_0$, e non il campo totale $\sigma/\varepsilon_0$. La forza risulta costante, grazie al fatto che nell'approssimazione il campo è costante e parallelo allo spostamento.
   \[L=\int_{d_0}^{d_F}\delta L=\frac{1}{2}\frac{Q^2}{\varepsilon_0 S}(d_F-d_0)\]
   La variazione di energia potenziale del sistema è uguale al lavoro fatto dall'esterno.
 
   Consideriamo ora il caso di potenziale $\Delta V=\const$.
   \[\delta L=\ve F\cdot\ud \ve x=QE\ud x=\frac{Q^2}{2\varepsilon_0S}\ud x=\frac{C^2\Delta V^2}{2\varepsilon_0S}\ud x=\frac{\varepsilon_0^2S^2\Delta V^2}{2\varepsilon_0Sx^2}\ud x=\frac{\varepsilon_0S\Delta V^2}{2x^2}\ud x\]
   \[L=\int_{d_0}^{d_F}\delta L=\frac{\varepsilon_0S\Delta V^2}{2}\int_{d_0}^{d_F}\frac{1}{x^2}\ud x=\frac{1}{2}\varepsilon_0\left(\frac{1}{d_0}-\frac{1}{d_F}\right)\Delta V^2S\]
-  Non possiamo più dire che la variazione di energia potenziale è il lavoro, perché il condensatore non è isolato, anche il generatore compie lavoro.
+  Non possiamo più dire che la variazione di energia potenziale è il lavoro, perché il condensatore non è isolato: anche il generatore compie lavoro.
   \begin{align*}
     \Delta W & =W_F-W_0=\frac{1}{2}C_F\Delta V^2-\frac{1}{2}C_0\Delta V^2=\frac{1}{2}V^2\left(\varepsilon_0\frac{S}{d_F}-\varepsilon_0\frac{S}{d_0}\right) \\
              & =\frac{1}{2}\varepsilon_0\left(\frac{1}{d_F}-\frac{1}{d_0}\right)\Delta V^2S
   \end{align*}
+  Allontanando le armature ($d_F>d_0$) l'energia del condensatore diminuisce, anche se dall'esterno si compie un lavoro positivo. Il bilancio torna considerando il generatore: la carica sulle armature cambia di $\Delta Q=(C_F-C_0)\Delta V$ e il lavoro fatto dal generatore è $L_\text{gen}=\Delta Q\,\Delta V=2\Delta W$ (negativo: la carica torna nel generatore). Infatti $L+L_\text{gen}=-\Delta W+2\Delta W=\Delta W$.
 \end{Es}
 \subsection{Condensatori in serie e in parallelo}
 \subsubsection{Serie}
