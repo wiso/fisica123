@@ -85,7 +85,7 @@ In realtà Newton formulò questa espressione come $\sum \ve
   \[
     a=\frac{m_1-m_2}{m_1+m_2}\,g\qquad T=\frac{2m_1m_2}{m_1+m_2}\,g
   \]
-  Il dispositivo, ideato da George Atwood nel 1784, ``rallenta'' la caduta libera, permettendo di verificare con misure di tempo agevoli le leggi del moto uniformemente accelerato. Casi particolari: se $m_1=m_2$ il sistema è in equilibrio (o si muove di moto uniforme); se $m_2\to0$ si ritrova la caduta libera $a=g$ e $T=0$.
+  Il dispositivo, ideato da George Atwood nel 1784~\cite{atwood1784}, ``rallenta'' la caduta libera, permettendo di verificare con misure di tempo agevoli le leggi del moto uniformemente accelerato. Casi particolari: se $m_1=m_2$ il sistema è in equilibrio (o si muove di moto uniforme); se $m_2\to0$ si ritrova la caduta libera $a=g$ e $T=0$.
 \end{Es}
 
 \section{\index{forza!variabile}Forze variabili}
@@ -188,14 +188,14 @@ con $k=-\left.\frac{\ud F}{\ud x}\right|_{x_0}>0$ perché è un punto di equilib
   \sqrt\frac{g}{l}T=2\pi\qquad
   T=2\pi\sqrt\frac{l}{g}=\frac{2\pi}{\omega}\]
 
-Il periodo non dipende dalla massa né, per piccole oscillazioni, dall'ampiezza (isocronismo\index{isocronismo}, osservato da Galileo secondo la tradizione guardando oscillare un lampadario nel duomo di Pisa). Questa proprietà ha reso il pendolo il cuore degli orologi di precisione, da quello di Huygens (1656) fino agli anni Trenta del Novecento.
+Il periodo non dipende dalla massa né, per piccole oscillazioni, dall'ampiezza (isocronismo\index{isocronismo}, osservato da Galileo secondo la tradizione guardando oscillare un lampadario nel duomo di Pisa). Questa proprietà ha reso il pendolo il cuore degli orologi di precisione, da quello di Huygens (1656, descritto nell'\emph{Horologium Oscillatorium}~\cite{huygens1673}) fino agli anni Trenta del Novecento.
 
 \begin{Es}[pendolo che batte il secondo]
   Un pendolo con semiperiodo di \SI{1}{\second} ($T=\SI{2}{\second}$) deve avere lunghezza
   \[
     l=g\left(\frac{T}{2\pi}\right)^2\simeq\SI{0.994}{\meter}
   \]
-  Nel 1791 fu proposto di definire il metro come la lunghezza di questo pendolo; l'idea fu scartata proprio perché $g$ varia con la latitudine, come scoprì Jean Richer nel 1672 osservando che il suo orologio a pendolo ritardava di circa due minuti e mezzo al giorno a Cayenna, vicino all'equatore. Viceversa, misurando $T$ e $l$ si ottiene una misura di $g$ con precisione migliore dello 0.1\%.
+  Nel 1791 fu proposto di definire il metro come la lunghezza di questo pendolo; l'idea fu scartata proprio perché $g$ varia con la latitudine, come scoprì Jean Richer nel 1672 osservando che il suo orologio a pendolo ritardava di circa due minuti e mezzo al giorno a Cayenna, vicino all'equatore~\cite{richer1679}. Viceversa, misurando $T$ e $l$ si ottiene una misura di $g$ con precisione migliore dello 0.1\%.
 \end{Es}
 \begin{Es}[grandi ampiezze]
   Per ampiezze non piccole l'isocronismo non vale più: risolvendo l'equazione esatta si trova
@@ -293,7 +293,7 @@ La componente lungo $x$ della velocità e dell'accelerazione del punto $P$ misur
 \[\ve F_\text{cent}=m\omega^2 \ve r\qquad \ve F_\text{Cor}=-2m\left(\ve\omega\times\ve v'\right)\]
 
 \begin{Es}[pendolo di Foucault\index{Foucault}\index{pendolo!di Foucault}]
-  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di oscillazione del pendolo ruota a causa della non inerzialità della Terra: al polo compie un giro completo in un giorno siderale (circa \SI{23.9}{\hour}), visto da un sistema inerziale il piano di oscillazione resta fisso mentre la Terra gli ruota sotto. A una latitudine $\lambda$ il periodo di rotazione del piano è $T_\text{sid}/\sin\lambda$: nel celebre esperimento del 1851 al Panthéon di Parigi ($\lambda\simeq\ang{48.8}$, pendolo lungo \SI{67}{\meter}) era di circa \SI{32}{\hour}, mentre all'equatore il piano non ruota affatto. Fu la prima dimostrazione di laboratorio della rotazione terrestre.
+  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di oscillazione del pendolo ruota a causa della non inerzialità della Terra: al polo compie un giro completo in un giorno siderale (circa \SI{23.9}{\hour}), visto da un sistema inerziale il piano di oscillazione resta fisso mentre la Terra gli ruota sotto. A una latitudine $\lambda$ il periodo di rotazione del piano è $T_\text{sid}/\sin\lambda$: nel celebre esperimento del 1851 al Panthéon di Parigi ($\lambda\simeq\ang{48.8}$, pendolo lungo \SI{67}{\meter}) era di circa \SI{32}{\hour}, mentre all'equatore il piano non ruota affatto. Fu la prima dimostrazione di laboratorio della rotazione terrestre~\cite{foucault1851}.
 \end{Es}
 \subsection{Trattazione generale}
 Siano $\{\ve{e}_i\}_i^3$ e $\{\ve{e}'_i\}_i^3$ i versori dei due sistemi, $O$ e $O'$ e sia $O$ inerziale. Ogni vettore di $O$ si scrive come combinazione lineare i cui coefficienti sono le coordinate $\{x_i\}_i^3$:
@@ -689,7 +689,7 @@ rimangono attaccati. L'energia cinetica che si può perdere è esattamente quell
   \[\frac{1}{2}(m+M)V^2=(m+M)gh\]
   \[V=\sqrt{2gh}\qquad\frac{mv}{M+m}=\sqrt{2gh}\]
   \[v=\frac{m+M}{m}\sqrt{2gh}\]
-  Il pendolo balistico, inventato da Benjamin Robins nel 1742, è stato per oltre un secolo il metodo standard per misurare la velocità dei proiettili. Si noti che l'energia meccanica non si conserva nell'urto: la frazione di energia cinetica rimasta è $\frac{(M+m)V^2}{mv^2}=\frac{m}{M+m}$, molto piccola se $M\gg m$.
+  Il pendolo balistico, inventato da Benjamin Robins nel 1742~\cite{robins1742}, è stato per oltre un secolo il metodo standard per misurare la velocità dei proiettili. Si noti che l'energia meccanica non si conserva nell'urto: la frazione di energia cinetica rimasta è $\frac{(M+m)V^2}{mv^2}=\frac{m}{M+m}$, molto piccola se $M\gg m$.
 
   Consideriamo ora il sistema di riferimento del centro di massa ($\ast$), inerziale perché
   si muove con la velocità costante del CM.
@@ -845,7 +845,7 @@ rotazioni (teorema di Noether).
   \[
     I_i\omega_i=I_f\omega_f\quad\Rightarrow\quad T_f=T_i\left(\frac{R_f}{R_i}\right)^2\simeq\SI{25}{\day}\times\left(\frac{10}{\num{7E5}}\right)^2\simeq\SI{0.4}{\milli\second}
   \]
-  La stima è idealizzata (il nucleo che collassa non è il Sole intero e non è una sfera omogenea, e parte del momento angolare viene perso), ma spiega perché le stelle di neutroni ruotano molto rapidamente: emettono fasci di onde radio che, come un faro, arrivano sulla Terra a impulsi regolari (pulsar). I periodi misurati vanno da qualche secondo fino a circa \SI{1.4}{\milli\second}, quello di PSR J1748$-$2446ad, la pulsar più rapida conosciuta. La prima fu scoperta da Jocelyn Bell nel 1967.
+  La stima è idealizzata (il nucleo che collassa non è il Sole intero e non è una sfera omogenea, e parte del momento angolare viene perso), ma spiega perché le stelle di neutroni ruotano molto rapidamente: emettono fasci di onde radio che, come un faro, arrivano sulla Terra a impulsi regolari (pulsar). I periodi misurati vanno da qualche secondo fino a circa \SI{1.4}{\milli\second}, quello di PSR J1748$-$2446ad, la pulsar più rapida conosciuta~\cite{hessels2006}. La prima fu scoperta da Jocelyn Bell nel 1967~\cite{hewish1968}.
 \end{Es}
 \subsection{Rotazione intorno a \texorpdfstring{$O'$}{O'} mobile}
 \[\ve r_i=\ve r_{O'}+\ve r_i\,'\qquad \ve r_i\,'=\ve r_i-\ve r_{O'}\]
