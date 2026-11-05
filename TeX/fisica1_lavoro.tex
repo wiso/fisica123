@@ -60,6 +60,9 @@ La potenza si misura nel SI in \si{\joule\per\second} cioè \si{\watt} (watt\ind
     t}=\tau_z\omega
 \end{equation}
 
+\begin{Es}[potenza di una persona]
+  Una persona di \SI{70}{\kilo\gram} sale di corsa una rampa di scale alta \SI{3}{\meter} in \SI{3}{\second}. Il lavoro fatto contro la forza peso è $mgh\simeq\SI{2.1}{\kilo\joule}$, quindi la potenza media sviluppata è $P\simeq\SI{690}{\watt}$, quasi un cavallo vapore (\SI{1}{CV}=\SI{735.5}{\watt}). Una persona riesce a sostenere per lunghi periodi una potenza meccanica di circa \SI{100}{\watt}; un ciclista professionista in salita arriva a 400--\SI{450}{\watt} per una ventina di minuti.
+\end{Es}
 \section[Energia Cinetica]{\index{energia!cinetica}Energia Cinetica}
 \begin{Def}[energia cinetica]
   \[K=\frac{1}{2}mv^2\]
@@ -78,6 +81,13 @@ A volte indicata con $T$.
 
 Si noti che in questo caso il sistema considerato è costituito solo dal corpo in questione (un punto materiale) e $L$ è il lavoro della risultante di tutte le forze che agiscono su di esso, conservative e non.
 
+\begin{Es}[spazio di frenata]
+  Un'automobile di massa $m$ che viaggia a velocità $v$ frena bloccando le ruote; l'unica forza che compie lavoro è l'attrito dinamico $\mu_c mg$, che si oppone al moto. Per il teorema dell'energia cinetica:
+  \[
+    -\mu_c mg\,d=0-\frac{1}{2}mv^2\qquad d=\frac{v^2}{2\mu_cg}
+  \]
+  Lo spazio di frenata non dipende dalla massa ed è proporzionale al \emph{quadrato} della velocità: raddoppiando la velocità lo spazio di frenata quadruplica. Con $\mu_c\simeq0.7$ (asfalto asciutto) a \SI{50}{\kilo\meter\per\hour} servono circa \SI{14}{\meter}, a \SI{100}{\kilo\meter\per\hour} circa \SI{56}{\meter}, ai quali va aggiunto lo spazio percorso durante il tempo di reazione del guidatore.
+\end{Es}
 \section{Complementi -- Funzioni in due variabili}
 
 \[z=f(x,y)\]
@@ -216,6 +226,15 @@ Per esempio dalla Terra
 
 
 
+
+Alcuni valori della velocità di fuga dalla superficie: Luna \SI{2.4}{\kilo\meter\per\second}, Marte \SI{5.0}{\kilo\meter\per\second}, Giove \SI{60}{\kilo\meter\per\second}, Sole \SI{618}{\kilo\meter\per\second}. La velocità di fuga spiega perché la Luna non ha atmosfera: a temperatura ambiente una frazione non trascurabile delle molecole di gas ha velocità sufficienti a sfuggire alla sua debole attrazione, nel corso di tempi geologici.
+\begin{Es}[stelle oscure]
+  \index{buco nero}Nel 1783 John Michell~\cite{michell1784}, e indipendentemente Laplace nel 1796, osservarono che un corpo abbastanza compatto potrebbe avere velocità di fuga maggiore della velocità della luce $c$, e quindi essere invisibile. Ponendo $v_0=c$ si trova il raggio critico
+  \[
+    R=\frac{2GM}{c^2}
+  \]
+  che, per una coincidenza, coincide con il raggio di Schwarzschild\index{raggio di Schwarzschild} dei buchi neri ricavato dalla relatività generale nel 1916. Per il Sole vale circa \SI{3}{\kilo\meter}, per la Terra circa \SI{9}{\milli\meter}.
+\end{Es}
 \subsubsection{Applicazione dell'energia a \index{pendolo}pendoli}
 \begin{figure}[htbp]
   \centering
@@ -249,4 +268,5 @@ dove l'altezza è misurata a partire dal punto più basso:
   \[mg+N=m\frac{v_B^2}{R}\qquad N=m\frac{v_B^2}{R}-mg\quad \text{per non cadere:}\quad N\geq0\]
   \[m\frac{v_B^2}{R}\geq mg\qquad v_B^2\geq gR\]
   \[v_{B\text{min}}^2=gR\qquad v_{0\text{min}}^2=gR+4gR\qquad v_{0\text{min}}=\sqrt{5gR}\]
+  Se il corpo parte da fermo da un'altezza $h$ (misurata dal fondo del giro della morte), per la conservazione dell'energia $v_0^2=2gh$, e quindi deve partire almeno da $h_\text{min}=\frac{5}{2}R$: una quota maggiore del punto più alto del giro, perché in cima il corpo deve avere ancora una velocità sufficiente a rimanere sulla guida. (Se il corpo è una sfera che rotola senza strisciare parte dell'energia va in energia cinetica di rotazione e serve $h_\text{min}=2.7R$.)
 \end{Es}
