@@ -6,6 +6,9 @@ name: LatexDiff
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   latexdiff:
 
