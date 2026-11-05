@@ -76,6 +76,18 @@ In realtà Newton formulò questa espressione come $\sum \ve
 \end{Pri}
 
 
+\begin{Es}[macchina di Atwood]
+  \index{macchina di Atwood}Due masse $m_1>m_2$ sono appese agli estremi di un filo inestensibile e di massa trascurabile che passa su una carrucola ideale. Scegliendo come positivo il verso in cui scende $m_1$, le equazioni del moto per le due masse (con $T$ la tensione del filo) sono:
+  \[
+    m_1 a = m_1 g - T\qquad m_2 a = T - m_2 g
+  \]
+  da cui
+  \[
+    a=\frac{m_1-m_2}{m_1+m_2}\,g\qquad T=\frac{2m_1m_2}{m_1+m_2}\,g
+  \]
+  Il dispositivo, ideato da George Atwood nel 1784, ``rallenta'' la caduta libera, permettendo di verificare con misure di tempo agevoli le leggi del moto uniformemente accelerato. Casi particolari: se $m_1=m_2$ il sistema è in equilibrio (o si muove di moto uniforme); se $m_2\to0$ si ritrova la caduta libera $a=g$ e $T=0$.
+\end{Es}
+
 \section{\index{forza!variabile}Forze variabili}
 In generale la forza è una funzione del tipo:
 \begin{equation}
@@ -175,6 +187,23 @@ con $k=-\left.\frac{\ud F}{\ud x}\right|_{x_0}>0$ perché è un punto di equilib
 \[2\pi+\sqrt\frac{g}{l}t+\varphi=\sqrt\frac{g}{l}(t+T)+\varphi\qquad
   \sqrt\frac{g}{l}T=2\pi\qquad
   T=2\pi\sqrt\frac{l}{g}=\frac{2\pi}{\omega}\]
+
+Il periodo non dipende dalla massa né, per piccole oscillazioni, dall'ampiezza (isocronismo\index{isocronismo}, osservato da Galileo secondo la tradizione guardando oscillare un lampadario nel duomo di Pisa). Questa proprietà ha reso il pendolo il cuore degli orologi di precisione, da quello di Huygens (1656) fino agli anni Trenta del Novecento.
+
+\begin{Es}[pendolo che batte il secondo]
+  Un pendolo con semiperiodo di \SI{1}{\second} ($T=\SI{2}{\second}$) deve avere lunghezza
+  \[
+    l=g\left(\frac{T}{2\pi}\right)^2\simeq\SI{0.994}{\meter}
+  \]
+  Nel 1791 fu proposto di definire il metro come la lunghezza di questo pendolo; l'idea fu scartata proprio perché $g$ varia con la latitudine, come scoprì Jean Richer nel 1672 osservando che il suo orologio a pendolo ritardava di circa due minuti e mezzo al giorno a Cayenna, vicino all'equatore. Viceversa, misurando $T$ e $l$ si ottiene una misura di $g$ con precisione migliore dello 0.1\%.
+\end{Es}
+\begin{Es}[grandi ampiezze]
+  Per ampiezze non piccole l'isocronismo non vale più: risolvendo l'equazione esatta si trova
+  \[
+    T=2\pi\sqrt{\frac{l}{g}}\left(1+\frac{\theta_0^2}{16}+\frac{11}{3072}\theta_0^4+\ldots\right)
+  \]
+  con $\theta_0$ l'ampiezza in radianti. A \ang{20} la correzione è inferiore all'1\%, a \ang{90} il periodo è circa il 18\% più lungo. Per ottenere un pendolo esattamente isocrono Huygens fece oscillare la massa lungo un arco di cicloide.
+\end{Es}
 
 \subsection{\index{forza!variabile!nella velocità}Forze variabili nella velocità}
 Su un corpo che cade lentamente in un fluido viscoso agisce la forza di Stokes: $F_s=-\beta v$,
@@ -588,6 +617,21 @@ Gli urti si classificano in elastici ed anelastici; gli urti reali sono una via 
 
 \end{enumerate}
 
+\begin{Es}[palla da basket e palla da tennis]
+  \index{urti!palle sovrapposte}Una pallina da tennis viene appoggiata sopra una palla da basket e le due vengono lasciate cadere insieme da un'altezza $h$. La palla da basket arriva a terra con velocità $v=\sqrt{2gh}$ e rimbalza elasticamente verso l'alto con velocità $v$, mentre la pallina da tennis sta ancora scendendo con velocità $v$. Applichiamo il secondo caso limite ($m_2\gg m_1$) con $v_{i,1}=-v$ (pallina) e $v_{i,2}=v$ (basket):
+  \[
+    v_{f,1}=-v_{i,1}+2v_{i,2}=3v
+  \]
+  La pallina rimbalza con velocità tripla e, poiché l'altezza raggiunta è proporzionale al quadrato della velocità, sale fino a $9h$! Nella realtà gli urti non sono perfettamente elastici e si arriva a qualche volta l'altezza iniziale; l'esperimento è comunque spettacolare, e lo stesso meccanismo spiega il rimbalzo degli strati esterni di una stella nell'esplosione di una supernova.
+\end{Es}
+
+\begin{Es}[fionda gravitazionale]
+  \index{fionda gravitazionale}Una sonda di velocità $v$ si avvicina ``frontalmente'' a un pianeta che si muove con velocità $u$ in verso opposto e, girandogli attorno, torna indietro. Nel sistema di riferimento del pianeta l'interazione gravitazionale è un urto elastico con un corpo di massa enorme: la sonda arriva con velocità $v+u$ e riparte con la stessa velocità in modulo. Tornando nel sistema del Sole la velocità finale è $(v+u)+u=v+2u$, come nel secondo caso limite. La sonda ``ruba'' energia cinetica al moto orbitale del pianeta (che rallenta di una quantità del tutto trascurabile). Questa tecnica permise alle sonde Voyager (1977) di visitare Giove, Saturno, Urano e Nettuno.
+\end{Es}
+
+\begin{Es}[pendolo di Newton]
+  \index{pendolo!di Newton}Nella ``culla di Newton'' cinque sfere d'acciaio uguali sono appese una accanto all'altra. Se si solleva e si lascia andare una sfera, dopo l'urto si solleva una sola sfera dall'altra parte; se se ne sollevano due, se ne sollevano due. Per sfere uguali e urti elastici, il primo caso limite mostra che le velocità si scambiano. Il fatto che non si sollevi, per esempio, una sola sfera con velocità doppia è dovuto alla conservazione contemporanea di quantità di moto ed energia: $m(2v)=2mv$ ma $\frac{1}{2}m(2v)^2\neq\frac{1}{2}(2m)v^2$.
+\end{Es}
 \subsubsection{Urti in due dimensioni}
 Due corpi di massa $m_1$, $m_2$, prima dell'urto velocità $\ve v_{i,2}=0$, $\ve v_{i,1}$, il secondo corpo è fermo, dopo l'urto velocità $\ve v_{f,1}$, $\ve v_{f,2}$.
 
@@ -796,6 +840,13 @@ Se il sistema è isolato si ha: $\stackrel{\text{Est}}{\ve
 e, per un corpo che ruota attorno a un asse fisso di simmetria,
 $I\omega={\const}$: se $I$ diminuisce $\omega$ aumenta, come fa una pattinatrice che chiude le braccia per girare più velocemente. La conservazione del momento angolare è conseguenza dell'invarianza delle leggi fisiche per
 rotazioni (teorema di Noether).
+\begin{Es}[pulsar]
+  \index{pulsar}Quando una stella massiccia esaurisce il combustibile nucleare il suo nucleo collassa formando una stella di neutroni, con un raggio di circa \SI{10}{\kilo\meter}. Se il Sole (raggio \SI{7E5}{\kilo\meter}, periodo di rotazione circa \SI{25}{\day}) collassasse fino a quelle dimensioni conservando il momento angolare, trattandolo come una sfera omogenea ($I\propto R^2$):
+  \[
+    I_i\omega_i=I_f\omega_f\quad\Rightarrow\quad T_f=T_i\left(\frac{R_f}{R_i}\right)^2\simeq\SI{25}{\day}\times\left(\frac{10}{\num{7E5}}\right)^2\simeq\SI{0.4}{\milli\second}
+  \]
+  Le stelle di neutroni ruotano infatti molto rapidamente: emettono fasci di onde radio che, come un faro, arrivano sulla Terra a impulsi regolari con periodi da qualche secondo a meno di un millesimo di secondo (pulsar). La prima fu scoperta da Jocelyn Bell nel 1967.
+\end{Es}
 \subsection{Rotazione intorno a \texorpdfstring{$O'$}{O'} mobile}
 \[\ve r_i=\ve r_{O'}+\ve r_i\,'\qquad \ve r_i\,'=\ve r_i-\ve r_{O'}\]
 \[\ve L_{O'}=\sum\ve r_i\,'\times m_i\ve v_i=\sum(\ve r_i-\ve
