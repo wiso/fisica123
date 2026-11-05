@@ -7,5 +7,3 @@ Latest release: https://github.com/wiso/fisica123/releases/latest/download/fisic
 Per ogni pull request la CI produce anche un PDF con le differenze evidenziate
 (latexdiff), scaricabile come artefatto `latexdiff-pdf` dalla pagina della
 GitHub Action.
-Il workflow si trova in `ci/latexdiff.yml` e va spostato in
-`.github/workflows/latexdiff.yml` per attivarlo.
