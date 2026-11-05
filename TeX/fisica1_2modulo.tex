@@ -1986,7 +1986,7 @@ Le onde stazionarie sono il frutto dell'interferenza di un'onda progressiva e un
 La parte spaziale e quella temporale si separano. Se consideriamo con ampiezza $2y_m\sin\left(kx\right)$ allora ci sono dei punti dove il seno si annulla che non vibrano, sono i \index{nodi}nodi, mentre dove la vibrazione è massima ci sono i ventri\index{ventri}. Nodi:
 \[\sin\left(kx\right)=0\qquad kx=0,\pi,\ldots\]
 \[n\pi=kx\qquad k=\frac{2\pi}{\lambda}\qquad x=n\frac{\lambda}{2}\]
-I ventri si trovano a metà tra due nodi, in $x=(2n+1)\lambda/4$. Le onde stazionarie non trasportano energia: l'energia oscilla localmente tra forma cinetica e potenziale. Se la corda è fissata agli estremi, a distanza $L$, entrambi gli estremi devono essere nodi, quindi sono possibili solo le lunghezze d'onda $\lambda_n=2L/n$ e le frequenze $\nu_n=n\frac{v}{2L}$ (armoniche): è il principio degli strumenti a corda.
+I ventri si trovano a metà tra due nodi, in $x=(2n+1)\lambda/4$. Le onde stazionarie non trasportano energia in media: durante ogni periodo l'energia si sposta avanti e indietro tra le zone vicine ai nodi (dove la deformazione, e quindi l'energia elastica, è massima) e quelle vicine ai ventri (dove è massima la velocità, e quindi l'energia cinetica), ma il flusso di energia mediato su un periodo è nullo in ogni punto. L'energia totale della corda oscilla invece tra forma cinetica (tutta cinetica quando la corda passa per la posizione di riposo) e potenziale elastica (tutta potenziale nell'istante di massima deformazione). Se la corda è fissata agli estremi, a distanza $L$, entrambi gli estremi devono essere nodi, quindi sono possibili solo le lunghezze d'onda $\lambda_n=2L/n$ e le frequenze $\nu_n=n\frac{v}{2L}$ (armoniche): è il principio degli strumenti a corda.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/stazionarie1}
@@ -2026,7 +2026,7 @@ dove $T_0$ è il periodo con cui la sorgente emette, misurato dall'osservatore f
    in accordo con quanto trovato nel capitolo sulla relatività.
 \end{subequations}
 \section{Suono\index{suono}}
-Il suono è un'onda longitudinale di pressione che si propaga in un mezzo (gas, liquido o solido; nel vuoto non si propaga), provocando zone di compressione, con pressione e densità maggiori, e zone di rarefazione. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
+Il suono è un'onda meccanica che si propaga in un mezzo materiale (nel vuoto non si propaga). Nei fluidi (gas e liquidi) è un'onda longitudinale di pressione, che provoca zone di compressione, con pressione e densità maggiori, e zone di rarefazione; nei solidi si propagano anche onde trasversali e le formule che seguono, valide per i fluidi, vanno modificate. Il suono percepito dall'uomo è quello che ha frequenza $\SIrange{20}{20000}{\hertz}$. Sotto ci sono gli infrasuoni, sopra gli ultrasuoni. La velocità del suono è\index{velocità!del suono}:
 \begin{equation}
    v=\sqrt{\frac{B}{\rho}}
 \end{equation}
@@ -2037,7 +2037,7 @@ $B$ è il modulo di compressibilità (il reciproco della compressibilità) defin
 Per l'aria, trattata come un gas perfetto, le compressioni e rarefazioni sono troppo rapide perché ci sia scambio di calore tra zone vicine, quindi le trasformazioni sono adiabatiche:
 \[PV^\gamma=\const\qquad \ud PV^\gamma+P\gamma V^{\gamma-1}\ud V=0\]
 \[\frac{\ud P}{\ud V/V}=-\gamma P\qquad v=\sqrt{\frac{\gamma P}{\rho}}=\sqrt{\frac{\gamma RT}{M}}\simeq\SI{343}{\metre\per\second} \]
-a \SI{20}{\celsius} (\SI{331}{\metre\per\second} a \SI{0}{\celsius}). La velocità del suono in un gas dipende dalla temperatura ma non dalla pressione. Nell'acqua è circa \SI{1500}{\metre\per\second}, nell'acciaio circa \SI{5900}{\metre\per\second}.
+a \SI{20}{\celsius} (\SI{331}{\metre\per\second} a \SI{0}{\celsius}). La velocità del suono in un gas dipende dalla temperatura ma non dalla pressione. Nell'acqua è circa \SI{1500}{\metre\per\second}; nell'acciaio le onde longitudinali viaggiano a circa \SI{5900}{\metre\per\second} (in un solido esteso $v_L=\sqrt{(B+\frac{4}{3}G)/\rho}$, con $G$ il modulo di taglio).
 \section{Grandezze caratteristiche}
 \begin{description}
    \item[intensità\index{intensità!del suono} del suono] $I=\text{energia}/(\text{tempo}\cdot\text{superficie})$, cioè la potenza per unità di superficie, in \si{\watt\per\meter\squared}\\
