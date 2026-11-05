@@ -326,6 +326,14 @@ L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'e
 
    Le due descrizioni sono equivalenti: l'ala, per la sua forma e la sua inclinazione (angolo di attacco), devia l'aria verso il basso e per il terzo principio della dinamica l'aria esercita sull'ala una forza verso l'alto, la \index{portanza}portanza. Attenzione a una spiegazione molto diffusa ma sbagliata: non è vero che le particelle d'aria che si separano sul bordo d'attacco debbano ricongiungersi sul bordo d'uscita (``tempi di transito uguali''); in realtà l'aria sopra l'ala arriva al bordo d'uscita molto prima di quella che passa sotto.
 \end{Es}
+\begin{Es}[teorema di Torricelli]
+  \index{teorema!di Torricelli}Un recipiente aperto, pieno d'acqua fino a un'altezza $h$ sopra un piccolo foro laterale, si svuota attraverso il foro. Applichiamo Bernoulli tra la superficie libera (pressione $p_0$, velocità trascurabile se il recipiente è largo) e il getto all'uscita del foro (anch'esso a pressione $p_0$):
+  \[
+    p_0+\rho gh=p_0+\frac{1}{2}\rho v^2\qquad v=\sqrt{2gh}
+  \]
+  L'acqua esce con la stessa velocità che avrebbe un corpo in caduta libera dall'altezza $h$ (Torricelli, 1643). Da un foro a \SI{1.25}{\meter} sotto il pelo libero l'acqua esce a circa \SI{5}{\meter\per\second}. Nella realtà la portata effettiva è minore di $Av$ perché il getto si restringe subito dopo il foro (vena contratta).
+\end{Es}
+
 \section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
 \label{viscosita fisica1}
 \begin{figure}[htbp]
@@ -382,6 +390,15 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
    \end{equation}
 \end{legge}
 si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica ($\Delta p$ corrisponde alla differenza di potenziale e $Q_v$ alla corrente). La dipendenza da $R^4$ è molto forte: se un'arteria si restringe del 20\% la portata, a parità di pressione, si dimezza circa ($0.8^4\simeq0.41$).
+\subsection{Regime laminare e turbolento: il numero di Reynolds}
+\index{numero di Reynolds}\index{Reynolds}Le leggi di Poiseuille e di Stokes valgono solo per moti laminari. Nel 1883 Osborne Reynolds iniettò un filo di inchiostro in un tubo di vetro in cui scorreva acqua: a bassa velocità il filo restava rettilineo, sopra una certa velocità si rompeva in vortici e si mescolava con tutta l'acqua (regime turbolento). Il passaggio è determinato dal numero adimensionale
+\[
+  \mathrm{Re}=\frac{\rho vD}{\eta}
+\]
+dove $D$ è una lunghezza caratteristica (il diametro del tubo); $\mathrm{Re}$ misura il rapporto tra le forze d'inerzia e quelle viscose. In un tubo il moto è laminare per $\mathrm{Re}\lesssim2000$ e turbolento per $\mathrm{Re}\gtrsim4000$.
+\begin{Es}[sangue e rubinetto]
+  Nell'aorta ($D\simeq\SI{2.5}{\centi\meter}$, $v\simeq\SI{0.3}{\meter\per\second}$, $\eta\simeq\SI{3.5E-3}{\pascal\second}$, $\rho\simeq\SI{1060}{\kilo\gram\per\meter\cubed}$) si ha $\mathrm{Re}\simeq2300$, al limite della turbolenza; nei capillari $\mathrm{Re}\ll1$. L'acqua che esce da un rubinetto con $D=\SI{1}{\centi\meter}$ a \SI{1}{\meter\per\second} ha invece $\mathrm{Re}\simeq10^4$: il getto è turbolento.
+\end{Es}
 \index{meccanica dei fluidi|)}
 
 
@@ -783,6 +800,16 @@ con $E_f$, $E_i$ l'energia interna del sistema finale ed iniziale; $E$ è una fu
    $\ud E$ è un differenziale esatto essendo $E$ una funzione di stato.
 \end{Pri}
 
+\subsection{L'equivalente meccanico del calore}
+\index{equivalente meccanico del calore}\index{Joule!esperimento di}Fino all'inizio dell'Ottocento il calore era considerato un fluido indistruttibile, il ``calorico''. Già nel 1798 il conte Rumford, osservando la foratura dei cannoni a Monaco, notò che si poteva produrre calore in quantità illimitata semplicemente con l'attrito, e che quindi il calore non poteva essere una sostanza conservata. La prova decisiva venne dagli esperimenti di James Prescott Joule (1843--1850): in un recipiente isolato pieno d'acqua un mulinello a palette veniva fatto ruotare da pesi in discesa; misurando il lavoro meccanico fatto dai pesi e l'aumento di temperatura dell'acqua, Joule trovò che a una data quantità di lavoro corrisponde sempre la stessa quantità di calore:
+\[
+  \SI{1}{cal}\simeq\SI{4.186}{\joule}
+\]
+Il calore è quindi una forma di energia in transito, e il primo principio esprime la conservazione dell'energia includendo il calore.
+\begin{Es}[cascate]
+  Joule cercò di misurare, durante il suo viaggio di nozze sulle Alpi (1847), la differenza di temperatura dell'acqua tra la cima e la base di una cascata. Se tutta l'energia potenziale dell'acqua che cade da un'altezza $h$ si trasformasse in energia interna: $gh=c\Delta T$, quindi per $h=\SI{100}{\meter}$ si avrebbe $\Delta T=gh/c\simeq\SI{0.23}{\kelvin}$: un effetto piccolissimo, che mostra quanto lavoro meccanico serva per produrre poco calore.
+\end{Es}
+
 \section{Trasformazioni di un gas\index{trasformazioni!di un gas}}
 Le trasformazioni le possiamo dividere in due gruppi:
 \begin{description}
@@ -1012,6 +1039,17 @@ Nota: $Q_1<0$, $Q_2>0$, $L>0$
 \[L=|Q_1|-Q_2\qquad\frac{|Q_1|}{Q_2}=\frac{T_1}{T_2}\]
 \[\eta=\frac{Q_2}{L}=\frac{Q_2}{|Q_1|-Q_2}=\frac{T_2}{T_1-T_2}>0\]
 Il frigorifero perfetto trasferirebbe calore dalla sorgente più fredda a quella più calda senza bisogno di lavoro, quindi $\eta\rightarrow\infty$; anche questo è vietato dal secondo principio. Si noti che, a differenza del rendimento di una macchina termica, il coefficiente di prestazione può essere maggiore di 1: un frigorifero domestico tra \SI{-18}{\celsius} e \SI{30}{\celsius} ha un COP ideale di circa 5.
+
+\begin{Es}[rendimento di una centrale termoelettrica]
+  In una centrale a vapore il vapore surriscaldato entra in turbina a circa \SI{550}{\celsius} ($T_1\simeq\SI{820}{\kelvin}$) e il calore viene ceduto a un fiume o all'atmosfera a circa \SI{30}{\celsius} ($T_2\simeq\SI{300}{\kelvin}$). Il rendimento massimo, quello di Carnot, è
+  \[
+    \eta_C=1-\frac{T_2}{T_1}\simeq0.63
+  \]
+  mentre le centrali reali arrivano al 40\% circa (60\% nelle centrali a ciclo combinato, che usano una turbina a gas a temperatura più alta). Si noti che il rendimento dipende dalle temperature \emph{assolute}: per questo si cerca di far lavorare le turbine alla temperatura più alta possibile compatibilmente con i materiali.
+\end{Es}
+\begin{Es}[pompa di calore]
+  Una pompa di calore è un frigorifero usato per scaldare: preleva calore dall'aria esterna fredda e lo cede alla casa. Il calore ceduto alla casa è $|Q_1|=L+Q_2$, quindi il coefficiente di prestazione per il riscaldamento è $|Q_1|/L=T_1/(T_1-T_2)$ nel caso ideale. Con l'esterno a \SI{0}{\celsius} e l'interno a \SI{20}{\celsius} si avrebbe $293/20\simeq15$: con \SI{1}{\kilo\watt\hour} di energia elettrica si possono portare in casa fino a \SI{15}{\kilo\watt\hour} di calore, molto più di quanto farebbe una stufa elettrica. Le pompe di calore reali hanno coefficienti tra 3 e 5.
+\end{Es}
 
 \subsection{Ciclo Otto\index{ciclo!Otto}}
 Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
