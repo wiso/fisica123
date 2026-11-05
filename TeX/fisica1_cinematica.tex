@@ -36,6 +36,7 @@ Si noti che la norma della derivata non è la derivata della norma:
 \begin{Def}[\index{velocità!scalare}Velocità Scalare]
   \[v_s=\frac{\text{spazio totale percorso}}{\Delta t}\]
 \end{Def}
+La velocità scalare media è in generale diversa dal modulo della velocità media: per esempio un corridore che compie un giro completo di pista torna al punto di partenza, quindi la sua velocità media è nulla mentre la sua velocità scalare media non lo è.
 \section{\index{accelerazione}Vettore accelerazione}
 \begin{Def}[accelerazione istantanea]
   \[\ve a=\frac{\ud \ve v}{\ud t}={\frac{\ud^2 \ve r}{\ud t^2}}\]
@@ -79,7 +80,7 @@ che vale solo nel caso unidimensionale\footnote{nel caso unidimensionale le \eqr
 Per moto circolare uniforme si intende quel moto su traiettoria
 circolare di raggio $R$ in cui il modulo del vettore velocità rimane costante
 nel tempo (mentre la sua direzione varia ed è sempre tangente
-alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\index{omega@$\omega$|see{velocità angolare}}: $\omega=\frac{\ud\theta}{\ud t}$ e l'accelerazione angolare\index{accelerazione!angolare}\index{alpha@$\alpha$|see{accelerazione angolare}} $\alpha=\frac{\ud \omega}{\ud t}$; in realtà possono essere definiti come vettori.
+alla circonferenza). Il periodo è $T=2\pi R/v=2\pi/\omega$. Definiamo la velocità angolare\index{velocità!angolare}\index{omega@$\omega$|see{velocità angolare}}: $\omega=\frac{\ud\theta}{\ud t}$ e l'accelerazione angolare\index{accelerazione!angolare}\index{alpha@$\alpha$|see{accelerazione angolare}} $\alpha=\frac{\ud \omega}{\ud t}$; in realtà possono essere definiti come vettori, diretti lungo l'asse di rotazione con verso dato dalla regola della mano destra.
 \[\norm{\ve v}=\const\]
 \[\text{scegliamo $\ve r(t=0)=\ve r_0$}:\left\{
   \begin{array}{l}
@@ -108,6 +109,7 @@ alla circonferenza). Definiamo la velocità angolare\index{velocità!angolare}\i
 \[|\ve a|^2=R^2\omega^4\cos^2(\omega t)+R^2\omega^4\sin^2(\omega
   t)=R^2\omega^4\]
 \[a=\omega^2R=\omega v=\frac{v^2}{R}\]
+L'accelerazione è quindi diretta verso il centro (accelerazione centripeta\index{accelerazione!centripeta}): anche se il modulo della velocità è costante il moto è accelerato, perché cambia la direzione della velocità.
 \section{\index{moto!circolare}Moto circolare}
 \begin{figure}[htbp]
   \centering
@@ -156,9 +158,9 @@ I vettori velocità e accelerazione vengono scomposti in due
 componenti:
 \begin{enumerate}
   \item[--] \index{velocità!radiale}Velocità radiale: $v_r=\dot r$
-  \item[--] \index{velocità!perpendicolare}Velocità perpendicolare: $v_\theta=r\dot\theta$
+  \item[--] \index{velocità!perpendicolare}Velocità trasversale (perpendicolare al raggio): $v_\theta=r\dot\theta$
   \item[--] \index{accelerazione!radiale}Accelerazione radiale: $a_r=\ddot r-r\dot\theta^2$
-  \item[--] \index{accelerazione!perpendicolare}Accelerazione perpendicolare: $a_\theta=2\dot r\dot\theta+r\ddot
+  \item[--] \index{accelerazione!perpendicolare}Accelerazione trasversale (perpendicolare al raggio): $a_\theta=2\dot r\dot\theta+r\ddot
       \theta$
 \end{enumerate}
 \section{\index{moto!armonico}Moto armonico}
@@ -166,7 +168,7 @@ componenti:
   \centering
   \includegraphics[scale=0.6]{immagini/fisica1/oscillatore_fase}
   % oscillatore_fase.: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
-  \caption{Traiettorie nello spazio delle configurazioni dell'oscillatore armonico a partire da diverse condizioni iniziali.}
+  \caption{Traiettorie nello spazio delle fasi $(x,\dot x)$ dell'oscillatore armonico a partire da diverse condizioni iniziali.}
 \end{figure}
 Il moto armonico è un moto con equazione differenziale:
 \begin{eqimp}{equation}
@@ -184,16 +186,16 @@ Per esempi (pendoli, molle) vedi sezione \ref{armonico} a pagina \pageref{armoni
   \centering
   \includegraphics[scale=0.6]{immagini/fisica1/oscillatore_smorzato_fase}
   % oscillatore_smorzato_fase.pdf: 480x384 pixel, 72dpi, 16.93x13.55 cm, bb=0 0 480 384
-  \caption{Traiettorie nello spazio delle configurazioni dell'oscillazione smorzato con coefficiente di attrito debole.}
+  \caption{Traiettorie nello spazio delle fasi $(x,\dot x)$ dell'oscillatore smorzato con coefficiente di attrito debole.}
 \end{figure}
 Introduciamo nel moto armonico una forza smorzatrice, per esempio una forza d'attrito che varia con la velocità:
 \[F=-\gamma \frac{\ud x}{\ud t}\]
 \[m\ddot x=-kx-\gamma\dot x\qquad m\ddot x+\gamma\dot x+kx=0\]
-$\tau=\frac{m}{\gamma}$ è un tempo, la frequenza del moto armonico non smorzato è $\frac{k}{m}=\omega_0^2$
+$\tau=\frac{m}{\gamma}$ è un tempo, mentre la pulsazione del moto armonico non smorzato è $\omega_0=\sqrt{k/m}$
 \[\ddot x+\frac{\gamma}{m}\dot x+\frac{k}{m}x=0\qquad \ddot x+\frac{1}{\tau}\dot x+\omega_0^2x=0\]
-se $\tau=\infty$ allora il moto non è più smorzato.
+se $\tau\to\infty$ (cioè $\gamma\to 0$) allora il moto non è più smorzato.
 
-Una soluzione è:
+Cerchiamo soluzioni della forma:
 \[x(t)=e^{st}\]
 \[\dot x(t)=sx(t)\qquad \ddot x(t)=s^2x(t)\]
 \[s^2x(t)+\frac{1}{\tau}sx(t)+\omega_0^2x(t)=0\]
@@ -206,18 +208,24 @@ a seconda che le radici del polinomio siano reali o complesse si possono disting
 \begin{description}
   \item[attrito forte]
     \[\beta=\frac{1}{4\tau^2}-\omega_0^2>0\qquad\tau<\frac{1}{2\omega_0}\qquad\gamma>2\sqrt{km}\]
-    \[s_{1/2}=-\frac{1}{2\tau}\pm\beta\qquad\text{radici reali e}<0\]
+    \[s_{1/2}=-\frac{1}{2\tau}\pm\sqrt\beta\qquad\text{radici reali e}<0\]
     \[x(t)=A_1e^{s_1t}+A_2e^{s_2t}\]
+    il moto non è oscillatorio (\emph{sovrasmorzato}): il corpo torna lentamente verso la posizione di equilibrio passandoci al più una volta.
+  \item[smorzamento critico]\index{moto!armonico!smorzamento critico}
+    \[\frac{1}{4\tau^2}=\omega_0^2\qquad \tau=\frac{1}{2\omega_0}\qquad\gamma=2\sqrt{km}\]
+    le due radici coincidono, $s_1=s_2=-\frac{1}{2\tau}=-\omega_0$, e la soluzione generale è:
+    \[x(t)=\left(A+Bt\right)e^{-\omega_0 t}\]
+    (si verifica per sostituzione che anche $te^{-\omega_0t}$ è soluzione). In questo caso il sistema torna all'equilibrio nel tempo più breve possibile senza oscillare: per questo gli ammortizzatori delle automobili e gli strumenti di misura ad ago sono progettati per lavorare vicino allo smorzamento critico.
   \item[attrito debole]
     \[\frac{1}{4\tau^2}-\omega_0^2<0\qquad \tau>\frac{1}{2\omega_0}\qquad\gamma<2\sqrt{km}\]
     \[s_{1/2}=\dfrac{-\dfrac{1}{\tau}\pm\sqrt{\dfrac{1}{\tau^2}-4\omega_0^2}}{2}=-\frac{1}{2\tau}\pm i\omega\]
     \begin{align*}x(t) & =A_1e^{s_1t}+A_2e^{s_2t}=A_1e^{-\frac{t}{2\tau}-i\omega t}+A_2e^{-\frac{t}{2\tau}+i\omega t}=                    \\
                    & =e^{-\frac{t}{2\tau}}\left(A_1e^{-i\omega t}+A_2e^{i\omega t}\right)=A e^{-\frac{t}{2\tau}}\sin(\omega t +\varphi)\end{align*}
-    quindi è un moto armonico con frequenza $\omega=\sqrt{\omega_0^2-\frac{1}{4\tau^2}}$ la cui ampiezza diminuisce con un fattore frenante $e^{-\frac{t}{2\tau}}$.\footnote{Il caso critico in cui ci siano due radici coincidenti è tralasciato poiché puntiforme}
+    quindi è un moto oscillatorio con pulsazione $\omega=\sqrt{\omega_0^2-\frac{1}{4\tau^2}}<\omega_0$ la cui ampiezza diminuisce con un fattore $e^{-\frac{t}{2\tau}}$. Il numero di oscillazioni compiute mentre l'energia si riduce di un fattore $e$ è legato al \emph{fattore di qualità}\index{fattore di qualità} $Q=\omega_0\tau$: un diapason ha $Q\sim 10^3$, un cristallo di quarzo da orologio $Q\sim10^5$.
 \end{description}
 
 \section{\index{trasformazioni!di Galileo}Trasformazioni di Galileo}
-Le trasformazioni di Galileo sono equazioni valide nella meccanica classica che consentono di descrivere le coordinate di un sistema rispetto alle coordinate di un altro sistema che si muove di moto rettilineo uniforme rispetto al primo. Un sistema è detto inerziale se vale la prima legge di Newton. Se un sistema è inerziale allora un altro sistema è inerziale se e solo se si muove di moto rettilineo uniforme rispetto al primo.
+Le trasformazioni di Galileo sono equazioni valide nella meccanica classica che consentono di descrivere le coordinate di un sistema rispetto alle coordinate di un altro sistema che si muove di moto rettilineo uniforme rispetto al primo. Un sistema è detto inerziale se vale la prima legge di Newton. Se un sistema è inerziale allora un altro sistema è inerziale se e solo se si muove di moto traslatorio rettilineo uniforme rispetto al primo (cioè senza ruotare).
 \newline
 
 Primo osservatore ``fermo'':$\qquad O\quad\ve r\quad\;\ve
@@ -270,6 +278,6 @@ Non esiste un sistema di riferimento assoluto.
 \end{Es}
 
 \subsection{Invarianza e covarianza\index{invarianza}\index{covarianza}}
-Una grandezza si dice invariante se è numericamente uguale alla sua trasformata, cioè $x=T(x)=x'$. Nelle trasformazioni di Galileo l'accelerazione è invariante rispetto alla trasformazione che trasforma le coordinate di $O$ in quelle di $O'$. Nella relatività galileiana la lunghezza è invariante, nella relatività ristretta no.
+Una grandezza si dice invariante se è numericamente uguale alla sua trasformata, cioè $x=T(x)=x'$. Nelle trasformazioni di Galileo l'accelerazione è invariante rispetto alla trasformazione che trasforma le coordinate di $O$ in quelle di $O'$. Nella relatività galileiana la lunghezza è invariante, nella relatività ristretta no. La velocità invece non è invariante: per Galileo $\ve v\neq\ve v\,'$, mentre nella relatività ristretta la velocità della luce è la stessa in tutti i sistemi inerziali.
 
 Una legge si dice covariante se la sua espressione è uguale alla sua trasformata, cioè $f(x)=T(f(x))$.
