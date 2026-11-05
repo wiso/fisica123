@@ -43,7 +43,7 @@ Le leggi sull'attrito vengono chiamate leggi di Leonardo\index{leggi!di Leonardo
   \begin{eqimp}{equation}
     f_s\leq\mu_s N
   \end{eqimp}
-  con $\mu_s$ coefficiente di attrito statico e $N$ il modulo della reazione normale. La forza d'attrito statico assume il valore necessario a mantenere il corpo fermo, fino al valore massimo $\mu_sN$; ha la direzione della superficie e verso opposto a quello in cui il corpo tenderebbe a scivolare.
+  con $\mu_s$ coefficiente di attrito statico e $N$ il modulo della reazione normale. La forza d'attrito statico assume il valore necessario a impedire lo scorrimento relativo tra le superfici a contatto, fino al valore massimo $\mu_sN$; ha la direzione della superficie e verso opposto a quello in cui le superfici tenderebbero a scivolare l'una sull'altra. Si noti che questo non significa che il corpo resti fermo: è l'attrito statico tra pneumatici e strada, per esempio, che permette a un'automobile di accelerare con le ruote che rotolano senza strisciare.
 \end{legge}
 \begin{legge}[Seconda legge di Leonardo]
   La forza di attrito è indipendente dall'area della superficie d'appoggio.
@@ -264,7 +264,7 @@ La componente lungo $x$ della velocità e dell'accelerazione del punto $P$ misur
 \[\ve F_\text{cent}=m\omega^2 \ve r\qquad \ve F_\text{Cor}=-2m\left(\ve\omega\times\ve v'\right)\]
 
 \begin{Es}[pendolo di Foucault\index{Foucault}\index{pendolo!di Foucault}]
-  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di oscillazione del pendolo ruota a causa della non inerzialità della Terra: al polo compie un giro completo in un giorno siderale (circa \SI{23.9}{\hour}), visto da un sistema inerziale il piano di oscillazione resta fisso mentre la Terra gli ruota sotto. A una latitudine $\lambda$ il periodo di rotazione del piano è $T_\text{sid}/\sin\lambda$: nel celebre esperimento del 1851 al Panthéon di Parigi ($\lambda\simeq\ang{48.8}$, pendolo lungo \SI{67}{\meter}) era di circa \SI{32}{\hour}, mentre all'equatore il piano non ruota affatto. Fu la prima dimostrazione di laboratorio della rotazione terrestre.
+  Se mettiamo un pendolo al polo la forza centrifuga sarà nulla perché $r=0$, ma esiste ancora la forza di Coriolis. Sperimentalmente si osserva che il piano di oscillazione del pendolo ruota a causa della non inerzialità della Terra: al polo compie un giro completo in un giorno siderale (circa \SI{23.9}{\hour}), visto da un sistema inerziale il piano di oscillazione resta fisso mentre la Terra gli ruota sotto. A una latitudine $\lambda$ il periodo di rotazione del piano è $T_\text{sid}/|\sin\lambda|$ (il verso di rotazione è orario nell'emisfero nord e antiorario in quello sud): nel celebre esperimento del 1851 al Panthéon di Parigi ($\lambda\simeq\ang{48.8}$, pendolo lungo \SI{67}{\meter}) era di circa \SI{32}{\hour}, mentre all'equatore il piano non ruota affatto. Fu la prima dimostrazione di laboratorio della rotazione terrestre.
 \end{Es}
 \subsection{Trattazione generale}
 Siano $\{\ve{e}_i\}_i^3$ e $\{\ve{e}'_i\}_i^3$ i versori dei due sistemi, $O$ e $O'$ e sia $O$ inerziale. Ogni vettore di $O$ si scrive come combinazione lineare i cui coefficienti sono le coordinate $\{x_i\}_i^3$:
@@ -760,8 +760,8 @@ perché la posizione del centro di massa rispetto a sé stesso è $\ve r\,_{CM}^
     t}\]
 \[Fr\omega\cos\phi=I\omega\alpha\]
 \[Fr\cos\phi=I\alpha\]
-dove $\phi$ è l'angolo tra la forza e lo spostamento (tangente alla circonferenza); indicando con $\beta=\pi/2-\phi$ l'angolo tra la forza e $\ve r$:
-\[Fr\sin\beta=\tau_z=I\alpha\]
+dove $\phi$ è l'angolo tra la forza e lo spostamento (tangente alla circonferenza) e $\ve r$ è il vettore perpendicolare all'asse che va dall'asse al punto di applicazione. Il termine $Fr\cos\phi$ è proprio la componente lungo l'asse di rotazione del momento della forza, $\tau_z=(\ve r\times\ve F)\cdot\ve k$; se la forza giace nel piano perpendicolare all'asse, indicando con $\beta=\pi/2-\phi$ l'angolo tra la forza e $\ve r$, si ha $\tau_z=Fr\sin\beta$. In ogni caso:
+\[\tau_z=I\alpha\]
 \[\tau_z=I\alpha\qquad\text{analoga a $\ve F=m\ve a$, valida per la rotazione attorno a un asse fisso}\]
 \section[\index{momento!angolare}\index{momento!della quantità di moto}Momento angolare o della quantità di moto]{Momento angolare\\ o momento della quantità di moto}
 \[\ve l_0=\ve r\times m\ve v\qquad\text{rispetto al polo $O$ fisso.}\]
