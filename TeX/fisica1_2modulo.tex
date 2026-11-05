@@ -1,17 +1,17 @@
 \chapter{\index{meccanica dei fluidi|(}Meccanica dei fluidi}
 \minitoc
-Un fluido è un liquido o un gas. La meccanica dei fluidi applica le leggi della meccanica classica ai fluidi descrivendo tutto in termini di pressione, volume, portata.
+Un fluido è un liquido o un gas. La meccanica dei fluidi applica le leggi della meccanica classica ai fluidi descrivendo tutto in termini di grandezze come pressione, densità, velocità e portata.
 \section{\index{fluidostatica}Fluidostatica}
 \subsection{\index{pressione}Pressione e \index{densità}densità}
-La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare, infatti la forza agisce sempre perpendicolarmente alla superficie. Se avesse una componente tangenziale il fluido si muoverebbe e non parleremmo più di fluidostatica. Un altro modo analogo usando il vettore normale è
+La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare: in un fluido in quiete la forza esercitata su una superficie è sempre perpendicolare ad essa e il suo modulo per unità di area non dipende dall'orientazione della superficie. Se la forza avesse una componente tangenziale il fluido, che non può sopportare sforzi di taglio, si muoverebbe e non parleremmo più di fluidostatica. Un altro modo analogo usando il vettore normale è
 \begin{Def}[pressione]
    \begin{equation}
       p=\frac{\ud\ve F\cdot \ve n}{\ud A}
    \end{equation}
 \end{Def}
-La pressione si misura in: $\si{\newton\per\meter\squared}=\si{\pascal}$ (pascal), che però è usualmente piccola,
+La pressione si misura in $\si{\newton\per\meter\squared}=\si{\pascal}$ (pascal), un'unità piuttosto piccola;
 comuni sono anche: $\si{\bar}=\SI{1E5}{\pascal}$,
-$\si{\atmosphere}=\SI{1.013E5}{\pascal}$,
+$\si{\atmosphere}=\SI{1.01325E5}{\pascal}$,
 $\si{\torr}=\text{mmHg}=\SI[parse-numbers = false]{1/760}{\atmosphere}$. % fix mmHg
 \begin{Def}[densità locale]
    \begin{equation}
@@ -22,7 +22,7 @@ si misura in $\si{\kilogram/\metre^3}$.
 
 \subsection{\index{legge!di Stevino}Legge di Stevino}
 \begin{legge}[Stevino]
-   La pressione all'interno di un fluido statico a densità uniforme a profondità $h$ rispetto alla pressione esterna in presenza di forza peso è:
+   La pressione all'interno di un fluido in quiete, di densità uniforme e soggetto alla forza peso, a profondità $h$ rispetto alla superficie libera è:
    \begin{equation}
       p = p_0 + \rho g h
    \end{equation}
@@ -42,9 +42,9 @@ Consideriamo un elemento infinitesimo di massa $\ud m$. L'elemento è in equilib
 \[p_0=\text{pressione atmosferica}\]
 \[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^y \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
 \[p=p_0-\rho g y = p_0+\rho g h\]
-che è la legge di Stevino e $h$ è la profondità, valida se consideriamo la densità costante, come per esempio in un liquido.
+che è la legge di Stevino, dove $h=-y$ è la profondità; è valida se la densità è costante, come per esempio in un liquido (praticamente incomprimibile). In acqua la pressione aumenta di circa \SI{1}{\atmosphere} ogni \SI{10}{\meter} di profondità.
 
-Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+Per un gas invece la densità non è costante, quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando che la temperatura sia uniforme (atmosfera isoterma), per la legge dei gas perfetti la densità è proporzionale alla pressione: \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
 \[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
@@ -52,10 +52,10 @@ Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud 
    \label{legge_atmosfera}
 \end{equation}
 \[p=p_0e^{-\frac{y}{\lambda}}\qquad \lambda=\frac{p_0}{\rho_0 g}\quad \text{è una lunghezza}\]
-che è la legge dell'atmosfera.
+che è la legge dell'atmosfera (isoterma), detta anche formula barometrica\index{formula barometrica}. Con $p_0=\SI{1.013E5}{\pascal}$ e $\rho_0=\SI{1.2}{\kilo\gram\per\meter\cubed}$ si ha $\lambda\simeq\SI{8.6}{\kilo\meter}$: la pressione si dimezza circa ogni \SI{6}{\kilo\meter} di quota.
 
 \subsection{\index{legge!dei vasi comunicanti}Legge dei vasi comunicanti}
-Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza, quindi per la legge di Stevino devono avere la stessa pressione infatti il punto inferiore del tubo ad U avrà una certa pressione $P_{\max}$, la pressione nel punto $A$ sarà $P_{\max} - \rho_a g h_{OA}$ e nel punto $B$ $P_{\max} - \rho_a g h_{OB}$, ma $h_{OA}=h_{OB}$. Usando ancora la legge di Stevino:
+Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza e collegati da un fluido omogeneo, quindi per la legge di Stevino devono avere la stessa pressione: infatti se il punto inferiore del tubo ad U ha pressione $P_{\max}$, la pressione nel punto $A$ sarà $P_{\max} - \rho_2 g h_{OA}$ e nel punto $B$ $P_{\max} - \rho_2 g h_{OB}$, ma $h_{OA}=h_{OB}$. Usando ancora la legge di Stevino:
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/vasi_comunicanti}
@@ -66,7 +66,7 @@ Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e
 \[\text{legge dei vasi comunicanti: }\frac{\rho_1}{\rho_2}=\frac{h_2}{h_1}\]
 in particolare se $\rho_1=\rho_2$ allora $h_1=h_2$.
 \subsection{Esperimento di \index{Torricelli}\index{esperimento!di Torricelli}Torricelli}
-L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo un cilindro di mercurio e di rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio scende nel cilindro fino al livello di \SI{0.76}{\meter}.
+L'esperimento, eseguito da Evangelista Torricelli e Vincenzo Viviani nel 1644 (fig.\@\ref{estor}), consiste nel riempire fino all'orlo di mercurio un tubo di vetro lungo circa un metro e chiuso a un'estremità e nel rovesciarlo, senza far uscire il liquido, in una bacinella in cui c'è già del mercurio. Il livello del mercurio nel tubo scende fino a un'altezza di circa \SI{0.76}{\meter} sopra il livello della bacinella, indipendentemente dalla lunghezza e dall'inclinazione del tubo.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/Torricelli}
@@ -76,24 +76,26 @@ L'esperimento del 1664 (fig.\@\ref{estor}) consiste nel riempire fino all'orlo u
 
 Il punto A e il punto B sono allo stesso livello, quindi: $p_A=p_B$
 \[p_A=p_0\qquad p_B=\rho_{\mathrm{Hg}}gh\qquad p_0=\rho_\mathrm{Hg}gh=\SI{1}{\atmosphere} \]
+dove si è trascurata la pressione del vapore di mercurio nella parte alta del tubo (circa \SI{0.2}{\pascal} a temperatura ambiente).
 Si misura in questo modo la pressione atmosferica, in $\text{mmHg}$.\index{pressione! atmosferica} % Fix mmHg
 
-L'esperimento di Torricelli suscitò clamore perché Torricelli suppose che nella zona superiore del tubo ci ``fosse'' del vuoto.\index{vuoto}
+L'esperimento di Torricelli suscitò clamore perché Torricelli sostenne che nella zona superiore del tubo ci fosse il vuoto,\index{vuoto} contro la dottrina aristotelica dell'\emph{horror vacui}. Con l'acqua, che è 13.6 volte meno densa del mercurio, la colonna sarebbe alta circa \SI{10.3}{\meter}: per questo le pompe aspiranti non riescono a sollevare l'acqua oltre circa \SI{10}{\meter}, un fatto già noto ai fontanieri dell'epoca di Galileo.
 
 \subsection{Esperimento delle due semisfere\index{esperimento!delle due semisfere}}
-In due semisfere attaccate in modo da creare una sfera unica viene diminuita la pressione togliendo aria. In questo modo la pressione esterna è maggiore ed esercita una forza sulle pareti delle semisfere, rendendo difficile la separazione.
+Nel 1654 a Ratisbona, e poi nella sua città di Magdeburgo, Otto von Guericke fece combaciare due semisfere di rame di circa mezzo metro di diametro ed estrasse l'aria con una pompa da lui inventata. La pressione esterna, non più bilanciata da quella interna, spingeva le semisfere l'una contro l'altra con una forza tale che due tiri di otto cavalli ciascuno non riuscirono a separarle.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/Sfera_pressione}
 \end{figure}
 
-Consideriamo la strisciolina $\ud m$
+Calcoliamo la forza che tiene unite le semisfere (supponendo di aver fatto il vuoto all'interno). Consideriamo la strisciolina di area $\ud A$ compresa tra gli angoli $\theta$ e $\theta+\ud\theta$ misurati dall'asse $x$ di simmetria:
 \[F=\int\ud F\]
 \[\ud A=2\pi R\sin\theta R\ud\theta=2\pi R^2\sin\theta\ud\theta\]
 \[\ud F_x=p_0 \ud A\cos\theta\]
 \[\frac{\ud \sin\theta}{\ud \theta}=\cos\theta\qquad\ud\sin\theta=\cos\theta\ud\theta\]
 \[\int_S \ud F_x=p_0 2\pi R^2\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta\ud\theta=p_0 2\pi R^2\int_0^{1}\sin\theta\ud(\sin\theta)=p_0\pi R^2\]
 \[\text{se } R=\SI{1}{\metre} \quad F_x\simeq\SI{3E5}{\newton} \]
+La forza è la stessa che agirebbe sul cerchio di raggio $R$ (la sezione): conta solo la proiezione della superficie. Per le semisfere di Magdeburgo ($R\simeq\SI{0.25}{\meter}$) si ha $F\simeq\SI{2E4}{\newton}$, il peso di circa due tonnellate.
 
 \subsection{Principio di Pascal\index{principio!di Pascal}}
 \begin{Pri}[Pascal]
@@ -114,14 +116,14 @@ Se applichiamo una forza sul pistone la pressione esterna, al livello del piston
 \end{align*}
 cioè la variazione di pressione si trasmette in tutti i punti del fluido.
 \subsubsection{Paradosso di Pascal}
-Pascal si divertiva a rompere le botti infilandogli un tubo molto lungo, anche di sezione sottile, in quanto la sezione non conta, pieno d'acqua. La pressione faceva rompere le botti.
+Secondo la tradizione Pascal riuscì a rompere una botte piena d'acqua infilandovi un tubo verticale molto lungo e sottile e riempiendo anche questo d'acqua (il ``crepabotte''). Bastano pochi litri d'acqua nel tubo per rompere la botte: per la legge di Stevino la pressione dipende solo dall'altezza della colonna d'acqua e non dalla sua sezione, quindi un tubo alto \SI{10}{\meter} aggiunge circa \SI{1}{\atmosphere} su tutte le pareti della botte.
 
 \subsection{Principio di Archimede\index{principio!di Archimede}}
-Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché sia in equilibrio deve agire una forza uguale e contraria: la spinta di Archimede $\ve S=-\rho V\ve g$. Essa è dovuta alla differenza di pressione $\Delta p$. Se sostituiamo l'elemento di fluido con un solido il contorno non cambia e quindi la spinta di Archimede risulta uguale. Il peso però è cambiato, quindi in generale non è in equilibrio, infatti la somma delle forze:
+Consideriamo un elemento di un fluido. Su di esso agisce la forza peso, perché sia in equilibrio deve agire una forza uguale e contraria: la spinta di Archimede $\ve S=-\rho_\text{fluido} V\ve g$, cioè una forza verticale verso l'alto pari al peso del fluido spostato. Essa è dovuta alla differenza di pressione $\Delta p$. Se sostituiamo l'elemento di fluido con un solido il contorno non cambia e quindi la spinta di Archimede risulta uguale. Il peso però è cambiato, quindi in generale non è in equilibrio, infatti la somma delle forze:
 \[
    \rho V\ve g - \rho_\text{fluido}V\ve g \neq 0
 \]
-Se $P>S$ cioè $\rho>\rho_\text{fluido}$ sprofonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibrio in questo caso è:
+Se il peso $P$ supera la spinta $S$, cioè se $\rho>\rho_\text{fluido}$, il corpo affonda, altrimenti il corpo sale e bisogna considerare che una parte di questo emergerà e allora la spinta di Archimede diminuirà. La condizione di equilibrio in questo caso è:
 \[
    \rho V\ve g - \rho_\text{fluido}V_\text{immerso}\ve g = 0
 \]
@@ -134,16 +136,17 @@ la soluzione è $V_\text{immerso}=\frac{\rho}{\rho_\text{fluido}}V$ e poiché è
       \begin{tiny}ecco quello che dicono i nostri matematici\end{tiny}
       \includegraphics[scale=1.4]{immagini/fisica1/firma_daniele}
    \end{wrapfigure}
-   Ghiaccio in acqua $\Longrightarrow$ si scioglie
+   Il ghiaccio ($\rho\simeq\SI{917}{\kilo\gram\per\meter\cubed}$) galleggia nell'acqua di mare ($\rho\simeq\SI{1025}{\kilo\gram\per\meter\cubed}$):
    \[V_\text{totale}-V_\text{emergente}=V_\text{totale}\frac{\rho_\text{ghiaccio}}{\rho_\text{\ce{H2O}}}\]
    \[V_\text{totale}\simeq 10 V_\text{emergente}\]
+   cioè emerge solo circa un decimo dell'iceberg (la ``punta dell'iceberg''). Si noti anche che quando un cubetto di ghiaccio galleggiante si scioglie il livello dell'acqua nel bicchiere non cambia: il ghiaccio sposta esattamente il volume d'acqua corrispondente alla propria massa.
 \end{Es}
 \subsection{Condizione generale di equilibrio}
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.4]{immagini/fisica1/equilibrio}
 \end{figure}
-Consideriamo le forze di volume come quelle proporzionali al volume del fluido su cui la forza è applicata. Definiamo
+Chiamiamo forze di volume quelle proporzionali al volume (o alla massa) dell'elemento di fluido su cui sono applicate, come la forza peso. Definiamo la forza per unità di massa
 \[\ve f=\frac{\ve F}{m}\]
 notare che $\ve f$ è un'accelerazione.
 
@@ -159,14 +162,15 @@ Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse 
 \begin{equation}\ve f\rho=\ve\nabla p\end{equation}
 
 \begin{Es}[Forza peso -- Stevino]
-   Nelle ipotesi di Stevino c'è solo il peso, quindi $\ve f=\ve g$
+   Nelle ipotesi di Stevino c'è solo il peso, quindi, con l'asse $z$ verticale verso l'alto, $\ve f=\ve g=-g\ve k$:
    \[
-      f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p \quad p=p_0+\rho gz
+      f_z\rho=\frac{\partial p}{\partial z}\quad -g\rho\,\ud z=\ud p \quad p=p_0-\rho gz
    \]
-   In generale introducendo l'energia potenziale associata alla forza $\ve f$, $U_m$:
+   dove $z\leq 0$ sotto la superficie libera $z=0$.
+   In generale, se la forza è conservativa, introducendo l'energia potenziale per unità di massa $U_m$ (e se la densità è costante):
    \[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
    \[\rho U_m=-p+\const\]
-   Segue che le superfici isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
+   Segue che le superfici isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = gz+U_0$.
 \end{Es}
 \begin{Es}[Fluido in accelerazione]
    \begin{figure}[H]
@@ -187,13 +191,13 @@ Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse 
    \]
    la cui soluzione è:
    \[
-      p = \rho(-ax-gy)
+      p = p_0-\rho(ax+gy)
    \]
    e le superfici isobariche (ed equipotenziali):
    \[
-      y = -\frac{p}{\rho g} - \frac{a}{g}x
+      y = \frac{p_0-p}{\rho g} - \frac{a}{g}x
    \]
-   che è un piano la cui pendenza è proporzionale all'accelerazione del sistema.
+   che è un piano inclinato di un angolo $\alpha$ con $\tan\alpha=a/g$: è quello che si osserva nel caffè di una tazzina quando un treno frena o accelera.
 \end{Es}
 \begin{Es}[Fluido in rotazione\index{moto!circolare!di un fluido}]
    \begin{figure}[H]
@@ -217,17 +221,17 @@ Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse 
       \caption{Paraboloide.}
    \end{figure}
    \subsubsection{Archimede per le rotazioni}
-   Come per il caso in cui c'è solo la forza di gravità anche nel caso di fluido in rotazione vale lo stesso risultato, cioè che se l'oggetto è meno denso del fluido si sposta verso l'esterno se più denso verso l'interno. Infatti consideriamo solo la forza centrifuga (oppure il limite per $\omega$ molto alto) allora la spinta di archimede verso l'interno sarà: $\rho_\text{fluido}V\omega^2 r$. Allora la somma delle forze verso l'esterno sarà:
+   Come per il caso in cui c'è solo la forza di gravità anche nel caso di fluido in rotazione vale un risultato analogo: se l'oggetto è meno denso del fluido si sposta verso l'interno (verso l'asse), se è più denso verso l'esterno. Infatti consideriamo solo la forza centrifuga (oppure il limite per $\omega$ molto alto) allora la spinta di archimede verso l'interno sarà: $\rho_\text{fluido}V\omega^2 r$. Allora la somma delle forze verso l'esterno sarà:
    \[
       \rho V\omega^2 r-\rho_\text{fluido}V\omega^2 r
    \]
-   quindi a meno che $r=0$ il corpo si muove verso l'esterno se $\rho>\rho_\text{fluido}$. Questo è il principio delle centrifughe.
+   quindi, a meno che $r=0$, il corpo si muove verso l'esterno se $\rho>\rho_\text{fluido}$ e verso l'interno se $\rho<\rho_\text{fluido}$. Questo è il principio delle centrifughe, usate per esempio per separare i globuli rossi dal plasma o gli isotopi dell'uranio.
 \end{Es}
 
 \section{Dinamica dei fluidi\index{dinamica!dei fluidi}}
 \begin{description}
    \item[Approccio di Lagrange\index{Lagrange}]: si danno le coordinate $x$ di un elemento di flusso in funzione del tempo, è un metodo di analisi complicato.
-   \item[Approccio di Eulero\index{Eulero}]: si studiano le caratteristiche del fluido in un determinato punto. Ci mettiamo in un punto dello spazio e vediamo come variano le grandezze in funzione del tempo. Per descrivere in modo completo bisogna ripetere le misurazioni in modo completo.
+   \item[Approccio di Eulero\index{Eulero}]: si studiano le caratteristiche del fluido in un determinato punto. Ci mettiamo in un punto dello spazio e vediamo come variano le grandezze in funzione del tempo. Per avere una descrizione completa bisogna conoscere queste grandezze in tutti i punti, cioè conoscere i campi di velocità, pressione e densità.
 \end{description}
 Vengono usate le semplificazioni:
 \begin{itemize}
@@ -239,18 +243,19 @@ Vengono usate le semplificazioni:
    \item moto:
          \begin{itemize}
             \item stazionario (i fenomeni non dipendono dal tempo)
-            \item irrotazionale (nessun vortice, non caotici), $\mathrm{rot}(\ve v)=0$, $\oint \ve v \ud \ve s=0$
+            \item irrotazionale (nessun vortice), $\mathrm{rot}(\ve v)=0$, $\oint \ve v \cdot\ud \ve s=0$
+            \item laminare (non turbolento: gli strati di fluido scorrono ordinatamente senza mescolarsi)
          \end{itemize}
 \end{itemize}
 \begin{description}
-   \item [Linee di flusso\index{linee!di flusso}]: linee tangenti alla $\ve v$ della particella. Ha senso se il moto è stazionario, cioè se $\ve v$ è costante nel tempo.
+   \item [Linee di flusso\index{linee!di flusso}]: linee tangenti in ogni punto alla velocità del fluido. Se il moto è stazionario, cioè se $\ve v$ in ogni punto è costante nel tempo, coincidono con le traiettorie delle particelle di fluido e due linee di flusso non si intersecano mai.
    \item[Tubo di flusso] Le linee di flusso danno origine al tubo di flusso\index{tubo!di flusso}. Non è possibile che vi sia fuoriuscita di fluido lateralmente per definizione: $\ve v$ è tangente alle linee di flusso.
 \end{description}
 
 \subsection{Equazione di continuità\index{equazione!di continuità}}
 \begin{Def}[Portata]
    La portata volumica è la quantità di volume che passa nel tempo: \[Q=\frac{\ud V}{\ud t}\]
-   Essendo in regime stazionario la velocità non varia, quindi $Q=\frac{\Delta V}{\Delta t}$, la portata di massa è la quantità di massa nel tempo: $\frac{\ud m}{\ud t}$.
+   In regime stazionario la portata non varia nel tempo, quindi $Q=\frac{\Delta V}{\Delta t}$; la portata di massa è la massa che attraversa una sezione nell'unità di tempo: $\frac{\ud m}{\ud t}$.
 \end{Def}
 
 \begin{figure}[htbp]
@@ -264,6 +269,7 @@ Fissiamo $\Delta t$ tale che $h=v_1\Delta t$
 \end{enumerate}
 Naturalmente le masse entranti e uscenti sono uguali, quindi (legge di Leonardo\index{legge!di Leonardo}\index{Leonardo}):
 \[A_1v_1=A_2v_2\]
+Dove il tubo si restringe il fluido accelera: è quello che si osserva chiudendo parzialmente con un dito l'uscita di una canna dell'acqua.
 
 Portata volumica\index{portata!volumica}: $Q_v=Av$
 
@@ -277,7 +283,7 @@ Portata di massa\index{portata!di massa}: $Q_m=\rho Av$
 \end{center}
 Consideriamo un tempo $\Delta t$ piccolo e una porzione di massa $\Delta m$. L'effetto netto tra la situazione iniziale e quella finale è di spostare l'elementino da un'estremità all'altra.
 
-Il lavoro è svolto dalle forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta K$. L'equazione di continuità:
+Il lavoro svolto dalle forze esterne $\ve F_1, \ve F_2$ (dovute alla pressione del fluido circostante) e dalla forza peso $\ve P$ è uguale alla variazione di energia cinetica: $L=\Delta K$. L'equazione di continuità:
 \[\Delta m=\rho \Delta V=\rho A_1 v_1\Delta t=\rho A_2 v_2 \Delta t\]
 \[
    \left\{
@@ -300,7 +306,7 @@ Il lavoro è svolto dalle forze esterne: $\ve F_1, \ve F_2, \ve P$ è $L=\Delta 
 \[gh_1-gh_2+\frac{p_1}{\rho}-\frac{p_2}{\rho}=\frac{1}{2}(v_2^2-v_1^2)\]
 \[gh_1+\frac{p_1}{\rho}+\frac{1}{2}v_1^2=gh_2+\frac{p_2}{\rho}+\frac{1}{2}v_2^2\]
 \begin{Teo}[Bernoulli]
-   Per un flusso laminare, incomprimibile, non viscoso e irrotazionale vale:
+   Per un flusso stazionario, laminare, incomprimibile e non viscoso vale lungo una linea di flusso (e, se il flusso è anche irrotazionale, in tutto il fluido):
    \begin{equation}
       \rho gh+p+\frac{1}{2}\rho v^2=\const
    \end{equation}
@@ -309,7 +315,7 @@ Nel caso che $v=0$ l'unico termine che sopravvive è quello che è chiamato \ind
 \[
    p_1+\frac{1}{2}\rho v_1^2=p_2+\frac{1}{2}\rho v_2^2=\const
 \]
-quindi si deduce che se la velocità è piccola la pressione è grande. Questo può essere spiegato anche usando l'equazione di continuità, infatti dove il tubo è più stretto la velocità è maggiore, questo significa che ci è stata un'accelerazione e quindi una forza dovuta ad una variazione di pressione che deve essere maggiore dove il tubo è più largo.
+quindi si deduce che dove la velocità è minore la pressione è maggiore. Lo si può capire anche usando l'equazione di continuità: dove il tubo è più stretto la velocità è maggiore, quindi il fluido ha subito un'accelerazione, dovuta a una forza netta che spinge dalla zona più larga (pressione maggiore) verso quella più stretta (pressione minore). Questo è il principio del tubo di Venturi\index{Venturi}, usato per misurare la velocità dei fluidi e nei carburatori.
 
 L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'energia meccanica.
 \[mgh+\frac{1}{2}mv^2=\const\]
@@ -318,7 +324,7 @@ L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'e
    \[p_\text{sopra}+\frac{1}{2}\rho v_\text{sopra}^2=p_\text{sotto}+\frac{1}{2}\rho v_\text{sotto}^2\]
    quindi se $v_\text{sopra}>v_\text{sotto}$ allora $p_\text{sopra}<p_\text{sotto}$ e allora c'è una forza netta verso l'alto.
 
-   Un altro contributo viene dal fatto che l'aria è fatta deviare verso il basso e per il terzo principio della dinamica ci deve essere una forza uguale e contraria applicata sulle ali. Tutto questo contribuisce alla \index{portanza}portanza.
+   Le due descrizioni sono equivalenti: l'ala, per la sua forma e la sua inclinazione (angolo di attacco), devia l'aria verso il basso e per il terzo principio della dinamica l'aria esercita sull'ala una forza verso l'alto, la \index{portanza}portanza. Attenzione a una spiegazione molto diffusa ma sbagliata: non è vero che le particelle d'aria che si separano sul bordo d'attacco debbano ricongiungersi sul bordo d'uscita (``tempi di transito uguali''); in realtà l'aria sopra l'ala arriva al bordo d'uscita molto prima di quella che passa sotto.
 \end{Es}
 \section{Viscosità\index{viscosità}\index{eta@$\eta$|see{viscosità}}}
 \label{viscosita fisica1}
@@ -329,10 +335,11 @@ L'espressione del teorema di Bernoulli è molto simile alla conservazione dell'e
    \caption{Perdita di pressione a causa della viscosità.}
 \end{figure}
 
-La pressione diminuisce, si ha una perdita di carico per un fluido viscoso a causa degli attriti interni. Siamo a regime laminare (velocità basse).
+In un fluido viscoso che scorre in un tubo orizzontale di sezione costante la pressione diminuisce lungo il tubo (perdita di carico) a causa degli attriti interni, anche se la velocità media non cambia. Consideriamo il regime laminare (velocità basse).
 
 
-\[F=\eta A\frac{\ud v}{\ud z}\qquad\ve F=\eta A \ve\nabla v\qquad\eta=\text{coefficiente di viscosità}\]
+\[F=\eta A\frac{\ud v}{\ud z}\qquad\eta=\text{coefficiente di viscosità}\]
+è la forza tangenziale tra due strati di fluido di area $A$ che scorrono uno sull'altro, con $z$ la direzione perpendicolare agli strati. La viscosità si misura in \si{\pascal\second}: per l'acqua a \SI{20}{\celsius} $\eta\simeq\SI{1.0E-3}{\pascal\second}$, per l'aria $\SI{1.8E-5}{\pascal\second}$, per il miele circa \SI{10}{\pascal\second}.
 
 \subsection{Legge di Poiseuille}
 
@@ -374,29 +381,29 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
       Q_v=\frac{\pi\Delta p}{8\eta L}R^4
    \end{equation}
 \end{legge}
-si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica.
+si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica ($\Delta p$ corrisponde alla differenza di potenziale e $Q_v$ alla corrente). La dipendenza da $R^4$ è molto forte: se un'arteria si restringe del 20\% la portata, a parità di pressione, si dimezza circa ($0.8^4\simeq0.41$).
 \index{meccanica dei fluidi|)}
 
 
 \chapter{Termodinamica\index{termodinamica|(}}
 \minitoc
-In meccanica è utile utilizzare ipotesi nelle quali ci siano pochi gradi di libertà, per esempio con i fluidi si usa l'approccio di Eulero. In termodinamica si considerano molte particelle e quindi molti gradi di libertà.
+In meccanica si studiano di solito sistemi con pochi gradi di libertà; anche per i fluidi, con l'approccio di Eulero, si descrive il sistema con pochi campi. In termodinamica si considerano sistemi formati da moltissime particelle (dell'ordine del numero di Avogadro) e quindi con moltissimi gradi di libertà, che è impossibile seguire singolarmente.
 
-La termodinamica si occupa di scambi di energia e di cambiamento di stato di sistemi macroscopici, descritti da un numero piccolo di variabili macroscopiche come temperatura, volume e pressione. Si tratta sempre di sostanze pure e omogenee (una sola fase).
+La termodinamica si occupa di scambi di energia e di cambiamento di stato di sistemi macroscopici, descritti da un numero piccolo di variabili macroscopiche come temperatura, volume e pressione. Spesso si considerano sostanze pure e omogenee (una sola fase).
 
-Una variabile di stato è una variabile\index{variabile!di stato} stazionaria(costante nel tempo), isotropa (uguale in tutte le direzioni), omogenea (uguale nello spazio).
+Le variabili di stato\index{variabile!di stato} sono le grandezze macroscopiche che descrivono lo stato del sistema; all'equilibrio sono stazionarie (costanti nel tempo) e, se il sistema è omogeneo, uguali in tutti i punti del sistema. Si distinguono in estensive (proporzionali alla quantità di materia, come volume, massa, energia) e intensive (come pressione e temperatura).
 
 Un sistema\index{sistema} è la porzione di materia sotto osservazione, l'ambiente \index{ambiente} tutto il resto. L'universo termodinamico\index{universo!termodinamico} è l'unione del sistema con l'ambiente. Un sistema aperto \index{sistema!aperto} scambia energia e materia con l'ambiente, un sistema chiuso \index{sistema!chiuso} scambia solo energia, un sistema isolato \index{sistema!isolato}non scambia né energia né materia. Una parete adiabatica \index{parete!adiabatica}è una parete che non lascia passare calore, una diatermica \index{parete!diatermica}lascia passare calore.
 
-Le variabili di stato vanno considerate dopo un certo tempo di rilassamento del sistema. La termodinamica classica si occupa dei sistemi all'equilibrio, analizza i sistemi prima e dopo le trasformazioni. Le trasformazioni \index{trasformazioni!quasistatiche}vengono considerate quasi statiche, cioè trasformazioni che passano attraverso infiniti stati di equilibrio in un tempo infinitamente lungo. Queste trasformazioni sono dette anche reversibili\index{trasformazioni!reversibili}.
+Le variabili di stato vanno considerate dopo un certo tempo di rilassamento del sistema. La termodinamica classica si occupa dei sistemi all'equilibrio, analizza i sistemi prima e dopo le trasformazioni. Le trasformazioni \index{trasformazioni!quasistatiche}vengono spesso considerate quasi statiche, cioè trasformazioni che passano attraverso infiniti stati di equilibrio in un tempo infinitamente lungo. Se inoltre non ci sono effetti dissipativi (attriti, scambi di calore tra corpi a temperatura diversa) le trasformazioni quasi statiche sono reversibili\index{trasformazioni!reversibili}: invertendo di poco le condizioni esterne il sistema ripercorre la trasformazione al contrario, riportando sia sé stesso sia l'ambiente allo stato iniziale.
 
-Spesso vengono considerati l'equilibrio meccanico \index{equilibrio!meccanico}(nessun lavoro da e sul sistema), chimico \index{equilibrio!chimico}(nessuna reazione chimica interna), termico \index{equilibrio!termico}(nessuno scambio di calore).
+Il sistema è in equilibrio termodinamico se è contemporaneamente in equilibrio meccanico \index{equilibrio!meccanico}(nessuna forza o differenza di pressione non bilanciata), chimico \index{equilibrio!chimico}(nessuna reazione chimica interna), termico \index{equilibrio!termico}(nessuno scambio di calore).
 
 \section{Principio zero della termodinamica\index{principio!zero della termodinamica}}
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/principio_zero}
-   \caption{(a)A e B scambiano calore con C, raggiungono l'equilibrio. (b) A e B non scambiano calore, sono all'equilibrio.}
+   \caption{(a) A e B scambiano calore con C e raggiungono l'equilibrio. (b) Messi a contatto, A e B non scambiano calore: sono in equilibrio tra loro.}
 \end{figure}
 Il principio zero della termodinamica serve per definire il concetto di temperatura:
 \begin{Pri}[principio zero della termodinamica]
@@ -410,20 +417,26 @@ Il principio zero della termodinamica serve per definire il concetto di temperat
 \begin{equation}
    T(X)=273.16\frac{X}{X_\text{triplo}}
 \end{equation}
-$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\SI{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\SI{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità e possono essere usati solo in piccoli intervalli dove si ritiene che il problema della non linearità possa essere trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas perfetto a volume costante.
+$X_\text{triplo}$ è il valore di $X$ al punto triplo dell'acqua ($\SI{0.01}{\celsius}$). In questo modo la temperatura del punto triplo dell'acqua è di $\SI{273.16}{\kelvin}$. Solitamente $X$ è il volume, la resistenza elettrica, la fem in una termocoppia, la pressione di un gas perfetto a volume costante\ldots I termometri empirici hanno problemi di non linearità (termometri diversi, tarati allo stesso punto fisso, danno letture diverse lontano da esso) e possono essere usati solo in intervalli in cui la non linearità è trascurabile. Questi intervalli sono tutti intorni del punto triplo, in quanto al punto triplo dell'acqua per definizione tutti i termometri danno la stessa lettura. Il miglior termometro è quello a gas a volume costante, nel limite di gas molto rarefatto: in questo limite tutti i gas si comportano come gas perfetti e danno la stessa lettura, indipendentemente dalla loro natura.
 
 \subsection{Termometro a gas perfetto a volume costante\index{termometro!a gas perfetto}}
-Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costante da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costante e si legge il valore di pressione. La pressione per mantenere il volume costante è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura empirica sarà proporzionale alla variazione di pressione del gas.
+Il termometro a gas perfetto è formato da un bulbo contenente un gas (perfetto, vedi~\ref{gas perfetto} a pag.\@ \pageref{gas perfetto}) che viene messo a contatto con il corpo di cui si vuole misurare la temperatura. Il gas tenderà ad espandersi o a contrarsi, cioè a cambiare il suo volume ma questo è mantenuto costante da una colonna di mercurio contenuta in un manometro collegato al bulbo. In questo modo si mantiene il volume costante e si legge il valore di pressione. La pressione per mantenere il volume costante è variata alzando o abbassando il serbatoio di mercurio del manometro. La temperatura sarà proporzionale alla pressione del gas.
 
 \section{Legge dei gas perfetti\index{legge!dei gas perfetti}}
-\begin{legge}[Avogadro(1811)]
-   Uguali moli di gas, alla stessa pressione e temperatura contengono lo stesso numero $N_A$ di molecole, detto numero di Avogadro\index{Numero di!Avogadro}.
+\begin{legge}[Avogadro (1811)]
+   Volumi uguali di gas diversi, alla stessa pressione e temperatura, contengono lo stesso numero di molecole.
 \end{legge}
-Il numero di Avogadro vale circa $6.022\times 10^{23}$.
+Una mole contiene $N_A$ molecole, dove $N_A$ è il numero di Avogadro\index{Numero di!Avogadro}; dal 2019 il suo valore è fissato esattamente a $N_A=\SI{6.02214076E23}{\per\mole}$. In condizioni normali (\SI{0}{\celsius}, \SI{1}{\atmosphere}) una mole di gas perfetto occupa \SI{22.4}{\liter}.
 \begin{legge}[Boyle\index{Boyle}\index{legge!di Boyle}]
    In una trasformazione a temperatura costante (isoterma):
    \begin{equation}
       p\propto\frac{1}{V}
+   \end{equation}
+\end{legge}
+\begin{legge}[Charles\index{legge!di Charles}\index{Charles}]
+   In una trasformazione a pressione costante (isobara):
+   \begin{equation}
+      V\propto{T}
    \end{equation}
 \end{legge}
 \begin{legge}[Gay Lussac\index{legge!di Gay Lussac}\index{Gay Lussac}]
@@ -432,22 +445,23 @@ Il numero di Avogadro vale circa $6.022\times 10^{23}$.
       p\propto{T}
    \end{equation}
 \end{legge}
+In queste leggi $T$ è la temperatura assoluta; estrapolando a pressione (o volume) nulla, tutti i gas indicano lo stesso zero di temperatura, circa \SI{-273}{\celsius}: è lo zero assoluto.
 Il tutto si riassume nell'equazione dei gas perfetti\index{equazione! dei gas perfetti}:
 \begin{equation}
    pV=nRT=\frac{N}{N_A}RT=N\frac{R}{N_A}T=NkT
 \end{equation}
-con $R$ costante dei gas, $k=\frac{R}{N_A}$ costante di Boltzmann\index{costante! di Boltzmann}.
+con $R\simeq\SI{8.314}{\joule\per\mole\per\kelvin}$ costante dei gas, $k=\frac{R}{N_A}=\SI{1.380649E-23}{\joule\per\kelvin}$ costante di Boltzmann\index{costante! di Boltzmann}.
 \section{Dilatazione termica\index{dilatazione termica}}
 \subsection{Dilatazione termica dei solidi}
 \subsubsection{lineare}
 \begin{equation}
    \Delta L=\alpha L_0\Delta T
 \end{equation}
-$\alpha$ dipendente dal tipo di materiale non è costante nella temperatura, ma spesso lo si può considerare tale. Altrimenti:
+Il coefficiente di dilatazione lineare $\alpha$ dipende dal materiale (per l'acciaio circa \SI{1.2E-5}{\per\kelvin}, per il vetro comune circa \SI{9E-6}{\per\kelvin}) e non è costante al variare della temperatura, ma spesso lo si può considerare tale. Altrimenti:
 \begin{equation}
    \Delta L=\int_{T_1}^{T_2} \alpha(T) L_0 \,\ud T
 \end{equation}
-Il coefficiente $\alpha$ è spesso isotropo, cioè uguali in tutte le direzioni. Quindi sviluppando con Taylor:
+Il coefficiente $\alpha$ è spesso isotropo, cioè uguale in tutte le direzioni. Quindi, poiché $\alpha\Delta T\ll1$, sviluppando con Taylor:
 \[
    V_f = V_0(1+\alpha\Delta T)^3 \simeq V_0(1+3\alpha\Delta T)
 \]
@@ -459,7 +473,7 @@ Nei liquidi non si può parlare di dilatazione lineare, quindi
 \begin{equation}
    \Delta V=\beta V_0\Delta T
 \end{equation}
-$\beta$ è abbastanza indipendente dalla temperatura, nei gas no, e si ricava dall'equazione dei gas perfetti.
+Per molti liquidi $\beta$ è abbastanza indipendente dalla temperatura. Fa eccezione l'acqua, che tra \SI{0}{\celsius} e \SI{4}{\celsius} si contrae quando viene riscaldata ($\beta<0$) e ha la massima densità a circa \SI{4}{\celsius}: per questo d'inverno laghi e stagni gelano dalla superficie, mentre sul fondo l'acqua resta a circa \SI{4}{\celsius} e la vita acquatica sopravvive. Nei gas $\beta$ non è costante e si ricava dall'equazione dei gas perfetti: a pressione costante $\beta=1/T$.
 
 \section{Teoria cinetica del gas perfetto\index{teoria cinetica del gas perfetto}}
 \label{gas perfetto}
@@ -521,7 +535,7 @@ avendo introdotto $M=Nm$ la massa totale del gas. Introducendo la densità volum
    P=\frac{1}{3}\rho\media{v^2}
    \label{gas_pressione04}
 \end{equation}
-Questo risultato è stato ottenuto trascurando gli urti tra le molecole, ma risulta comunque valido. In caso di urto infatti le velocità di due molecole si scambiano e quindi il moto delle due molecole è semplicemente scambiato. Si noti che l'espressione precedente lega una grandezza microscopica (la velocità) ad una macroscopica (la pressione).
+Questo risultato è stato ottenuto trascurando gli urti tra le molecole, ma risulta comunque valido: gli urti elastici tra molecole conservano quantità di moto ed energia e, all'equilibrio, non cambiano la distribuzione statistica delle velocità, che è l'unica cosa che conta per la pressione. Si noti che l'espressione precedente lega una grandezza microscopica (la velocità) ad una macroscopica (la pressione).
 Usando invece l'energia cinetica del gas $K=\frac{1}{2}Nm\media{v^2}$ la \eqref{eq_gas_01} diventa:
 \begin{equation}
    pV=\frac{2}{3}K
@@ -530,7 +544,7 @@ Introducendo la legge dei gas perfetti $pV=nRT$ si ricava:
 \begin{equation}
    K = \frac{3}{2}nRT
 \end{equation}
-che lega la temperatura del gas alla sua energia interna.
+che lega la temperatura del gas all'energia cinetica media delle sue molecole: la temperatura è una misura dell'energia cinetica media di traslazione, $\media{\frac{1}{2}mv^2}=\frac{3}{2}kT$.
 \begin{Def}[velocità quadratica media]
    \begin{equation}
       v_{qm}=\sqrt{\media{v^2}}
@@ -567,9 +581,9 @@ dove $r_i$ è la frazione molare:
 
 \subsection{Libero cammino medio\index{libero cammino medio}}
 \label{libero cammino medio fisica1}
-Il libero cammino medio $\lambda$ è lo spazio medio in cui una particella non subisce urti con altra particelle. Supponiamo di avere molecole di diametro $d$. Avviene una interazione solo se i due centri delle molecole si avvicinano a una distanza inferiore a $d$. Si può pensare anche che la molecola considerata abbia diametro $2d$ e le altre siano puntiformi. Nel tempo $t$ la molecola spazza il volume di un cilindro di sezione $\pi d^2$ e di lunghezza $L_{cil}=vt$ con $v$ velocità della molecola. Supponiamo che il gas sia racchiuso in un volume $V$e contenga $N$ molecole. Il numero di molecole contenuto nel cilindro è quindi:
+Il libero cammino medio $\lambda$ è la distanza media che una molecola percorre tra due urti successivi con altre molecole. Supponiamo di avere molecole di diametro $d$. Avviene una interazione solo se i due centri delle molecole si avvicinano a una distanza inferiore a $d$. Si può pensare anche che la molecola considerata abbia diametro $2d$ e le altre siano puntiformi. Nel tempo $t$ la molecola spazza il volume di un cilindro di sezione $\pi d^2$ e di lunghezza $L_{cil}=vt$ con $v$ velocità della molecola. Supponiamo che il gas sia racchiuso in un volume $V$ e contenga $N$ molecole. Il numero di molecole contenuto nel cilindro è quindi:
 \[N_{\text{cil}}=N\frac{V_{\text{cil}}}{V}=N\frac{\pi d^2vt}{V}\]
-Questo rappresenta anche il numero medio di urti nel tempo $t$ della molecola. Ad ogni urti la molecola cambia direzione, ma spazza sempre il volume di un cilindro analogo.
+Questo rappresenta anche il numero medio di urti nel tempo $t$ della molecola. A ogni urto la molecola cambia direzione, ma spazza sempre il volume di un cilindro analogo.
 
 Il libero cammino medio è la distanza totale percorsa diviso il numero di urti subiti:
 \[\lambda=\frac{L_{\text{cil}}}{N_{\text{cil}}}=vt\frac{V}{N\pi d^2vt}=\frac{V}{N\pi d^2}\]
@@ -649,7 +663,7 @@ Distribuzione Maxwell--Boltzmann dell'energia:
 \begin{equation}
    N(E)=\frac{2N}{\sqrt{\pi}}\frac{1}{(kT)^{\frac{3}{2}}}\sqrt{E}e^{-\frac{E}{kT}}
 \end{equation}
-è indipendente dalla massa delle molecole, infatti un aumento di $m$ consegue una diminuzione di $v^2$ in modo che l'energia cinetica rimanga invariata.
+è indipendente dalla massa delle molecole: a parità di temperatura a un aumento di $m$ corrisponde una diminuzione di $v^2$, in modo che la distribuzione dell'energia cinetica rimanga invariata.
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.7]{immagini/fisica1/energia_max3d}
@@ -681,38 +695,40 @@ Per gli altri gas: $f$ numero di gradi di libertà
 
 \section{Trasferimenti di calore\index{trasferimento di calore}}
 \subsection{Irraggiamento\index{irraggiamento}}
-Ogni corpo emette radiazione elettromagnetica che dipende dalla temperatura. Leggi del corpo nero:
-\begin{equation}P=\sigma T^4\qquad \lambda_\text{max}\sim\frac{1}{T}\end{equation}
+Ogni corpo emette radiazione elettromagnetica che dipende dalla temperatura; è l'unico modo di trasferire calore nel vuoto (è così che il Sole scalda la Terra). Per un corpo nero valgono la legge di Stefan--Boltzmann\index{legge!di Stefan--Boltzmann} e la legge dello spostamento di Wien\index{legge!di Wien}:
+\begin{equation}P=\sigma A T^4\qquad \lambda_\text{max}T=b\end{equation}
+con $\sigma=\SI{5.67E-8}{\watt\per\meter\squared\per\kelvin\tothe{4}}$, $A$ l'area della superficie emittente e $b\simeq\SI{2.9E-3}{\meter\kelvin}$. Per un corpo reale la potenza va moltiplicata per l'emissività $e\leq1$. Il Sole ($T\simeq\SI{5800}{\kelvin}$) ha il massimo di emissione a circa \SI{500}{\nano\meter}, nel visibile, il corpo umano ($T\simeq\SI{310}{\kelvin}$) a circa \SI{9}{\micro\meter}, nell'infrarosso.
 
 \subsection{Conduzione\index{conduzione}}
-Trasporto di calore senza trasporto di materia, è caratteristico dei solidi.
+Trasporto di calore senza trasporto di materia; è il meccanismo principale nei solidi.
 \begin{equation}
    P=\frac{Q}{\Delta t}=K\frac{A}{\Delta x}\Delta T
 \end{equation}
-con $K$ coefficiente di conducibilità termica, $A$ l'area effettiva di contatto, $\Delta x$ lo spessore separatore.
+con $K$ coefficiente di conducibilità termica, $A$ l'area attraverso cui fluisce il calore e $\Delta x$ lo spessore attraversato (legge di Fourier\index{legge!di Fourier}). I metalli sono buoni conduttori (rame $K\simeq\SI{400}{\watt\per\meter\per\kelvin}$), l'aria ferma è un ottimo isolante ($K\simeq\SI{0.026}{\watt\per\meter\per\kelvin}$): per questo isolano i doppi vetri, i piumini e il polistirolo.
 
 \subsection{Convezione\index{convezione}}
-Trasporto di calore con trasporto di materia, cioè con correnti convettive in movimento.
+Trasporto di calore con trasporto di materia, cioè con correnti convettive nei fluidi: il fluido caldo, meno denso, sale per la spinta di Archimede e viene sostituito da fluido più freddo (per esempio l'acqua in una pentola o l'aria sopra un termosifone).
 
 
 \section{Capacità termiche\index{capacità!termica}}
 \begin{Def}[capacità termica]
-   Definiamo la capacità termica $C$ di un corpo la quantità di calore necessaria per far aumentare la sua temperatura di $\Delta T$:
+   Definiamo la capacità termica $C$ di un corpo come il rapporto tra il calore $Q$ fornito al corpo e l'aumento di temperatura $\Delta T$ che ne risulta:
    \begin{equation}
       C=\frac{Q}{\Delta T}
    \end{equation}
 \end{Def}
 \begin{Def}[capacità termica specifica]
-   Definiamo la capacità termica specifica\index{capacità!termica!specifica} di una sostanza la quantità di calore necessaria per far aumentare la temperatura di $\Delta T$ un'unità di massa:
+   Definiamo la capacità termica specifica\index{capacità!termica!specifica} (o calore specifico) di una sostanza come la capacità termica per unità di massa, cioè il calore necessario per aumentare di un kelvin la temperatura di un'unità di massa:
    \begin{equation}
       c=\frac{Q}{m\Delta T}=\frac{C}{m}
    \end{equation}
+   Per l'acqua $c\simeq\SI{4186}{\joule\per\kilo\gram\per\kelvin}$ (la vecchia caloria era il calore necessario per scaldare \SI{1}{\gram} d'acqua da \SI{14.5}{\celsius} a \SI{15.5}{\celsius}: \SI{1}{cal}=\SI{4.186}{\joule}).
 \end{Def}
 Esse non sono costanti, dipendono spesso dalla temperatura e dal tipo di trasformazione. Quindi al posto di $Q=mc\Delta T$ bisognerebbe scrivere:
 \begin{equation}
    Q=m\int_{T_0}^{T_f}c(T)\,\ud T
 \end{equation}
-conoscendo però come varia $c$ in funzione di $T$. Essendo $c$ variabile dal tipo di trasformazione per i gas si parla di $c_V$ calore specifico a volume costante e $c_p$ calore specifico a pressione costante.
+conoscendo però come varia $c$ in funzione di $T$. Poiché $c$ dipende dal tipo di trasformazione, per i gas si parla di $c_V$ calore specifico a volume costante e $c_p$ calore specifico a pressione costante.
 \begin{Def}[calore specifico molare]
    Il calore specifico molare è definito come\index{capacità!termica!molare}\index{calore specifico}:
    \begin{equation}
@@ -721,15 +737,15 @@ conoscendo però come varia $c$ in funzione di $T$. Essendo $c$ variabile dal ti
    con $M=\frac{m}{n}$ massa molare\index{massa!molare}, $n$ numero di moli. Spesso $c^{\text{mol}}$ è indicato semplicemente con $c$.
 \end{Def}
 
-\index{Doulong}\index{Petit}Doulong e Petit osservarono che il calore specifico molare o capacità termica molare è uguale per tutti i solidi ed è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero.
+\index{Dulong}\index{Petit}Dulong e Petit osservarono nel 1819 che il calore specifico molare (o capacità termica molare) è circa lo stesso per tutti i solidi elementari a temperatura ambiente ed è circa $\SI{25}{\joule\per\mole\per\kelvin}$. In realtà questo è il valore limite a cui tendono i solidi per temperature alte. Per temperature tendenti allo zero assoluto la capacità termica molare dei solidi tende a zero (come $T^3$, legge di Debye), un effetto che la fisica classica non sa spiegare e che fu uno dei primi successi della meccanica quantistica (Einstein, 1907). Il diamante, per esempio, a temperatura ambiente ha un calore specifico molare di solo \SI{6}{\joule\per\mole\per\kelvin}.
 
 
 \section{Energia interna\index{energia!interna}}
-L'energia interna di un gas perfetto è data solo dall'energia cinetica in quanto si è supposto che non ci sia energia potenziale. Per una molecola monoatomica $K=\frac{3}{2}kT$, per $n$ moli $E=K_n=nN_A\frac{3}{2}kT=\frac{3}{2}nRT$. Le molecole non puntiformi hanno anche energia cinetica rotazionale. Una molecola che possa ruotare su tutti i tre assi ha energia interna:
+L'energia interna di un gas perfetto è data solo dall'energia cinetica delle molecole, in quanto si è supposto che non ci sia energia potenziale di interazione. Per una molecola monoatomica $K=\frac{3}{2}kT$, per $n$ moli $E=K_n=nN_A\frac{3}{2}kT=\frac{3}{2}nRT$. Le molecole non puntiformi hanno anche energia cinetica rotazionale. Una molecola che possa ruotare su tutti i tre assi ha energia interna:
 \[E=K=\frac{1}{2}mv_x^2+\frac{1}{2}mv_y^2+\frac{1}{2}mv_z^2+\frac{1}{2}I_x\omega_x^2+\frac{1}{2}I_y\omega_y^2+\frac{1}{2}I_z\omega_z^2\]
-La molecola ha quindi 6 gradi di libertà, 3 traslatori e 3 rotazionali. Una molecola monoatomica ha solo 3 gradi traslatori e nessuno rotazionale in quanto essendo puntiforme $I=0$, una molecola biatomica ha 5 gradi di libertà.
+La molecola ha quindi 6 gradi di libertà, 3 traslatori e 3 rotazionali. Una molecola monoatomica ha solo 3 gradi traslatori e nessuno rotazionale in quanto essendo puntiforme $I=0$, una molecola biatomica (o lineare) ha 5 gradi di libertà, perché il momento d'inerzia rispetto all'asse della molecola è trascurabile.
 \subsection{Principio di equipartizione dell'energia\index{principio!di equipartizione!dell'energia}}
-Il principio di equipartizione dell'energia di Maxwell\index{Maxwell} dice che mediamente l'energia si ripartisce in modo equo tra i gradi di libertà. Ogni grado di libertà riceve $\frac{1}{2}kT$ di energia.
+Il principio di equipartizione dell'energia di Maxwell\index{Maxwell} e Boltzmann dice che, all'equilibrio termico, in media l'energia si ripartisce in modo equo tra i gradi di libertà: ogni grado di libertà (più precisamente, ogni termine quadratico nell'espressione dell'energia) riceve in media $\frac{1}{2}kT$ di energia.
 \begin{Pri}[equipartizione dell'energia]
    \begin{equation}
       E=\frac{f}{2}nRT
@@ -737,14 +753,14 @@ Il principio di equipartizione dell'energia di Maxwell\index{Maxwell} dice che m
    \end{equation}
    con $f$ il numero di gradi di libertà delle particelle.
 \end{Pri}
-Si deduce che l'energia interna di un gas dipende esclusivamente dalla temperatura.
+Si deduce che l'energia interna di un gas perfetto dipende esclusivamente dalla temperatura.
 \subsection{Calore specifico molare dei solidi\index{capacità!termica!dei solidi}\index{calore specifico!dei solidi}}
-Gli atomi dei solidi sono disposti secondo strutture reticolari e possono vibrare intorno alle loro posizioni di equilibrio in tre direzioni. Ogni atomo dispone anche di energia potenziale, quindi altri tre gradi di libertà. Avendo in totale 6 gradi di libertà dall'equazione \eqref{equipartizione_00} si ha:
+Gli atomi dei solidi sono disposti secondo strutture reticolari e possono vibrare intorno alle loro posizioni di equilibrio in tre direzioni. Ogni atomo dispone anche di energia potenziale elastica, che contiene altri tre termini quadratici, quindi altri tre gradi di libertà. Avendo in totale 6 gradi di libertà dall'equazione \eqref{equipartizione_00} si ha:
 \[E=3nRT\]
 Se forniamo $Q$ calore al solido esso si trasformerà tutto in energia interna non compiendo il solido alcun lavoro:
 \[Q=\Delta E=3nR\Delta T=nc\Delta T\]
 \[c=\frac{3nR\Delta T}{n\Delta T}=3R\simeq \SI{25}{\joule\per\mole\per\kelvin} \]
-come previsto da Doulong\index{Doulong} e Petit\index{Petit}.
+come osservato da Dulong\index{Dulong} e Petit\index{Petit}.
 \subsection{Calore specifico dei gas\index{calore specifico!dei gas}\index{capacità!termica!dei gas}}
 Come dimostrato più avanti in una trasformazione isocora tutto il calore si trasforma in variazione di energia interna in quanto non si compie lavoro.
 \[c_V=\frac{Q}{n\Delta T}=\frac{\Delta E}{n\Delta T}=\frac{\frac{f}{2}nR\Delta T}{n\Delta T}=\frac{f}{2}R\]
@@ -753,7 +769,7 @@ Come dimostrato più avanti in una trasformazione isocora tutto il calore si tra
 \section{Primo principio della termodinamica\index{primo principio della termodinamica}\index{principio!primo della termodinamica}}
 Consideriamo positivo qualsiasi cosa aumenti l'energia interna quindi consideriamo positivo il lavoro compiuto dall'ambiente sul sistema e positivo il calore ceduto dall'ambiente al sistema.
 \[\Delta E=Q+L=E_f-E_i\]
-con $E_f$, $E_i$ l'energia interna del sistema finale ed iniziale; $\Delta E$ dipende solo dalla situazione finale ed iniziale del sistema (per un gas solo dalla temperatura), quindi è una funzione di stato\index{funzione!di stato}, cioè una funzione che non dipende dalla particolare trasformazione, dal cammino percorso, ma solo dalle situazioni iniziali e finali. Mentre $L$ e $Q$ non sono funzioni di stato, la loro somma lo è. Questo è il primo principio della termodinamica:
+con $E_f$, $E_i$ l'energia interna del sistema finale ed iniziale; $E$ è una funzione di stato\index{funzione!di stato}: la sua variazione $\Delta E$ non dipende dalla particolare trasformazione, cioè dal cammino percorso, ma solo dagli stati iniziale e finale (per un gas perfetto dipende solo dalla temperatura). Mentre $L$ e $Q$ non sono funzioni di stato, la loro somma lo è. Questo è il primo principio della termodinamica:
 \begin{Pri}[primo principio della termodinamica]
    \begin{subequations}
       \begin{equation}
@@ -770,8 +786,8 @@ con $E_f$, $E_i$ l'energia interna del sistema finale ed iniziale; $\Delta E$ di
 \section{Trasformazioni di un gas\index{trasformazioni!di un gas}}
 Le trasformazioni le possiamo dividere in due gruppi:
 \begin{description}
-   \item[trasformazioni irreversibili]\index{trasformazioni!irreversibili} sono veloci, non sono determinate negli stati intermedi.
-   \item[trasformazioni quasistatiche]\index{trasformazioni!quasistatiche} sono lente, si dà il tempo al sistema di reagire attraversando infiniti stati di equilibrio intermedi. Una trasformazione quasi statica molto lenta idealizza una trasformazione reversibile, cioè una trasformazione che può tornare allo stato di partenza\index{trasformazioni!reversibili}.
+   \item[trasformazioni irreversibili]\index{trasformazioni!irreversibili} sono in genere veloci; gli stati intermedi non sono stati di equilibrio e non possono essere descritti dalle variabili di stato.
+   \item[trasformazioni quasistatiche]\index{trasformazioni!quasistatiche} sono lente, si dà il tempo al sistema di reagire attraversando infiniti stati di equilibrio intermedi. Una trasformazione quasi statica senza attriti idealizza una trasformazione reversibile, cioè una trasformazione che può essere percorsa al contrario riportando allo stato iniziale sia il sistema sia l'ambiente\index{trasformazioni!reversibili}.
 \end{description}
 
 \subsection{Calcolo del lavoro\index{lavoro!su un gas}}
@@ -823,7 +839,7 @@ Mostriamo la relazione tra $c_V$ e $c_p$. Consideriamo una trasformazione isocor
 \end{align*}
 \[\Delta E_I=Q_I+L_I=Q_I=nc_V\Delta T\]
 \[\Delta E_{II}=Q_{II}+L_{II}=nc_p\Delta T-p\Delta V\]
-$E_B=E_h$ perché $E$ dipende solo da $T$, quindi:
+$E_B=E_C$ perché per un gas perfetto $E$ dipende solo da $T$, quindi:
 \[\Delta E_I=\Delta E_{II}\]
 \[nc_V\Delta T=nc_p\Delta T-p\Delta V\]
 \[nc_V\Delta T=nc_p\Delta T-nR\Delta T\]
@@ -852,7 +868,7 @@ usando $PV=nRT$ e quindi $T=\const PV$:
 \end{equation}
 
 \begin{Es}[Gradiente termico atmosferico]
-   L'aria è un cattivo conduttore termico, quindi quando delle masse d'aria a temperatura diversa si spostano si può considerare la trasformazione come adiabatica. La pressione atmosferica decresce con la quota, vedi \eqref{legge_atmosfera}. Per la legge di Archimede l'aria calda più leggera sale e si espande a causa della minore temperatura. Essendo la trasformazione adiabatica non c'è scambio di calore. Essendoci un'espansione la massa d'aria compie lavoro a scapito dell'energia interna, e quindi la temperatura diminuisce.
+   L'aria è un cattivo conduttore termico, quindi quando delle masse d'aria a temperatura diversa si spostano si può considerare la trasformazione come adiabatica. La pressione atmosferica decresce con la quota, vedi \eqref{legge_atmosfera}. Per la legge di Archimede l'aria calda, più leggera, sale e si espande a causa della minore pressione. Essendo la trasformazione adiabatica non c'è scambio di calore. Essendoci un'espansione la massa d'aria compie lavoro a scapito dell'energia interna, e quindi la temperatura diminuisce.
 
    Per la legge di Stevino:
    \[
@@ -923,7 +939,7 @@ Il ragionamento è simile a quanto fatto con le adiabatiche; consideriamo una tr
       H = U + pV
    \end{equation}
 \end{Def}
-poiché $U$ è una funzione di stato e dipende solo dalla temperatura e il prodotto $pV=nRT$ dipende solo dalla temperatura, allora $H$ è una funzione di stato e dipende solo dalla temperatura.
+$H$ è una funzione di stato perché lo sono $U$, $p$ e $V$. Per un gas perfetto, poiché $U$ dipende solo dalla temperatura e anche il prodotto $pV=nRT$ dipende solo dalla temperatura, anche $H$ dipende solo dalla temperatura. L'entalpia è molto usata in chimica perché le reazioni avvengono spesso a pressione costante.
 
 L'entalpia è legata al calore specifico a pressione costante:
 \begin{equation}
@@ -956,7 +972,7 @@ Una trasformazione ciclica è una trasformazione in cui gli stati iniziali e fin
 \begin{equation}
    \Delta E=Q+L=0
 \end{equation}
-Le macchine termiche trasformano il calore in lavoro e il loro ciclo è chiamato \index{ciclo!termico}ciclo termico. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda e il loro ciclo è chiamato \index{ciclo!frigorifero}ciclo frigorifero.
+Le macchine termiche trasformano (parte del) calore in lavoro e il loro ciclo è chiamato \index{ciclo!termico}ciclo termico. I frigoriferi trasformano il lavoro in trasferimento di calore, dalla sorgente più fredda a quella più calda e il loro ciclo è chiamato \index{ciclo!frigorifero}ciclo frigorifero.
 \subsection{Ciclo di Carnot per un gas perfetto\index{Carnot}\index{ciclo!di Carnot}\index{macchina!di Carnot}}
 \begin{figure}[htbp]
    \centering
@@ -965,17 +981,17 @@ Le macchine termiche trasformano il calore in lavoro e il loro ciclo è chiamato
 \end{figure}
 \parbox[]{\textwidth}{
    \begin{enumerate}
-      \item Si porta il sistema alla temperatura $T_1$ immergendo in un bagno termico.
+      \item Si porta il sistema alla temperatura $T_1$ mettendolo a contatto con la sorgente calda.
       \item Il gas si espande da $V_A$ a $V_B$ seguendo una trasformazione isotermica.
       \item Il gas si espande da $V_B$ a $V_C$ seguendo una trasformazione adiabatica.
-      \item Si porta il sistema alla temperatura $T_2$ immergendolo in un bagno termico.
+      \item Il sistema, che al termine dell'adiabatica si trova alla temperatura $T_2$, viene messo a contatto con la sorgente fredda.
       \item Si comprime il gas da $V_C$ a $V_D$ seguendo una isoterma.
       \item Si comprime il gas da $V_D$ a $V_A$ seguendo una adiabatica.
    \end{enumerate}}
 Nota: $Q_1>0$, $Q_2<0$, $L<0$
 
 \[Q=Q_1-|Q_2|=-L\]
-\[Q_2=nRT\log\frac{V_D}{V_C}\]
+\[Q_1=nRT_1\log\frac{V_B}{V_A}\qquad Q_2=nRT_2\log\frac{V_D}{V_C}\]
 \[T_1V_B^{\gamma-1}=T_2V_C^{\gamma-1}\]
 \[T_1V_A^{\gamma-1}=T_2V_D^{\gamma-1}\]
 \[\left(\frac{V_B}{V_A}\right)^{\gamma-1}=\left(\frac{V_C}{V_D}\right)^{\gamma-1}\qquad \frac{V_B}{V_A}=\frac{V_C}{V_D}\]
@@ -986,16 +1002,16 @@ Nella macchina di Carnot gli scambi di calore avvengono con delle isoterme, quin
 
 Il rendimento $\eta$ sarà maggiore quanto maggiore è il lavoro svolto dalla macchina sull'ambiente con minore scambio di calore.
 \[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=1-\frac{|Q_2|}{Q_1}=1-\frac{T_2}{T_1}<1\]
-La condizione migliore è quella della macchina perfetta \index{macchina!perfetta}in cui tutto il calore è trasformato in lavoro, $\eta_\text{perfetta}= 1$
+La condizione ideale sarebbe quella della macchina perfetta \index{macchina!perfetta}in cui tutto il calore è trasformato in lavoro, $\eta_\text{perfetta}= 1$; vedremo che il secondo principio della termodinamica la rende impossibile. Il rendimento della macchina di Carnot sarebbe 1 solo per $T_2=0$.
 
 \subsection{Frigorifero\index{frigorifero}\index{macchina!frigorifera}}
 Si esegue il ciclo di Carnot al contrario. Si fornisce quindi lavoro e si ha un trasferimento di calore, trasferendolo dalla sorgente fredda a quella più calda.
-Il coefficiente di merito sarà maggiore quando è maggiore il calore trasferito e minore il lavoro necessario.
+Il coefficiente di prestazione (o di merito, COP) sarà maggiore quando è maggiore il calore sottratto alla sorgente fredda e minore il lavoro necessario.
 Nota: $Q_1<0$, $Q_2>0$, $L>0$
 \[0=L+Q=L+Q_2-|Q_1|\]
 \[L=|Q_1|-Q_2\qquad\frac{|Q_1|}{Q_2}=\frac{T_1}{T_2}\]
 \[\eta=\frac{Q_2}{L}=\frac{Q_2}{|Q_1|-Q_2}=\frac{T_2}{T_1-T_2}>0\]
-Il frigorifero perfetto trasferisce calore dalla sorgente più fredda a quella più calda senza bisogno di lavoro, quindi $\eta\rightarrow\infty$
+Il frigorifero perfetto trasferirebbe calore dalla sorgente più fredda a quella più calda senza bisogno di lavoro, quindi $\eta\rightarrow\infty$; anche questo è vietato dal secondo principio. Si noti che, a differenza del rendimento di una macchina termica, il coefficiente di prestazione può essere maggiore di 1: un frigorifero domestico tra \SI{-18}{\celsius} e \SI{30}{\celsius} ha un COP ideale di circa 5.
 
 \subsection{Ciclo Otto\index{ciclo!Otto}}
 Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
@@ -1004,8 +1020,8 @@ Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
    \item[] AB=compressione adiabatica
    \item[] BC=accensione
    \item[] CD=espansione adiabatica
-   \item[] DA=raffreddamento
-   \item[] OA=espulsione gas combusti
+   \item[] DA=apertura della valvola di scarico (raffreddamento isocoro)
+   \item[] AO=espulsione gas combusti
 \end{itemize}
 
 \[Q_{BC}=nc_V\Delta T=nc_V(T_C-T_B)>0\]
@@ -1013,7 +1029,7 @@ Il ciclo Otto approssima molto il ciclo di un motore a benzina a quattro tempi.
 \[L+Q_{BC}-|Q_{DA}|=0 \qquad L=|Q_{DA}|-Q_{BC}<0\qquad |L|=Q_{BC}-|Q_{DA}|\]
 \[\eta=\frac{|L|}{Q_{BC}}=\frac{Q_{BC}-|Q_{DA}|}{Q_{BC}}=1-\frac{|Q_{DA}|}{Q_{BC}}=1-\frac{nc_V(T_D-T_A)}{nc_V(T_C-T_B)}=1-\frac{T_D-T_A}{T_C-T_B}\]
 
-Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=\frac{V_2}{V_1}$
+Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=\frac{V_2}{V_1}>1$, con $V_2$ il volume massimo e $V_1$ quello minimo del cilindro:
 \[TV^{\gamma-1}=\const\]
 
 \[\left\{
@@ -1026,10 +1042,10 @@ Spesso il rendimento viene espresso in funzione del rapporto di compressione $r=
 
 \[\eta=1-\frac{T_D-T_A}{T_C-T_B}=1-\left(\frac{V_1}{V_2}\right)^{\gamma-1}\!\!\!\!\!\!\!\!\! =1-\left(\frac{1}{r}\right)^{\gamma-1}\]
 
-Più grande è $r$ più è grande $\eta$. Se $r$ è troppo grande $\Delta V$ è grande e nella compressione si crea troppo calore che provoca la preaccensione. Tipicamente $r=5$, quindi $\eta\simeq0.47$. In realtà con questo rapporto di compressione nelle macchine reali si ha $\eta=0.3$.
+Più grande è $r$ più è grande $\eta$. Se però $r$ è troppo grande, nella compressione adiabatica la temperatura della miscela sale troppo e questa si accende spontaneamente prima della scintilla (detonazione, o ``battito in testa''). Per $r=5$ si ha $\eta\simeq0.47$; nei motori a benzina moderni $r\simeq 10$, quindi $\eta\simeq0.60$, ma il rendimento reale è circa la metà a causa di attriti, perdite di calore e del fatto che il ciclo reale non è composto da trasformazioni reversibili. Nei motori diesel l'accensione avviene proprio per compressione, con $r\simeq15$--$20$.
 
 \subsection{Diagrammi di flusso}
-I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni cicliche. I piani orizzontali rappresentano le fonti di calore a diversa temperatura, la sezione del tubo varia a seconda dell'energia interna del sistema.
+I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni cicliche. I piani orizzontali rappresentano le sorgenti di calore a diversa temperatura, la sezione del tubo è proporzionale all'energia scambiata (calore o lavoro).
 
 \begin{figure}[!htbp]
    \centering
@@ -1047,17 +1063,17 @@ I diagrammi di flusso sono degli schemi utili per descrivere le trasformazioni c
 \section{Secondo principio della termodinamica\index{secondo principio della termodinamica}\index{principio!secondo della termodinamica}}
 
 \begin{Pri}[Enunciato di Kelvin]
-   \index{Kelvin}è impossibile realizzare una trasformazione il cui unico scopo è di produrre lavoro da una sola sorgente di calore.
+   \index{Kelvin}è impossibile realizzare una trasformazione il cui unico risultato sia quello di trasformare in lavoro il calore prelevato da una sola sorgente a temperatura uniforme.
 \end{Pri}
 
 \begin{Pri}[Enunciato di Clausius]
-   \index{Clausius}è impossibile realizzare una trasformazione il cui unico scopo sia quello di fare passare calore da una sorgente di bassa temperatura ad una più alta.
+   \index{Clausius}è impossibile realizzare una trasformazione il cui unico risultato sia quello di fare passare calore da una sorgente a temperatura più bassa ad una a temperatura più alta.
 \end{Pri}
 
-Una isoterma sembra violare Kelvin, in realtà trasforma tutto il calore in lavoro, ma non fa solo quello, infatti espande il gas.
+Un'espansione isoterma di un gas perfetto sembra violare Kelvin: in realtà trasforma tutto il calore in lavoro, ma non fa solo quello, infatti cambia lo stato del gas (che si è espanso).
 \subsection{\texorpdfstring{$\text{Kelvin}\Leftrightarrow\text{Clausius}$}{Kelvin <=> Clausius}}
 
-Chiamiamo $\bar{K}$ antikelvin un ciclo che viola Kelvin e $\bar{C}$ anticlausius un ciclo che viola Clausius. Dimostriamo che $\exists\bar{K}\Rightarrow\exists\bar{C}$ Sommiamo un antikelvin con un frigorifero e otteniamo un anticlausius (Figura \ref{CK1}). Quindi l'esistenza di un antikelvin implica l'esistenza di un anticlausius. Dopodiché $\nexists\bar{C}\Rightarrow\nexists\bar{K}$.
+Chiamiamo $\bar{K}$ antikelvin un ciclo che viola Kelvin e $\bar{C}$ anticlausius un ciclo che viola Clausius. Dimostriamo che $\exists\bar{K}\Rightarrow\exists\bar{C}$. Sommiamo un antikelvin con un frigorifero e otteniamo un anticlausius (Figura \ref{CK1}). Quindi l'esistenza di un antikelvin implica l'esistenza di un anticlausius. Dopodiché $\nexists\bar{C}\Rightarrow\nexists\bar{K}$.
 
 Sommando un anticlausius e una macchina termica otteniamo un antikelvin (Figura \ref{CK2}), quindi
 $\exists\bar{C}\Rightarrow\exists\bar{K}$ e allora $\nexists\bar{K}\Rightarrow\nexists\bar{C}$. In definitiva abbiamo dimostrato che l'enunciato di Clausius e di Kelvin sono equivalenti.
@@ -1155,11 +1171,11 @@ Usando la relazione generica $\frac{Q_A}{T_A} + \frac{Q_B}{T_B} = 0$ si ottiene 
    Q_{i,0} = \frac{T_0}{T_i} Q_i
 \]
 
-Consideriamo ora la $H=\text{macchina infernale}=M+\sum_{i=1}^{n}C_i$ come in figura \ref{fig:hell_machine}. Poiché i calori della macchina $M$ e $C_i$ si compensano per ogni sorgente a temperatura $T_i$ il risultato netto è che $H$ scambia calore netto solo con la sorgente a $T_0$. Per il postulato di Kelvin questa macchina non può compiere lavoro, cioè $L_H \leq 0$ e quindi per il primo principio $Q_H = Q_0 \leq 0$, dove $Q_0 = \sum_{i=1}^n Q_{i,0}$ è il calore scambiato da $H$ con la sorgente a temperatura $T_0$. Allora:
+Consideriamo ora la $H=\text{macchina infernale}=M+\sum_{i=1}^{n}C_i$ come in figura \ref{fig:hell_machine}. Poiché i calori della macchina $M$ e $C_i$ si compensano per ogni sorgente a temperatura $T_i$ il risultato netto è che $H$ scambia calore netto solo con la sorgente a $T_0$. Per il postulato di Kelvin questa macchina non può compiere lavoro sull'ambiente, cioè (con la nostra convenzione sui segni) $L_H \geq 0$, e quindi, poiché in un ciclo $Q_H+L_H=0$, $Q_H = Q_0 \leq 0$, dove $Q_0 = \sum_{i=1}^n Q_{i,0}$ è il calore scambiato da $H$ con la sorgente a temperatura $T_0$. Allora:
 \[
    Q_0 = \sum Q_{i,0} = T_0\sum_{i=1}^{n} \frac{Q_i}{T_i}\leq 0
 \]
-e quindi $\sum_{i=1}^n{Q_i}{T_i}\leq 0$.
+e quindi $\sum_{i=1}^n\frac{Q_i}{T_i}\leq 0$.
 
 \begin{figure}[htbp]
    \centering
@@ -1173,7 +1189,7 @@ passando a variabili continue:
    \oint\frac{\delta Q}{T}\leq 0\quad\text{diseguaglianza di Clausius}
    \label{clausius_dis}
 \end{equation}
-la disequazione vale per qualsiasi gas, per qualsiasi trasformazione.
+la disuguaglianza vale per qualsiasi sistema e per qualsiasi trasformazione ciclica, dove $T$ è la temperatura della sorgente con cui il sistema scambia il calore $\delta Q$.
 
 Se $M$ reversibile costruisco $H'=M^{-1}+\sum_{i=1}^N C_i$, $Q$ è cambiato di segno, quindi la diseguaglianza diventa:
 \[\oint\frac{\delta Q}{T}\geq0\]
@@ -1204,7 +1220,7 @@ se consideriamo un sistema isolato $\delta Q=0$ quindi
 \begin{equation}
    \Delta S\geq 0
 \end{equation}
-Questa equazione è equivalente al secondo principio. Se avvengono solo trasformazioni reversibili $\Delta S=0$ quindi l'entropia dell'universo non può diminuire. Le trasformazioni reversibili si dice che non lasciano traccia entropica. L'aumento dell'entropia è equivalente al secondo principio (enunciato di Kelvin o di Clausius):
+Questa disuguaglianza è equivalente al secondo principio (enunciato di Kelvin o di Clausius): l'entropia di un sistema isolato, e in particolare dell'universo, non può diminuire. Se avvengono solo trasformazioni reversibili $\Delta S=0$: si dice che le trasformazioni reversibili non lasciano traccia entropica. Vediamo per esempio perché sono impossibili la macchina e il frigorifero perfetti:
 \subsubsection{Macchina perfetta\index{macchina!perfetta}}
 
 \[\Delta S_\text{sistema}=0 \qquad\text{perché ciclo}\]
@@ -1233,22 +1249,22 @@ L'uguaglianza solo per trasformazioni reversibili.
    \caption{espansione di Joule.}
 \end{figure}
 
-Nell'espansione libera (o di Joule\footnote{si legge giul, non giaul (è francese!)}) si verifica sperimentalmente che la temperatura non varia. Essa è una trasformazione irreversibile spontanea. \`E isolata dall'ambiente essendo le pareti adiabatiche. Le pareti sono indeformabili, non viene compiuto lavoro. $\Delta S_\text{ambiente}=0$ $V_f=2V_i$
+Nell'espansione libera (o di Joule\footnote{James Prescott Joule (1818--1889) era inglese; il cognome si pronuncia come il nome dell'unità di misura, cioè all'incirca ``giùl''.}) di un gas perfetto si verifica sperimentalmente che la temperatura non varia. Essa è una trasformazione irreversibile spontanea. \`E isolata dall'ambiente essendo le pareti adiabatiche. Le pareti sono indeformabili, non viene compiuto lavoro. $\Delta S_\text{ambiente}=0$ $V_f=2V_i$
 
 \[\Delta S_\text{universo}=\Delta S_\text{sistema}+\Delta S_\text{ambiente}=nR\log\frac{V_f}{V_i}=nR\log 2>0\]
 
 \[P=\text{numero di microstati che danno luogo ad uno stato termodinamico}\]
-$P$ è la probabilità che il sistema si configuri in un dato stato termodinamico a meno di un coefficiente, chiamata anche molteplicità.
+$P$ è chiamata molteplicità (o peso statistico) dello stato macroscopico; a meno di un fattore di normalizzazione è la probabilità che il sistema si trovi in quello stato termodinamico, se tutti i microstati sono equiprobabili.
 
 $S$ è una variabile termodinamica estensiva, quindi per calcolare l'entropia del sistema si somma $S_1$ della parte sinistra e $S_2$ della parte destra. Le variabili termodinamiche come $T$, $p$ sono intensive e sommarle in questo caso non ha senso.
-\begin{legge}[legge di Boltzman]
+\begin{legge}[legge di Boltzmann]
    \index{Boltzmann}\index{legge!di Boltzmann}
    Entropia secondo Boltzmann\index{entropia!secondo Boltzmann}:
    \begin{equation}
       S=k\log P
    \end{equation}
 \end{legge}
-Diciamo che due configurazioni sono equivalenti se presentano lo stesso numero di particelle a destra e lo stesso numero di particelle a sinistra. L'equivalenza è logica in quanto le particelle sono indistinguibili. $P=\binom{N}{n}$ per ogni classe di equivalenza, avendo $N=6$ particelle totali:
+Consideriamo un gas di $N$ molecole che si può trovare nella metà sinistra o destra del recipiente. Un microstato specifica quali molecole sono a sinistra e quali a destra; dal punto di vista macroscopico conta invece solo quante molecole ci sono da ciascuna parte, quindi due microstati corrispondono allo stesso stato macroscopico se presentano lo stesso numero di particelle a destra e a sinistra. Il numero di microstati con $n$ particelle a sinistra è $P=\binom{N}{n}$; per esempio, con $N=6$ particelle totali:
 \begin{center}
    \begin{tabular}{c|c|c}
       $N_S$ & $N_D$ & $P$ \\
@@ -1262,32 +1278,34 @@ Diciamo che due configurazioni sono equivalenti se presentano lo stesso numero d
       0     & 6     & 1   \\
    \end{tabular}
 \end{center}
-Si nota che è più probabile osservare una configurazione in cui l'entropia è aumentata (3,3) che una dove l'entropia non è aumentata. Con questo approccio non si esclude l'ipotesi che l'entropia possa diminuire, ma è estremamente improbabile, soprattutto se si considera un numero di particelle estremamente più grande.
+Si nota che lo stato con le particelle equamente distribuite (3,3), che ha entropia maggiore, è il più probabile, mentre lo stato iniziale dell'espansione libera (6,0) è il meno probabile. Con questo approccio non si esclude l'ipotesi che l'entropia possa diminuire, ma è estremamente improbabile, soprattutto se si considera un numero di particelle estremamente più grande.
 
 In generale lo stato più probabile è quello con $\frac{N}{2}$ particelle a destra e a sinistra, quindi:
 \[P=\binom{N}{n}=\frac{N!}{\left(\frac{N}{2}\right)!\left(\frac{N}{2}\right)!}=\frac{N!}{\left[\left(\frac{N}{2}\right)!\right]^2}\]
-Stearling: $\log n!\sim n\log n-n$
+Usando l'approssimazione di Stirling: $\log n!\simeq n\log n-n$
 \begin{align*}
    \log P & =\log N!-2\log\left(\frac{N}{2}!\right)\sim N\log N-N-2\left[\frac{N}{2}\log\frac{N}{2}-\frac{N}{2}\right]= \\
           & =N\log N-N-N\log\frac{N}{2}+N=N\log N-N\left(\log N-\log 2\right)                                           \\
           & =N\log 2
 \end{align*}
 
-\[S_f=k\log P=kN\log 2=nR\log 2\]
+Poiché nello stato iniziale, con tutte le particelle a sinistra, $P_i=1$:
+\[\Delta S=S_f-S_i=k\log P_f-k\log 1=kN\log 2=nR\log 2\]
 la formula è identica a quella trovata a livello macroscopico considerando la variazione di entropia dell'espansione libera come la variazione dell'entropia di una isoterma.
 
 \begin{Es}[Esempio ghiaccio]
    Ghiaccio a $T_G=\SI{273.15}{\kelvin}$ di massa $m$ in acqua a $T_A=\SI[parse-numbers = false]{(273.15+\varepsilon)}{\kelvin}$
+   Il ghiaccio fonde (reversibilmente, nel limite $\varepsilon\to0$) assorbendo il calore latente di fusione $\lambda m$ alla temperatura costante $T_0=\SI{273.15}{\kelvin}$:
    \begin{align*}
-      \Delta S_\text{acqua}= & S_\text{acqua}-S_\text{ghiaccio e acqua}                                                                                                         \\
+      \Delta S_\text{ghiaccio}= & S_\text{acqua}-S_\text{ghiaccio}                                                                                                         \\
       =                      & \int_\text{ghiaccio}^\text{acqua}\frac{\delta Q}{T}=\frac{1}{T_0}\int_\text{ghiaccio}^\text{acqua}\delta Q=\frac{Q}{T_0}=\frac{\lambda m}{T_0}>0
    \end{align*}
    \[\Delta S_\text{ghiaccio}=\frac{\lambda m}{T_0}\]
    \[\Delta S_\text{vasca}=-\frac{\lambda m}{T_0}\]
    \[\Delta S_\text{universo}=0\quad\text{perché reversibile}\]
 \end{Es}
-\subsection{Grafici S/T}
-L'area sottesa un grafico p/V era il lavoro svolto durante la trasformazione. In un grafico S/T sarà:
+\subsection{Grafici T-S}
+L'area sottesa a un grafico $p$-$V$ era il lavoro svolto durante la trasformazione. In un grafico con l'entropia $S$ in ascissa e la temperatura $T$ in ordinata, per una trasformazione reversibile, l'area sottesa è il calore scambiato:
 \[\int_A^B T\ud S=\int_A^B\delta Q=Q\]
 \subsubsection{Ciclo di Carnot\index{ciclo!di Carnot}}
 \[\eta=\frac{|L|}{Q_1}=\frac{Q_1-|Q_2|}{Q_1}=\frac{\Delta S_1T_1-|\Delta S_2| T_2}{\Delta S_1 T_1}=\frac{\Delta S\Delta T}{\Delta S T_1}=\frac{T_1-T_2}{T_1}=1-\frac{T_2}{T_1}\]
@@ -1305,9 +1323,10 @@ Immaginiamo una macchina infernale che scambia calore con più sorgenti, con tem
 
 
 \section{Scala termodinamica o assoluta\index{scala termodinamica}\index{scala assoluta}}
-La scala di temperatura definita come quella del termometro a gas risulta limitata per temperature molto basse, al di sotto della quale ($\SI{1}{\kelvin}$) non esiste materia allo stato gassoso. Per questo motivo viene definita la scala termodinamica. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
+La scala di temperatura definita con il termometro a gas risulta limitata alle temperature alle quali esistono gas sufficientemente rarefatti: al di sotto di circa \SI{1}{\kelvin} tutte le sostanze sono liquide o solide. Inoltre dipende dalle proprietà di una particolare sostanza. Per questo motivo Kelvin definì nel 1848 la scala termodinamica, che non dipende dalle proprietà di nessuna sostanza. Per qualsiasi macchina reversibile (anche per uno scarafaggio che gira):
 \[\eta_\text{rev}=\eta_C=1-\frac{T_2}{T_1}=1-\frac{|Q_2|}{Q_1}\]
 \[\frac{\theta_2}{\theta_1}=\frac{|Q_2|}{Q_1}=\frac{T_2}{T_1}\]
+Il rapporto tra due temperature termodinamiche $\theta$ è definito dal rapporto tra i calori scambiati da una macchina reversibile che lavora tra di esse; fissando un punto di riferimento (\SI{273.16}{\kelvin} per il punto triplo dell'acqua) la scala termodinamica coincide con quella del termometro a gas perfetto. Dal 2019 il kelvin è definito fissando il valore esatto della costante di Boltzmann.
 
 
 
