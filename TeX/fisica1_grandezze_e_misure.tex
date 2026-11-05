@@ -1,7 +1,7 @@
 \chapter{Grandezze e misure}
 \minitoc
 \section{\index{grandezze}Grandezze}
-Le grandezze fisiche sono gli enti di cui si occupa la fisica. Esse devono essere misurabili attraverso un metodo operativo e richiedono un'unità di misura con la quale avviene il confronto.
+Le grandezze fisiche sono gli enti di cui si occupa la fisica. Esse devono essere misurabili attraverso un metodo operativo e richiedono un'unità di misura, cioè una grandezza dello stesso tipo scelta come campione, con la quale avviene il confronto. Misurare una grandezza significa determinare quante volte essa contiene l'unità di misura: scrivere $\ell=\SI{3.2}{\meter}$ significa che la lunghezza $\ell$ è $3.2$ volte il metro.
 \newline\par
 Le grandezze si dividono in:
 \begin{itemize}
@@ -10,7 +10,9 @@ Le grandezze si dividono in:
   (numero, unità, direzione, verso)=(vettore, unità)
   \item\index{grandezze!tensoriali}grandezze tensoriali
 \end{itemize}
-Le grandezze hanno una dimensione, che si riflette nell'unità di misura. Esistono grandezze adimensionali (numeri puri) e, più raramente, vettori o tensori adimensionali. L'unità di misura deve essere definita rispetto a qualcosa di invariante e riproducibile. La lunghezza è da considerarsi una grandezza scalare, mentre la posizione è una grandezza vettoriale.
+Sono grandezze scalari, per esempio, la massa, il tempo, la temperatura e l'energia; sono grandezze vettoriali lo spostamento, la velocità, l'accelerazione e la forza. Un esempio di grandezza tensoriale è il tensore d'inerzia, che lega la velocità angolare di un corpo rigido al suo momento angolare (si veda la dinamica del corpo rigido).
+
+Le grandezze hanno una dimensione, che si riflette nell'unità di misura. Esistono anche grandezze adimensionali (numeri puri), come un angolo misurato in radianti o il rapporto tra due lunghezze, e, più raramente, vettori o tensori adimensionali. L'unità di misura deve essere definita rispetto a qualcosa di invariante e riproducibile. La lunghezza è una grandezza scalare, mentre la posizione è una grandezza vettoriale.
 %\section[Unità di misura]{\index{unità di misura}Unità di misura}
 %\subsection{\index{unità di misura!fondamentali}Unità fondamentali}
 %\begin{minipage}[c]{\textwidth}
@@ -34,13 +36,32 @@ Le grandezze hanno una dimensione, che si riflette nell'unità di misura. Esisto
 %\end{small}
 %\end{minipage}
 
+\section[Il Sistema Internazionale]{\index{unità di misura!SI}Il Sistema Internazionale}
+Il Sistema Internazionale di unità di misura (SI) si basa su sette unità fondamentali: il metro (\si{\meter}), il kilogrammo (\si{\kilogram}), il secondo (\si{\second}), l'ampere (\si{\ampere}), il kelvin (\si{\kelvin}), la mole (\si{\mole}) e la candela (\si{\candela}); tutte le altre unità, dette derivate, si ottengono da queste (per esempio $\si{\newton}=\si{\kilogram\meter\per\second\squared}$). L'elenco completo si trova nell'appendice~\ref{unita_di_misura_appendice}, che riporta anche definizioni storiche anteriori al 2019; le definizioni aggiornate sono riassunte di seguito.
+
+Storicamente le unità erano definite tramite campioni materiali. Il metro, nel 1791, era la decimilionesima parte della distanza tra il polo nord e l'equatore lungo il meridiano di Parigi; fino al 2019 il kilogrammo è stato la massa di un cilindro di platino-iridio, il \emph{prototipo internazionale}, conservato a Sèvres vicino a Parigi. Il confronto periodico con le sue copie ufficiali ha mostrato differenze di alcune decine di microgrammi in un secolo: un campione materiale non è perfettamente invariante.
+
+Per questo, dal 20 maggio 2019, tutte le unità SI sono definite fissando il valore numerico esatto di alcune costanti della natura:
+\begin{itemize}
+  \item la frequenza $\Delta\nu_\text{Cs}=\SI{9192631770}{\hertz}$ della transizione iperfine del cesio 133 definisce il secondo;
+  \item la velocità della luce nel vuoto, $c=\SI{299792458}{\meter\per\second}$, definisce il metro;
+  \item la costante di Planck, $h=\SI{6.62607015E-34}{\joule\second}$, definisce il kilogrammo;
+  \item la carica elementare, $e=\SI{1.602176634E-19}{\coulomb}$, definisce l'ampere;
+  \item la costante di Boltzmann, $k_B=\SI{1.380649E-23}{\joule\per\kelvin}$, definisce il kelvin;
+  \item la costante di Avogadro, $N_A=\SI{6.02214076E23}{\per\mole}$, definisce la mole;
+  \item l'efficienza luminosa $K_\text{cd}=\SI{683}{\lumen\per\watt}$ della radiazione a \SI{540E12}{\hertz} definisce la candela.
+\end{itemize}
+Queste costanti hanno ora valori esatti, senza incertezza. In pratica la massa si può misurare a partire da $h$ con la \emph{bilancia di Kibble}, che confronta una potenza meccanica con una potenza elettrica misurata tramite effetti quantistici.
+
 \subsection{\index{unità di misura!prefissi}Prefissi}
-Spesso si usano i seguenti prefissi:
+Per esprimere grandezze molto grandi o molto piccole si usano i seguenti prefissi:
 \begin{center}
   \begin{tabular}{lcc}
     \hline
     fattore     & prefisso & simbolo          \\
     \hline
+    \num{1E30}  & quetta   & \si{\quetta\noop} \\
+    \num{1E27}  & ronna    & \si{\ronna\noop}  \\
     \num{1E24}  & yotta    & \si{\yotta\noop} \\
     \num{1E21}  & zetta    & \si{\zetta\noop} \\
     \num{1E18}  & exa      & \si{\exa\noop}   \\
@@ -61,9 +82,93 @@ Spesso si usano i seguenti prefissi:
     \num{1E-18} & atto     & \si{\atto\noop}  \\
     \num{1E-21} & zepto    & \si{\zepto\noop} \\
     \num{1E-24} & yocto    & \si{\yocto\noop} \\
+    \num{1E-27} & ronto    & \si{\ronto\noop} \\
+    \num{1E-30} & quecto   & \si{\quecto\noop} \\
     \hline
   \end{tabular}
 \end{center}
-Il fermi\index{Fermi}\index{fm@\si{\femto\meter}|see{Fermi}}, unità usata in fisica nucleare e chiamata così in onore di Enrico Fermi, coincide con il femtometro (\si{\femto\meter}) e ne condivide il simbolo: \SI{1}{\femto\meter} è circa il raggio di un protone.
+Nel 2022 la Conferenza generale dei pesi e delle misure ha introdotto i prefissi ronna (R, $10^{27}$), quetta (Q, $10^{30}$), ronto (r, $10^{-27}$) e quecto (q, $10^{-30}$): per esempio la massa della Terra è circa \SI{6}{\ronna\gram} e quella dell'elettrone circa \SI{0.9}{\ronto\gram}. Si noti che il prefisso si applica al grammo e non al kilogrammo: si scrive \si{\milli\gram} e non ``microkilogrammo''.
 
-Nel 2022 la Conferenza generale dei pesi e delle misure ha aggiunto quattro nuovi prefissi: ronna (R, $10^{27}$), quetta (Q, $10^{30}$), ronto (r, $10^{-27}$) e quecto (q, $10^{-30}$). Per esempio la massa della Terra è circa $6\,\mathrm{Rg}$, quella dell'elettrone circa $0.9\,\mathrm{rg}$.
+In fisica nucleare si usa il fermi\index{Fermi}\index{fm@\si{\femto\meter}|see{Fermi}}, chiamato così in onore di Enrico Fermi: coincide con il femtometro (\si{\femto\meter}), di cui condivide anche il simbolo. Il raggio di un protone è poco meno di \SI{1}{\femto\meter}.
+
+\section{\index{analisi dimensionale}Analisi dimensionale}
+Ogni grandezza meccanica ha una \emph{dimensione} che si esprime in funzione delle dimensioni fondamentali di lunghezza $[L]$, massa $[M]$ e tempo $[T]$. Per esempio:
+\[ [v]=[L][T]^{-1}\quad [a]=[L][T]^{-2}\quad [F]=[M][L][T]^{-2}\quad [E]=[M][L]^2[T]^{-2}\]
+Una relazione fisica deve essere \emph{dimensionalmente omogenea}: si possono sommare, sottrarre o uguagliare solo grandezze con la stessa dimensione, e gli argomenti di funzioni come $\sin$, $\exp$ o $\log$ devono essere adimensionali. Questo fornisce un controllo immediato: se in un calcolo si ottiene $x=v t^2$ c'è certamente un errore, perché a destra si ha $[L][T]$ e non $[L]$. L'analisi dimensionale non dice però nulla sui fattori numerici adimensionali, come il $\frac12$ in $x=\frac12 at^2$.
+
+\begin{Es}[periodo del pendolo]
+  Nel limite delle piccole oscillazioni e trascurando gli attriti, il periodo $T$ di un pendolo semplice può dipendere solo dalla lunghezza $\ell$ del filo, dalla massa $m$ e dall'accelerazione di gravità $g$. Cerchiamo $T=C\,\ell^\alpha m^\beta g^\gamma$, con $C$ adimensionale:
+  \[ [T]=[L]^\alpha[M]^\beta[L]^\gamma[T]^{-2\gamma} \]
+  Uguagliando gli esponenti: $\beta=0$ (massa), $\alpha+\gamma=0$ (lunghezza), $-2\gamma=1$ (tempo). Quindi $\gamma=-\frac12$, $\alpha=\frac12$:
+  \[ T=C\sqrt{\frac{\ell}{g}} \]
+  Senza risolvere alcuna equazione del moto abbiamo scoperto che il periodo non dipende dalla massa e che, per quadruplicarlo, bisogna allungare il filo di un fattore 16. La soluzione completa (capitolo sulla dinamica) dà $C=2\pi$ per piccole oscillazioni.
+\end{Es}
+
+\begin{Es}[l'energia della prima bomba atomica]
+  Nel 1950 G.~I.~Taylor stimò l'energia liberata dal test nucleare Trinity (1945), allora segreta, usando solo alcune fotografie dell'esplosione pubblicate su una rivista. Il raggio $R$ della palla di fuoco può dipendere solo dall'energia $E$, dal tempo $t$ trascorso e dalla densità dell'aria $\rho$. L'unica combinazione con le dimensioni di una lunghezza è
+  \[ R\simeq\left(\frac{E\,t^2}{\rho}\right)^{1/5}\qquad\Rightarrow\qquad E\simeq\frac{\rho R^5}{t^2} \]
+  Dalle foto, a $t=\SI{25}{\milli\second}$ si ha $R\simeq\SI{140}{\meter}$; con $\rho=\SI{1.2}{\kilogram\per\meter\cubed}$:
+  \[ E\simeq\frac{1.2\cdot 140^5}{(0.025)^2}\si{\joule}\simeq\SI{e14}{\joule} \]
+  cioè circa 25 kilotoni di TNT ($\SI{1}{kt}\simeq\SI{4.2E12}{\joule}$), in ottimo accordo con il valore ufficiale (circa 20 kilotoni) reso pubblico solo più tardi.
+\end{Es}
+
+\begin{Es}[Mars Climate Orbiter]
+  Le unità di misura non sono un dettaglio. Nel 1999 la sonda Mars Climate Orbiter della NASA andò perduta mentre entrava in orbita attorno a Marte: un programma forniva gli impulsi dei propulsori in libbre-forza secondo ($\mathrm{lbf}\cdot\mathrm{s}$), mentre il software di navigazione li interpretava in newton secondo (\si{\newton\second}). Poiché $\SI{1}{lbf}\simeq\SI{4.45}{\newton}$, la traiettoria calcolata era sbagliata e la sonda passò troppo vicina al pianeta.
+\end{Es}
+
+\section{\index{ordini di grandezza}Ordini di grandezza e stime}
+L'\emph{ordine di grandezza} di un numero è la potenza di 10 più vicina ad esso. Saper stimare l'ordine di grandezza di un risultato, prima o dopo un calcolo, è uno strumento fondamentale per scoprire errori grossolani. Enrico Fermi era famoso per la sua capacità di dare stime ragionevoli a partire da pochissimi dati (i cosiddetti \emph{problemi di Fermi}).
+
+\begin{Es}[battiti del cuore]
+  Quante volte batte il cuore in una vita? Con circa 70 battiti al minuto e una vita di 80 anni:
+  \[ N\simeq 70\cdot 60\cdot 24\cdot 365\cdot 80\simeq 3\cdot10^9 \]
+  L'ordine di grandezza è $10^9$, cioè qualche miliardo di battiti.
+\end{Es}
+
+La figura~\ref{fig:scala_lunghezze} mostra alcune lunghezze tipiche: tra il raggio di un protone e le dimensioni dell'universo osservabile ci sono circa 41 ordini di grandezza.
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[x=0.25cm,
+      lab/.style={font=\scriptsize, align=center, text width=1.9cm}]
+    % asse logaritmico: una unita' = un ordine di grandezza
+    \draw[->, thick] (-16,0) -- (27.5,0) node[pos=0.5, below=0.45cm, font=\small] {$\log_{10}(\ell/\si{\meter})$};
+    \foreach \x in {-15,-10,...,25}
+      \draw (\x,0.15) -- (\x,-0.15) node[below, font=\scriptsize] {$\x$};
+    \foreach \x in {-15,...,26}
+      \draw (\x,0.07) -- (\x,-0.07);
+    % oggetti: posizione, etichetta, altezza
+    \foreach \x/\t/\h in {
+        -15/raggio del protone/1.0,
+        -10/atomo/2.1,
+        -5/cellula/1.0,
+        0/essere umano/2.1,
+        6.8/raggio della Terra/1.0,
+        11.2/distanza Terra--Sole/2.1,
+        16/anno luce/1.0,
+        21/Via Lattea/2.1,
+        26/universo osservabile/1.0}
+      {
+        \fill[blue!70!black] (\x,0) circle (2.5pt);
+        \draw[blue!70!black] (\x,0) -- (\x,\h);
+        \node[lab, above] at (\x,\h) {\t};
+      }
+  \end{tikzpicture}
+  \caption{Scala logaritmica di alcune lunghezze tipiche, in metri. Ogni tacca corrisponde a un fattore 10.}
+  \label{fig:scala_lunghezze}
+\end{figure}
+
+\section{Esercizi}
+\begin{enumerate}
+  \item Esprimere \SI{90}{\kilo\meter\per\hour} in \si{\meter\per\second}.\\
+  \emph{Soluzione:} $90\cdot\frac{1000}{3600}=\SI{25}{\meter\per\second}$.
+  \item Verificare che l'espressione dell'energia cinetica $\frac12 mv^2$ ha le stesse dimensioni del lavoro $F\,s$.\\
+  \emph{Soluzione:} entrambe hanno dimensione $[M][L]^2[T]^{-2}$, cioè si misurano in joule.
+  \item La velocità $v$ delle onde in acqua profonda dipende solo dalla lunghezza d'onda $\lambda$ e da $g$. Trovarne la dipendenza con l'analisi dimensionale.\\
+  \emph{Soluzione:} $v=C\sqrt{g\lambda}$ (il calcolo completo dà $C=1/\sqrt{2\pi}$).
+  \item Un anno luce è la distanza percorsa dalla luce in un anno. Esprimerlo in metri.\\
+  \emph{Soluzione:} $\SI{3.00E8}{\meter\per\second}\cdot\SI{3.16E7}{\second}\simeq\SI{9.5E15}{\meter}$.
+  \item Stimare il numero di atomi contenuti in un bicchiere d'acqua (circa \SI{200}{\gram}; la massa molare dell'acqua è \SI{18}{\gram\per\mole} e ogni molecola ha tre atomi).\\
+  \emph{Soluzione:} $\frac{200}{18}\cdot 6\cdot10^{23}\cdot 3\simeq 2\cdot10^{25}$ atomi.
+ \item Quanti secondi ci sono in un anno? Mostrare che $\pi\cdot10^7$ è un'ottima approssimazione.\\
+ \emph{Soluzione:} $365.25\cdot 86400\simeq\SI{3.156E7}{\second}$, mentre $\pi\cdot10^7\simeq 3.142\cdot10^7$: l'errore relativo è circa lo $0.4\%$.
+\end{enumerate}

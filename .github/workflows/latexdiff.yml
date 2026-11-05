@@ -6,6 +6,9 @@ name: LatexDiff
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   latexdiff:
 
@@ -30,7 +33,7 @@ jobs:
           echo "Differenze rispetto a $BASE"
           # --flatten espande \input e \include; --math-markup=whole evita
           # di spezzare le macro all'interno delle formule
-          latexdiff-vc --git --flatten --force --math-markup=whole -r "$BASE" fisica.tex
+          latexdiff-vc --git --flatten --force --math-markup=whole --add-to-config=PICTUREENV=tabular -r "$BASE" fisica.tex
           mv "fisica-diff$BASE.tex" fisica-diff.tex
           # l'esternalizzazione di TikZ non funziona bene sul file di diff
           sed -i 's/^\\tikzexternalize/%\\tikzexternalize/' fisica-diff.tex
