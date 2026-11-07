@@ -1,9 +1,14 @@
 \chapter{\index{meccanica dei fluidi|(}Meccanica dei fluidi}
 \minitoc
-Un fluido è un liquido o un gas. La meccanica dei fluidi applica le leggi della meccanica classica ai fluidi descrivendo tutto in termini di pressione, volume, portata.
+
+\begin{Def}[Fluido]
+   Un fluido è un liquido o un gas.
+\end{Def}
+
+La meccanica dei fluidi applica le leggi della meccanica classica ai fluidi descrivendo tutto in termini di pressione, volume, portata.
 \section{\index{fluidostatica}Fluidostatica}
 \subsection{\index{pressione}Pressione e \index{densità}densità}
-La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare, infatti la forza agisce sempre perpendicolarmente alla superficie. Se avesse una componente tangenziale il fluido si muoverebbe e non parleremmo più di fluidostatica. Un altro modo analogo usando il vettore normale è
+La pressione è la forza sull'unità di superficie: $p=\frac{\ud |\ve F|}{\ud A}$. \`E una grandezza scalare. In fluidostatica la forza agisce sempre perpendicolarmente alla superficie; se avesse una componente tangenziale il fluido si muoverebbe e non parleremmo più di fluidostatica. In generale, usando il vettore normale alla superficie
 \begin{Def}[pressione]
    \begin{equation}
       p=\frac{\ud\ve F\cdot \ve n}{\ud A}
@@ -22,11 +27,11 @@ si misura in $\si{\kilogram/\metre^3}$.
 
 \subsection{\index{legge!di Stevino}Legge di Stevino}
 \begin{legge}[Stevino]
-   La pressione all'interno di un fluido statico a densità uniforme a profondità $h$ rispetto alla pressione esterna in presenza di forza peso è:
+   La pressione all'interno di un fluido statico, a densità uniforme, a profondità $h$, rispetto alla pressione esterna $p_0$ sulla superficie del fluido, in presenza di forza peso è:
    \begin{equation}
       p = p_0 + \rho g h
    \end{equation}
-   dove $p_0$ è la pressione esterna, $\rho$ la densità del fluido.
+   dove $\rho$ la densità del fluido.
 \end{legge}
 
 \label{stevino11}
@@ -35,16 +40,18 @@ si misura in $\si{\kilogram/\metre^3}$.
    \includegraphics[scale=0.4]{immagini/fisica1/legge_di_stevino1}
 \end{figure}
 
-Consideriamo un elemento infinitesimo di massa $\ud m$. L'elemento è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è la forza dovuta alla pressione della parte superiore del fluido, $\ve F_2$ a quella inferiore.
+Consideriamo un elemento infinitesimo di massa $\ud m$ all'interno del fluido. L'elemento è in equilibrio quindi $\ve F_1+\ve F_2+\ud m\ve g=0$. $\ve F_1$ è la forza dovuta alla pressione della parte superiore del fluido, $\ve F_2$ a quella inferiore.
 \[-\ud mg-(p+\ud p)A+pA=0\qquad -\ud mg-dpA=0\]
 \[\ud m=\rho \ud V=\rho A\ud y\qquad -\rho A\ud y g-\ud p A=0\]
-\[\ud p=-\rho g \ud y\]
-\[p_0=\text{pressione atmosferica}\]
+\begin{equation}
+   \ud p=-\rho g \ud y
+\end{equation}
+\[p_0=\text{pressione esterna}\]
 \[\text{Integrando: }\int_{p_0}^p \ud p=-\int_0^y \rho g\,\ud y=-\rho g\int_0^h\!\ud y\]
 \[p=p_0-\rho g y = p_0+\rho g h\]
 che è la legge di Stevino e $h$ è la profondità, valida se consideriamo la densità costante, come per esempio in un liquido.
 
-Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando che \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
+Per un gas di solito non si può considerare la densità costante. Quindi bisogna ripartire da $\ud p=-\rho g \ud y$. Ipotizzando la densità sia lineare con la pressione \[\frac{\rho}{\rho_0}=\frac{p}{p_0}\quad\Rightarrow\quad \rho=\rho_0\frac{p}{p_0}\]
 \[\ud p=-\rho_0\frac{p}{p_0}g\ud y\qquad \int_{p_0}^p \frac{\ud p}{p}=\int_0^y -\rho_0\frac{g}{p_0}\ud y\]
 \[\log p-\log p_0=\log\frac{p}{p_0}=-\rho_0\frac{g}{p_0}y\]
 \begin{equation}
@@ -55,7 +62,7 @@ Per un gas questo la densità non è costante, quindi bisogna ripartire da $\ud 
 che è la legge dell'atmosfera.
 
 \subsection{\index{legge!dei vasi comunicanti}Legge dei vasi comunicanti}
-Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza, quindi per la legge di Stevino devono avere la stessa pressione infatti il punto inferiore del tubo ad U avrà una certa pressione $P_{\max}$, la pressione nel punto $A$ sarà $P_{\max} - \rho_a g h_{OA}$ e nel punto $B$ $P_{\max} - \rho_a g h_{OB}$, ma $h_{OA}=h_{OB}$. Usando ancora la legge di Stevino:
+Nel tubo a U (fig.\@\ref{vasicom}) sono introdotti due liquidi non miscibili 1 e 2. Sotto ad A e B c'è solo il fluido 2. A e B sono alla stessa altezza, quindi per la legge di Stevino devono avere la stessa pressione infatti il punto inferiore del tubo ad U avrà una certa pressione $P_{\max}$, la pressione nel punto $A$ sarà $P_{\max} - \rho_a g h_{OA}$ e nel punto $B$ $P_{\max} - \rho_a g h_{OB}$, ma $h_{OA}=h_{OB}$. Usando ancora la legge di Stevino, questa volta partendo dall'alto:
 \begin{figure}[htbp]
    \centering
    \includegraphics[scale=0.5]{immagini/fisica1/vasi_comunicanti}
@@ -143,14 +150,14 @@ la soluzione è $V_\text{immerso}=\frac{\rho}{\rho_\text{fluido}}V$ e poiché è
    \centering
    \includegraphics[scale=0.4]{immagini/fisica1/equilibrio}
 \end{figure}
-Consideriamo le forze di volume come quelle proporzionali al volume del fluido su cui la forza è applicata. Definiamo
+Consideriamo le forze di volume come quelle proporzionali al volume del fluido su cui la forza è applicata (come la forza peso). Definiamo
 \[\ve f=\frac{\ve F}{m}\]
 notare che $\ve f$ è un'accelerazione.
 
 Consideriamo invece le forze di superficie come quelle forze applicate sul fluido che sono proporzionali alla superficie del fluido. Queste forze sono dovute al fluido che lo circonda.
 \[F=pA\]
 
-Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse $x$:
+Richiediamo l'equilibro consideranzo queste due forze. Lungo l'asse $x$:
 
 \[f_x\ud m+p(x)\ud y\ud z-p(x+\ud x)\ud y\ud z=0\]
 \[f_x\rho\ud x\ud y\ud z+p(x)\ud y\ud z-(p(x)+\frac{\partial p}{\partial x}\ud x)\ud y\ud z=0\]
@@ -163,11 +170,12 @@ Con queste due forze possiamo richiedere l'equilibrio, per esempio lungo l'asse 
    \[
       f_z\rho=\frac{\ud p_z}{\ud z}\quad g\rho\ud z=\ud p \quad p=p_0+\rho gz
    \]
-   In generale introducendo l'energia potenziale associata alla forza $\ve f$, $U_m$:
-   \[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
-   \[\rho U_m=-p+\const\]
-   Segue che le superfici isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
 \end{Es}
+In generale introducendo l'energia potenziale associata alla forza $\ve f$, $U_m$:
+\[U_m=\frac{U}{m}\qquad \rho\ve f=-\rho\ve\nabla(U_m)=\ve\nabla p\qquad -\ve\nabla(\rho U_m)=\ve\nabla p\]
+\[\rho U_m=-p+\const\]
+Segue che le superfici isobariche \index{superficie!isobarica}coincidono con le superfici equipotenziali. Nel caso agisca solo la forza peso esse sono dei piani orizzontali: $U_m = -gz+U_0$.
+
 \begin{Es}[Fluido in accelerazione]
    \begin{figure}[H]
       \centering
@@ -374,7 +382,10 @@ La velocità sarà massima al centro e minima ai bordi. Considero la porzione di
       Q_v=\frac{\pi\Delta p}{8\eta L}R^4
    \end{equation}
 \end{legge}
-si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica.
+si definisce una resistenza idraulica $\frac{8\eta L}{\pi R^4}$ in analogia con la resistenza elettrica:
+\[
+\Delta p = Q_v \frac{8\eta L}{\pi R^4}
+\]
 \index{meccanica dei fluidi|)}
 
 
@@ -472,15 +483,15 @@ Un gas perfetto è una idealizzazione semplificativa, ma spesso adatta a descriv
    \item gli urti sono perfettamente elastici e di durata trascurabile, quindi l'energia cinetica del sistema è costante. La durata trascurabile impone che l'energia potenziale totale delle molecole sia trascurabile.
 \end{itemize}
 \subsection{Pressione\index{pressione}}
-Consideriamo $N$ molecole di un gas perfetto in un cubo di spigolo $L$. Prendiamo in considerazione una parete $A_1$. Una particella di velocità $\ve v$ e massa $m$ urta $A_1$:
+Consideriamo $N$ molecole di un gas perfetto in un cubo di lato $L$. Prendiamo in considerazione una parete $A_1$. Una particella di velocità $\ve v$ e massa $m$ urta $A_1$. La variazione della quantità di moto della particella, nella direzione $x$ (ortogonale ad $A_1$) è
 \begin{equation}
    \Delta p_x=-2mv_x
 \end{equation}
-è la variazione della quantità di moto nella direzione $x$, ortogonale ad $A_1$, della particella. Il tempo per andare e tornare è:
+Il tempo per andare e tornare è:
 \begin{equation}
    \Delta t=\frac{2L}{v_x}
 \end{equation}
-quindi ogni $\Delta t$ ci sarà un urto; se durante il tragitto la molecola dovesse incontrare una parete diversa, vi rimbalzerebbe senza mutare la componente $x$ della velocità né il tempo di percorrenza. Per l'impulso
+quindi ogni $\Delta t$ ci sarà un urto; se durante il tragitto la molecola dovesse incontrare una parete diversa, vi rimbalzerebbe senza mutare la componente $x$ della velocità né il tempo di percorrenza. Per il teorema l'impulso la variazione di quantità di moto è uguale all'integrale nel tempo della forza esterna (quella applicata dalla parete)
 \[
    F_x\frac{2L}{v_x}=F_x\Delta t=\Delta p_x=-2mv_x
 \]
@@ -499,7 +510,7 @@ Consideriamo ora il sistema di $N$ particelle, con velocità $\ve v_i$, la media
 \begin{equation}
    \media{v_x^2}=\frac{1}{N}\sum_{i=1}^{N}{v_{x_i}^2}
 \end{equation}
-analogamente per le altre componenti, che si sommano per dare $\media{v^2}=\media{v_x^2}+\media{v_y^2}+\media{v_z^2}$. Lo spazio è isotropo, quindi
+analogamente per le altre componenti, che si sommano per dare $\media{v^2}=\media{v_x^2}+\media{v_y^2}+\media{v_z^2}$. La velocità è isotropa, quindi
 \begin{equation}
    \media{v_x^2}=\media{v_y^2}=\media{v_z^2}=\frac{1}{3}\media{v^2}
 \end{equation}
@@ -548,7 +559,7 @@ Dalla \eqref{gas_pressione04} si ricava:
    questo non vuol dire che per fare un metro in linea retta una molecola ci mette $\Delta t \simeq \frac{\Delta s}{v_{qm}}=\frac{\SI{1}{\meter}}{\SI{500}{\meter\per\second}}=\SI{2}{\milli\second}$ in quanto il suo percorso non è lineare, ma continua a variare direzione ad ogni urto.
 \end{Es}
 \subsubsection{Legge di Dalton}
-In presenza di più gas diversi possiamo usare il fatto che il volume occupato dalle molecole è trascurabile rispetto al volume totale del gas. Quindi le loro pressioni si calcolano separatamente (\index{pressione!parziale} pressioni parziali):
+In presenza di più gas diversi possiamo usare il fatto che il volume occupato dalle molecole è trascurabile rispetto al volume totale del gas. Quindi le loro pressioni si calcolano separatamente (\index{pressione!parziale}pressioni parziali):
 \index{legge!di Dalton}
 \begin{legge}[Dalton]
    \begin{equation}
@@ -567,9 +578,9 @@ dove $r_i$ è la frazione molare:
 
 \subsection{Libero cammino medio\index{libero cammino medio}}
 \label{libero cammino medio fisica1}
-Il libero cammino medio $\lambda$ è lo spazio medio in cui una particella non subisce urti con altra particelle. Supponiamo di avere molecole di diametro $d$. Avviene una interazione solo se i due centri delle molecole si avvicinano a una distanza inferiore a $d$. Si può pensare anche che la molecola considerata abbia diametro $2d$ e le altre siano puntiformi. Nel tempo $t$ la molecola spazza il volume di un cilindro di sezione $\pi d^2$ e di lunghezza $L_{cil}=vt$ con $v$ velocità della molecola. Supponiamo che il gas sia racchiuso in un volume $V$e contenga $N$ molecole. Il numero di molecole contenuto nel cilindro è quindi:
+Il libero cammino medio $\lambda$ è lo spazio medio in cui una particella non subisce urti con altre particelle. Supponiamo di avere molecole di diametro $d$. Avviene una interazione solo se i due centri delle molecole si avvicinano a una distanza inferiore a $d$. Si può pensare anche che la molecola considerata abbia diametro $2d$ e le altre siano puntiformi. Nel tempo $t$ la molecola spazza il volume di un cilindro di sezione $\pi d^2$ e di lunghezza $L_{cil}=vt$ con $v$ velocità della molecola. Supponiamo che il gas sia racchiuso in un volume $V$e contenga $N$ molecole. Il numero di molecole contenuto nel cilindro è quindi:
 \[N_{\text{cil}}=N\frac{V_{\text{cil}}}{V}=N\frac{\pi d^2vt}{V}\]
-Questo rappresenta anche il numero medio di urti nel tempo $t$ della molecola. Ad ogni urti la molecola cambia direzione, ma spazza sempre il volume di un cilindro analogo.
+Questo rappresenta anche il numero medio di urti nel tempo $t$ della molecola. Ad ogni urto la molecola cambia direzione, ma spazza sempre il volume di un cilindro analogo.
 
 Il libero cammino medio è la distanza totale percorsa diviso il numero di urti subiti:
 \[\lambda=\frac{L_{\text{cil}}}{N_{\text{cil}}}=vt\frac{V}{N\pi d^2vt}=\frac{V}{N\pi d^2}\]
@@ -617,7 +628,7 @@ Usando la velocità più probabile la distribuzione di Maxwell può essere scrit
 \begin{equation}
    \media{v^2}=\frac{1}{N}\int_0^\infty v^2N(v)\ud v=\frac{3kT}{m}
 \end{equation}
-\[v_\text{qm}=\sqrt{\media{v^2}}\]
+\[v_\text{qm}=\sqrt{\media{v^2}}=\sqrt{\frac{3kT}{m}}\]
 
 
 

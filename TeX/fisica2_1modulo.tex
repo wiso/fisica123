@@ -460,6 +460,19 @@ l'equazione del moto diventa:
 \end{Es}
 
 
+\begin{Es}[la bilancia di torsione di Coulomb]
+  \index{bilancia!di torsione}Charles-Augustin de Coulomb stabilì la legge nel 1785~\cite{coulomb1785} con una bilancia di torsione simile a quella usata poco dopo da Cavendish per la gravità: un ago isolante, con una pallina di midollo di sambuco carica a un estremo, era appeso a un sottile filo d'argento; una seconda pallina, caricata per contatto con la prima, la respingeva e il filo si torceva. Misurando l'angolo di torsione necessario a mantenere le palline a distanze diverse, Coulomb trovò che dimezzando la distanza la forza quadruplica. Per verificare la proporzionalità alle cariche, toccava una pallina con un'altra identica scarica, dimezzandone la carica, e osservava che la forza si dimezzava.
+
+  Oggi la dipendenza $1/r^2$ è verificata con enorme precisione con un metodo indiretto: se l'esponente fosse $2+\epsilon$, all'interno di un guscio conduttore carico il campo non sarebbe esattamente nullo. Misurando il campo all'interno di sfere concentriche, nel 1971 si è trovato $|\epsilon|<3\times10^{-16}$~\cite{williams1971}.
+\end{Es}
+\begin{Es}[forza elettrica e forza gravitazionale]
+  Nell'atomo di idrogeno l'elettrone e il protone sono a circa \SI{5.3E-11}{\meter}. La forza elettrostatica tra loro è
+  \[
+    F_e=\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r^2}\simeq\SI{8.2E-8}{\newton}
+  \]
+  mentre la forza gravitazionale è $F_g=Gm_em_p/r^2\simeq\SI{3.6E-47}{\newton}$: il rapporto $F_e/F_g\simeq2\times10^{39}$ non dipende dalla distanza. La gravità domina su scala astronomica solo perché la materia è, con ottima approssimazione, elettricamente neutra.
+\end{Es}
+
 \section{Densità di carica\index{densità di carica}}
 Al posto di immaginare la materia come un discreto con cariche puntiformi possiamo immaginarla, a livello macroscopico, come un continuo, definendo una densità di carica volumetrica. Sia $V$ un volume, e $\Delta V$ una porzione di essa. All'interno di $\Delta V$ è contenuta la carica $\Delta q$.
 \begin{Def}[Densità carica\index{densità di carica!volumetrica}]
@@ -1141,6 +1154,9 @@ Consideriamo un conduttore cavo scarico. Poniamo all'interno del conduttore una 
 \begin{Es}[schermo elettrostatico\index{schermo elettrostatico} -- lo smerdatore]
   Im\-ma\-gi\-nia\-mo una fanciulla rinchiusa dentro un conduttore cavo. Adamo, all'esterno, ha molta voglia di sperimentare. Prova a farsi notare avvicinando una carica positiva al conduttore. Sulla superficie esterna le cariche si ridistribuiscono: carica negativa dalla parte di Adamo, positiva dalla parte opposta; sulla parete interna invece non compare nessuna carica. La fanciulla non si accorge di niente, essendo il campo elettrico nella cavità sempre nullo. La fanciulla, tutta sola, prova a farsi notare agitando una carica positiva $q$. Sulla parete interna si induce una carica $-q$, sulla superficie esterna una carica $+q$. Se il conduttore è isolato Adamo vede quindi un campo, ma la distribuzione di carica sulla superficie esterna non dipende dalla posizione della carica interna: per quanto la fanciulla la agiti, Adamo non percepisce nessuna variazione del campo elettrostatico. Se poi il conduttore è collegato a terra la carica $+q$ esterna fluisce a terra e la carica interna non contribuisce più al campo all'esterno, che è dovuto solo alle eventuali cariche esterne (quella di Adamo e quelle indotte da essa). Un conduttore cavo chiuso funziona quindi da schermo elettrostatico in entrambe le direzioni, purché, per schermare l'esterno dall'interno, sia collegato a terra. Una rete metallica (gabbia di Faraday) offre una schermatura solo approssimata, tanto migliore quanto più le maglie sono piccole rispetto alle distanze in gioco.
 \end{Es}
+\begin{Es}[gabbia di Faraday]
+  \index{gabbia di Faraday}Nel 1836 Michael Faraday costruì una stanza rivestita di fogli metallici, vi entrò con un elettroscopio e la fece caricare dall'esterno con un generatore elettrostatico, fino a far scoccare scintille dalle pareti: all'interno l'elettroscopio non rivelava alcuna carica. Per lo stesso motivo un'automobile o un aereo colpiti da un fulmine proteggono i passeggeri (la carrozzeria metallica fa da schermo, non le gomme isolanti), e un telefono cellulare chiuso in un contenitore metallico non riceve segnale. Una rete metallica funziona da schermo anche per le onde elettromagnetiche purché le maglie siano molto più piccole della lunghezza d'onda: è il caso della griglia nello sportello del forno a microonde, con fori di pochi millimetri contro una lunghezza d'onda di circa \SI{12}{\centi\meter}.
+\end{Es}
 \section{Potere dispersivo delle punte\index{potere dissipativo delle punte}}
 In un conduttore carico la densità di carica sugli spigoli è maggiore che altrove. Consideriamo una punta carica nell'atmosfera vicino ad una candela. Si osserva che la fiamma oscilla a causa di un vento ionico. Infatti la carica sul conduttore attira ioni dell'atmosfera di segno opposto che lentamente neutralizzano la carica sul conduttore e contemporaneamente respinge gli ioni con lo stesso segno. Si crea così un movimento di cariche, in questo caso particelle cariche dell'aria che muovono la fiamma. Per spiegare il fenomeno interpretiamo gli spigoli come zone dove il raggio di curvatura è più piccolo. Consideriamo allora due sfere cariche con raggi diversi $R>r$ collegate a grande distanza (niente induzione) da un filo. Sulla prima sfera:
 \[V_1=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{\norm{\ve r-\ve r\,'}}=\frac{1}{4\pi\varepsilon_0}\oint_{S_1}\frac{\sigma_R\ud a}{R}=\frac{1}{4\pi\varepsilon_0}\frac{\sigma_R}{R}4\pi R^2=\frac{\sigma_R R}{\varepsilon_0}=\frac{Q}{4\varepsilon_0\pi R}\]
@@ -1157,6 +1173,9 @@ Allora il rapporto tra le densità di carica (usando la precedente e la \eqref{c
 \[\frac{\sigma_R}{\sigma_r}=\frac{Qr^2}{qR^2}=\frac{r}{R}<1\]
 Dunque $\sigma_R<\sigma_r$ e, per il teorema di Coulomb, in prossimità dei conduttori:
 \[E_r>E_R\]
+\begin{Es}[parafulmine e fuoco di Sant'Elmo]
+  \index{parafulmine}Il potere delle punte è sfruttato nel parafulmine, inventato da Benjamin Franklin intorno al 1752: un'asta metallica appuntita collegata a terra offre al fulmine un percorso preferenziale e sicuro verso il suolo. Lo stesso effetto spiega il ``fuoco di Sant'Elmo'', il bagliore che durante i temporali si osserva sulle punte degli alberi delle navi e dei campanili: il campo elettrico vicino alle punte supera la rigidità dielettrica dell'aria (circa \SI{3E6}{\volt\per\meter}) e ionizza l'aria circostante, che emette luce. Per lo stesso motivo i conduttori delle apparecchiature ad alta tensione hanno superfici lisce e arrotondate.
+\end{Es}
 \section{Capacità elettrica\index{capacità elettrica}}
 Consideriamo un conduttore isolato. Carichiamolo con una carica $q$; il conduttore raggiungerà un certo potenziale:
 \[\varphi(\ve r)=\frac{1}{4\pi\varepsilon_0}\int_S\frac{\sigma(\ve r\,')\,\ud a'}{\norm{\ve r-\ve r\,'}}\]

@@ -2,7 +2,7 @@
 \minitoc
 Un vettore è rappresentabile con un segmento orientato, ogni vettore individua un punto e viceversa. Un vettore è un ente geometrico, ovvero è indipendente dalla rappresentazione. Fissata una base, nel caso usuale una terna ortonormale di vettori, ogni vettore è rappresentato da una terna di coordinate cioè da un elemento di $\field{R}^3$. Un modo equivalente per rappresentare un vettore è tramite modulo, direzione e verso. Il modulo, o norma del vettore, è la lunghezza del segmento, la direzione è la retta passante per il segmento, il verso indica l'orientazione del vettore. Nei libri i vettori sono in grassetto\footnote{altre notazioni sono $\underline v$, $\vec{v}$}. $\ve{v}$ è un vettore, $|\ve{v}|$, $\norm{\ve v}$ o semplicemente $v$ è il modulo del vettore.
 
-I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso gli si pensa come elementi di classi di equivalenza i cui rappresentati sono i vettori applicati nell'origine.
+I vettori sono da intendersi applicati nell'origine. Si può anche trattare di vettori non applicati nell'origine, chiamandoli vettori applicati, ma si rivelano del tutto equivalenti ai vettori usuali, infatti spesso li si pensa come elementi di classi di equivalenza i cui rappresentanti sono i vettori applicati nell'origine.
 \begin{figure}[htbp]
   \centering
   \input{immagini/fisica1/vettore}
@@ -39,7 +39,7 @@ I vettori si possono individuare in un sistema di riferimento per via geometrica
   \end{array}\right. \qquad \text{con}\qquad \cos^2 \alpha+\cos^2 \beta + \cos^2
   \gamma=1
 \]
-Notiamo che gli angoli $\alpha$, $\beta$ e $\gamma$ non sono indipendenti, possiamo ricavarne uno in funzione degli altri; quindi un vettore sarà descritto da tre informazioni, per esempio $|\ve v|$, $\alpha$, $\beta$.
+Notiamo che gli angoli $\alpha$, $\beta$ e $\gamma$ (detti coseni direttori, se si considerano i loro coseni) non sono indipendenti: dalla relazione si ricava il coseno di uno in funzione degli altri due, ma solo a meno del segno. Quindi un vettore è descritto da tre numeri, per esempio $|\ve v|$, $\alpha$, $\beta$, più il segno di $\cos\gamma$ (cioè della componente $v_z$): per esempio $(0,0,1)$ e $(0,0,-1)$ hanno lo stesso modulo e gli stessi $\alpha=\beta=\pi/2$, ma $\gamma=0$ e $\gamma=\pi$ rispettivamente.
 
 Per via analitica invece bisogna indicare le componenti del vettore rispetto alla base $\{\ve i, \ve j, \ve k\}$: $\left(
   \begin{array}{l}
@@ -94,18 +94,18 @@ La somma di due vettori è il vettore che ha come componenti la somma delle comp
 \subsubsection{Differenza} La differenza di due
 vettori è la somma del primo con l'inverso del secondo. Graficamente $\ve a-\ve b$ è il vettore che congiunge $\ve b$ ad $\ve a$.
 \subsubsection{Prodotto per uno scalare}
-Per via geometrica il prodotto scalare di un vettore per uno scalare corrisponde al vettore con stessa direzione, con modulo moltiplicato per il valore assoluto dello scalare e verso invertito se lo scalare è negativo.
+Per via geometrica il prodotto di un vettore per uno scalare corrisponde al vettore con stessa direzione, con modulo moltiplicato per il valore assoluto dello scalare e verso invertito se lo scalare è negativo.
 \[\forall h \in \field{R}\qquad h\ve a=h(a_x\ve i+a_y\ve j+a_z\ve k)=ha_x\ve i+ha_y\ve j+ha_z\ve k\]
 \subsubsection{\index{prodotto!scalare}Prodotto scalare}
 Il prodotto scalare usato in fisica è il prodotto scalare canonico della geometria in $\field{R}^3$ rispetto alla base canonica $\{\ve i,\ve j,\ve k\}$:
 \[\left(\ve{x},\ve{y}\right)=\ve{x}^T\cdot\ve{y}=(x_1y_1+x_2y_2+x_3y_3)\]
 \[p_s=|\ve a||\ve b| \cos \alpha\]
 con $\alpha$ l'angolo compreso tra i due vettori. Da qui si deduce che $\ve i \cdot \ve i=1$, $\ve i
-  \cdot \ve j=0$, ecc., che due vettori ortogonali hanno prodotto scalare nullo e che due vettori hanno prodotto scalare massimo quando sono paralleli.
+  \cdot \ve j=0$, ecc., che due vettori ortogonali hanno prodotto scalare nullo e che, a parità di moduli, due vettori hanno prodotto scalare massimo quando sono paralleli e concordi. Il prodotto scalare di un vettore per sé stesso è il quadrato del modulo: $\ve a\cdot\ve a=|\ve a|^2$.
 \[p_s=\ve a \cdot \ve b=(a_x\ve i+a_y\ve j+a_z\ve k)\cdot(b_x\ve
   i+b_y\ve j+b_z\ve k)=a_xb_x+a_yb_y+a_zb_z\]
 \subsubsection{\index{prodotto!vettoriale}Prodotto Vettoriale}
-Matematicamente il prodotto vettoriale non è facile da definire. Esso restituisce un vettore che ha direzione ortogonale al piano individuato dai due vettori, verso ricavabile dalla regola della mano destra, e modulo:
+Il prodotto vettoriale restituisce un vettore che ha direzione ortogonale al piano individuato dai due vettori, verso ricavabile dalla regola della mano destra, e modulo:
 \[|\ve p_v|=ab\sin \alpha\] con $\alpha$ angolo tra i due vettori\footnote{è molto semplice ricordarsi la formula del prodotto vettoriale, basta ciclare sulle variabili. Per esempio la componente $x$ del prodotto vettoriale è $a_yb_z-a_zb_y$ in cui l'ordine è $x$ (la componente) e poi $y$, $z$, seguito dalla sottrazione al contrario (è antisimmetrico)}.
 
 
@@ -127,9 +127,9 @@ Il prodotto vettoriale è antisimmetrico cioè $\ve a \wedge \ve
 vettoriale è l'area del parallelogramma avente come lati i due
 vettori.
 
-Il prodotto vettoriale è dipendente dalla scelta del sistema di riferimento.
+Il verso del prodotto vettoriale dipende dall'orientazione del sistema di riferimento.
 In Figura~\ref{fig:sistema_destrogiro} sono illustrati il sistema destrogiro e sinistrogiro, che seguono la regola della mano destra o della mano sinistra.
-In particolare il verso del prodotto vettoriale segue la regola della mano destra se il sistema di riferimento è destrogiro, altrimenti il verso risulta opposto. Per questo il prodotto vettoriale è chiamato pseudovettore. In natura le grandezze osservabili non devono dipendere dalla scelta dell'orientazione (chiralità) degli assi cartesiani. Per convenzione si sceglie un sistema di riferimento destrogiro.
+In particolare il verso del prodotto vettoriale segue la regola della mano destra se il sistema di riferimento è destrogiro, altrimenti il verso risulta opposto. Per questo il prodotto vettoriale è chiamato pseudovettore (o vettore assiale): sotto un'inversione degli assi (parità) un vettore cambia segno, mentre il prodotto vettoriale di due vettori no. In natura le grandezze osservabili non devono dipendere dalla scelta dell'orientazione (chiralità) degli assi cartesiani. Per convenzione si sceglie un sistema di riferimento destrogiro.
 \begin{figure}[htbp]
   \centering
   \subfigure[destrogiro]{\input{immagini/fisica1/sistema_destrogiro}}
@@ -141,16 +141,16 @@ In particolare il verso del prodotto vettoriale segue la regola della mano destr
 \subsubsection{\index{prodotto!misto}Prodotto Misto}
 Il prodotto misto è definito come:
 \[p_m=\ve c\cdot\left(\ve a \wedge \ve b\right)\]
-Esso è uguale al volume del parallelepipedo avente come spigoli i
-vettori \mbox{$\ve a$, $\ve b$, $\ve c$.}
+Esso è uguale, in valore assoluto, al volume del parallelepipedo avente come spigoli i
+vettori \mbox{$\ve a$, $\ve b$, $\ve c$;} è nullo se e solo se i tre vettori sono complanari. Il prodotto misto è invariante per permutazioni cicliche: $\ve c\cdot(\ve a\wedge\ve b)=\ve a\cdot(\ve b\wedge\ve c)=\ve b\cdot(\ve c\wedge\ve a)$.
 
 \subsubsection{\index{derivata!di un vettore}Derivata di un vettore}
-La derivata di un vettore è la derivata delle coordinate per i rispettivi versori, (i versori sono costanti). Per esempio la derivata della velocità rispetto al tempo è:
+In una base fissa (cioè con versori costanti nel tempo) la derivata di un vettore si ottiene derivando le coordinate e moltiplicandole per i rispettivi versori. Per esempio la derivata della velocità rispetto al tempo è:
 \[\frac{\ud\ve v}{\ud t}=\frac{\ud v_x}{\ud t}\ve i+\frac{\ud v_y}{\ud t}\ve j+\frac{\ud v_z}{\ud t}\ve k\]
 
 \subsubsection{\index{gradiente}Gradiente}
 \label{gradiente}
-Il gradiente di uno scalare è definito come:
+Il gradiente di un campo scalare $V(x,y,z)$ è definito come:
 \[
   \grad V(x,y,z)=\ve\nabla V(x,y,z)=\frac{\partial V}{\partial x}\ver i + \frac{\partial V}{\partial y}\ver j +\frac{\partial V}{\partial z}\ver k
 \]
@@ -158,7 +158,7 @@ dove $\ve\nabla$ è un operatore definito come:
 \[
   \ve\nabla=\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial }{\partial z}\right)
 \]
-con questo operatore abbiamo il divertimento di scrivere le nostre formule per esempio in questo modo:
+Il gradiente è un vettore che punta nella direzione in cui $V$ cresce più rapidamente e il suo modulo è la derivata di $V$ in quella direzione. Con questo operatore possiamo scrivere le nostre formule in modo compatto, per esempio:
 
 \[
   \ve F=-\ve\nabla U
