@@ -13,7 +13,7 @@ I modelli storici più celebri del sistema solare sono stati:
   eliocentrico e geocentrico: il Sole e la Luna ruotano attorno alla Terra, gli altri pianeti attorno al Sole. Le osservazioni di Tycho, le più precise dell'epoca prima del telescopio, permisero a Keplero di formulare le sue leggi
 \end{itemize}
 
-Newton verso il 1665 intuì che le leggi celesti sono uguali a quelle terrestri, e pubblicò la teoria della gravitazione universale nei \emph{Principia} (1687): la forza che fa cadere una mela è la stessa che tiene la Luna in orbita. \`E la prima unificazione di forze ritenute inizialmente diverse in un'unica forza.
+Newton verso il 1665 intuì che le leggi celesti sono uguali a quelle terrestri, e pubblicò la teoria della gravitazione universale nei \emph{Principia} (1687)~\cite{newton1687}: la forza che fa cadere una mela è la stessa che tiene la Luna in orbita. \`E la prima unificazione di forze ritenute inizialmente diverse in un'unica forza.
 
 \subsection{\index{leggi!di Keplero}\index{Keplero}Leggi di Keplero}
 Le leggi di Keplero sono leggi empiriche, ricavate dalle osservazioni di Tycho Brahe e pubblicate tra il 1609 e il 1619, prima delle
@@ -156,7 +156,7 @@ cioè all'equatore la forza centrifuga riduce il peso di circa lo \SI{0.3}{\perc
 
 \section{\index{bilancia!di torsione}Misurazione della costante di gra\-vi\-ta\-zio\-ne u\-ni\-ver\-sa\-le}
 Henry Cavendish, con l'articolo \emph{Experiments to determine the density of the Earth} del
-1798, fu il primo a misurare in laboratorio l'attrazione gravitazionale tra due corpi. Cavendish si proponeva di misurare la
+1798~\cite{cavendish1798}, fu il primo a misurare in laboratorio l'attrazione gravitazionale tra due corpi. Cavendish si proponeva di misurare la
 densità media della Terra (``pesare la Terra''), e ottenne $\rho_T\simeq\SI{5.45}{\gram\per\centi\meter\cubed}$, solo l'1\% circa in meno del valore moderno (\SI{5.51}{\gram\per\centi\meter\cubed}); dal suo risultato si ricava $G$, anche se la costante fu introdotta esplicitamente solo nell'Ottocento. Lo strumento, la bilancia di torsione, era stato progettato da John Michell, morto prima di poterlo usare.
 
 La bilancia di torsione è un'asta di lunghezza $2D$ con due masse $m$ agli estremi, appesa al centro a un filo sottile. La bilancia viene fatta oscillare: il momento di richiamo del filo è
@@ -174,7 +174,7 @@ alla forza elastica di richiamo.
 
 \[\tau_\text{Newton}=2\frac{GMm}{d^2}D=\tau_\text{torsione}=k\theta\]
 \[G=\frac{k\theta d^2}{2MmD}\]
-Nell'esperimento originale le sfere grandi erano di piombo da circa \SI{158}{\kilo\gram}, le piccole da circa \SI{0.73}{\kilo\gram}, e le forze in gioco dell'ordine di \SI{1E-7}{\newton}; l'angolo di deflessione era di pochi millesimi di radiante e il periodo di oscillazione di circa \SI{7}{\minute}. Ancora oggi $G=\SI{6.67430(15)E-11}{\newton\meter\squared\per\kilo\gram\squared}$ è la costante fondamentale conosciuta con minore precisione (incertezza relativa circa $2\times10^{-5}$).
+Nell'esperimento originale le sfere grandi erano di piombo da circa \SI{158}{\kilo\gram}, le piccole da circa \SI{0.73}{\kilo\gram}, e le forze in gioco dell'ordine di \SI{1E-7}{\newton}; l'angolo di deflessione era di pochi millesimi di radiante e il periodo di oscillazione di circa \SI{7}{\minute}. Ancora oggi $G=\SI{6.67430(15)E-11}{\newton\meter\squared\per\kilo\gram\squared}$ è la costante fondamentale conosciuta con minore precisione (incertezza relativa circa $2\times10^{-5}$)~\cite{codata2018}.
 \section{Massa gravitazionale e massa inerziale}
 Per massa inerziale si intende quella grandezza usata in dinamica
 per esempio \mbox{$\ve F=m\ve a$}. Per massa gravitazionale si intende quella usata nella gravitazione per esempio $F=G\frac{Mm}{r^2}$. A priori non c'è motivo per cui queste due grandezze debbano coincidere, ma sperimentalmente $m_i$ è proporzionale a $m_g$: infatti se $B$ e $C$ sono attratti da $A$ si ha:
@@ -200,3 +200,48 @@ La traiettoria, scritta in coordinate polari centrate nel fuoco, è una conica d
     0<e<1 & E<0 & \text{ellisse}       \\
     e=0   & E<0 & \text{circonferenza} \\
   \end{array}\]
+
+\section{Esperimenti e verifiche della gravitazione}
+\begin{Es}[la mela e la Luna]
+  \index{Newton!test della Luna}Newton verificò la legge dell'inverso del quadrato confrontando l'accelerazione di caduta di una mela sulla superficie terrestre ($g\simeq\SI{9.8}{\meter\per\second\squared}$, a distanza $R_T$ dal centro) con l'accelerazione centripeta della Luna, che orbita a circa $60R_T$ con periodo di \SI{27.3}{\day}:
+  \[
+    a_L=\frac{4\pi^2 r_L}{T_L^2}\simeq\SI{2.72E-3}{\meter\per\second\squared}\qquad \frac{g}{60^2}\simeq\SI{2.72E-3}{\meter\per\second\squared}
+  \]
+  L'accordo dimostra che la forza che fa cadere la mela e quella che trattiene la Luna sono la stessa forza, che decresce come $1/r^2$.
+\end{Es}
+
+\begin{Es}[la terza legge di Keplero nel sistema solare]
+  Misurando i periodi in anni e i semiassi maggiori in unità astronomiche (\si{\astronomicalunit}, il semiasse dell'orbita terrestre) la terza legge diventa semplicemente $T^2=a^3$:
+  \begin{center}
+    \begin{tabular}{lccc}
+      \hline
+      pianeta  & $a$ (\si{\astronomicalunit}) & $T$ (anni) & $T^2/a^3$ \\
+      \hline
+      Mercurio & 0.387                        & 0.241      & 1.00      \\
+      Venere   & 0.723                        & 0.615      & 1.00      \\
+      Terra    & 1.000                        & 1.000      & 1.00      \\
+      Marte    & 1.524                        & 1.881      & 1.00      \\
+      Giove    & 5.203                        & 11.86      & 1.00      \\
+      Saturno  & 9.537                        & 29.45      & 1.00      \\
+      Nettuno  & 30.07                        & 164.8      & 1.00      \\
+      \hline
+    \end{tabular}
+  \end{center}
+  Piccole deviazioni dal valore 1 (al livello di qualche per mille per Giove) sono dovute al fatto che la massa del pianeta non è del tutto trascurabile rispetto a quella del Sole: in realtà la costante è $\dfrac{4\pi^2}{G(M_S+m)}$.
+\end{Es}
+
+\begin{Es}[la scoperta di Nettuno]
+  \index{Nettuno}L'orbita di Urano mostrava piccole irregolarità che non si spiegavano con l'attrazione del Sole e dei pianeti noti. Urbain Le Verrier~\cite{leverrier1846}, e indipendentemente John Couch Adams, ipotizzarono l'esistenza di un pianeta più esterno e ne calcolarono la posizione. Il 23 settembre 1846 Johann Galle, all'osservatorio di Berlino, trovò Nettuno~\cite{galle1846} a circa un grado dalla posizione prevista da Le Verrier, la sera stessa in cui ne ricevette la lettera: uno dei più grandi trionfi della meccanica newtoniana. Un tentativo analogo di spiegare le anomalie dell'orbita di Mercurio con un pianeta interno (``Vulcano'') fallì: la precessione del perielio di Mercurio, che eccede di \ang{;;43} per secolo la previsione newtoniana, fu spiegata solo nel 1915 dalla relatività generale di Einstein.
+\end{Es}
+
+\begin{Es}[universalità della caduta libera]
+  \index{Eötvös}L'uguaglianza tra massa inerziale e gravitazionale è stata verificata con precisione crescente: Newton con pendoli di materiali diversi (circa $10^{-3}$), Loránd Eötvös con una bilancia di torsione all'inizio del Novecento (circa $10^{-9}$)~\cite{eotvos1922}, fino alla missione spaziale MICROSCOPE (2022)~\cite{microscope2022}, che ha confrontato la caduta libera di masse di titanio e platino in orbita, trovando uguaglianza a meno di qualche parte su $10^{15}$. Su questa uguaglianza si fonda il principio di equivalenza.
+\end{Es}
+
+\begin{Es}[assenza di peso in orbita]
+  Sulla Stazione Spaziale Internazionale, a circa \SI{400}{\kilo\meter} di quota, l'accelerazione di gravità è
+  \[
+    g'=g\left(\frac{R_T}{R_T+h}\right)^2\simeq\SI{8.7}{\meter\per\second\squared}
+  \]
+  cioè quasi il 90\% di quella sulla superficie. Gli astronauti non sono quindi in ``assenza di gravità'': sono in caduta libera insieme alla stazione, e nel sistema di riferimento della stazione, che è in caduta libera, il peso apparente è nullo, come previsto dal principio di equivalenza. Il periodo orbitale è di circa \SI{92}{\minute}.
+\end{Es}
