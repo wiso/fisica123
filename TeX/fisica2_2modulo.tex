@@ -254,10 +254,14 @@ Suddividiamo una spira di area $S$ in infinitesime spire di area $\ud a$. Ogni s
 \[\sigma_m=\frac{I}{\delta}\]
 rappresenta la densità di carica magnetica sulle facce di una lamina magnetica con lamine a distanza $\delta$, che a grande distanza è equivalente alla spira iniziale.
 
+\begin{Es}[l'esperimento di Ørsted]
+  \index{Ørsted}Fino al 1820 elettricità e magnetismo erano considerati fenomeni indipendenti. Durante una lezione all'università di Copenaghen, Hans Christian Ørsted osservò che un ago magnetico posto vicino a un filo percorso da corrente si disponeva perpendicolarmente al filo, e invertiva l'orientazione invertendo il verso della corrente~\cite{oersted1820}. Fu la prima prova che le correnti elettriche producono campi magnetici. Nel giro di poche settimane Biot e Savart misurarono la dipendenza del campo dalla distanza dal filo e Ampère scoprì che due fili paralleli percorsi da corrente si attraggono o si respingono a seconda del verso delle correnti.
+\end{Es}
+
 \section{Campi magnetici generati da correnti\index{campi magnetici!generati da correnti}}
 Una corrente crea un campo magnetico.
 
-Per una definizione operariva, poiché non esistono cariche magnetiche, per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo attraversato da una corrente crea un campo magnetico le cui linee di forza si chiudono su se stesso.
+Per una definizione operativa, poiché non esistono cariche magnetiche, per esplorare il campo, si può usare un aghetto magnetico di prova. Si scopre che un filo rettilineo attraversato da una corrente crea un campo magnetico le cui linee di forza si chiudono su se stesso.
 \subsection{Legge di Biot--Savart\index{Biot}\index{Savart}\index{legge!di Biot--Savart}}
 \begin{legge}[Biot--Savart]
   Per un filo infinito percoso da corrente $I$ vale
@@ -1770,6 +1774,9 @@ In fig.~\ref{magnete_spira} è rappresentato un magnete che si avvicina ad una s
   \label{magnete_spira}
 \end{figure}
 Avvicinando una spira percorsa da corrente ad una ferma si genera in quest'ultima una corrente indotta. In generale quando si modifica il flusso del campo magnetico si genera una corrente indotta. La corrente indotta e la relativa fem indotta a sua volta genera un campo magnetico opposto a quello esterno, che si oppone al cambiamento del flusso del campo magnetico.
+\begin{Es}[gli esperimenti di Faraday]
+  \index{Faraday}Dopo la scoperta di Ørsted molti cercarono l'effetto inverso: produrre una corrente con un campo magnetico. Nel 1831 Michael Faraday~\cite{faraday1832} avvolse due bobine di filo isolato sullo stesso anello di ferro: collegando una delle due a una batteria, il galvanometro collegato all'altra deviava, ma solo nell'istante in cui il circuito veniva chiuso o aperto, e in versi opposti nei due casi; con la corrente costante non si osservava nulla. Pochi giorni dopo ottenne lo stesso effetto muovendo una calamita dentro una bobina. Faraday capì che in questi esperimenti ciò che conta non è il campo magnetico, ma la \emph{variazione} del flusso magnetico concatenato con il circuito. Con un disco di rame che ruotava tra i poli di una calamita costruì anche il primo generatore di corrente continua (disco di Faraday): qui il campo è statico, ed è il moto del conduttore nel campo a generare la forza elettromotrice, attraverso la forza di Lorentz sugli elettroni del disco (si veda più avanti la distinzione tra flusso tagliato e flusso concatenato). L'esperimento con le due bobine è, di fatto, il primo trasformatore.
+\end{Es}
 \section{Legge Faraday--Neumann--Lenz}
 \begin{legge}[Faraday--Neumann]
   Quando il flusso del vettore induzione magnetica $\ve B$ concatenato con un circuito varia nel tempo, nel circuito si induce una forza elettromotrice proporzionale alla variazione del flusso
@@ -3276,6 +3283,13 @@ Si può anche scrivere
 
 Le soluzioni delle equazioni ricavate non sono necessariamente soluzioni delle equazioni di Maxwell da cui sono state ricavate\footnote{Si pensi all'elevamento al quadrato: $x-1=0$, manipolando l'equazione posso arrivare a $x=1\Rightarrow x^2=1$, che ha come soluzioni $x=\pm 1$. Per accertarci quale delle due soluzioni sia anche soluzione della prima equazione dobbiamo sostituirle al suo interno.}. Occorre quindi sostituire le soluzioni delle equazioni delle onde nelle equazioni di Maxwell e vedere quali condizioni bisogna imporre affinché siano effettivamente soddisfatte.
 
+\begin{Es}[la luce è un'onda elettromagnetica]
+  Già nel 1856 Weber e Kohlrausch avevano misurato il rapporto tra le unità di carica elettrostatiche ed elettromagnetiche, cioè, in termini moderni, $1/\sqrt{\varepsilon_0\mu_0}$, trovando circa \SI{3.1E8}{\meter\per\second}. Maxwell notò nel 1862 che questo valore coincideva, entro gli errori, con la velocità della luce misurata da Fizeau nel 1849 e concluse che la luce è un'onda elettromagnetica. Con i valori attuali:
+  \[
+    \frac{1}{\sqrt{\varepsilon_0\mu_0}}=\frac{1}{\sqrt{\SI{8.854E-12}{\farad\per\meter}\times\SI{1.2566E-6}{\henry\per\meter}}}\simeq\SI{2.998E8}{\meter\per\second}
+  \]
+  La conferma sperimentale venne nel 1887--1888 da Heinrich Hertz~\cite{hertz1888}, che produsse onde elettromagnetiche con un circuito oscillante a scintilla e le rivelò a distanza con una spira interrotta, nella quale scoccava una piccola scintilla. Hertz mostrò che le onde si riflettono, si rifrangono, si polarizzano e formano onde stazionarie, dalle quali misurò la lunghezza d'onda (qualche metro) e, nota la frequenza del circuito, la velocità di propagazione, trovandola dell'ordine della velocità della luce. Pochi anni dopo Marconi usò queste onde per le prime trasmissioni radio (1895). Dal 1983 la velocità della luce nel vuoto è fissata esattamente, $c=\SI{299792458}{\meter\per\second}$, e il metro è definito a partire da essa.
+\end{Es}
 \chapter{Ottica}
 \minitoc
 \section{Riflessione e rifrazione}
