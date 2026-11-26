@@ -4,12 +4,14 @@ NAME	= fisica
 MAIN_SOURCE	= $(NAME).tex
 
 LATEXMK	= latexmk
+# TikZ externalization runs LaTeX subprocesses to generate figures.
+LATEXMK_FLAGS = -shell-escape
 
 pdf:	pdf_images
-	$(LATEXMK) -pdf $(MAIN_SOURCE)
+	$(LATEXMK) $(LATEXMK_FLAGS) -pdf $(MAIN_SOURCE)
 
 dvi:	eps_images
-	$(LATEXMK) -dvi $(MAIN_SOURCE)
+	$(LATEXMK) $(LATEXMK_FLAGS) -dvi $(MAIN_SOURCE)
 
 images: pdf_images eps_images
 
